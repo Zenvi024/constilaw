@@ -1,0 +1,1019 @@
+[
+{
+"id": "e23m-1",
+"exam": "2023 Midterm",
+"n": 1,
+"t": [
+"org"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "The House of Representatives voted to expel Negros Oriental Rep. Arnolfo Teves Jr. on several grounds, including abandonment of public office and indecent behavior. Except for the Makabayan bloc who abstained, the lawmakers approved the report of the House committee on ethics and privileges recommending the removal of Teves, making him the first House member to be dropped from the roll without a prior court conviction for a criminal offense.\n\nIn May 2002, then Zamboanga del Norte Rep. Romeo Jalosjos was dropped from the House roll months after the Supreme Court upheld his rape conviction. A similar action was taken against then Dinagat Island Rep. Ruben Ecleo Jr. in May 2012, following his conviction for corruption and parricide.\n\nBefore his expulsion, Teves served two consecutive 60-day suspensions this year for disorderly behavior (March 22 to May 21 and May 31 to July 30) for his refusal to come home from abroad and face allegations linking him to the assassination of his political rival, Negros Oriental Gov. Roel Degamo, on March 4.\n\nThe committee report cited three reasons for Teves’ expulsion: (1) abandonment of public office and violation of oath of office; (2) his designation as a terrorist [by the Anti-Terrorism Council, on Aug. 2, for his alleged role in several killings in Negros, including Degamo’s]; and (3) indecent behavior after he posted online a video of himself dancing in his boxer shorts [posted June 5, after reports that the government would recommend his designation as a terrorist].\n\nFor the House committee, the video ‘caused dishonor’ to the chamber as Teves’ actions were ‘not necessary to discharge the duties of his office nor [was] it made in furtherance of any legislative role.’ Another ground cited was Teves’ ‘relentless pursuit’ of political asylum and continued absence in the House, which were considered ‘tantamount to abandonment’ of duty and a violation of his oath of office. [His application for asylum in Timor-Leste had been denied twice, and he had appealed.] It added that Teves’ refusal to participate in the Department of Justice’s preliminary investigation into the charges against him regarding the series of killings in his province was likewise a violation of his oath of office.",
+"ask": "Assume Teves challenges his expulsion on the three grounds cited by the House Committee and additionally, that his expulsion is void because he was not found guilty of any offense. Resolve the case in his favor. (For this question, do not raise or resolve procedural or jurisdictional issues.)",
+"issues": [
+"cong_discipline",
+"equal"
+],
+"core": [
+"Art. VI, Sec. 16(3): disorderly behavior; two-thirds of all Members; 60-day cap on suspension",
+"No conviction needed (Osmeña), so the ‘no conviction’ argument must be reframed as due process",
+"Absence already punished twice by 60-day suspensions: expulsion for the same absence evades the cap",
+"Terrorist designation is an executive act, not his conduct as a Member",
+"Video and asylum do not obstruct legislative work; due process before the gravest penalty"
+],
+"cases": [
+"osmena",
+"jalosjos",
+"devenecia"
+],
+"model": "Teves should prevail. Art. VI, Sec. 16(3) lets the House expel a Member for disorderly behavior with two-thirds of all its Members, and no conviction is required (Osmeña v. Pendatun). But the power is bounded by the Constitution. First, his absence and refusal to return were already punished by two 60-day suspensions; expelling him for the same absence punishes him twice and evades the 60-day cap the framers imposed. Second, the terrorist designation is an act of the Anti-Terrorism Council, not his behavior as a Member; the House cannot adopt another branch’s unadjudicated finding as its own ground. Third, a dance video posted abroad and an asylum application are private acts that did not disrupt any proceeding of the House. Finally, while conviction is not a precondition, the committee rested its decision on the killings he has not been tried for; turning unproven accusations into the gravest penalty, without a hearing on them, denies due process. The expulsion is void.",
+"points": [
+[
+"Answer first: expulsion void",
+1
+],
+[
+"Sec. 16(3) rule stated correctly (two-thirds of all Members; 60-day cap; no conviction needed, Osmeña)",
+2
+],
+[
+"Double punishment and evasion of the 60-day cap",
+2
+],
+[
+"Each of the three grounds answered on its facts",
+3
+],
+[
+"Due process framing of the ‘not found guilty’ argument",
+1
+],
+[
+"Conclusion",
+1
+]
+]
+},
+{
+"id": "e23m-2",
+"exam": "2023 Midterm",
+"n": 2,
+"t": [
+"gov"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "The City of Manila enacted Ordinance No. 8343 in 2014, providing in part:\n\nSEC. 2. The City Government of Manila shall be allocated free screen time for the airing of its public service announcements and/or messages by all cinemas, movie houses and theaters located within the territorial jurisdiction of the city as an additional requirement for the grant or renewal of their business registration.",
+"ask": "Assume theater owners challenge the constitutionality of the ordinance as a deprivation of property without due process of law. Resolve the case.",
+"issues": [
+"inh_police",
+"inh_taking",
+"equal"
+],
+"core": [
+"Police power: lawful subject and lawful means; LGU ordinance must also be reasonable and consistent with law",
+"Screen time is property; requiring it free appropriates its use for public purposes = taking",
+"PPI v. COMELEC (free print space: taking); Ericta (6% cemetery land: taking)",
+"TELEBAP distinguished: broadcasters use a public resource under a franchise; cinemas only hold a business permit",
+"Conditioning a business permit on giving up property without pay does not make it regulation"
+],
+"cases": [
+"cruzparas",
+"whitelight"
+],
+"model": "Yes, the ordinance deprives theater owners of property without due process. Police power may regulate a business when the subject is lawful and the means are reasonable and not unduly oppressive; an ordinance must also not be unreasonable (White Light). Informing the public is a lawful subject, but the means fail. Screen time is the theater’s property: it is what the owner sells. Requiring that it be given free to the city does not restrain a harmful use; it appropriates the property’s use for a public purpose, which is eminent domain and requires just compensation. In Philippine Press Institute v. COMELEC, the Court held that forcing newspapers to give free print space is a taking; in City Government of Quezon City v. Ericta, requiring cemeteries to give 6% of their land for paupers was the same. TELEBAP is different: broadcasters use airwaves, a public resource, under a franchise that the State may condition. Cinemas hold no franchise; a business permit is regulatory and cannot be used to extract property. Sec. 2 is void unless the city pays for the screen time.",
+"points": [
+[
+"Answer first",
+1
+],
+[
+"Police power test (lawful subject, lawful means) and LGU reasonableness",
+2
+],
+[
+"Regulation versus taking analysis on these facts",
+3
+],
+[
+"PPI/Ericta applied; TELEBAP distinguished (franchise over public resource)",
+3
+],
+[
+"Conclusion with the just-compensation alternative",
+1
+]
+]
+},
+{
+"id": "e23m-3",
+"exam": "2023 Midterm",
+"n": 3,
+"t": [
+"powers"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "The National Internal Revenue Code was amended (Republic Act No. 11467, January 22, 2020) by adding Section 290-A which provides:\n\nSEC. 290-A. Joint Congressional Oversight Committee on Illicit Trade on Excisable Products. — A Joint Congressional Oversight Committee, herein referred to as the ‘Oversight Committee on Illicit Trade on Excisable Products,’ shall be constituted. The Oversight Committee on Illicit Trade on Excisable Products shall be composed of the respective Chairpersons of the Committees on Ways and Means of the Senate and the House of Representatives as co-chairpersons and six (6) additional members from each House to be designated respectively by the Senate President and the Speaker of the House of Representatives. The Oversight Committee on Illicit Trade on Excisable Products shall, in aid of legislation, perform the following duties and functions, among others:\n(1) Review and evaluate the programs and performance of the Bureau of Internal Revenue and the Bureau of Customs in addressing illicit trade on excisable products and recommend necessary remedial legislation;\n(2) Require concerned government agencies to submit reports and all pertinent data and information which will aid in resolving illicit trade of excisable products;\n(3) Hold public hearings and summon concerned private individuals, government personnel and officials as resource persons;\n(4) Deputize the Bureau of Internal Revenue, Bureau of Customs, Philippine National Police, National Bureau of Investigation, and other enforcement agencies of the government as may be necessary in undertaking its duties and functions; and\n(5) Perform such other duties and functions as may be necessary to perform its mandate.\n\nThe Joint Congressional Oversight Committee shall be assisted by a Secretariat composed of even number of monitors from both Houses. It shall be co-headed by the service directors of the Committees on Ways and Means of the Senate and the House of Representatives.",
+"ask": "Is Section 290-A constitutional? Explain your answer.",
+"issues": [
+"sep_legveto",
+"sep_encroach"
+],
+"core": [
+"After enactment Congress may only scrutinize and investigate (ABAKADA)",
+"(1) to (3) are valid scrutiny and inquiry in aid of legislation",
+"(4) deputizing enforcement agencies is execution of law, which belongs to the President (Art. VII, Sec. 17)",
+"‘In aid of legislation’ label does not cure an executive function",
+"Separability: strike (4) (and (5) to the extent it is read the same way); the rest stands"
+],
+"cases": [
+"abakada",
+"macalintal2003",
+"belgica2013"
+],
+"model": "Partly. Once a law is enacted, Congress’s role is limited to scrutiny and investigation; any power to take part in implementing the law violates separation of powers (ABAKADA Guro v. Purisima). Duties (1) to (3) are valid: reviewing the BIR’s and BOC’s performance, requiring reports, holding hearings with resource persons and recommending remedial legislation are classic oversight in aid of legislation. Duty (4) is not. To ‘deputize’ the BIR, BOC, PNP and NBI is to direct law enforcement, which the Constitution gives the President, who ‘shall ensure that the laws be faithfully executed’ (Art. VII, Sec. 17). Calling the power ‘in aid of legislation’ does not change its nature: as in Belgica, where legislators’ post-enactment role in spending was struck down, a congressional committee cannot direct executive agents. Duty (5) must be read narrowly to avoid the same defect. Hence, Sec. 290-A(4) is unconstitutional, but the rest survives because it can stand on its own.",
+"points": [
+[
+"Answer first: partly unconstitutional",
+1
+],
+[
+"ABAKADA rule (scrutiny and investigation only)",
+2
+],
+[
+"(1)–(3) classified as valid oversight",
+2
+],
+[
+"(4) deputization = execution; Art. VII, Sec. 17",
+3
+],
+[
+"‘In aid of legislation’ label and (5) addressed",
+1
+],
+[
+"Separability conclusion",
+1
+]
+]
+},
+{
+"id": "e23m-4",
+"exam": "2023 Midterm",
+"n": 4,
+"t": [
+"house",
+"powers"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Assume Congress enacts a law that will disqualify candidates for public office for their failure to take part in debates sponsored by the Commission on Elections.",
+"ask": "Discuss the constitutionality of this law.",
+"issues": [
+"sep_addqual",
+"ppl_suffrage",
+"equal"
+],
+"core": [
+"Qualifications of President, VP, Senators and Representatives are fixed by the Constitution and are exclusive",
+"Congress cannot add qualifications by statute (SJS v. DDB)",
+"Local offices: qualifications are statutory, but the condition must be reasonable and germane (equal protection; Albano)",
+"A disqualification for silence also burdens free speech (compelled speech) and the voters’ choice",
+"Conclusion: void as to constitutional offices; doubtful as to local offices"
+],
+"cases": [
+"albano",
+"endencia"
+],
+"model": "The law is unconstitutional, at least as to national offices. The Constitution fixes the qualifications of the President, Vice President, Senators and Representatives (Art. VII, Secs. 2–3; Art. VI, Secs. 3 and 6). These are exclusive: Congress cannot add to them by statute. In SJS v. Dangerous Drugs Board, the Court struck down mandatory drug testing of senatorial candidates because it added a qualification. A rule that disqualifies a candidate for skipping a debate does the same, since it adds a condition the Constitution does not require. Congress cannot do indirectly, by legislation, what only an amendment can do (cf. Endencia). For local offices, whose qualifications are statutory, Congress has more room, but the condition must still be reasonable and germane. Under Albano v. COMELEC, a disqualification that bears no rational link to fitness for office violates equal protection. Attendance at a debate measures willingness to speak, not fitness. Forcing a candidate to speak or lose his candidacy also burdens free speech and the voters’ right to choose. The law is void.",
+"points": [
+[
+"Answer first",
+1
+],
+[
+"Constitutional qualifications are exclusive; SJS v. DDB",
+3
+],
+[
+"Applied: debate attendance as an added qualification",
+2
+],
+[
+"Local offices distinguished; reasonableness/equal protection (Albano)",
+2
+],
+[
+"Free speech or voters’ choice point; conclusion",
+2
+]
+]
+},
+{
+"id": "e24m-1",
+"exam": "2024 Midterm",
+"n": 1,
+"t": [
+"house"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Commission on Elections Chairman George Garcia reiterated the need to amend election laws, including the Party-List System Act. Garcia noted Supreme Court decisions that—in some cases—limit the extent of what the poll body can do to manage elections. He cited a SC ruling that opened the party-list system to different kinds of groups other than those representing the marginalized and underrepresented sectors. Garcia noted that the 1987 Constitution already identified some of the sectors that should be represented in Congress, including labor, peasant, urban poor, indigenous cultural communities, women and youth. But after the transition period, the Comelec chief said it became ‘free for all.’\n\n‘We have to ensure that all sectors are properly represented by the genuine people who really belong to the sectors,’ he added. While the proposed amendments to the party-list system are still pending in Congress, Garcia expressed hope that the SC would be able to further clarify some of the issues, such as the eligibility of those who can be party-list nominees.",
+"ask": "Determine the constitutionality of Garcia’s proposals to amend the party-list law.",
+"issues": [
+"cong_partylist",
+"proc_actual",
+"sep_addqual"
+],
+"core": [
+"Art. VI, Sec. 5(1)–(2): party-list ‘as provided by law’; sectoral reservation only for three terms",
+"Atong Paglaum: system is not exclusively sectoral; national and regional parties need not be marginalized (text: ‘national, regional, and sectoral parties’)",
+"Congress may legislate details, but cannot exclude what the Constitution includes",
+"Nominee rules (must belong to the sector) are valid if reasonable (Albano: equal protection)",
+"Proposals are not ripe; COMELEC cannot impose them by resolution"
+],
+"cases": [
+"atongpaglaum",
+"albano",
+"abanglingkod",
+"montesclaros"
+],
+"model": "Garcia’s proposals are valid in part. First, they are only proposals; until enacted they cannot be challenged in court (Montesclaros), and COMELEC cannot adopt them by resolution. Second, Art. VI, Sec. 5(1) creates a party-list system of ‘national, regional, and sectoral parties or organizations’ ‘as provided by law’. Atong Paglaum held that the system is not reserved for the marginalized; national and regional parties may participate without representing a marginalized sector, and the sectoral reservation in Sec. 5(2) lasted only three terms. A law confining the whole system to the listed sectors would contradict the Constitution’s text as the Court has read it, and Congress cannot overrule that reading by statute. Third, Congress may regulate nominees. Requiring that nominees of sectoral parties genuinely belong to or advocate for the sector is reasonable; Atong Paglaum itself requires this. Albano warns that each restriction must rest on a rational basis under equal protection. Hence, nominee rules for sectoral parties are valid; excluding national and regional parties is not.",
+"points": [
+[
+"Answer first (valid in part)",
+1
+],
+[
+"Ripeness / COMELEC cannot legislate",
+1
+],
+[
+"Text of Sec. 5 and Atong Paglaum’s holding",
+3
+],
+[
+"Exclusion of non-sectoral parties invalid",
+2
+],
+[
+"Nominee qualification rules valid if reasonable (Albano)",
+2
+],
+[
+"Conclusion",
+1
+]
+]
+},
+{
+"id": "e24m-2",
+"exam": "2024 Midterm",
+"n": 2,
+"t": [
+"gov"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Determine the constitutionality of Section 4 of the Free College Entrance Examinations Act (Republic Act No. 12006) which in part provides:\n\nSECTION 4. Waiver of Entrance Examination Fees. — All private HEIs [higher education institutions] are hereby mandated to waive the college entrance examination fees and charges imposed on qualified graduates and graduating students who are applying for college admission.",
+"ask": "Determine the constitutionality of Section 4.",
+"issues": [
+"inh_police",
+"inh_taking",
+"equal"
+],
+"core": [
+"Police power: lawful subject (access to education, Art. XIV, Secs. 1–2) and lawful means",
+"Art. XIV, Sec. 4(1): State’s reasonable supervision and regulation of all educational institutions",
+"‘Qualified’ students: the law limits the benefit to a narrow class (top of class; financial need), so the burden is modest",
+"Counterargument: forced free service = taking (PPI; Ericta); answer it",
+"Equal protection: private HEIs classified apart from public ones (already free) is reasonable"
+],
+"cases": [
+"agustin",
+"ileco"
+],
+"model": "Section 4 is constitutional as a valid exercise of police power. The State must protect the right of all citizens to quality education and make it accessible (Art. XIV, Secs. 1–2), and it exercises reasonable supervision and regulation of all educational institutions (Sec. 4(1)). The subject is lawful: entrance fees can keep poor but able students from even applying. The means are reasonable. The waiver covers only ‘qualified’ students (the law confines it to high-ranking graduates in financial need), the fee is small, and schools remain free to admit or reject them. The schools may argue that forcing them to test students for free appropriates their services, as free print space did in PPI v. COMELEC. But the burden here is incidental to a business the Constitution expressly subjects to regulation, and it does not take a defined property for the State’s use; it is closer to the discounts upheld as police power in Manila Memorial Park. Classifying private HEIs apart from public ones, whose admission is already free, rests on substantial distinctions. Section 4 is valid.",
+"points": [
+[
+"Answer first",
+1
+],
+[
+"Police power test stated",
+2
+],
+[
+"Art. XIV provisions (access; Sec. 4(1) regulation)",
+2
+],
+[
+"Means reasonable: narrow class, small fee, admission still discretionary",
+2
+],
+[
+"Taking counterargument answered (PPI/Ericta vs. Manila Memorial)",
+2
+],
+[
+"Equal protection or conclusion",
+1
+]
+],
+"note": "Either side can score if both tests are applied to the text. The model takes the ‘valid’ side; arguing ‘taking’ requires showing that the waiver appropriates a service for public use without pay."
+},
+{
+"id": "e24m-3",
+"exam": "2024 Midterm",
+"n": 3,
+"t": [
+"powers"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Determine the constitutionality of Section 29 of the Bulacan Special Economic Zone and Freeport Act (Republic Act No. 11999, June 13, 2024) which provides:\n\nSECTION 29. Implementing Rules and Regulations. — Within ninety (90) days from the effectivity of this Act, the DTI, in consultation with the DOF, the NEDA, the Province of Bulacan, and a representative from the Airport Project and the Airport City Project, shall formulate the implementing rules and regulations of this Act. Such rules and regulations shall take effect fifteen (15) days following the completion of its publication in a newspaper of general circulation in the Philippines.",
+"ask": "Determine the constitutionality of Section 29.",
+"issues": [
+"del_irr",
+"del_standard",
+"sep_legveto"
+],
+"core": [
+"Delegation of rule-making to an agency is valid if the law is complete and has sufficient standards",
+"No congressional approval role: no legislative veto (contrast ABAKADA)",
+"Consultation with a private representative is not subdelegation, so long as DTI decides (KMU)",
+"Publication in one newspaper of general circulation satisfies Tañada/EO 200; ONAR filing still required by the Administrative Code",
+"90-day period is directory"
+],
+"cases": [
+"abakada",
+"kmu",
+"tanada85"
+],
+"model": "Section 29 is constitutional. Congress may delegate the power to fill in the details of a law to an administrative agency if the law is complete and sets sufficient standards. RA 11999 sets the policy and the zone’s purposes, and the DTI only implements them. Unlike the law in ABAKADA, Sec. 29 gives Congress no role in approving the rules, so there is no legislative veto. Consulting the DOF, NEDA, the Province and a representative of the airport projects does not hand rule-making power to those bodies; the DTI alone formulates and issues the rules. It would be invalid only if the private project representative effectively dictated them, as in KMU v. Garcia, where operators fixed their own fares. On effectivity, Tañada v. Tuvera requires that rules implementing a law be published; publication in a newspaper of general circulation, with effectivity 15 days after, satisfies it (EO 200). The DTI must still file the rules with the ONAR under the Administrative Code. The 90-day period is directory; a late IRR is not void. Sec. 29 is valid.",
+"points": [
+[
+"Answer first",
+1
+],
+[
+"Delegation tests (completeness, sufficient standard)",
+2
+],
+[
+"No legislative veto (ABAKADA distinguished)",
+2
+],
+[
+"Consultation with private party ≠ subdelegation (KMU)",
+2
+],
+[
+"Publication (Tañada; EO 200) and ONAR filing",
+2
+],
+[
+"Conclusion",
+1
+]
+]
+},
+{
+"id": "e24m-4",
+"exam": "2024 Midterm",
+"n": 4,
+"t": [
+"org"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "How does Republic Act No. 10530 (2013) address issues raised regarding the constitutionality of Republic Act No. 95 (1947) entitled ‘Incorporation of the Philippine National Red Cross’ which were identified in Liban v. Gordon? [G.R. No. 175352, 15 July 2009]",
+"ask": "Explain how RA 10530 answers the Liban issues.",
+"issues": [
+"cong_office"
+],
+"core": [
+"Issue 1 (Art. VI, Sec. 13): is the PNRC a GOCC, so that Sen. Gordon forfeited his seat by chairing it? 2009: no",
+"Issue 2 (Art. XII, Sec. 16): can Congress create a private corporation by special charter? 2009: RA 95 provisions void; 2011: reversed (not lis mota; PNRC sui generis)",
+"RA 10530: PNRC is an independent, autonomous, non-governmental organization auxiliary to the authorities in the humanitarian field (Geneva Conventions)",
+"So it is neither a GOCC (Sec. 13 does not apply) nor an ordinary private corporation (Sec. 16 does not apply)"
+],
+"cases": [
+"liban"
+],
+"model": "Liban raised two questions. First, under Art. VI, Sec. 13, a legislator who holds any office in a GOCC forfeits his seat: was Senator Gordon’s chairmanship of the PNRC such an office? The Court held in 2009 that it was not, because the PNRC is a private organization. Second, under Art. XII, Sec. 16, Congress may not create private corporations by special charter: was RA 95 therefore void? The 2009 decision said yes as to its charter provisions, but in 2011 the Court reversed, holding that the issue was not the lis mota and that the PNRC is sui generis, an auxiliary of government and not an ordinary private corporation. RA 10530 settles both questions by statute. It recognizes the PNRC as an independent, autonomous, non-governmental organization auxiliary to the authorities of the Government in the humanitarian field, in line with the Geneva Conventions. Because the PNRC is not a GOCC, a legislator may chair it without forfeiting his seat. Because it is not a private corporation organized for profit, its special charter does not violate Art. XII, Sec. 16. RA 10530 codifies the 2011 resolution.",
+"points": [
+[
+"Issue under Art. VI, Sec. 13 stated and resolved",
+3
+],
+[
+"Issue under Art. XII, Sec. 16 stated, with 2009 and 2011 rulings",
+3
+],
+[
+"RA 10530’s characterization of the PNRC",
+2
+],
+[
+"Link: how each characterization answers each issue",
+2
+]
+]
+},
+{
+"id": "e15f-1",
+"exam": "2015 Finals",
+"n": 1,
+"t": [
+"org"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Civil society organizations in Mindanao asked Ombudsman Conchita Carpio-Morales to compel lawmakers to attend sessions at the House of Representatives to ensure a quorum for deliberations on the proposed Bangsamoro Basic Law. The groups said House records show that many sessions had been suspended and adjourned since July because the chamber could not muster a quorum, accusing lawmakers of ignoring their statements, letters and ‘door-to-door campaigns in their offices’ to gather enough numbers to resume debates on the measure.\n\n‘This chronic absenteeism surely erodes public trust and is a public display of neglect of duty,’ they said. Arguing for the Ombudsman’s intercession, they asked: ‘Are these honorable members of the House of Representatives exempt from basic government policy on reporting for duty? What is the policy for their absences? Can they still claim compensation even if they are absent from work?’\n\nThey added that the BBL was faring no better at the Senate where debates on the measure are ‘moving at turtle speed,’ citing Senator Juan Ponce Enrile’s ‘days-long’ debate with Senator Ferdinand Marcos, Jr. over the definition of the term Bangsamoro. ‘Marcos, moreover, is also guilty of not always being present during BBL deliberation days,’ they added.",
+"ask": "May the Ombudsman legally intercede in this case? Explain your answer.",
+"issues": [
+"cong_quorum",
+"cong_discipline",
+"sep_encroach",
+"cong_privilege"
+],
+"core": [
+"Art. VI, Sec. 16(2): only the House may compel attendance of absent Members, in the manner and under the penalties it provides",
+"Art. VI, Sec. 16(3): discipline belongs to each House",
+"RA 6770, Sec. 21: Ombudsman’s disciplinary authority excludes Members of Congress",
+"Pace of debate in the Senate is an internal matter; speech and debate privilege",
+"Absence is not a crime; salaries are fixed by law, and docking pay is for the House’s rules"
+],
+"cases": [
+"avelino",
+"osmena",
+"santiagoguingona"
+],
+"model": "No. The Constitution gives each House, not outside bodies, the power to secure its own quorum: ‘a smaller number may adjourn from day to day and may compel the attendance of absent Members in such manner, and under such penalties, as such House may provide’ (Art. VI, Sec. 16(2)). Each House also alone may ‘punish its Members for disorderly behavior’ (Sec. 16(3)). Consistent with this, the Ombudsman Act (RA 6770, Sec. 21) excludes Members of Congress from the Ombudsman’s disciplinary authority. If the Ombudsman ordered lawmakers to attend, she would intrude into a matter the Constitution commits to each House, violating separation of powers. The Court itself defers to each House on its internal proceedings (Osmeña; Santiago v. Guingona). As to the Senate, the length of Enrile’s and Marcos’s debate is a matter of the Senate’s rules, and what they say in debate is privileged (Sec. 11). Whether absent Members forfeit pay is for each House’s rules and the law fixing salaries. The groups’ remedy is political: the House leadership and, ultimately, the voters.",
+"points": [
+[
+"Answer first: No",
+1
+],
+[
+"Sec. 16(2) quorum and compelling attendance",
+3
+],
+[
+"Sec. 16(3) discipline; RA 6770 exclusion",
+2
+],
+[
+"Separation of powers / deference to internal matters",
+2
+],
+[
+"Senate debate and pay questions addressed",
+2
+]
+]
+},
+{
+"id": "e15f-2",
+"exam": "2015 Finals",
+"n": 2,
+"t": [
+"suff",
+"jr"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "The Supreme Court stopped the Commission on Elections from invalidating voters who were not able to get their biometrics for the 2016 elections, issuing a temporary restraining order against the COMELEC’s ‘No Bio, No Boto’ policy. The case stemmed from a petition for certiorari and prohibition filed by Kabataan party-list to assail the policy, which might prevent three million registered voters from being able to vote. The group contested the deactivation of the registration of voters without biometrics, and asked the SC to enjoin the implementation of Republic Act No. 10367 (the Mandatory Biometrics Law) and nullify COMELEC Resolutions No. 9721, 9863 and 10013, which are all related to the deactivation of voter registration records in the May 9, 2016 elections.\n\nCOMELEC data showed 3,059,601 registered voters remained without biometrics as of September 30, 2015 (5.86 percent of 52,239,488 registered voters).\n\n‘Biometrics validation also gravely violates due process as it [is] an unreasonable deprivation of the constitutional right to vote for millions of Filipinos who have failed to register their biometric information despite existing and active registration — in effect a voter’s re-registration,’ the petition read.",
+"ask": "Resolve all the issues implicated by this story. The main substantive issue is whether the ‘No Bio, No Boto’ policy is constitutional.",
+"issues": [
+"proc_standing",
+"proc_forum",
+"proc_actual",
+"ppl_suffrage"
+],
+"core": [
+"Procedure: Rule 65 under expanded judicial power; actual case (deactivation imminent); standing of a party-list group and affected voters; transcendental importance",
+"Art. V, Sec. 1 forbids ‘literacy, property, or other substantive requirement’; registration is procedural, not a qualification (Kabataan 2015)",
+"Strict scrutiny passed: compelling interest in clean voters’ list; least restrictive (long period, notice, reactivation)",
+"Due process: no vested right without complying with valid registration rules"
+],
+"cases": [
+"kabataan2015",
+"akbayan",
+"palatino"
+],
+"model": "Procedurally, the petition is proper. Certiorari and prohibition lie under the Court’s expanded power to check grave abuse by any branch (Art. VIII, Sec. 1). There is an actual case: deactivation was scheduled before the election. Kabataan, whose members include affected voters, and the voters themselves have standing, and the right of three million people to vote is of transcendental importance. On the merits, the policy is valid. Art. V, Sec. 1 bars ‘literacy, property, or other substantive requirement’ on voting, but registration is a procedural regulation of how qualified citizens exercise the right, not an added qualification (AKBAYAN). Biometrics validation is part of registration. Even under strict scrutiny, it passes: the State has a compelling interest in a clean list free of ‘flying voters’, and the means are the least restrictive. Voters had years to comply, the law gave notice, and deactivated voters may reactivate. In Kabataan Party-List v. COMELEC (2015), the Court upheld RA 10367 and the resolutions and lifted the TRO. The petition should be dismissed.",
+"points": [
+[
+"Procedural layer (remedy, actual case, standing)",
+2
+],
+[
+"Answer first on the merits",
+1
+],
+[
+"Art. V, Sec. 1 text; procedural vs substantive requirement",
+3
+],
+[
+"Strict scrutiny or reasonableness applied to the facts",
+2
+],
+[
+"Kabataan (2015) and conclusion",
+2
+]
+],
+"note": "The Court decided Kabataan Party-List v. COMELEC on December 16, 2015, nine days after this exam."
+},
+{
+"id": "e15f-3",
+"exam": "2015 Finals",
+"n": 3,
+"t": [
+"suff",
+"jr"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "A group of petitioners filed a petition for certiorari and mandamus contesting the legality of two resolutions released by the COMELEC that set the registration deadline on October 31 [2015]. The groups said the deadline should be extended until Jan. 8, 2016.\n\nRidon said COMELEC Resolution No. 9853 and Resolution No. 9981 violated Section 8 of the Voter’s Registration Act which states that ‘no registration shall, however, be conducted during the period starting one hundred twenty days before a regular election and ninety days before a special election.’ Ridon cited Palatino v. COMELEC to insist that setting an October 31 registration deadline is illegal. The SC decision declared null and void the setting of the October 31, 2009 deadline for the May 10, 2010 elections, and directed COMELEC to extend the voter registration period.\n\nThe petitioners said voter registration should be pushed back because the COMELEC admitted encountering problems like long queues, some centers receiving up to 1,000 registrants per day; insufficient registration documents; malfunctioning or insufficient data capturing machines (DCM), which can only process around 250 applications a day. Some three million voters still had no biometrics and would be delisted if they failed to get their biometrics taken before the deadline. The petitioners also questioned the COMELEC’s decision to suspend voter registration for a week to give way to the filing of certificates of candidacy.",
+"ask": "Rule on the validity of the COMELEC resolutions. Be sure you address the procedural issues implicated by this problem.",
+"issues": [
+"proc_standing",
+"proc_forum",
+"ppl_suffrage",
+"del_irr"
+],
+"core": [
+"Procedure: certiorari (grave abuse) and mandamus; standing of voters and a party-list representative; transcendental importance; urgency justifies direct resort",
+"RA 8189, Sec. 8: continuing registration until 120 days before a regular election (for May 9, 2016, that is about January 10, 2016)",
+"Palatino: COMELEC cannot cut short the statutory period unless it shows that pre-election acts cannot reasonably be held within it",
+"AKBAYAN distinguished: there the extension sought fell inside the 120-day ban; Jan. 8 does not",
+"Week-long suspension for COC filing: valid only if justified by operational necessity"
+],
+"cases": [
+"palatino",
+"akbayan",
+"kabataan2015"
+],
+"model": "Procedurally, certiorari lies because COMELEC is alleged to have acted contrary to law; mandamus may issue only if extending registration is a duty the law imposes. The petitioners, as voters and as a party-list group whose members are unregistered, have standing; the right of millions to register is of transcendental importance, and the approaching election justifies direct resort to the Court. On the merits, the resolutions are void. RA 8189, Sec. 8 makes registration continuing and bars it only within 120 days before a regular election; for May 9, 2016, the ban begins around January 10, 2016. COMELEC’s residual power to fix other periods may be used only when it shows that pre-election acts cannot reasonably be held within the statutory period (Palatino). COMELEC’s own admissions of long lines and too few machines show the opposite: more time is needed, not less. AKBAYAN does not help COMELEC, because there the extension sought fell within the prohibited period, whereas January 8 does not. The week-long suspension for COC filing is valid only if COMELEC proves it necessary. Registration should be extended to January 8, 2016.",
+"points": [
+[
+"Procedural layer (remedy, standing, direct resort)",
+2
+],
+[
+"Answer first",
+1
+],
+[
+"RA 8189, Sec. 8 and the date computation",
+2
+],
+[
+"Palatino applied; AKBAYAN distinguished",
+3
+],
+[
+"COMELEC admissions and the COC-week suspension",
+2
+]
+],
+"note": "The date math: May 9, 2016 minus 120 days is January 10, 2016 (2016 is a leap year). Gatmaytan’s stories ‘may have been altered’, so always count the days yourself."
+},
+{
+"id": "e20f-2",
+"exam": "2020 Finals",
+"n": 2,
+"t": [
+"powers"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "The Senate took issue with how some laws have either been wrongly or not implemented at all by agencies in the executive branch due to their implementing rules and regulations (IRRs) or the lack of it. Some senators complained that legislative measures passed have allegedly been ‘mangled’ by bureaucrats through the IRRs.\n\nSen. Francis Tolentino, in a privilege speech: ‘What is happening is, they make the implementing rules and at the same time they interpret their own implementing rules which is not part of the law. In effect, we are abandoning our legislative powers to unelected bureaucrats.’\n\nSenate President Vicente Sotto III: ‘It seems like they have the veto power. As long as they do not like the law, they will not implement the IRR… The solution is, remove the section… Let us not place it (IRR) in the law, because it seems like we are delegating our duty.’\n\nUnder the law, executive agencies are authorized to craft rules and regulations in implementing a measure crafted in Congress. The Supreme Court earlier ruled that lawmakers are not allowed to participate in the crafting of the IRR since this is a mandate of the executive department.\n\nSenators said several provisions of the Anti-Terror Law, Milk Code, RH Law, Free Legal Assistance Act and NIRC were incorrectly implemented or never rolled out. Senate Minority Leader Franklin Drilon: ‘The executive branch executes the law and it is part of their mandate to issue rules and regulations, whether or not we place it in the law. The remedy is we go to court and declare IRR as illegal.’ The senators agreed to discuss these items in a caucus before elevating the issue to the SC.",
+"ask": "Discuss the legal issues raised by this news story.",
+"issues": [
+"del_irr",
+"del_standard",
+"sep_legveto",
+"proc_standing",
+"proc_actual"
+],
+"core": [
+"Rule-making to execute laws is executive; it exists even without an IRR clause (Drilon is right; Sotto’s ‘remove the section’ does not remove the power)",
+"Congress cannot take part in crafting or approving IRRs (ABAKADA)",
+"An IRR that expands or contradicts the law is void; courts may strike it",
+"Failure to issue an IRR does not suspend a law that is complete; mandamus may compel a rule the law requires by a deadline",
+"Senators’ standing: legislators may sue when their prerogatives are impaired; need a specific IRR (actual case), not a caucus list"
+],
+"cases": [
+"abakada",
+"tanada85",
+"kmu",
+"vera"
+],
+"model": "Four issues. (1) Rule-making. Drilon is right: the power to issue rules to carry out a law flows from the duty to execute it, so deleting the IRR clause would not remove it. Congress’s safeguard is to write complete laws with sufficient standards. (2) Congress’s role. After enactment, Congress may scrutinize and investigate but may not take part in crafting or approving IRRs (ABAKADA). Its tools are hearings, inquiries, and amending the law. (3) Invalid IRRs. An IRR must be authorized, within the law’s scope, issued with proper procedure, published (Tañada) and reasonable. Rules that expand or ‘mangle’ the law are void. A law complete in itself takes effect even without an IRR, and where a law sets a deadline, mandamus may compel the agency to issue one. (4) Going to court. Senators have standing when an executive act usurps legislative power, but there must be an actual case: a specific IRR provision that contradicts a specific law. A caucus list of grievances is not ripe. They must also respect the hierarchy of courts where facts are disputed.",
+"points": [
+[
+"Rule-making as executive power (Drilon vs Sotto)",
+2
+],
+[
+"No congressional role in IRR (ABAKADA)",
+2
+],
+[
+"IRR validity requisites; ultra vires rules void",
+2
+],
+[
+"Lack of IRR; mandamus",
+2
+],
+[
+"Standing and actual case for senators",
+2
+]
+]
+},
+{
+"id": "e20f-4",
+"exam": "2020 Finals",
+"n": 4,
+"t": [
+"approp",
+"org"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "The Public Attorney’s Office (PAO) believes that Senators Franklin Drilon and Juan Edgardo ‘Sonny’ Angara should be punished by the Ombudsman for inserting a rider in the 2021 [budget] that prevents its forensic laboratory staff from receiving salaries and benefits.\n\nIn a letter to President Duterte dated Dec. 14, PAO called the rider ‘an act so reprehensible of a public official that it is punishable even under the Ombudsman Act,’ and prodded the President for the ‘veto of the aforementioned surreptitiously inserted provision in the General Appropriations Bill for 2021.’\n\nThe PAO noted that the rider inserted by Drilon and allowed by Angara states: ‘Nothing in the appropriation provided in this act shall be used for the salaries or compensation of personnel, travel allowance, meetings and maintenance and other operating expenses of the PAO Forensic Laboratory Division.’ ‘All told, the surreptitiously inserted provision constitutes oppression and an illegal and unconstitutional act,’ the PAO said, adding that it is ‘unreasonable, unfair, and discriminatory because it defunds the PAO Forensic Laboratory—a highly performing organizational unit.’",
+"ask": "Assume a case is filed against the lawmakers. How should the Office of the Ombudsman decide?",
+"issues": [
+"cong_privilege",
+"cong_discipline",
+"make_rider",
+"sep_encroach"
+],
+"core": [
+"Drafting and voting on budget provisions are legislative acts protected by the speech and debate clause (Art. VI, Sec. 11; Jimenez)",
+"Ombudsman has no disciplinary authority over Members of Congress (RA 6770, Sec. 21); discipline belongs to each House (Sec. 16(3))",
+"Not a rider: the condition relates to PAO’s own appropriation; Congress may refuse to fund (power of the purse)",
+"President’s remedy: veto; a condition cannot be vetoed apart from its item (Philconsa v. Enriquez)",
+"Conclusion: dismiss"
+],
+"cases": [
+"jimenez",
+"pobre",
+"philconsaenriquez",
+"osmena"
+],
+"model": "The Ombudsman should dismiss the complaint. First, the senators acted in the performance of their legislative function. Proposing, amending and voting on a provision of the budget is the core of what the speech and debate clause protects: no Member ‘shall be questioned nor be held liable in any other place’ for it (Art. VI, Sec. 11; Jimenez v. Cabangbang). Second, the Ombudsman Act (RA 6770, Sec. 21) excludes Members of Congress from the Ombudsman’s disciplinary authority, and only each House may discipline its Members (Sec. 16(3); Pobre). Third, the provision is not unlawful. It is not a rider under Sec. 25(2), because it relates specifically to the PAO’s appropriation: it limits what that appropriation may be used for. Congress controls the purse and may decline to fund a unit the DBM created. PAO’s remedy is political: persuading the President to veto. Under Philconsa v. Enriquez, however, a condition on an item cannot be vetoed without vetoing the item itself. The complaint should be dismissed.",
+"points": [
+[
+"Answer first: dismiss",
+1
+],
+[
+"Speech and debate covers legislative acts",
+3
+],
+[
+"Ombudsman lacks disciplinary authority over Members (RA 6770; Sec. 16(3))",
+2
+],
+[
+"Not a rider; power of the purse",
+2
+],
+[
+"Veto remedy and conditions (Philconsa)",
+2
+]
+]
+},
+{
+"id": "e20f-6",
+"exam": "2020 Finals",
+"n": 6,
+"t": [
+"approp",
+"powers"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "The Public Attorney’s Office (PAO) asked President Rodrigo Duterte to veto a provision in the 2021 budget that will remove the agency’s forensics laboratory. The 2021 General Appropriations Bill prohibits the use by the PAO of funds from its maintenance and other operating expenses (MOOE) for its forensic lab.\n\nIn a letter dated Dec. 14, PAO chief Persida Rueda-Acosta said defunding the PAO Forensic Laboratory will jeopardize operations in helping clients who are mostly poor: ‘It is highly oppressive for a governmental unit to be expected to perform its mandate with allocations only for the salaries and other entitlements of its personnel.’ ‘Plantilla personnel will be deprived of their right to their salary and other entitlements, contrary to their right to security of tenure.’\n\nThe PAO Forensic Laboratory Division was created by the Department of Budget and Management (DBM) and is a ‘small unit’ under the Office of the Chief Public Attorney. The 2018 General Appropriations Act gave the DBM the power to approve minor changes in organizational structure and staffing pattern of agencies and create positions up to division chief and equivalent level in the Executive branch. This became the legal basis for the change in the structure of the Office of the Chief Public Attorney.",
+"ask": "(a) Is the provision prohibiting the use of funds from its MOOE for its forensic lab valid? (b) Was the 2018 GAA provision that gave the DBM the power to approve minor changes in organizational structure and staffing pattern of agencies and create positions up to division chief level in the Executive branch valid?",
+"issues": [
+"make_rider",
+"del_standard",
+"make_item"
+],
+"core": [
+"(a) A condition on how an agency’s appropriation may be spent relates to that appropriation: not a rider (Sec. 25(2)); Congress may reduce or refuse funds",
+"Security of tenure does not guarantee an appropriation for a unit; a unit created by DBM has no statutory life",
+"(b) Creating positions and changing organizational structures is substantive legislation; in a GAA it relates to no particular appropriation: inappropriate provision (Sec. 25(2); Philconsa)",
+"GAA provisions are limited to the fiscal year and the appropriation to which they relate",
+"Delegation to DBM would also need standards"
+],
+"cases": [
+"philconsaenriquez",
+"belgica2013",
+"pichay"
+],
+"model": "(a) Valid. Art. VI, Sec. 25(2) bars provisions that do not relate specifically to a particular appropriation. A rule limiting how the PAO’s MOOE may be spent relates directly to the PAO’s appropriation: it is a condition, which Congress may attach (Philconsa v. Enriquez). Congress may reduce or refuse to fund any activity; it cannot increase the President’s recommendations, but it may cut them (Sec. 25(1)). The laboratory was created by the DBM, not by law, so it has no statutory claim to funding, and security of tenure protects positions from removal without cause, not from budget cuts. (b) Invalid. Creating positions and changing the organizational structure of agencies is substantive legislation. Placed in a GAA, it relates to no particular appropriation and is an inappropriate provision under Sec. 25(2), which the President could have vetoed separately. Its operation is also limited by Sec. 25(2) to the appropriation to which it relates, so it cannot serve as a standing grant of reorganization power. Such power must come from a general law with adequate standards.",
+"points": [
+[
+"(a) answer and Sec. 25(2) analysis (condition relates to appropriation)",
+3
+],
+[
+"(a) power of the purse; security of tenure argument answered",
+2
+],
+[
+"(b) answer: substantive law in GAA = inappropriate provision",
+3
+],
+[
+"(b) limited operation and need for a general law with standards",
+2
+]
+]
+},
+{
+"id": "e20f-7",
+"exam": "2020 Finals",
+"n": 7,
+"t": [
+"org"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Another complaint against Quezon 2nd District Rep. David Suarez reached the Office of the Ombudsman. The raps alleged his involvement in a series of ‘anomalous’ cash advances amounting to P56.14 million made from 2013 to 2018 during his incumbency as governor of Quezon province. Suarez is facing the complaint together with the provincial accountant, treasurer and budget officer.\n\nComplainants want them administratively charged for Grave Misconduct, Dishonesty, and Conduct Prejudicial to the Best Interest of Service. As for the criminal charges, complainants want them held liable for violation of Articles 217 and 218 of the Revised Penal Code (Malversation of Public Funds and Failure of Accountable Officer to Render Accounts), as well as Section 3(e) of R.A. 3019 (Anti-Graft and Corrupt Practices Act). The complaint cited COA findings from 2013 to 2018 of unliquidated cash advances, some outstanding for 23 years.",
+"ask": "Discuss the disciplinary rules that apply in the case of Representative Suarez including his immunity if any.",
+"issues": [
+"cong_discipline",
+"cong_privilege"
+],
+"core": [
+"House discipline (Sec. 16(3)) covers disorderly behavior as a Member; acts as governor before membership are not",
+"Ombudsman’s administrative authority excludes Members of Congress (RA 6770, Sec. 21); administrative case for acts as governor faces this bar while he sits",
+"Criminal liability is unaffected: Ombudsman may investigate and prosecute; Sandiganbayan jurisdiction",
+"Preventive suspension under RA 3019, Sec. 13 is not ‘discipline’ and may apply to legislators",
+"Arrest privilege: malversation of this amount is punishable by more than 6 years, so no immunity; speech and debate irrelevant"
+],
+"cases": [
+"jalosjos",
+"trillanespimentel",
+"osmena",
+"devenecia"
+],
+"model": "Discipline. Only the House may punish its Members for disorderly behavior, by suspension of up to 60 days or expulsion with two-thirds of all Members (Art. VI, Sec. 16(3)). His acts as governor were committed before he became a Member, so they are not disorderly behavior in the House, and the House is unlikely to act. The Ombudsman Act (RA 6770, Sec. 21) excludes Members of Congress from the Ombudsman’s disciplinary authority, so the administrative charges face that bar while he sits in the House. Criminal liability is different. The Ombudsman may investigate and prosecute him before the Sandiganbayan for malversation and graft; criminal prosecution is not ‘discipline’. If an information under RA 3019 is filed, the court’s preventive suspension is not a penalty and does not intrude on the House’s power. Immunity. He has none here. The privilege from arrest covers only offenses punishable by not more than six years and only while Congress is in session (Sec. 11); malversation of P56 million is punishable far more severely. The speech and debate clause protects legislative acts, not acts as governor. If detained, he cannot attend sessions (Jalosjos).",
+"points": [
+[
+"House discipline rule and its limits (acts before membership)",
+2
+],
+[
+"Ombudsman administrative authority bar (RA 6770, Sec. 21)",
+2
+],
+[
+"Criminal liability and preventive suspension distinguished from discipline",
+2
+],
+[
+"Arrest privilege: six-year threshold applied",
+3
+],
+[
+"Speech and debate inapplicable; Jalosjos",
+1
+]
+]
+},
+{
+"id": "e20f-8",
+"exam": "2020 Finals",
+"n": 8,
+"t": [
+"jr"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Jailed activist Reina Mae Nasino, who lost her three-month-old baby River after they were separated, has returned to the Supreme Court, this time to prevent a similar tragedy from happening to other detainees who gave birth behind bars.\n\nNasino, through her counsels from the National Union of Peoples’ Lawyers, elevated the Court of Appeals’ dismissal of their Petition for Certiorari assailing the Manila Regional Trial Court Branch 20 rulings ordering Reina Mae and Baby River’s separation. The RTC gave weight to the letter of the jail officer-in-charge, who said that they have no facility for use as a nursery.\n\nThe Court of Appeals junked their petition saying it is already moot as the plea was filed to reunite her and her baby, who already died when the court released its ruling on November 5.",
+"ask": "Should the Supreme Court accept the case?",
+"issues": [
+"proc_moot",
+"proc_actual"
+],
+"core": [
+"Moot: the baby’s death makes the relief sought (reunion) impossible",
+"Exceptions: grave violation of the Constitution; exceptional character and paramount public interest; need for guiding principles; capable of repetition yet evading review",
+"Capable of repetition: infancy is brief, separation orders recur for detained mothers and will end before review",
+"Limits: Court will not issue advisory opinions; KAPIT (2026) applies the exceptions strictly",
+"Alternative: the Court’s rule-making power (Art. VIII, Sec. 5(5)) to protect constitutional rights"
+],
+"cases": [
+"sanlakas",
+"kapit",
+"lacsonperez",
+"atlas"
+],
+"model": "Yes, the Court should accept the case even though it is moot. A case is moot when a supervening event leaves nothing to grant; River’s death made the original relief, reunion, impossible, so ordinarily the petition would be dismissed (Atlas Fertilizer). But the Court decides moot cases when (1) there is a grave violation of the Constitution, (2) the case is of exceptional character and paramount public interest, (3) the issue needs guiding principles for the bench and bar, or (4) it is capable of repetition yet evading review (Sanlakas). The fourth exception fits best. Orders separating detained mothers from newborns recur, and the period in which a mother can nurse or keep an infant is so short that any challenge will always end before the Court can rule. The second and third also apply: trial courts need standards for weighing a jail’s lack of facilities against the child’s welfare. The Court must still avoid an advisory ruling; it recently applied these exceptions strictly in KAPIT v. City of Manila (2026). If it declines, it may address the matter through its rule-making power (Art. VIII, Sec. 5(5)).",
+"points": [
+[
+"Answer first",
+1
+],
+[
+"Mootness rule applied to the facts",
+2
+],
+[
+"Four exceptions stated",
+2
+],
+[
+"Capable of repetition yet evading review applied to infancy and detention",
+3
+],
+[
+"Limits (no advisory opinion; KAPIT) or rule-making alternative",
+2
+]
+]
+},
+{
+"id": "e24f-1",
+"exam": "2024 Finals",
+"n": 1,
+"t": [
+"gov"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "Republic Act No. 12077 mandates a student loan payment moratorium during disasters. Senate President Chiz Escudero justifies it by saying ‘We are facing more frequent and severe weather disturbances. While we often see the physical destruction caused by these calamities, the impact on students is often overlooked. Many are forced to sacrifice their education due to financial constraints.’\n\nSec. 5. Moratorium on Payment of Student Loans. — There shall be a moratorium on the payment of all fees, charges, and costs relating to the student loans incurred for higher education and TVET programs, whether administered by the HEIs or the TVIs themselves or by the UniFAST Board, the CHED, or any other government agency or instrumentality, for the duration of the State of Calamity or Emergency as provided in Section 4 of this Act and for thirty (30) days after the lifting of such State of Calamity or Emergency: Provided, That the availment of the moratorium shall not adversely affect the eligibility of the students concerned for re-enrolment in the succeeding semesters or terms, or for graduation: Provided, further, That no penalties or interests shall be collected on the deferred payments made pursuant to this Act: Provided, furthermore, That nothing in this Act shall be construed to prevent public or private HEIs or TVIs from implementing more favorable forms of payment relief or assistance to their students: Provided, finally, That students shall not be allowed to waive the benefit of the moratorium.",
+"ask": "Is Republic Act No. 12077 constitutional?",
+"issues": [
+"inh_police",
+"inh_impair",
+"inh_taking",
+"equal"
+],
+"core": [
+"Police power: lawful subject (students in calamities; access to education, Art. XIV) and lawful means",
+"Non-impairment (Art. III, Sec. 10) yields to a valid exercise of police power; loan contracts are subject to the State’s reserved power",
+"Means reasonable: temporary (calamity + 30 days), payments deferred not forgiven, enrolment protected",
+"No interest on deferred payments: the strongest objection (a loss to private lenders); answer it as a reasonable, temporary burden",
+"Equal protection: students in calamity areas form a reasonable class"
+],
+"cases": [
+"ileco",
+"agustin"
+],
+"model": "Yes. RA 12077 is a valid exercise of police power. The subject is lawful: calamities interrupt the income of students’ families, and the State must protect the right to quality education and make it accessible (Art. XIV, Secs. 1–2). The means are reasonable. The moratorium is temporary, lasting only during a declared state of calamity and 30 days after. It defers payments rather than cancelling them, and it protects students’ enrolment and graduation. The non-impairment clause does not bar it. Contracts are made subject to the State’s reserved police power, and the clause yields to a reasonable regulation in the public interest (Iloilo I Electric Cooperative). The strongest objection is the bar on interest for deferred payments, which costs private HEIs and lenders the time value of their money. But the loss is limited, incidental to a temporary emergency measure, and does not appropriate their property for public use. Students in declared calamity areas are also a reasonable class, so equal protection is satisfied. The law is constitutional.",
+"points": [
+[
+"Answer first",
+1
+],
+[
+"Police power test applied",
+3
+],
+[
+"Non-impairment yields to police power",
+2
+],
+[
+"Interest-free deferral objection answered",
+2
+],
+[
+"Equal protection or conclusion",
+2
+]
+]
+},
+{
+"id": "e24f-2",
+"exam": "2024 Finals",
+"n": 2,
+"t": [
+"approp"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "PhilHealth will receive no government subsidy in the proposed 2025 national budget. [The exam reproduced the pertinent provision of the proposed budget, which is not legible in the copy.]",
+"ask": "Explain the legal options available to the President assuming he wants Congress to provide PhilHealth with a subsidy.",
+"issues": [
+"make_item",
+"make_transfer",
+"make_origin"
+],
+"core": [
+"Congress may reduce but not increase the President’s recommended appropriations (Sec. 25(1)); it decides the final GAA",
+"Item veto cannot create funding; vetoing the whole GAA triggers the re-enacted budget (Sec. 25(7))",
+"Augmentation from savings requires an existing item for PhilHealth in the GAA (Sec. 25(5); Araullo; Nazareth)",
+"Unprogrammed appropriations only if listed and excess revenue certified (Araullo)",
+"Supplemental or special appropriation law (Sec. 25(4)), which must originate in the House"
+],
+"cases": [
+"araullo",
+"nazareth",
+"guingonacarague",
+"tolentinofinance"
+],
+"model": "The President’s options are limited because the power of the purse belongs to Congress. (1) Persuade Congress before enactment. He submits the budget, and Congress may reduce but not increase his recommendations (Art. VI, Sec. 25(1)); if he recommended a subsidy and Congress deleted it, he can ask the bicameral conference to restore it. (2) The veto does not help much. An item veto removes items but cannot create one. Vetoing the entire GAA would make the previous year’s budget re-enacted (Sec. 25(7)), restoring any PhilHealth subsidy it contained, but at the cost of the whole 2025 budget. (3) Augmentation from savings is unavailable if the GAA has no PhilHealth subsidy item: savings may augment only an existing item in his own branch (Sec. 25(5); Araullo; Nazareth). (4) If PhilHealth is listed under unprogrammed appropriations, funds may be released only upon certification of excess revenue (Araullo). (5) He may ask Congress for a supplemental appropriation, which must specify its purpose and be supported by funds actually available (Sec. 25(4)), and which must originate in the House (Sec. 24).",
+"points": [
+[
+"Congress’s control; Sec. 25(1)",
+2
+],
+[
+"Veto options and re-enacted budget",
+2
+],
+[
+"Augmentation requisites (existing item; Araullo)",
+3
+],
+[
+"Unprogrammed appropriations",
+1
+],
+[
+"Supplemental appropriation: Sec. 25(4); House origination",
+2
+]
+],
+"note": "Partly beyond the midterm (the President’s budget role is Art. VII). The appropriations rules are in coverage."
+},
+{
+"id": "e23f-1",
+"exam": "2023 Finals",
+"n": 1,
+"t": [
+"jr",
+"gov"
+],
+"cov": "in",
+"minutes": 22,
+"prompt": "A lawyer has filed a petition seeking to prevent the entry of personalities connected with the International Criminal Court (ICC) or their immediate deportation if they are already here in the country conducting investigation into the bloody anti-illegal drug campaign during the Duterte administration.\n\nThe petition was filed before the Regional Trial Court of Calbayog City by lawyer Fernando Perito in his capacity as a member of the legal profession. He was joined by overseas Filipino worker (OFW) Joseph Forrosuelo in the petition.\n\nThe petitioners sought the issuance of a preliminary injunction barring ICC investigators and officers from entering the country to investigate the killings related to the past administration’s anti-illegal drug war.\n\nPerito stressed that any investigation, prosecution, trial and resolution of cases in relation to the anti-illegal drug war is governed by the provisions of the country’s Constitution, existing laws and criminal procedures. ‘With all our laws and rules, policies in order, are we to succumb to international pressure to ignore our existing laws, rules and procedures, simply because that international court is so powerful,’ the petition read.\n\nThe petitioners challenged human rights advocates to prove their claim that there were at least 30,000 killings during anti-illegal drug operations by filing complaints before the courts in the country.",
+"ask": "Resolve the case.",
+"issues": [
+"proc_standing",
+"proc_actual",
+"proc_forum",
+"proc_pq",
+"inh_immunity"
+],
+"core": [
+"Standing: a lawyer and an OFW show no personal injury; membership in the bar is a generalized interest (IBP v. Zamora)",
+"Actual case/ripeness: no showing ICC personnel are entering or here; speculative",
+"Admission and deportation of aliens are executive functions; courts do not pre-empt them (separation of powers; political question)",
+"Forum: an RTC injunction is enforceable only within its judicial region; an international organization and its officers may be immune",
+"Pangilinan v. Cayetano (2021): withdrawal case dismissed as moot; the Court’s statement on cooperation is obiter"
+],
+"cases": [
+"ibpzamora",
+"pacu",
+"arigo",
+"minucher"
+],
+"model": "The petition should be dismissed. First, the petitioners lack standing. Perito sues as a member of the legal profession and Forrosuelo as an OFW; neither shows a personal injury from an ICC investigation. A general interest in the rule of law is not enough (IBP v. Zamora). Second, there is no actual case. The petition rests on the fear that ICC personnel might come; mere apprehension of a future act does not create a justiciable controversy (PACU). Third, deciding which aliens may enter and whether to deport them belongs to the Executive under the immigration laws. A court cannot pre-emptively take that decision through an injunction, and how the State deals with an international tribunal is a matter of foreign relations. Fourth, the forum is wrong for the relief sought. An RTC’s injunction is enforceable only within its region, so a Calbayog court cannot bar entry nationwide, and the ICC and its officers acting in an official capacity may invoke immunity (cf. Minucher; Arigo). Finally, in Pangilinan v. Cayetano (2021) the Court dismissed the petitions against the withdrawal from the Rome Statute as moot; its remarks on the duty to cooperate are obiter.",
+"points": [
+[
+"Answer first: dismiss",
+1
+],
+[
+"Standing",
+2
+],
+[
+"Actual case / ripeness",
+2
+],
+[
+"Executive’s immigration and foreign-relations domain",
+2
+],
+[
+"Forum limits (RTC region) and immunity",
+2
+],
+[
+"Pangilinan noted accurately",
+1
+]
+],
+"note": "Former President Duterte was surrendered to the ICC in March 2025. If this returns as a news question, the procedural analysis is the same, but also address immunity, the withdrawal, and the cooperation question."
+}
+]

@@ -1,0 +1,979 @@
+[
+{
+"id": "m13-01",
+"exam": "2013 Midterm",
+"n": 1,
+"t": "powers",
+"cov": "in",
+"q": "Publication of laws of general application in the ONAR is necessary for a law to become [effective]:",
+"c": [
+"False",
+"True",
+"The law is unclear on this point"
+],
+"a": 0,
+"e": "Laws take effect after publication in the Official Gazette or a newspaper of general circulation (Civil Code, Art. 2, as amended by EO 200; Tañada v. Tuvera). Filing with the Office of the National Administrative Register (ONAR, at the UP Law Center) is a requirement for administrative rules under the Administrative Code, Book VII, not for statutes.",
+"cs": [
+"tanada85"
+],
+"k": "The stem says ‘to become necessary’; read it as ‘effective’."
+},
+{
+"id": "m13-02",
+"exam": "2013 Midterm",
+"n": 2,
+"t": "powers",
+"cov": "in",
+"q": "Which of the following can be legally enacted by Congress?",
+"c": [
+"Delegation of powers",
+"Higher votes for repeal or amendment of laws",
+"Legislative vetoes",
+"None of the above"
+],
+"a": 0,
+"e": "Congress may delegate within limits (completeness and sufficient standard; the five permitted delegations). It may not require a supermajority to repeal or amend a law (one of Gatmaytan’s substantive limits), and legislative vetoes are void (ABAKADA).",
+"cs": [
+"abakada",
+"vera"
+]
+},
+{
+"id": "m13-03",
+"exam": "2013 Midterm",
+"n": 3,
+"t": "org",
+"cov": "in",
+"story": "s13dimaporo",
+"q": "Which answer best describes Dimaporo’s arrest?",
+"c": [
+"It is illegal because Congress is in session",
+"It is illegal because he enjoys parliamentary immunity",
+"It is legal",
+"Impossible to tell with the given facts"
+],
+"a": 2,
+"e": "Art. VI, Sec. 11 protects a member from arrest only for offenses punishable by not more than six years’ imprisonment while Congress is in session. Malversation here is punishable by more than six years, so the privilege does not apply whether or not Congress is in session.",
+"cs": [
+"jalosjos",
+"trillanespimentel"
+]
+},
+{
+"id": "m13-04",
+"exam": "2013 Midterm",
+"n": 4,
+"t": "org",
+"cov": "in",
+"story": "s13dimaporo",
+"q": "For purposes of computing the House of Representatives’ votes, Dimaporo:",
+"c": [
+"Should be counted as a member of Congress",
+"Should not be counted because he is in a hospital",
+"Should not be counted because he was arrested",
+"None of the above"
+],
+"a": 0,
+"e": "Arrest or detention does not end membership. He remains a member of the House and is counted in its membership; he is also within the House’s coercive jurisdiction (contrast the senator abroad in Avelino v. Cuenco). Jalosjos only denies a detained member the right to attend sessions.",
+"cs": [
+"jalosjos",
+"avelino"
+]
+},
+{
+"id": "m13-05",
+"exam": "2013 Midterm",
+"n": 5,
+"t": "org",
+"cov": "in",
+"story": "s13dimaporo",
+"q": "The Sandiganbayan:",
+"c": [
+"Exceeded its authority because it cannot discipline members of Congress",
+"Exceeded its authority because this is not a case of preventive suspension",
+"Exceeded its authority because only Congress can discipline its members",
+"None of the above"
+],
+"a": 3,
+"e": "Serving an arrest warrant on an accused is not ‘discipline’ under Art. VI, Sec. 16(3). The Sandiganbayan was exercising its criminal jurisdiction over a public officer; the House’s disciplinary power is separate and does not exempt members from criminal process. Choices (a) to (c) all wrongly frame the arrest as discipline.",
+"cs": [
+"jalosjos"
+]
+},
+{
+"id": "m13-06",
+"exam": "2013 Midterm",
+"n": 6,
+"t": "terr",
+"cov": "in",
+"story": "s13tubbataha",
+"q": "What should the Supreme Court do?",
+"c": [
+"Grant the petition filed by Colmenares",
+"Dismiss because the Supreme Court cannot have jurisdiction over a foreign sovereign",
+"Dismiss the suit because the US enjoys immunity from suit",
+"Dismiss the petition because Colmenares has no standing",
+"None of the above"
+],
+"a": 2,
+"e": "Arigo v. Swift (2014): the suit against US Navy officers for acts in their official capacity is a suit against the United States, which has not consented; the writ of kalikasan cannot be used to collect damages or nullify the VFA. Standing was not the problem: the Court recognised the petitioners’ standing under the environmental rules. Choice (b) overstates: the problem is immunity, not an absolute lack of jurisdiction.",
+"cs": [
+"arigo"
+]
+},
+{
+"id": "m13-07",
+"exam": "2013 Midterm",
+"n": 7,
+"t": "approp",
+"cov": "in",
+"story": "s13dap",
+"q": "The Aquino Administration’s actions regarding the budget are:",
+"c": [
+"Legal because realignment is sanctioned by the law",
+"Illegal because there is no augmentation here",
+"Perfectly legal",
+"None of the above"
+],
+"a": 1,
+"e": "Araullo v. Aquino (2014): withdrawing unobligated allotments mid-year and calling them ‘savings’, then using them for projects with no appropriation, is not augmentation under Art. VI, Sec. 25(5). Abad himself conceded that ‘augment’ implies the project exists. The story’s facts track the DAP practices the Court struck down.",
+"cs": [
+"araullo",
+"demetria"
+],
+"k": "The scanned mark sits beside (d); on the analysis, (b) is the best answer."
+},
+{
+"id": "m13-08",
+"exam": "2013 Midterm",
+"n": 8,
+"t": "powers",
+"cov": "beyond",
+"story": "s13ofw",
+"q": "The Senate investigation is:",
+"c": [
+"Illegal because it is designed to prosecute the labor officials",
+"Illegal because rights of the labor attaché are not protected",
+"Legal",
+"None of the above"
+],
+"a": 2,
+"e": "An inquiry into the government’s failure to protect migrant workers is in aid of legislation (Art. VI, Sec. 21), and nothing in the facts shows that the rights of persons appearing were violated. Inquiries in aid of legislation come after John Hay in the syllabus."
+},
+{
+"id": "m13-09",
+"exam": "2013 Midterm",
+"n": 9,
+"t": "powers",
+"cov": "in",
+"story": "s13jcoc",
+"q": "This section is:",
+"c": [
+"Illegal because it is a legislative veto",
+"Perfectly legal",
+"Illegal because it encroaches upon the executive function of implementing laws",
+"Both (a) and (c)"
+],
+"a": 2,
+"e": "Duty (a) lets the committee ‘set the guidelines and overall framework to monitor and ensure the proper implementation’ of the law: that is a role in implementation, which belongs to the Executive (ABAKADA; Macalintal 2003). Duty (c) only approves the committee’s own budget, so there is no approval of executive rules, the classic legislative veto. Reports, hearings and recommending legislation are valid oversight.",
+"cs": [
+"abakada",
+"macalintal2003"
+],
+"k": "(d) is arguable if you read duty (a) as approval of executive action; the safer reading is (c)."
+},
+{
+"id": "m13-10",
+"exam": "2013 Midterm",
+"n": 10,
+"t": "et",
+"cov": "in",
+"story": "s13muhlach",
+"q": "Muhlach’s remedy is with the:",
+"c": [
+"Commission on Elections",
+"Supreme Court",
+"House of Representatives Electoral Tribunal",
+"None of the above"
+],
+"a": 2,
+"e": "Once the winner is proclaimed and has become a member, contests on election, returns and qualifications go to the HRET (Art. VI, Sec. 17). Under Reyes v. COMELEC (2013), the HRET takes over only after proclamation, oath and assumption of office (June 30), so in an essay say which date controls.",
+"cs": [
+"reyescomelec",
+"codilla"
+]
+},
+{
+"id": "m13-11",
+"exam": "2013 Midterm",
+"n": 11,
+"t": "basics",
+"cov": "in",
+"story": "s13belmonte",
+"q": "Which of the following is incorrect?",
+"c": [
+"The Senate need not vote on this proposed amendment",
+"A 2/3 vote of both Houses of Congress is necessary",
+"The President can veto the proposal",
+"None of the above"
+],
+"a": 0,
+"e": "Congress proposes amendments as a constituent assembly by a vote of three-fourths of all its Members (Art. XVII, Sec. 1(1)); both Houses must vote, so (a) is incorrect. But (b) is also incorrect (the vote is three-fourths, not two-thirds), and so is (c) (proposals are not bills and are not presented to the President).",
+"cs": [
+"gonzales67"
+],
+"k": "Flawed item: (a), (b) and (c) are all incorrect statements. The circulated key marked (a)."
+},
+{
+"id": "m13-12",
+"exam": "2013 Midterm",
+"n": 12,
+"t": "gov",
+"cov": "in",
+"story": "s13water",
+"q": "Which statement is accurate?",
+"c": [
+"Senator Enrile is correct",
+"Senator Santiago is correct",
+"Neither Senator is correct"
+],
+"a": 1,
+"e": "The non-impairment clause is not absolute: it yields to the police power, and franchises are always subject to amendment, alteration or repeal by Congress (Art. XII, Sec. 11). Congress can legislate to protect consumers even if a concession agreement allows pass-on charges.",
+"cs": [
+"ileco"
+]
+},
+{
+"id": "m13-13",
+"exam": "2013 Midterm",
+"n": 13,
+"t": "powers",
+"cov": "beyond",
+"q": "When the President vetoes a bill, the remedy for Congress is:",
+"c": [
+"To question the veto before the Supreme Court",
+"To override the veto",
+"Both (a) and (b)",
+"Either (a) or (b)"
+],
+"a": 1,
+"e": "Art. VI, Sec. 27(1): Congress may override the veto by a two-thirds vote of all the Members of each House. The veto is a political act within the legislative process."
+},
+{
+"id": "m13-14",
+"exam": "2013 Midterm",
+"n": 14,
+"t": "approp",
+"cov": "in",
+"story": "s13pdaf",
+"q": "Which statement is true?",
+"c": [
+"The allocation is unconstitutional because appropriations bills should emanate from the House of Representatives",
+"Since the Congress makes the budget it should simply alter the shares",
+"The allocation violates the equal protection of laws",
+"None of the above"
+],
+"a": 3,
+"e": "Origin in the House concerns the bill, not the shares (Tolentino), and unequal shares between Senators and Representatives are not an equal-protection issue. Note that after Belgica (2013), the PDAF itself is unconstitutional, so ‘altering the shares’ is no answer either.",
+"cs": [
+"belgica2013",
+"tolentinofinance"
+]
+},
+{
+"id": "m13-15",
+"exam": "2013 Midterm",
+"n": 15,
+"t": "powers",
+"cov": "in",
+"story": "s13cyber",
+"q": "Which of the following statements is incorrect?",
+"c": [
+"The work of the committee shows that the cases with the Supreme Court are premature",
+"The implementing rules cannot salvage the law",
+"The committee’s work moots the pending cases with the Supreme Court",
+"As a form of delegated legislation, the implementing rules can address defects in the law"
+],
+"a": 1,
+"e": "An IRR cannot amend, expand or cure the law it implements; an unconstitutional provision stays unconstitutional whatever the rules say. So (b) is the correct statement of law, and (a), (c) and (d) are wrong.",
+"k": "Flawed item: as worded (‘incorrect’), (a), (c) and (d) all fit; (b) is the only correct statement. The circulated key marked (b), so read the stem as ‘correct’."
+},
+{
+"id": "m13-16",
+"exam": "2013 Midterm",
+"n": 16,
+"t": "powers",
+"cov": "in",
+"story": "s13sb405",
+"q": "Which statement is correct?",
+"c": [
+"The bill would amount to a deprivation of property without due process of law",
+"The proposed law [is] unconstitutional because [there is] no ban on local government officials on accepting an appointment",
+"The proposed law will be valid because qualifications of local officials are to be determined by law",
+"None of the above"
+],
+"a": 3,
+"e": "Public office is not property, so (a) fails. (c) is incomplete: the bill also bars appointment to constitutional commissions and offices created under the Constitution, whose qualifications the Constitution fixes and Congress cannot add to (SJS v. DDB). The bill is valid as to statutory offices and invalid as to constitutional offices if separable.",
+"cs": []
+},
+{
+"id": "m13-17",
+"exam": "2013 Midterm",
+"n": 17,
+"t": "basics",
+"cov": "beyond",
+"q": "Which statement about Congress and the Supreme Court is true, and without any exception?",
+"c": [
+"Congress can deprive the various courts of jurisdiction over cases",
+"Congress determines the appellate jurisdiction of the courts",
+"Congress may allow those with dual citizenship to become judges",
+"None of the above"
+],
+"a": 3,
+"e": "Congress may apportion jurisdiction but may not deprive the Supreme Court of its jurisdiction under Art. VIII, Sec. 5 (Art. VIII, Sec. 2), and it may not increase the Court’s appellate jurisdiction without its advice and concurrence (Art. VI, Sec. 30). Justices must be natural-born, and dual citizenship is a matter of allegiance. Each choice has an exception."
+},
+{
+"id": "m13-18",
+"exam": "2013 Midterm",
+"n": 18,
+"t": "powers",
+"cov": "beyond",
+"story": "s13lagman",
+"q": "Assume this measure is enacted as law. Such a law would be:",
+"c": [
+"Valid",
+"Invalid because it discriminates against the LGBT community"
+],
+"a": 0,
+"e": "Defining crimes is a legislative choice. A law that extends adultery to same-sex partners treats spouses alike and does not single out LGBT persons for burdens; it would pass rational-basis review."
+},
+{
+"id": "m13-19",
+"exam": "2013 Midterm",
+"n": 19,
+"t": "powers",
+"cov": "beyond",
+"story": "s13lacson",
+"q": "What answer is the most legally accurate response to Senator Santiago’s comments?",
+"c": [
+"Senator Santiago is incorrect because the President may create offices",
+"Santiago is correct. The creation of an office is a legislative function.",
+"Santiago is incorrect because there is no office created by the draft Executive Order",
+"None of the above"
+],
+"a": 0,
+"e": "The President may create ad hoc investigating bodies within the Executive under his power of control and to reorganize the Office of the President (Administrative Code, Book III, Sec. 31; Biraogo v. Philippine Truth Commission, 2010).",
+"cs": [
+"pichay"
+]
+},
+{
+"id": "m13-20",
+"exam": "2013 Midterm",
+"n": 20,
+"t": "approp",
+"cov": "in",
+"story": "s13veto",
+"q": "The veto is:",
+"c": [
+"Legal",
+"Illegal",
+"Impossible to tell with the facts"
+],
+"a": 0,
+"e": "The President may veto items of appropriation bills and ‘inappropriate provisions’ (provisions that do not relate to a particular appropriation) separately (Art. VI, Sec. 27(2); Philconsa v. Enriquez). The vetoed special provision on the Quick Response Fund in the PDAF did not relate to the PDAF’s purpose.",
+"cs": [
+"philconsaenriquez"
+]
+},
+{
+"id": "m15-01",
+"exam": "2015 Midterm",
+"n": 1,
+"t": "et",
+"cov": "in",
+"story": "s15poe",
+"q": "Which statement is correct?",
+"c": [
+"Tatad’s case is premature because Poe has not been elected President",
+"Tatad’s petition should be dismissed on the grounds of res judicata",
+"Tatad’s petition is ripe for adjudication",
+"Tatad’s petition should be dismissed because he has no standing to bring the suit"
+],
+"a": 2,
+"e": "A petition to disqualify or cancel the COC of a candidate is filed with COMELEC before the election; it is ripe once the candidacy exists. The SET case (David) involved a different office and different parties, so there is no res judicata. Any registered voter or candidate may file.",
+"cs": [
+"davidset"
+]
+},
+{
+"id": "m15-02",
+"exam": "2015 Midterm",
+"n": 2,
+"t": "et",
+"cov": "in",
+"story": "s15poe",
+"q": "Which statement is true?",
+"c": [
+"Tatad’s petition is filed in the proper forum",
+"Tatad’s petition should have been filed with the Presidential Electoral Tribunal",
+"Tatad’s petition should have been filed with the Supreme Court",
+"Tatad’s petition should have been filed with the Regional Trial Court, the ‘trier of facts’"
+],
+"a": 0,
+"e": "Before the election, the qualifications of candidates are for COMELEC. The PET, like the SET and HRET, takes over only after the winner is proclaimed and assumes office.",
+"cs": [
+"reyescomelec"
+]
+},
+{
+"id": "m15-03",
+"exam": "2015 Midterm",
+"n": 3,
+"t": "cit",
+"cov": "in",
+"story": "s15poe",
+"q": "In this convoluted tale, which scenario is legally possible?",
+"c": [
+"There can be two Supreme Court decisions on whether Poe is qualified for public office and both would be correct",
+"That the SET and the PET can have different rulings on Poe’s citizenship and both would be correct",
+"That the SET and the PET can have different rulings on Poe’s residence and both would be correct",
+"This is so insane that all three scenarios are possible"
+],
+"a": 0,
+"e": "Different offices have different qualifications and periods (two years’ residence for Senator, ten years for President), so the Court can rule in one case that she is qualified for one office and in another that she is not qualified for another. Citizenship is a status, so conflicting rulings on it cannot both be right.",
+"cs": [
+"davidset"
+],
+"k": "The circulated key is (a). (c) is also defensible: residence is measured over different periods for Senator and President, so the SET and PET can reach different, correct conclusions on her residence."
+},
+{
+"id": "m15-04",
+"exam": "2015 Midterm",
+"n": 4,
+"t": "jr",
+"cov": "in",
+"q": "Which of the following is a political question?",
+"c": [
+"The President’s certification that a bill is urgent",
+"A finding by the House of Representatives Committee on Justice that an impeachment complaint is sufficient in substance",
+"The necessity of calling out the armed forces",
+"The propriety of legislative apportionment"
+],
+"a": 0,
+"e": "The President’s certification of urgency was accepted by the Court without inquiring into its factual basis, given that Congress itself acted on it (Tolentino v. Secretary of Finance). Each of the others is reviewable for grave abuse of discretion under the expanded certiorari power: the House’s impeachment process (Francisco), the factual basis of the calling-out power (IBP v. Zamora), and apportionment.",
+"cs": [
+"tolentinofinance",
+"ibpzamora",
+"francisco"
+]
+},
+{
+"id": "m15-05",
+"exam": "2015 Midterm",
+"n": 5,
+"t": "approp",
+"cov": "in",
+"story": "s15gaa",
+"q": "The new definition of savings:",
+"c": [
+"Does not violate the Constitution",
+"Is unconstitutional",
+"Does not violate any statute",
+"Merely illegal"
+],
+"a": 0,
+"e": "Araullo held that savings may come only from the GAA’s definition (completed or abandoned purposes, unpaid compensation, efficiencies) and that withdrawing unobligated allotments mid-year to create ‘savings’ was invalid. Congress may define savings in the GAA itself; a statutory definition of unobligated balances under stated circumstances is not unconstitutional on its face.",
+"cs": [
+"araullo"
+]
+},
+{
+"id": "m15-06",
+"exam": "2015 Midterm",
+"n": 6,
+"t": "approp",
+"cov": "in",
+"story": "s15gaa2",
+"q": "Which statement is correct?",
+"c": [
+"There is a strong case against the questioned provisions based on Belgica",
+"There is a strong case against the questioned provisions based on Araullo",
+"Neither Belgica nor Araullo are implicated by the case",
+"Both Belgica and Araullo were clearly violated"
+],
+"a": 3,
+"e": "The circulated key reads the petition as a whole: the lump sums released upon a special budget (Sec. 65) raise Belgica’s post-enactment discretion problem, and the realignment rules (Sec. 73) raise Araullo’s transfer problem. In an essay, take each provision separately and apply singular correspondence (Belgica) and Sec. 25(5) (Araullo).",
+"cs": [
+"belgica2013",
+"araullo"
+],
+"k": "Sits uneasily with item 5 (savings definition valid). The circulated key is (d). The site does not say how the Court later resolved the petition; that ruling is outside your coverage."
+},
+{
+"id": "m15-07",
+"exam": "2015 Midterm",
+"n": 7,
+"t": "powers",
+"cov": "in",
+"story": "s15sk",
+"q": "If the law is challenged as unconstitutional, how are the courts likely to interpret the anti-dynasty provision?",
+"c": [
+"It is a rider",
+"It violates the one subject, one bill rule",
+"It is valid",
+"It violates the Constitution because it adds a qualification for public office"
+],
+"a": 2,
+"e": "A rule on SK officials’ relatives is germane to the SK’s structure and eligibility, so it is not a rider and the title covers it (liberal construction: Giron). SK offices are created by statute, so Congress may set their qualifications; the bar on adding qualifications applies only to offices whose qualifications the Constitution fixes.",
+"cs": [
+"giron",
+"lidasan"
+]
+},
+{
+"id": "m15-08",
+"exam": "2015 Midterm",
+"n": 8,
+"t": "powers",
+"cov": "beyond",
+"story": "s15skurgent",
+"q": "Which statement is true?",
+"c": [
+"The bill cannot be certified as urgent",
+"The bill can be certified as urgent",
+"If certified as urgent, the certification can be questioned before the courts",
+"If certified as urgent, the certification cannot be questioned before the courts"
+],
+"a": 3,
+"e": "Under Art. VI, Sec. 26(2), the President may certify a bill’s immediate enactment ‘to meet a public calamity or emergency’. The Court deferred to the certification in Tolentino v. Secretary of Finance. A student’s note on the paper argues that the SK bill was technically not an emergency, which bears on (a) and (b).",
+"cs": [
+"tolentinofinance"
+]
+},
+{
+"id": "m15-09",
+"exam": "2015 Midterm",
+"n": 9,
+"t": "cit",
+"cov": "in",
+"story": "s15wallace",
+"q": "Assuming he has all the other qualifications (aside from citizenship), which of the following statements is true?",
+"c": [
+"Mr. Wallace may be appointed to the Supreme Court",
+"He may run for local office",
+"He may run as Senator",
+"None of the statements are true"
+],
+"a": 3,
+"e": "Justices and Senators must be natural-born citizens; Wallace is naturalized by legislative act, so (a) and (c) are false. The circulated key is (d), but the Local Government Code requires only that local officials be ‘citizens of the Philippines’, so (b) appears true once he has taken his oath and the Act has taken effect.",
+"k": "Likely wrong key. On the law, (b) is true: a naturalized citizen may run for local office. If asked, answer (b) and explain."
+},
+{
+"id": "m15-10",
+"exam": "2015 Midterm",
+"n": 10,
+"t": "tax",
+"cov": "in",
+"story": "s15tax",
+"q": "Which statement is true?",
+"c": [
+"The Representatives should shelve the proposal because the President vetoed it",
+"The President’s support is irrelevant at this point",
+"The measure is not progressive",
+"The law should originate from the House of Representatives"
+],
+"a": 1,
+"e": "The President has no role until the bill is presented to him; he has not vetoed anything yet. Choice (d) is wrong as worded: under Art. VI, Sec. 24 it is the revenue bill, not the law, that must originate in the House (Tolentino).",
+"cs": [
+"tolentinofinance"
+]
+},
+{
+"id": "m15-11",
+"exam": "2015 Midterm",
+"n": 11,
+"t": "tax",
+"cov": "beyond",
+"story": "s15tax",
+"q": "Which statement is also true?",
+"c": [
+"The President’s objections are valid grounds for a veto",
+"The President cannot veto the bill because it is a revenue measure",
+"The President can veto the bill because it is an inappropriate provision",
+"None of the statements are true"
+],
+"a": 0,
+"e": "The President may veto any bill for any reason, including fiscal objections; for revenue and tariff bills he may also veto particular items (Art. VI, Sec. 27). ‘Inappropriate provisions’ is a concept for appropriation bills (Philconsa v. Enriquez).",
+"cs": [
+"philconsaenriquez"
+]
+},
+{
+"id": "m16-01",
+"exam": "2016 Midterm",
+"n": 1,
+"t": "approp",
+"cov": "in",
+"story": "s16cif",
+"q": "Which statement is true?",
+"c": [
+"The Senate can delete the President’s confidential, intelligence, extraordinary expenses — as well as his travelling expenses",
+"The intelligence and operational funds is proscribed under Araullo",
+"The intelligence and operational funds is proscribed under Belgica",
+"None of the above are correct"
+],
+"a": 3,
+"e": "Neither Araullo nor Belgica bars confidential and intelligence funds as such. As to (a): the Senate alone cannot delete an appropriation; the GAA must pass both Houses (the Senate only proposes amendments), and Congress may reduce, never increase, the President’s recommendations (Art. VI, Sec. 25(1)). A note on the paper says the funds ‘can only be reduced’.",
+"cs": [
+"araullo",
+"belgica2013"
+]
+},
+{
+"id": "m16-02",
+"exam": "2016 Midterm",
+"n": 2,
+"t": "powers",
+"cov": "in",
+"story": "s16smoking",
+"q": "Which statement is correct?",
+"c": [
+"The EO is valid as a form of delegated legislation",
+"The EO is invalid as a usurpation of legislative powers",
+"The EO violates the hierarchy of laws",
+"None of the above statements are correct"
+],
+"a": 2,
+"e": "RA 9211 regulates smoking and allows designated smoking areas; an executive order that bans smoking in all public places would contradict the statute. An executive issuance cannot override a law (hierarchy of laws; Civil Code, Art. 7). Even the Health Secretary concedes the law must be amended first.",
+"k": "The paper’s circle is near (b). (b) rests on the same idea (the EO legislates). (c) is the more precise answer: the EO contradicts an existing statute."
+},
+{
+"id": "m16-03",
+"exam": "2016 Midterm",
+"n": 3,
+"t": "jr",
+"cov": "beyond",
+"q": "The Supreme Court stopped the suspension order imposed by the Office of the Ombudsman against Lipa City Mayor Meynardo Sabili for an administrative case (conduct prejudicial to the best interest of the service, for acts in September 2010 and July 2012). Sabili was elected mayor in May 2010 and re-elected in the 2013 and 2016 elections. He invoked the condonation doctrine. Which statement is legally sound?",
+"c": [
+"Sabili will prevail in the case before the Supreme Court because of the Aguinaldo doctrine",
+"Sabili will not prevail in the case before the Supreme Court because the Aguinaldo doctrine has been abandoned",
+"Sabili will not prevail because of Carpio-Morales v. Court of Appeals",
+"None of the above statements are correct"
+],
+"a": 0,
+"e": "Carpio-Morales v. CA (2015) abandoned the condonation doctrine prospectively. Sabili was re-elected in 2013, before the abandonment, so condonation still applies to acts in his earlier term."
+},
+{
+"id": "m16-04",
+"exam": "2016 Midterm",
+"n": 4,
+"t": "tax",
+"cov": "beyond",
+"q": "If a bill is certified as urgent by the President,",
+"c": [
+"it may be adopted by Congress without going through three readings",
+"it can immediately be voted upon from receipt of the President’s certification",
+"must still go through three readings, but not necessarily on separate days, so long as printed copies of the final form of the bill are distributed among the members before the final reading",
+"must go through three readings, but not necessarily on separate days, provided printed copies of the final version of the bill is distributed three days before the voting",
+"None of the above is correct"
+],
+"a": 4,
+"e": "Art. VI, Sec. 26(2): certification dispenses with both the three separate days and the printing and distribution three days before passage (Tolentino). The three readings themselves remain. (c) wrongly keeps the printing requirement; (d) keeps the three-day requirement.",
+"cs": [
+"tolentinofinance"
+]
+},
+{
+"id": "m16-05",
+"exam": "2016 Midterm",
+"n": 5,
+"t": "cit",
+"cov": "in",
+"story": "s16dual",
+"q": "Which statement is the most accurate?",
+"c": [
+"The ban is legal pursuant to the Constitution",
+"The ban is legal pursuant to Republic Act No. 9225",
+"The ban is legal pursuant to Republic Act No. 8171",
+"The ban is unconstitutional"
+],
+"a": 3,
+"e": "Dual citizenship is not dual allegiance; Art. IV, Sec. 5 leaves dual allegiance to be ‘dealt with by law’. RA 9225 Sec. 5(3) asks those who reacquired citizenship and are appointed to office to renounce their foreign oath of allegiance, but it does not authorise the CSC to clear all dual citizens (including those by birth) from government. Only Congress may add such a disqualification.",
+"k": "The paper marks (d). (b) is arguable for persons who reacquired citizenship under RA 9225 and hold appointive office (Sec. 5(3)), so mention it in an essay."
+},
+{
+"id": "m16-06",
+"exam": "2016 Midterm",
+"n": 6,
+"t": "powers",
+"cov": "beyond",
+"story": "s16dayan",
+"q": "Realistically, which statement is true under Philippine law?",
+"c": [
+"Dayan may refuse to attend the sessions because the inquiry is not ‘in aid of legislation’",
+"Dayan may refuse to attend the sessions because he may be forced to incriminate himself",
+"Dayan may not refuse to attend the hearings",
+"Dayan may refuse to answer questions during the hearing"
+],
+"a": 2,
+"e": "A resource person must attend a legislative inquiry (Art. VI, Sec. 21); he may invoke the right against self-incrimination only when a specific incriminating question is asked, not to refuse to appear. He has no executive privilege to invoke."
+},
+{
+"id": "m16-07",
+"exam": "2016 Midterm",
+"n": 7,
+"t": "gov",
+"cov": "beyond",
+"q": "Members of the Cabinet may:",
+"c": [
+"not hold two offices at a time, even in an ex-officio capacity",
+"be designated to ex officio positions when required by law and allowed by the primary functions of their office, without compensation",
+"be designated to ex officio positions when allowed by law or required by the primary functions of their office, without compensation",
+"be designated to ex officio positions when allowed by law and required by the primary functions of their office, without compensation"
+],
+"a": 3,
+"e": "Civil Liberties Union v. Executive Secretary (1991): the ban in Art. VII, Sec. 13 does not cover positions held without additional compensation in an ex officio capacity ‘as provided by law and as required by the primary functions’ of the office. Both conditions must concur.",
+"k": "The paper marks this item as a bonus and ticks (c). Under CLU, (d) is correct: ‘and’, not ‘or’."
+},
+{
+"id": "m16-08",
+"exam": "2016 Midterm",
+"n": 8,
+"t": "jr",
+"cov": "in",
+"q": "Which party has standing to sue in Philippine law?",
+"c": [
+"Marine mammals",
+"Future generations",
+"Concerned citizens",
+"Microbes"
+],
+"a": 2,
+"e": "Under the Rules of Procedure for Environmental Cases, any Filipino citizen may file a citizen suit as a steward of nature. In Resident Marine Mammals (2015) the Court said animals need not be given legal personality: their human ‘stewards’ may sue. Gatmaytan treats Oposa’s intergenerational standing as obiter.",
+"cs": [
+"marinemammals"
+]
+},
+{
+"id": "m16-09",
+"exam": "2016 Midterm",
+"n": 9,
+"t": "basics",
+"cov": "in",
+"q": "Which statement is absolutely true all the time?",
+"c": [
+"An unconstitutional act is not a law; it confers no rights; it imposes no duties; it affords no protection; it creates no office; it is in legal contemplation as inoperative as though it had never been passed",
+"The operative fact doctrine is applied when the Supreme Court declares a law unconstitutional",
+"[Choices (c) and (d) are illegible in the scan; reconstructed as] None of the above"
+],
+"a": 2,
+"e": "The orthodox view in (a) is qualified by the operative fact doctrine, which recognises the effects of an unconstitutional law before it was struck down. But the operative fact doctrine is an exception applied for equity and fairness, not every time a law is struck down, so (b) is false too.",
+"cs": [
+"araullo"
+],
+"k": "Choices (c) and (d) are garbled in the scan; the item is reconstructed."
+},
+{
+"id": "m16-10",
+"exam": "2016 Midterm",
+"n": 10,
+"t": "basics",
+"cov": "in",
+"q": "Which doctrine is expressly found in the Constitution?",
+"c": [
+"The operative fact doctrine",
+"‘Inappropriate provisions’ in the General Appropriations Act",
+"Rulings pro hac vice",
+"The enrolled bill theory"
+],
+"a": 1,
+"e": "Art. VI, Sec. 25(2) bars provisions in the GAA that do not relate specifically to a particular appropriation. The operative fact doctrine, pro hac vice rulings and the enrolled bill theory are judge-made.",
+"cs": [
+"philconsaenriquez"
+]
+},
+{
+"id": "m16-11",
+"exam": "2016 Midterm",
+"n": 11,
+"t": "powers",
+"cov": "in",
+"q": "Which is NOT a valid delegation of legislative power?",
+"c": [
+"Delegation of emergency powers to the President under Section 23(2) of Article VI of the Constitution",
+"Delegation to the people at large",
+"Delegation to local governments",
+"All of the above are valid"
+],
+"a": 3,
+"e": "All three are recognised exceptions to non-delegation, together with tariff powers (Art. VI, Sec. 28(2)) and delegation to administrative agencies."
+},
+{
+"id": "m16-12",
+"exam": "2016 Midterm",
+"n": 12,
+"t": "basics",
+"cov": "in",
+"story": "s16charter",
+"q": "Think about this carefully and determine which statement is correct:",
+"c": [
+"The substance of Pichay’s motion is stupid",
+"The motion is not stupid",
+"The substance is a grey area under the law",
+"The facts are insufficient for making a legal conclusion"
+],
+"a": 1,
+"e": "Art. XVII, Sec. 1(1) gives the power to propose amendments to ‘the Congress’, which means both Houses. Inviting the Senate to join is the correct reading. How the two Houses vote (jointly or separately) is the grey area, not whether the Senate takes part.",
+"cs": [
+"gonzales67"
+]
+},
+{
+"id": "m16-13",
+"exam": "2016 Midterm",
+"n": 13,
+"t": "tax",
+"cov": "beyond",
+"q": "If a bill is certified as urgent by the President, (repeat of item 4)",
+"c": [
+"it may be adopted by Congress without going through three readings",
+"it can immediately be voted upon from receipt of the President’s certification",
+"must still go through three readings, but not necessarily on separate days, so long as printed copies of the final form of the bill are distributed among the members before the final reading",
+"must go through three readings, but not necessarily on separate days, provided printed copies of the final version of the bill is distributed three days before the voting",
+"None of the above is correct"
+],
+"a": 4,
+"e": "Same as item 4: certification dispenses with both the separate days and the three-day printing requirement (Tolentino).",
+"cs": [
+"tolentinofinance"
+]
+},
+{
+"id": "m16-14",
+"exam": "2016 Midterm",
+"n": 14,
+"t": "tax",
+"cov": "in",
+"q": "To be considered as validly enacted, a bill that was revised and approved by the Bicameral Conference Committee:",
+"c": [
+"must be re-submitted to both Houses of Congress because each House must approve the revisions made by the Bicameral Conference Committee",
+"does not have to be re-submitted to both Houses for their approval if the original bill was the subject of a Presidential certification",
+"has to be re-submitted to both Houses for their final approval and must undergo three readings on 3 separate days",
+"does not have to be re-submitted to both Houses for their approval because the version of the Bicameral Conference Committee shall automatically be considered as the enrolled bill",
+"None of the above is correct"
+],
+"a": 0,
+"e": "The bicameral conference report must be approved by both Houses (Tolentino), but it is not subjected to three readings again.",
+"cs": [
+"tolentinofinance"
+]
+},
+{
+"id": "m16-15",
+"exam": "2016 Midterm",
+"n": 15,
+"t": "powers",
+"cov": "in",
+"q": "Which of the following bills requires the advice and concurrence of the Supreme Court?",
+"c": [
+"A bill decreasing the appellate jurisdiction of the Supreme Court",
+"A bill increasing the original jurisdiction of the Supreme Court",
+"A bill increasing the appellate jurisdiction of the Supreme Court",
+"A bill decreasing the original jurisdiction of the Supreme Court"
+],
+"a": 2,
+"e": "Art. VI, Sec. 30: ‘No law shall be passed increasing the appellate jurisdiction of the Supreme Court as provided in this Constitution without its advice and concurrence.’ One of the limits on Congress tied to the Court’s autonomy."
+},
+{
+"id": "m16-16",
+"exam": "2016 Midterm",
+"n": 16,
+"t": "basics",
+"cov": "in",
+"q": "Which is not embodied in the Constitution’s preamble?",
+"c": [
+"observe decency and human rights",
+"embody our ideals and aspirations",
+"promote the common good",
+"conserve and develop our patrimony"
+],
+"a": 0,
+"e": "The Preamble speaks of building a just and humane society, embodying our ideals and aspirations, promoting the common good, and conserving and developing our patrimony. ‘Observe decency and human rights’ is not in it."
+},
+{
+"id": "m16-17",
+"exam": "2016 Midterm",
+"n": 17,
+"t": "powers",
+"cov": "beyond",
+"q": "When the President vetoes a bill, the remedy of Congress is:",
+"c": [
+"to question the veto before the Supreme Court",
+"to override the veto",
+"to question the veto before the Supreme Court and to override it",
+"to question the veto before the Supreme Court or to override it"
+],
+"a": 1,
+"e": "Art. VI, Sec. 27(1): override by two-thirds of all the Members of each House. (Repeat of 2013 item 13.)"
+},
+{
+"id": "m16-18",
+"exam": "2016 Midterm",
+"n": 18,
+"t": "house",
+"cov": "in",
+"q": "A legislative district can be created",
+"c": [
+"By the Commission on Elections",
+"Based on the number of inhabitants",
+"Based on the number of registered voters",
+"Every three years by an act of Congress"
+],
+"a": 1,
+"e": "Districts are apportioned by law on the basis of population (inhabitants), on a uniform and progressive ratio; a city of at least 250,000 inhabitants gets at least one representative (Art. VI, Sec. 5(1) and (3)). Only Congress may create districts (Sema). Reapportionment follows each census, not every three years (Sec. 5(4)).",
+"cs": [
+"sema",
+"aquino95"
+]
+},
+{
+"id": "m16-19",
+"exam": "2016 Midterm",
+"n": 19,
+"t": "basics",
+"cov": "in",
+"story": "s16jueteng",
+"q": "Which statement is true?",
+"c": [
+"The priest has no cause of action",
+"The priest [has] a cause of action because Article II consists of actionable rights (Oposa)",
+"The issue is not ‘justiciable’",
+"None of the statements are true"
+],
+"a": 0,
+"e": "Art. II, Sec. 13 is a declaration of policy and not self-executing (Tañada v. Angara; Kilosbayan v. Morato). It gives rise to no judicially enforceable right, so the petition states no cause of action. Oposa concerned Sec. 16 (the right to a balanced and healthful ecology), which the Court treated as self-executing.",
+"cs": [
+"manilaprince"
+]
+},
+{
+"id": "m16-20",
+"exam": "2016 Midterm",
+"n": 20,
+"t": "jr",
+"cov": "in",
+"story": "s16jueteng",
+"q": "What other statement would be clearly true?",
+"c": [
+"The priest has standing to sue as a taxpayer",
+"The priest has standing to sue as a concerned citizen",
+"The priest has standing to sue because gambling is of transcendental importance",
+"The priest has no standing",
+"None of the statements are clearly true"
+],
+"a": 3,
+"e": "Taxpayer standing requires an illegal disbursement of public funds, which a law legalising jueteng does not involve. Citizen standing requires a public right and transcendental importance, which the Court relaxes case by case, so (b) and (c) are not ‘clearly’ true. The circulated key is (d).",
+"k": "Marked as a bonus on the paper. (e) is defensible: transcendental importance is discretionary, so ‘no standing’ is not clearly true either."
+}
+]

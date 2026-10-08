@@ -1,0 +1,56 @@
+{
+"groups":[
+ {"g":"Court and procedure","items":[
+  {"id":"proc_actual","l":"Actual case or ripeness","h":"A bill, draft IRR, proposal or mere threat is not ripe (Montesclaros; Lozano; PACU).","rv":"jr-req"},
+  {"id":"proc_moot","l":"Mootness and its exceptions","h":"A supervening event ends the controversy; four exceptions (grave violation, exceptional character, guiding principles, capable of repetition yet evading review).","rv":"jr-req"},
+  {"id":"proc_standing","l":"Standing","h":"Citizen, taxpayer, voter, legislator, association or third party, environmental; transcendental importance.","rv":"jr-req"},
+  {"id":"proc_forum","l":"Remedy and forum","h":"Rule 65 in the SC versus RTC; COMELEC versus HRET/SET/PET; hierarchy of courts; COA for money claims.","rv":"jr-forum"},
+  {"id":"proc_pq","l":"Political question","h":"Textual commitment or full discretion; still reviewable for grave abuse under Art. VIII, Sec. 1.","rv":"jr-pq"}
+ ]},
+ {"g":"Separation of powers","items":[
+  {"id":"sep_encroach","l":"Encroachment on another branch","h":"Congress executing laws, the Executive legislating, or either intruding on the courts or independent bodies.","rv":"jr-basis"},
+  {"id":"sep_legveto","l":"Legislative veto or post-enactment role","h":"Committee approval of rules, deputizing agencies, legislators identifying projects (ABAKADA; Belgica).","rv":"powers-veto"},
+  {"id":"sep_addqual","l":"Adding qualifications to constitutional offices","h":"Congress cannot add to qualifications the Constitution fixes (SJS v. DDB); statutory offices differ.","rv":"comp-quals"}
+ ]},
+ {"g":"Delegation","items":[
+  {"id":"del_standard","l":"Completeness and sufficient standard","h":"The law must set the policy and the limits; no subdelegation to private parties (Vera; KMU).","rv":"powers-delegation"},
+  {"id":"del_irr","l":"IRR validity, publication and filing","h":"Authorized, within scope, proper procedure, reasonable; published (Tañada); filed with ONAR.","rv":"powers-delegation"}
+ ]},
+ {"g":"How the law was made","items":[
+  {"id":"make_title","l":"Title and one subject","h":"Germane to the title; no hodgepodge or surprise (Lidasan; Giron).","rv":"powers-titles"},
+  {"id":"make_origin","l":"Origination in the House","h":"Appropriation, revenue and tariff bills, public debt, local and private bills; the bill, not the law, originates (Tolentino).","rv":"money-tax"},
+  {"id":"make_rider","l":"Riders and inappropriate provisions","h":"GAA provisions must relate to a particular appropriation (Sec. 25(2); Philconsa v. Enriquez).","rv":"money-pork"},
+  {"id":"make_transfer","l":"Transfers, savings and augmentation","h":"Sec. 25(5) requisites; cross-border transfers; disguised transfers (Araullo; Macalintal 2023).","rv":"money-transfer"},
+  {"id":"make_item","l":"Lump sums, pork and the item veto","h":"Singular correspondence; post-enactment legislator discretion (Belgica 2013, 2019).","rv":"money-pork"},
+  {"id":"make_taxexempt","l":"Taxation limits and exemptions","h":"Uniform and equitable; exemptions by majority of all Members, expressly (John Hay; Lung Center).","rv":"money-tax"}
+ ]},
+ {"g":"Congress internally","items":[
+  {"id":"cong_discipline","l":"Discipline of members","h":"Two-thirds of all Members; suspension capped at 60 days; no conviction needed (Osmeña).","rv":"internal-discipline"},
+  {"id":"cong_quorum","l":"Quorum and attendance","h":"Majority; within the coercive jurisdiction (Avelino); the House compels its own members.","rv":"internal-quorum"},
+  {"id":"cong_privilege","l":"Arrest and speech privileges","h":"Arrest: up to 6 years, in session; speech: legislative acts only, not media (Jimenez; Jalosjos).","rv":"priv-arrest"},
+  {"id":"cong_office","l":"Incompatible and forbidden offices; salaries","h":"Forfeiture of seat; created or increased offices; salary increases after the full term (Liban; Adaza).","rv":"priv-office"},
+  {"id":"cong_tribunal","l":"Electoral tribunals and the CA","h":"Proclamation + oath + assumption (Reyes); proportional representation (Guingona; Daza).","rv":"et-jurisdiction"},
+  {"id":"cong_partylist","l":"Party-list system","h":"Atong Paglaum parameters; Albano; nominee rules and substitution.","rv":"comp-partylist"},
+  {"id":"cong_elections","l":"Districts, elections and vacancies","h":"Only Congress creates districts (Sema); population basis; special elections; election schedules.","rv":"comp-districts"},
+  {"id":"cong_journal","l":"Journal, enrolled bill and bicameral reports","h":"Enrolled bill conclusive; bicameral report approved by both Houses; urgency certification.","rv":"internal-journal"}
+ ]},
+ {"g":"Inherent powers","items":[
+  {"id":"inh_police","l":"Police power","h":"Lawful subject and lawful means; LGU ordinances must also be consistent with law.","rv":"gov-police"},
+  {"id":"inh_taking","l":"Regulation or taking","h":"Appropriating property or its use for the public needs just compensation (Ericta; PPI v. TELEBAP).","rv":"gov-police"},
+  {"id":"inh_impair","l":"Non-impairment of contracts and franchises","h":"Yields to a valid exercise of police power; franchises are never exclusive (Iloilo I).","rv":"gov-police"},
+  {"id":"inh_immunity","l":"State immunity and money claims","h":"Suit against the State? Consent? Jure imperii; claims go to COA.","rv":"gov-immunity"}
+ ]},
+ {"g":"People and territory","items":[
+  {"id":"ppl_citizen","l":"Natural-born or naturalized","h":"Election of citizenship; foundlings (David); naturalization by statute.","rv":"cit-natural"},
+  {"id":"ppl_dual","l":"Dual citizenship and RA 9225","h":"Oath plus personal, sworn renunciation before filing the COC; dual citizenship versus dual allegiance.","rv":"cit-dual"},
+  {"id":"ppl_residence","l":"Residence (domicile)","h":"Physical presence plus intent to remain; abandonment of the old domicile.","rv":"suff-residence"},
+  {"id":"ppl_suffrage","l":"Suffrage: qualifications versus registration","h":"Art. V qualifications cannot be added; registration rules valid if reasonable (Kabataan; Palatino; AKBAYAN).","rv":"suff-quals"},
+  {"id":"terr","l":"Territory and maritime zones","h":"Art. I; archipelagic baselines (Magallona); arbitral award; immunity of foreign warships.","rv":"terr-zones"}
+ ]},
+ {"g":"The Constitution itself","items":[
+  {"id":"amend","l":"Amendment or revision","h":"Modes and votes under Art. XVII; initiative only for amendments (Lambino); Congress means both Houses.","rv":"interp-amend"},
+  {"id":"selfexec","l":"Self-executing provisions","h":"Article II policies are generally not judicially enforceable (Manila Prince; Tañada v. Angara).","rv":"interp-principles"},
+  {"id":"equal","l":"Equal protection and due process","h":"Reasonable classification; notice and hearing before a penalty.","rv":"jr-basis"}
+ ]}
+]
+}
