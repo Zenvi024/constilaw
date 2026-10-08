@@ -954,8 +954,10 @@
 "a": 0,
 "e": "Art. II, Sec. 13 is a declaration of policy and not self-executing (Tañada v. Angara; Kilosbayan v. Morato). It gives rise to no judicially enforceable right, so the petition states no cause of action. Oposa concerned Sec. 16 (the right to a balanced and healthful ecology), which the Court treated as self-executing.",
 "cs": [
-"manilaprince"
-]
+"manilaprince",
+"kapatiran2026"
+],
+"k": "Update (2026): in Kapatiran Party v. Congress the Court held that Art. II, Sec. 26 (political dynasties) is a mandatory command. That does not change this item: Sec. 13 on the youth states a general policy, not a specific duty."
 },
 {
 "id": "m16-20",
@@ -975,5 +977,163 @@
 "a": 3,
 "e": "Taxpayer standing requires an illegal disbursement of public funds, which a law legalising jueteng does not involve. Citizen standing requires a public right and transcendental importance, which the Court relaxes case by case, so (b) and (c) are not ‘clearly’ true. The circulated key is (d).",
 "k": "Marked as a bonus on the paper. (e) is defensible: transcendental importance is discretionary, so ‘no standing’ is not clearly true either."
+},
+{
+"id": "m26-01",
+"exam": "2026 news (practice)",
+"n": 1,
+"t": "basics",
+"cov": "in",
+"q": "In Kapatiran Party v. Congress (decision dated Aug. 26, 2026), which statement correctly describes the Supreme Court’s ruling on Art. II, Sec. 26?",
+"c": [
+"Sec. 26 is not self-executing, so the Court cannot act on Congress’s failure to pass an anti-dynasty law",
+"Congress must enact an anti-dynasty law, and the Court itself defined ‘political dynasty’ pending that law",
+"Congress must enact an anti-dynasty law; Congress defines ‘political dynasty’; COMELEC cannot disqualify dynastic candidates without that law",
+"COMELEC may disqualify dynastic candidates while Congress has not acted"
+],
+"a": 2,
+"e": "The Court held that Sec. 26 is a mandatory command and that 39 years of inaction is grave abuse, granting mandamus. It left the definition and scope to Congress (‘as may be defined by law’) and denied the petition asking COMELEC to disqualify dynastic candidates without a law.",
+"cs": [
+"kapatiran2026",
+"manilaprince"
+]
+},
+{
+"id": "m26-02",
+"exam": "2026 news (practice)",
+"n": 2,
+"t": "jr",
+"cov": "in",
+"q": "On September 30, 2026, the Supreme Court dismissed three citizens’ petitions against the Senate impeachment court’s ruling that ‘all the Members of the Senate’ means only senators legally and actually able to take part. The dismissal rested on:",
+"c": [
+"The political question doctrine: impeachment is solely for the Senate",
+"A ruling on the merits that the Senate’s reading is correct",
+"Procedural grounds, including lack of standing and prematurity",
+"Mootness, because the trial had ended"
+],
+"a": 2,
+"e": "The Court did not reach the merits. No verdict had been rendered, so the petitions were premature, and the petitioners lacked standing. Under Francisco v. House, impeachment is not wholly a political question where the Constitution sets limits, so the issue may return after a vote.",
+"cs": [
+"francisco",
+"pacu"
+]
+},
+{
+"id": "m26-03",
+"exam": "2026 news (practice)",
+"n": 3,
+"t": "org",
+"cov": "in",
+"q": "A senator is charged before the ICC with the crime against humanity of murder. While the Senate is in session, NBI agents try to arrest him in the Senate. Which statement is correct?",
+"c": [
+"He is privileged from arrest because the Senate is in session",
+"He is privileged from arrest because he was arrested within the Senate premises",
+"He is not privileged from arrest because the offense is punishable by more than six years’ imprisonment",
+"He is privileged from arrest until the Senate votes to lift his immunity"
+],
+"a": 2,
+"e": "Art. VI, Sec. 11 protects a member from arrest only for offenses punishable by not more than six years, and only while Congress is in session. Murder as a crime against humanity is punishable far more severely. The Constitution gives the Senate no power to grant ‘protective custody’ or to lift an immunity that does not exist. (Whether an ICC warrant may be executed here is a separate question.)",
+"cs": [
+"jalosjos",
+"trillanespimentel"
+]
+},
+{
+"id": "m26-04",
+"exam": "2026 news (practice)",
+"n": 4,
+"t": "house",
+"cov": "in",
+"q": "Under the guidelines in Macalintal v. COMELEC (2023), which of the following, standing alone, cannot justify a law postponing barangay and SK elections?",
+"c": [
+"A public emergency, to the extent strictly required",
+"Ensuring free, honest, orderly and safe elections",
+"Election fatigue and the divisiveness of frequent elections",
+"Safeguarding the electorate’s right of suffrage"
+],
+"a": 2,
+"e": "The Court said reasons such as election fatigue, divisiveness and the shortness of the existing term are ‘superficial’ and cannot alone justify postponement. These guidelines apply to RA 12326 (2026), which moved the November 2026 BSKE to November 2028.",
+"cs": [
+"macalintal2023"
+]
+},
+{
+"id": "m26-05",
+"exam": "2026 news (practice)",
+"n": 5,
+"t": "approp",
+"cov": "in",
+"q": "In Pimentel v. House of Representatives (Dec. 3, 2025), the Supreme Court voided the 2024 GAA special provision under which PhilHealth remitted ₱60 billion to the Treasury mainly because:",
+"c": [
+"Congress cannot amend substantive laws, such as the UHC Act’s reserve-fund rule, through the GAA",
+"The President gravely abused his discretion in certifying the 2024 GAA as urgent",
+"PhilHealth is a private corporation whose funds are beyond Congress’s reach",
+"Only the Secretary of Finance may augment items in the GAA"
+],
+"a": 0,
+"e": "The provision effectively repealed the UHC Act’s reserve-fund requirement and conflicted with the Sin Tax law; changes to PhilHealth’s funds need separate legislation. The Court found no grave abuse in the urgency certification, and held that the Finance Secretary cannot augment; that power is the President’s.",
+"cs": [
+"pimentelhouse2025",
+"philconsaenriquez"
+]
+},
+{
+"id": "m26-06",
+"exam": "2026 news (practice)",
+"n": 6,
+"t": "approp",
+"cov": "in",
+"q": "Under Araullo v. Aquino, funds in the unprogrammed appropriations of the GAA may be released only when:",
+"c": [
+"The President declares them necessary",
+"Revenue collections exceed the original targets, as certified",
+"Congress approves the release by joint resolution",
+"Savings are declared by the department concerned"
+],
+"a": 1,
+"e": "Araullo struck down DAP releases from unprogrammed funds made without the required certification that actual revenue collections exceeded targets. Belgica (2019) upheld the Unprogrammed Fund itself as a valid standby appropriation. The 2026 petitions of Reps. Erice and De Lima challenge the 2026 unprogrammed appropriations.",
+"cs": [
+"araullo",
+"belgica2019"
+]
+},
+{
+"id": "m26-07",
+"exam": "2026 news (practice)",
+"n": 7,
+"t": "org",
+"cov": "in",
+"q": "On May 11, 2026, Sen. Alan Peter Cayetano was elected Senate President by a vote of 13–9 with two abstentions. The Senate President must be elected by:",
+"c": [
+"A majority of the senators present, there being a quorum",
+"A majority of all the Members of the Senate",
+"Two-thirds of all the Members of the Senate",
+"A plurality of the senators voting"
+],
+"a": 1,
+"e": "Art. VI, Sec. 16(1): the Senate elects its President ‘by a majority vote of all its respective Members’. With 24 senators, 13 votes suffice. Other officers are chosen as each House sees fit (Santiago v. Guingona).",
+"cs": [
+"santiagoguingona",
+"avelino"
+]
+},
+{
+"id": "m26-08",
+"exam": "2026 news (practice)",
+"n": 8,
+"t": "house",
+"cov": "in",
+"q": "A law disqualifies relatives within the second degree of an incumbent from running for Senator. Which is the best argument for its validity?",
+"c": [
+"Congress has plenary power to fix the qualifications of Senators",
+"Art. II, Sec. 26 itself authorizes Congress to prohibit political dynasties ‘as may be defined by law’",
+"Qualifications of Senators are not fixed by the Constitution",
+"The law merely regulates registration of candidates"
+],
+"a": 1,
+"e": "Congress ordinarily cannot add to the qualifications the Constitution fixes for Senators (SJS v. DDB). But Sec. 26 is a constitutional grant to prohibit dynasties by law, and Kapatiran (2026) holds that it is mandatory, so a dynasty disqualification rests on the Constitution itself.",
+"cs": [
+"kapatiran2026"
+]
 }
 ]
