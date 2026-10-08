@@ -1,0 +1,207 @@
+<title>Consti 1 Midterm Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Libre+Franklin:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+__CSS__
+</style>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <div class="hdr-top">
+      <div class="brand">
+        <div class="eyebrow">Law 121 · Constitutional Law 1 · Prof. Dante B. Gatmaytan · 1-B</div>
+        <h1>Consti 1 <em>Midterm Desk</em></h1>
+      </div>
+      <div class="clock" aria-live="polite"><span class="n" id="cdN">–</span><span class="l" id="cdL">days to the midterm (Fri, Oct 16, morning)</span></div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button role="tab" data-tab="today" aria-selected="true">Today</button>
+      <button role="tab" data-tab="rules" aria-selected="false">Rule maps</button>
+      <button role="tab" data-tab="cases" aria-selected="false">Cases<span class="badge" id="dueBadge" hidden></span></button>
+      <button role="tab" data-tab="exams" aria-selected="false">Past exams</button>
+      <button role="tab" data-tab="spot" aria-selected="false">Issue spotter</button>
+      <button role="tab" data-tab="write" aria-selected="false">Essay trainer</button>
+      <button role="tab" data-tab="print" aria-selected="false">Printables</button>
+    </nav>
+  </div>
+</header>
+
+<!-- TODAY -->
+<main class="page" id="v-today">
+  <div class="today">
+    <section class="panel dayplan" aria-labelledby="dayH">
+      <div class="dayhead"><span class="d" id="dayH"></span><span class="f" id="dayF"></span></div>
+      <ul class="todo" id="dayTodo"></ul>
+    </section>
+    <div class="stack">
+      <section class="panel" aria-labelledby="progH">
+        <h2 id="progH">Your progress</h2>
+        <div class="stats" id="stats"></div>
+        <div class="row"><button class="btn primary" id="goDue">Review due cards</button><button class="btn" id="goMcq">Quick 10 MCQs</button></div>
+        <p class="tiny" style="margin:0">Progress is saved in this browser only. It stays when the page is updated, but not across devices.</p>
+      </section>
+      <section class="panel" aria-labelledby="weekH">
+        <h2 id="weekH">The week</h2>
+        <div class="week" id="week"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!-- RULE MAPS -->
+<main class="page" id="v-rules" hidden>
+  <div class="rwrap">
+    <aside class="rside">
+      <input type="search" id="rq" placeholder="Search rule maps (e.g. ABAKADA, 60 days, savings)" aria-label="Search rule maps">
+      <ol class="rsecs" id="rsecs"></ol>
+    </aside>
+    <div style="min-width:0">
+      <div class="rbar"><select id="rsel" aria-label="Jump to section"></select><select id="rtoc" aria-label="Jump to heading"></select></div>
+      <div class="legend"><span class="cd">Constitution</span><span class="ts">Test</span><span class="gat">Gatmaytan</span><span class="news">In a news question</span><span class="trap">Trap</span><span class="warn">Caution</span></div>
+      <div id="rresults" hidden></div>
+      <div id="rcontent">
+__REVIEWER__
+      </div>
+      <div class="rpager"><button class="btn ghost" id="rprev"></button><button class="btn ghost" id="rnext"></button></div>
+    </div>
+  </div>
+</main>
+
+<!-- CASES -->
+<main class="page narrow" id="v-cases" hidden>
+  <div class="stack">
+    <div class="spread">
+      <div class="seg" role="group" aria-label="Cases mode"><button data-cm="browse" aria-pressed="true">Browse</button><button data-cm="drill" aria-pressed="false">Drill</button></div>
+      <span class="tiny" id="caseCt"></span>
+    </div>
+    <section id="c-browse" class="stack">
+      <div class="row">
+        <input type="search" id="cq" placeholder="Search names, rules, facts (e.g. foundling, 60 days, Teves)" aria-label="Search cases">
+        <select id="ctopic" aria-label="Topic"></select>
+        <label class="chip" for="canchor"><input type="checkbox" id="canchor"> Anchors only</label>
+      </div>
+      <div class="clist" id="clist"></div>
+    </section>
+    <section id="c-drill" class="stack" hidden>
+      <div class="panel" id="dSetup">
+        <h2>Drill the cases</h2>
+        <div class="stack" style="gap:10px">
+          <div class="lbl">Direction</div>
+          <div class="seg" role="group" aria-label="Drill direction" id="dDir">
+            <button data-d="cr" aria-pressed="true">Case → rule</button>
+            <button data-d="fc" aria-pressed="false">Facts → case</button>
+            <button data-d="rc" aria-pressed="false">Rule → case</button>
+          </div>
+          <p class="tiny" id="dDirHelp" style="margin:0"></p>
+        </div>
+        <div class="stack" style="gap:8px">
+          <div class="lbl">Topics</div>
+          <div class="row" id="dTopics"></div>
+          <div class="row"><button class="btn small ghost" id="dAll">All topics</button><button class="btn small ghost" id="dNone">Clear</button><label class="chip" for="dAnchor"><input type="checkbox" id="dAnchor"> Anchors only</label></div>
+        </div>
+        <div class="spread">
+          <span id="dCount" class="tiny"></span>
+          <button class="btn primary" id="dStart">Start a round of 20</button>
+        </div>
+      </div>
+      <div id="dCard" class="stack" hidden></div>
+    </section>
+  </div>
+</main>
+
+<!-- PAST EXAMS -->
+<main class="page narrow" id="v-exams" hidden>
+  <div class="stack">
+    <div class="spread">
+      <div class="seg" role="group" aria-label="Exam type"><button data-em="mcq" aria-pressed="true">Multiple choice</button><button data-em="essay" aria-pressed="false">Essay questions</button></div>
+      <label class="chip" for="inCov"><input type="checkbox" id="inCov" checked> Within midterm coverage only</label>
+    </div>
+    <section id="e-mcq" class="stack">
+      <div class="panel" id="qSetup">
+        <h2>Gatmaytan’s multiple-choice midterms</h2>
+        <p class="tiny" style="margin:0">2013, 2015 and 2016 midterms, transcribed from the scans, plus eight practice items on 2026 news. Each item explains the answer; where the circulated key looks wrong, a key note says so.</p>
+        <div class="row" id="qExams"></div>
+        <div class="row"><label class="chip" for="qMissed"><input type="checkbox" id="qMissed"> Only items I missed <span class="tiny" id="qMissedCt"></span></label><select id="qN" aria-label="Number of items"><option value="10">10 items</option><option value="20">20 items</option><option value="all" selected>All</option></select></div>
+        <div class="spread"><span class="tiny" id="qPool"></span><button class="btn primary" id="qStart">Start</button></div>
+      </div>
+      <div class="panel" id="qBox" hidden aria-live="polite"></div>
+    </section>
+    <section id="e-essay" class="stack" hidden>
+      <p class="tiny" style="margin:0">Essay questions from the 2023 and 2024 midterms, the 2015, 2020, 2023 and 2024 finals (midterm topics only), and seven new prompts from 2026 news. Each has a model answer of about 150 to 190 words and a 10-point rubric.</p>
+      <div class="row"><select id="esrc" aria-label="Source"><option value="all">All sources</option><option value="past">Past exams</option><option value="news">2026 news</option></select></div>
+      <div class="elist" id="elist"></div>
+    </section>
+  </div>
+</main>
+
+<!-- ISSUE SPOTTER -->
+<main class="page" id="v-spot" hidden>
+  <div class="stack">
+    <div class="spread">
+      <div class="row"><select id="spSel" aria-label="Choose a problem" style="max-width:100%"></select><button class="btn" id="spRand">Random problem</button></div>
+      <span class="tiny" id="spStat"></span>
+    </div>
+    <div class="spot">
+      <section class="panel">
+        <div class="tags" id="spTags"></div>
+        <div class="facts" id="spFacts"></div>
+        <div class="askbox" id="spAsk"></div>
+        <div id="spResult" hidden></div>
+      </section>
+      <section class="panel">
+        <div class="spread"><h2>Tick every issue it raises</h2><div class="row"><button class="btn" id="spReset">Reset</button><button class="btn primary" id="spCheck">Check</button></div></div>
+        <div class="igroups" id="spGroups"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!-- ESSAY TRAINER -->
+<main class="page" id="v-write" hidden>
+  <div class="stack">
+    <div class="spread">
+      <select id="wSel" aria-label="Choose a prompt" style="max-width:100%"></select>
+      <div class="timer">
+        <span class="t" id="tT">22:00</span>
+        <select id="tLen" aria-label="Minutes"><option value="15">15 min</option><option value="22" selected>22 min (exam pace)</option><option value="30">30 min</option></select>
+        <button class="btn primary" id="tGo">Start</button>
+        <button class="btn" id="tReset">Reset</button>
+      </div>
+    </div>
+    <div class="trainer">
+      <section class="panel">
+        <div class="tags" id="wTags"></div>
+        <div class="facts" id="wFacts"></div>
+        <div class="askbox" id="wAsk"></div>
+      </section>
+      <section class="stack">
+        <div class="padwrap"><textarea class="pad" id="pad" spellcheck="false" aria-label="Your answer" placeholder="Answer first. Then rule, application, conclusion for each issue."></textarea></div>
+        <div class="wc">
+          <div class="wcbar" id="wcBar"><span class="band" style="left:50%;width:10%"></span><i style="width:0"></i></div>
+          <div class="wcl"><span><b id="wcN">0</b> words</span><span>target 150–180 · about half a page of handwriting</span><span id="wcMsg"></span></div>
+        </div>
+        <div class="row"><button class="btn primary" id="wReveal">Reveal model answer and rubric</button><button class="btn" id="wCopy">Copy my answer</button><button class="btn ghost" id="wClear">Clear</button></div>
+        <div id="wModel" class="stack" hidden></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<!-- PRINTABLES -->
+<main class="page" id="v-print" hidden>
+  <div class="stack">
+    <p class="tiny noprint" style="margin:0;max-width:72ch">Two one-page sheets for the morning of the exam. Printing is blocked inside this viewer, so folio-size PDFs of both sheets are in your repository (<span style="font-family:var(--mono)">site/print/</span>) and in our chat.</p>
+    <section class="sheet" id="sheet1"></section>
+    <section class="sheet" id="sheet2"></section>
+  </div>
+</main>
+
+<div class="scrim" id="scrim" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modal"></div></div>
+
+<footer class="ft">Built for Zen (UP Law 1-B, 2030) from the syllabus, the 2025 class reviewer, the block reviewers, the digest masterfile and Gatmaytan’s <em>Constitutional Law in the Philippines</em>. Verify anything that looks off against the class reviewers. Current through October 8, 2026.</footer>
+
+<script>
+const D = __DATA__;
+__JS__
+</script>

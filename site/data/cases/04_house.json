@@ -11,7 +11,8 @@
   "h": "All petitions remanded to COMELEC to apply the new parameters (COMELEC itself committed no grave abuse since it followed the old rulings).",
   "x": "The 2024 midterm (Garcia’s proposals) turns on this: any law or rule limiting the party-list to the marginalized, or requiring nominees to belong to a sector, must be squared with Atong Paglaum and with what Congress may provide ‘by law’ (Albano).",
   "test": "Parameters: (1) national, regional and sectoral parties may participate; (2) national and regional parties need not be sectoral or represent the marginalized; (3) political parties may participate through sectoral wings; (4) sectoral parties may be marginalized and underrepresented or lacking well-defined political constituencies; (5) nominees of sectoral parties must belong to the sector or have a track record of advocacy; (6) disqualification of some nominees does not disqualify the party if it has at least one qualified nominee.",
-  "g": "Gatmaytan’s book: ‘The euphoria that followed [Ang Bagong Bayani] was short-lived’; the Court relied on the framers’ 19–22 vote rejecting reserved sectoral seats and on the commas in ‘national, regional, and sectoral parties’."
+  "g": "Gatmaytan’s book: ‘The euphoria that followed [Ang Bagong Bayani] was short-lived’; the Court relied on the framers’ 19–22 vote rejecting reserved sectoral seats and on the commas in ‘national, regional, and sectoral parties’.",
+  "s": "Party-list is not only for sectoral parties; national and regional parties need not be marginalized; six parameters."
  },
  {
   "id": "abanglingkod",
@@ -35,7 +36,8 @@
   "r": "COMELEC cannot deny registration on moral or religious grounds. Citing the Bible and the Koran violates non-establishment; moral disapproval of an unpopular minority is not a legitimate state interest under equal protection. The enumeration of sectors in RA 7941 is not exclusive.",
   "f": "COMELEC refused to register an LGBT party, citing immorality and religious texts.",
   "h": "Registration ordered.",
-  "x": "Any agency or law excluding a group from the party-list (or from public participation) on moral grounds."
+  "x": "Any agency or law excluding a group from the party-list (or from public participation) on moral grounds.",
+  "s": "COMELEC cannot deny registration on moral or religious grounds; equal protection."
  },
  {
   "id": "lokin",
@@ -59,7 +61,8 @@
   "r": "COMELEC may resolve leadership disputes within a party-list group, but once a nominee has been proclaimed, has taken the oath and has assumed office, questions about his qualifications (including expulsion from the party) belong to the HRET.",
   "f": "Ating Koop’s rival factions sought COMELEC rulings on who led the party and whether its sitting representative, Lico, had been validly expelled.",
   "h": "COMELEC could not rule on Lico’s membership in the House; the Interim Central Committee (Rimas) was the legitimate leadership under the hold-over principle.",
-  "x": "Party-list representative expelled by his own party: forum is the HRET, not COMELEC."
+  "x": "Party-list representative expelled by his own party: forum is the HRET, not COMELEC.",
+  "s": "Once a party-list nominee is proclaimed, sworn in and seated, qualification issues go to the HRET."
  },
  {
   "id": "anwaray",
@@ -71,7 +74,8 @@
   "r": "COMELEC, not the HRET, has jurisdiction to cancel a party-list group’s registration, even if the group already has a seat; the action does not prescribe. Allowing a nominee to assume office without COMELEC proclamation is a serious violation of RA 7941, Sec. 13.",
   "f": "In 2013 An Waray, entitled to one seat, let its second nominee assume office in the House without a COMELEC proclamation. A petition to cancel its registration was decided years later.",
   "h": "Petition dismissed (14–1, Caguioa, J.); cancellation upheld; no violation of the right to speedy disposition (Lazaro-Javier, J., dissenting).",
-  "x": "Distinguish: the group’s registration (COMELEC) from the individual member’s qualifications (HRET)."
+  "x": "Distinguish: the group’s registration (COMELEC) from the individual member’s qualifications (HRET).",
+  "s": "COMELEC may cancel a group’s registration even after it has a seat; no prescription."
  },
  {
   "id": "seniorcitizens",
@@ -108,7 +112,8 @@
   "f": "After the 2022 elections, all five P3PWD nominees withdrew and were replaced by a new slate led by former COMELEC Commissioner Guanzon; COMELEC approved it by minute resolution.",
   "h": "Petition granted; the COMELEC resolution was void and the TRO permanent. P3PWD could submit new nominees but not the voided substitutes.",
   "x": "Party-list ‘swap’ stories: substitution after the deadline, voters’ right to know nominees, HRET versus COMELEC jurisdiction.",
-  "w": "Separate matter: in 2025 COMELEC cancelled Duterte Youth’s own registration for lack of publication, and the Supreme Court denied its TRO in September 2025. That is not part of this 2024 decision."
+  "w": "Separate matter: in 2025 COMELEC cancelled Duterte Youth’s own registration for lack of publication, and the Supreme Court denied its TRO in September 2025. That is not part of this 2024 decision.",
+  "s": "Nominee withdrawal and substitution deadlines are mandatory; voters have a right to know the nominees."
  },
  {
   "id": "araro",
@@ -145,7 +150,8 @@
   "f": "COMELEC disqualified two party-list nominees for 2022 (a losing 2019 councilor candidate and a losing 2016 and 2019 mayoral candidate) under RA 7941, Sec. 8 and COMELEC Res. 10717.",
   "h": "The ‘lost in the immediately preceding election’ ban was declared unconstitutional (Lopez, J., January 24, 2023).",
   "x": "Use directly for any proposal to amend the party-list law (2024 midterm). Congress may legislate party-list rules, but each restriction must have a rational connection to the system’s purpose.",
-  "w": "Do not confuse with ANGKLA v. COMELEC (2020), which upheld the party-list seat-allocation formula in RA 7941, Sec. 11(b). Some reviewers run the two together."
+  "w": "Do not confuse with ANGKLA v. COMELEC (2020), which upheld the party-list seat-allocation formula in RA 7941, Sec. 11(b). Some reviewers run the two together.",
+  "s": "Congress may set nominee qualifications, but they must satisfy equal protection; losing-candidate ban void."
  },
  {
   "id": "aquino95",
@@ -169,7 +175,8 @@
   "r": "A domicile of origin is not lost without clear proof of abandonment; a wife does not automatically lose her domicile of origin by marriage. A mistake in the COC (writing seven months) does not defeat actual residence. COMELEC keeps jurisdiction until the candidate becomes a member of the House.",
   "f": "Imelda Marcos wrote ‘seven months’ of residence in Leyte’s first district in her COC; her qualifications were challenged.",
   "h": "Qualified as a resident of Tacloban.",
-  "x": "Domicile of origin, marriage, and errors in the COC."
+  "x": "Domicile of origin, marriage, and errors in the COC.",
+  "s": "Domicile of origin is lost only by clear abandonment; a COC mistake does not defeat actual residence."
  },
  {
   "id": "mangudadatu",
@@ -181,7 +188,8 @@
   "r": "An incumbent official who keeps exercising his office in the place where he was elected cannot claim to have abandoned it or to intend to remain elsewhere, so he cannot meet another place’s residency requirement. The second-placer rule is abandoned: when a winner is disqualified, the vacancy is filled by succession under the Local Government Code.",
   "f": "A sitting mayor in Maguindanao ran for and won as governor of Sultan Kudarat; his COC was cancelled for material misrepresentation on residence.",
   "h": "Cancellation upheld; the Vice-Governor succeeds. Motion for reconsideration denied with finality in August 2026.",
-  "x": "Use for residency of candidates and, importantly, the new rule on who takes over when a winner is disqualified. Maquiling and Chua’s proclamation of the next-ranked candidate is no longer good law on that point."
+  "x": "Use for residency of candidates and, importantly, the new rule on who takes over when a winner is disqualified. Maquiling and Chua’s proclamation of the next-ranked candidate is no longer good law on that point.",
+  "s": "An incumbent still serving where elected cannot claim a new residence; second-placer rule abandoned."
  },
  {
   "id": "banasnograles",
@@ -205,6 +213,7 @@
   "r": "Under RA 6645 as amended by RA 7166, COMELEC must call and hold a special election 60 to 90 days after a House vacancy that arises at least one year before the term ends, without waiting for a House resolution certifying the vacancy. Mandamus will not lie against the House.",
   "f": "After Rep. Edward Hagedorn died in 2023, the House did not certify the vacancy and COMELEC said it needed a House resolution; no special election was held.",
   "h": "Mandamus against the House dismissed, but COMELEC’s duty clarified (Hernando, J.; Caguioa, J., concurring and dissenting). Applied in the 2026 Antipolo special election.",
-  "x": "Vacancy in Congress: who calls the special election and when."
+  "x": "Vacancy in Congress: who calls the special election and when.",
+  "s": "COMELEC must hold a special election 60–90 days after a House vacancy without waiting for a House resolution."
  }
 ]
