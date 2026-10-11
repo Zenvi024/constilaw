@@ -1,0 +1,1181 @@
+[
+ {
+  "id": "c-congress-composition",
+  "t": "house",
+  "title": "Composition of Congress",
+  "ask": "How is Congress composed under Art. VI, Secs. 1, 2 and 5(1)–(2)?",
+  "items": [
+   "Bicameral: a Senate and a House of Representatives",
+   "Legislative power vested in Congress except to the extent reserved to the people by initiative and referendum",
+   "Senate: twenty-four Senators elected at large by the qualified voters, as may be provided by law",
+   "House: not more than 250 members, ‘unless otherwise fixed by law’",
+   "District representatives: elected from legislative districts apportioned among provinces, cities and Metro Manila",
+   "Party-list representatives: elected through a party-list system of registered national, regional and sectoral parties or organizations",
+   "Party-list representatives constitute twenty per centum (20%) of the total number of representatives, including those under the party list"
+  ],
+  "src": "Art. VI, Secs. 1, 2, 5(1)–(2)",
+  "rv": "comp-text",
+  "ordered": false
+ },
+ {
+  "id": "c-senator-quals",
+  "t": "house",
+  "title": "Qualifications of a Senator",
+  "ask": "What are the five qualifications of a Senator (Art. VI, Sec. 3)?",
+  "items": [
+   "Natural-born citizen of the Philippines",
+   "At least thirty-five years of age on the day of the election",
+   "Able to read and write",
+   "A registered voter",
+   "Resident of the Philippines for not less than two years immediately preceding the day of the election"
+  ],
+  "src": "Art. VI, Sec. 3",
+  "rv": "comp-quals",
+  "hook": "Age and residence are reckoned on/before election day, not at proclamation or assumption.",
+  "ordered": true
+ },
+ {
+  "id": "c-rep-quals",
+  "t": "house",
+  "title": "Qualifications of a district Representative",
+  "ask": "What are the five qualifications of a Member of the House (Art. VI, Sec. 6)?",
+  "items": [
+   "Natural-born citizen of the Philippines",
+   "At least twenty-five years of age on the day of the election",
+   "Able to read and write",
+   "Except party-list representatives: a registered voter in the district in which he shall be elected",
+   "Except party-list representatives: a resident of that district for not less than one year immediately preceding the day of the election"
+  ],
+  "src": "Art. VI, Sec. 6",
+  "rv": "comp-quals",
+  "ordered": true
+ },
+ {
+  "id": "c-pl-nominee-quals",
+  "t": "house",
+  "title": "Qualifications of a party-list nominee",
+  "ask": "What are the qualifications of a party-list nominee under RA 7941, Sec. 9?",
+  "items": [
+   "Natural-born citizen of the Philippines",
+   "Registered voter",
+   "Resident of the Philippines for not less than one year immediately preceding the day of the election",
+   "Able to read and write",
+   "Bona fide member of the party or organization for at least ninety days preceding the day of the election",
+   "At least twenty-five years of age on the day of the election",
+   "Youth-sector nominee: at least 25 but not more than 30 on election day; may finish the term if he turns 30"
+  ],
+  "src": "RA 7941, Sec. 9; Art. VI, Sec. 6 (party-list nominees exempt from the district voter and residence rules)",
+  "rv": "comp-quals",
+  "ordered": false
+ },
+ {
+  "id": "c-terms",
+  "t": "house",
+  "title": "Terms and term limits of Members of Congress",
+  "ask": "What are the rules on the terms and term limits of Senators and Representatives (Art. VI, Secs. 4, 7)?",
+  "items": [
+   "Senators: term of six years",
+   "Representatives (district and party-list): term of three years",
+   "Both terms begin, unless otherwise provided by law, at noon on the thirtieth day of June next following the election",
+   "No Senator shall serve for more than two consecutive terms",
+   "No Representative shall serve for more than three consecutive terms",
+   "Voluntary renunciation of the office for any length of time is not an interruption in the continuity of service for the full term",
+   "One elected in a special election serves only the unexpired term (Sec. 9)"
+  ],
+  "src": "Art. VI, Secs. 4, 7, 9",
+  "rv": "comp-quals",
+  "ordered": false
+ },
+ {
+  "id": "c-quals-no-addition",
+  "t": "house",
+  "title": "Congress cannot add qualifications",
+  "ask": "What are the rules on whether Congress may add qualifications for members of Congress?",
+  "items": [
+   "The qualifications in Secs. 3 and 6 are exclusive; Congress cannot add to them, directly or indirectly",
+   "SJS v. DDB (2008): mandatory drug testing of senatorial candidates was void because it added a qualification",
+   "A law disqualifying candidates for doing or omitting something not in the Constitution (e.g., skipping debates) is void",
+   "Exception: ‘as provided by law’ in Sec. 5(1) lets Congress set party-list nominee qualifications (Albano)",
+   "That power covers only party-list representatives, not district representatives or Senators (Albano)",
+   "Party-list restrictions must still pass equal protection and due process (Albano)",
+   "Local offices: qualifications are statutory, so Congress has more room, but conditions must be reasonable"
+  ],
+  "src": "Art. VI, Secs. 3, 5(1), 6; SJS v. DDB (2008, Gatmaytan’s book); Albano v. COMELEC (2023)",
+  "cases": [
+   "albano",
+   "endencia"
+  ],
+  "rv": "comp-quals",
+  "ordered": false
+ },
+ {
+  "id": "c-districts",
+  "t": "house",
+  "title": "Apportionment of legislative districts",
+  "ask": "What are the constitutional rules on apportioning legislative districts (Art. VI, Sec. 5(1), (3), (4)) and who may create them?",
+  "items": [
+   "Apportioned among the provinces, cities and the Metropolitan Manila area",
+   "In accordance with the number of their respective inhabitants",
+   "On the basis of a uniform and progressive ratio",
+   "Each district: as far as practicable, contiguous, compact and adjacent territory",
+   "Each city with a population of at least 250,000 has at least one representative",
+   "Each province, regardless of population, has at least one representative",
+   "Congress must reapportion within three years following the return of every census",
+   "Only Congress, by law, creates districts; so a regional assembly cannot create provinces or cities (Sema)",
+   "The 250 cap may be exceeded by law, including piecemeal laws creating districts (Mariano; BANAT)"
+  ],
+  "src": "Art. VI, Sec. 5(1), (3), (4); Sema v. COMELEC; Mariano v. COMELEC (Gatmaytan’s book)",
+  "cases": [
+   "sema"
+  ],
+  "rv": "comp-districts",
+  "hook": "The standards exist to prevent gerrymandering (Bernas).",
+  "ordered": false
+ },
+ {
+  "id": "c-sectoral-transitory",
+  "t": "house",
+  "title": "Sectoral seats under the transitory clause",
+  "ask": "For three consecutive terms after ratification, half of the party-list seats were filled from which sectors (Art. VI, Sec. 5(2))?",
+  "items": [
+   "Labor",
+   "Peasant",
+   "Urban poor",
+   "Indigenous cultural communities",
+   "Women",
+   "Youth",
+   "Such other sectors as may be provided by law",
+   "Except the religious sector"
+  ],
+  "src": "Art. VI, Sec. 5(2)",
+  "rv": "comp-text",
+  "hook": "Filled ‘by selection or election’, as provided by law; the religious sector is the one express exclusion.",
+  "ordered": false
+ },
+ {
+  "id": "c-ra7941-sectors",
+  "t": "house",
+  "title": "Sectors listed in RA 7941",
+  "ask": "Which sectors does RA 7941, Sec. 5 enumerate for sectoral parties, and is the list exclusive?",
+  "items": [
+   "Labor and peasant",
+   "Fisherfolk and urban poor",
+   "Indigenous cultural communities and elderly",
+   "Handicapped and women",
+   "Youth and veterans",
+   "Overseas workers and professionals",
+   "The enumeration is not exclusive (Ang Ladlad)"
+  ],
+  "src": "RA 7941, Sec. 5; Ang Ladlad v. COMELEC",
+  "cases": [
+   "angladlad"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-atong-paglaum",
+  "t": "house",
+  "title": "Atong Paglaum parameters",
+  "ask": "What are the six parameters for party-list participation laid down in Atong Paglaum?",
+  "items": [
+   "Three groups may participate: national, regional and sectoral parties or organizations",
+   "National and regional parties need not organize along sectoral lines or represent the ‘marginalized and underrepresented’",
+   "Political parties may join by registering under the party-list system and fielding no district candidates",
+   "A party with district candidates joins only through a separately registered sectoral wing linked by coalition",
+   "Sectoral parties may be ‘marginalized and underrepresented’ or lack ‘well-defined political constituencies’; principal advocacy for the sector suffices",
+   "Majority of a sectoral party’s members must belong to the sector",
+   "Sectoral nominees must belong to the sector or have a track record of advocacy for it",
+   "Nominees of national and regional parties must be bona fide members",
+   "A party is not disqualified for some disqualified nominees if at least one nominee remains qualified"
+  ],
+  "src": "Atong Paglaum v. COMELEC (2013) (items 3–4 are parameter 3; items 6–8 are parameter 5)",
+  "cases": [
+   "atongpaglaum"
+  ],
+  "rv": "comp-partylist",
+  "hook": "Sereno, C.J., dissenting: the system is a social-justice tool; national parties now ‘invade’ the space of the marginalized.",
+  "ordered": false
+ },
+ {
+  "id": "c-atong-paglaum-basis",
+  "t": "house",
+  "title": "Why Atong Paglaum opened the party-list",
+  "ask": "What grounds did Atong Paglaum give for reading the party-list system as not exclusively sectoral?",
+  "items": [
+   "Party-list representation is not synonymous with sectoral representation",
+   "The framers rejected reserved sectoral seats (the 19–22 vote)",
+   "The text’s commas — ‘national, regional, and sectoral parties’ — name three distinct groups",
+   "Sectoral parties were meant to be a part, not the entirety, of the system",
+   "Ang Bagong Bayani and BANAT guidelines limiting it to the marginalized were abandoned"
+  ],
+  "src": "Atong Paglaum v. COMELEC; Gatmaytan’s book; DG reviewer",
+  "cases": [
+   "atongpaglaum"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-ra7941-cancel-grounds",
+  "t": "house",
+  "title": "Grounds to refuse or cancel party-list registration",
+  "ask": "What are the eight grounds under RA 7941, Sec. 6 for COMELEC to refuse or cancel a party-list group’s registration (after due notice and hearing)?",
+  "items": [
+   "It is a religious sect or denomination, or organized for religious purposes",
+   "It advocates violence or unlawful means to seek its goal",
+   "It is a foreign party or organization",
+   "It receives support from a foreign government, party, foundation or organization for partisan election purposes",
+   "It violates or fails to comply with laws, rules or regulations relating to elections",
+   "It declares untruthful statements in its petition",
+   "It has ceased to exist for at least one year",
+   "It failed to participate in the last two elections, or to get 2% of party-list votes in the two preceding elections"
+  ],
+  "src": "RA 7941, Sec. 6; An Waray (ground 5); Abang Lingkod (ground 6)",
+  "cases": [
+   "anwaray",
+   "abanglingkod"
+  ],
+  "rv": "comp-partylist",
+  "ordered": true
+ },
+ {
+  "id": "c-comelec-limits-pl",
+  "t": "house",
+  "title": "Limits on COMELEC in party-list registration",
+  "ask": "What limits do the cases place on COMELEC when it denies or cancels party-list registration?",
+  "items": [
+   "No track record required of the group; principal advocacy for the sector suffices (Abang Lingkod)",
+   "Track record matters only for nominees who do not belong to the sector (Abang Lingkod)",
+   "Misrepresentation justifies cancellation only if it relates to a qualification (Abang Lingkod)",
+   "No denial on moral or religious grounds; citing the Bible and Koran violates non-establishment (Ang Ladlad)",
+   "Moral disapproval of an unpopular minority is not a legitimate state interest (Ang Ladlad)",
+   "Notice and hearing are indispensable before cancellation (Senior Citizens)",
+   "An unimplemented term-sharing covenant is not a ground for cancellation (Senior Citizens)"
+  ],
+  "src": "Abang Lingkod v. COMELEC; Ang Ladlad v. COMELEC; Senior Citizens v. COMELEC",
+  "cases": [
+   "abanglingkod",
+   "angladlad",
+   "seniorcitizens"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-ra7941-nominations",
+  "t": "house",
+  "title": "Rules on the list of party-list nominees",
+  "ask": "What are the rules on the list of nominees under RA 7941, Sec. 8, and why must there be at least five?",
+  "items": [
+   "List of not less than five names",
+   "Submitted not later than 45 days before the election",
+   "A person may be nominated in one list only, and only with written consent",
+   "No candidate for any elective office may be on the list",
+   "The ban on persons who lost in the immediately preceding election was struck down (Albano)",
+   "No change of names or order after submission, except when a nominee dies, withdraws in writing, or becomes incapacitated",
+   "The substitute nominee is placed last on the list",
+   "Purpose of five names: inform voters who stands behind the group; provide for vacancies (COCOFED)",
+   "Failing to submit five is a ground to cancel; the ‘one qualified nominee’ rule does not excuse it (COCOFED)"
+  ],
+  "src": "RA 7941, Sec. 8; COCOFED v. COMELEC; Albano v. COMELEC",
+  "cases": [
+   "cocofed",
+   "albano"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-duterte-youth",
+  "t": "house",
+  "title": "Duterte Youth rulings on substitution",
+  "ask": "What did Duterte Youth v. COMELEC hold on withdrawal and substitution of party-list nominees?",
+  "items": [
+   "RA 7941 does not prohibit withdrawal as such; COMELEC merely notes it",
+   "What is prohibited is changing names or order of nominees, except death, written withdrawal or incapacity",
+   "Substitution deadlines stay mandatory even after the election",
+   "Timing is substance: voters have a right to know the nominees before voting",
+   "Sec. 16 (vacancy filled from the list) applies only to a vacancy during the term, not a list exhausted before the seat exists",
+   "COMELEC keeps jurisdiction until the nominee validly assumes office",
+   "The en masse post-election substitution was grave abuse and void"
+  ],
+  "src": "Duterte Youth v. COMELEC (2024)",
+  "cases": [
+   "duterteyouth"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-pl-seat-rules",
+  "t": "house",
+  "title": "Party-list seat, vacancy and affiliation rules",
+  "ask": "What are the rules on a sitting party-list representative’s seat, affiliation and vacancy (RA 7941, Secs. 15–16 and cases)?",
+  "items": [
+   "Changing political party or sectoral affiliation during the term forfeits the seat",
+   "Changing affiliation within six months before an election makes him ineligible as nominee of the new group",
+   "A vacancy is filled automatically by the next nominee in the order submitted",
+   "The replacement serves only the unexpired term",
+   "If the list is exhausted, the group submits additional nominees",
+   "Bona fide membership in the group is a continuing qualification (Lico)",
+   "Term-sharing among nominees is void ab initio: contrary to the three-year term (Sec. 7) and public policy (Senior Citizens)"
+  ],
+  "src": "RA 7941, Secs. 15–16; Art. VI, Sec. 7; Lico; Senior Citizens",
+  "cases": [
+   "lico",
+   "seniorcitizens"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-albano",
+  "t": "house",
+  "title": "Albano v. COMELEC points",
+  "ask": "What are the key points of Albano v. COMELEC (2023) on party-list nominee restrictions?",
+  "items": [
+   "‘As provided by law’ in Sec. 5(1) lets Congress prescribe party-list nominee qualifications and mechanics",
+   "That power does not extend to district representatives or Senators",
+   "Restrictions must satisfy equal protection and due process",
+   "The ban on nominees who lost in the immediately preceding election was void",
+   "Arbitrary: no clear link between losing an election and abusing the party-list system",
+   "Arbitrary: it barred only losers of the most recent election, not earlier ones",
+   "Arbitrary: losers could still run for district seats but not as party-list nominees"
+  ],
+  "src": "Albano v. COMELEC (2023)",
+  "cases": [
+   "albano"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-pl-forum",
+  "t": "house",
+  "title": "Who decides party-list disputes: COMELEC or HRET",
+  "ask": "Which forum decides each kind of party-list dispute?",
+  "items": [
+   "Registration and cancellation of the group, even one with a sitting member: COMELEC (An Waray)",
+   "Intra-party leadership disputes and nominations before assumption: COMELEC (Lokin)",
+   "Withdrawal and substitution of nominees: COMELEC, applying mandatory deadlines (Duterte Youth)",
+   "Qualifications of a candidate before he becomes a Member: COMELEC (Marcos)",
+   "Qualifications or expulsion from the party of a sitting member: HRET (Lico)"
+  ],
+  "src": "Lokin; Lico; An Waray; Duterte Youth; Marcos v. COMELEC",
+  "cases": [
+   "lokin",
+   "lico",
+   "anwaray",
+   "duterteyouth",
+   "marcos95"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-an-waray",
+  "t": "house",
+  "title": "An Waray points",
+  "ask": "What did An Waray v. COMELEC (2024) hold on cancelling a party-list group with a sitting member?",
+  "items": [
+   "COMELEC, not the HRET, cancels registration even if the group holds a seat",
+   "The group, not its nominee, is the respondent, so HRET jurisdiction over Members is not engaged",
+   "Registration is a privilege akin to a franchise that never becomes final against the State",
+   "So COMELEC’s power to revoke registration does not prescribe",
+   "Seating a nominee without COMELEC proclamation seriously violates RA 7941, Sec. 13",
+   "Defying the final seat allocation is a violation of election laws under Sec. 6(5)"
+  ],
+  "src": "An Waray Party-List v. COMELEC (2024)",
+  "cases": [
+   "anwaray"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-banat-steps",
+  "t": "house",
+  "title": "BANAT seat allocation formula",
+  "ask": "What are the steps for allocating party-list seats under BANAT, as refined by Araro and AKMA-PTM?",
+  "items": [
+   "Total party-list seats = (number of district seats ÷ 0.80) × 0.20",
+   "Rank all groups from highest to lowest votes",
+   "Compute each group’s percentage of total valid party-list votes (Araro divisor)",
+   "Each group with at least 2% gets one guaranteed seat",
+   "Remaining seats × each group’s percentage; the whole number is its additional seats (fractions dropped)",
+   "Then one seat each down the ranking until all seats are filled",
+   "No 2% threshold in the additional-seat round (BANAT; AKMA-PTM)",
+   "No group gets more than three seats",
+   "COMELEC may proclaim despite uncanvassed votes that can no longer affect the result (AKMA-PTM; OEC Sec. 233)"
+  ],
+  "src": "RA 7941, Sec. 11; BANAT v. COMELEC (2009); Araro; AKMA-PTM",
+  "cases": [
+   "araro",
+   "akma"
+  ],
+  "rv": "comp-partylist",
+  "ordered": true
+ },
+ {
+  "id": "c-araro-divisor",
+  "t": "house",
+  "title": "Araro divisor: what counts",
+  "ask": "Under Araro, what is included in and excluded from the divisor for party-list percentages?",
+  "items": [
+   "Included: total valid votes cast for the party-list system",
+   "Included: valid votes for groups on the ballot that are disqualified later",
+   "Excluded: spoiled and invalid votes",
+   "Excluded: votes for groups disqualified with finality and made known to voters before the election",
+   "Reason: a later disqualification cannot invalidate votes of voters who relied on the official ballot",
+   "The rule applies prospectively"
+  ],
+  "src": "Araro v. COMELEC (2013)",
+  "cases": [
+   "araro"
+  ],
+  "rv": "comp-partylist",
+  "ordered": false
+ },
+ {
+  "id": "c-domicile-change",
+  "t": "house",
+  "title": "Requisites for change of domicile",
+  "ask": "What three requisites must concur for a candidate to change domicile (Aquino; Marcos)?",
+  "items": [
+   "Actual removal to, or bodily presence in, the new place",
+   "A bona fide intention to abandon the old domicile (and remain in the new one)",
+   "Definite acts consistent with that intention"
+  ],
+  "src": "Aquino v. COMELEC (1995); Marcos v. COMELEC (1995); see also Gallego; Romualdez v. RTC",
+  "cases": [
+   "aquino95",
+   "marcos95",
+   "gallego",
+   "romualdezrtc"
+  ],
+  "rv": "comp-quals",
+  "hook": "Without clear and positive proof of all three, the domicile of origin continues.",
+  "ordered": false
+ },
+ {
+  "id": "c-domicile-rules",
+  "t": "house",
+  "title": "Domicile rules for congressional candidates",
+  "ask": "What are the rules on residence (domicile) of candidates drawn from Aquino, Marcos and Mangudadatu?",
+  "items": [
+   "Residence in election law means domicile",
+   "Leasing a condominium unit shows intent to lease, not a permanent home (Aquino)",
+   "The one-year residence rule applies even to a newly created district (Aquino)",
+   "A minor follows the parents’ domicile (Marcos)",
+   "Absence to work, study or for other temporary purposes does not lose domicile (Marcos)",
+   "A wife does not lose her domicile of origin by marriage (Marcos)",
+   "A mistake in the COC does not defeat actual residence (Marcos)",
+   "Qualifications are continuing; an incumbent exercising his office elsewhere cannot claim a new domicile (Mangudadatu)",
+   "His new domicile begins only when he leaves that office (Mangudadatu)"
+  ],
+  "src": "Aquino v. COMELEC; Marcos v. COMELEC; Mangudadatu v. COMELEC (2025)",
+  "cases": [
+   "aquino95",
+   "marcos95",
+   "mangudadatu"
+  ],
+  "rv": "comp-quals",
+  "ordered": false
+ },
+ {
+  "id": "c-second-placer",
+  "t": "house",
+  "title": "Second-placer rule after Mangudadatu",
+  "ask": "What is the rule when a winning candidate is disqualified, and why (Mangudadatu)?",
+  "items": [
+   "The second placer is not proclaimed; the second-placer rule is abandoned",
+   "The office is treated as vacant and filled by succession (for local offices, the Local Government Code)",
+   "Reason: the runner-up lost and was not the electorate’s choice",
+   "Imposing an unchosen runner-up violates the right of suffrage",
+   "Maquiling and Chua’s proclamation of the next-ranked candidate is no longer good law on this point"
+  ],
+  "src": "Mangudadatu v. COMELEC (2025); Aquino v. COMELEC (Labo doctrine)",
+  "cases": [
+   "mangudadatu",
+   "aquino95",
+   "maquiling"
+  ],
+  "rv": "comp-quals",
+  "ordered": false
+ },
+ {
+  "id": "c-regular-elections",
+  "t": "house",
+  "title": "Regular elections and Bañas-Nograles",
+  "ask": "What are the rules on the date of regular congressional elections (Art. VI, Sec. 8; Bañas-Nograles)?",
+  "items": [
+   "Regular election: second Monday of May, unless otherwise provided by law",
+   "‘Unless otherwise provided by law’ covers a law fixing another date",
+   "It also covers a law delegating the setting of the date to COMELEC",
+   "COMELEC cannot on its own suspend a congressional election and reset it",
+   "A district created after the election period began applies at the next regular election",
+   "Resetting would give the winner less than the three-year term of Sec. 7",
+   "COMELEC’s administrative power over elections is bound by the Constitution"
+  ],
+  "src": "Art. VI, Sec. 8; Bañas-Nograles v. COMELEC (2019)",
+  "cases": [
+   "banasnograles"
+  ],
+  "rv": "comp-elections",
+  "ordered": false
+ },
+ {
+  "id": "c-special-elections",
+  "t": "house",
+  "title": "Special elections to fill vacancies",
+  "ask": "What are the rules on special elections for vacancies in Congress (Art. VI, Sec. 9; RA 6645 as amended by RA 7166)?",
+  "items": [
+   "A special election ‘may be called’ to fill the vacancy, in the manner prescribed by law",
+   "The one elected serves only the unexpired term",
+   "Applies to a permanent vacancy at least one year before the expiration of the term",
+   "COMELEC calls and holds it not earlier than 60 nor later than 90 days after the vacancy",
+   "Senate vacancy: held simultaneously with the next succeeding regular election",
+   "A law fixing the special election with the regular election is itself the call; lack of separate notice not fatal (Tolentino)",
+   "House vacancy: COMELEC must call it and give notice, or it is void (Gatmaytan, reading Tolentino)",
+   "Voters have standing to question the validity of an election (Tolentino)"
+  ],
+  "src": "Art. VI, Sec. 9; RA 6645; RA 7166, Sec. 4; Tolentino v. COMELEC (2004); Hagedorn (2025)",
+  "cases": [
+   "tolentino04",
+   "hagedorn"
+  ],
+  "rv": "comp-elections",
+  "ordered": false
+ },
+ {
+  "id": "c-hagedorn",
+  "t": "house",
+  "title": "Hagedorn v. House: special election points",
+  "ask": "What did Hagedorn v. House of Representatives (2025) hold, including how RA 7166 changed RA 6645?",
+  "items": [
+   "Mandamus does not lie against the House: Sec. 9 says ‘may’, and a resolution is discretionary under its rules",
+   "Mandamus lies against COMELEC: it must call and hold the special election within 60–90 days",
+   "RA 7166 deleted RA 6645’s requirement of a House or Senate resolution certifying the vacancy",
+   "Keeping the certification would defeat the mandatory 60-to-90-day period",
+   "Reckoning changed: from one year (House) or 18 months (Senate) before the next regular election to one year before the term expires",
+   "The power and duty to call now rest with COMELEC, without any positive act of Congress",
+   "COMELEC may rely on official press releases, or a certification from the Speaker or Secretary-General"
+  ],
+  "src": "Hagedorn v. House of Representatives (2025); RA 6645; RA 7166, Sec. 4",
+  "cases": [
+   "hagedorn"
+  ],
+  "rv": "comp-elections",
+  "ordered": false
+ },
+ {
+  "id": "c-sec16-parts",
+  "t": "org",
+  "title": "Parts of Art. VI, Sec. 16",
+  "ask": "What are the five subjects covered by Art. VI, Sec. 16 (organization of each House)?",
+  "items": [
+   "(1) Election of officers: Senate President and Speaker; other officers",
+   "(2) Quorum, adjournment from day to day, and compelling attendance",
+   "(3) Rules of proceedings and discipline of Members",
+   "(4) Journal and Record",
+   "(5) Adjournment: limits without the other House’s consent"
+  ],
+  "src": "Art. VI, Sec. 16(1)–(5)",
+  "rv": "internal-text",
+  "ordered": true
+ },
+ {
+  "id": "c-sec16-numbers",
+  "t": "org",
+  "title": "Numbers to memorize in Sec. 16",
+  "ask": "What vote, number or period does each part of Art. VI, Sec. 16 require?",
+  "items": [
+   "Senate President and Speaker: majority vote of all its respective Members",
+   "Quorum: a majority of each House",
+   "A smaller number may adjourn from day to day and compel attendance of absent Members",
+   "Suspend or expel: concurrence of two-thirds of all its Members",
+   "Suspension: shall not exceed sixty days",
+   "Yeas and nays entered in the Journal: at the request of one-fifth of the Members present",
+   "Neither House may adjourn for more than three days without the other’s consent"
+  ],
+  "src": "Art. VI, Sec. 16(1)–(5)",
+  "rv": "internal-text",
+  "hook": "Only the Journal clause uses ‘Members present’; the others count ‘all’ the Members.",
+  "ordered": true
+ },
+ {
+  "id": "c-officers",
+  "t": "org",
+  "title": "Election of officers of each House",
+  "ask": "What are the rules on electing the officers of each House (Sec. 16(1); Santiago v. Guingona; Baguilat)?",
+  "items": [
+   "Only the Senate President and Speaker are constitutionally elected: majority vote of all respective Members",
+   "Each House chooses such other officers as it deems necessary",
+   "How other officers (e.g., minority leader) are chosen is for each House’s rules, not the Court",
+   "Those who did not vote for the winner do not ipso facto form the ‘minority’ (Santiago)",
+   "No law or rule makes the losing candidate the minority leader (Santiago)",
+   "A ‘long-standing tradition’ creates no enforceable duty; mandamus does not lie (Baguilat)",
+   "The Court has jurisdiction to check a constitutional violation but defers absent grave abuse (Santiago)"
+  ],
+  "src": "Art. VI, Sec. 16(1); Santiago v. Guingona (1998); Baguilat v. Alvarez (2017)",
+  "cases": [
+   "santiagoguingona",
+   "baguilat"
+  ],
+  "rv": "internal-officers",
+  "ordered": false
+ },
+ {
+  "id": "c-quorum",
+  "t": "org",
+  "title": "Quorum rules",
+  "ask": "What are the rules on quorum (Sec. 16(2); Avelino; Tinio)?",
+  "items": [
+   "Quorum: a majority of each House",
+   "Base: members within the chamber’s coercive jurisdiction (Avelino)",
+   "Avelino: one senator abroad left a base of 23; 12 was a majority and a quorum",
+   "Absent members still in the country count in the base",
+   "A smaller number may adjourn from day to day and compel attendance, as the House provides",
+   "Once established, quorum is presumed to continue unless challenged under the House’s rules (Tinio)",
+   "The Journal and enrolled bill control over unauthenticated videos and photos (Tinio)",
+   "Quorum is not the vote to elect: Senate President and Speaker need a majority of all Members",
+   "A detained member is still counted as a Member but cannot be compelled to attend (Jalosjos)"
+  ],
+  "src": "Art. VI, Sec. 16(2); Avelino v. Cuenco (1949); Tinio v. Duterte (2023); People v. Jalosjos",
+  "cases": [
+   "avelino",
+   "tinio",
+   "jalosjos"
+  ],
+  "rv": "internal-quorum",
+  "ordered": false
+ },
+ {
+  "id": "c-internal-rules-exceptions",
+  "t": "org",
+  "title": "Exceptions to non-interference in internal rules",
+  "ask": "Courts generally do not enforce Congress’s internal rules (Arroyo v. De Venecia). What are the exceptions?",
+  "items": [
+   "A constitutional requirement is involved: quorum, voting, or publication where required (Pimentel)",
+   "Rights of third parties are affected (Pacete)",
+   "Arbitrary and improvident use of rule-making amounting to denial of due process (Pimentel)",
+   "Grave abuse of discretion amounting to lack or excess of jurisdiction (expanded judicial review)"
+  ],
+  "src": "Art. VI, Sec. 16(3); Arroyo v. De Venecia; Pimentel v. Senate Committee of the Whole; Pacete v. CA",
+  "cases": [
+   "arroyodevenecia",
+   "pimentelcow",
+   "pacete"
+  ],
+  "rv": "internal-officers",
+  "hook": "General rule (Osmeña, quoted in Arroyo): parliamentary rules are procedural and may be waived.",
+  "ordered": false
+ },
+ {
+  "id": "c-pimentel-pacete",
+  "t": "org",
+  "title": "Pimentel and Pacete points",
+  "ask": "What did Pimentel v. Senate Committee of the Whole and Pacete v. Commission on Appointments hold?",
+  "items": [
+   "Senate rule-making is subject to the Constitution’s quorum, voting and publication imperatives (Pimentel)",
+   "The Constitution does not require internal rules to be published unless the rules themselves say so (Pimentel)",
+   "The Committee of the Whole’s own rules required publication, so it had to publish before proceeding (Pimentel)",
+   "Referral to the Committee of the Whole was an internal Senate matter (Pimentel)",
+   "An unacted motion to reconsider a confirmation does not set it aside (Pacete)",
+   "Only a majority of CA members present can reopen and recall a confirmation; one member cannot (Pacete)"
+  ],
+  "src": "Pimentel v. Senate Committee of the Whole (2011); Pacete v. Commission on Appointments (1971)",
+  "cases": [
+   "pimentelcow",
+   "pacete"
+  ],
+  "rv": "internal-officers",
+  "ordered": false
+ },
+ {
+  "id": "c-discipline-requisites",
+  "t": "org",
+  "title": "Valid suspension or expulsion of a Member",
+  "ask": "What are the requisites of a valid suspension or expulsion of a Member (Sec. 16(3))?",
+  "items": [
+   "Ground: disorderly behavior, as the House itself determines (Osmeña)",
+   "Vote: concurrence of two-thirds of all its Members, not just those present",
+   "Suspension: not more than sixty days",
+   "Expulsion: no cap, the gravest penalty",
+   "Due process: notice and an opportunity to be heard",
+   "No criminal conviction required; discipline is distinct from criminal liability"
+  ],
+  "src": "Art. VI, Sec. 16(3); Osmeña v. Pendatun; Pimentel v. Senate Committee of the Whole",
+  "cases": [
+   "osmena",
+   "pimentelcow"
+  ],
+  "rv": "internal-discipline",
+  "ordered": false
+ },
+ {
+  "id": "c-discipline-penalties",
+  "t": "org",
+  "title": "Penalties a House may impose on Members",
+  "ask": "What penalties may a House impose on a Member for disorderly behavior?",
+  "items": [
+   "Deletion of unparliamentary remarks from the record",
+   "Censure or reprimand",
+   "Fine",
+   "Imprisonment (listed in the class reviewer)",
+   "Suspension: two-thirds of all Members; at most sixty days",
+   "Expulsion: two-thirds of all Members"
+  ],
+  "src": "Art. VI, Sec. 16(3); House and Senate rules; DG reviewer",
+  "rv": "internal-discipline",
+  "hook": "Only suspension and expulsion need two-thirds of all Members; lesser penalties fall under the general power to ‘punish’.",
+  "ordered": false
+ },
+ {
+  "id": "c-osmena",
+  "t": "org",
+  "title": "Osmeña v. Pendatun points",
+  "ask": "What are the key points of Osmeña v. Pendatun (1960)?",
+  "items": [
+   "The speech privilege protects from being questioned ‘in any other place’, not in the Member’s own House",
+   "Purpose: fullest liberty of speech, protected from the resentment of the powerful",
+   "The privilege is not absolute",
+   "What is ‘disorderly behavior’ is for the House to decide; the Court will not review it",
+   "Taking up other business first does not waive the power to discipline; rules may be waived",
+   "The power to suspend is an inherent legislative prerogative, though the 1935 text named only expulsion",
+   "The 15-month suspension stood; the 1987 text now caps suspension at sixty days",
+   "Alejandrino distinguished: it involved an appointive senator under the Jones Law"
+  ],
+  "src": "Osmeña v. Pendatun (1960)",
+  "cases": [
+   "osmena",
+   "alejandrino"
+  ],
+  "rv": "internal-discipline",
+  "ordered": false
+ },
+ {
+  "id": "c-alejandrino",
+  "t": "org",
+  "title": "Alejandrino v. Quezon points",
+  "ask": "What are the key points of Alejandrino v. Quezon (1924), and why may it be bad law?",
+  "items": [
+   "Mandamus will not lie to compel the legislature to reinstate a suspended member; no power of coercion",
+   "The Senate could punish an appointive senator for disorderly behavior but not expel him",
+   "A one-year suspension of an appointive senator was a qualified expulsion: his district silenced, seat unfillable",
+   "Johnson, dissenting: courts may rule on positive acts of another branch that deprive persons of rights",
+   "Possibly bad law: no appointive legislators remain",
+   "Possibly bad law: the 1987 text expressly allows suspension (two-thirds, sixty days)",
+   "Possibly bad law: expanded judicial review now reaches grave abuse by Congress"
+  ],
+  "src": "Alejandrino v. Quezon (1924); DG reviewer",
+  "cases": [
+   "alejandrino"
+  ],
+  "rv": "internal-discipline",
+  "ordered": false
+ },
+ {
+  "id": "c-preventive-vs-discipline",
+  "t": "org",
+  "title": "Preventive suspension by courts vs discipline by the House",
+  "ask": "What are the differences between a court’s preventive suspension under RA 3019 and a chamber’s suspension under Sec. 16(3)?",
+  "items": [
+   "Imposed by: the Sandiganbayan or court vs. the Member’s own House",
+   "Basis: RA 3019, Sec. 13 vs. Art. VI, Sec. 16(3)",
+   "Nature: precautionary, not a penalty vs. punitive",
+   "Trigger: mandatory once a valid information is filed vs. disorderly behavior",
+   "Vote: none vs. two-thirds of all Members",
+   "Length: up to 90 days (jurisprudence) vs. not more than sixty days",
+   "Purpose: keep the accused from intimidating witnesses, tampering with records or further malfeasance vs. discipline"
+  ],
+  "src": "De Venecia v. Sandiganbayan (2002); Santiago v. Sandiganbayan (2001); Art. VI, Sec. 16(3)",
+  "cases": [
+   "devenecia"
+  ],
+  "rv": "internal-discipline",
+  "ordered": false
+ },
+ {
+  "id": "c-teves-arguments",
+  "t": "org",
+  "title": "Arguments in a Teves-type expulsion",
+  "ask": "In an expulsion like Teves’s (2023 Q1), what are the arguments for the House and for the Member?",
+  "items": [
+   "For the House: no conviction is needed to expel",
+   "For the House: the Court defers on what counts as disorderly behavior (Osmeña)",
+   "For the Member: two prior sixty-day suspensions for the same absence; expulsion evades the cap and punishes twice",
+   "For the Member: an Executive terrorist designation or a personal video is not disorderly behavior as a Member",
+   "For the Member: due process (notice and hearing) must be observed"
+  ],
+  "src": "Art. VI, Sec. 16(3); Osmeña v. Pendatun; 2023 midterm Q1",
+  "cases": [
+   "osmena"
+  ],
+  "rv": "internal-discipline",
+  "ordered": false
+ },
+ {
+  "id": "c-journal-duties",
+  "t": "org",
+  "title": "Journal and Record duties",
+  "ask": "What does Art. VI, Sec. 16(4) require of each House regarding its Journal and Record?",
+  "items": [
+   "Keep a Journal of its proceedings",
+   "Publish it from time to time",
+   "Except parts that, in its judgment, affect national security",
+   "Enter the yeas and nays on any question at the request of one-fifth of the Members present",
+   "Keep a Record of its proceedings (a verbatim account of plenary proceedings)"
+  ],
+  "src": "Art. VI, Sec. 16(4)",
+  "rv": "internal-journal",
+  "ordered": true
+ },
+ {
+  "id": "c-journal-entries",
+  "t": "org",
+  "title": "Matters that must be entered in the Journal",
+  "ask": "What matters does the Constitution require to be entered in the Journal?",
+  "items": [
+   "Yeas and nays on the third and final reading of a bill (Art. VI, Sec. 26(2))",
+   "The President’s veto message, entered at large (Art. VI, Sec. 27(1))",
+   "Yeas and nays on repassing a vetoed bill (Art. VI, Sec. 27(1))",
+   "Yeas and nays on any question at the request of one-fifth of the Members present (Art. VI, Sec. 16(4))",
+   "The vote of each Member of the House on impeachment (Art. XI, Sec. 3(3))"
+  ],
+  "src": "Art. VI, Secs. 16(4), 26(2), 27(1); Art. XI, Sec. 3(3); Morales v. Subido",
+  "cases": [
+   "moralessubido"
+  ],
+  "rv": "internal-journal",
+  "hook": "Only matters affecting national security may be withheld from publication.",
+  "ordered": false
+ },
+ {
+  "id": "c-enrolled-bill-journal",
+  "t": "org",
+  "title": "Enrolled bill vs Journal: the rules",
+  "ask": "What are the rules on the enrolled bill doctrine and the probative value of the Journal?",
+  "items": [
+   "Enrolled bill: signatures of the Senate President and Speaker plus the secretaries’ certification are conclusive of due enactment (CoTeSCUP)",
+   "The doctrine is court-made, grounded on respect for a coequal branch",
+   "Journal is conclusive on what it records; no extrinsic evidence (Pons)",
+   "Pons: courts take judicial notice of Journals; laws must rest on permanent records, not witnesses’ memory",
+   "On conflict, the enrolled bill prevails over the Journal (Casco; Morales)",
+   "Except matters the Constitution requires in the Journal: there the Journal may be consulted (Morales)",
+   "Exception: if presiding officers withdraw their signatures, there is no enrolled bill; consult the Journal (Astorga)",
+   "Astorga: approval by Congress, not signatures, makes a law; certification cannot cure a defect",
+   "Errors in an enrolled bill are corrected by amendment, not judicial decree (Morales)"
+  ],
+  "src": "CoTeSCUP (2018); U.S. v. Pons; Morales v. Subido; Astorga v. Villegas; Tinio v. Duterte",
+  "cases": [
+   "cotescup",
+   "pons",
+   "moralessubido",
+   "astorga",
+   "tinio",
+   "arroyodevenecia"
+  ],
+  "rv": "internal-journal",
+  "ordered": false
+ },
+ {
+  "id": "c-adjournment",
+  "t": "org",
+  "title": "Limits on adjournment (Sec. 16(5))",
+  "ask": "What are the elements of the adjournment rule in Art. VI, Sec. 16(5)?",
+  "items": [
+   "Applies during the sessions of Congress",
+   "Neither House, without the consent of the other,",
+   "may adjourn for more than three days,",
+   "nor to any other place than that in which the two Houses are sitting"
+  ],
+  "src": "Art. VI, Sec. 16(5)",
+  "rv": "internal-journal",
+  "ordered": true
+ },
+ {
+  "id": "c-sessions",
+  "t": "org",
+  "title": "Regular and special sessions (Sec. 15)",
+  "ask": "What are the elements of Art. VI, Sec. 15 on regular and special sessions?",
+  "items": [
+   "Congress convenes once every year",
+   "On the fourth Monday of July, unless a different date is fixed by law",
+   "Continues in session for such number of days as it may determine",
+   "Until thirty days before the opening of its next regular session",
+   "Exclusive of Saturdays, Sundays and legal holidays",
+   "The President may call a special session at any time"
+  ],
+  "src": "Art. VI, Sec. 15",
+  "rv": "internal-journal",
+  "ordered": true
+ },
+ {
+  "id": "c-joint-sessions",
+  "t": "org",
+  "title": "Occasions for joint sessions",
+  "ask": "On what four occasions does Congress meet in joint session, and how does it vote?",
+  "items": [
+   "Declaring the existence of a state of war: two-thirds of both Houses, voting separately (Art. VI, Sec. 23(1))",
+   "Canvassing the votes for President and Vice-President, in joint public session (Art. VII, Sec. 4)",
+   "Revoking or extending martial law or the suspension of the writ: majority of all Members, voting jointly (Art. VII, Sec. 18)",
+   "The President’s address at the opening of the regular session (Art. VII, Sec. 23)"
+  ],
+  "src": "Art. VI, Sec. 23(1); Art. VII, Secs. 4, 18, 23; DG reviewer",
+  "rv": "internal-journal",
+  "ordered": false
+ },
+ {
+  "id": "c-votes-majority-all",
+  "t": "org",
+  "title": "Votes requiring a majority of all Members",
+  "ask": "Which acts require a majority of ALL the Members (not just those present)?",
+  "items": [
+   "Electing the Senate President and the Speaker (Art. VI, Sec. 16(1))",
+   "Commission on Appointments rulings: majority vote of all its Members (Art. VI, Sec. 18)",
+   "Passing a law granting a tax exemption: majority of all Members of Congress (Art. VI, Sec. 28(4))",
+   "Revoking or extending martial law or suspension of the writ: majority of all Members, voting jointly (Art. VII, Sec. 18)"
+  ],
+  "src": "Art. VI, Secs. 16(1), 18, 28(4); Art. VII, Sec. 18",
+  "rv": "internal-officers",
+  "hook": "Contrast quorum (‘a majority of each House’, Avelino) and the one-fifth of Members ‘present’ for yeas and nays.",
+  "ordered": false
+ },
+ {
+  "id": "c-votes-two-thirds",
+  "t": "org",
+  "title": "Votes requiring two-thirds",
+  "ask": "Which acts of Congress or a House require a two-thirds vote, and two-thirds of what?",
+  "items": [
+   "Suspending or expelling a Member: two-thirds of all its Members (Art. VI, Sec. 16(3))",
+   "Declaring a state of war: two-thirds of both Houses in joint session, voting separately (Art. VI, Sec. 23(1))",
+   "Overriding a veto: two-thirds of all the Members of each House (Art. VI, Sec. 27(1))",
+   "Concurring in a treaty: at least two-thirds of all the Members of the Senate (Art. VII, Sec. 21)",
+   "Calling a constitutional convention: two-thirds of all the Members of Congress (Art. XVII, Sec. 3)"
+  ],
+  "src": "Art. VI, Secs. 16(3), 23(1), 27(1); Art. VII, Sec. 21",
+  "rv": "internal-discipline",
+  "ordered": false
+ },
+ {
+  "id": "c-salary",
+  "t": "org",
+  "title": "Salaries of Members (Sec. 10)",
+  "ask": "What are the elements of the salary rule in Art. VI, Sec. 10 and the rulings applying it?",
+  "items": [
+   "Salaries of Senators and Representatives are determined by law",
+   "An increase may be enacted, but cannot take effect immediately",
+   "It takes effect only after the expiration of the full term of all Members of the Senate and House approving it",
+   "‘All the Members’ means both chambers together (PHILCONSA: RA 4134 not before Dec. 30, 1969)",
+   "Purpose: delay deters legislators from voting themselves raises (PHILCONSA)",
+   "Retirement gratuity is compensation; computing it on an unreceivable raise is an indirect increase (Ligot)"
+  ],
+  "src": "Art. VI, Sec. 10; PHILCONSA v. Mathay (1966); Ligot v. Mathay (1974)",
+  "cases": [
+   "philconsamathay",
+   "ligot"
+  ],
+  "rv": "priv-salary",
+  "ordered": false
+ },
+ {
+  "id": "c-arrest-privilege",
+  "t": "org",
+  "title": "Privilege from arrest: elements and limits",
+  "ask": "What are the elements and limits of the privilege from arrest (Art. VI, Sec. 11)?",
+  "items": [
+   "Holder: a Senator or Member of the House",
+   "Offense punishable by not more than six years imprisonment",
+   "While Congress is in session (regular or special); actual attendance not required",
+   "Not covered: offenses punishable by more than six years",
+   "Never exempts a convicted or lawfully detained Member (Jalosjos; Trillanes)",
+   "The chamber’s Sec. 16 powers do not include shielding a Member from law enforcement (‘protective custody’)"
+  ],
+  "src": "Art. VI, Sec. 11; People v. Jalosjos; Trillanes v. Pimentel; 2026 news (dela Rosa)",
+  "cases": [
+   "jalosjos",
+   "trillanespimentel"
+  ],
+  "rv": "priv-arrest",
+  "ordered": false
+ },
+ {
+  "id": "c-arrest-history",
+  "t": "org",
+  "title": "History of the privilege from arrest",
+  "ask": "How did the privilege from arrest differ under the 1935, 1973 and 1987 Constitutions (Jalosjos)?",
+  "items": [
+   "1935: all offenses except treason, felony and breach of the peace; during attendance at sessions and going to and from",
+   "1973: offenses punishable by not more than six years; during attendance at sessions",
+   "1973: the Batasan had to surrender the member within 24 hours after adjournment",
+   "1987: offenses punishable by not more than six years; while Congress is in session, attendance not required"
+  ],
+  "src": "People v. Jalosjos (2000)",
+  "cases": [
+   "jalosjos"
+  ],
+  "rv": "priv-arrest",
+  "ordered": true
+ },
+ {
+  "id": "c-jalosjos-trillanes",
+  "t": "org",
+  "title": "Why election does not free a detained legislator",
+  "ask": "What reasons did Jalosjos and Trillanes give for refusing to let a detained legislator attend sessions?",
+  "items": [
+   "Voters elected him knowing of his confinement and its legal restraints",
+   "The popular mandate cannot override lawful penal and procedural restraints",
+   "Temporary leave is for emergencies; attending sessions five days a week would make him a free man",
+   "High office is not a substantial distinction lifting him out of the class of prisoners (equal protection)",
+   "Detainees, like convicts, cannot hold office or practise a profession while detained (People v. Maceda)",
+   "Applies to pre-trial detainees charged with reclusion perpetua offenses where evidence of guilt is strong (Trillanes)"
+  ],
+  "src": "People v. Jalosjos (2000); Trillanes IV v. Pimentel (2008)",
+  "cases": [
+   "jalosjos",
+   "trillanespimentel"
+  ],
+  "rv": "priv-arrest",
+  "ordered": false
+ },
+ {
+  "id": "c-jimenez-protected",
+  "t": "org",
+  "title": "Acts protected by the speech and debate clause",
+  "ask": "What four kinds of acts are protected by the speech and debate privilege (Jimenez v. Cabangbang)?",
+  "items": [
+   "Speeches delivered on the floor of Congress while in session",
+   "Statements made or votes cast in the halls of Congress while in session",
+   "Bills introduced in Congress, whether in session or not",
+   "Other official acts, inside or outside Congress, in the official discharge of duties as members of Congress or its committees"
+  ],
+  "src": "Art. VI, Sec. 11; Jimenez v. Cabangbang (1966)",
+  "cases": [
+   "jimenez"
+  ],
+  "rv": "priv-speech",
+  "ordered": true
+ },
+ {
+  "id": "c-speech-limits",
+  "t": "org",
+  "title": "Limits of the speech and debate privilege",
+  "ask": "What are the limits of the speech and debate privilege?",
+  "items": [
+   "Covers only legislative acts: it attaches because the statement furthers legislation, not because a lawmaker said it",
+   "Not covered: an open letter published in newspapers during recess (Jimenez)",
+   "Not covered: press releases and media interviews, which are ‘political in nature, rather than legislative’ (Trillanes v. Castillo-Marigomen)",
+   "Protects only from being questioned ‘in any other place’, not in the Member’s own House (Osmeña)",
+   "Discipline for floor speech belongs to the chamber, not the courts (Pobre)",
+   "Protects speech in Congress or its committees, not other conduct (Pobre, DG note)"
+  ],
+  "src": "Art. VI, Sec. 11; Jimenez; Trillanes v. Castillo-Marigomen (2018); Osmeña; Pobre v. Defensor-Santiago (2009)",
+  "cases": [
+   "jimenez",
+   "trillanesmarigomen",
+   "osmena",
+   "pobre"
+  ],
+  "rv": "priv-speech",
+  "ordered": false
+ },
+ {
+  "id": "c-five-disqualifications",
+  "t": "org",
+  "title": "Disqualifications of Members (Secs. 13–14)",
+  "ask": "What are the five disqualifications or prohibitions on Members of Congress under Art. VI, Secs. 13 and 14?",
+  "items": [
+   "Incompatible office: no other government office or employment (incl. GOCCs and subsidiaries) during term without forfeiting seat",
+   "Forbidden office: no appointment to an office created, or whose emoluments were increased, during the term for which elected",
+   "No personal appearance as counsel before courts, Electoral Tribunals, quasi-judicial and other administrative bodies",
+   "No direct or indirect financial interest in any government contract, franchise or special privilege during the term",
+   "No intervention in any matter before a government office for pecuniary benefit or where he may be called to act on account of office"
+  ],
+  "src": "Art. VI, Secs. 13–14; DG reviewer",
+  "rv": "priv-office",
+  "ordered": true
+ },
+ {
+  "id": "c-incompatible-vs-forbidden",
+  "t": "org",
+  "title": "Incompatible office vs forbidden office",
+  "ask": "What are the differences between an incompatible office and a forbidden office under Art. VI, Sec. 13?",
+  "items": [
+   "Source: first sentence of Sec. 13 vs. second sentence",
+   "Scope: any other government office or employment, incl. GOCCs and subsidiaries vs. only offices created or with increased emoluments during his term",
+   "Effect: he may accept but forfeits his seat vs. he cannot be appointed at all",
+   "Resignation: giving up the seat allows him to hold it vs. resigning does not cure the bar for the term for which elected",
+   "Forfeiture is automatic on assuming the other office (Adaza: taking the legislative oath vacated the governorship)",
+   "Contrast Art. IX-B, Sec. 7: an elective official is ineligible for any appointment during tenure; resigning after appointment does not cure (Flores v. Drilon)",
+   "The 1987 text has no Cabinet exception, unlike the 1973 rule applied in Adaza"
+  ],
+  "src": "Art. VI, Sec. 13; Adaza v. Pacana (1985); Art. IX-B, Sec. 7; Liban v. Gordon",
+  "cases": [
+   "adaza",
+   "liban"
+  ],
+  "rv": "priv-office",
+  "ordered": false
+ },
+ {
+  "id": "c-liban",
+  "t": "org",
+  "title": "Liban v. Gordon and RA 10530",
+  "ask": "What did Liban v. Gordon hold, and how did RA 10530 settle its issues?",
+  "items": [
+   "The PNRC chairmanship is not a government office, so Senator Gordon kept his seat",
+   "Reason: the Chairman is elected by a private-sector-controlled Board, not appointed by the President or a department head",
+   "The PNRC is sui generis, an auxiliary of government, not a GOCC",
+   "2009 voiding of parts of RA 95 (special charter for a private corporation) was reversed in 2011",
+   "Reversal grounds: RA 95’s validity was not the lis mota, and the PNRC is not an ordinary private corporation",
+   "RA 10530: the PNRC is an independent, autonomous, non-governmental organization auxiliary to government in the humanitarian field",
+   "So its chairmanship is not a Sec. 13 government office, and its charter is not barred by Art. XII, Sec. 16"
+  ],
+  "src": "Liban v. Gordon (2009, 2011); RA 10530 (2013); 2024 midterm Q4",
+  "cases": [
+   "liban"
+  ],
+  "rv": "priv-office",
+  "ordered": false
+ },
+ {
+  "id": "c-counsel-ban",
+  "t": "org",
+  "title": "Ban on appearing as counsel (Sec. 14)",
+  "ask": "Before which bodies may a Member not personally appear as counsel, and what do Puyat and Pangilinan add?",
+  "items": [
+   "Any court of justice",
+   "The Electoral Tribunals",
+   "Quasi-judicial bodies",
+   "Other administrative bodies",
+   "Cannot be evaded by buying token shares to intervene as a ‘stockholder’ (Puyat: ten shares bought after objection)",
+   "A stockholder intervening for his own genuine interest ordinarily is not appearing as counsel (Puyat)",
+   "De Lima’s request to argue as a party was denied because of her detention, not Sec. 14 (Pangilinan v. Cayetano)"
+  ],
+  "src": "Art. VI, Sec. 14; Puyat v. De Guzman (1982); Pangilinan v. Cayetano (Notice, 2018)",
+  "cases": [
+   "puyat",
+   "pangilinan2018"
+  ],
+  "rv": "priv-office",
+  "ordered": false
+ },
+ {
+  "id": "c-disclosure",
+  "t": "org",
+  "title": "Disclosure and accountability duties of Members",
+  "ask": "What disclosure and accountability duties apply to Members of Congress?",
+  "items": [
+   "Upon assumption of office, full disclosure of their financial and business interests (Art. VI, Sec. 12)",
+   "Notify their House of a potential conflict of interest from filing a bill they author (Art. VI, Sec. 12)",
+   "SALN under oath, disclosed to the public, upon assumption and as often as required by law (Art. XI, Sec. 17)",
+   "Congress’s books are preserved, open to the public and audited by COA (Art. VI, Sec. 20)",
+   "COA publishes annually an itemized list of amounts paid to and expenses incurred for each Member (Art. VI, Sec. 20)"
+  ],
+  "src": "Art. VI, Secs. 12, 20; Art. XI, Sec. 17; DG reviewer",
+  "rv": "priv-office",
+  "ordered": false
+ }
+]

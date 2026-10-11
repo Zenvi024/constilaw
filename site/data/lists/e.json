@@ -1,0 +1,998 @@
+[
+ {
+  "id": "e-approp-sec24-bills",
+  "t": "approp",
+  "title": "Bills that must originate exclusively in the House",
+  "ask": "Under Art. VI, Sec. 24, which six kinds of bills must originate exclusively in the House of Representatives, and what may the Senate do with them?",
+  "items": [
+   "Appropriation bills",
+   "Revenue bills",
+   "Tariff bills",
+   "Bills authorizing increase of the public debt",
+   "Bills of local application",
+   "Private bills",
+   "The Senate may ‘propose or concur with amendments’"
+  ],
+  "src": "Art. VI, Sec. 24; Tolentino v. Sec. of Finance",
+  "cases": [
+   "tolentinofinance"
+  ],
+  "rv": "money-text",
+  "hook": "‘ART-DLP’: Appropriation, Revenue, Tariff, Debt, Local, Private.",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-sec25-rules",
+  "t": "approp",
+  "title": "The seven rules of Art. VI, Sec. 25",
+  "ask": "State the rule in each of the seven paragraphs of Art. VI, Sec. 25.",
+  "items": [
+   "(1) Congress may not increase the President’s recommended appropriations for government operations; budget form, content and preparation set by law",
+   "(2) No GAA provision unless it relates specifically to some particular appropriation; limited in operation to that appropriation (no riders)",
+   "(3) Congress’s own appropriations strictly follow the procedure for other departments and agencies",
+   "(4) Special appropriations bill must specify its purpose and be supported by available funds or a revenue proposal",
+   "(5) No law authorizing transfer of appropriations; five named officials may, by law, augment items from savings",
+   "(6) Discretionary funds for particular officials: public purposes only, supported by vouchers, subject to guidelines by law",
+   "(7) No GAA passed by the end of the fiscal year: the preceding year’s GAA is deemed re-enacted, automatically, until the new GAA passes"
+  ],
+  "src": "Art. VI, Sec. 25(1)–(7)",
+  "rv": "money-text",
+  "ordered": true
+ },
+ {
+  "id": "e-approp-sec25-4-special",
+  "t": "approp",
+  "title": "Requisites of a special appropriations bill",
+  "ask": "What does Art. VI, Sec. 25(4) require of a special appropriations bill?",
+  "items": [
+   "It must specify the purpose for which it is intended",
+   "It must be supported by funds actually available, as certified by the National Treasurer, or",
+   "by funds to be raised by a corresponding revenue proposal in the bill itself"
+  ],
+  "src": "Art. VI, Sec. 25(4)",
+  "rv": "money-text",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-sec25-6-discretionary",
+  "t": "approp",
+  "title": "Conditions on discretionary funds",
+  "ask": "What four conditions does Art. VI, Sec. 25(6) attach to discretionary funds?",
+  "items": [
+   "Appropriated for particular officials",
+   "Disbursed only for public purposes",
+   "Supported by appropriate vouchers",
+   "Subject to such guidelines as may be prescribed by law"
+  ],
+  "src": "Art. VI, Sec. 25(6); Belgica (2013) on presidential discretionary funds",
+  "cases": [
+   "belgica2013"
+  ],
+  "rv": "money-text",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-sec29-rules",
+  "t": "approp",
+  "title": "The three rules of Art. VI, Sec. 29",
+  "ask": "State the three rules of Art. VI, Sec. 29 on public money.",
+  "items": [
+   "(1) No money paid out of the Treasury except in pursuance of an appropriation made by law",
+   "(2) No public money or property for any sect, church, denomination, sectarian institution, system of religion, or religious dignitary as such",
+   "(3) Taxes levied for a special purpose form a special fund, paid out for that purpose only",
+   "(3) If that purpose is fulfilled or abandoned, any balance goes to the general funds of the Government"
+  ],
+  "src": "Art. VI, Sec. 29(1)–(3)",
+  "rv": "money-text",
+  "ordered": true
+ },
+ {
+  "id": "e-approp-sec29-2-exceptions",
+  "t": "approp",
+  "title": "Exceptions: paying a religious dignitary",
+  "ask": "Under Art. VI, Sec. 29(2), public money may be paid to a priest, preacher, minister or dignitary only when assigned to which four institutions?",
+  "items": [
+   "The armed forces",
+   "Any penal institution",
+   "A government orphanage",
+   "A leprosarium"
+  ],
+  "src": "Art. VI, Sec. 29(2)",
+  "rv": "money-text",
+  "hook": "Soldiers, prisoners, orphans, lepers.",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-general-limits",
+  "t": "approp",
+  "title": "General limitations on appropriations",
+  "ask": "What are the three general limitations on the power to appropriate (class reviewer)?",
+  "items": [
+   "Appropriations must be for a public purpose",
+   "No public funds or property for any religion or religious dignitary (Sec. 29(2)), save the listed exceptions",
+   "But a valid secular purpose that incidentally benefits a religion is allowed"
+  ],
+  "src": "Art. VI, Sec. 29(2); class reviewer (Part V.B.a)",
+  "rv": "money-text",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-valid-appropriation",
+  "t": "approp",
+  "title": "Requisites of an appropriation ‘made by law’",
+  "ask": "What makes something an appropriation ‘made by law’ under Art. VI, Sec. 29(1)?",
+  "items": [
+   "It is made by law (a statute), not necessarily the GAA",
+   "It sets apart a determinate or determinable amount of public money",
+   "It allocates that money for a particular, stated purpose",
+   "That purpose must be public",
+   "Its primary aim is to appropriate; a bill creating an office and funding it is not an appropriation bill"
+  ],
+  "src": "Art. VI, Sec. 29(1); Guingona v. Carague; Belgica (2013); class reviewer",
+  "cases": [
+   "guingonacarague",
+   "belgica2013"
+  ],
+  "rv": "money-text",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-kinds",
+  "t": "approp",
+  "title": "Kinds of appropriations",
+  "ask": "What kinds of appropriations appear in the Constitution and the cases?",
+  "items": [
+   "General appropriations (the annual GAA): Sec. 25(1), (2), (5), (7)",
+   "Special appropriations: purpose specified; funds certified available or a revenue proposal (Sec. 25(4))",
+   "Continuing or automatic appropriations, e.g., debt service, Malampaya Fund: no yearly re-enactment (Guingona; Belgica)",
+   "Re-enacted appropriations: last year’s GAA when no new GAA passes (Sec. 25(7))",
+   "Programmed versus unprogrammed: unprogrammed released only if revenues exceed targets (Araullo)",
+   "Line-item versus lump-sum appropriations (Belgica 2013; 2019)",
+   "Discretionary funds for particular officials (Sec. 25(6))"
+  ],
+  "src": "Art. VI, Sec. 25; Guingona v. Carague; Belgica (2013, 2019); Araullo",
+  "cases": [
+   "guingonacarague",
+   "belgica2013",
+   "belgica2019",
+   "araullo"
+  ],
+  "rv": "money-text",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-budget-cycle",
+  "t": "approp",
+  "title": "Four phases of the budget cycle",
+  "ask": "What are the four phases of the budget cycle (Araullo), and who leads each?",
+  "items": [
+   "Budget preparation: the Executive (President submits the budget within 30 days from the opening of each regular session, Art. VII, Sec. 22)",
+   "Budget legislation: Congress (cannot increase the President’s recommendations, Sec. 25(1))",
+   "Budget execution: the Executive alone (no legislator role: Belgica)",
+   "Accountability: audit by COA and congressional oversight (scrutiny and investigation)"
+  ],
+  "src": "Araullo; Belgica (2013); Art. VI, Sec. 25(1); Art. VII, Sec. 22",
+  "cases": [
+   "araullo",
+   "belgica2013"
+  ],
+  "rv": "money-pork",
+  "ordered": true
+ },
+ {
+  "id": "e-approp-outside-art6",
+  "t": "approp",
+  "title": "Budget rules outside Art. VI used in these cases",
+  "ask": "Which budget rules outside Art. VI do the appropriation cases rely on?",
+  "items": [
+   "Art. XIV, Sec. 5(5): education gets the highest budgetary priority, but Congress may still meet other needs (Guingona; Philconsa)",
+   "Art. IX-A, Sec. 5: Constitutional Commissions enjoy fiscal autonomy; approved appropriations automatically and regularly released (Macalintal 2023)",
+   "Art. VIII, Sec. 3: Judiciary’s fiscal autonomy; appropriations not reduced below the previous year’s; automatic, regular release",
+   "Art. XVIII, Sec. 3: prior decrees not inconsistent with the Constitution remain operative (debt decrees in Guingona)"
+  ],
+  "src": "Guingona v. Carague; Philconsa v. Enriquez; Macalintal v. COMELEC (2023)",
+  "cases": [
+   "guingonacarague",
+   "philconsaenriquez",
+   "macalintal2023"
+  ],
+  "ordered": false
+ },
+ {
+  "id": "e-approp-guingona",
+  "t": "approp",
+  "title": "Why automatic debt-service appropriations are valid",
+  "ask": "Why did Guingona v. Carague uphold the automatic appropriation for debt service?",
+  "items": [
+   "It is an appropriation ‘made by law’ (PDs 81, 1177, 1967); need not be in the GAA",
+   "Continuing appropriation: no yearly re-enactment needed",
+   "Standard 1: paid only as the loans fall due",
+   "Standard 2: the amount is determinable (only what is needed to service the debt)",
+   "The debt decrees survived 1987: not inconsistent with the Constitution (Art. XVIII, Sec. 3)",
+   "Education’s ‘highest budgetary priority’ does not hamstring Congress; education still got the highest department allocation"
+  ],
+  "src": "Guingona v. Carague (1991); Art. XIV, Sec. 5(5)",
+  "cases": [
+   "guingonacarague"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-pork-timeline",
+  "t": "approp",
+  "title": "The pork barrel line of cases",
+  "ask": "Trace the four cases on the pork barrel in order, with each holding.",
+  "items": [
+   "Philconsa v. Enriquez (1994): CDF upheld; legislators merely recommend",
+   "LAMP (2012): PDAF upheld for want of proof; presumptions of constitutionality and regularity",
+   "Belgica (2013): PDAF void; Philconsa and LAMP abandoned on this point",
+   "Belgica (2019): lump sums not per se pork; valid if one singular purpose"
+  ],
+  "src": "Philconsa v. Enriquez; LAMP; Belgica (2013); Belgica (2019)",
+  "cases": [
+   "philconsaenriquez",
+   "lamp",
+   "belgica2013",
+   "belgica2019"
+  ],
+  "rv": "money-pork",
+  "ordered": true
+ },
+ {
+  "id": "e-approp-pork-definition",
+  "t": "approp",
+  "title": "Elements of the congressional pork barrel",
+  "ask": "How did Belgica (2013) define the congressional pork barrel (its elements)?",
+  "items": [
+   "A lump-sum, discretionary fund",
+   "Legislators, individually or collectively as committees,",
+   "effectively control certain aspects of the fund’s utilization",
+   "through post-enactment measures or practices (identification, release, realignment)"
+  ],
+  "src": "Belgica v. Executive Secretary (2013)",
+  "cases": [
+   "belgica2013"
+  ],
+  "rv": "money-pork",
+  "hook": "Presidential pork, by contrast: a lump-sum fund whose use the President decides.",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-belgica-violations",
+  "t": "approp",
+  "title": "Why the PDAF is unconstitutional (Belgica 2013)",
+  "ask": "Which five constitutional principles did the PDAF violate in Belgica (2013)?",
+  "items": [
+   "Separation of powers: legislators took part in budget execution after enactment",
+   "Non-delegability of legislative power: individual legislators effectively appropriated funds",
+   "Checks and balances: lump sum completed after enactment (‘budget within a budget’) leaves no proper item to veto",
+   "Accountability: legislators who take part in execution cannot oversee it; Congress cannot check its own members",
+   "Local autonomy: district representatives (national officers) substitute their judgment for local governments’ development plans"
+  ],
+  "src": "Belgica v. Executive Secretary (2013)",
+  "cases": [
+   "belgica2013"
+  ],
+  "rv": "money-pork",
+  "hook": "‘SNCAL’: Separation, Non-delegation, Checks, Accountability, Local autonomy.",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-belgica-postenactment",
+  "t": "approp",
+  "title": "Post-enactment acts barred to legislators",
+  "ask": "After Belgica (2013), which post-enactment acts may legislators no longer perform, and what is left to Congress?",
+  "items": [
+   "Identify projects after the budget is enacted",
+   "Take part in the release of funds",
+   "Realign their allocations (only the Sec. 25(5) officials may augment; Philconsa already said members only recommend)",
+   "Left to Congress after enactment: oversight only, by scrutiny and investigation",
+   "Identification was not merely recommendatory: the fund could not be used without it"
+  ],
+  "src": "Belgica (2013); Philconsa v. Enriquez; ABAKADA",
+  "cases": [
+   "belgica2013",
+   "philconsaenriquez",
+   "abakada"
+  ],
+  "rv": "money-pork",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-lamp",
+  "t": "approp",
+  "title": "Why the PDAF challenge failed in LAMP",
+  "ask": "Why was the LAMP (2012) petition against the PDAF dismissed?",
+  "items": [
+   "Presumption of constitutionality of the appropriation law",
+   "Presumption of regularity in the release of PDAF funds",
+   "Media reports, conjecture and general allegations are speculation, not proof",
+   "No evidence that DBM released funds directly to legislators or that they controlled spending",
+   "Dictum: after enactment Congress’s role is oversight; budget execution belongs to the Executive",
+   "Belgica (2013) later held LAMP no bar: it decided nothing on the merits"
+  ],
+  "src": "LAMP v. Secretary of Budget and Management (2012)",
+  "cases": [
+   "lamp"
+  ],
+  "rv": "money-pork",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-presidential-funds",
+  "t": "approp",
+  "title": "Belgica on the President’s discretionary funds",
+  "ask": "What did Belgica (2013) hold on the Malampaya Fund and the Presidential Social Fund?",
+  "items": [
+   "Presidential discretionary funds are not per se unconstitutional",
+   "The decrees creating them are appropriations made by law",
+   "But their use must meet valid-delegation standards (completeness and sufficient standard)",
+   "Void: ‘and for such other purposes as may be hereafter directed by the President’ (Malampaya, PD 910)",
+   "Void: ‘to finance the priority infrastructure development projects’ (Presidential Social Fund, PD 1869 as amended)"
+  ],
+  "src": "Belgica v. Executive Secretary (2013)",
+  "cases": [
+   "belgica2013"
+  ],
+  "rv": "money-pork",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-singular-correspondence",
+  "t": "approp",
+  "title": "Singular correspondence: valid and invalid items",
+  "ask": "Under the rule of singular correspondence, when is an appropriation item valid and when is it invalid?",
+  "items": [
+   "Valid line item: a specified singular amount for a specified singular purpose, vetoable as a unit",
+   "Valid lump sum: funds several programs, projects or activities all under one singular purpose (Belgica 2019)",
+   "That purpose may be as general or specific as Congress wishes, if it does not negate the item veto",
+   "Invalid: multiple unrelated purposes, or vague and amorphous purposes",
+   "Invalid: amounts and projects chosen after enactment, especially by legislators (PDAF)",
+   "An item for a Major Final Output covers its integral components, e.g., license plates (Dela Cruz)"
+  ],
+  "src": "Belgica (2013); Belgica (2019); Dela Cruz v. Ochoa (2018)",
+  "cases": [
+   "belgica2013",
+   "belgica2019",
+   "delacruz"
+  ],
+  "rv": "money-pork",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-belgica2019-funds",
+  "t": "approp",
+  "title": "Belgica (2019): lump-sum funds upheld",
+  "ask": "Name the four 2014 GAA lump-sum funds upheld in Belgica (2019) and why they passed.",
+  "items": [
+   "Unprogrammed Fund",
+   "Contingent Fund",
+   "E-Government Fund",
+   "Local Government Support Fund",
+   "Why: each had one singular purpose",
+   "Why: each had sufficient standards to guide execution",
+   "Why: no post-enactment discretion by legislators, and the item veto was not negated"
+  ],
+  "src": "Belgica v. Executive Secretary (2019)",
+  "cases": [
+   "belgica2019"
+  ],
+  "rv": "money-pork",
+  "hook": "‘U-C-E-L’: Unprogrammed, Contingent, E-Gov, Local Gov Support.",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-item-veto",
+  "t": "approp",
+  "title": "Item veto and inappropriate provisions (Philconsa)",
+  "ask": "State the item veto rules from Art. VI, Sec. 27(2) and Philconsa v. Enriquez.",
+  "items": [
+   "Item veto applies only to appropriation, revenue and tariff bills; elsewhere the veto is all-or-nothing",
+   "Vetoing an item does not affect the items the President does not object to",
+   "An item is an indivisible sum for a stated purpose: vetoed whole or not at all",
+   "An inappropriate provision (rider) may be vetoed separately, as if it were an item",
+   "An appropriate provision or condition can be struck only by vetoing the item it qualifies",
+   "Vetoed items return to Congress, which may override by two-thirds of all the Members of each House"
+  ],
+  "src": "Art. VI, Sec. 27(1)–(2); Philconsa v. Enriquez (1994)",
+  "cases": [
+   "philconsaenriquez"
+  ],
+  "rv": "money-pork",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-inappropriate-provisions",
+  "t": "approp",
+  "title": "Marks of an ‘inappropriate provision’ (rider) in the GAA",
+  "ask": "What makes a GAA provision an ‘inappropriate provision’ under Art. VI, Sec. 25(2) and Philconsa, and what are examples?",
+  "items": [
+   "It does not relate specifically to a particular appropriation in the GAA",
+   "It amends substantive law",
+   "It belongs in separate legislation",
+   "Example: letting SUCs keep their income in revolving funds (amended existing law; veto upheld)",
+   "Example: a GAA provision letting DBM change agencies’ organizational structures",
+   "Example: the PhilHealth fund-sweep provision that repealed the UHC Act’s reserve-fund rule (Pimentel 2025)",
+   "Not a rider: a condition that relates to the agency’s appropriation, e.g., defunding a unit"
+  ],
+  "src": "Art. VI, Sec. 25(2); Philconsa v. Enriquez; Pimentel v. House (2025); rule map news notes",
+  "cases": [
+   "philconsaenriquez",
+   "pimentelhouse2025"
+  ],
+  "rv": "money-pork",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-philconsa-vetoes",
+  "t": "approp",
+  "title": "Philconsa: vetoes struck down and vetoes upheld",
+  "ask": "In Philconsa v. Enriquez, which three vetoes were void, and which two notable vetoes were upheld?",
+  "items": [
+   "Void: veto of the debt-service provision limiting the fund to principal and interest of foreign and domestic debt",
+   "Void: veto of the DPWH rule that road maintenance be 70% by contract and 30% by administration",
+   "Void: veto of the special provision on AFP purchases of medicines",
+   "Reason they were void: appropriate conditions inseparable from their items, vetoed without the items",
+   "Upheld: veto of letting SUCs keep their income in revolving funds (amended existing law)",
+   "Upheld: veto of letting the AFP Chief of Staff augment pension funds from savings (contrary to Sec. 25(5))"
+  ],
+  "src": "Philconsa v. Enriquez (1994)",
+  "cases": [
+   "philconsaenriquez"
+  ],
+  "rv": "money-pork",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-augment-officials",
+  "t": "approp",
+  "title": "Officials who may augment from savings",
+  "ask": "Which five officials may, by law, be authorized to augment items under Art. VI, Sec. 25(5)?",
+  "items": [
+   "The President",
+   "The President of the Senate",
+   "The Speaker of the House of Representatives",
+   "The Chief Justice of the Supreme Court",
+   "The heads of the Constitutional Commissions"
+  ],
+  "src": "Art. VI, Sec. 25(5); Philconsa v. Enriquez; Pimentel v. House (2025)",
+  "cases": [
+   "philconsaenriquez",
+   "pimentelhouse2025",
+   "macalintal2023"
+  ],
+  "rv": "money-transfer",
+  "hook": "Not on the list: the Vice President, department secretaries (Finance: Pimentel 2025), the AFP Chief of Staff (Philconsa), individual legislators.",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-augment-requisites",
+  "t": "approp",
+  "title": "Requisites of a valid augmentation",
+  "ask": "What are the requisites of a valid transfer or augmentation under Art. VI, Sec. 25(5) (Araullo)?",
+  "items": [
+   "A law (usually the GAA) authorizes the official to augment",
+   "The funds are actual savings generated from the official’s own office’s appropriations",
+   "The purpose is to augment an existing item in the GAA for the official’s own office",
+   "So no ‘cross-border’ transfers to another branch or constitutional body"
+  ],
+  "src": "Art. VI, Sec. 25(5); Araullo v. Aquino III (2014); Demetria v. Alba",
+  "cases": [
+   "araullo",
+   "demetria"
+  ],
+  "rv": "money-transfer",
+  "hook": "Araullo states three requisites; the rule map splits ‘own office’ into a fourth. Law, Savings, Existing item, Own office.",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-savings",
+  "t": "approp",
+  "title": "What counts as ‘savings’",
+  "ask": "Under the GAA definition applied in Araullo, what are savings, and what is not?",
+  "items": [
+   "Balances of programmed appropriations, free from obligation, still available after the purpose was completed, finally discontinued or abandoned",
+   "Balances from unfilled (vacant) positions or leaves of absence without pay",
+   "Balances from improved systems and efficiencies that deliver the required outputs at lower cost",
+   "Not savings: unobligated allotments withdrawn and declared ‘savings’ before the end of the fiscal year",
+   "There can be no savings until the item has been fully provided for and its purpose satisfied"
+  ],
+  "src": "Araullo v. Aquino III (2014), applying the GAA",
+  "cases": [
+   "araullo"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-dap-practices",
+  "t": "approp",
+  "title": "DAP practices struck down (Araullo)",
+  "ask": "Which DAP practices did Araullo (2014) declare unconstitutional, and what of the DAP survived?",
+  "items": [
+   "Withdrawing unobligated allotments and declaring them ‘savings’ before year-end, contrary to the GAA’s definition",
+   "Cross-border transfers of Executive savings to offices outside the Executive (e.g., COA, the House)",
+   "Funding programs, activities and projects not covered by any GAA appropriation",
+   "Using unprogrammed funds without the National Treasurer’s certification that revenues exceeded targets",
+   "DAP as a fiscal strategy was not itself void",
+   "Operative fact: completed projects stand; authors and implementors presumed in good faith, liability for proper tribunals (2015)"
+  ],
+  "src": "Araullo v. Aquino III (2014; Res. 2015)",
+  "cases": [
+   "araullo"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-invalid-transfers",
+  "t": "approp",
+  "title": "Invalid transfers of appropriations: case map",
+  "ask": "Name the forms of invalid transfer or augmentation and the case for each.",
+  "items": [
+   "Blanket authority to move any fund to any project (Demetria v. Alba)",
+   "Mid-year ‘savings’ from withdrawn allotments (Araullo)",
+   "Cross-border transfers to another branch or body (Araullo)",
+   "Augmenting a non-existent item, e.g., unfunded benefits (Nazareth; Araullo)",
+   "Unprogrammed funds without excess-revenue certification (Araullo)",
+   "Postponing an election to free its funds for other uses (Macalintal 2023)",
+   "Augmentation by an official not named in Sec. 25(5) (AFP Chief: Philconsa; Finance Secretary: Pimentel 2025)",
+   "Realignment by individual legislators (Philconsa; Belgica)"
+  ],
+  "src": "Art. VI, Sec. 25(5); Demetria; Araullo; Nazareth; Macalintal (2023); Philconsa; Belgica; Pimentel (2025)",
+  "cases": [
+   "demetria",
+   "araullo",
+   "nazareth",
+   "macalintal2023",
+   "philconsaenriquez",
+   "belgica2013",
+   "pimentelhouse2025"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-nazareth-pichay-delacruz",
+  "t": "approp",
+  "title": "Nazareth, Pichay and Dela Cruz: one-line rules",
+  "ask": "State the appropriation rule of Nazareth, Pichay and Dela Cruz.",
+  "items": [
+   "Nazareth: a benefits law does not itself authorize payment; there must be an appropriation (Sec. 29(1))",
+   "Nazareth: savings cannot augment a non-existent item; the presidential approval covered only 1998–2000, so 2001 was disallowed",
+   "Pichay: the President may reorganize his own office (Admin. Code, Sec. 31) and fund it by realigning OP savings under the GAA",
+   "Dela Cruz: an item for a Major Final Output includes its integral components; specificity met if purpose is discernible and vetoable"
+  ],
+  "src": "Nazareth v. Villar (2013); Pichay (2012); Dela Cruz v. Ochoa (2018)",
+  "cases": [
+   "nazareth",
+   "pichay",
+   "delacruz"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-madera-rules",
+  "t": "approp",
+  "title": "Madera rules on return of disallowed amounts",
+  "ask": "State the Madera (2020) rules on who must return disallowed amounts.",
+  "items": [
+   "Notice of disallowance set aside: no one returns anything",
+   "Approving and certifying officers in good faith, regular performance of duties, with diligence: not civilly liable",
+   "Approving and certifying officers in bad faith, malice or gross negligence: solidarily liable for the net disallowed amount",
+   "Payees (officers or passive recipients) return what each received, even in good faith (solutio indebiti)",
+   "Unless the amount was genuinely given for services rendered",
+   "Or the Court excuses return for undue prejudice, social justice, or other bona fide exceptions, case by case"
+  ],
+  "src": "Madera v. COA (2020)",
+  "cases": [
+   "madera"
+  ],
+  "rv": "money-transfer",
+  "hook": "Net disallowed amount = total disallowed less what payees are excused from returning.",
+  "ordered": true
+ },
+ {
+  "id": "e-approp-madera-badges",
+  "t": "approp",
+  "title": "Badges of good faith of approving officers (Madera)",
+  "ask": "What are the five badges of good faith of approving and certifying officers under Madera?",
+  "items": [
+   "Certificates of availability of funds",
+   "An in-house or DOJ legal opinion",
+   "No precedent disallowing a similar case",
+   "A long agency practice with no prior disallowance",
+   "A reasonable textual reading of the law supporting legality"
+  ],
+  "src": "Madera v. COA (2020)",
+  "cases": [
+   "madera"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-macalintal-test",
+  "t": "approp",
+  "title": "Valid postponement of elections (Macalintal 2023)",
+  "ask": "What are the Macalintal (2023) guidelines for a valid postponement of elections?",
+  "items": [
+   "An important, substantial or compelling reason, e.g., a public emergency",
+   "Only if and to the extent strictly required by the exigencies",
+   "The reason must mainly be to safeguard suffrage or other fundamental rights, or meet a public emergency",
+   "Elections must still be held at regular intervals that are not unduly long",
+   "Elections must remain free, honest, orderly and safe, safeguarding the right of suffrage",
+   "Not enough alone: election fatigue, divisiveness, shortness of the existing term, or other superficial or farcical reasons"
+  ],
+  "src": "Macalintal v. COMELEC (2023)",
+  "cases": [
+   "macalintal2023"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-macalintal-holdings",
+  "t": "approp",
+  "title": "Why RA 11935 (BSKE postponement) was void",
+  "ask": "Why was RA 11935 postponing the December 2022 barangay and SK elections void, and what followed?",
+  "items": [
+   "It served no legitimate government interest: its real aim was to realign COMELEC’s election funds",
+   "A disguised transfer of appropriations, barred by Sec. 25(5)",
+   "Only the COMELEC Chairperson may augment COMELEC items, from COMELEC savings (fiscal autonomy)",
+   "It arbitrarily burdened the right of suffrage",
+   "Operative fact: the October 2023 elections proceeded; incumbents held over"
+  ],
+  "src": "Macalintal v. COMELEC (2023); Art. VI, Sec. 25(5)",
+  "cases": [
+   "macalintal2023"
+  ],
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-approp-pimentel2025",
+  "t": "approp",
+  "title": "Pimentel v. House (2025): PhilHealth fund sweep",
+  "ask": "What did Pimentel v. House of Representatives (2025) hold on the PhilHealth fund transfer?",
+  "items": [
+   "Congress cannot amend substantive laws through the GAA",
+   "GAA special provision and DOF circular void: repealed the UHC Act’s reserve-fund rule and conflicted with the Sin Tax law",
+   "The Finance Secretary cannot augment GAA items; only the President (Sec. 25(5))",
+   "₱60 billion ordered returned through the 2026 GAA; further transfers barred",
+   "No grave abuse in the President’s certification of urgency of the 2024 GAA",
+   "Caguioa, J.: also an inappropriate provision (Sec. 25(2)) and a breach of the special-fund rule (Sec. 29(3))"
+  ],
+  "src": "Pimentel v. House of Representatives (Dec. 3, 2025) (news; not in the syllabus)",
+  "cases": [
+   "pimentelhouse2025"
+  ],
+  "ordered": false
+ },
+ {
+  "id": "e-approp-cif-news",
+  "t": "approp",
+  "title": "Confidential and intelligence funds: rules",
+  "ask": "What constitutional rules govern confidential and intelligence funds (2016 midterm; OVP controversy)?",
+  "items": [
+   "They must be appropriated by law for a specific office and purpose",
+   "Moving them to another office mid-year is a prohibited transfer of appropriations",
+   "Congress may delete or reduce them, but may not increase the President’s recommendation",
+   "They remain subject to COA audit"
+  ],
+  "src": "Art. VI, Secs. 25(1), 25(5), 29(1); rule map news note",
+  "rv": "money-transfer",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-sec28-rules",
+  "t": "tax",
+  "title": "The four rules of Art. VI, Sec. 28",
+  "ask": "State the four paragraphs of Art. VI, Sec. 28.",
+  "items": [
+   "(1) Taxation shall be uniform and equitable; Congress shall evolve a progressive system of taxation",
+   "(2) Congress may, by law, authorize the President to fix tariff rates, quotas, dues and imposts within limits",
+   "(3) Charitable institutions, churches, mosques, non-profit cemeteries and property actually, directly and exclusively used for religious, charitable or educational purposes are exempt",
+   "(4) No tax exemption law without the concurrence of a majority of all the Members of the Congress"
+  ],
+  "src": "Art. VI, Sec. 28(1)–(4)",
+  "rv": "money-tax",
+  "ordered": true
+ },
+ {
+  "id": "e-tax-uniform-equitable-progressive",
+  "t": "tax",
+  "title": "Uniform, equitable, progressive",
+  "ask": "What does each of the three Sec. 28(1) standards of taxation mean, and which is enforceable?",
+  "items": [
+   "Uniform: persons and things of the same class taxed at the same rate; reasonable classification allowed",
+   "Equitable: the burden falls in proportion to the ability to pay",
+   "Progressive: rates rise as the tax base rises",
+   "The progressive-system clause is a directive (‘shall evolve’), not an enforceable right; regressive taxes not barred (Tolentino)"
+  ],
+  "src": "Art. VI, Sec. 28(1); Tolentino v. Sec. of Finance",
+  "cases": [
+   "tolentinofinance"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-tan-classification",
+  "t": "tax",
+  "title": "Valid classification in taxation (Tan v. Del Rosario)",
+  "ask": "What are the four requisites of a valid classification under the uniformity rule (Tan v. Del Rosario)?",
+  "items": [
+   "Rests on substantial distinctions",
+   "Germane to the purpose of the law",
+   "Not limited to existing conditions only",
+   "Applies equally to all members of the same class"
+  ],
+  "src": "Tan v. Del Rosario (1994); Art. VI, Sec. 28(1)",
+  "rv": "money-tax",
+  "hook": "The class reviewer says ‘substantial standards’; the correct word is ‘distinctions’.",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-tariff-imposts",
+  "t": "tax",
+  "title": "What Congress may let the President fix (Sec. 28(2))",
+  "ask": "Which five levies may Congress authorize the President to fix under Art. VI, Sec. 28(2)?",
+  "items": [
+   "Tariff rates",
+   "Import and export quotas",
+   "Tonnage dues",
+   "Wharfage dues",
+   "Other duties or imposts"
+  ],
+  "src": "Art. VI, Sec. 28(2); Garcia v. Executive Secretary",
+  "cases": [
+   "garciaexecsec"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-tariff-conditions",
+  "t": "tax",
+  "title": "Conditions on the tariff delegation",
+  "ask": "What four conditions does Art. VI, Sec. 28(2) attach to the President’s power to fix tariffs?",
+  "items": [
+   "Authorized by Congress by law",
+   "Within specified limits",
+   "Subject to such limitations and restrictions as Congress may impose",
+   "Within the framework of the national development program of the Government"
+  ],
+  "src": "Art. VI, Sec. 28(2); Garcia v. Executive Secretary",
+  "cases": [
+   "garciaexecsec"
+  ],
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-garcia",
+  "t": "tax",
+  "title": "Garcia v. Executive Secretary: holdings",
+  "ask": "Why were the EOs imposing extra duties on crude oil valid in Garcia v. Executive Secretary?",
+  "items": [
+   "Sec. 28(2) expressly allows Congress to delegate tariff-fixing to the President",
+   "Tariff and Customs Code Sec. 401 lets him act for the national economy, general welfare and/or national security",
+   "Protecting local industries is not the only permissible aim",
+   "A tariff measure is not void just because it mainly raises revenue",
+   "No origination problem: the President acted under a statute Congress enacted"
+  ],
+  "src": "Garcia v. Executive Secretary (1992)",
+  "cases": [
+   "garciaexecsec"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-sec28-3-exempt",
+  "t": "tax",
+  "title": "Constitutionally tax-exempt (Sec. 28(3))",
+  "ask": "List what Art. VI, Sec. 28(3) exempts from taxation.",
+  "items": [
+   "Charitable institutions",
+   "Churches, and parsonages or convents appurtenant thereto",
+   "Mosques",
+   "Non-profit cemeteries",
+   "All lands, buildings and improvements actually, directly and exclusively used for religious, charitable or educational purposes"
+  ],
+  "src": "Art. VI, Sec. 28(3)",
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-charitable-requisites",
+  "t": "tax",
+  "title": "Requisites of the charitable exemption (Lung Center)",
+  "ask": "What must a claimant prove to enjoy the Sec. 28(3) charitable exemption from real property tax (Lung Center)?",
+  "items": [
+   "The institution is charitable",
+   "Its property is actually used for charitable purposes",
+   "directly used for charitable purposes",
+   "and exclusively (solely) used for charitable purposes",
+   "Burden of proof on the claimant; exemption strictly construed against it"
+  ],
+  "src": "Art. VI, Sec. 28(3); Lung Center v. Quezon City (2004)",
+  "cases": [
+   "lungcenter"
+  ],
+  "rv": "money-tax",
+  "hook": "Two requisites, the second with three adverbs: actually, directly, exclusively.",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-lungcenter-rules",
+  "t": "tax",
+  "title": "Lung Center: rules on charitable character and use",
+  "ask": "State the Lung Center rules on what makes an institution charitable and which property is exempt.",
+  "items": [
+   "Test: does it exist for a purpose recognized in law as charitable, or for gain, profit or private advantage?",
+   "Charging paying patients does not defeat charitable character",
+   "Receiving government subsidies does not defeat it either",
+   "It is the use of the property, not the use of its income, that counts",
+   "Portions leased for commercial use (clinics, canteen, stores, garden center) are taxable",
+   "Portions used for patients, paying or non-paying, are exempt"
+  ],
+  "src": "Lung Center of the Philippines v. Quezon City (2004)",
+  "cases": [
+   "lungcenter"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-who-exempts",
+  "t": "tax",
+  "title": "Who may grant tax exemptions (John Hay)",
+  "ask": "Under John Hay PAC v. Lim, who may grant tax exemptions?",
+  "items": [
+   "Congress, by law concurred in by a majority of all its Members (Sec. 28(4))",
+   "The Constitution itself (e.g., Art. VI, Sec. 28(3); Art. XIV, Sec. 4(3)–(4))",
+   "Local governments, but only from local taxes",
+   "Never the President by proclamation"
+  ],
+  "src": "John Hay PAC v. Lim (2003); Art. VI, Sec. 28(4)",
+  "cases": [
+   "johnhay"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-exemption-rules",
+  "t": "tax",
+  "title": "Rules on statutory tax exemptions",
+  "ask": "What rules govern a statutory tax exemption?",
+  "items": [
+   "Only by law passed with the concurrence of a majority of all the Members of the Congress",
+   "Must be expressly granted, in language too clear to be mistaken; never implied",
+   "Strictly construed against the claimant",
+   "Claimant bears the burden of proving the exemption",
+   "An exemption granted to one zone does not extend to others unless the law says so (Subic, not John Hay)"
+  ],
+  "src": "Art. VI, Sec. 28(4); John Hay PAC v. Lim; Lung Center",
+  "cases": [
+   "johnhay",
+   "lungcenter"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-johnhay",
+  "t": "tax",
+  "title": "John Hay PAC v. Lim: holdings",
+  "ask": "What did John Hay PAC v. Lim hold on Proclamation 420?",
+  "items": [
+   "RA 7227’s tax incentives were intended for the Subic zone only; no express extension to later zones",
+   "Sec. 3 of Proc. 420 (Subic incentives for John Hay) void: circumvents the majority-of-all-Members rule",
+   "The other privileges are matters Congress traditionally legislates: unwarranted delegation",
+   "The creation of the John Hay Special Economic Zone itself stood"
+  ],
+  "src": "John Hay PAC v. Lim (2003)",
+  "cases": [
+   "johnhay"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-tolentino-origination",
+  "t": "tax",
+  "title": "Origination rules (Tolentino v. Sec. of Finance)",
+  "ask": "State the rules on origination of revenue bills from Tolentino v. Secretary of Finance.",
+  "items": [
+   "The bill, not the law, must originate in the House",
+   "The Senate may propose amendments, even a substitute bill; the law need not be substantially the House bill",
+   "The Senate may file its substitute in anticipation, if it withholds action as a body until the House bill arrives",
+   "Why the House: district representatives are closer to local needs; senators, elected at large, bring the national view",
+   "Insisting on the House version would deny the Senate’s power to amend, break co-equality, and make the House superior"
+  ],
+  "src": "Art. VI, Sec. 24; Tolentino v. Secretary of Finance (1994)",
+  "cases": [
+   "tolentinofinance"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-tolentino-other",
+  "t": "tax",
+  "title": "Tolentino v. Sec. of Finance: other holdings",
+  "ask": "Apart from origination, what else did Tolentino v. Secretary of Finance hold on the E-VAT law?",
+  "items": [
+   "A bicameral conference committee may insert entirely new provisions found in neither version, if germane",
+   "A presidential certification of urgency dispenses with printing three days before passage",
+   "It also dispenses with readings on three separate days",
+   "Uniformity: the VAT applies equally to all similarly situated",
+   "Progressive taxation is a directive, not an enforceable right",
+   "The VAT, a general tax, does not single out the press or religion"
+  ],
+  "src": "Tolentino v. Secretary of Finance (1994); Art. VI, Sec. 26(2)",
+  "cases": [
+   "tolentinofinance"
+  ],
+  "rv": "money-tax",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-president-revenue-bill",
+  "t": "tax",
+  "title": "What the President can do with a revenue bill he opposes",
+  "ask": "A House-initiated income tax reform bill passes over the President’s objections (2015 midterm). What are the steps and options?",
+  "items": [
+   "Origination is satisfied if the bill came from the House",
+   "The President’s objections matter only once the bill reaches him",
+   "He may veto the whole bill",
+   "Or veto particular items, since it is a revenue bill (Sec. 27(2))",
+   "If he does not act within 30 days of receipt, it becomes law",
+   "Congress may override by two-thirds of all the Members of each House"
+  ],
+  "src": "Art. VI, Secs. 24, 27(1)–(2); rule map 2015 midterm note",
+  "cases": [
+   "tolentinofinance"
+  ],
+  "rv": "money-tax",
+  "ordered": true
+ },
+ {
+  "id": "e-tax-money-votes",
+  "t": "tax",
+  "title": "Votes and numbers on money and tax measures",
+  "ask": "Give the vote thresholds and time periods that govern money and tax measures.",
+  "items": [
+   "Tax exemption law: concurrence of a majority of all the Members of the Congress (Sec. 28(4))",
+   "Veto override, including vetoed items: two-thirds of all the Members of each House (Sec. 27(1))",
+   "President acts on a bill within 30 days of receipt, or it becomes law (Sec. 27(1))",
+   "Budget submitted within 30 days from the opening of every regular session (Art. VII, Sec. 22)",
+   "Certified urgent bills: no three-day printing and no readings on separate days (Sec. 26(2); Tolentino)"
+  ],
+  "src": "Art. VI, Secs. 26(2), 27(1), 28(4); Art. VII, Sec. 22",
+  "cases": [
+   "tolentinofinance",
+   "johnhay"
+  ],
+  "rv": "money-checklist",
+  "ordered": false
+ },
+ {
+  "id": "e-tax-purposes",
+  "t": "tax",
+  "title": "Purposes of taxation",
+  "ask": "What are the three purposes of the power of taxation (class reviewer)?",
+  "items": [
+   "To raise revenue",
+   "As a tool for regulation",
+   "Protection (the ‘power to keep alive’)"
+  ],
+  "src": "Class reviewer (inherent powers: taxation)",
+  "ordered": false
+ }
+]

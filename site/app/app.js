@@ -23,7 +23,7 @@ const MCQS = () => D.mcq.filter(q => shownT(q.t));
 const ISSUES = () => D.issues.map(g => ({...g, items: g.items.filter(i => !HIDE || !OUT_ISSUES.includes(i.id))})).filter(g => g.items.length);
 
 /* ================= tabs ================= */
-const TABS = ["today","rules","cases","exams","spot","write","print"];
+const TABS = ["today","rules","lists","cases","exams","spot","write","print"];
 function setTab(t, push){
   if (!TABS.includes(t)) t = "today";
   TABS.forEach(x => { $("v-" + x).hidden = x !== t; });
@@ -32,6 +32,8 @@ function setTab(t, push){
   if (push !== false){ try { history.replaceState(null, "", "#" + t); } catch(e){} }
   if (t === "today") renderToday();
   if (t === "print") renderPrint();
+  if (t === "lists" && !$("lList").hidden) renderLists();
+  if (t === "rules") requestAnimationFrame(spy);
   window.scrollTo({top: 0});
 }
 document.querySelector(".tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) setTab(b.dataset.tab); });
@@ -100,6 +102,7 @@ function rate(k, g){ // 0 again, 1 hard, 2 good, 3 easy
   if (g === 0){ st.s = 0; st.l++; } else if (g === 1){ st.s = Math.max(st.s, 0); } else if (g === 2){ st.s = Math.min(Math.max(st.s + 1, 1), STEPS.length - 1); } else { st.s = Math.min(Math.max(st.s + 2, 3), STEPS.length - 1); }
   const mins = g === 1 ? Math.max(5, STEPS[st.s] / 2) : STEPS[st.s];
   st.d = Date.now() + mins * MIN; st.n++; SRS[k] = st; store.set("srs", SRS); dueBadge();
+  fixTrack(k, g);
 }
 function nextLbl(k, g){
   const st = SRS[k] || {s: -1}; let s = st.s;
@@ -109,7 +112,7 @@ function nextLbl(k, g){
 }
 const isDue = k => SRS[k] && SRS[k].d <= Date.now();
 const dueKeys = () => Object.keys(SRS).filter(k => isDue(k) && validKey(k));
-function validKey(k){ const [p, id] = k.split(":"); if (p === "m"){ const q = D.mcq.find(x => x.id === id); return !!q && shownT(q.t); } return !!CASE[id] && shownT(CASE[id].t); }
+function validKey(k){ const [p, id] = k.split(":"); if (p === "m"){ const q = D.mcq.find(x => x.id === id); return !!q && shownT(q.t); } if (p === "l") return !!LIST[id] && shownT(LIST[id].t); return ["cr", "fc", "rc"].includes(p) && !!CASE[id] && shownT(CASE[id].t); }
 function dueBadge(){ const n = dueKeys().length, b = $("dueBadge"); b.textContent = n; b.hidden = n === 0; }
 setInterval(dueBadge, 30000);
 
@@ -135,7 +138,9 @@ function renderToday(){
     [qa.length ? Math.round(100 * qr / qa.length) + "%" : "–", `MCQ accuracy (${qa.length} answered)`],
     [al.length ? avg.toFixed(1) : "–", `average essay score /10 (${al.length} written)`]
   ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+  renderSessPlan(); renderFix();
 }
+  // (session plan and fix list are refreshed by renderToday)
 $("week").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (b){ planDay = b.dataset.day; renderToday(); } });
 $("dayTodo").addEventListener("click", e => { const b = e.target.closest("[data-go]"); if (b) goAction(b.dataset.go); });
 function goAction(g){
@@ -178,6 +183,7 @@ function openSec(i, scroll){
   if (nextI !== undefined){ $("rnext").textContent = SECS[nextI].dataset.title + " →"; $("rnext").dataset.to = nextI; }
   store.set("sec", i);
   if (scroll !== false) window.scrollTo({top: 0});
+  buildMtoc(); updateBlurCt(); requestAnimationFrame(spy);
 }
 function openSecById(id){ const i = SECS.findIndex(s => s.id === id); if (i >= 0) openSec(i); }
 function goToId(id){
@@ -208,6 +214,70 @@ function runSearch(){
 }
 $("rq").addEventListener("input", () => { clearTimeout(sT); sT = setTimeout(runSearch, 220); });
 $("rresults").addEventListener("click", e => { if (e.target.id === "rclear"){ clearSearch(); return; } const b = e.target.closest("[data-k]"); if (b){ const el = hits[+b.dataset.k]; const sec = el.closest("section.rv"); const i = SECS.indexOf(sec); if (i !== curSec) openSec(i, false); el.scrollIntoView({block: "center"}); el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1600); } });
+
+/* ================= rule maps: blur mode and sticky headings ================= */
+// Blur mode hides case names, bold key terms and numbers (votes, periods, fractions); tap one to reveal it.
+const NUMW = "one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|eighteen|twenty|twenty-one|twenty-four|twenty-five|thirty|thirty-five|forty|forty-five|fifty|sixty|ninety|hundred";
+const NUMRX = new RegExp(String.raw`₱\s?[\d,.]+(?:\s(?:million|billion))?|\b\d+(?:[.,]\d+)?\s?(?:%|per\s?cent\b)|\b(?:one|two|three|four)-(?:half|thirds?|fourths?|fifths?|twelfths?)\b|\b(?:\d+|${NUMW})-(?:day|year|month|hour|week|member|seat)\b|\b(?:\d+(?:[–-]\d+)?|${NUMW})(?:\s(?:to|or|and)\s(?:\d+|${NUMW}))?\s(?:consecutive\s|calendar\s|session\s)?(?:days?|years?|months?|hours?|weeks?|members?|senators?|representatives?|votes?|nautical\smiles?|seats?|nominees?|terms?|justices?|readings?|districts?|signatures?|candidates?)\b`, "gi");
+(function markBlur(){
+  const root = $("rcontent"), skip = el => !!el.closest("h2,h3,h4,.lede,.art,th,a,strong,b,.legend");
+  const tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode: n => n.nodeValue.trim() && !skip(n.parentElement) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT});
+  const nodes = []; while (tw.nextNode()) nodes.push(tw.currentNode);
+  nodes.forEach(n => {
+    const t = n.nodeValue; NUMRX.lastIndex = 0; if (!NUMRX.test(t)) return; NUMRX.lastIndex = 0;
+    const f = document.createDocumentFragment(); let last = 0, m;
+    while ((m = NUMRX.exec(t))){ f.append(t.slice(last, m.index)); const sp = document.createElement("span"); sp.className = "num"; sp.textContent = m[0]; f.append(sp); last = m.index + m[0].length; }
+    f.append(t.slice(last)); n.replaceWith(f);
+  });
+  root.querySelectorAll("strong,b,a.cref,.num").forEach(el => {
+    if (el.closest("h2,h3,h4,.lede,.art,th,.legend") || el.parentElement.closest(".bl")) return;
+    if ((el.tagName === "STRONG" || el.tagName === "B") && (/:\s*$/.test(el.textContent) || el.matches(".test>b:first-child"))) return;
+    el.classList.add("bl");
+  });
+})();
+let BLUR = store.get("blur", false);
+function applyBlur(){
+  $("rcontent").classList.toggle("blurmode", BLUR);
+  $("blurBtn").setAttribute("aria-pressed", BLUR); $("blurBtn").textContent = BLUR ? "Blur mode: on" : "Blur mode";
+  $("blurReset").hidden = !BLUR; $("blurCt").hidden = !BLUR;
+  document.querySelectorAll("#rcontent .bl.shown").forEach(x => x.classList.remove("shown"));
+  updateBlurCt();
+}
+function updateBlurCt(){
+  if (!BLUR) return;
+  const all = SECS[curSec].querySelectorAll(".bl").length, shown = SECS[curSec].querySelectorAll(".bl.shown").length;
+  $("blurCt").textContent = `${shown} of ${all} revealed`;
+}
+$("blurBtn").onclick = () => { BLUR = !BLUR; store.set("blur", BLUR); applyBlur(); };
+$("blurReset").onclick = () => { SECS[curSec].querySelectorAll(".bl.shown").forEach(x => x.classList.remove("shown")); updateBlurCt(); };
+$("rcontent").addEventListener("click", e => {
+  if (!BLUR) return;
+  const el = e.target.closest(".bl:not(.shown)"); if (!el) return;
+  e.preventDefault(); e.stopPropagation();
+  el.classList.add("shown"); el.querySelectorAll(".bl").forEach(x => x.classList.add("shown"));
+  updateBlurCt();
+}, true);
+// sticky mini table of contents with the current heading highlighted, plus a reading-progress line
+function buildMtoc(){
+  const hs = [...SECS[curSec].querySelectorAll("h3[id]")];
+  $("mtoc").innerHTML = hs.map(h => `<a href="#" data-h="${h.id}" title="${esc(h.textContent)}">${esc(h.textContent)}</a>`).join("");
+}
+$("mtoc").addEventListener("click", e => { const a = e.target.closest("[data-h]"); if (a){ e.preventDefault(); goToId(a.dataset.h); } });
+let spyCur = null, spyRaf = 0;
+function spy(){
+  spyRaf = 0; if ($("v-rules").hidden) return;
+  const sec = SECS[curSec], off = $("rstick").getBoundingClientRect().bottom + 16;
+  let cur = null; sec.querySelectorAll("h3[id]").forEach(h => { if (h.getBoundingClientRect().top <= off) cur = h.id; });
+  if (cur !== spyCur){
+    spyCur = cur;
+    $("mtoc").querySelectorAll("a").forEach(a => { const on = a.dataset.h === cur; a.setAttribute("aria-current", on); if (on){ const bar = $("mtoc"); bar.scrollTo({left: a.offsetLeft - bar.offsetLeft - bar.clientWidth / 2 + a.offsetWidth / 2, behavior: "smooth"}); } });
+    document.querySelectorAll("#rsecs ul a").forEach(a => a.classList.toggle("on", a.dataset.h === cur));
+  }
+  const r = sec.getBoundingClientRect(), span = Math.max(1, r.height - (innerHeight - off));
+  $("rprog").style.width = Math.min(100, Math.max(0, 100 * (off - r.top) / span)) + "%";
+}
+window.addEventListener("scroll", () => { if (!spyRaf) spyRaf = requestAnimationFrame(spy); }, {passive: true});
+window.addEventListener("resize", () => { if (!spyRaf) spyRaf = requestAnimationFrame(spy); });
 
 /* ================= CASES: browse ================= */
 function setCaseMode(m){ document.querySelectorAll("[data-cm]").forEach(b => b.setAttribute("aria-pressed", b.dataset.cm === m)); $("c-browse").hidden = m !== "browse"; $("c-drill").hidden = m !== "drill"; if (m === "drill") renderDSetup(); }
@@ -261,9 +331,15 @@ function startDrill(dueOnly){
     const due = shuffle(p.filter(c => isDue(dDir + ":" + c.id))), fresh = shuffle(p.filter(c => !SRS[dDir + ":" + c.id])), rest = shuffle(p.filter(c => SRS[dDir + ":" + c.id] && !isDue(dDir + ":" + c.id))).sort((a, b) => SRS[dDir + ":" + a.id].d - SRS[dDir + ":" + b.id].d);
     cards = [...due, ...fresh, ...rest].slice(0, 20).map(c => ({p: dDir, id: c.id}));
   }
-  R = cards; ri = 0; rDone = 0; rRight = 0; $("dSetup").hidden = true; $("dCard").hidden = false; showCard();
+  $("dSetup").hidden = true;
+  runCards($("dCard"), cards, {label: "Card", onEnd: drillEnd});
 }
 $("dStart").onclick = () => startDrill(false);
+function drillEnd(box, r){
+  box.innerHTML = `<div class="panel"><div class="score"><span class="big">${r.right}/${r.done}</span><span class="tiny">remembered or answered correctly this round</span></div><p class="tiny" style="margin:0">Missed cards come back in about a minute and go on your fix list; known cards move out to hours and days. ${dueKeys().length} cards are due now.</p><div class="row"><button class="btn primary" data-a="again">Another round</button><button class="btn" data-a="due">Review due cards</button><button class="btn ghost" data-a="back">Change settings</button></div></div>`;
+  box.querySelector('[data-a="again"]').onclick = () => startDrill(false); box.querySelector('[data-a="due"]').onclick = () => startDrill(true); box.querySelector('[data-a="back"]').onclick = renderDSetup;
+  dueBadge();
+}
 const STOPW = new Set("people republic philippines philippine commission elections comelec secretary executive house representatives senate court appeals city government association national department office party list board inc corporation union finance justice president tribunal electoral sandiganbayan ombudsman congress municipality province".split(" "));
 function maskName(text, c){
   const toks = c.n.replace(/\(.*?\)/g, " ").split(/[^A-Za-zÀ-ÿñÑ’'-]+/).filter(w => w.length >= 4 && !STOPW.has(w.toLowerCase()));
@@ -275,43 +351,212 @@ function distractors(c, n){
   const same = shuffle(CASES().filter(x => x.id !== c.id && x.t === c.t)), other = shuffle(CASES().filter(x => x.id !== c.id && x.t !== c.t));
   return [...same, ...other].slice(0, n);
 }
-function showCard(){
-  if (ri >= R.length){ return endRound(); }
-  const {p, id} = R[ri]; const c = CASE[id];
-  const head = `<div class="spread"><span class="lbl">Card ${ri + 1} of ${R.length} · ${p === "cr" ? "Case → rule" : p === "fc" ? "Facts → case" : p === "rc" ? "Rule → case" : "MCQ"}</span><button class="btn small ghost" id="dQuit">End round</button></div><div class="dprog"><i style="width:${100 * ri / R.length}%"></i></div>`;
-  if (p === "m"){ // MCQ item due from the exam bank
-    const q = D.mcq.find(x => x.id === id);
-    $("dCard").innerHTML = head + `<div class="card-face">${mcqBody(q, null)}</div>`;
-    bindMcq($("dCard"), q, (ok) => { rate("m:" + q.id, ok ? 2 : 0); rDone++; if (ok) rRight++; }, () => { ri++; showCard(); });
-  } else if (p === "cr"){
-    $("dCard").innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt" style="font-style:italic">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" id="dFlip">Show the rule</button><div class="reveal" id="dRev" hidden></div></div>`;
-    $("dFlip").onclick = () => {
-      $("dFlip").hidden = true; const k = "cr:" + c.id;
-      $("dRev").hidden = false;
-      $("dRev").innerHTML = `<div class="prompt facts" style="font-size:1.05rem">${esc(c.r)}</div>${c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(c.test)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}<div class="grade">${[["again","Again",0],["hard","Hard",1],["good","Good",2],["easy","Easy",3]].map(([cl, l, g]) => `<button class="btn ${cl}" data-g="${g}">${l}<small>${nextLbl(k, g)}</small></button>`).join("")}</div><button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
-      $("dRev").querySelector(".grade").onclick = e => { const b = e.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); rDone++; if (g >= 2) rRight++; ri++; showCard(); };
-    };
-  } else {
-    const opts = shuffle([c, ...distractors(c, 3)]);
-    const prompt = p === "fc" ? maskName(c.f, c) : maskName(c.r, c);
-    $("dCard").innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span></div><div class="prompt facts">${esc(prompt)}</div><div class="choices">${opts.map((o, i) => `<button class="choice" data-i="${i}"><span class="L">${LET[i]}.</span><span><i>${esc(o.n)}</i> <span class="tiny">(${esc(o.y)})</span></span></button>`).join("")}</div><div id="dFb"></div></div>`;
-    const box = $("dCard").querySelector(".choices");
-    box.onclick = e => {
-      const b = e.target.closest("[data-i]"); if (!b || b.disabled) return;
-      const pick = opts[+b.dataset.i], ok = pick.id === c.id;
-      box.querySelectorAll("[data-i]").forEach((x, i) => { x.disabled = true; if (opts[i].id === c.id) x.classList.add("right"); else if (x === b) x.classList.add("wrong"); });
-      rate(p + ":" + c.id, ok ? 2 : 0); rDone++; if (ok) rRight++;
-      $("dFb").innerHTML = `<div class="expl"><div class="verdict ${ok ? "ok" : "no"}">${ok ? "Correct." : "Not this one."} ${esc(c.n)} (${esc(c.y)})</div><p>${esc(p === "fc" ? c.r : (c.f || c.h || ""))}</p>${!ok ? `<p class="tiny">You picked <a class="cref" data-c="${pick.id}" href="#">${esc(pick.n)}</a>: ${esc(pick.r)}</p>` : ""}<div class="row"><button class="btn primary" id="dNext">Next card</button></div></div>`;
-      $("dNext").onclick = () => { ri++; showCard(); }; $("dNext").focus();
-    };
+/* ================= card runner: case drills, lists, sessions, fix list ================= */
+const KIND_LBL = {cr: "Case → rule", fc: "Facts → case", rc: "Rule → case", m: "Multiple choice", l: "List", i: "Missed issue"};
+function cardOK({p, id}){
+  if (p === "i"){ const [e, i] = id.split(":"); return !!ESS[e] && !!ISS[i] && !(HIDE && OUT_ISSUES.includes(i)); }
+  return validKey(p + ":" + id) && (p !== "fc" || !!(CASE[id] || {}).f);
+}
+function runCards(box, cards, opts){
+  box._r = {cards: cards.filter(cardOK), i: 0, done: 0, right: 0, opts: opts || {}};
+  box.hidden = false; drawCard(box);
+}
+function endRun(box){ const r = box._r; dueBadge(); (r.opts.onEnd || drillEnd)(box, r); }
+function cardDone(box, ok){ box._r.done++; if (ok) box._r.right++; }
+function nextCard(box){ box._r.i++; drawCard(box); const top = box.getBoundingClientRect().top; if (top < 0) window.scrollTo({top: window.scrollY + top - 12}); }
+function gradeRow(k){ return `<div class="grade">${[["again","Again",0],["hard","Hard",1],["good","Good",2],["easy","Easy",3]].map(([cl, l, g]) => `<button class="btn ${cl}" data-g="${g}">${l}<small>${nextLbl(k, g)}</small></button>`).join("")}</div>`; }
+function drawCard(box){
+  const r = box._r;
+  if (r.i >= r.cards.length) return endRun(box);
+  const {p, id} = r.cards[r.i];
+  const head = `<div class="spread"><span class="lbl">${esc(r.opts.label || "Card")} ${r.i + 1} of ${r.cards.length} · ${KIND_LBL[p]}</span><button class="btn small ghost" data-quit>${esc(r.opts.quit || "End round")}</button></div><div class="dprog"><i style="width:${100 * r.i / r.cards.length}%"></i></div>`;
+  if (p === "m") mcqCard(box, head, D.mcq.find(x => x.id === id));
+  else if (p === "l") listCard(box, head, LIST[id]);
+  else if (p === "i") issueCard(box, head, id);
+  else if (p === "cr") crCard(box, head, CASE[id]);
+  else pickCard(box, head, p, CASE[id]);
+  box.querySelector("[data-quit]").onclick = () => endRun(box);
+}
+function mcqCard(box, head, q){
+  box.innerHTML = head + `<div class="card-face">${mcqBody(q, null)}</div>`;
+  bindMcq(box, q, (ok) => { qhist[q.id] = {r: ok ? 1 : 0, n: ((qhist[q.id] || {}).n || 0) + 1}; store.set("qhist", qhist); rate("m:" + q.id, ok ? 2 : 0); cardDone(box, ok); }, () => nextCard(box));
+}
+function crCard(box, head, c){
+  const k = "cr:" + c.id;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt" style="font-style:italic">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" data-flip>Show the rule</button><div class="reveal" hidden></div></div>`;
+  const rev = box.querySelector(".reveal");
+  box.querySelector("[data-flip]").onclick = e => {
+    e.target.hidden = true; rev.hidden = false;
+    rev.innerHTML = `<div class="prompt facts" style="font-size:1.05rem">${esc(c.r)}</div>${c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(c.test)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+    rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
+  };
+}
+function pickCard(box, head, p, c){
+  const opts = shuffle([c, ...distractors(c, 3)]);
+  const prompt = p === "fc" ? maskName(c.f, c) : maskName(c.r, c);
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span></div><div class="prompt facts">${esc(prompt)}</div><div class="choices">${opts.map((o, i) => `<button class="choice" data-i="${i}"><span class="L">${LET[i]}.</span><span><i>${esc(o.n)}</i> <span class="tiny">(${esc(o.y)})</span></span></button>`).join("")}</div><div class="dfb"></div></div>`;
+  const ch = box.querySelector(".choices");
+  ch.onclick = e => {
+    const b = e.target.closest("[data-i]"); if (!b || b.disabled) return;
+    const pick = opts[+b.dataset.i], ok = pick.id === c.id;
+    ch.querySelectorAll("[data-i]").forEach((x, i) => { x.disabled = true; if (opts[i].id === c.id) x.classList.add("right"); else if (x === b) x.classList.add("wrong"); });
+    rate(p + ":" + c.id, ok ? 2 : 0); cardDone(box, ok);
+    box.querySelector(".dfb").innerHTML = `<div class="expl"><div class="verdict ${ok ? "ok" : "no"}">${ok ? "Correct." : "Not this one."} ${esc(c.n)} (${esc(c.y)})</div><p>${esc(p === "fc" ? c.r : (c.f || c.h || ""))}</p>${!ok ? `<p class="tiny">You picked <a class="cref" data-c="${pick.id}" href="#">${esc(pick.n)}</a>: ${esc(pick.r)}</p>` : ""}<div class="row"><button class="btn primary" data-next>Next card</button></div></div>`;
+    const nx = box.querySelector("[data-next]"); nx.onclick = () => nextCard(box); nx.focus({preventScroll: true});
+  };
+}
+function issueCard(box, head, id){
+  const [eid, iid] = id.split(":"), e = ESS[eid], is = ISS[iid], k = "i:" + id;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">Issue spotter</span><span class="tag${e.news ? " news" : ""}">${esc(e.exam)}${e.n ? " · Q" + e.n : ""}</span></div><div class="story">${esc(e.prompt)}</div><div class="prompt" style="font-size:1.05rem">You missed an issue in this problem last time. Which issue is it, and what is the rule?</div><button class="btn primary" data-flip>Show the issue</button><div class="reveal" hidden></div></div>`;
+  const rev = box.querySelector(".reveal");
+  box.querySelector("[data-flip]").onclick = ev => {
+    ev.target.hidden = true; rev.hidden = false;
+    rev.innerHTML = `<div class="prompt facts" style="font-size:1.05rem"><b>${esc(is.l)}.</b> ${esc(is.h)}</div><div class="row"><a href="#" data-rv="${esc(is.rv)}" class="btn small ghost">Open the rule map</a></div><div class="row"><button class="btn again" data-ok="0">I missed it again</button><button class="btn good" data-ok="1">I got it</button></div>`;
+    rev.querySelectorAll("[data-ok]").forEach(b => b.onclick = () => { const ok = b.dataset.ok === "1"; fixTrack(k, ok ? 2 : 0); cardDone(box, ok); nextCard(box); });
+  };
+}
+function listCard(box, head, L){
+  const k = "l:" + L.id;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(L.t))}</span><span class="tag">${L.items.length} items${L.ordered ? " · in order" : ""}</span></div><div class="prompt">${esc(L.ask)}</div><p class="tiny lhelp" style="margin:0">List every item in your head or on paper first. Then tap each item to check it, and tap it again if you missed it.</p><${L.ordered ? "ol" : "ul"} class="litems">${L.items.map((t, i) => `<li><button class="litem" data-li="${i}" data-s=""><span class="lt">${esc(t)}</span><span class="lm"></span></button></li>`).join("")}</${L.ordered ? "ol" : "ul"}><div class="row"><button class="btn" data-all>Reveal all</button><button class="btn primary" data-done>Done</button></div><div class="lres"></div></div>`;
+  const items = [...box.querySelectorAll(".litem")]; let locked = false;
+  const paint = b => { const st = b.dataset.s; b.querySelector(".lm").textContent = st === "ok" ? "✓" : st === "miss" ? "✗ missed" : "tap"; b.setAttribute("aria-label", st ? b.querySelector(".lt").textContent + (st === "miss" ? " (missed)" : " (recalled)") : "Hidden item " + (+b.dataset.li + 1)); };
+  items.forEach(paint);
+  box.querySelector(".litems").onclick = e => { const b = e.target.closest(".litem"); if (!b || locked) return; b.dataset.s = b.dataset.s === "ok" ? "miss" : "ok"; paint(b); };
+  box.querySelector("[data-all]").onclick = () => items.forEach(b => { if (!b.dataset.s){ b.dataset.s = "ok"; paint(b); } });
+  box.querySelector("[data-done]").onclick = e => {
+    if (locked) return;
+    if (items.some(b => !b.dataset.s)){ items.forEach(b => { if (!b.dataset.s){ b.dataset.s = "ok"; paint(b); } }); box.querySelector(".lhelp").textContent = "All items are showing. Tap any you missed, then press Done."; box.querySelector(".lhelp").classList.add("nudge"); return; }
+    locked = true; e.target.hidden = true; box.querySelector("[data-all]").hidden = true;
+    const miss = items.filter(b => b.dataset.s === "miss").map(b => +b.dataset.li), n = items.length;
+    const g = miss.length === 0 ? 2 : miss.length * 2 > n ? 0 : 1;
+    rate(k, g); if (miss.length && g !== 0) fixAdd(k);
+    LRES[L.id] = {m: miss, t: Date.now()}; store.set("lres", LRES);
+    cardDone(box, miss.length === 0);
+    box.querySelector(".lres").innerHTML = `<div class="expl"><div class="verdict ${miss.length ? "no" : "ok"}">${miss.length ? `You missed ${miss.length} of ${n}. It is on your fix list and comes back soon.` : `All ${n} recalled.`}</div>${L.hook ? `<div class="lhook">${esc(L.hook)}</div>` : ""}<p class="tiny">Source: ${esc(L.src)}${L.cases && L.cases.length ? " · " + caseLinks(L.cases) : ""}${L.rv ? ` · <a href="#" data-rv="${esc(L.rv)}">rule map</a>` : ""}</p><div class="row"><button class="btn primary" data-next>Next</button></div></div>`;
+    const nx = box.querySelector("[data-next]"); nx.onclick = () => nextCard(box); nx.focus({preventScroll: true});
+  };
+}
+
+/* ================= fix list ================= */
+let FIX = store.get("fix", {});
+const fixValid = k => { const [p, ...r] = k.split(":"); return cardOK({p, id: r.join(":")}); };
+const fixKeys = () => Object.keys(FIX).filter(fixValid).sort((a, b) => FIX[a].t - FIX[b].t);
+function fixAdd(k){ const f = FIX[k] || {t: Date.now(), n: 0}; f.s = 0; f.n++; FIX[k] = f; store.set("fix", FIX); }
+function fixTrack(k, g){ // g: 0 missed, 1 hard (no change), 2+ correct; two correct answers clear an item
+  if (g === 0) return fixAdd(k);
+  if (g >= 2 && FIX[k]){ FIX[k].s = (FIX[k].s || 0) + 1; if (FIX[k].s >= 2) delete FIX[k]; store.set("fix", FIX); }
+}
+function fixLabel(k){
+  const [p, a, b] = k.split(":");
+  if (p === "m"){ const q = D.mcq.find(x => x.id === a); return `${q.exam} #${q.n}: ${q.q.length > 80 ? q.q.slice(0, 80) + "…" : q.q}`; }
+  if (p === "l") return `List: ${LIST[a].title}`;
+  if (p === "i") return `Spotter: ${ISS[b].l} (${ESS[a].short})`;
+  return `${KIND_LBL[p]}: ${CASE[a].n}`;
+}
+function renderFix(){
+  const ks = fixKeys(), n = ks.length;
+  $("fixN").textContent = n; $("fixN").classList.toggle("zero", !n);
+  $("fixMsg").textContent = n ? "Everything you missed: MCQs, cards you marked Again, list items, and issues you missed in the spotter. Answer an item correctly twice to clear it." : "Empty for now. Misses from drills, MCQs, lists and the spotter land here automatically.";
+  $("fixGo").disabled = !n; $("fixGo").textContent = n ? `Review fix list (${Math.min(n, 20)})` : "Review fix list";
+  $("fixD").hidden = !n;
+  $("fixUl").innerHTML = ks.slice(0, 60).map(k => `<li>${esc(fixLabel(k))}${FIX[k].s ? ' <span class="fixs">1 of 2</span>' : ""}</li>`).join("");
+}
+$("fixGo").onclick = () => { const ks = fixKeys().slice(0, 20); if (!ks.length) return; startRun(ks.map(k => { const [p, ...r] = k.split(":"); return {p, id: r.join(":")}; }), "Fix"); };
+
+/* ================= session: one button, 15 to 20 minutes ================= */
+function planTopics(){
+  const today = manilaToday(); if (today > D.examDate) return TOPS().map(t => t.key);
+  const secs = new Set();
+  D.plan.filter(d => d.date <= today).forEach(d => d.items.forEach(it => (it.rv || []).forEach(id => { const el = document.getElementById(id); const sec = el && (el.tagName === "SECTION" ? el : el.closest("section.rv")); if (sec) secs.add(sec.id); })));
+  const ts = new Set(); secs.forEach(sid => { D.topics.filter(t => t.sec === sid).forEach(t => ts.add(t.key)); if (sid === "priv") ts.add("org"); });
+  const out = [...ts].filter(shownT);
+  return out.length ? out : TOPS().map(t => t.key);
+}
+function buildSession(){
+  const seen = new Set(), fix = [], rest = [];
+  const add = (arr, p, id) => { const k = p + ":" + id; if (seen.has(k)) return; seen.add(k); arr.push({p, id}); };
+  fixKeys().slice(0, 6).forEach(k => { const [p, ...r] = k.split(":"); add(fix, p, r.join(":")); });
+  shuffle(dueKeys()).slice(0, 10).forEach(k => { const [p, id] = k.split(":"); add(rest, p, id); });
+  const nDue = rest.length, tp = new Set(planTopics()), room = Math.max(0, 20 - fix.length - rest.length);
+  const newL = shuffle(LISTS().filter(l => tp.has(l.t) && !SRS["l:" + l.id])).slice(0, Math.min(4, Math.ceil(room / 3)));
+  const newM = shuffle(MCQS().filter(q => tp.has(q.t) && q.cov === "in" && !qhist[q.id] && !SRS["m:" + q.id])).slice(0, Math.min(3, Math.floor(room / 5)));
+  const cs = CASES().filter(c => tp.has(c.t) && !SRS["cr:" + c.id]);
+  const newC = [...shuffle(cs.filter(c => c.a)), ...shuffle(cs.filter(c => !c.a))].slice(0, Math.max(0, room - newL.length - newM.length));
+  newL.forEach(l => add(rest, "l", l.id)); newM.forEach(q => add(rest, "m", q.id)); newC.forEach(c => add(rest, "cr", c.id));
+  if (fix.length + rest.length < 12){ // everything is fresh in memory: review ahead, soonest due first
+    CASES().filter(c => tp.has(c.t) && SRS["cr:" + c.id]).sort((a, b) => SRS["cr:" + a.id].d - SRS["cr:" + b.id].d).slice(0, 15 - fix.length - rest.length).forEach(c => add(rest, "cr", c.id));
   }
-  $("dQuit").onclick = endRound;
+  const cards = [...fix, ...shuffle(rest)];
+  return {cards, nFix: fix.length, nDue, nNew: rest.length - nDue, topics: [...tp], mins: Math.round(cards.reduce((s, c) => s + (c.p === "l" ? 1.5 : c.p === "m" ? 1.2 : 0.8), 0))};
 }
-function endRound(){
-  $("dCard").innerHTML = `<div class="panel"><div class="score"><span class="big">${rRight}/${rDone}</span><span class="tiny">remembered or answered correctly this round</span></div><p class="tiny" style="margin:0">Missed cards come back in about a minute; known cards move out to hours and days. ${dueKeys().length} cards are due now.</p><div class="row"><button class="btn primary" id="dAgain">Another round</button><button class="btn" id="dDue">Review due cards</button><button class="btn ghost" id="dBack">Change settings</button></div></div>`;
-  $("dAgain").onclick = () => startDrill(false); $("dDue").onclick = () => startDrill(true); $("dBack").onclick = renderDSetup;
-  dueBadge();
+const joinNames = a => a.length <= 2 ? a.join(" and ") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
+function renderSessPlan(){
+  const s = buildSession(), parts = [];
+  if (s.nFix) parts.push(`${s.nFix} from your fix list`);
+  if (s.nDue) parts.push(`${s.nDue} due for review`);
+  if (s.nNew) parts.push(`${s.nNew} new or review-ahead from ${joinNames(s.topics.map(tname))}`);
+  $("sessPlan").textContent = s.cards.length ? `About ${Math.max(5, s.mins)} minutes: ${joinNames(parts)}. Cases, lists and multiple choice, mixed. You can stop at any card.` : "Nothing to review right now.";
+  $("sessGo").disabled = !s.cards.length;
 }
+function startRun(cards, label){
+  $("sessStart").hidden = true; $("todayGrid").hidden = true;
+  if ($("v-today").hidden) setTab("today");
+  runCards($("sessRun"), cards, {label, quit: "End session", onEnd: sessEnd});
+  window.scrollTo({top: 0});
+}
+$("sessGo").onclick = () => startRun(buildSession().cards, "Session");
+function sessEnd(box, r){
+  const tp = new Set(planTopics()), spotted = store.get("sphist", {});
+  const pool = D.essays.filter(e => !spotted[e.id] && e.cov === "in" && e.t.some(t => tp.has(t)));
+  const pick = (pool.length ? pool : D.essays.filter(e => !spotted[e.id]))[0];
+  box.innerHTML = `<div class="score"><span class="big">${r.right}/${r.done}</span><span class="tiny">right this ${esc((r.opts.label || "session").toLowerCase())} · ${fixKeys().length} on your fix list · ${dueKeys().length} due</span></div>
+  <div class="row">${pick ? `<button class="btn primary" data-spot="${pick.id}">Finish with one spot problem (5 min): ${esc(pick.short)}</button>` : ""}<button class="btn" data-a="more">Another session</button><button class="btn ghost" data-a="back">Back to Today</button></div>`;
+  box.querySelector('[data-a="more"]').onclick = () => startRun(buildSession().cards, "Session");
+  box.querySelector('[data-a="back"]').onclick = closeRun;
+  const sp = box.querySelector("[data-spot]"); if (sp) sp.addEventListener("click", closeRun);
+}
+function closeRun(){ $("sessRun").hidden = true; $("sessRun").innerHTML = ""; $("sessStart").hidden = false; $("todayGrid").hidden = false; renderToday(); }
+
+/* ================= LISTS ================= */
+const LIST = Object.fromEntries(D.lists.map(l => [l.id, l]));
+const LISTS = () => D.lists.filter(l => shownT(l.t));
+let LRES = store.get("lres", {});
+function fillLTopic(){ const v = $("lTopic").value; $("lTopic").innerHTML = `<option value="">All topics</option>` + TOPS().filter(t => LISTS().some(l => l.t === t.key)).map(t => `<option value="${t.key}">${esc(t.name)} (${LISTS().filter(l => l.t === t.key).length})</option>`).join(""); $("lTopic").value = [...$("lTopic").options].some(o => o.value === v) ? v : ""; }
+function lPool(){ const tp = $("lTopic").value, q = $("lq").value.trim().toLowerCase(); return LISTS().filter(l => (!tp || l.t === tp) && (!q || [l.title, l.ask, l.src, l.hook || "", ...l.items].join(" ").toLowerCase().includes(q))); }
+function renderLists(){
+  const p = lPool(), due = p.filter(l => isDue("l:" + l.id)).length, fresh = p.filter(l => !SRS["l:" + l.id]).length;
+  $("lCount").textContent = `${p.length} lists · ${due} due · ${fresh} not yet drilled`;
+  $("lDue").disabled = !due; $("lDue").textContent = due ? `Due lists only (${due})` : "Due lists only";
+  let html = "";
+  TOPS().forEach(t => {
+    const g = p.filter(l => l.t === t.key); if (!g.length) return;
+    html += `<div class="grouph">${esc(t.name)} <small>${esc(t.part)} · ${g.length}</small></div>`;
+    html += g.map(l => { const r = LRES[l.id], mk = !r ? `<span class="mk">–</span>` : r.m.length ? `<span class="mk no">✗</span>` : `<span class="mk ok">✓</span>`, tag = l.ordered ? "ol" : "ul";
+      return `<details class="item"><summary>${mk}<span class="t"><b>${esc(l.title)}</b> <span class="tiny">· ${l.items.length}</span></span></summary><div class="body"><p class="tiny" style="margin:0">${esc(l.ask)}</p><${tag} class="lbody">${l.items.map((x, i) => `<li${r && r.m.includes(i) ? ' class="missed" title="Missed last time"' : ""}>${esc(x)}</li>`).join("")}</${tag}>${l.hook ? `<div class="lhook">${esc(l.hook)}</div>` : ""}<p class="tiny" style="margin:0">Source: ${esc(l.src)}${l.cases && l.cases.length ? " · " + caseLinks(l.cases) : ""}${l.rv ? ` · <a href="#" data-rv="${esc(l.rv)}">rule map</a>` : ""}</p><div class="row"><button class="btn small" data-drill1="${l.id}">Drill this list</button></div></div></details>`; }).join("");
+  });
+  $("lList").innerHTML = html || `<p class="empty">No list matches.</p>`;
+}
+function startLists(cards){
+  if (!cards.length) return;
+  $("lSetup").hidden = true; $("lList").hidden = true;
+  runCards($("lRun"), cards, {label: "List", onEnd: listsEnd}); window.scrollTo({top: 0});
+}
+function lDrillCards(dueOnly){
+  const p = lPool(), k = l => "l:" + l.id;
+  const due = shuffle(p.filter(l => isDue(k(l)))); if (dueOnly) return due.map(l => ({p: "l", id: l.id}));
+  const fresh = shuffle(p.filter(l => !SRS[k(l)])), rest = p.filter(l => SRS[k(l)] && !isDue(k(l))).sort((a, b) => SRS[k(a)].d - SRS[k(b)].d);
+  return [...due, ...fresh, ...rest].slice(0, 10).map(l => ({p: "l", id: l.id}));
+}
+function listsEnd(box, r){
+  box.innerHTML = `<div class="panel"><div class="score"><span class="big">${r.right}/${r.done}</span><span class="tiny">lists recalled in full</span></div><p class="tiny" style="margin:0">Lists with any missed item go on your fix list and come back sooner.</p><div class="row"><button class="btn primary" data-a="more">Another 10</button><button class="btn ghost" data-a="back">Back to all lists</button></div></div>`;
+  box.querySelector('[data-a="more"]').onclick = () => startLists(lDrillCards(false));
+  box.querySelector('[data-a="back"]').onclick = () => { box.hidden = true; box.innerHTML = ""; $("lSetup").hidden = false; $("lList").hidden = false; renderLists(); };
+}
+$("lStart").onclick = () => startLists(lDrillCards(false));
+$("lDue").onclick = () => startLists(lDrillCards(true));
+$("lTopic").onchange = renderLists;
+$("lq").addEventListener("input", () => { clearTimeout(sT); sT = setTimeout(renderLists, 200); });
+$("lList").addEventListener("click", e => { const b = e.target.closest("[data-drill1]"); if (b) startLists([{p: "l", id: b.dataset.drill1}]); });
 
 /* ================= PAST EXAMS: MCQ ================= */
 function setExamMode(m){ document.querySelectorAll("[data-em]").forEach(b => b.setAttribute("aria-pressed", b.dataset.em === m)); $("e-mcq").hidden = m !== "mcq"; $("e-essay").hidden = m !== "essay"; if (m === "essay") renderEssays(); else renderQSetup(); }
@@ -418,6 +663,7 @@ $("spCheck").onclick = () => {
     l.classList.toggle("hitok", w && g); l.classList.toggle("miss", w && !g); l.classList.toggle("extra", !w && g);
     why.textContent = w && g ? "Found" : w ? "Missed: the model answer turns on this" : g ? "Not in the model answer. Fine if you can tie it to a fact." : ""; if (w && g) hit++; });
   spHist[spId] = {hit, of: want.size}; store.set("sphist", spHist);
+  e.issues.forEach(id => { const k = "i:" + spId + ":" + id; if (!(HIDE && OUT_ISSUES.includes(id))) got.has(id) ? fixTrack(k, 2) : fixAdd(k); });
   $("spResult").hidden = false;
   $("spResult").innerHTML = `<div class="expl"><div class="verdict ${hit === want.size ? "ok" : "no"}">You found ${hit} of ${want.size} issues.</div>
   <ul class="core" style="margin:0">${e.issues.map(id => ISS[id] ? `<li><b>${esc(ISS[id].l)}</b>${got.has(id) ? "" : " (missed)"}: <a href="#" data-rv="${ISS[id].rv}">rule map</a></li>` : "").join("")}</ul>
@@ -503,6 +749,7 @@ function applyScope(){
   if ($("c-drill").hidden === false && $("dSetup").hidden === false) renderDSetup();
   if ($("qSetup").hidden === false) renderQSetup();
   printed = false; if (!$("v-print").hidden) renderPrint();
+  fillLTopic(); if (!$("lList").hidden) renderLists();
   if (!$("v-today").hidden) renderToday();
 }
 $("scopeBtn").onclick = () => { HIDE = !HIDE; applyScope(); };
@@ -512,5 +759,6 @@ renderClock(); setInterval(renderClock, 60000);
 buildSide(); openSec(Math.min(store.get("sec", 0), SECS.length - 1), false);
 $("scopeBtn").setAttribute("aria-pressed", HIDE); $("scopeState").textContent = HIDE ? "hidden" : "shown";
 if (!secShown(curSec)) openSec(visIdx()[0], false);
+fillLTopic(); renderLists(); applyBlur();
 applySpotScope(); renderCases(); renderDSetup(); setCaseMode("browse"); renderQSetup(); renderSpot(); renderWrite(); dueBadge();
 (() => { const h = (location.hash || "").slice(1); setTab(TABS.includes(h) ? h : store.get("tab", "today"), false); })();

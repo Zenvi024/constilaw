@@ -1,0 +1,889 @@
+[
+ {
+  "id": "d-et-composition",
+  "t": "et",
+  "title": "Composition of the Electoral Tribunals",
+  "ask": "How is each Electoral Tribunal (SET and HRET) composed and organized under Art. VI, Secs. 17 and 19?",
+  "items": [
+   "Each chamber has its own Electoral Tribunal: nine Members in all",
+   "Three Justices of the Supreme Court, designated by the Chief Justice",
+   "Six Members of the Senate or House, as the case may be",
+   "The six are chosen on proportional representation from political parties and registered party-list groups represented in the chamber",
+   "The senior Justice in the Tribunal is its Chairman (not someone the Chief Justice picks as chair)",
+   "Constituted within thirty days after the chamber organizes with the election of the Senate President and Speaker (Sec. 19)"
+  ],
+  "src": "Art. VI, Secs. 17 and 19",
+  "cases": [
+   "reyeshret",
+   "pimentelhret"
+  ],
+  "rv": "et-text",
+  "ordered": false
+ },
+ {
+  "id": "d-et-nature",
+  "t": "et",
+  "title": "Nature of the Electoral Tribunals",
+  "ask": "What is the nature of the Electoral Tribunals? Give the four features (including the three subjects of their jurisdiction).",
+  "items": [
+   "Exclusive jurisdiction: ‘sole judge’ of all contests relating to the election, returns, and qualifications of their Members",
+   "Independent: jurisdiction shared neither with the chamber nor with the courts (Bondoc)",
+   "Non-partisan: a non-political body though two-thirds of its members are politicians",
+   "Not beyond review: the Supreme Court may correct grave abuse of discretion by certiorari (Abayon)"
+  ],
+  "src": "Art. VI, Sec. 17; Bondoc v. Pineda; Abayon v. HRET (2016); class reviewer",
+  "cases": [
+   "bondoc",
+   "abayon"
+  ],
+  "rv": "et-nature",
+  "hook": "Election, Returns, Qualifications: ‘ERQ’",
+  "ordered": false
+ },
+ {
+  "id": "d-et-tenure-grounds",
+  "t": "et",
+  "title": "Valid grounds to end tribunal membership",
+  "ask": "What are the five valid grounds for terminating a legislator’s membership in an Electoral Tribunal (Bondoc v. Pineda)? Party disloyalty is not one.",
+  "items": [
+   "Expiration of the Member’s congressional term of office",
+   "Death or permanent disability",
+   "Resignation from the political party he represents in the tribunal",
+   "Formal affiliation with another political party",
+   "Removal for other valid cause"
+  ],
+  "src": "Bondoc v. Pineda (1991)",
+  "cases": [
+   "bondoc"
+  ],
+  "rv": "et-nature",
+  "ordered": false
+ },
+ {
+  "id": "d-et-jurisdiction-attaches",
+  "t": "et",
+  "title": "When HRET or SET jurisdiction attaches",
+  "ask": "What three things must concur before the HRET (or SET) acquires jurisdiction over a winner, ending COMELEC’s (Reyes v. COMELEC)?",
+  "items": [
+   "A valid proclamation",
+   "A proper oath of office: for the House, before the Speaker and in open session",
+   "Assumption of office (the term begins at noon of June 30)"
+  ],
+  "src": "Reyes v. COMELEC (2013); Lico v. COMELEC (party-list nominees)",
+  "cases": [
+   "reyescomelec",
+   "lico"
+  ],
+  "rv": "et-jurisdiction",
+  "ordered": true
+ },
+ {
+  "id": "d-et-comelec-keeps",
+  "t": "et",
+  "title": "When COMELEC keeps jurisdiction (no tribunal yet)",
+  "ask": "In what situations does COMELEC keep jurisdiction, so the Electoral Tribunal has nothing to take over?",
+  "items": [
+   "Proclamation, oath and assumption have not all concurred (Reyes v. COMELEC)",
+   "The validity of the proclamation itself is pending before COMELEC on a timely motion for reconsideration (Codilla)",
+   "The candidate’s COC was finally cancelled before the election, so there is no ‘Member’ to judge (Velasco)",
+   "The issue is review of a COMELEC ruling: the tribunal cannot review COMELEC resolutions (Codilla)",
+   "Registration or cancellation of a party-list group, even one with a sitting member (An Waray)",
+   "Party-list leadership and nomination disputes before the nominee assumes office (Lokin)"
+  ],
+  "src": "Reyes v. COMELEC; Codilla v. De Venecia; Velasco v. Speaker; An Waray; Lokin",
+  "cases": [
+   "reyescomelec",
+   "codilla",
+   "velasco",
+   "anwaray",
+   "lokin"
+  ],
+  "rv": "et-jurisdiction",
+  "ordered": false
+ },
+ {
+  "id": "d-et-codilla-rules",
+  "t": "et",
+  "title": "Codilla and Velasco rules",
+  "ask": "What rules do Codilla v. De Venecia and Velasco v. Speaker lay down on contested proclamations and House recognition?",
+  "items": [
+   "A timely motion for reconsideration suspends a COMELEC Division’s ruling",
+   "A proclamation made without notice and hearing is void",
+   "While COMELEC’s ruling on the proclamation is not final, the HRET does not acquire jurisdiction",
+   "Codilla: votes for a candidate not disqualified by final judgment are not stray; the second placer cannot be proclaimed",
+   "Velasco: votes for a candidate whose COC was cancelled as void are stray; the qualified top vote-getter wins",
+   "Once the ruling is final, the Speaker’s oath and the Secretary-General’s Roll entry are ministerial: mandamus lies"
+  ],
+  "src": "Codilla v. De Venecia (2002); Velasco v. Speaker (2016)",
+  "cases": [
+   "codilla",
+   "velasco"
+  ],
+  "rv": "et-jurisdiction",
+  "ordered": false
+ },
+ {
+  "id": "d-et-annul-vs-failure",
+  "t": "et",
+  "title": "Annulment of elections vs failure of elections",
+  "ask": "Give five differences between the Electoral Tribunal’s annulment of election results and COMELEC’s declaration of a failure of elections (Abayon).",
+  "items": [
+   "Body: annulment by the Electoral Tribunal; failure of elections declared by COMELEC",
+   "Nature: annulment is a judicial function; declaring a failure is administrative",
+   "Scope: annulment covers only precincts connected with the contest; failure covers the entire election in the precinct or unit",
+   "Purpose: annulment finds who got the majority of legal votes; failure aims to hold or continue the election",
+   "Grounds for failure: election not held, suspended, or resulted in a failure to elect",
+   "Aftermath: no special election after annulment; special elections follow a declaration of failure"
+  ],
+  "src": "Abayon v. HRET (2016); class reviewer table",
+  "cases": [
+   "abayon"
+  ],
+  "rv": "et-nature",
+  "ordered": false
+ },
+ {
+  "id": "d-et-annulment-requisites",
+  "t": "et",
+  "title": "Requisites for annulling election results",
+  "ask": "When may an Electoral Tribunal annul election results, a drastic remedy (Abayon v. HRET)? Give the two requisites and the evidentiary rule.",
+  "items": [
+   "Illegal ballots affect over 50% of votes cast in the precinct (for a unit, over 50% of its precincts and votes)",
+   "The lawful ballots cannot be distinguished from the unlawful ones with reasonable certainty",
+   "Findings of fraud, terrorism or other irregularities must rest on substantial evidence; otherwise grave abuse"
+  ],
+  "src": "Abayon v. HRET (2016)",
+  "cases": [
+   "abayon"
+  ],
+  "rv": "et-nature",
+  "ordered": false
+ },
+ {
+  "id": "d-et-sitting-quorum",
+  "t": "et",
+  "title": "Who must sit: inhibition and quorum rules",
+  "ask": "What are the rules on disqualification, inhibition and quorum in the Electoral Tribunals (Abbas; Reyes v. HRET)?",
+  "items": [
+   "Legislator-members cannot all be disqualified, even if the contest names all of them (Abbas)",
+   "The three Justices alone cannot decide; no rule amendment can give them that power (Abbas)",
+   "Individual members may inhibit as conscience dictates (Abbas)",
+   "A rule requiring at least one Justice for a quorum is valid; no equal protection violation (Reyes v. HRET)",
+   "Why valid: collegial body from two departments; Justices tone down politics; only a Justice can chair",
+   "If inhibitions break the quorum, the Supreme Court and the House may designate special members (Reyes v. HRET)"
+  ],
+  "src": "Abbas v. SET (1988); Reyes v. HRET (2018)",
+  "cases": [
+   "abbas",
+   "reyeshret"
+  ],
+  "rv": "et-nature",
+  "ordered": false
+ },
+ {
+  "id": "d-et-ca-composition",
+  "t": "et",
+  "title": "Composition of the Commission on Appointments",
+  "ask": "What is the composition of the Commission on Appointments (Art. VI, Sec. 18)? Give the four elements.",
+  "items": [
+   "The President of the Senate, as ex officio Chairman",
+   "Twelve Senators",
+   "Twelve Members of the House of Representatives",
+   "Each House elects its twelve on proportional representation from political parties and registered party-list groups represented therein"
+  ],
+  "src": "Art. VI, Sec. 18",
+  "cases": [
+   "pimentelhret"
+  ],
+  "rv": "et-ca",
+  "ordered": false
+ },
+ {
+  "id": "d-et-ca-rules",
+  "t": "et",
+  "title": "Commission on Appointments: voting and operating rules",
+  "ask": "What are the constitutional rules on how the Commission on Appointments votes, acts and meets (Art. VI, Secs. 18–19)?",
+  "items": [
+   "The Chairman shall not vote, except in case of a tie",
+   "It shall act on all appointments within thirty session days of Congress from their submission",
+   "It shall rule by a majority vote of all the Members",
+   "Constituted within thirty days after both Houses organize with the election of the Senate President and Speaker",
+   "Meets only while Congress is in session",
+   "Meets at the call of its Chairman or a majority of all its Members",
+   "Its power is exercised by the CA as a body, not by individual members"
+  ],
+  "src": "Art. VI, Secs. 18 and 19; class reviewer",
+  "rv": "et-ca",
+  "ordered": false
+ },
+ {
+  "id": "d-et-ca-confirmations",
+  "t": "et",
+  "title": "Appointments needing CA confirmation",
+  "ask": "Which four categories of presidential appointments require the consent of the Commission on Appointments (Art. VII, Sec. 16)?",
+  "items": [
+   "Heads of the executive departments",
+   "Ambassadors, other public ministers and consuls",
+   "Officers of the armed forces from the rank of colonel or naval captain",
+   "Other officers whose appointments are vested in the President by the Constitution (e.g., constitutional commissioners)"
+  ],
+  "src": "Art. VII, Sec. 16 (first sentence); class reviewer",
+  "rv": "et-ca",
+  "ordered": false
+ },
+ {
+  "id": "d-et-ca-limits",
+  "t": "et",
+  "title": "Limits on the confirmation power",
+  "ask": "What are the limits on the Commission on Appointments’ confirmation power?",
+  "items": [
+   "Congress cannot by statute require CA confirmation for offices outside Art. VII, Sec. 16’s first sentence",
+   "Appointments made while Congress is not in session are effective until CA disapproval or the next adjournment of Congress",
+   "The Vice-President’s appointment to the Cabinet requires no confirmation (Art. VII, Sec. 3)",
+   "The CA’s rules of procedure are its own, outside the reach of Congress and the courts (class reviewer)"
+  ],
+  "src": "Art. VII, Secs. 3 and 16; class reviewer",
+  "rv": "et-ca",
+  "ordered": false
+ },
+ {
+  "id": "d-et-ca-computation",
+  "t": "et",
+  "title": "Computing CA seats (proportional representation)",
+  "ask": "How are seats in the Commission on Appointments computed, and what rules govern fractions and thresholds (Guingona; Coseteng)?",
+  "items": [
+   "Senate: party’s seats = (party’s senators ÷ 24) × 12; House computed the same way on its total membership",
+   "The rule is mandatory: no discretion for the majority party (Guingona)",
+   "Fractions cannot be rounded up at another party’s expense (Guingona)",
+   "A party needs at least two senators for one seat; a lone senator’s 0.5 gets none (Guingona)",
+   "House: a party needs about one-twelfth of the membership (some 17 then) for one seat (Coseteng)",
+   "Minority status alone gives no seat; endorsements by members of other parties do not count (Coseteng)",
+   "The CA may function with fewer than 12 from a chamber, so long as it has a majority (Guingona)",
+   "Guingona numbers: LDP 15 senators = 7.5 (not 8); NPC 2.5; Lakas 1.5; LP-PDP 0.5 (none)"
+  ],
+  "src": "Art. VI, Sec. 18; Guingona v. Gonzales (1992); Coseteng v. Mitra (1990)",
+  "cases": [
+   "guingonagonzales",
+   "coseteng"
+  ],
+  "rv": "et-ca",
+  "ordered": false
+ },
+ {
+  "id": "d-et-ca-reorganization",
+  "t": "et",
+  "title": "When a chamber may reshuffle its CA contingent",
+  "ask": "When may a chamber change its members in the Commission on Appointments (Daza v. Singson)?",
+  "items": [
+   "When political alignments in the chamber change, to keep proportional representation",
+   "The change must be permanent, not a temporary alliance or factional division",
+   "It must involve severance of political loyalties or formal disaffiliation (e.g., mass transfer to a new party)",
+   "The new party need not prove a track record or long existence to be counted",
+   "Contrast Bondoc: tribunal members cannot be removed for how they vote"
+  ],
+  "src": "Daza v. Singson (1989); Bondoc v. Pineda (1991)",
+  "cases": [
+   "daza",
+   "bondoc"
+  ],
+  "rv": "et-ca",
+  "ordered": false
+ },
+ {
+  "id": "d-et-composition-suits",
+  "t": "et",
+  "title": "Suing over tribunal or CA composition",
+  "ask": "What rules govern a court challenge to the composition of an Electoral Tribunal or the Commission on Appointments?",
+  "items": [
+   "Justiciable, not political: legality of the manner of filling seats is reviewable (Daza; Guingona)",
+   "Only each chamber elects its tribunal and CA members; the bodies cannot reconstitute themselves (Pimentel v. HRET)",
+   "Primary recourse is the chamber; the Court intervenes only if the chamber fails to comply (Pimentel; Drilon)",
+   "Standing: the petitioner must show that she or her party was deprived of a seat (Drilon)",
+   "Relief: prohibition voids the improper election to the CA (Guingona: Romulo and Tañada)"
+  ],
+  "src": "Daza; Guingona v. Gonzales; Pimentel v. HRET; Drilon v. De Venecia",
+  "cases": [
+   "daza",
+   "guingonagonzales",
+   "pimentelhret",
+   "drilondevenecia"
+  ],
+  "rv": "et-ca",
+  "ordered": false
+ },
+ {
+  "id": "d-et-tribunal-vs-ca",
+  "t": "et",
+  "title": "Electoral Tribunal vs Commission on Appointments",
+  "ask": "Contrast the Electoral Tribunals and the Commission on Appointments on composition, chair, function, number and meetings.",
+  "items": [
+   "Composition: ET has 3 Justices + 6 legislators; CA has the Senate President + 12 Senators + 12 Representatives",
+   "Chair: ET’s senior Justice; CA’s Senate President, ex officio, voting only to break a tie",
+   "Function: ET is the sole judge of election contests (judicial); CA confirms appointments",
+   "Number: one ET per chamber; one CA for both Houses",
+   "Meetings: CA meets only while Congress is in session; no such limit for the ETs",
+   "Common: proportional representation of parties and party-list groups; constituted within 30 days (Sec. 19)"
+  ],
+  "src": "Art. VI, Secs. 17–19",
+  "rv": "et-checklist",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-plenary",
+  "t": "powers",
+  "title": "Plenary legislative power",
+  "ask": "What is the scope of Congress’s plenary legislative power, and what examples from the cases show it?",
+  "items": [
+   "Vested in Congress (Senate and House), except as reserved to the people by initiative and referendum (Art. VI, Sec. 1)",
+   "Broad, general and comprehensive: for all purposes of civil government",
+   "Any power legislative by usage and tradition belongs to Congress unless the Constitution lodged it elsewhere",
+   "Limited only by the Constitution, expressly or impliedly",
+   "Example: creating municipalities and other local units (Torralba)",
+   "Example: creating legislative districts, hence provinces and cities, belongs only to Congress (Sema)",
+   "Example: fixing election schedules, subject to suffrage and due process (Macalintal, 2023)"
+  ],
+  "src": "Art. VI, Sec. 1; Torralba; Sema; Macalintal v. COMELEC (2023)",
+  "cases": [
+   "torralba",
+   "sema",
+   "macalintal2023"
+  ],
+  "rv": "powers-plenary",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-sema",
+  "t": "powers",
+  "title": "Sema v. COMELEC rules",
+  "ask": "Why could the ARMM not create the province of Shariff Kabunsuan, and what did Sema leave intact?",
+  "items": [
+   "Only Congress may create legislative districts (Art. VI, Sec. 5)",
+   "Creating a province or city creates a district, so only Congress may create them",
+   "The Constitution gives autonomous regions no such power (expressio unius est exclusio alterius)",
+   "An inferior body created by Congress cannot change Congress’s own membership",
+   "A regional assembly legislates only on regional matters within its territory",
+   "The ARMM may still create municipalities and barangays, which create no district",
+   "COMELEC Res. 7902 was valid: it merely kept the existing district"
+  ],
+  "src": "Sema v. COMELEC (2008)",
+  "cases": [
+   "sema"
+  ],
+  "rv": "powers-plenary",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-torralba",
+  "t": "powers",
+  "title": "Creating local government units (Torralba)",
+  "ask": "What rules on the creation of local government units come from Torralba v. Sibagat?",
+  "items": [
+   "Creating a municipal corporation is essentially a legislative power",
+   "Once a Local Government Code is enacted, creations must conform to its criteria",
+   "Before the Code exists, the power remains plenary, subject only to a plebiscite in the units affected",
+   "Sibagat was de jure: the plebiscite approved it and its officers took oaths and performed their duties"
+  ],
+  "src": "Torralba v. Municipality of Sibagat (1987)",
+  "cases": [
+   "torralba"
+  ],
+  "rv": "powers-plenary",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-substantive-five",
+  "t": "powers",
+  "title": "Gatmaytan’s five substantive limits",
+  "ask": "What are the five substantive limitations on legislative power in Gatmaytan’s book?",
+  "items": [
+   "Unconstitutional laws: no law beyond Congress’s power or contrary to the Constitution",
+   "Supermajority votes: Congress cannot require a higher vote to amend or repeal a law",
+   "Irrepealable laws: no law can be placed beyond repeal by later Congresses",
+   "Retroactive laws: laws are prospective; no ex post facto laws or bills of attainder",
+   "The Supreme Court’s fiscal autonomy and rule-making power (e.g., no exemption from court fees)"
+  ],
+  "src": "Gatmaytan, P&S; Art. III, Sec. 22; Art. VIII, Secs. 3 and 5(5)",
+  "rv": "powers-substantive",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-unconstitutional-laws",
+  "t": "powers",
+  "title": "When a law is unconstitutional; partial nullity",
+  "ask": "In what three ways can a law be unconstitutional, and what happens when only part of it is void?",
+  "items": [
+   "It is beyond the legislature’s power to enact",
+   "It creates or establishes methods or forms that infringe constitutional principles",
+   "Its purpose or effect violates the Constitution or its basic principles",
+   "Laws are presumed constitutional; courts strike them down only on a clear breach",
+   "Partial nullity: valid parts stand unless so dependent on the void parts that the legislature meant them as a whole"
+  ],
+  "src": "Gatmaytan, P&S; class reviewer; ABAKADA (separability); Lidasan (inseparable)",
+  "cases": [
+   "abakada",
+   "lidasan"
+  ],
+  "rv": "powers-substantive",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-reviewer-limits",
+  "t": "powers",
+  "title": "Class reviewer’s other limits on legislation",
+  "ask": "Besides Gatmaytan’s five, what other limitations on legislative power does the class reviewer list (eight)?",
+  "items": [
+   "Riders: Sec. 25(2) for the budget; Sec. 26(1) for bills generally",
+   "One subject, expressed in the title (Sec. 26(1))",
+   "No amendment on third reading (Sec. 26(2)), though the bicameral conference may reconcile versions",
+   "Uniform and equitable, progressive taxation (Sec. 28(1))",
+   "No increase in the Supreme Court’s appellate jurisdiction without its advice and concurrence (Sec. 30)",
+   "No legislative veto (ABAKADA)",
+   "No delegation of legislative power, except permitted delegations",
+   "Sunset clauses: a law may fix a date after which it ceases to be effective"
+  ],
+  "src": "Art. VI, Secs. 25(2), 26, 28(1), 30; class reviewer",
+  "cases": [
+   "abakada",
+   "giron"
+  ],
+  "rv": "powers-substantive",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-express-limits",
+  "t": "powers",
+  "title": "Other express limits on Congress",
+  "ask": "Name five other express constitutional limits on what Congress may legislate (rule map list).",
+  "items": [
+   "The Bill of Rights",
+   "No adding qualifications to offices whose qualifications the Constitution fixes (SJS v. DDB)",
+   "No titles of royalty or nobility (Art. VI, Sec. 31)",
+   "No interpreting the Constitution by statute (Endencia v. David)",
+   "The money provisions (Art. VI, Secs. 24 to 29)"
+  ],
+  "src": "Art. III; Art. VI, Secs. 24–29, 31; SJS v. DDB; Endencia v. David",
+  "cases": [
+   "endencia"
+  ],
+  "rv": "powers-substantive",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-oversight-forms",
+  "t": "powers",
+  "title": "Three forms of congressional oversight (ABAKADA)",
+  "ask": "What are the three categories of congressional oversight in ABAKADA, and which survive enactment?",
+  "items": [
+   "Scrutiny: lesser intensity; reports and information, budget hearings, question hour, confirmation of appointments",
+   "Investigation: a more intense digging of facts, through inquiries in aid of legislation",
+   "Supervision: a continuing and informed awareness of executive operations",
+   "Only scrutiny and investigation survive enactment; supervision with a right to approve rules is a legislative veto"
+  ],
+  "src": "ABAKADA Guro v. Purisima (2008)",
+  "cases": [
+   "abakada"
+  ],
+  "rv": "powers-veto",
+  "ordered": true
+ },
+ {
+  "id": "d-pw-legislative-veto-void",
+  "t": "powers",
+  "title": "Why a legislative veto is void",
+  "ask": "Why is a post-enactment congressional approval power (legislative veto) unconstitutional, and which cases applied this?",
+  "items": [
+   "Separation of powers: Congress takes part in executing the law",
+   "Bicameralism: a committee or one House acts for the whole Congress",
+   "Presentment: Congress acts with the force of law without submitting a bill to the President",
+   "ABAKADA: JCOC approving RA 9335’s IRR void; the rest saved by the separability clause",
+   "Macalintal (2003): JCOC approving COMELEC rules void; it also violates COMELEC’s independence",
+   "Belgica (2013): legislators’ post-enactment identification and realignment of PDAF projects void"
+  ],
+  "src": "ABAKADA (2008); Macalintal v. COMELEC (2003); Belgica (2013)",
+  "cases": [
+   "abakada",
+   "macalintal2003",
+   "belgica2013"
+  ],
+  "rv": "powers-veto",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-oversight-committee-test",
+  "t": "powers",
+  "title": "Is the oversight committee valid?",
+  "ask": "Which oversight committee powers are valid and which are invalid? (2023 midterm: Tax Code Sec. 290-A)",
+  "items": [
+   "Valid: review and monitor implementation",
+   "Valid: require reports and information from agencies",
+   "Valid: hold hearings and recommend remedial legislation",
+   "Invalid: approve or disapprove rules, IRRs, agency budgets or projects",
+   "Invalid: deputize or direct executive agencies (e.g., BIR, BOC, PNP, NBI), or otherwise enforce the law",
+   "Remedy: void only the offending clause and save the rest if separable",
+   "‘In aid of legislation’ cannot cure an executive role"
+  ],
+  "src": "ABAKADA; Art. VII, Sec. 17; 2023 midterm Q3",
+  "cases": [
+   "abakada"
+  ],
+  "rv": "powers-veto",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-nondelegation",
+  "t": "powers",
+  "title": "The non-delegation principle",
+  "ask": "State the non-delegation principle and its three propositions.",
+  "items": [
+   "Potestas delegata non delegari potest: what has been delegated cannot be delegated",
+   "The delegated power is a duty the delegate must perform by its own judgment, not through another’s mind",
+   "Congress cannot delegate the power to make the law (what it shall be), but may confer discretion in its execution",
+   "No subdelegation to private parties: the LTFRB could not let operators set their own fares (KMU)"
+  ],
+  "src": "Class reviewer (separation of powers); rule map; KMU v. Garcia",
+  "cases": [
+   "kmu"
+  ],
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-delegation-tests",
+  "t": "powers",
+  "title": "Tests of valid delegation",
+  "ask": "What two tests must a delegation of legislative power pass?",
+  "items": [
+   "Completeness: the law sets forth the policy to be executed, leaving the delegate only to carry it out",
+   "Sufficient standard: the law fixes limits, sufficiently determinate or determinable, to which the delegate must conform"
+  ],
+  "src": "Rule map; class reviewer; Zabal dissent",
+  "cases": [
+   "vera",
+   "agustin",
+   "zabal"
+  ],
+  "rv": "powers-delegation",
+  "hook": "Complete policy plus fence: the policy says where to go, the standard says how far",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-permitted-delegations",
+  "t": "powers",
+  "title": "Permissible delegations of legislative power",
+  "ask": "What are the five permissible delegations of legislative power?",
+  "items": [
+   "Tariff powers to the President (Art. VI, Sec. 28(2))",
+   "Emergency powers to the President (Art. VI, Sec. 23(2))",
+   "To the people at large: initiative and referendum (Art. VI, Sec. 32; RA 6735)",
+   "To local governments",
+   "To administrative bodies: subordinate (supplementary and contingent) rule-making"
+  ],
+  "src": "Art. VI, Secs. 23(2), 28(2), 32; class reviewer",
+  "cases": [
+   "garciaexecsec",
+   "zabal"
+  ],
+  "rv": "powers-delegation",
+  "hook": "PLATE: People, Local governments, Administrative bodies, Tariff, Emergency",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-delegation-cases",
+  "t": "powers",
+  "title": "Delegation cases: valid and undue",
+  "ask": "Classify the delegation cases in coverage as valid or undue, with the reason.",
+  "items": [
+   "Undue: People v. Vera, provincial boards decide whether the Probation Act applies (no standard)",
+   "Undue: KMU, LTFRB lets bus operators set their own fares (subdelegation to private parties)",
+   "Undue: John Hay, proclamation extends Subic tax incentives without statutory authority",
+   "Valid: Agustin v. Edu, LOI and rules on early warning devices (sufficient standard)",
+   "Valid: Garcia, tariff EOs under ‘national economy, general welfare and/or national security’",
+   "Valid: Zabal, Boracay closure proclamation (dissent: no statute delegated the power)"
+  ],
+  "src": "Vera; KMU; John Hay PAC v. Lim; Agustin; Garcia v. Exec. Sec.; Zabal",
+  "cases": [
+   "vera",
+   "kmu",
+   "johnhay",
+   "agustin",
+   "garciaexecsec",
+   "zabal"
+  ],
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-emergency-powers",
+  "t": "powers",
+  "title": "Requisites of emergency powers (Sec. 23(2))",
+  "ask": "What conditions does Art. VI, Sec. 23(2) impose on delegating emergency powers to the President?",
+  "items": [
+   "There must be war or other national emergency",
+   "Congress must act by law",
+   "The delegation is for a limited period only",
+   "It is subject to such restrictions as Congress may prescribe",
+   "The powers must be necessary and proper to carry out a declared national policy",
+   "Unless sooner withdrawn by resolution of Congress, they cease upon its next adjournment"
+  ],
+  "src": "Art. VI, Sec. 23(2)",
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-irr-requisites",
+  "t": "powers",
+  "title": "Requisites of a valid IRR",
+  "ask": "What are the four requisites of a valid implementing rule or regulation (Gatmaytan, citing Lokin)?",
+  "items": [
+   "Its promulgation is authorized by the legislature",
+   "It is within the scope of the authority given",
+   "It is promulgated in accordance with the prescribed procedure",
+   "It is reasonable: germane to the law and consistent with its standards",
+   "Corollary: an IRR cannot amend, expand or contradict the law it implements"
+  ],
+  "src": "Gatmaytan’s book, citing Lokin v. COMELEC (2010)",
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-publication-required",
+  "t": "powers",
+  "title": "What must be published (Tañada)",
+  "ask": "Under Tañada v. Tuvera, what must be published before it takes effect?",
+  "items": [
+   "All statutes, including those of local application and private laws",
+   "Presidential decrees and executive issuances made in the exercise of legislative power",
+   "Administrative rules that enforce or implement existing law under a valid delegation (IRRs)",
+   "Publication must be in full, in the Official Gazette or a newspaper of general circulation"
+  ],
+  "src": "Tañada v. Tuvera (1985 and 1986); EO 200",
+  "cases": [
+   "tanada85"
+  ],
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-publication-exempt",
+  "t": "powers",
+  "title": "What need not be published",
+  "ask": "What three kinds of issuances need not be published under Tañada v. Tuvera?",
+  "items": [
+   "Interpretative rules and regulations",
+   "Purely internal rules regulating only the agency’s personnel, not the public",
+   "Letters of instruction from administrative superiors to subordinates on performing their duties"
+  ],
+  "src": "Tañada v. Tuvera (1986 resolution)",
+  "cases": [
+   "tanada85"
+  ],
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-effectivity",
+  "t": "powers",
+  "title": "Effectivity of laws and agency rules",
+  "ask": "What are the rules on when laws and agency rules take effect?",
+  "items": [
+   "Laws take effect fifteen days after publication in the Official Gazette or a newspaper of general circulation (EO 200)",
+   "‘Unless otherwise provided’ lets the law change the date, never dispense with publication (Tañada)",
+   "Agencies must file three certified copies of each rule with the UP Law Center (ONAR) (Adm. Code, Book VII)",
+   "Agency rules take effect fifteen days after filing, unless a different date is fixed",
+   "Publication alone is not enough for agency rules: unfiled rules do not bind the public"
+  ],
+  "src": "Civil Code, Art. 2 as amended by EO 200; Tañada v. Tuvera; Administrative Code of 1987, Book VII, Secs. 3–4",
+  "cases": [
+   "tanada85"
+  ],
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-irr-provision-checklist",
+  "t": "powers",
+  "title": "Checklist for an IRR provision (2024 midterm)",
+  "ask": "Run the five-point checklist on a law directing an agency to issue an IRR (2024 Bulacan Freeport Act question).",
+  "items": [
+   "No legislative veto: Congress keeps no approval role after enactment (ABAKADA)",
+   "Consulting a private party is not delegating rule-making to it, but the agency must not let it dictate (KMU)",
+   "A deadline for issuing the IRR is directory; a late IRR is not void",
+   "Publication in a newspaper of general circulation suffices (Tañada; EO 200), but the IRR must also be filed with ONAR",
+   "The law itself must supply policy and standards (completeness and sufficient standard)"
+  ],
+  "src": "2024 midterm Q3; ABAKADA; KMU; Tañada; Administrative Code, Book VII",
+  "cases": [
+   "abakada",
+   "kmu",
+   "tanada85"
+  ],
+  "rv": "powers-delegation",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-title-purposes",
+  "t": "powers",
+  "title": "Purposes of the one subject–one title rule",
+  "ask": "What are the purposes of the rule that every bill embrace only one subject expressed in its title (Art. VI, Sec. 26(1))?",
+  "items": [
+   "To prevent hodgepodge or log-rolling legislation (no conglomeration of unrelated subjects)",
+   "To prevent surprise or fraud on the legislature through provisions the title does not disclose",
+   "To fairly apprise the people of the subjects of legislation, so they may be heard on them"
+  ],
+  "src": "Art. VI, Sec. 26(1); Lidasan v. COMELEC (dual limitations); class reviewer on riders",
+  "cases": [
+   "lidasan"
+  ],
+  "rv": "powers-titles",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-title-defects",
+  "t": "powers",
+  "title": "When a title is defective",
+  "ask": "When is a bill’s title defective, and with what consequence (Lidasan)?",
+  "items": [
+   "It is misleading",
+   "It is too restrictive (narrower than the body)",
+   "It fails to reflect essential matters embraced in the law",
+   "Consequence: the provision is void; the whole law falls if the parts are inseparable (Lidasan)"
+  ],
+  "src": "Lidasan v. COMELEC (1967)",
+  "cases": [
+   "lidasan"
+  ],
+  "rv": "powers-titles",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-title-compliance",
+  "t": "powers",
+  "title": "When the title rule is satisfied",
+  "ask": "When does a law comply with the one subject–one title rule, and what corollaries apply (Giron; Cruz v. Paras)?",
+  "items": [
+   "The title is comprehensive enough to include the general object of the law",
+   "All provisions are germane: not foreign to the subject, and means of carrying it out",
+   "The title need not be a complete index or catalogue of the contents",
+   "The rule is construed liberally, so as not to cripple legislation (Giron)",
+   "A title limits how far the law can be read: ‘regulate’ does not authorize ‘prohibit’ (Cruz v. Paras)",
+   "A longer title cannot cure a defect in the short title (class reviewer, Bayanihan Act)"
+  ],
+  "src": "Giron v. COMELEC (2013); Cruz v. Paras (1983); Lidasan; class reviewer Q&A",
+  "cases": [
+   "giron",
+   "cruzparas",
+   "lidasan"
+  ],
+  "rv": "powers-titles",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-three-readings",
+  "t": "powers",
+  "title": "Passage requirements: Art. VI, Sec. 26(2)",
+  "ask": "What does Art. VI, Sec. 26(2) require before a bill passed by either House can become a law, and what is the exception?",
+  "items": [
+   "Three readings on separate days",
+   "Printed copies in final form distributed to the Members three days before passage",
+   "Exception: the President certifies the necessity of immediate enactment to meet a public calamity or emergency",
+   "Certification dispenses with both separate-day readings and the three-day printing (Tolentino)",
+   "On the last reading, no amendment is allowed",
+   "The vote is taken immediately, and the yeas and nays are entered in the Journal"
+  ],
+  "src": "Art. VI, Sec. 26(2); Tolentino v. Secretary of Finance (1994)",
+  "cases": [
+   "tolentinofinance"
+  ],
+  "rv": "powers-substantive",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-bicameral-conference",
+  "t": "powers",
+  "title": "Bicameral conference committee rules",
+  "ask": "What may a bicameral conference committee do, and what limits apply (Tolentino)?",
+  "items": [
+   "It reconciles differing versions passed by the two Houses",
+   "The no-amendment-on-third-reading rule does not bar its changes",
+   "It may adopt either version, merge them, or add provisions found in neither",
+   "New provisions must be germane to the subject of the bill",
+   "Its report must be approved by both Houses before the bill goes to the President"
+  ],
+  "src": "Tolentino v. Secretary of Finance (1994); Art. VI, Sec. 26(2)",
+  "cases": [
+   "tolentinofinance"
+  ],
+  "rv": "powers-substantive",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-bill-steps",
+  "t": "powers",
+  "title": "How a bill becomes a law",
+  "ask": "List the steps by which a bill becomes a law, in order.",
+  "items": [
+   "Filing; first reading of number, title and author; referral to committee",
+   "Committee hearings and committee report",
+   "Second reading: debate and amendments",
+   "Third reading: printed copies three days before; no amendments; vote by yeas and nays",
+   "Transmittal to the other House, which passes it through its own three readings",
+   "If versions differ: bicameral conference committee; report approved by both Houses",
+   "Enrolled bill signed by the Speaker and Senate President, certified by the Secretaries",
+   "Presentment: the President signs, vetoes, or lets thirty days lapse",
+   "Publication; effectivity fifteen days after unless the law provides otherwise"
+  ],
+  "src": "Art. VI, Secs. 26–27; House and Senate Rules; EO 200",
+  "cases": [
+   "tolentinofinance",
+   "tanada85"
+  ],
+  "ordered": true
+ },
+ {
+  "id": "d-pw-bill-becomes-law",
+  "t": "powers",
+  "title": "Three ways a bill becomes law",
+  "ask": "In what three ways does a bill passed by Congress become a law (Art. VI, Sec. 27(1))?",
+  "items": [
+   "The President approves and signs it",
+   "Congress overrides his veto by two-thirds of all the Members of each House",
+   "The President does not communicate a veto within thirty days after receipt: it becomes law as if signed"
+  ],
+  "src": "Art. VI, Sec. 27(1)",
+  "ordered": false
+ },
+ {
+  "id": "d-pw-veto-override",
+  "t": "powers",
+  "title": "Veto and override procedure",
+  "ask": "What is the procedure after the President vetoes a bill (Art. VI, Sec. 27(1))?",
+  "items": [
+   "The President returns the bill with his objections to the House where it originated",
+   "That House enters the objections at large in its Journal and reconsiders the bill",
+   "Two-thirds of all the Members of that House must agree to pass it",
+   "It goes, with the objections, to the other House, which also needs two-thirds of all its Members",
+   "Votes are by yeas or nays; names of Members voting for or against are entered in the Journal",
+   "The veto must be communicated within thirty days after the date of receipt"
+  ],
+  "src": "Art. VI, Sec. 27(1)",
+  "ordered": true
+ },
+ {
+  "id": "d-pw-numbers",
+  "t": "powers",
+  "title": "Numbers: tribunals, CA, bills and effectivity",
+  "ask": "Give the numbers and thresholds for the Electoral Tribunals, the Commission on Appointments, bills, vetoes and effectivity.",
+  "items": [
+   "Electoral Tribunal: nine Members (3 Justices, 6 legislators)",
+   "CA: Senate President + 12 Senators + 12 Representatives; acts within thirty session days; majority of all the Members",
+   "ET and CA constituted within thirty days after each House organizes",
+   "Bills: three readings on separate days; printed copies three days before passage, unless certified urgent",
+   "Veto: communicated within thirty days after receipt; override by two-thirds of all the Members of each House",
+   "Laws: effective fifteen days after publication, unless the law provides otherwise",
+   "Agency rules: effective fifteen days after filing with ONAR, unless a different date is fixed"
+  ],
+  "src": "Art. VI, Secs. 17–19, 26(2), 27(1); EO 200; Administrative Code, Book VII",
+  "rv": "powers-checklist",
+  "ordered": false
+ }
+]

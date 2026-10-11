@@ -49,6 +49,18 @@ rev = '\n'.join(open(f).read() for f in sorted(glob.glob(os.path.join(DATA, 'rev
 for m in re.findall(r'data-c="([^"]+)"', rev):
     assert m in cid, 'reviewer cites unknown case ' + m
 
+# lists and requisites (one file per group; validated against topics, cases and rule-map ids)
+lists = []
+for f in sorted(glob.glob(os.path.join(DATA, 'lists', '*.json'))):
+    lists += json.load(open(f))
+lid = [l['id'] for l in lists]
+assert len(lid) == len(set(lid)), 'duplicate list id'
+for l in lists:
+    assert l['t'] in tkeys, (l['id'], l['t'])
+    assert 2 <= len(l['items']) <= 12 and l['title'] and l['ask'], l['id']
+    for c in l.get('cases', []): assert c in cid, (l['id'], c)
+    if l.get('rv'): assert ('id="%s"' % l['rv']) in rev, (l['id'], l['rv'])
+
 mcq = load('exams/mcq.json'); stories = load('exams/stories.json'); issues = load('exams/issues.json')['groups']
 iid = {i['id'] for g in issues for i in g['items']}
 for q in mcq:
@@ -147,7 +159,7 @@ for d in plan:
         for e in it.get('e', []) + it.get('sp', []): assert e in eid, e
         for r in it.get('rv', []): assert ('id="%s"' % r) in rev, r
 
-D = dict(examDate='2026-10-16', topics=topics, cases=cases, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers, plan=plan)
+D = dict(examDate='2026-10-16', topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers, plan=plan)
 t = open(os.path.join(HERE, 'template.html')).read()
 t = t.replace('__CSS__', open(os.path.join(HERE, 'style.css')).read())
 t = t.replace('__REVIEWER__', rev)
@@ -156,4 +168,4 @@ t = t.replace('__DATA__', J(D))
 assert '__DATA__' not in t and '__JS__' not in t and '__REVIEWER__' not in t
 os.makedirs(os.path.dirname(os.path.abspath(A.out)), exist_ok=True)
 open(A.out, 'w').write(t)
-print(f'wrote {A.out}: {len(t):,} bytes · {len(cases)} cases ({sum(c["a"] for c in cases)} anchors, {sum(1 for c in cases if c.get("dg"))} with class-reviewer text) · {len(mcq)} MCQs · {len(essays)} essays · {len(numbers)} numbers')
+print(f'wrote {A.out}: {len(t):,} bytes · {len(cases)} cases ({sum(c["a"] for c in cases)} anchors, {sum(1 for c in cases if c.get("dg"))} with class-reviewer text) · {len(lists)} lists · {len(mcq)} MCQs · {len(essays)} essays · {len(numbers)} numbers')

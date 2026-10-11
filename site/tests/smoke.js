@@ -37,11 +37,11 @@ require('fs').mkdirSync(out, {recursive: true});
     // cases browse + drill (all three directions)
     await p.click('[data-tab="cases"]'); await p.fill('#cq', 'quorum'); await p.waitForTimeout(100);
     const cn = await p.$$eval('#clist .crow', x => x.length); await check('cases');
-    await p.click('[data-cm="drill"]'); await p.click('#dStart'); await p.click('#dFlip'); await p.click('.grade [data-g="2"]');
-    await p.click('#dQuit'); await p.click('#dBack');
-    await p.click('[data-d="fc"]'); await p.click('#dStart'); await p.click('#dCard .choice'); const fb = await p.isVisible('#dNext');
+    await p.click('[data-cm="drill"]'); await p.click('#dStart'); await p.click('#dCard [data-flip]'); await p.click('.grade [data-g="2"]');
+    await p.click('#dCard [data-quit]'); await p.click('#dCard [data-a="back"]');
+    await p.click('[data-d="fc"]'); await p.click('#dStart'); await p.click('#dCard .choice'); const fb = await p.isVisible('#dCard [data-next]');
     await p.screenshot({path: `${out}/${tag}-drill.png`}); await check('drill');
-    await p.click('#dQuit'); await p.click('#dBack'); await p.click('[data-d="rc"]'); await p.click('#dStart'); await p.click('#dCard .choice');
+    await p.click('#dCard [data-quit]'); await p.click('#dCard [data-a="back"]'); await p.click('[data-d="rc"]'); await p.click('#dStart'); await p.click('#dCard .choice');
     // past exams: mcq
     await p.click('[data-tab="exams"]'); await p.click('#qStart'); await p.click('#qBox .choice'); const expl = await p.isVisible('#qBox .expl');
     await p.screenshot({path: `${out}/${tag}-mcq.png`}); await check('mcq');

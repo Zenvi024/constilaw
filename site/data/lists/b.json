@@ -1,0 +1,1644 @@
+[
+ {
+  "id": "b-terr-art1-parts",
+  "t": "terr",
+  "title": "Two parts of the national territory (Art. I)",
+  "ask": "Under Art. I, what are the two parts of the national territory?",
+  "items": [
+   "The Philippine archipelago, with all the islands and waters embraced therein",
+   "All other territories over which the Philippines has sovereignty or jurisdiction"
+  ],
+  "src": "Art. I",
+  "rv": "terr-text",
+  "ordered": true
+ },
+ {
+  "id": "b-terr-art1-domains",
+  "t": "terr",
+  "title": "Domains and submarine areas named in Art. I",
+  "ask": "Art. I says the territory consists of three domains and includes five maritime/submarine areas. Name all eight, in order.",
+  "items": [
+   "Terrestrial domain",
+   "Fluvial domain",
+   "Aerial domain",
+   "Territorial sea",
+   "Seabed",
+   "Subsoil",
+   "Insular shelves",
+   "Other submarine areas"
+  ],
+  "src": "Art. I",
+  "rv": "terr-text",
+  "ordered": true
+ },
+ {
+  "id": "b-terr-archipelagic",
+  "t": "terr",
+  "title": "Archipelagic doctrine and straight baselines",
+  "ask": "State the elements of the archipelagic doctrine and the straight baseline method.",
+  "items": [
+   "Islands and the waters around them form one integrated unit (unity of land and water)",
+   "Waters around, between and connecting the islands are internal waters",
+   "This holds ‘regardless of their breadth and dimensions’ (Art. I, last sentence)",
+   "Straight baselines join appropriate points of the outermost islands",
+   "The lines may not depart to any appreciable extent from the general direction of the coast",
+   "Waters landward of the baselines are internal (archipelagic) waters; zones are measured outward from the baselines"
+  ],
+  "src": "Art. I; RA 9522; Magallona",
+  "cases": [
+   "magallona"
+  ],
+  "rv": "terr-text",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-acquire",
+  "t": "terr",
+  "title": "Modes of acquiring or losing territory",
+  "ask": "What are the four modes by which a State acquires or loses territory (Magallona)?",
+  "items": [
+   "Occupation",
+   "Accretion",
+   "Cession",
+   "Prescription"
+  ],
+  "src": "Magallona v. Ermita",
+  "cases": [
+   "magallona"
+  ],
+  "rv": "terr-zones",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-zones",
+  "t": "terr",
+  "title": "UNCLOS maritime zones and their breadths",
+  "ask": "List the UNCLOS maritime zones, from the baselines outward, with their breadths.",
+  "items": [
+   "Internal/archipelagic waters: landward of the baselines",
+   "Territorial sea: 12 nautical miles from the baselines",
+   "Contiguous zone: 24 nautical miles from the baselines (12 beyond the territorial sea)",
+   "Exclusive economic zone: 200 nautical miles from the baselines",
+   "Continental shelf: natural prolongation to the margin’s edge, or 200 nm if the margin is shorter",
+   "Continental shelf outer limit: never beyond 350 nm (or 100 nm from the 2,500-m isobath)",
+   "High seas: beyond the EEZ, open to all States"
+  ],
+  "src": "UNCLOS Arts. 3, 33, 57, 76, 86; RA 12064",
+  "cases": [
+   "magallona"
+  ],
+  "rv": "terr-zones",
+  "ordered": true
+ },
+ {
+  "id": "b-terr-zone-rights",
+  "t": "terr",
+  "title": "What the coastal State holds in each zone",
+  "ask": "For each maritime zone, what rights does the coastal State have?",
+  "items": [
+   "Internal/archipelagic waters: sovereignty, subject to innocent passage and archipelagic sea lanes passage",
+   "Territorial sea: sovereignty (including airspace, bed, subsoil), subject to innocent passage of ships",
+   "Contiguous zone: control to prevent and punish infringement of customs, fiscal, immigration and sanitary laws",
+   "EEZ: sovereign rights to explore, exploit, conserve and manage living and non-living resources",
+   "EEZ: jurisdiction over artificial islands, marine scientific research, and the marine environment",
+   "Continental shelf: exclusive sovereign rights over seabed and subsoil resources",
+   "Territory is sovereignty; zones beyond the territorial sea give only sovereign rights and jurisdiction"
+  ],
+  "src": "UNCLOS Arts. 2, 17, 33, 56, 77; Magallona; 2016 Award",
+  "cases": [
+   "magallona",
+   "scsarbitration"
+  ],
+  "rv": "terr-zones",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-art47",
+  "t": "terr",
+  "title": "Archipelagic baseline limits (why KIG was left out)",
+  "ask": "What limits does UNCLOS Art. 47 put on archipelagic baselines, and how did they shape RA 9522?",
+  "items": [
+   "Water-to-land ratio inside the baselines must be between 1:1 and 9:1",
+   "Each baseline may not exceed 100 nm; up to 3% of them may reach 125 nm",
+   "Baselines must not depart appreciably from the general configuration of the archipelago",
+   "Enclosing the KIG and Scarborough would breach these limits, so RA 9522 left them out",
+   "Instead they are a ‘regime of islands’ (UNCLOS Art. 121), with the claim preserved"
+  ],
+  "src": "UNCLOS Art. 47; RA 9522, Sec. 2; Magallona",
+  "cases": [
+   "magallona"
+  ],
+  "rv": "terr-zones",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-magallona",
+  "t": "terr",
+  "title": "Why RA 9522 is valid (Magallona)",
+  "ask": "Give the reasons Magallona upheld RA 9522 (the baselines law).",
+  "items": [
+   "UNCLOS regulates sea-use rights and maritime zones; it is not a mode of acquiring territory",
+   "Baselines laws neither add to nor reduce Philippine territory",
+   "RA 9522 is only a statutory tool to demarcate the maritime zones and continental shelf",
+   "Classifying KIG and Scarborough as a ‘regime of islands’ does not cede them",
+   "Archipelagic waters stay under Philippine sovereignty despite innocent and sea lanes passage",
+   "Those passage rights already bind the Philippines under international law"
+  ],
+  "src": "Magallona v. Ermita (2011)",
+  "cases": [
+   "magallona"
+  ],
+  "rv": "terr-zones",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-features",
+  "t": "terr",
+  "title": "Classifying maritime features (UNCLOS Art. 121)",
+  "ask": "How are maritime features classified, and what entitlements does each get?",
+  "items": [
+   "Island: naturally formed land, surrounded by water, above water at high tide",
+   "Fully entitled island (sustains human habitation or economic life of its own): territorial sea, contiguous zone, EEZ, continental shelf",
+   "Rock (cannot sustain habitation or economic life of its own): no EEZ or continental shelf; 12-nm territorial sea",
+   "Low-tide elevation (above water only at low tide): no territorial sea of its own; cannot be appropriated",
+   "Submerged feature: part of the seabed; no entitlement",
+   "Artificial island: no territorial sea; reclamation never upgrades a feature",
+   "Features are judged in their natural condition; outside supplies do not count"
+  ],
+  "src": "UNCLOS Arts. 13, 60, 121; South China Sea Arbitration (2016)",
+  "cases": [
+   "scsarbitration"
+  ],
+  "rv": "terr-checklist",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-award",
+  "t": "terr",
+  "title": "South China Sea Award: main findings",
+  "ask": "What did the 2016 South China Sea Award decide on entitlements?",
+  "items": [
+   "China’s nine-dash-line historic rights have no legal basis beyond UNCLOS entitlements",
+   "Any historic rights were extinguished to the extent incompatible with UNCLOS",
+   "No Spratly feature is a fully entitled island; none generates an EEZ",
+   "The Spratlys cannot generate an EEZ collectively as a unit",
+   "Scarborough Shoal and Itu Aba are rocks; Mischief Reef and Second Thomas Shoal are low-tide elevations in the PH EEZ",
+   "It did NOT decide sovereignty over any feature, nor delimit boundaries"
+  ],
+  "src": "In re South China Sea Arbitration (July 12, 2016)",
+  "cases": [
+   "scsarbitration"
+  ],
+  "rv": "terr-cases",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-award-violations",
+  "t": "terr",
+  "title": "China’s violations found in the Award",
+  "ask": "What UNCLOS violations by China did the 2016 Award find?",
+  "items": [
+   "Violated Philippine sovereign rights in its EEZ (fishing and petroleum exploration)",
+   "Prevented Filipino traditional fishing at Scarborough Shoal",
+   "Harmed the marine environment by reclamation at seven Spratly features and tolerating harmful harvesting",
+   "Created a serious risk of collision by obstructing Philippine vessels at Scarborough (2012)"
+  ],
+  "src": "South China Sea Arbitration (2016)",
+  "cases": [
+   "scsarbitration"
+  ],
+  "rv": "terr-cases",
+  "ordered": false
+ },
+ {
+  "id": "b-terr-moa-ad",
+  "t": "terr",
+  "title": "Why the MOA-AD was unconstitutional (North Cotabato)",
+  "ask": "Why was the MOA-AD struck down, and what may the President do in peace talks?",
+  "items": [
+   "The ‘Bangsamoro Juridical Entity’ had associative status, which presupposes a State",
+   "The Executive guaranteed constitutional amendments it has no power to deliver",
+   "The panel did not consult affected LGUs and indigenous peoples: grave abuse",
+   "Decided despite mootness because of grave constitutional issues",
+   "Peace power is implied from her powers as Chief Executive and Commander-in-Chief",
+   "She may recommend amendments to Congress, but not implement them unilaterally"
+  ],
+  "src": "Province of North Cotabato v. GRP Peace Panel (2008)",
+  "cases": [
+   "northcotabato"
+  ],
+  "rv": "terr-cases",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-art4-sec1",
+  "t": "cit",
+  "title": "Citizens of the Philippines (Art. IV, Sec. 1)",
+  "ask": "Who are the four classes of citizens of the Philippines under Art. IV, Sec. 1?",
+  "items": [
+   "Those who are citizens of the Philippines at the time of the adoption of this Constitution",
+   "Those whose fathers or mothers are citizens of the Philippines",
+   "Those born before January 17, 1973, of Filipino mothers, who elect Philippine citizenship upon reaching the age of majority",
+   "Those who are naturalized in accordance with law"
+  ],
+  "src": "Art. IV, Sec. 1",
+  "cases": [
+   "tecson",
+   "cohret"
+  ],
+  "rv": "cit-text",
+  "ordered": true
+ },
+ {
+  "id": "b-cit-art4-other",
+  "t": "cit",
+  "title": "Art. IV, Secs. 2–5 in one line each",
+  "ask": "State the rule of each of Art. IV, Secs. 2 to 5.",
+  "items": [
+   "Sec. 2: natural-born are citizens from birth without any act to acquire or perfect citizenship",
+   "Sec. 2: those who elect under Sec. 1(3) are deemed natural-born",
+   "Sec. 3: citizenship may be lost or reacquired in the manner provided by law",
+   "Sec. 4: citizens who marry aliens retain citizenship unless, by act or omission, deemed under law to have renounced it",
+   "Sec. 5: dual allegiance is inimical to the national interest and shall be dealt with by law"
+  ],
+  "src": "Art. IV, Secs. 2–5",
+  "rv": "cit-text",
+  "ordered": true
+ },
+ {
+  "id": "b-cit-natural-born",
+  "t": "cit",
+  "title": "Who is natural-born",
+  "ask": "Who are natural-born citizens under the Constitution and the cases?",
+  "items": [
+   "Citizens from birth by blood (jus sanguinis), needing no act to acquire or perfect citizenship",
+   "Those who elect under Art. IV, Sec. 1(3): deemed natural-born",
+   "Illegitimate child of a Filipino father, once filiation is proved (Tecson)",
+   "Foundlings found in the Philippines (David v. SET; RA 11767)",
+   "Natural-born Filipinos who reacquire by repatriation or RA 9225: status restored (Bengson; David)",
+   "Only two kinds exist: natural-born and naturalized; whoever is not naturalized is natural-born (Bengson)"
+  ],
+  "src": "Art. IV, Secs. 1–2; Tecson; David v. SET; Bengson",
+  "cases": [
+   "tecson",
+   "davidset",
+   "bengson"
+  ],
+  "rv": "cit-natural",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-foundlings",
+  "t": "cit",
+  "title": "Why foundlings are natural-born (David v. SET)",
+  "ask": "What are the bases in David v. SET for treating foundlings as natural-born?",
+  "items": [
+   "The 1934–35 framers never intended to exclude foundlings",
+   "High statistical probability that a child found here has Filipino parents",
+   "Generally accepted principle: a foundling is presumed born of nationals of the State where found",
+   "Sources: 1930 Hague Convention, Art. 14; 1961 Statelessness Convention, Art. 2",
+   "Binding through incorporation (Art. II, Sec. 2) even without ratification",
+   "Now by statute: RA 11767 (2022) presumes foundlings natural-born"
+  ],
+  "src": "David v. SET (2016)",
+  "cases": [
+   "davidset"
+  ],
+  "rv": "cit-natural",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-fpj",
+  "t": "cit",
+  "title": "How FPJ was Filipino (Tecson chain)",
+  "ask": "Trace the chain by which FPJ was a Filipino in Tecson.",
+  "items": [
+   "Lorenzo Pou, a Spanish subject presumed resident here, died in Pangasinan (1954)",
+   "He became Filipino by mass naturalization under the Philippine Bill of 1902",
+   "His citizenship passed to his son Allan F. Poe",
+   "FPJ’s filiation to Allan was shown by his birth certificate",
+   "The 1935 ‘father is a citizen’ rule makes no distinction by legitimacy"
+  ],
+  "src": "Tecson v. COMELEC (2004)",
+  "cases": [
+   "tecson"
+  ],
+  "rv": "cit-natural",
+  "ordered": true
+ },
+ {
+  "id": "b-cit-nb-offices",
+  "t": "cit",
+  "title": "Offices requiring natural-born citizenship",
+  "ask": "Which offices does the Constitution reserve for natural-born citizens?",
+  "items": [
+   "President and Vice President (Art. VII, Secs. 2–3)",
+   "Senators and Members of the House (Art. VI, Secs. 3 and 6)",
+   "Justices of the Supreme Court and any lower collegiate court (Art. VIII, Sec. 7(1))",
+   "Members of the CSC, COMELEC and COA (Art. IX-B, C, D, Sec. 1)",
+   "Ombudsman and his Deputies (Art. XI, Sec. 8)",
+   "Monetary Board members (Art. XII, Sec. 20)",
+   "Commission on Human Rights members (Art. XIII, Sec. 17(2))",
+   "By law, not Constitution: RTC and first-level judges (BP 129); local officials need only citizenship"
+  ],
+  "src": "Arts. VI–IX, XI–XIII; BP 129; LGC, Sec. 39",
+  "rv": "cit-natural",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-election",
+  "t": "cit",
+  "title": "Election of citizenship: requisites",
+  "ask": "What are the requisites for a valid election of Philippine citizenship under Art. IV, Sec. 1(3) and CA 625?",
+  "items": [
+   "Born before January 17, 1973",
+   "Of a Filipino mother (and alien father)",
+   "Elects upon reaching the age of majority",
+   "A statement of election signed and sworn before an officer authorized to administer oaths",
+   "An oath of allegiance to the Constitution and Government of the Philippines",
+   "Both filed/registered with the nearest civil registry",
+   "Within a reasonable time after majority: generally three years (Sagun)",
+   "No judicial declaration: election is a private act, not a court proceeding (Sagun)"
+  ],
+  "src": "Art. IV, Sec. 1(3); CA 625, Sec. 1; Republic v. Sagun",
+  "cases": [
+   "sagun"
+  ],
+  "rv": "cit-natural",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-implied-election",
+  "t": "cit",
+  "title": "Implied election (Co v. HRET)",
+  "ask": "Which acts count as implied election of citizenship under Co v. HRET, and for whom?",
+  "items": [
+   "Voting in elections",
+   "Holding a public office where citizenship is a qualification",
+   "Practising a profession open only to Filipinos",
+   "Only for those already treated as Filipino when the time to elect came",
+   "It does not cure a late or unregistered formal election (Sagun)"
+  ],
+  "src": "Co v. HRET (1991); Republic v. Sagun (2012)",
+  "cases": [
+   "cohret",
+   "sagun"
+  ],
+  "rv": "cit-natural",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-forum",
+  "t": "cit",
+  "title": "Which body decides a candidate’s citizenship",
+  "ask": "Which body decides a candidate’s or official’s citizenship at each stage?",
+  "items": [
+   "Before the election (COC stage): COMELEC, on a petition to deny due course or cancel the COC",
+   "Sitting or proclaimed Member of the House: HRET (Co v. HRET)",
+   "Sitting or proclaimed Senator: SET (David v. SET)",
+   "President or Vice President after the election: PET (Tecson)",
+   "The Supreme Court reviews these tribunals only for grave abuse"
+  ],
+  "src": "Art. VI, Sec. 17; Art. VII, Sec. 4; Tecson; David v. SET; Co v. HRET",
+  "cases": [
+   "tecson",
+   "davidset",
+   "cohret"
+  ],
+  "rv": "cit-dual",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-nat-modes",
+  "t": "cit",
+  "title": "Modes of naturalization",
+  "ask": "What are the modes of naturalization (the three main modes plus derivative and historical ones)?",
+  "items": [
+   "Judicial: petition in court under CA 473 (Revised Naturalization Law)",
+   "Administrative: RA 9139, before the Special Committee on Naturalization (chaired by the Solicitor General)",
+   "Legislative: a special law of Congress (naturalized, not natural-born)",
+   "Derivative: minor children of a naturalized father (CA 473, Sec. 15; Tan Co)",
+   "Historical: mass naturalization of resident Spanish subjects (Philippine Bill of 1902)",
+   "Historical: administrative naturalization under LOI 270 for a limited period"
+  ],
+  "src": "CA 473; RA 9139; Philippine Bill of 1902; LOI 270; Tan Co",
+  "cases": [
+   "tanco",
+   "tecson"
+  ],
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ca473-quals",
+  "t": "cit",
+  "title": "CA 473 qualifications (judicial naturalization)",
+  "ask": "What are the six qualifications for judicial naturalization under CA 473, Sec. 2?",
+  "items": [
+   "At least 21 years old on the day of the hearing",
+   "Continuous residence in the Philippines for at least 10 years",
+   "Good moral character; believes in the Constitution; proper and irreproachable conduct",
+   "Real estate worth at least ₱5,000, or a known lucrative trade, profession or lawful occupation",
+   "Speaks and writes English or Spanish and one principal Philippine language",
+   "Has enrolled minor children of school age in schools teaching Philippine history, government and civics"
+  ],
+  "src": "CA 473, Sec. 2; Mahtani (lucrative = appreciable margin of income over expenses)",
+  "cases": [
+   "mahtani"
+  ],
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ca473-5yr",
+  "t": "cit",
+  "title": "When 10 years’ residence is cut to 5 (CA 473, Sec. 3)",
+  "ask": "In what five cases is the 10-year residence requirement reduced to five years under CA 473, Sec. 3?",
+  "items": [
+   "Has held office in the Philippine government or a political subdivision",
+   "Established a new industry or introduced a useful invention in the Philippines",
+   "Married to a Filipino woman",
+   "Taught for at least two years in a public or recognized private school not limited to one nationality",
+   "Born in the Philippines"
+  ],
+  "src": "CA 473, Sec. 3",
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-nat-disquals",
+  "t": "cit",
+  "title": "Disqualifications for naturalization",
+  "ask": "Who are disqualified from naturalization (CA 473, Sec. 4; substantially the same in RA 9139, Sec. 4)?",
+  "items": [
+   "Those opposed to organized government or affiliated with groups teaching such doctrines",
+   "Those defending or teaching the necessity of violence, personal assault or assassination for their ideas",
+   "Polygamists or believers in polygamy",
+   "Those convicted of a crime involving moral turpitude",
+   "Those suffering from mental alienation or an incurable contagious disease",
+   "Those who have not mingled socially with Filipinos or embraced their customs, traditions and ideals",
+   "Citizens of a nation at war with the Philippines, during the war",
+   "Citizens of a country whose laws do not let Filipinos naturalize there"
+  ],
+  "src": "CA 473, Sec. 4; RA 9139, Sec. 4",
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ca473-procedure",
+  "t": "cit",
+  "title": "CA 473 strict-compliance requirements",
+  "ask": "What procedural requirements of CA 473 are strictly enforced (Go, Go Pei Hung)?",
+  "items": [
+   "Declaration of intention filed one year before the petition",
+   "Excused if born here and schooled here, or resident for 30 years",
+   "Certificate of arrival must be attached; never excused (Go Pei Hung)",
+   "Petition must state all former residences; omission is jurisdictional (Go)",
+   "Two credible witnesses of good standing with personal knowledge of the applicant (Go)",
+   "Naturalization is a privilege, strictly construed against the applicant"
+  ],
+  "src": "CA 473, Secs. 5–7; Go v. Republic; Republic v. Go Pei Hung",
+  "cases": [
+   "gorep",
+   "gopeihung"
+  ],
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ra530",
+  "t": "cit",
+  "title": "Before a naturalization grant becomes executory (RA 530)",
+  "ask": "Under RA 530, what must the applicant show during the two years after the decision before taking the oath?",
+  "items": [
+   "Has not left the Philippines",
+   "Has dedicated himself continuously to a lawful calling or profession",
+   "Has not been convicted of any offense or violation of government rules",
+   "Has not committed any act prejudicial to the nation or contrary to announced government policies",
+   "Only then, after hearing, does he take the oath and receive the certificate"
+  ],
+  "src": "RA 530, Sec. 1 (amending CA 473)",
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ra9139-quals",
+  "t": "cit",
+  "title": "RA 9139 qualifications (administrative naturalization)",
+  "ask": "What are the qualifications for administrative naturalization under RA 9139, Sec. 3?",
+  "items": [
+   "Born in the Philippines and residing here since birth",
+   "At least 18 years old when the petition is filed",
+   "Good moral character; believes in the Constitution; irreproachable conduct",
+   "Primary and secondary schooling where Philippine history, government and civics are taught, open to all races",
+   "Minor children of school age enrolled in similar schools",
+   "A known trade, business, profession or lawful occupation with income sufficient for self and family",
+   "Able to read, write and speak Filipino or any Philippine dialect",
+   "Has mingled with Filipinos and sincerely desires to embrace their customs, traditions and ideals"
+  ],
+  "src": "RA 9139, Sec. 3",
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ca473-vs-ra9139",
+  "t": "cit",
+  "title": "Judicial (CA 473) versus administrative (RA 9139) naturalization",
+  "ask": "Contrast judicial naturalization under CA 473 with administrative naturalization under RA 9139.",
+  "items": [
+   "Forum: regional trial court vs. Special Committee on Naturalization",
+   "Who: any qualified alien vs. only aliens born and residing here since birth",
+   "Minimum age: 21 vs. 18",
+   "Residence: 10 years (5 in some cases) vs. since birth",
+   "Means: ₱5,000 real estate or lucrative occupation vs. income sufficient for self and family",
+   "Language: English or Spanish plus a principal Philippine language vs. Filipino or any dialect",
+   "Declaration of intention one year ahead: required (unless excused) vs. none"
+  ],
+  "src": "CA 473; RA 9139",
+  "rv": "cit-naturalization",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-loss-ca63",
+  "t": "cit",
+  "title": "Grounds for losing citizenship (CA 63)",
+  "ask": "What are the grounds for losing Philippine citizenship under CA 63, Sec. 1?",
+  "items": [
+   "Naturalization in a foreign country",
+   "Express renunciation of citizenship",
+   "Oath of allegiance to support the constitution or laws of a foreign country (at 21 or older)",
+   "Rendering service to, or accepting a commission in, foreign armed forces (with exceptions)",
+   "Cancellation of the certificate of naturalization",
+   "Being declared a deserter of the Philippine armed forces in wartime (unless pardoned or amnestied)",
+   "Old ground (marriage of a Filipino woman to a foreigner) no longer applies: Art. IV, Sec. 4"
+  ],
+  "src": "CA 63, Sec. 1, as amended by RA 106; Art. IV, Sec. 4",
+  "cases": [
+   "aznar",
+   "willieyu"
+  ],
+  "rv": "cit-loss",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-loss-proof",
+  "t": "cit",
+  "title": "Proving loss of citizenship (Aznar; Willie Yu)",
+  "ask": "How is loss of citizenship proved, and what is not enough?",
+  "items": [
+   "Loss is not presumed; one born of a Filipino parent is presumed to stay Filipino",
+   "The challenger must prove a CA 63 ground",
+   "An alien certificate of registration or foreign certification is not renunciation; at most dual citizenship (Aznar)",
+   "Express renunciation: made known distinctly and explicitly (Willie Yu)",
+   "Conduct can be express renunciation: using a foreign passport and declaring foreign nationality (Willie Yu)",
+   "Contrast Frivaldo and Labo (1989): naturalization abroad was proved"
+  ],
+  "src": "Aznar v. COMELEC (1990); Willie Yu v. Defensor-Santiago (1989)",
+  "cases": [
+   "aznar",
+   "willieyu"
+  ],
+  "rv": "cit-loss",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-reacq-modes",
+  "t": "cit",
+  "title": "Modes of reacquiring citizenship",
+  "ask": "What are the modes of reacquiring Philippine citizenship?",
+  "items": [
+   "Naturalization (as an alien would)",
+   "Repatriation (RA 965, RA 2630, PD 725, RA 8171)",
+   "Direct act of Congress",
+   "Oath of allegiance under RA 9225 (for natural-born Filipinos naturalized abroad)"
+  ],
+  "src": "CA 63, Sec. 2; Bengson v. Cruz; RA 9225",
+  "cases": [
+   "bengson"
+  ],
+  "rv": "cit-loss",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-repatriation-grounds",
+  "t": "cit",
+  "title": "Who may be repatriated",
+  "ask": "Repatriation is available to those who lost citizenship through which five causes (Bengson)?",
+  "items": [
+   "Desertion of the armed forces",
+   "Service in the armed forces of the Allied Forces in World War II (RA 965)",
+   "Service in the US armed forces at any other time (RA 2630)",
+   "Marriage of a Filipino woman to an alien (RA 8171; PD 725)",
+   "Political and economic necessity, for natural-born Filipinos (RA 8171)"
+  ],
+  "src": "Bengson III v. Cruz (2001); Angat v. Republic",
+  "cases": [
+   "bengson",
+   "angat"
+  ],
+  "rv": "cit-loss",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-repatriation-rules",
+  "t": "cit",
+  "title": "Repatriation: how done and its effects",
+  "ask": "How is repatriation done, where, and what are its effects?",
+  "items": [
+   "Take the oath of allegiance to the Republic",
+   "Register it with the local civil registry (and the Bureau of Immigration under RA 8171)",
+   "File with the Special Committee on Naturalization, not the RTC (Angat)",
+   "Restores the original status: a natural-born Filipino is again natural-born (Bengson)",
+   "Retroacts to the date of the application (Frivaldo)",
+   "For local office, citizenship is needed at proclamation or start of term (Frivaldo)"
+  ],
+  "src": "RA 8171, Sec. 2; Angat; Bengson; Frivaldo",
+  "cases": [
+   "angat",
+   "bengson",
+   "frivaldo"
+  ],
+  "rv": "cit-loss",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ra8171-bars",
+  "t": "cit",
+  "title": "Who cannot be repatriated under RA 8171",
+  "ask": "Under RA 8171, which applicants cannot be repatriated?",
+  "items": [
+   "Persons opposed to organized government or affiliated with groups upholding such doctrines",
+   "Persons defending or teaching the necessity or propriety of violence, personal assault or assassination",
+   "Persons convicted of crimes involving moral turpitude",
+   "Persons suffering from mental alienation or incurable contagious diseases"
+  ],
+  "src": "RA 8171, Sec. 1 (the DG reviewer attributes these to CA 63 in its Angat digest)",
+  "cases": [
+   "angat"
+  ],
+  "rv": "cit-loss",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ra9225-coverage",
+  "t": "cit",
+  "title": "RA 9225: retention and reacquisition",
+  "ask": "What does RA 9225 cover and what are its effects?",
+  "items": [
+   "Retention: natural-born Filipinos naturalized abroad after the law took effect (2003)",
+   "Reacquisition: natural-born Filipinos naturalized abroad before it took effect",
+   "Both by taking the oath of allegiance to the Republic",
+   "Extends to unmarried children below 18 (legitimate, illegitimate or adopted)",
+   "Reacquisition restores natural-born status (David v. SET)",
+   "Constitutional: dual citizenship is not dual allegiance (Calilung)"
+  ],
+  "src": "RA 9225, Secs. 3–4; Calilung; David v. SET",
+  "cases": [
+   "calilung",
+   "davidset"
+  ],
+  "rv": "cit-dual",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ra9225-rights",
+  "t": "cit",
+  "title": "RA 9225, Sec. 5: civil and political rights",
+  "ask": "Under RA 9225, Sec. 5, what conditions attach to the political rights of those who retain or reacquire citizenship?",
+  "items": [
+   "To vote: meet Art. V and the overseas voting law",
+   "Elective office: meet the office’s qualifications and, on filing the COC, make a personal sworn renunciation of all foreign citizenship",
+   "Appointive office: swear allegiance and renounce foreign citizenship before an authorized officer before assuming office",
+   "Practice of a profession: obtain a license or permit from the proper authority",
+   "No voting or office while running for or holding public office in the foreign country",
+   "No voting or office while serving as an officer in that country’s armed forces"
+  ],
+  "src": "RA 9225, Sec. 5",
+  "rv": "cit-dual",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-ra9225-candidates",
+  "t": "cit",
+  "title": "Dual-citizen candidates: case rules",
+  "ask": "What rules govern candidates who reacquired citizenship under RA 9225?",
+  "items": [
+   "Two steps: oath of allegiance, then a personal and sworn renunciation (Chua)",
+   "Renunciation must be sworn before an authorized officer; an unsworn one abroad fails (Sobejana-Condon)",
+   "Foreign law must be proved, not judicially noticed (Sobejana-Condon)",
+   "Using a foreign passport after renouncing recants the renunciation (Maquiling)",
+   "Winning the election does not cure ineligibility (Chua)",
+   "Dual citizens by birth need not renounce; filing the COC suffices (Gana-Carait)",
+   "Disqualified winner: vacancy filled by succession, not by the second placer (Mangudadatu, 2025)"
+  ],
+  "src": "Chua; Sobejana-Condon; Maquiling; Gana-Carait; Mangudadatu",
+  "cases": [
+   "chua2016",
+   "sobejana",
+   "maquiling",
+   "ganacarait",
+   "mangudadatu"
+  ],
+  "rv": "cit-dual",
+  "ordered": false
+ },
+ {
+  "id": "b-cit-dual",
+  "t": "cit",
+  "title": "Dual citizenship versus dual allegiance",
+  "ask": "Contrast dual citizenship with dual allegiance.",
+  "items": [
+   "Dual citizenship: involuntary, from concurrent laws of two States (e.g., jus soli and jus sanguinis)",
+   "Dual allegiance: a positive act of continued loyalty to another State",
+   "Art. IV, Sec. 5 targets dual allegiance, not dual citizenship",
+   "Defining and dealing with dual allegiance is for Congress, not courts or agencies (Calilung)",
+   "So the CSC cannot bar dual citizens by memorandum; only a law can"
+  ],
+  "src": "Art. IV, Sec. 5; Calilung v. Datumanong; Gana-Carait",
+  "cases": [
+   "calilung",
+   "ganacarait"
+  ],
+  "rv": "cit-dual",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-quals",
+  "t": "suff",
+  "title": "Qualifications of voters (Art. V, Sec. 1)",
+  "ask": "What are the qualifications to vote under Art. V, Sec. 1?",
+  "items": [
+   "Citizen of the Philippines",
+   "Not otherwise disqualified by law",
+   "At least eighteen years of age",
+   "Resided in the Philippines for at least one year",
+   "Resided in the place where he proposes to vote for at least six months immediately preceding the election"
+  ],
+  "src": "Art. V, Sec. 1",
+  "rv": "suff-text",
+  "hook": "Citizen, 18, one year, six months",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-prohibited",
+  "t": "suff",
+  "title": "Requirements that may not be imposed on suffrage",
+  "ask": "What three kinds of requirement does Art. V, Sec. 1 forbid?",
+  "items": [
+   "Literacy requirement",
+   "Property requirement",
+   "Other substantive requirement (a burden achieving no permissible State objective: Ceniza)"
+  ],
+  "src": "Art. V, Sec. 1; Ceniza v. COMELEC",
+  "cases": [
+   "ceniza"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-sec2",
+  "t": "suff",
+  "title": "Congress’s duties under Art. V, Sec. 2",
+  "ask": "What must Congress provide under Art. V, Sec. 2?",
+  "items": [
+   "A system for securing the secrecy and sanctity of the ballot",
+   "A system for absentee voting by qualified Filipinos abroad",
+   "A procedure for the disabled and the illiterates to vote without the assistance of other persons",
+   "Until then, they vote under existing laws and COMELEC rules protecting ballot secrecy"
+  ],
+  "src": "Art. V, Sec. 2",
+  "rv": "suff-text",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-disquals",
+  "t": "suff",
+  "title": "Who are disqualified to vote (RA 8189, Sec. 11)",
+  "ask": "Who are disqualified from voting under RA 8189, Sec. 11?",
+  "items": [
+   "Sentenced by final judgment to at least one year’s imprisonment, unless pardoned or amnestied",
+   "Convicted by final judgment of a crime of disloyalty (rebellion, sedition, firearms laws, national security), unless restored",
+   "In both cases, the right returns automatically five years after service of sentence",
+   "Insane or incompetent persons so declared by competent authority, until declared otherwise"
+  ],
+  "src": "RA 8189, Sec. 11",
+  "rv": "suff-checklist",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-validity-test",
+  "t": "suff",
+  "title": "Is a new condition on voting valid?",
+  "ask": "What questions decide whether a new condition on voting is valid?",
+  "items": [
+   "Is it a qualification or substantive requirement (test, fee, property)? Then invalid",
+   "Is it registration or procedure? Valid if reasonable (registration only determines qualifications)",
+   "If it burdens the right, apply strict scrutiny: compelling interest, least restrictive means (Kabataan)",
+   "Did the right body act within the law? COMELEC cannot cut short what Congress fixed (Palatino)"
+  ],
+  "src": "Art. V, Sec. 1; AKBAYAN; Kabataan; Palatino",
+  "cases": [
+   "akbayan",
+   "kabataan2015",
+   "palatino"
+  ],
+  "rv": "suff-quals",
+  "ordered": true
+ },
+ {
+  "id": "b-suff-periods",
+  "t": "suff",
+  "title": "Registration periods and COMELEC’s stand-by power",
+  "ask": "What are the statutory registration cut-offs, and when may COMELEC fix other dates?",
+  "items": [
+   "No registration within 120 days before a regular election (RA 8189, Sec. 8)",
+   "No registration within 90 days before a special election (RA 8189, Sec. 8)",
+   "COMELEC’s stand-by power (RA 8436, Sec. 28): only if pre-election acts cannot reasonably be held in time",
+   "COMELEC bears the burden of showing that necessity (Palatino)",
+   "Exclusion petitions barred within 100 days before a regular election (65 for special) (RA 8189, Sec. 35)"
+  ],
+  "src": "RA 8189, Secs. 8, 35; RA 8436, Sec. 28; AKBAYAN; Palatino",
+  "cases": [
+   "akbayan",
+   "palatino"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-akbayan-palatino",
+  "t": "suff",
+  "title": "AKBAYAN versus Palatino",
+  "ask": "How do AKBAYAN (2001) and Palatino (2009) differ?",
+  "items": [
+   "AKBAYAN: special registration sought within the 120-day prohibitive period; denied",
+   "AKBAYAN: COMELEC showed unfinished pre-election work (precincts, BEIs, book of voters, voters’ list)",
+   "Palatino: COMELEC closed registration before the 120-day period began; extension was outside it",
+   "Palatino: COMELEC showed no necessity; deadline voided and registration extended",
+   "Both: registration is valid procedural regulation under police power, not a qualification"
+  ],
+  "src": "AKBAYAN-Youth v. COMELEC; Palatino v. COMELEC",
+  "cases": [
+   "akbayan",
+   "palatino"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-kabataan",
+  "t": "suff",
+  "title": "Why biometrics validation is valid (Kabataan)",
+  "ask": "Why did Kabataan uphold biometrics validation under RA 10367?",
+  "items": [
+   "It is part of registration, a procedural step, not a qualification or substantive requirement",
+   "Compelling interest: a clean voters’ list free of fraud reflecting the people’s will",
+   "Least restrictive means: validation done once while one stays an active voter",
+   "Deactivated voters may still apply for reactivation"
+  ],
+  "src": "Kabataan Party-List v. COMELEC (2015)",
+  "cases": [
+   "kabataan2015"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-ceniza",
+  "t": "suff",
+  "title": "Ceniza: excluding HUC voters from provincial elections",
+  "ask": "Why was excluding highly urbanized city voters from provincial elections valid (Ceniza)?",
+  "items": [
+   "HUCs are independent of the province; loss of the provincial vote goes with independence",
+   "Income is a substantial distinction: it shows capacity to exist and develop independently",
+   "No constitutional right to vote for officials of a unit that does not govern you",
+   "Not a substantive requirement: no added burden on voters",
+   "Art. X, Sec. 12 (1987): HUC voters, and those of cities whose charters bar it, skip provincial elections"
+  ],
+  "src": "Ceniza v. COMELEC (1980); Art. X, Sec. 12",
+  "cases": [
+   "ceniza"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-overseas",
+  "t": "suff",
+  "title": "Overseas voting: who votes and for what (RA 10590)",
+  "ask": "Under RA 10590, who may vote abroad and for which positions?",
+  "items": [
+   "Citizens of the Philippines abroad, not otherwise disqualified by law",
+   "At least 18 years old on election day",
+   "Positions: President, Vice President, Senators, party-list representatives",
+   "Also all national referenda and plebiscites"
+  ],
+  "src": "RA 9189, as amended by RA 10590, Sec. 4",
+  "cases": [
+   "macalintal2003"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-overseas-disquals",
+  "t": "suff",
+  "title": "Overseas voting disqualifications (RA 10590)",
+  "ask": "Who are disqualified from overseas voting under RA 10590?",
+  "items": [
+   "Those who lost Philippine citizenship under Philippine law",
+   "Those who expressly renounced citizenship and pledged allegiance abroad, except RA 9225 retainers/reacquirers",
+   "Those finally convicted of an offense punishable by at least one year, unless pardoned; right returns after five years",
+   "Those declared insane or incompetent by competent authority, here or abroad",
+   "RA 10590 dropped RA 9189’s immigrant/permanent-resident bar and its three-year return affidavit"
+  ],
+  "src": "RA 10590, Sec. 5 (amending RA 9189)",
+  "cases": [
+   "macalintal2003"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-macalintal",
+  "t": "suff",
+  "title": "Macalintal (2003): rulings on overseas absentee voting",
+  "ask": "What did Macalintal v. COMELEC (2003) rule on RA 9189?",
+  "items": [
+   "Overseas absentee voting is an exception to the residence requirement (necessary implication of Art. V, Sec. 2)",
+   "The affidavit of intent to return is valid: it shows domicile was never abandoned",
+   "A Joint Congressional Oversight Committee approving COMELEC’s rules is void: COMELEC’s independence",
+   "COMELEC cannot canvass and proclaim the President and VP; Congress does (Art. VII, Sec. 4)"
+  ],
+  "src": "Macalintal v. COMELEC (2003)",
+  "cases": [
+   "macalintal2003"
+  ],
+  "rv": "suff-quals",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-domicile-req",
+  "t": "suff",
+  "title": "Requisites for a new domicile of choice",
+  "ask": "What must concur to acquire a new domicile of choice?",
+  "items": [
+   "Residence or bodily presence in the new locality",
+   "Intention to remain there (animus manendi)",
+   "Intention to abandon the old domicile (animus non revertendi)",
+   "The change must be voluntary (Romualdez)"
+  ],
+  "src": "Gallego v. Verra (1941); Romualdez v. RTC (1993)",
+  "cases": [
+   "gallego",
+   "romualdezrtc"
+  ],
+  "rv": "suff-residence",
+  "ordered": false
+ },
+ {
+  "id": "b-suff-domicile-rules",
+  "t": "suff",
+  "title": "Rules on residence in election law",
+  "ask": "State the rules on residence (domicile) in election law.",
+  "items": [
+   "Residence means domicile: a fixed residence to which, when absent, one intends to return (animus revertendi)",
+   "The domicile of origin is kept until a new one is acquired",
+   "Change is not presumed; whoever alleges it must prove all the elements",
+   "Absence for work or study does not lose domicile, even registering and voting elsewhere (Gallego)",
+   "Forced exile or flight for safety is not abandonment (Romualdez)",
+   "Same rule for candidates; an incumbent still serving cannot claim a new domicile (Mangudadatu)"
+  ],
+  "src": "Gallego; Romualdez; Co v. HRET; Mangudadatu",
+  "cases": [
+   "gallego",
+   "romualdezrtc",
+   "cohret",
+   "mangudadatu"
+  ],
+  "rv": "suff-residence",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-dorr",
+  "t": "gov",
+  "title": "Two senses of ‘government’ (U.S. v. Dorr)",
+  "ask": "In what two senses may ‘government’ be understood (Dorr), and which one does sedition law protect?",
+  "items": [
+   "Abstract sense: the aggregate of institutions by which a society makes and carries out its rules",
+   "Administration: the aggregate of individuals who, for the time being, run the government",
+   "Sedition law protects the system (abstract sense), not the officials",
+   "Attacking officials’ character is not an attack on the government"
+  ],
+  "src": "U.S. v. Dorr (1903)",
+  "cases": [
+   "dorr"
+  ],
+  "rv": "gov-defined",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-admin-code",
+  "t": "gov",
+  "title": "‘Government of the Philippines’ (Admin. Code, Sec. 2(1))",
+  "ask": "How does the Administrative Code define the ‘Government of the Republic of the Philippines’, and what arms does it include?",
+  "items": [
+   "The corporate governmental entity through which governmental functions are exercised throughout the Philippines",
+   "Includes the arms through which political authority is made effective in the autonomous regions",
+   "… in the provincial, city, municipal or barangay subdivisions",
+   "… and in other forms of local government"
+  ],
+  "src": "Admin. Code (EO 292), Introductory Provisions, Sec. 2(1)",
+  "rv": "gov-defined",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-constituent",
+  "t": "gov",
+  "title": "Constituent functions of government",
+  "ask": "What are the constituent (compulsory) functions of government?",
+  "items": [
+   "Keeping order and protecting persons and property from violence and robbery",
+   "Fixing legal relations between spouses and between parents and children",
+   "Regulating the holding, transmission and interchange of property",
+   "Determining contract rights and liabilities",
+   "Defining and punishing crime",
+   "Administering justice in civil cases",
+   "Determining political duties, privileges and relations of citizens",
+   "Dealing with foreign powers: security and international interests"
+  ],
+  "src": "Bacani v. NACOCO (1956), quoting Wilson; see ACCFA v. CUGCO",
+  "rv": "gov-defined",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-ministrant",
+  "t": "gov",
+  "title": "Ministrant functions and the modern view",
+  "ask": "What are ministrant functions, with examples, and does the distinction still control?",
+  "items": [
+   "Ministrant: optional functions to advance general welfare, not to keep society together",
+   "Examples: public works, public education, public charity",
+   "Examples: health and safety regulation, regulation of trade and industry",
+   "Modern view: distinction no longer controlling given the social justice mandate (ACCFA v. CUGCO)"
+  ],
+  "src": "Bacani v. NACOCO; ACCFA v. CUGCO (1969)",
+  "rv": "gov-defined",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-gov-prop",
+  "t": "gov",
+  "title": "Governmental versus proprietary functions",
+  "ask": "Contrast governmental and proprietary functions (Laurel v. Desierto).",
+  "items": [
+   "Governmental: advance public welfare and carry out sovereign duties under a State policy",
+   "Proprietary: serve only a local or special community benefit, with no State policy involved",
+   "Examples: promoting culture and heritage (governmental) vs. a town fiesta (proprietary)",
+   "Why it matters: whether a post is a public office, and whether the entity is suable or liable"
+  ],
+  "src": "Laurel v. Desierto (2002)",
+  "cases": [
+   "laureldesierto"
+  ],
+  "rv": "gov-defined",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-mechem",
+  "t": "gov",
+  "title": "Elements of a public office (Mechem)",
+  "ask": "What are the five elements of a public office (Mechem, as applied in Laurel), and what is not essential?",
+  "items": [
+   "Created by the Constitution, by the Legislature, or by a body acting under legislative authority",
+   "Delegated a portion of the sovereign powers of government, to be exercised for the public benefit",
+   "Powers and duties defined, directly or impliedly, by the Legislature or through legislative authority",
+   "Duties performed independently, without control of a superior other than the law (unless a subordinate office)",
+   "Some permanency and continuity, not merely temporary or occasional",
+   "Not essential: compensation; an honorary or temporary post may still be a public office (Laurel)"
+  ],
+  "src": "Laurel v. Desierto (2002), citing Mechem",
+  "cases": [
+   "laureldesierto"
+  ],
+  "rv": "gov-defined",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-dejure-defacto",
+  "t": "gov",
+  "title": "De jure versus de facto government",
+  "ask": "Contrast a de jure and a de facto government.",
+  "items": [
+   "De jure: placed in power according to the constitution and laws (of right)",
+   "De facto: exists in fact without legal title, but must be accepted for practical purposes",
+   "A de facto government must be obeyed in civil matters while it lasts",
+   "Its acts not of a political complexion stay valid after the de jure government returns (postliminy)",
+   "Its political acts fall with it"
+  ],
+  "src": "Co Kim Cham v. Valdez Tan Keh (1945)",
+  "cases": [
+   "cocham"
+  ],
+  "rv": "gov-defacto",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-defacto-kinds",
+  "t": "gov",
+  "title": "Three kinds of de facto government",
+  "ask": "What are the three kinds of de facto government (Co Kim Cham)?",
+  "items": [
+   "Usurpation: seizes control from the legitimate government by force or the majority’s voice and holds it",
+   "Paramount force: set up by military forces invading and occupying enemy territory in war (e.g., the Japanese-sponsored Republic)",
+   "Secession: set up as an independent government by inhabitants who rise in insurrection against the parent State"
+  ],
+  "src": "Co Kim Cham v. Valdez Tan Keh (1945)",
+  "cases": [
+   "cocham"
+  ],
+  "rv": "gov-defacto",
+  "hook": "U-P-S: Usurper, Paramount force, Secession",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-cokimcham",
+  "t": "gov",
+  "title": "Occupation rules in Co Kim Cham",
+  "ask": "What rules on belligerent occupation did Co Kim Cham apply?",
+  "items": [
+   "The occupant may suspend laws and promulgate new ones",
+   "It must respect municipal laws on public order and commerce, which continue so far as compatible (Hague Regulations)",
+   "A civil administration set up by the occupant is still a government of paramount force",
+   "Judicial acts not of a political complexion remain valid after liberation (postliminy)",
+   "MacArthur’s proclamation voiding ‘processes’ did not reach judicial processes",
+   "Restored courts may continue pending cases without an enabling law"
+  ],
+  "src": "Co Kim Cham v. Valdez Tan Keh (1945)",
+  "cases": [
+   "cocham"
+  ],
+  "rv": "gov-defacto",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-revgov",
+  "t": "gov",
+  "title": "Revolutionary government (Republic v. Sandiganbayan)",
+  "ask": "What are the rules on the Aquino revolutionary government, and the conditions for its directives to be valid?",
+  "items": [
+   "Revolutionary because EDSA defied the 1973 Constitution after the Batasan proclaimed Marcos",
+   "Bound by no constitution: no Bill of Rights during the interregnum (Feb. 25, 1986 to the Freedom Constitution)",
+   "Still bound, as the de jure government, by the ICCPR and the Universal Declaration",
+   "Condition 1 for valid directives: enforcers did not exceed the authority granted by the revolutionary government",
+   "Condition 2: the directives did not violate the Covenant or the Declaration",
+   "Seizing items not named in the warrant failed both conditions"
+  ],
+  "src": "Republic v. Sandiganbayan (Ramas-Dimaano) (2003)",
+  "cases": [
+   "repsandiganbayan"
+  ],
+  "rv": "gov-defacto",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-revgov-now",
+  "t": "gov",
+  "title": "Why a sitting President cannot declare a revolutionary government",
+  "ask": "Why can a sitting President not declare a revolutionary government?",
+  "items": [
+   "He was elected under, and holds office by virtue of, the 1987 Constitution",
+   "Declaring one repudiates the Constitution and with it his own title to office",
+   "Nothing in the Constitution authorizes it",
+   "He cannot revolt against a government he himself heads (DG)"
+  ],
+  "src": "Republic v. Sandiganbayan; DG reviewer Q&A",
+  "cases": [
+   "repsandiganbayan"
+  ],
+  "rv": "gov-defacto",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-parens",
+  "t": "gov",
+  "title": "Parens patriae: principles",
+  "ask": "State the principles of parens patriae (SPARK).",
+  "items": [
+   "The State acts as guardian of those who cannot protect themselves: minors, the mentally ill, incompetents, elderly, disabled",
+   "It supplements, not supplants, the parents’ primary right to rear their children",
+   "Restrictions on minors’ fundamental rights get strict scrutiny: compelling interest plus least restrictive means",
+   "It is not a grant of power to detain: the President needs a statute to detain loitering minors"
+  ],
+  "src": "SPARK v. Quezon City (2017); DG reviewer",
+  "cases": [
+   "spark"
+  ],
+  "rv": "gov-parens",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-minors",
+  "t": "gov",
+  "title": "Why minors may be treated differently",
+  "ask": "What three justifications allow minors to be treated differently from adults (SPARK)?",
+  "items": [
+   "The peculiar vulnerability of children",
+   "Their inability to make critical decisions in an informed and mature manner",
+   "The importance of the parental role in child rearing"
+  ],
+  "src": "SPARK v. Quezon City (2017), citing Bellotti v. Baird",
+  "cases": [
+   "spark"
+  ],
+  "rv": "gov-parens",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-spark",
+  "t": "gov",
+  "title": "SPARK: which curfews survived",
+  "ask": "In SPARK, which curfew ordinances fell or survived, and why?",
+  "items": [
+   "Compelling interest present: children’s welfare and protection from harm at night",
+   "Manila and Navotas failed least restrictive means: exceptions ignored association, religion, assembly, expression",
+   "Manila’s fines and imprisonment of minors conflict with the Juvenile Justice Act (status offenses)",
+   "Navotas’s community service sanction is valid",
+   "Quezon City upheld: its exceptions were narrowly drawn"
+  ],
+  "src": "SPARK v. Quezon City (2017)",
+  "cases": [
+   "spark"
+  ],
+  "rv": "gov-parens",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-immunity-steps",
+  "t": "gov",
+  "title": "State immunity: order of analysis",
+  "ask": "In what order do you analyze a state immunity problem?",
+  "items": [
+   "Is it really a suit against the State?",
+   "If so, has the State consented (expressly or impliedly)?",
+   "If a foreign State or agent: is the act jure imperii, and was the agent within official functions?",
+   "Even if suable: is the State liable, and how is a judgment paid (COA, no garnishment)?"
+  ],
+  "src": "Art. XVI, Sec. 3; PASI; GTZ; Minucher; Fetalvero",
+  "cases": [
+   "pasi",
+   "gtz",
+   "minucher",
+   "fetalvero"
+  ],
+  "rv": "gov-immunity",
+  "ordered": true
+ },
+ {
+  "id": "b-gov-suit-vs-state",
+  "t": "gov",
+  "title": "When a suit against an officer is a suit against the State",
+  "ask": "When is a suit against a public officer really a suit against the State?",
+  "items": [
+   "The officer is sued for acts done in the performance of official functions",
+   "A judgment would charge the treasury or create financial liability for the State",
+   "Or would require the State to perform an affirmative act (e.g., appropriate funds) (Arigo)",
+   "Formal impleading of the State is unnecessary"
+  ],
+  "src": "PASI v. Trinidad-Lichauco (2006); Arigo v. Swift (2014)",
+  "cases": [
+   "pasi",
+   "arigo"
+  ],
+  "rv": "gov-immunity",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-not-vs-state",
+  "t": "gov",
+  "title": "Exceptions: suit against officer is NOT against the State",
+  "ask": "When is a suit against a public officer not a suit against the State (PASI)?",
+  "items": [
+   "The officer acted beyond authority, illegally, or ultra vires: unauthorized acts are not State acts",
+   "Relief only nullifies the act, with no charge on the treasury",
+   "The government no longer has an interest to protect in the outcome",
+   "The officer is sued personally for a tort committed in performing duties",
+   "Obiter: adding damages on the nullity claims, or impleading the DOTC, would make it a suit against the State"
+  ],
+  "src": "PASI v. Trinidad-Lichauco (2006)",
+  "cases": [
+   "pasi"
+  ],
+  "rv": "gov-immunity",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-consent",
+  "t": "gov",
+  "title": "Forms of State consent to be sued",
+  "ask": "In what forms may the State consent to be sued?",
+  "items": [
+   "Express: by a general law",
+   "Express: by a special law",
+   "Implied: when the State itself sues (it opens itself to counterclaims)",
+   "Implied: when it enters into a commercial (jure gestionis) contract",
+   "Incorporated agency: its charter or the general law (‘sue and be sued’) controls, whatever its functions (GTZ)",
+   "Equity: immunity cannot avoid paying for a completed public work the State used (Vigilar)"
+  ],
+  "src": "Art. XVI, Sec. 3; Admin. Code, Book I, Sec. 10; GTZ; Vigilar",
+  "cases": [
+   "gtz",
+   "vigilar"
+  ],
+  "rv": "gov-immunity",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-liability",
+  "t": "gov",
+  "title": "Suability versus liability and payment",
+  "ask": "Once the State is suable, what limits remain on liability and payment?",
+  "items": [
+   "Suability is not liability: consent to be sued is not admission of liability",
+   "Public funds cannot be garnished or levied on, even if appropriated (Fetalvero)",
+   "A money claim on a judgment goes to COA, which has primary jurisdiction",
+   "The State is bound only by acts of authorized agents done according to law (Admin. Code, Sec. 11(1))",
+   "The State is not bound by its officers’ mistakes or errors (Sec. 11(2))",
+   "Recovery on quantum meruit when the State benefited from a void contract (Vigilar)"
+  ],
+  "src": "Republic v. Fetalvero (2019); Vigilar v. Aquino (2011); Admin. Code, Book I, Sec. 11",
+  "cases": [
+   "fetalvero",
+   "vigilar"
+  ],
+  "rv": "gov-immunity",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-foreign-immunity",
+  "t": "gov",
+  "title": "Immunity of foreign States",
+  "ask": "What rules govern the immunity of foreign States in Philippine courts?",
+  "items": [
+   "Par in parem non habet imperium: equals have no jurisdiction over each other",
+   "Restrictive doctrine: immune for sovereign acts (jure imperii), not commercial acts (jure gestionis)",
+   "Suing officers where judgment needs foreign remedial acts or appropriations is suing the State (Arigo)",
+   "Warships are immune; the flag State bears international responsibility under UNCLOS (Arigo)",
+   "An implementing agency must prove immunity, e.g., by DFA certification; incorporated ones follow their charter (GTZ)"
+  ],
+  "src": "Arigo v. Swift; GTZ v. CA; Minucher",
+  "cases": [
+   "arigo",
+   "gtz",
+   "minucher"
+  ],
+  "rv": "gov-immunity",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-minucher",
+  "t": "gov",
+  "title": "When a foreign agent shares State immunity (Minucher)",
+  "ask": "When does a foreign agent share his State’s immunity, and when not?",
+  "items": [
+   "He acted within his official functions, under the sending State’s directives",
+   "The host State consented to those activities (shown by official exchanges and joint operations)",
+   "Not immune when sued personally for acts beyond his functions, contrary to law and injurious to others"
+  ],
+  "src": "Minucher v. CA (2003)",
+  "cases": [
+   "minucher"
+  ],
+  "rv": "gov-immunity",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-diplomatic",
+  "t": "gov",
+  "title": "Diplomatic immunity",
+  "ask": "Who has diplomatic immunity, and how does it differ from State immunity (Minucher)?",
+  "items": [
+   "Only diplomatic agents (heads of mission and diplomatic staff) have blanket civil and criminal immunity",
+   "Yardstick: whether the person performs duties of a diplomatic nature",
+   "Attachés who only assist the chief of mission are not diplomatic agents",
+   "Conferring diplomatic status is an Executive prerogative, not judicial",
+   "State immunity is broader: it covers any agent’s official acts done with host-State consent"
+  ],
+  "src": "Vienna Convention on Diplomatic Relations; Minucher v. CA",
+  "cases": [
+   "minucher"
+  ],
+  "rv": "gov-immunity",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-heads-mission",
+  "t": "gov",
+  "title": "Classes of heads of diplomatic mission",
+  "ask": "What are the three classes of heads of mission under the Vienna Convention on Diplomatic Relations (Art. 14)?",
+  "items": [
+   "Ambassadors or nuncios accredited to Heads of State (and other heads of equivalent rank)",
+   "Envoys, ministers and internuncios accredited to Heads of State",
+   "Chargés d’affaires accredited to Ministers for Foreign Affairs"
+  ],
+  "src": "Vienna Convention on Diplomatic Relations, Art. 14; DG reviewer",
+  "cases": [
+   "minucher"
+  ],
+  "rv": "gov-immunity",
+  "ordered": true
+ },
+ {
+  "id": "b-gov-police-nature",
+  "t": "gov",
+  "title": "Police power: definition and nature",
+  "ask": "Define police power and state its essential characteristics.",
+  "items": [
+   "Power to restrain liberty and property to promote the general welfare",
+   "Two elements: an imposition on liberty or property, to foster the common good",
+   "Inherent: needs no constitutional grant; born of statehood and sovereignty",
+   "The most pervasive of the inherent powers; implied limit on the Bill of Rights",
+   "Lodged in Congress; delegable to the President, agencies and LGUs (general welfare clause)",
+   "Executive use needs a statute passing the completeness and sufficient-standard tests (Zabal dissent)"
+  ],
+  "src": "Ermita-Malate; Rubi; Zabal; DG reviewer",
+  "cases": [
+   "rubi",
+   "zabal"
+  ],
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-police-test",
+  "t": "gov",
+  "title": "Test of a valid exercise of police power",
+  "ask": "What are the two requisites of a valid exercise of police power?",
+  "items": [
+   "Lawful subject: the interests of the public generally, not a particular class, require the interference",
+   "Lawful means: reasonably necessary to accomplish the purpose and not unduly oppressive on individuals"
+  ],
+  "src": "U.S. v. Toribio; White Light; Zabal; DG reviewer",
+  "cases": [
+   "whitelight",
+   "zabal"
+  ],
+  "rv": "gov-police",
+  "hook": "Subject + means: right reason, right method",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-ordinance",
+  "t": "gov",
+  "title": "Requisites of a valid ordinance",
+  "ask": "What are the requisites of a valid LGU ordinance (police power by LGUs)?",
+  "items": [
+   "Must not contravene the Constitution or any statute",
+   "Must not be unfair or oppressive",
+   "Must not be partial or discriminatory",
+   "Must not prohibit, but may regulate, trade (Cruz v. Paras)",
+   "Must be general and consistent with public policy",
+   "Must not be unreasonable (White Light)",
+   "Must be within the power delegated to the LGU"
+  ],
+  "src": "Tatel v. Virac; Magtajas v. Pryce; Cruz v. Paras; White Light",
+  "cases": [
+   "cruzparas",
+   "whitelight"
+  ],
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-police-cases",
+  "t": "gov",
+  "title": "Police power: upheld or struck down",
+  "ask": "Which police power measures in the syllabus were upheld and which struck down?",
+  "items": [
+   "Upheld: Mangyan reservation (Rubi, 1919) — read critically",
+   "Upheld: early warning devices on vehicles (Agustin v. Edu)",
+   "Upheld: six-month Boracay closure (Zabal)",
+   "Upheld: expanding MORE Power’s franchise into cooperatives’ areas (Iloilo I, 2024)",
+   "Struck down: ban on short-time motel rates (White Light)",
+   "Struck down: Manila and Navotas curfews (SPARK)",
+   "Struck down: ordinance closing all night clubs (Cruz v. Paras)"
+  ],
+  "src": "Rubi; Agustin; Zabal; Iloilo I; White Light; SPARK; Cruz v. Paras",
+  "cases": [
+   "rubi",
+   "agustin",
+   "zabal",
+   "ileco",
+   "whitelight",
+   "spark",
+   "cruzparas"
+  ],
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-zabal",
+  "t": "gov",
+  "title": "Zabal: why the Boracay closure was valid",
+  "ask": "Why did the majority in Zabal uphold the Boracay closure?",
+  "items": [
+   "Lawful subject: a balanced and healthful ecology and public health",
+   "Lawful means: six months was reasonable for major, permanent rehabilitation works",
+   "The works could not be done with tourists on the island",
+   "The effect on travel was only incidental",
+   "Workers’ livelihood expectancies yield to the general welfare",
+   "No intrusion on local autonomy"
+  ],
+  "src": "Zabal v. Duterte (2019)",
+  "cases": [
+   "zabal"
+  ],
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-ra10121",
+  "t": "gov",
+  "title": "State-of-calamity remedies (Zabal dissent)",
+  "ask": "What remedies does RA 10121, Sec. 17 allow on a state of calamity (the Zabal dissent’s point)?",
+  "items": [
+   "Price ceiling on basic necessities and prime commodities",
+   "Monitoring and prevention of overpricing and hoarding",
+   "Programming or reprogramming of funds for repair of public infrastructure",
+   "Granting of no-interest loans to the most affected",
+   "Dissent: none of these authorizes closing an entire island"
+  ],
+  "src": "RA 10121, Sec. 17; Zabal v. Duterte (dissent)",
+  "cases": [
+   "zabal"
+  ],
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-iloilo",
+  "t": "gov",
+  "title": "Iloilo I: franchises yield to police power",
+  "ask": "Why did Iloilo I uphold the expansion of MORE Power’s franchise, and what did the dissent say?",
+  "items": [
+   "No franchise is exclusive (Art. XII, Sec. 11)",
+   "Franchises are subject to amendment, alteration or repeal by Congress when the common good requires",
+   "A franchise is a privilege, not the franchisee’s private property",
+   "As a grant, it is beyond the non-impairment clause; contracts yield to police power (Carlos Superdrug)",
+   "Leonen dissent: distribution is a natural monopoly; Art. XII, Sec. 19 allows regulating monopolies",
+   "Dissent: amendment must serve the common good, not competition alone"
+  ],
+  "src": "Iloilo I Electric Coop. v. Executive Secretary (2024)",
+  "cases": [
+   "ileco"
+  ],
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-taking",
+  "t": "gov",
+  "title": "Regulation or taking?",
+  "ask": "When does a regulation become a taking, and how were the classic cases classified?",
+  "items": [
+   "Rule: a taking appropriates property or its beneficial use for the public; regulation restrains a harmful use",
+   "Ericta (1983): 6% of cemetery land for paupers — taking without compensation, void",
+   "PPI v. COMELEC (1995): free print space for COMELEC — taking; must be paid",
+   "TELEBAP (1998): free airtime for COMELEC — valid; franchise over airwaves, a public resource",
+   "Manila Memorial (2013): senior and PWD discounts as tax deductions — valid police power"
+  ],
+  "src": "City Govt. of QC v. Ericta; PPI v. COMELEC; TELEBAP v. COMELEC; Manila Memorial v. DSWD",
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-inherent-compare",
+  "t": "gov",
+  "title": "Police power, eminent domain and taxation compared",
+  "ask": "Contrast the three inherent powers.",
+  "items": [
+   "Purpose: regulate for general welfare / take property for public use / raise revenue",
+   "Compensation: none (general welfare) / just compensation / protection and public benefits",
+   "Property: use restrained, not taken / property or its use appropriated / money taken",
+   "All three are inherent: they exist without a constitutional grant; the Constitution only limits them",
+   "All three are lodged in Congress and may be delegated (e.g., to LGUs)"
+  ],
+  "src": "DG reviewer; Ericta; PPI",
+  "rv": "gov-police",
+  "ordered": false
+ },
+ {
+  "id": "b-gov-ed-tax",
+  "t": "gov",
+  "title": "Limits on eminent domain",
+  "ask": "What two requirements limit the power of eminent domain (Art. III, Sec. 9)?",
+  "items": [
+   "Eminent domain requirement 1: taking for a particular public purpose (public use)",
+   "Eminent domain requirement 2: payment of just compensation to the owner"
+  ],
+  "src": "Republic v. Heirs of Borbon (2015); DG reviewer",
+  "rv": "gov-police",
+  "ordered": false
+ }
+]

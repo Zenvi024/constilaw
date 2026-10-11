@@ -1,0 +1,1294 @@
+[
+ {
+  "id": "a-method-steps",
+  "t": "basics",
+  "title": "Four steps per exam problem (with minutes)",
+  "ask": "What are the four steps for each 22-minute problem, and how many minutes go to each?",
+  "items": [
+   "Read and mark (3 minutes): who acted, under what power, exact words, numbers, dates, the question asked.",
+   "Spot and outline (3 minutes): run the issue checklist; pick 2–3 decisive issues, one anchor case each.",
+   "Write (14 minutes): about 150–180 words; answer first, then rule, application, conclusion.",
+   "Check (2 minutes): did I answer the question actually asked, and cite a provision and a case?"
+  ],
+  "src": "Exam method (rule map 00); 1 hr 30 min, four problems, one yellow sheet",
+  "rv": "method-format",
+  "hook": "3–3–14–2",
+  "ordered": true
+ },
+ {
+  "id": "a-method-alac",
+  "t": "basics",
+  "title": "The ALAC template",
+  "ask": "What do the four letters of ALAC stand for, in order?",
+  "items": [
+   "A – Answer: lead with Yes/No or ‘Section 4 is unconstitutional.’",
+   "L – Law: the provision and an anchor case.",
+   "A – Application: tie the rule to the exact words of the law or the facts.",
+   "C – Conclusion: one sentence that answers again."
+  ],
+  "src": "Exam method (rule map 00); Gatmaytan block intel",
+  "rv": "method-alac",
+  "ordered": true
+ },
+ {
+  "id": "a-method-shapes",
+  "t": "basics",
+  "title": "Gatmaytan’s four question shapes",
+  "ask": "What are the four question shapes Gatmaytan uses on exams?",
+  "items": [
+   "‘Determine the constitutionality of Section X of RA ___’ (text quoted; the defect hides in one phrase).",
+   "‘Resolve the legal issues in this story’ or ‘critique this official’s statement’ (find every issue).",
+   "‘How does the new law address the issues in [case]?’ (state the case’s issue, show the statute’s fix).",
+   "‘Assume X challenges this; resolve it in his favor’ (argue one side; do not hedge)."
+  ],
+  "src": "Exam method (rule map 00): 2020 quizzes; 2023 Q1, Q3; 2024 Q2–Q4",
+  "rv": "method-shapes",
+  "ordered": false
+ },
+ {
+  "id": "a-method-procedural-paragraph",
+  "t": "basics",
+  "title": "Order of the procedural paragraph",
+  "ask": "In what order do you write the two- or three-line procedural paragraph before the merits?",
+  "items": [
+   "Remedy and forum (Rule 65 in the SC, declaratory relief in the RTC, tribunal, COA).",
+   "Actual case and ripeness: is it only a bill, a proposal, a draft IRR?",
+   "Standing: who is suing, and in what capacity?",
+   "Mootness: have events overtaken the case (and does an exception apply)?"
+  ],
+  "src": "Exam method and JR rule map (‘In a news question’ box)",
+  "rv": "method-procedure",
+  "hook": "Forum → Ripe → Party → Moot, then merits",
+  "ordered": true
+ },
+ {
+  "id": "a-method-checklist",
+  "t": "basics",
+  "title": "The eight-heading issue checklist",
+  "ask": "What are the eight headings of the margin issue checklist?",
+  "items": [
+   "Court and procedure (actual case, ripeness/mootness, standing, earliest opportunity, lis mota, remedy, forum).",
+   "Who acted and under what power (Congress, one House, committee, President, agency, LGU, private party).",
+   "Separation of powers (encroachment, legislative veto, Congress interpreting the Constitution).",
+   "Delegation (completeness and sufficient-standard tests, IRR requisites, publication, subdelegation).",
+   "How the law was made (title/one subject, origination, riders, savings, tax exemptions).",
+   "Congress internally (officers, quorum, rules, discipline, privileges, offices, tribunals, CA).",
+   "Inherent powers (police power, eminent domain, non-impairment, state immunity).",
+   "People (citizenship, election of citizenship, RA 9225, residence, suffrage)."
+  ],
+  "src": "Exam method (rule map 00), issue checklist",
+  "rv": "method-checklist",
+  "ordered": true
+ },
+ {
+  "id": "a-basics-tribe-modes",
+  "t": "basics",
+  "title": "Tribe’s six modes of constitutional argument",
+  "ask": "What are Tribe’s six modes of constitutional interpretation (Gatmaytan, Legal Method Essentials)?",
+  "items": [
+   "Textualism: the words alone, read in linguistic context.",
+   "Structural analysis: what the arrangement of the text implies (e.g., separation of powers).",
+   "Originalism: what the framers consciously intended.",
+   "Normative or pragmatic approach: the nation’s ethos, moral and political identity.",
+   "Judicial precedent (stare decisis): decisional doctrine; gives flexibility and stability.",
+   "Combination of the above."
+  ],
+  "src": "Tribe, in Gatmaytan, Legal Method Essentials (Ch. 1–3); class reviewer",
+  "rv": "interp-principles",
+  "hook": "T-S-O-N-P-C: Text, Structure, Origin, Norms, Precedent, Combo",
+  "ordered": true
+ },
+ {
+  "id": "a-basics-tribe-weaknesses",
+  "t": "basics",
+  "title": "Weak points of the Tribe modes",
+  "ask": "What is the main weakness (or advantage) of each of these modes: textualism, originalism, normative argument, precedent?",
+  "items": [
+   "Textualism: words are ambiguous or self-contradictory, and it risks freezing the Constitution into obsolescence.",
+   "Originalism: framers, drafters and ratifiers did not share a single purpose.",
+   "Originalism: historical records are often inconclusive and contradictory.",
+   "Originalism: subordinates ratified text to subjective, un-enacted intentions; abstract intentions over concrete expectations.",
+   "Normative/pragmatic: inappropriate subjectivity; appeals to values not properly part of constitutional law.",
+   "Precedent (advantages): flexibility to adapt over time, and stability because judges must follow it."
+  ],
+  "src": "Tribe, in Gatmaytan, Legal Method Essentials; class reviewer",
+  "rv": "interp-principles",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-three-canons",
+  "t": "basics",
+  "title": "The three classic aids to construction",
+  "ask": "What are the three classic principles of constitutional construction (as listed in Francisco), with their anchor cases?",
+  "items": [
+   "Verba legis: words take their ordinary meaning unless technical terms are used (J.M. Tuason).",
+   "Ratio legis est anima: if unclear, follow the intent of the framers and the ratifying people (Nitafan; Civil Liberties Union).",
+   "Ut magis valeat quam pereat: read as a whole; harmonize so every word is operative (Civil Liberties Union)."
+  ],
+  "src": "Francisco v. House (2003); J.M. Tuason; Nitafan; Civil Liberties Union v. Exec. Sec.",
+  "cases": [
+   "francisco",
+   "jmtuason",
+   "nitafan"
+  ],
+  "rv": "interp-principles",
+  "hook": "Words → Intent → Whole",
+  "ordered": true
+ },
+ {
+  "id": "a-basics-other-canons",
+  "t": "basics",
+  "title": "Other interpretive rules (class reviewer)",
+  "ask": "Besides the three classic canons, what other rules of constitutional interpretation are in the materials?",
+  "items": [
+   "Prospectivity: provisions apply prospectively unless they say otherwise (Filoteo).",
+   "Expressio unius est exclusio alterius: express mention of some of a class excludes others.",
+   "Provisions are generally mandatory, not directory.",
+   "Presumption of self-execution (Manila Prince Hotel).",
+   "No mandate is given primacy over another unless the Constitution makes its primacy clear (Kida v. Senate).",
+   "Literal meaning yields only where it would be impossible, absurd or unjust (Vicencio v. Villar).",
+   "Interpretation belongs to the courts; Congress cannot declare a provision’s meaning by statute (Endencia)."
+  ],
+  "src": "Class reviewer (Principles of Constitutional Construction); Filoteo; Manila Prince; Endencia",
+  "cases": [
+   "filoteo",
+   "manilaprince",
+   "endencia"
+  ],
+  "rv": "interp-principles",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-directory",
+  "t": "basics",
+  "title": "When a constitutional provision is merely directory",
+  "ask": "Constitutional provisions are generally mandatory. What three conditions make a provision directory instead?",
+  "items": [
+   "No consequential rights or liabilities depend on it.",
+   "No injury can result from ignoring it.",
+   "Its purpose can be accomplished in a manner other than that prescribed."
+  ],
+  "src": "Class reviewer (Mandatory and directory provisions)",
+  "rv": "interp-principles",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-self-executing-test",
+  "t": "basics",
+  "title": "Test for a self-executing provision",
+  "ask": "Under Manila Prince Hotel, when is a constitutional provision self-executing? (four elements)",
+  "items": [
+   "It is complete in itself and operative without enabling legislation.",
+   "The nature and extent of the right conferred are fixed by the Constitution.",
+   "The liability imposed is fixed by the Constitution.",
+   "Nothing indicates the subject is referred to Congress for action."
+  ],
+  "src": "Manila Prince Hotel v. GSIS (1997)",
+  "cases": [
+   "manilaprince"
+  ],
+  "rv": "interp-principles",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-self-exec-rules",
+  "t": "basics",
+  "title": "Self-execution: rule, exception, exception to the exception",
+  "ask": "State the general rule on self-execution, its exception, the exceptions to that exception, and the reason for the presumption.",
+  "items": [
+   "General rule: provisions are presumed self-executing unless they expressly require legislation.",
+   "Reason: a contrary presumption would let Congress nullify the Constitution by not legislating.",
+   "Exception: Art. II principles and policies are not self-executing; they guide courts and Congress.",
+   "Exception to exception: Art. II, Secs. 15–16 (health; balanced and healthful ecology), per Oposa v. Factoran.",
+   "2026: Kapatiran treats Art. II, Sec. 26 (political dynasties) as a mandatory duty enforceable by mandamus."
+  ],
+  "src": "Manila Prince Hotel; Oposa v. Factoran; Kapatiran Party v. Congress (2026)",
+  "cases": [
+   "manilaprince",
+   "kapatiran2026"
+  ],
+  "rv": "interp-principles",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-kapatiran-questions",
+  "t": "basics",
+  "title": "Kapatiran’s three questions on a ‘shall … as defined by law’ clause",
+  "ask": "After Kapatiran (2026), what three questions do you keep apart when a provision says the State ‘shall’ act ‘as may be defined by law’?",
+  "items": [
+   "Does the provision impose a duty (‘shall’)?",
+   "Who defines its content (‘as may be defined by law’ means Congress)?",
+   "Can courts enforce it (grave abuse by inaction under Art. VIII, Sec. 1; mandamus)?"
+  ],
+  "src": "Kapatiran Party v. Congress (Aug. 26, 2026); Art. II, Sec. 26",
+  "cases": [
+   "kapatiran2026"
+  ],
+  "rv": "interp-principles",
+  "ordered": true
+ },
+ {
+  "id": "a-basics-salary-line",
+  "t": "basics",
+  "title": "The judges’ salary line of cases",
+  "ask": "Trace the three cases on taxing judges’ salaries, in order, with each holding.",
+  "items": [
+   "Perfecto v. Meer (1950): income tax on a judge’s salary is a prohibited diminution (1935 Constitution).",
+   "Endencia v. David (1953): RA 590 declaring such tax ‘not a diminution’ is void; Congress cannot interpret the Constitution.",
+   "Nitafan v. CIR (1987): under the 1987 Constitution framers intended salaries taxable; Perfecto and Endencia discarded."
+  ],
+  "src": "Perfecto; Endencia; Nitafan",
+  "cases": [
+   "perfecto",
+   "endencia",
+   "nitafan"
+  ],
+  "rv": "interp-principles",
+  "ordered": true
+ },
+ {
+  "id": "a-basics-nitafan-salary-conditions",
+  "t": "basics",
+  "title": "When Congress may fix another salary rate for judges",
+  "ask": "Under Nitafan, on what two conditions may Congress fix a different salary rate for Justices and judges?",
+  "items": [
+   "The new rate is higher than what they receive when the law is enacted; or",
+   "If lower, it applies only to those appointed after the law’s enactment."
+  ],
+  "src": "Nitafan v. CIR (1987); Art. VIII, Sec. 10 (salary ‘shall not be decreased’ during continuance in office)",
+  "cases": [
+   "nitafan"
+  ],
+  "rv": "interp-principles",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-modes-proposal",
+  "t": "basics",
+  "title": "Three modes of proposing changes (Art. XVII)",
+  "ask": "What are the three modes of proposing amendments or revisions, with the vote or signatures each needs?",
+  "items": [
+   "Congress as constituent assembly: ‘a vote of three-fourths of all its Members’ (Sec. 1(1)); amendment or revision.",
+   "Constitutional convention (Sec. 1(2)); amendment or revision.",
+   "People’s initiative: petition of at least 12% of all registered voters, at least 3% in every district (Sec. 2); amendments only."
+  ],
+  "src": "Art. XVII, Secs. 1–2",
+  "cases": [
+   "lambino"
+  ],
+  "rv": "interp-amend",
+  "hook": "¾ – ConCon – 12/3",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-call-concon",
+  "t": "basics",
+  "title": "Two ways Congress calls a constitutional convention",
+  "ask": "Under Art. XVII, Sec. 3, what are the two ways Congress may bring about a constitutional convention, and the vote for each?",
+  "items": [
+   "Call the convention directly ‘by a vote of two-thirds of all its Members’.",
+   "‘By a majority vote of all its Members, submit to the electorate the question of calling such a convention.’"
+  ],
+  "src": "Art. XVII, Sec. 3",
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-initiative-reqs",
+  "t": "basics",
+  "title": "Requirements and limits of a people’s initiative (Art. XVII, Sec. 2)",
+  "ask": "What does Art. XVII, Sec. 2 require of, and how does it limit, a people’s initiative on the Constitution?",
+  "items": [
+   "Amendments only, never revisions.",
+   "Petition of ‘at least twelve per centum of the total number of registered voters’.",
+   "Every legislative district represented by ‘at least three per centum of the registered voters therein’.",
+   "Not ‘within five years following the ratification of this Constitution’.",
+   "Not ‘oftener than once every five years thereafter’.",
+   "‘The Congress shall provide for the implementation’: needs an enabling law (not self-executing, Santiago)."
+  ],
+  "src": "Art. XVII, Sec. 2; Santiago v. COMELEC (1997); Lambino (2006)",
+  "cases": [
+   "santiago97",
+   "lambino"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-ratification",
+  "t": "basics",
+  "title": "Ratification of amendments and revisions (Art. XVII, Sec. 4)",
+  "ask": "What are the requirements for ratifying an amendment or revision, and from when is the plebiscite period counted?",
+  "items": [
+   "Ratified ‘by a majority of the votes cast in a plebiscite’.",
+   "Plebiscite ‘not earlier than sixty days nor later than ninety days’ after the trigger date.",
+   "Congress or convention proposals (Sec. 1): counted from ‘the approval of such amendment or revision’.",
+   "Initiative (Sec. 2): counted from ‘the certification by the Commission on Elections of the sufficiency of the petition’."
+  ],
+  "src": "Art. XVII, Sec. 4",
+  "rv": "interp-amend",
+  "hook": "Majority of votes cast, 60–90 days",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-amend-vs-revise",
+  "t": "basics",
+  "title": "Amendment versus revision: contrasts",
+  "ask": "Give the contrasts between an amendment and a revision (Lambino; class reviewer table).",
+  "items": [
+   "Amendment adds, reduces or deletes without altering basic principles; revision alters a basic principle (separation of powers, checks and balances).",
+   "Amendment affects only the specific provision amended; revision affects several provisions or the substantial entirety.",
+   "Amendment improves or better carries out the original purpose, within the lines of the original constitution.",
+   "Amendment: any of the three modes; revision: constituent assembly or convention only, never initiative."
+  ],
+  "src": "Lambino v. COMELEC (2006); class reviewer",
+  "cases": [
+   "lambino"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-lambino-tests",
+  "t": "basics",
+  "title": "Lambino’s two-part test: amendment or revision?",
+  "ask": "What two tests does Lambino use to tell a revision from an amendment?",
+  "items": [
+   "Quantitative: is the change so extensive that it alters the substantial entirety of the Constitution?",
+   "Qualitative: does it make far-reaching changes to the basic plan of government (e.g., presidential to parliamentary, bicameral to unicameral)?"
+  ],
+  "src": "Lambino v. COMELEC (2006)",
+  "cases": [
+   "lambino"
+  ],
+  "rv": "interp-amend",
+  "hook": "How MUCH changes vs. WHAT KIND changes; either = revision",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-lambino-petition",
+  "t": "basics",
+  "title": "Lambino’s requisites of an initiative petition",
+  "ask": "What must an initiative petition satisfy under Lambino to be ‘directly proposed by the people … upon a petition’?",
+  "items": [
+   "The people must author, and so personally sign, the entire proposal.",
+   "The proposal must be embodied in a petition.",
+   "The full text is on the face of the petition or attached to it.",
+   "If attached, the petition must say so.",
+   "The full text must be shown to the people before they sign (a signature sheet is not the petition)."
+  ],
+  "src": "Lambino v. COMELEC (2006); Art. XVII, Sec. 2",
+  "cases": [
+   "lambino"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-lambino-grounds",
+  "t": "basics",
+  "title": "Why the Lambino initiative failed",
+  "ask": "On what grounds was the Lambino initiative dismissed (8–7)?",
+  "items": [
+   "The signature sheets did not contain the text of the proposal; the sheet is not the ‘petition’.",
+   "Quantitatively a revision: it overhauled Arts. VI and VII, affecting 105 provisions.",
+   "Qualitatively a revision: presidential to parliamentary, bicameral to unicameral.",
+   "No need to revisit Santiago (RA 6735 inadequate), since the petition already failed.",
+   "COMELEC committed no grave abuse in following Santiago."
+  ],
+  "src": "Lambino v. COMELEC (2006); Gatmaytan, ‘Changing Constitutions’",
+  "cases": [
+   "lambino",
+   "santiago97"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-santiago-ra6735",
+  "t": "basics",
+  "title": "Why RA 6735 is inadequate for constitutional initiatives",
+  "ask": "Why did Santiago v. COMELEC hold RA 6735 inadequate for initiatives on the Constitution?",
+  "items": [
+   "Sec. 2 of the Act (statement of policy) is silent on amendments to the Constitution; ‘Constitution’ there is an afterthought.",
+   "Unlike other initiatives, the Act does not provide the contents of a petition on the Constitution.",
+   "No subtitle on constitutional initiative (only national and local initiative subtitles).",
+   "No procedures for gathering and verifying signatures or determining sufficiency.",
+   "COMELEC cannot fill the gap by resolution: Res. No. 2300 void (undue delegation, ultra vires)."
+  ],
+  "src": "Santiago v. COMELEC (1997); Gatmaytan’s book (three reasons); class reviewer",
+  "cases": [
+   "santiago97"
+  ],
+  "rv": "interp-amend",
+  "hook": "Silent – no contents – no subtitle",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-proper-submission",
+  "t": "basics",
+  "title": "Doctrine of proper submission",
+  "ask": "What are the rules under the doctrine of proper submission?",
+  "items": [
+   "A plebiscite may coincide with a general election, if the people can still be informed (Gonzales).",
+   "All proposals of one convention go to the people together at one plebiscite (Tolentino).",
+   "The people must have a full ‘frame of reference’ (Tolentino).",
+   "No piecemeal submission, e.g., a voting-age amendment ahead of the rest (Tolentino)."
+  ],
+  "src": "Gonzales v. COMELEC (1967); Tolentino v. COMELEC (1971)",
+  "cases": [
+   "gonzales67",
+   "tolentino71"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-conass-voting",
+  "t": "basics",
+  "title": "Joint or separate voting in a constituent assembly",
+  "ask": "The three-fourths vote is unclear on joint or separate voting. What are the points for separate voting (V. V. Mendoza’s solution)?",
+  "items": [
+   "The text is silent; the question is open (say so, and note the contrary joint-vote reading).",
+   "Convene in joint session but vote separately, as under the 1935 Constitution.",
+   "Bicameral structure of Art. VI supports separate voting.",
+   "Otherwise the 24 senators are outvoted by more than 300 representatives.",
+   "Sitting as a constituent assembly is not sitting as Congress."
+  ],
+  "src": "Art. XVII, Sec. 1(1); V. V. Mendoza; class reviewer; Gatmaytan, ‘Changing Constitutions’",
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-javellana-votes",
+  "t": "basics",
+  "title": "Javellana’s votes",
+  "ask": "How did the ten Justices vote on each question in Javellana v. Executive Secretary (1973)?",
+  "items": [
+   "Justiciable? 6 yes (justiciable), 4 political question.",
+   "Validly ratified under Art. XV of the 1935 Constitution? 6 said no.",
+   "Accepted by the people? 4 yes; 2 (Concepcion, Zaldivar) no free acceptance under martial law; 4 could not tell.",
+   "Relief? 6 voted to dismiss the petitions, 4 to grant.",
+   "Result: ‘no further judicial obstacle’ to the 1973 Constitution being considered in force."
+  ],
+  "src": "Javellana v. Executive Secretary (1973)",
+  "cases": [
+   "javellana"
+  ],
+  "rv": "interp-amend",
+  "hook": "6 – 6 – 4/2/4 – 6",
+  "ordered": true
+ },
+ {
+  "id": "a-basics-javellana-defects",
+  "t": "basics",
+  "title": "Why the 1973 Constitution was not validly ratified (Concepcion)",
+  "ask": "Per Concepcion in Javellana, why did the Citizens’ Assemblies not ratify the 1973 Constitution under Art. XV of the 1935 Constitution?",
+  "items": [
+   "Participants were citizens aged 15 and above, not qualified and registered voters.",
+   "The questions were not confined to ratification (New Society, martial law reforms, convening Congress).",
+   "Voting (e.g., by show of hands) did not follow Art. XV or the Election Code of 1971.",
+   "Under martial law, the votes could not show free acceptance; reports were doubtful.",
+   "Continued life under the government is not ratification and cures nothing."
+  ],
+  "src": "Javellana (Concepcion, C.J.; Zaldivar, J.)",
+  "cases": [
+   "javellana",
+   "planas"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-gatmaytan-javellana",
+  "t": "basics",
+  "title": "Gatmaytan on Javellana and Lambino",
+  "ask": "What is Gatmaytan’s reading of Javellana and of Lambino as its counterpoint?",
+  "items": [
+   "Javellana: a majority found no valid ratification, yet the Court ‘looked the other way’.",
+   "It removed the judiciary from a position of institutional significance.",
+   "It survived martial law but lost public respect; by 1986 seen as subservient to Marcos.",
+   "Lambino (2006) was the Court’s redemption: it blocked a government-driven ‘people’s’ initiative despite pressure."
+  ],
+  "src": "Gatmaytan, ‘Changing Constitutions: Judicial Review and Redemption’ (2007)",
+  "cases": [
+   "javellana",
+   "lambino"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-suspect-projects",
+  "t": "basics",
+  "title": "Why Charter change keeps failing (Gatmaytan)",
+  "ask": "Per Gatmaytan’s ‘Constitutional Amendments as Suspect Projects’, what explains the failure of Charter change?",
+  "items": [
+   "The 1987 Constitution was built as a legal obstacle to dictatorship after Marcos.",
+   "Every attempt is seen as a politician’s personal or partisan project to stay in power.",
+   "The Supreme Court and civil society have blocked attempts.",
+   "Never amended in over 30 years, so protectionist provisions remain.",
+   "Changes are doomed unless politicians regain public trust."
+  ],
+  "src": "Gatmaytan, ‘Constitutional Amendments as Suspect Projects’ (2019)",
+  "rv": "interp-context",
+  "ordered": false
+ },
+ {
+  "id": "a-basics-chacha-justiciability",
+  "t": "basics",
+  "title": "Charter change acts the Court will or will not review",
+  "ask": "Which Charter change acts are reviewable, and which are premature or void, per the cases?",
+  "items": [
+   "Congress acting as a constituent assembly is subject to judicial review (Gonzales).",
+   "A decree calling a plebiscite to ratify a constitution is justiciable (Planas).",
+   "Whether a constitution was validly ratified is justiciable (Javellana, six Justices).",
+   "A House resolution merely calling for a constituent assembly is not ripe (Lozano v. Nograles).",
+   "An Executive agreement promising constitutional change is grave abuse (North Cotabato)."
+  ],
+  "src": "Gonzales; Planas; Javellana; Lozano; Province of North Cotabato v. GRP",
+  "cases": [
+   "gonzales67",
+   "planas",
+   "javellana",
+   "lozano",
+   "northcotabato"
+  ],
+  "rv": "interp-amend",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-sop-violations",
+  "t": "jr",
+  "title": "Two ways separation of powers is violated",
+  "ask": "In what two ways is the separation of powers violated (Belgica, per Gatmaytan)?",
+  "items": [
+   "One branch impermissibly interferes with another’s performance of its constitutionally assigned function.",
+   "One branch assumes a function that belongs to another."
+  ],
+  "src": "Belgica v. Executive Secretary (2013), cited in Gatmaytan’s book",
+  "cases": [
+   "belgica2013"
+  ],
+  "rv": "jr-basis",
+  "hook": "Interfere or Assume",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-sop-examples",
+  "t": "jr",
+  "title": "Classic separation-of-powers violations in the materials",
+  "ask": "Give the four classic separation-of-powers violations in the materials, with their cases.",
+  "items": [
+   "A legislative veto over IRRs by a congressional oversight committee (ABAKADA).",
+   "Legislators identifying projects after the budget is enacted (Belgica).",
+   "An agency (Tanodbayan) ‘reviewing’ a Supreme Court decision (In re Laureta).",
+   "A statute interpreting the Constitution (Endencia)."
+  ],
+  "src": "ABAKADA v. Purisima; Belgica; In re Laureta; Endencia",
+  "cases": [
+   "abakada",
+   "belgica2013",
+   "laureta",
+   "endencia"
+  ],
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-demetria-rule",
+  "t": "jr",
+  "title": "When the Court interferes with a co-equal branch",
+  "ask": "Under Demetria v. Alba, what are the general rule and the exception on judicial interference with another branch?",
+  "items": [
+   "General rule: where a branch acts within the limits of its authority, the Judiciary cannot and ought not interfere.",
+   "Exception: where it acts beyond its constitutional authority, the Judiciary must declare the act void."
+  ],
+  "src": "Demetria v. Alba (1987)",
+  "cases": [
+   "demetria"
+  ],
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-angara-limits",
+  "t": "jr",
+  "title": "Angara’s justification and limits of judicial review",
+  "ask": "Per Angara, why is judicial review not judicial supremacy, and what limits it?",
+  "items": [
+   "Allocating constitutional boundaries asserts no superiority; it is a duty the Constitution assigns.",
+   "It is limited to actual cases and controversies.",
+   "It is limited further to the constitutional question raised, the lis mota.",
+   "Legislative acts enjoy a presumption of constitutionality."
+  ],
+  "src": "Angara v. Electoral Commission (1936)",
+  "cases": [
+   "angara"
+  ],
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-classical-expanded",
+  "t": "jr",
+  "title": "Classical versus expanded judicial review",
+  "ask": "What distinguishes classical from expanded judicial review?",
+  "items": [
+   "Classical: settle actual controversies involving rights legally demandable and enforceable (Art. VIII, Sec. 1, 2nd para., 1st clause).",
+   "Expanded: determine grave abuse of discretion amounting to lack or excess of jurisdiction by any branch or instrumentality.",
+   "Expanded review was written in response to Martial Law, when the Court hid behind the political question doctrine.",
+   "Philippine judicial review is express (Art. VIII, Secs. 1, 4(2), 5(2)); in the US it rests on Marbury v. Madison."
+  ],
+  "src": "Art. VIII, Sec. 1; class reviewer; Gatmaytan",
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-textual-bases",
+  "t": "jr",
+  "title": "Where the Constitution grants judicial review",
+  "ask": "Which provisions of Art. VIII expressly provide for judicial review, and what do they say?",
+  "items": [
+   "Sec. 1, 2nd para.: judicial power includes settling actual controversies and determining grave abuse of discretion.",
+   "Sec. 4(2): constitutionality of a treaty, international or executive agreement, or law is heard en banc.",
+   "Sec. 4(2) vote: majority of the Members who actually took part in the deliberations and voted.",
+   "Sec. 5(2)(a): SC reviews final judgments where constitutionality or validity of a treaty, law, decree, ordinance or regulation is in question.",
+   "Sec. 5(2)(b): SC reviews final judgments on the legality of any tax, impost, assessment or toll, or related penalty."
+  ],
+  "src": "Art. VIII, Secs. 1, 4(2), 5(2)(a)–(b)",
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-functions",
+  "t": "jr",
+  "title": "Functions of judicial review",
+  "ask": "What are the three functions of judicial review?",
+  "items": [
+   "Checking: invalidating a law or act contrary to the Constitution.",
+   "Legitimating: upholding the validity of a law or act.",
+   "Symbolic: laying down controlling principles to educate the bench and the bar (basis of a mootness exception)."
+  ],
+  "src": "Class reviewer; JR rule map",
+  "rv": "jr-basis",
+  "hook": "Check – Legitimate – Symbol",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-scrutiny-levels",
+  "t": "jr",
+  "title": "Three levels of scrutiny and their triggers",
+  "ask": "What are the three levels of scrutiny, and when does each apply?",
+  "items": [
+   "Strict scrutiny: fundamental rights (e.g., travel) or suspect classifications.",
+   "Intermediate scrutiny: quasi-suspect classes (sex/gender, illegitimacy) or important but not fundamental rights.",
+   "Rational basis: everything else (no suspect class, no fundamental right)."
+  ],
+  "src": "Class reviewer (Levels of Scrutiny and the Equal Protection Clause)",
+  "rv": "jr-basis",
+  "ordered": true
+ },
+ {
+  "id": "a-jr-strict-scrutiny",
+  "t": "jr",
+  "title": "Elements of strict scrutiny",
+  "ask": "Under strict scrutiny, what must the government show for the law to stand, and who bears the burden?",
+  "items": [
+   "A compelling State interest (of the highest order).",
+   "Means narrowly tailored: the least restrictive means available, no overreach.",
+   "Burden on the government (no presumption of validity)."
+  ],
+  "src": "Class reviewer; White Light (ordinance failed least-restrictive-means)",
+  "cases": [
+   "whitelight"
+  ],
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-intermediate-scrutiny",
+  "t": "jr",
+  "title": "Elements of intermediate scrutiny",
+  "ask": "Under intermediate scrutiny, what must the government show?",
+  "items": [
+   "An important governmental objective.",
+   "Means substantially related to that objective (strong and logical link).",
+   "Need not be the least restrictive means, but must not be overbroad."
+  ],
+  "src": "Class reviewer",
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-rational-basis",
+  "t": "jr",
+  "title": "Elements of rational basis review",
+  "ask": "Under rational basis review, what is required and who bears the burden?",
+  "items": [
+   "A legitimate government interest (lawful and permissible, not necessarily the highest).",
+   "A rational, reasonable connection between the classification and that interest; need not be the best means.",
+   "Not arbitrary or irrational.",
+   "Law presumed valid; the challenger bears the burden."
+  ],
+  "src": "Class reviewer",
+  "rv": "jr-basis",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-pq-definition",
+  "t": "jr",
+  "title": "Two kinds of political questions",
+  "ask": "A political question is one that, under the Constitution, is to be decided by whom? (two kinds)",
+  "items": [
+   "By the people in their sovereign capacity; or",
+   "By the legislative or executive branch, to which full discretionary authority has been delegated."
+  ],
+  "src": "Tañada v. Cuenco definition, in the class reviewer; JR rule map",
+  "rv": "jr-pq",
+  "hook": "It concerns wisdom, not legality",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-pq-francisco",
+  "t": "jr",
+  "title": "Francisco’s test: truly political or justiciable?",
+  "ask": "Under Francisco, how do you tell a truly political question from a justiciable one?",
+  "items": [
+   "Ask: does the Constitution impose limits or conditions on the power (vote, time bar, plebiscite, procedure)?",
+   "If yes, whether they were observed is justiciable; the Court is duty-bound to decide.",
+   "If the matter is wholly left to a political branch with no standard, it is truly political.",
+   "Even then, the Court may ask whether there was grave abuse of discretion (Art. VIII, Sec. 1)."
+  ],
+  "src": "Francisco v. House (2003)",
+  "cases": [
+   "francisco"
+  ],
+  "rv": "jr-pq",
+  "ordered": true
+ },
+ {
+  "id": "a-jr-pq-baker",
+  "t": "jr",
+  "title": "Baker v. Carr formulations (cited in Francisco)",
+  "ask": "What are the Baker v. Carr indicators of a political question that Francisco cited?",
+  "items": [
+   "A textually demonstrable constitutional commitment of the issue to a coordinate political department.",
+   "A lack of judicially discoverable and manageable standards for resolving it.",
+   "Impossibility of deciding without an initial policy determination clearly for nonjudicial discretion.",
+   "Impossibility of independent resolution without expressing lack of respect due coordinate branches.",
+   "An unusual need for unquestioning adherence to a political decision already made.",
+   "Potential embarrassment from multifarious pronouncements by various departments on one question."
+  ],
+  "src": "Baker v. Carr, 369 U.S. 186 (1962), as cited in Francisco v. House (2003); not in the class reviewer",
+  "cases": [
+   "francisco"
+  ],
+  "rv": "jr-pq",
+  "hook": "Francisco: the first three are the most reliable",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-pq-examples",
+  "t": "jr",
+  "title": "Justiciable or political? Case examples",
+  "ask": "Classify these as justiciable or political: the one-year impeachment bar, city conversion plebiscite, constituent assembly acts, project route, urgency certification.",
+  "items": [
+   "Justiciable: the one-year bar on impeachment complaints (Francisco).",
+   "Justiciable: the plebiscite needed to convert a city’s status (Miranda v. Aguirre).",
+   "Justiciable: Congress acting as constituent assembly (Gonzales).",
+   "Political: choosing a project route on grounds of wisdom (Torrecampo).",
+   "Political (generally): the factual basis of a presidential urgency certification (Tolentino v. Sec. of Finance)."
+  ],
+  "src": "Francisco; Miranda; Gonzales; Torrecampo; Tolentino v. Sec. of Finance",
+  "cases": [
+   "francisco",
+   "miranda",
+   "gonzales67",
+   "torrecampo",
+   "tolentinofinance"
+  ],
+  "rv": "jr-pq",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-requisites",
+  "t": "jr",
+  "title": "Requisites of judicial review",
+  "ask": "What are the four requisites of judicial review?",
+  "items": [
+   "An actual case or controversy (ripe, not moot).",
+   "A proper party with standing (personal and substantial interest; direct injury).",
+   "The constitutional question raised at the earliest opportunity.",
+   "The constitutional question is the lis mota (necessary to decide the case)."
+  ],
+  "src": "Art. VIII, Sec. 1; Angara; Arceta; Lozano",
+  "cases": [
+   "angara",
+   "arceta",
+   "kapit"
+  ],
+  "rv": "jr-req",
+  "hook": "Case – Party – Early – Necessary",
+  "ordered": true
+ },
+ {
+  "id": "a-jr-ripeness",
+  "t": "jr",
+  "title": "Elements of ripeness",
+  "ask": "When is a question ripe for adjudication? (two elements)",
+  "items": [
+   "The challenged act has been accomplished or performed (reached a final, definitive state).",
+   "It has a direct, concrete and adverse effect on the petitioner."
+  ],
+  "src": "Lozano v. Nograles (2009); class reviewer",
+  "cases": [
+   "lozano"
+  ],
+  "rv": "jr-req",
+  "hook": "Done + Hurts me",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-not-ripe",
+  "t": "jr",
+  "title": "What is not ripe (prematurity cases)",
+  "ask": "Name the acts held not ripe for judicial review, with their cases.",
+  "items": [
+   "Mere fear that a regulatory power may be abused (PACU).",
+   "A bill not yet enacted (Montesclaros; In re JDF).",
+   "A House resolution calling for a constituent assembly (Lozano v. Nograles).",
+   "Peace agreements that need a law to take effect (PHILCONSA v. Phil. Gov’t, 2016).",
+   "The mere passage of a law with no injury to the petitioner (Falcis)."
+  ],
+  "src": "PACU; Montesclaros; In re JDF; Lozano; PHILCONSA (2016); Falcis",
+  "cases": [
+   "pacu",
+   "montesclaros",
+   "jdf",
+   "lozano",
+   "philconsa2016",
+   "falcis"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-bill-not-reviewable",
+  "t": "jr",
+  "title": "Why a bill cannot be reviewed",
+  "ask": "Why will the Court not rule on a pending bill?",
+  "items": [
+   "A bill is not a law; it has no legal effect.",
+   "It creates no rights and imposes no duties legally demandable and enforceable.",
+   "A ruling would be an advisory opinion.",
+   "The Court cannot restrain Congress from legislating or review its internal processes (separation of powers).",
+   "Judicial review cannot be compelled by mandamus; the remedy is to lobby Congress."
+  ],
+  "src": "Montesclaros v. COMELEC (2002); In re JDF (2015)",
+  "cases": [
+   "montesclaros",
+   "jdf"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-mootness-exceptions",
+  "t": "jr",
+  "title": "Exceptions to mootness",
+  "ask": "What are the four exceptions that let the Court decide a moot case?",
+  "items": [
+   "Grave violation of the Constitution.",
+   "Exceptional character of the situation and paramount public interest involved.",
+   "Need to formulate controlling principles to guide the bench, the bar and the public.",
+   "Capable of repetition yet evading review."
+  ],
+  "src": "David v. Macapagal-Arroyo (2006); Sanlakas (2004); KAPIT (2026)",
+  "cases": [
+   "sanlakas",
+   "kapit"
+  ],
+  "rv": "jr-req",
+  "hook": "Grave – Paramount – Principles – Repetition",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-moot-events",
+  "t": "jr",
+  "title": "Supervening events that mooted cases",
+  "ask": "Give the supervening events that mooted cases in the materials.",
+  "items": [
+   "A ruling in another case plus an amendatory law (Atlas Fertilizer).",
+   "Lifting of the state-of-rebellion declaration (Lacson v. Perez; Sanlakas, decided anyway as capable of repetition).",
+   "Suspension of the ordinances and the 2023 Metro Manila Traffic Code (KAPIT).",
+   "Postponement of the plebiscite (Planas)."
+  ],
+  "src": "Atlas; Lacson v. Perez; Sanlakas; KAPIT; Planas",
+  "cases": [
+   "atlas",
+   "lacsonperez",
+   "sanlakas",
+   "kapit",
+   "planas"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-kapit-grounds",
+  "t": "jr",
+  "title": "Grounds for dismissal in KAPIT v. City of Manila",
+  "ask": "On what grounds were the KAPIT petitions against the no-contact apprehension ordinances dismissed?",
+  "items": [
+   "Moot / no actual case: ordinances suspended and superseded by the 2023 Metro Manila Traffic Code.",
+   "No exception to mootness: exceptions apply to the issuance challenged, not an unchallenged successor.",
+   "Motorists’ interest alone is not ‘paramount public interest’.",
+   "Lack of standing: only one of three petitioners directly affected.",
+   "Third-party standing failed: members not identified, nor shown to want the group to sue.",
+   "Unregistered associations lacked capacity to sue.",
+   "Class reviewer adds: violation of the hierarchy of courts and forum shopping."
+  ],
+  "src": "KAPIT v. City of Manila (2026); class reviewer",
+  "cases": [
+   "kapit"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-direct-injury",
+  "t": "jr",
+  "title": "Direct injury test for standing",
+  "ask": "What are the elements of the direct injury test for legal standing?",
+  "items": [
+   "Actual or threatened injury from the allegedly illegal government conduct (personal and substantial interest).",
+   "Injury fairly traceable to the challenged action.",
+   "Injury likely to be redressed by a favorable ruling."
+  ],
+  "src": "AIWA v. Romulo (2005); Joya v. PCGG; IBP v. Zamora",
+  "cases": [
+   "aiwa",
+   "joya",
+   "ibpzamora"
+  ],
+  "rv": "jr-req",
+  "hook": "Injury – Traceable – Redressable",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-standing-exceptions",
+  "t": "jr",
+  "title": "Exceptions to the direct injury rule (White Light)",
+  "ask": "What exceptions to the direct injury requirement does White Light list?",
+  "items": [
+   "Third-party standing.",
+   "The overbreadth doctrine.",
+   "Taxpayer suits.",
+   "Issues of transcendental importance."
+  ],
+  "src": "White Light Corp. v. City of Manila (2009)",
+  "cases": [
+   "whitelight"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-kinds-standing",
+  "t": "jr",
+  "title": "Kinds of standing and when each is allowed",
+  "ask": "What are the seven kinds of standing, and when is each allowed?",
+  "items": [
+   "Citizen: enforcing a public right or duty, or transcendental importance (Tañada; Chavez v. PEA).",
+   "Taxpayer: illegal disbursement or misuse of public funds, or an unconstitutional tax (ITF).",
+   "Voter: obvious interest in the validity of an election law or election (Tolentino 2004).",
+   "Legislator: act impairs the prerogatives, powers or privileges of Congress or the legislator (Ople; Sanlakas).",
+   "Association/third party: members injured, interest germane; or third-party test (KMU; White Light; GMA).",
+   "Government: the State challenging its own law (People v. Vera).",
+   "Environment: any Filipino citizen as steward of nature, by citizen suit (Resident Marine Mammals)."
+  ],
+  "src": "JR rule map standing table; class reviewer A–G",
+  "cases": [
+   "tanada85",
+   "chavezpea",
+   "itf",
+   "tolentino04",
+   "ople",
+   "sanlakas",
+   "kmu",
+   "whitelight",
+   "gmacomelec",
+   "vera",
+   "marinemammals"
+  ],
+  "rv": "jr-req",
+  "hook": "C-T-V-L-A-G-E",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-taxpayer-fails",
+  "t": "jr",
+  "title": "Taxpayer standing denied: no disbursement",
+  "ask": "Name the cases where taxpayer standing failed because no public funds were disbursed.",
+  "items": [
+   "Joya v. PCGG: auction of property neither theirs nor public; no public funds spent.",
+   "AIWA v. Romulo: EO 185 needed no additional appropriation.",
+   "Lozano v. Nograles: a House resolution involved no disbursement or allocation of funds."
+  ],
+  "src": "Joya; AIWA; Lozano",
+  "cases": [
+   "joya",
+   "aiwa",
+   "lozano"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-associational",
+  "t": "jr",
+  "title": "Requisites and limits of associational standing",
+  "ask": "When may an association sue for its members, and what are the limits?",
+  "items": [
+   "Its members are injured or stand to be injured (CHREA; KMU).",
+   "The interest sought to be protected is germane to the association’s purpose.",
+   "It must identify its members and show they want it to sue (KAPIT).",
+   "It cannot assert rights of non-members with whom it has no substantial relation (Exec. Sec. v. CA: unskilled workers).",
+   "A general interest in the rule of law is not enough (IBP v. Zamora).",
+   "An unregistered association lacks capacity to sue (KAPIT)."
+  ],
+  "src": "CHREA; KMU; Exec. Sec. v. CA; IBP v. Zamora; KAPIT",
+  "cases": [
+   "chrea",
+   "kmu",
+   "execseccA",
+   "ibpzamora",
+   "kapit"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-third-party",
+  "t": "jr",
+  "title": "Requisites of third-party standing",
+  "ask": "What are the three requisites of third-party standing (White Light)?",
+  "items": [
+   "The litigant suffered an injury-in-fact (sufficiently concrete interest).",
+   "The litigant has a close relation to the third party.",
+   "Some hindrance prevents the third party from protecting its own interests."
+  ],
+  "src": "White Light Corp. v. City of Manila (2009); applied in GMA Network v. COMELEC",
+  "cases": [
+   "whitelight",
+   "gmacomelec"
+  ],
+  "rv": "jr-req",
+  "hook": "Injury – Relation – Hindrance",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-transcendental",
+  "t": "jr",
+  "title": "Factors of transcendental importance",
+  "ask": "What three factors determine whether an issue is of transcendental importance?",
+  "items": [
+   "The character of the funds or other assets involved.",
+   "A clear case of disregard of a constitutional or statutory prohibition by the respondent.",
+   "The lack of any other party with a more direct and specific interest in raising the questions."
+  ],
+  "src": "Francisco v. Fernando / Kilosbayan line, applied in Pangilinan v. Cayetano; IBP v. Zamora (relaxed); AIWA (refused)",
+  "cases": [
+   "ibpzamora",
+   "aiwa"
+  ],
+  "rv": "jr-req",
+  "hook": "Funds – Flagrant – No one else",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-pangilinan-critique",
+  "t": "jr",
+  "title": "Gatmaytan’s critique of Pangilinan v. Cayetano",
+  "ask": "What are Gatmaytan’s objections to the ‘variant technicalities’ in Pangilinan v. Cayetano?",
+  "items": [
+   "Individual legislators’ standing to protect their prerogatives was settled (Biraogo); no Senate act was needed.",
+   "Tying standing to an institutional position silences the minority.",
+   "A pro-President majority can block any challenge by sitting on a resolution.",
+   "Transcendental importance dispenses with standing; ‘better served by actual cases’ is wrong.",
+   "Not moot: an invalid withdrawal could not validly take effect.",
+   "Even if moot, it fit every exception to mootness."
+  ],
+  "src": "Gatmaytan, ‘Variant Technicalities in Pangilinan v. Cayetano’; class reviewer",
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-oposa-critique",
+  "t": "jr",
+  "title": "Gatmaytan on Oposa and environmental standing",
+  "ask": "What does Gatmaytan argue in ‘The Illusion of Intergenerational Equity’, and how did Resident Marine Mammals change things?",
+  "items": [
+   "Oposa’s pronouncement on standing for future generations was obiter dictum.",
+   "It was not needed to resolve the real issue: whether petitioners had a cause of action.",
+   "The present/future distinction is inconsequential: protect the present to protect the future.",
+   "Future generations are already recognized in law and in the framers’ intent for Art. II, Sec. 16.",
+   "Resident Marine Mammals: no need to give animals personality; any citizen may file a citizen suit (RPEC)."
+  ],
+  "src": "Gatmaytan, ‘The Illusion of Intergenerational Equity’ (2003); Oposa v. Factoran; Resident Marine Mammals (2015)",
+  "cases": [
+   "marinemammals"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-earliest-opportunity",
+  "t": "jr",
+  "title": "Rules on earliest opportunity",
+  "ask": "What does the ‘earliest opportunity’ requisite mean, and what are its qualifications?",
+  "items": [
+   "Raise the constitutional issue at the first chance, in the pleadings before a competent court.",
+   "It cannot be raised for the first time on appeal, unless that court has original jurisdiction.",
+   "The Supreme Court may, in its discretion, take up a constitutional issue raised later.",
+   "It does not mean suing as soon as a law passes; a regulation may be challenged when enforced (Gatmaytan)."
+  ],
+  "src": "Arceta v. Mangrobang (2004); class reviewer; Gatmaytan’s book",
+  "cases": [
+   "arceta"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-lis-mota",
+  "t": "jr",
+  "title": "Lis mota: what it requires",
+  "ask": "What does the lis mota requisite require?",
+  "items": [
+   "The case cannot be resolved without deciding the constitutional question.",
+   "If it can be decided on another ground, the Court uses that ground.",
+   "The petitioner bears the burden of showing the question is unavoidable.",
+   "Rests on the presumption of constitutionality; doubts are resolved for validity."
+  ],
+  "src": "Arceta v. Mangrobang (2004); Angara; class reviewer",
+  "cases": [
+   "arceta",
+   "angara"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-falcis-grounds",
+  "t": "jr",
+  "title": "Why Falcis was dismissed",
+  "ask": "On what procedural grounds was Falcis v. Civil Registrar General dismissed?",
+  "items": [
+   "No actual case: the mere passage of the Family Code created none.",
+   "No standing: he never applied for a marriage license (no injury).",
+   "Wrong respondent and wrong relief.",
+   "Violation of the hierarchy of courts.",
+   "Not raised at the earliest opportunity (Family Code in force since 1988, per the class reviewer)."
+  ],
+  "src": "Falcis III v. Civil Registrar General (2019); class reviewer (Gatmaytan ‘really doesn’t like this decision’)",
+  "cases": [
+   "falcis"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-arceta-grounds",
+  "t": "jr",
+  "title": "Why Arceta was dismissed",
+  "ask": "Why were the petitions in Arceta v. Mangrobang (challenging BP 22) dismissed?",
+  "items": [
+   "Not raised at the earliest opportunity: no motion to quash in the trial court.",
+   "Not the lis mota: no constitutional issue was raised or argued below.",
+   "Violation of the hierarchy of courts (went straight to the Supreme Court).",
+   "No allegation of grave abuse against the respondent judges for certiorari."
+  ],
+  "src": "Arceta v. Mangrobang (2004)",
+  "cases": [
+   "arceta"
+  ],
+  "rv": "jr-req",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-orthodox-effects",
+  "t": "jr",
+  "title": "Orthodox effects of an unconstitutional law",
+  "ask": "Under the orthodox view (Civil Code, Art. 7), what are the effects of an unconstitutional act?",
+  "items": [
+   "It confers no rights.",
+   "It imposes no duties.",
+   "It affords no protection.",
+   "It creates no office.",
+   "It is inoperative, as if it had never been passed."
+  ],
+  "src": "Civil Code, Art. 7; Norton v. Shelby County (orthodox view)",
+  "rv": "jr-effects",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-operative-fact",
+  "t": "jr",
+  "title": "Operative fact doctrine: rule and applications",
+  "ask": "State the operative fact doctrine and its applications and limits in the materials.",
+  "items": [
+   "Rule: good-faith acts done in reliance on the law before its nullification may be respected, to avoid injustice.",
+   "Araullo: applied to DAP projects that could not be undone.",
+   "Araullo: not to authors and implementors absent findings of good faith.",
+   "Macalintal (2023): the October 2023 barangay elections proceeded.",
+   "Refused where it would reward the beneficiary of the void law (Planters Products v. Fertiphil)."
+  ],
+  "src": "Araullo v. Aquino (2014); Macalintal v. COMELEC (2023); Planters Products v. Fertiphil",
+  "cases": [
+   "araullo",
+   "macalintal2023"
+  ],
+  "rv": "jr-effects",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-separability",
+  "t": "jr",
+  "title": "Partial unconstitutionality and separability",
+  "ask": "When does the valid part of a partly unconstitutional law survive, and what is Gatmaytan’s view?",
+  "items": [
+   "The valid part stands if separable from the void part.",
+   "It falls if the parts are so dependent that Congress meant them as a whole.",
+   "It falls if what remains is incomplete and cannot be carried out as intended.",
+   "A separability clause creates only a presumption of separability.",
+   "Gatmaytan: severability should not depend on a clause (usual approach; the US rule)."
+  ],
+  "src": "JR rule map; Gatmaytan’s book",
+  "rv": "jr-effects",
+  "ordered": false
+ },
+ {
+  "id": "a-jr-remedies-forum",
+  "t": "jr",
+  "title": "Remedies and forum quick guide",
+  "ask": "Match the dispute to the proper remedy or forum.",
+  "items": [
+   "Grave abuse by a branch: certiorari or prohibition under Rule 65 (direct to the SC only for transcendental issues).",
+   "A law not yet violated: declaratory relief in the RTC (Exec. Sec. v. CA; White Light).",
+   "Election dispute before the winner becomes a Member: COMELEC.",
+   "After proclamation, oath and assumption: HRET or SET.",
+   "President or Vice President: the Supreme Court as PET.",
+   "Money claims against the State: COA first (Fetalvero)."
+  ],
+  "src": "JR rule map (Remedies and forum); Art. VI, Sec. 17; Art. VII, Sec. 4",
+  "cases": [
+   "execseccA",
+   "whitelight",
+   "fetalvero"
+  ],
+  "rv": "jr-forum",
+  "ordered": false
+ }
+]

@@ -18,6 +18,7 @@ __CSS__
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button role="tab" data-tab="today" aria-selected="true">Today</button>
       <button role="tab" data-tab="rules" aria-selected="false">Rule maps</button>
+      <button role="tab" data-tab="lists" aria-selected="false">Lists</button>
       <button role="tab" data-tab="cases" aria-selected="false">Cases<span class="badge" id="dueBadge" hidden></span></button>
       <button role="tab" data-tab="exams" aria-selected="false">Past exams</button>
       <button role="tab" data-tab="spot" aria-selected="false">Issue spotter</button>
@@ -29,12 +30,28 @@ __CSS__
 
 <!-- TODAY -->
 <main class="page" id="v-today">
-  <div class="today">
+  <section class="panel sess" id="sessStart" aria-labelledby="sessH">
+    <div class="sess-in">
+      <div class="stack" style="gap:6px">
+        <h2 id="sessH">Start a session</h2>
+        <p class="sess-plan" id="sessPlan"></p>
+      </div>
+      <button class="btn primary big" id="sessGo">Start session</button>
+    </div>
+  </section>
+  <section class="panel" id="sessRun" hidden aria-live="polite"></section>
+  <div class="today" id="todayGrid">
     <section class="panel dayplan" aria-labelledby="dayH">
       <div class="dayhead"><span class="d" id="dayH"></span><span class="f" id="dayF"></span></div>
       <ul class="todo" id="dayTodo"></ul>
     </section>
     <div class="stack">
+      <section class="panel fixp" aria-labelledby="fixH">
+        <div class="spread"><h2 id="fixH">Fix list</h2><span class="fixn" id="fixN">0</span></div>
+        <p class="tiny" id="fixMsg" style="margin:0"></p>
+        <div class="row"><button class="btn primary" id="fixGo">Review fix list</button></div>
+        <details class="fixd" id="fixD"><summary class="tiny">See what is on it</summary><ul class="fixul" id="fixUl"></ul></details>
+      </section>
       <section class="panel" aria-labelledby="progH">
         <h2 id="progH">Your progress</h2>
         <div class="stats" id="stats"></div>
@@ -58,6 +75,15 @@ __CSS__
     </aside>
     <div style="min-width:0">
       <div class="rbar"><select id="rsel" aria-label="Jump to section"></select><select id="rtoc" aria-label="Jump to heading"></select></div>
+      <div class="rstick" id="rstick">
+        <div class="rstick-in">
+          <button class="blurbtn" id="blurBtn" aria-pressed="false" title="Hide case names, numbers and key terms; tap one to reveal it">Blur mode</button>
+          <button class="btn small ghost" id="blurReset" hidden>Re-hide</button>
+          <span class="blurct" id="blurCt" hidden></span>
+          <nav class="mtoc" id="mtoc" aria-label="Headings in this rule map"></nav>
+        </div>
+        <div class="rprog"><i id="rprog"></i></div>
+      </div>
       <div class="legend"><span class="cd">Constitution</span><span class="ts">Test</span><span class="gat">Gatmaytan</span><span class="news">In a news question</span><span class="trap">Trap</span><span class="warn">Caution</span></div>
       <div id="rresults" hidden></div>
       <div id="rcontent">
@@ -65,6 +91,23 @@ __REVIEWER__
       </div>
       <div class="rpager"><button class="btn ghost" id="rprev"></button><button class="btn ghost" id="rnext"></button></div>
     </div>
+  </div>
+</main>
+
+<!-- LISTS -->
+<main class="page narrow" id="v-lists" hidden>
+  <div class="stack">
+    <div class="panel" id="lSetup">
+      <div class="spread"><h2>Lists and requisites</h2><span class="tiny" id="lCount"></span></div>
+      <p class="tiny" style="margin:0">Every enumeration, requisite and test you may have to write out from memory. In a drill you see the question, list the items in your head (or on paper), then tap each item to check it. Tap a checked item again if you missed it.</p>
+      <div class="row">
+        <select id="lTopic" aria-label="Topic"></select>
+        <input type="search" id="lq" placeholder="Search lists (e.g. standing, two-thirds, veto)" aria-label="Search lists">
+      </div>
+      <div class="row"><button class="btn primary" id="lStart">Drill 10 lists</button><button class="btn" id="lDue">Due lists only</button></div>
+    </div>
+    <div id="lRun" hidden></div>
+    <div class="llist" id="lList"></div>
   </div>
 </main>
 
@@ -120,7 +163,7 @@ __REVIEWER__
     <section id="e-mcq" class="stack">
       <div class="panel" id="qSetup">
         <h2>Gatmaytan’s multiple-choice midterms</h2>
-        <p class="tiny" style="margin:0">2013, 2015 and 2016 midterms, transcribed from the scans, plus eight practice items on 2026 news. Each item explains the answer; where the circulated key looks wrong, a key note says so.</p>
+        <p class="tiny" style="margin:0">2013, 2015, 2016 and 2019 midterms, transcribed from the scans, plus eight practice items on 2026 news. Each item explains the answer; where the circulated key looks wrong, a key note says so.</p>
         <div class="row" id="qExams"></div>
         <div class="row"><label class="chip" for="qMissed"><input type="checkbox" id="qMissed"> Only items I missed <span class="tiny" id="qMissedCt"></span></label><select id="qN" aria-label="Number of items"><option value="10">10 items</option><option value="20">20 items</option><option value="all" selected>All</option></select></div>
         <div class="spread"><span class="tiny" id="qPool"></span><button class="btn primary" id="qStart">Start</button></div>
