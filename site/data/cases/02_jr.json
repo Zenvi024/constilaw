@@ -73,7 +73,7 @@
   "a": 1,
   "r": "Petitions against the No Contact Apprehension Policy ordinances were dismissed: supervening events (suspension of the ordinances and the Metro Manila Traffic Code of 2023) made them moot, no exception to mootness applied, and most petitioners lacked standing or capacity to sue.",
   "f": "Transport groups challenged NCAP ordinances of several Metro Manila cities; the Court issued a TRO in 2022, and the cities later adopted a uniform Traffic Code.",
-  "h": "Dismissed without prejudice to a future challenge to the new scheme. Unregistered associations lacked capacity to sue; groups claiming third-party standing failed to identify their members or show the members wanted them to sue.",
+  "h": "Dismissed without prejudice to a future challenge to the new scheme. Unregistered associations lacked capacity to sue; groups claiming third-party standing failed to identify their members or show the members wanted them to sue. The class reviewer adds two more grounds: violation of the hierarchy of courts (petitioners went straight to the Supreme Court) and forum shopping (identity of interests in cases filed in different courts).",
   "x": "A 2026 case: a fresh source for mootness (relief would be ‘illusory’), the four exceptions applied strictly, and third-party standing requirements. Likely to be used against weak procedural pleading.",
   "w": "Decided June 3, 2026, with separate opinions (Leonen, Lazaro-Javier, Dimaampao). Details here follow the block digest and the Supreme Court’s July 2026 press briefer; read the decision if time allows.",
   "s": "Supervening repeal makes a case moot; exceptions applied strictly; associations must show capacity and members’ consent."
@@ -361,11 +361,12 @@
   "t": "jr",
   "sub": "III.D.3 Earliest opportunity",
   "a": 1,
-  "r": "The mere passage of a law does not create an actual case. A facial challenge to the Family Code’s opposite-sex marriage provisions failed: no actual case, no standing (petitioner never applied for a license), wrong respondent, and violation of the hierarchy of courts.",
+  "r": "The mere passage of a law does not create an actual case. A facial challenge to the Family Code’s opposite-sex marriage provisions failed: no actual case, no standing (petitioner never applied for a license), wrong respondent, and violation of the hierarchy of courts. The class reviewer also lists ‘earliest opportunity’ (the Family Code had been in force since 1988).",
   "f": "A self-identified gay lawyer, who had never applied for a marriage license, asked the Court to void Family Code Arts. 1 and 2.",
   "h": "Dismissed. Counsel were also cited for contempt over their attire and conduct.",
   "x": "Use against abstract or ‘advocacy’ petitions filed directly with the Supreme Court; the petitioner must have an injury and a real adverse party.",
-  "s": "Passage of a law alone is no actual case; no injury, wrong respondent, hierarchy of courts."
+  "s": "Passage of a law alone is no actual case; no injury, wrong respondent, hierarchy of courts.",
+  "g": "Class notes: Gatmaytan ‘really doesn’t like this decision’; he believes the Court nitpicked on procedure to avoid the merits."
  },
  {
   "id": "arceta",

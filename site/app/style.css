@@ -185,6 +185,15 @@ mark,.hit{background:var(--hl);color:inherit;border-radius:2px}
 .modal dt{font:500 .68rem/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .modal dd{margin:2px 0 0;line-height:1.55}
 .modal dd.rule{font:400 1.04rem/1.55 var(--display)}
+.modal .dgrev{border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.modal .dgrev summary{cursor:pointer;padding:10px 12px;font-weight:600;font-size:.92rem}
+.modal .dgrev .dgnote{padding:0 12px 6px;font-size:.8rem;color:var(--muted)}
+.modal .dgtxt{padding:0 12px 12px;font-size:.88rem;line-height:1.5;overflow-wrap:anywhere}
+.modal .dgtxt p{margin:0 0 6px}
+.modal .dgtxt p.l1{padding-left:14px;position:relative}
+.modal .dgtxt p.l1::before{content:"•";position:absolute;left:2px;color:var(--accent)}
+.modal .dgtxt p.l2{padding-left:30px;position:relative}
+.modal .dgtxt p.l2::before{content:"◦";position:absolute;left:18px;color:var(--muted)}
 .modal .gatn{background:var(--accent-soft);border-left:3px solid var(--accent);padding:8px 12px;border-radius:6px;font-size:.92rem}
 .modal .warnn{background:var(--warn-soft);border-left:3px solid var(--warn);padding:8px 12px;border-radius:6px;font-size:.92rem}
 

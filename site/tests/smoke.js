@@ -27,7 +27,11 @@ require('fs').mkdirSync(out, {recursive: true});
     await p.click('#rresults .res'); await p.waitForTimeout(200);
     await p.evaluate(() => { const i=[...document.querySelectorAll('#rcontent section.rv')].findIndex(s=>s.id==='powers'); const s=document.getElementById('rsel'); s.value=i; s.dispatchEvent(new Event('change')); });
     await p.click('#rcontent section.rv:not([hidden]) a.cref'); await p.waitForTimeout(100);
-    const modal = await p.isVisible('#scrim'); await p.screenshot({path: `${out}/${tag}-modal.png`});
+    const modal = await p.isVisible('#scrim');
+    const dg = await p.evaluate(() => { const d = document.querySelector('#modal details.dgrev'); if (!d) return 0; d.open = true; return d.querySelectorAll('.dgtxt p').length; });
+    if (!dg) { fail++; console.log(`  NO CLASS-REVIEWER TEXT ${tag}`); }
+    { const m = await p.evaluate(() => { const x = document.getElementById('modal'); return x.scrollWidth - x.clientWidth; }); if (m > 1) { fail++; console.log(`  MODAL OVERFLOW ${tag}: ${m}`); } }
+    await p.screenshot({path: `${out}/${tag}-modal.png`});
     await p.keyboard.press('Escape');
     await p.screenshot({path: `${out}/${tag}-rules.png`});
     // cases browse + drill (all three directions)
@@ -54,7 +58,7 @@ require('fs').mkdirSync(out, {recursive: true});
     // printables + today again
     await p.click('[data-tab="print"]'); await p.screenshot({path: `${out}/${tag}-print.png`, fullPage: true}); await check('print');
     await p.click('[data-tab="today"]'); await p.click('#week [data-day="2026-10-11"]'); await p.screenshot({path: `${out}/${tag}-today2.png`}); await check('today2');
-    console.log(`${tag}: scope=${scopeOK} search=${hits} modal=${modal} cases=${cn} drillfb=${fb} mcq=${expl} spot=${spr} timer=${tt} words=${wn} errors=${JSON.stringify(errs)}`);
+    console.log(`${tag}: scope=${scopeOK} search=${hits} modal=${modal} dg=${dg} cases=${cn} drillfb=${fb} mcq=${expl} spot=${spr} timer=${tt} words=${wn} errors=${JSON.stringify(errs)}`);
     if (errs.length || !modal || !hits || !expl || !spr || !fb) fail++;
     await p.close();
   }

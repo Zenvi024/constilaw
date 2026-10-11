@@ -979,6 +979,207 @@
 "k": "Marked as a bonus on the paper. (e) is defensible: transcendental importance is discretionary, so ‘no standing’ is not clearly true either."
 },
 {
+"id": "m19-01",
+"exam": "2019 Midterm",
+"n": 1,
+"t": "house",
+"cov": "in",
+"q": "Two Senate committees recommended to the Commission on Elections (Comelec) to disqualify party-list groups involved in subversive activities and authorities should investigate and file charges against those allegedly recruiting minors and college students to join communist rebels. The Senate committees on public order and dangerous drugs and national defense and security, in their joint Committee Report No. 10 released on Oct. 1, also urged the Department of Education (DepEd) and the Commission on Higher Education (CHED) to tighten security policies in schools and investigate teachers involved in the reported recruitment of minors to join the New People’s Army (NPA). The two panels conducted an inquiry into the case of missing college students who were found by their distressed parents to have been participating in rallies staged by left-leaning groups, and eventually joining the NPA.\n\nWhich statement is not true?",
+"c": [
+"Party-list groups already in Congress can no longer be disqualified.",
+"There are no grounds to disqualify party-list groups based on this story.",
+"The Senate session was a ‘question hour’",
+"All these statements are not true."
+],
+"a": 2,
+"e": "The hearing was an inquiry in aid of legislation by two committees (Art. VI, Sec. 21), not a question hour, which is the appearance of department heads before a House on matters within their departments (Sec. 22). So (c) is plainly not true. On (a): COMELEC may cancel a party-list group’s registration even after it has a seat (An Waray, 2024). On (b): RA 7941, Sec. 6 lets COMELEC cancel the registration of a group that advocates violence or unlawful means, though a committee report is not proof.",
+"cs": [
+"anwaray",
+"lico"
+],
+"k": "The circulated answer is (c). After An Waray (2024), (a) is also not true, and (b) is debatable, so (d) can be argued. In an essay, say all three."
+},
+{
+"id": "m19-02",
+"exam": "2019 Midterm",
+"n": 2,
+"t": "cit",
+"cov": "in",
+"q": "Who are qualified to run for local office?",
+"c": [
+"Naturalized Filipino citizens.",
+"Foreigners",
+"Candidates who can only speak Mandarin.",
+"All of the above."
+],
+"a": 0,
+"e": "The Local Government Code (Sec. 39) requires a local candidate to be a citizen of the Philippines (natural-born status is not required) and able to read and write Filipino or any other local language or dialect. A naturalized citizen qualifies; a foreigner does not, and Mandarin is not a local language.",
+"k": "The circulated answer grid says (d), which cannot be right: foreigners cannot run. (a) is correct. Compare 2015 item 9 (Wallace), where the same point appears."
+},
+{
+"id": "m19-03",
+"exam": "2019 Midterm",
+"n": 3,
+"t": "jr",
+"cov": "in",
+"q": "Which of the following is subject to judicial review?",
+"c": [
+"a congressional declaration of a state of war",
+"a pardon",
+"a conviction by the Senate sitting as an impeachment Court",
+"All of these are subject to judicial review under the Supreme Court's ‘expanded certiorari power.’"
+],
+"a": 0,
+"e": "A declaration of a state of war must be made by Congress, by a vote of two-thirds of both Houses in joint session, voting separately (Art. VI, Sec. 23(1)). Whether that requirement was met is justiciable (cf. Gonzales v. COMELEC; Miranda v. Aguirre). The grant of a pardon is left to the President’s discretion, and the Senate has the ‘sole power to try and decide’ impeachment cases (Art. XI, Sec. 3(6)), so the merits of either are classic political questions.",
+"cs": [
+"francisco",
+"miranda",
+"gonzales67"
+],
+"k": "The circulated answer is (a). (d) is arguable, because expanded certiorari reaches grave abuse by any branch, including the constitutional limits on pardons and impeachment, though not their wisdom or merits."
+},
+{
+"id": "m19-04",
+"exam": "2019 Midterm",
+"n": 4,
+"t": "powers",
+"cov": "in",
+"q": "Which of the following clearly makes a law unconstitutional?",
+"c": [
+"Failure to comply with the journal entry rule.",
+"Failure to comply with the one subject, one title rule.",
+"Failure to comply with the enrolled bill theory.",
+"None of the above."
+],
+"a": 1,
+"e": "Art. VI, Sec. 26(1) is a mandatory constitutional requirement; a provision not expressed in the title is void, and the whole law falls if the parts are inseparable (Lidasan). By contrast, the enrolled bill is conclusive over the journal (Arroyo v. De Venecia; Tinio), and the enrolled bill ‘theory’ is a rule of evidence, not a requirement a law can fail.",
+"cs": [
+"lidasan",
+"giron",
+"arroyodevenecia"
+],
+"k": "The circulated answer is (d). Its likely reasoning: the title rule is construed liberally (Giron), so a defect does not ‘clearly’ void a law, and a non-germane part may be severed. On the text of Sec. 26(1), (b) is the better answer; know both readings."
+},
+{
+"id": "m19-05",
+"exam": "2019 Midterm",
+"n": 5,
+"t": "gov",
+"cov": "in",
+"q": "Minority Leader Bienvenido Abante Jr. filed House Bill No. 2069, the proposed Mandatory Bible Reading Act of 2019, which seeks to make Bible reading a part of the curriculum of public elementary and secondary schools. He explained that the best stage to mold the youth’s moral, spiritual, ethical, intellectual and social character is in the elementary and high school levels. Which statement is true?",
+"c": [
+"If enacted into law, the proposal would be a valid exercise of police power because the goal of the measure is to mold the morals of the youth.",
+"The proposal would be valid as it simply supports Republic Act No. 11163, which proclaims the last Monday of January every year as National Bible Day.",
+"If enacted into law, the proposal would be struck down as unconstitutional",
+"None of the statements are true."
+],
+"a": 2,
+"e": "Police power cannot be used to establish religion. The separation of Church and State is inviolable (Art. II, Sec. 6), and no law may be made respecting an establishment of religion (Art. III, Sec. 5). Religion may be taught in public schools only at the option of the parents, with their written consent, within regular class hours, by instructors designated by the religious authorities, and without additional cost to the Government (Art. XIV, Sec. 3(3)). A mandatory reading program fails all four conditions.",
+"cs": [
+"angladlad"
+]
+},
+{
+"id": "m19-06",
+"exam": "2019 Midterm",
+"n": 6,
+"t": "gov",
+"cov": "in",
+"q": "House Bill 4895 seeks to amend RA 10868 (the Centenarian Law), which gives centenarians a plaque and ₱100,000. HB 4895 would give ₱20,000 to Filipinos upon reaching 70, and another ₱20,000 every five years until they reach 100. Its sponsor said the cash gift would give dignity to the elderly and help with basic needs such as medicines. Which statement is true?",
+"c": [
+"The bill, if enacted into law, will be declared as a blatant dole out.",
+"The bill, if enacted into law, will violate the equal protection clause of the constitution",
+"The bill, if enacted into law, will be upheld",
+"If the bill is enacted into law, it would not be upheld as a valid police power measure"
+],
+"a": 2,
+"e": "Appropriations for the elderly serve a public purpose; the Constitution itself prioritizes the needs of the elderly (Art. XIII, Sec. 11) and the State’s duty to care for them (Art. XV, Sec. 4). Age is a reasonable classification: it rests on substantial distinctions, is germane to the purpose, is not limited to existing conditions, and applies equally to all of the same age. Congress decides how much to spend; ‘dole-out’ is a policy objection, not a constitutional one.",
+"cs": [
+"guingonacarague"
+]
+},
+{
+"id": "m19-07",
+"exam": "2019 Midterm",
+"n": 7,
+"t": "gov",
+"cov": "in",
+"q": "A bill seeking to regulate parking fees and protect car owners from excessive charges was filed by Rep. Weslie Gatchalian, citing a ‘meteoric rise’ in parking rates after the Supreme Court upheld mall owners’ right to collect parking fees (OSG v. Ayala Land, Inc., 2009: a total prohibition on collecting parking fees has no basis in the National Building Code and would be a taking without just compensation). Which statement is true?",
+"c": [
+"The bill, if enacted into law, will be declared unconstitutional because it contradicts a Supreme Court decision.",
+"The bill, if enacted into law, will be declared a valid police power measure",
+"The measure, if enacted into law, will be declared as a ‘taking’ without due process of law consistently with Solicitor General v. Ayala Land, Inc.",
+"None of these statements are true."
+],
+"a": 1,
+"e": "Ayala Land struck down a total prohibition on parking fees imposed without a statute; it did not bar Congress from regulating rates. Regulating fees restrains the use of property for the public welfare (police power); forbidding all fees appropriates the property’s use for the public (taking). Congress also may legislate on what a decision said lacked statutory basis without ‘contradicting’ the Court.",
+"k": "Pair with the regulation-versus-taking table in the Government rule map (Ericta, PPI, TELEBAP)."
+},
+{
+"id": "m19-08",
+"exam": "2019 Midterm",
+"n": 8,
+"t": "house",
+"cov": "in",
+"q": "After disclosing that rich people are financing the elections of party-list groups, an election official now wants to require party-list nominees to submit their statements of assets, liabilities, net worth (SALNs). Which statement is true?",
+"c": [
+"The proposal has no legal basis.",
+"The proposal has a constitutional basis.",
+"The proposal has a statutory basis.",
+"The proposal has a legal basis under the implementing rules and regulations of the law."
+],
+"a": 0,
+"e": "The constitutional SALN requirement applies to public officers and employees upon assumption of office (Art. XI, Sec. 17), not to nominees, and RA 7941 imposes no such requirement on nominees. COMELEC cannot add requirements the law does not provide: the party-list system operates ‘as provided by law’ (Art. VI, Sec. 5(1)), and qualifications must come from Congress (Albano; compare Kapatiran 2026, where COMELEC could not disqualify dynastic candidates without a law).",
+"cs": [
+"albano",
+"kapatiran2026",
+"abanglingkod"
+],
+"k": "The circulated answer is (b), presumably on the theory of Art. XI, Sec. 17 and the policy of full public disclosure (Art. II, Sec. 28). Those provisions cover public officers, and nominees are not yet officers, so (a) is the safer answer. Be ready to argue either."
+},
+{
+"id": "m19-09",
+"exam": "2019 Midterm",
+"n": 9,
+"t": "powers",
+"cov": "in",
+"q": "Which of the following provisions is most likely to run into a constitutional challenge?",
+"c": [
+"SECTION 4. Within sixty (60) days from the approval of this Act, the Department of Education, the Commission on Higher Education, and the Technical Education and Skills Development Authority shall formulate the rules and regulations including the administrative penalties for noncompliance of the provisions of this Act. (Mandatory Provision of Neutral Desks in Educational Institutions Act, RA 11394, 2019)",
+"SECTION 13. Implementing Rules and Regulations. — Within ninety (90) days from the effectivity of this Act, the NGAs, in consultation with the NNC, the FNRI, the DOH, the DA, the DILG and concerned LGUs, and such other relevant government agencies, nongovernment organizations, and development partners shall promulgate their respective rules and regulations for the efficient and effective implementation of this Act. (Masustansyang Pagkain para sa Batang Pilipino Act, RA 11037, 2018)",
+"SECTION 9. Implementing Rules and Regulations. — Within sixty (60) days from the approval of this Act, the Supreme Court, in consultation with the Secretary of Budget and Management, shall promulgate the necessary rules and regulations for the effective implementation of this Act. (Judges-at-Large Act of 2019, RA 11459)",
+"SECTION 12. Joint Congressional Oversight Committee. — Upon the effectivity of this Act, a Congressional Oversight Committee ... is hereby constituted. This Committee shall set the overall framework to review the implementation of this Act. It shall likewise determine inherent weaknesses in the law and recommend necessary remedial legislation or executive measures. ... For purposes of determining remedial legislation, the CBMS Oversight Committee shall, within two (2) years after the effectivity of this Act, conduct a systematic evaluation of the impact of this Act ... (Community-Based Monitoring System Act, RA 11315, 2019)"
+],
+"a": 2,
+"e": "(c) directs the Supreme Court to make rules ‘in consultation with’ the Budget Secretary, an executive official. That invites a challenge based on the Court’s independence, its exclusive administrative supervision over the courts, and its fiscal autonomy (Art. VIII, Secs. 3 and 6); compare Gatmaytan’s list of substantive limits (the Court’s autonomy). (d) is the other candidate: an oversight committee that sets the ‘overall framework’ for implementation edges toward the post-enactment role struck down in ABAKADA, though as worded it only reviews, evaluates and recommends. (a) and (b) are ordinary delegations to executive agencies.",
+"cs": [
+"abakada",
+"macalintal2003"
+],
+"k": "The circulated answer accepted (c) or (d)."
+},
+{
+"id": "m19-10",
+"exam": "2019 Midterm",
+"n": 10,
+"t": "org",
+"cov": "in",
+"q": "Which statement is true?",
+"c": [
+"All these statements are true.",
+"No member of Congress can legislate on matters where they have a conflict of interest",
+"Tax laws enacted by Congress should be equitable, uniform, and progressive",
+"The Senate and the House of Representatives shall each have an Electoral Tribunal which shall be the only judge of all contests relating to the election, returns, and qualifications of their respective Members"
+],
+"a": 3,
+"e": "(d) restates Art. VI, Sec. 17 (‘sole judge’). (b) is false: members must disclose potential conflicts of interest when they file bills (Sec. 12), but they are not barred from legislating. (c) is false: the rule of taxation is ‘uniform and equitable’; Congress shall ‘evolve a progressive system’, a directive rather than a requirement of each tax law (Sec. 28(1); Tolentino).",
+"cs": [
+"tolentinofinance",
+"bondoc"
+],
+"k": "The circulated answer says any choice was accepted, probably because of how (d) paraphrases ‘sole’ as ‘only’. On the merits, (d) is the true statement."
+},
+{
 "id": "m26-01",
 "exam": "2026 news (practice)",
 "n": 1,

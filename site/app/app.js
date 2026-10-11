@@ -64,7 +64,16 @@ function caseHTML(c){
   </dl>
   ${c.g ? `<div class="gatn"><strong>Gatmaytan:</strong> ${esc(c.g)}</div>` : ""}
   ${c.w ? `<div class="warnn"><strong>Caution:</strong> ${esc(c.w)}</div>` : ""}
+  ${c.dg ? `<details class="dgrev"><summary>2026 block reviewer: full digest</summary><div class="dgnote">Student-written class reviewer, kept as written. The card above was checked against it; where they differ, follow the card.</div>${dgHTML(c.dg)}</details>` : ""}
   ${t && t.sec ? `<div><button class="btn small" data-gosec="${t.sec}">Open the rule map: ${esc(t.name)}</button></div>` : ""}`;
+}
+function dgHTML(txt){
+  return `<div class="dgtxt">${txt.split("\n").map(l => l.trim()).filter(Boolean).map(l => {
+    const m = l.match(/^([●•○◦▪■\-–]|\d+\.|[a-z]\.)\s*/);
+    const sub = m && /[○◦▪■\-–]|[a-z]\./.test(m[1]);
+    const body = m && /[●•○◦▪■\-–]/.test(m[1]) ? l.slice(m[0].length) : l;
+    return `<p class="${sub ? "l2" : m ? "l1" : "l0"}">${esc(body)}</p>`;
+  }).join("")}</div>`;
 }
 let lastFocus = null;
 function openModal(html){ lastFocus = document.activeElement; $("modal").innerHTML = html; $("scrim").hidden = false; const b = $("modal").querySelector("[data-close]"); if (b) b.focus(); }

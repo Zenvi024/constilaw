@@ -39,6 +39,11 @@ assert len(ids) == len(set(ids)), 'duplicate case id'
 for c in cases:
     assert c['t'] in tkeys, (c['id'], c['t'])
 cid = set(ids)
+# the block's 2026 class reviewer, case by case (shown collapsed in each case card)
+CASEBY = {c['id']: c for c in cases}
+for k, v in load('dg_reviewer.json').items():
+    if k not in cid: print('note: class-reviewer text has no card yet:', k); continue
+    CASEBY[k]['dg'] = v
 
 rev = '\n'.join(open(f).read() for f in sorted(glob.glob(os.path.join(DATA, 'reviewer', '*.html'))))
 for m in re.findall(r'data-c="([^"]+)"', rev):
@@ -151,4 +156,4 @@ t = t.replace('__DATA__', J(D))
 assert '__DATA__' not in t and '__JS__' not in t and '__REVIEWER__' not in t
 os.makedirs(os.path.dirname(os.path.abspath(A.out)), exist_ok=True)
 open(A.out, 'w').write(t)
-print(f'wrote {A.out}: {len(t):,} bytes · {len(cases)} cases ({sum(c["a"] for c in cases)} anchors) · {len(mcq)} MCQs · {len(essays)} essays · {len(numbers)} numbers')
+print(f'wrote {A.out}: {len(t):,} bytes · {len(cases)} cases ({sum(c["a"] for c in cases)} anchors, {sum(1 for c in cases if c.get("dg"))} with class-reviewer text) · {len(mcq)} MCQs · {len(essays)} essays · {len(numbers)} numbers')
