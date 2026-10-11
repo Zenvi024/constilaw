@@ -6,8 +6,8 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 0,
-  "r": "Senator-members of the SET cannot all be disqualified even when a contest names all of them; the Constitution intends the judicial and legislative members to decide together, and the three Justices alone cannot adjudicate. Individual members may inhibit as conscience dictates.",
-  "f": "Losing candidates contested the election of 22 senators, including the six senator-members of the SET, and moved to disqualify them.",
+  "r": "Senator-members of the SET cannot all be disqualified even when a contest names all of them; the Constitution intends the judicial and legislative members to decide together, and the three Justices alone cannot adjudicate. Individual members may inhibit as conscience dictates. The 2:1 ratio of legislators to Justices shows the legislative component cannot be wholly excluded, and no amendment of the SET’s rules can give the three Justices alone the power to decide.",
+  "f": "Losing candidates contested the election of 22 senators, including the six senator-members of the SET, and moved to disqualify them. They also proposed amending the SET’s rules so that the three Justices alone could decide the contest.",
   "h": "Motion to disqualify all six denied.",
   "x": "Tribunal composition and the ‘necessity’ of senators sitting in judgment of colleagues."
  },
@@ -18,7 +18,7 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 1,
-  "r": "Members of an electoral tribunal enjoy security of tenure. The House cannot remove a member for disloyalty to his party or for voting against its candidate; valid causes are expiration of term, death or disability, resignation from or formal change of party, or removal for other valid cause. ‘Sole judge’ means the tribunal is independent of its chamber.",
+  "r": "Members of an electoral tribunal enjoy security of tenure. The House cannot remove a member for disloyalty to his party or for voting against its candidate; valid causes are expiration of term, death or disability, resignation from or formal change of party, or removal for other valid cause. ‘Sole judge’ means the tribunal is independent of its chamber. Disloyalty to party and breach of party discipline are not valid grounds short of proof that the member formally affiliated with another party; the tribunal’s jurisdiction is shared neither with the chamber nor with the courts.",
   "f": "After Rep. Camasura voted for Bondoc (the opposing party’s candidate) in the HRET, his party expelled him and the House withdrew his HRET seat on the eve of the decision.",
   "h": "Camasura’s removal was void; he was reinstated so the decision could be promulgated.",
   "x": "Any attempt by a chamber or party to reshuffle tribunal members to change the outcome of a case.",
@@ -31,8 +31,8 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 1,
-  "r": "The HRET’s jurisdiction begins only when three things concur: a valid proclamation, a proper oath (before the Speaker in open session), and assumption of office. Until then, COMELEC keeps jurisdiction over a winner’s qualifications.",
-  "f": "COMELEC cancelled Regina Reyes’s COC for misrepresenting her citizenship and residence; she was proclaimed and took her oath before the Speaker outside session before June 30.",
+  "r": "The HRET’s jurisdiction begins only when three things concur: a valid proclamation, a proper oath (before the Speaker in open session), and assumption of office. Until then, COMELEC keeps jurisdiction over a winner’s qualifications. RA 9225 adds no qualification for elective office; it merely implements the natural-born requirement, so a natural-born Filipino who became a foreign citizen must prove reacquisition under it (oath of allegiance and, for elective office, a sworn renunciation of foreign citizenship). Once shown to be a US passport holder, Reyes bore the burden of proving repatriation and failed.",
+  "f": "COMELEC cancelled Regina Reyes’s COC for misrepresenting her citizenship and residence; she was proclaimed and took her oath before the Speaker outside session before June 30. COMELEC found she had become a US citizen (she held a US passport) and had not shown she reacquired Philippine citizenship. The COMELEC en banc affirmed the cancellation right after the May 2013 election; she was nonetheless proclaimed and took her oath before Speaker Belmonte in June, before her term began on June 30.",
   "h": "COMELEC retained jurisdiction; its cancellation stood.",
   "x": "Forum questions: COMELEC or HRET? Check proclamation, oath and assumption.",
   "s": "HRET jurisdiction begins on proclamation, oath and assumption of office."
@@ -44,9 +44,9 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 0,
-  "r": "Where the validity of the proclamation itself is pending before COMELEC (a timely motion for reconsideration), the HRET does not acquire jurisdiction and the House must recognize the candidate COMELEC declares. A second-placer is not automatically the winner.",
-  "f": "COMELEC’s Second Division disqualified the winner (Codilla) without hearing and proclaimed the second placer (Locsin), who assumed office while Codilla’s reconsideration was pending.",
-  "h": "Locsin’s proclamation was void; the Speaker was ordered to recognize Codilla.",
+  "r": "Where the validity of the proclamation itself is pending before COMELEC (a timely motion for reconsideration), the HRET does not acquire jurisdiction and the House must recognize the candidate COMELEC declares. A second-placer is not automatically the winner. A timely motion for reconsideration suspends the Division’s ruling, so COMELEC keeps jurisdiction until its decision is final; a proclamation made without notice and hearing is void. The rule that the HRET takes over upon proclamation and assumption did not apply because the validity of the proclamation itself was in issue and the HRET cannot review COMELEC resolutions. Votes for a candidate not disqualified by final judgment are not stray.",
+  "f": "COMELEC’s Second Division disqualified the winner (Codilla) without hearing and proclaimed the second placer (Locsin), who assumed office while Codilla’s reconsideration was pending. The charge was indirect solicitation of votes. The COMELEC en banc later granted Codilla’s timely motion for reconsideration, annulled Locsin’s proclamation and declared him the winner, but Locsin refused to vacate, claiming the HRET now had jurisdiction, and the House would not recognize him.",
+  "h": "Locsin’s proclamation was void. Mandamus issued: the Speaker was ordered to administer Codilla’s oath and the Secretary-General to enter his name in the Roll of Members, both ministerial duties once the COMELEC ruling became final.",
   "x": "Pending COMELEC case at proclamation: no HRET jurisdiction yet."
  },
  {
@@ -56,7 +56,7 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 0,
-  "r": "Where COMELEC cancelled a candidate’s COC before the election and the cancellation became final, the candidate was never validly a candidate; the HRET has no jurisdiction, and swearing in the rightful winner is a ministerial duty of the Speaker and Secretary-General.",
+  "r": "Where COMELEC cancelled a candidate’s COC before the election and the cancellation became final, the candidate was never validly a candidate; the HRET has no jurisdiction, and swearing in the rightful winner is a ministerial duty of the Speaker and Secretary-General. Because Reyes’s COC was void, her votes were stray and Velasco, the qualified candidate with the most valid votes, was the winner (contrast Codilla, where the winner’s disqualification was not yet final, so the second placer could not be proclaimed).",
   "f": "After Reyes’s COC was finally cancelled, the House kept recognizing her; Velasco sought to be sworn in as Marinduque’s representative.",
   "h": "Mandamus granted; Velasco to be administered the oath and registered.",
   "x": "Ministerial duties of House officers in carrying out final COMELEC and Supreme Court rulings."
@@ -68,8 +68,8 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 0,
-  "r": "The HRET rule requiring at least one Justice for a quorum is valid: the Justices were included to temper partisanship, and only a Justice can chair. Party-list members seeking HRET seats must first go to the House.",
-  "f": "Regina Reyes challenged the HRET’s 2015 rules, including the quorum rule requiring a Justice, while quo warranto cases against her were pending.",
+  "r": "The HRET rule requiring at least one Justice for a quorum is valid and does not violate equal protection: the tribunal is a collegial body drawn from two departments, the three Justices were included to tone down the political nature of the cases, and only a Justice can chair. If inhibitions or disqualifications prevent a quorum, the Supreme Court and the House may designate special members.",
+  "f": "The petitioner challenged Rule 6 of the 2015 HRET Rules, which requires at least one Justice for a quorum, as a violation of equal protection that gives the Justices undue power over the legislators.",
   "h": "Rules upheld.",
   "x": "Composition and quorum of the tribunals."
  },
@@ -80,8 +80,8 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 0,
-  "r": "Each chamber elects its HRET and CA members under the proportional representation rule. Party-list representatives who claim seats must first seek relief from the House; the Court intervenes only if the House fails to comply with the Constitution.",
-  "f": "Party-list representatives asked the Court to reconstitute the HRET and CA to include them.",
+  "r": "Each chamber elects its HRET and CA members under the proportional representation rule. Party-list representatives who claim seats must first seek relief from the House; the Court intervenes only if the House fails to comply with the Constitution. The petitions were also misdirected: the HRET and the CA cannot reconstitute themselves, because only each chamber elects their members (Art. VI, Secs. 17 and 18).",
+  "f": "Party-list representatives asked the Court to reconstitute the HRET and CA to include them. The party-list groups had not nominated any of their members when the House elected its contingents.",
   "h": "Petitions dismissed (premature; no showing the House was asked).",
   "x": "Primary recourse to the chamber for composition disputes (compare Drilon v. De Venecia)."
  },
@@ -92,10 +92,11 @@
   "t": "et",
   "sub": "V.A.5 Electoral tribunals",
   "a": 0,
-  "r": "The HRET may annul election results in an election contest, but its decision must rest on substantial evidence; annulling precincts for ‘terrorism’ without proof is grave abuse. The Court retains certiorari power over the tribunals.",
+  "r": "The HRET may annul election results in an election contest, but its decision must rest on substantial evidence; annulling precincts for ‘terrorism’ without proof is grave abuse. The Court retains certiorari power over the tribunals. The tribunal’s annulment of election results differs from COMELEC’s declaration of a failure of elections: annulment is a judicial function, limited to the precincts in the contest and done only to find who got the majority of legal votes, and no special election follows; a declaration of failure is administrative, covers elections not held, suspended or resulting in a failure to elect, and is followed by special elections.",
   "f": "After a recount widened the winner’s lead, the HRET annulled results in several precincts for alleged terrorism and unseated him.",
   "h": "HRET decision reversed; the winner reinstated.",
-  "x": "Limits of the tribunals’ ‘sole judge’ power: grave abuse remains reviewable."
+  "x": "Limits of the tribunals’ ‘sole judge’ power: grave abuse remains reviewable. Do not confuse it with Abayon v. HRET (2010): once a party-list nominee is proclaimed, sworn and seated, questions on the nominee’s qualifications go to the HRET, while the party’s own registration and qualifications stay with COMELEC (see Lico; An Waray).",
+  "test": "Annulment of election results is a drastic remedy, used only when (1) the illegality of the ballots affects more than 50% of the votes cast in the precinct (or, for a whole unit, more than 50% of its precincts and votes) and (2) the lawful ballots cannot be distinguished from the unlawful ones with reasonable certainty. Findings of fraud or terrorism must rest on substantial evidence."
  },
  {
   "id": "daza",
@@ -104,8 +105,8 @@
   "t": "et",
   "sub": "V.A.6 Commission on Appointments",
   "a": 1,
-  "r": "A chamber may reorganize its contingent in the CA when political alignments permanently change (e.g., a new party formed by mass transfers); the change must be permanent, not a temporary alliance. The LDP need not prove a track record to be counted.",
-  "f": "When the LDP was formed and gained a majority, the House gave it an additional CA seat and removed Daza (Liberal Party).",
+  "r": "A chamber may reorganize its contingent in the CA when political alignments permanently change (e.g., a new party formed by mass transfers); the change must be permanent, not a temporary alliance. The LDP need not prove a track record to be counted. The change must involve a severance of political loyalties or formal disaffiliation. The question is justiciable, not political, because it concerns the legality of the manner of filling the CA under the Constitution.",
+  "f": "When the LDP was formed and gained a majority, the House gave it an additional CA seat and removed Daza (Liberal Party). Twenty-four LP members had resigned and joined the LDP. Daza argued that his seat was permanent and that the LDP was not yet a duly registered, stable party.",
   "h": "Reorganization upheld.",
   "x": "Party-switching and recomposition of the CA or tribunals.",
   "s": "CA seats may be reorganized after a permanent change in party alignment."
@@ -117,8 +118,8 @@
   "t": "et",
   "sub": "V.A.6 Commission on Appointments",
   "a": 0,
-  "r": "Being in the minority does not entitle a member to a CA seat; a party must have enough members for proportional representation. A one-member party in the House was not entitled to a seat.",
-  "f": "The lone member of KAIBA asked for a CA seat as a minority representative.",
+  "r": "Being in the minority does not entitle a member to a CA seat; a party must have enough members for proportional representation. A one-member party in the House was not entitled to a seat. To earn one of the House’s 12 CA seats, a party needs about one-twelfth of the House membership (some 17 members then); endorsements from members of other parties do not count.",
+  "f": "The lone member of KAIBA asked for a CA seat as a minority representative. She claimed the endorsement of nine other representatives, none of them KAIBA members, and some of whom had also endorsed another candidate.",
   "h": "Petition dismissed.",
   "x": "Proportional representation is computed per party, not per bloc."
  },
@@ -130,8 +131,8 @@
   "sub": "V.A.6 Commission on Appointments",
   "a": 0,
   "r": "A senator who does not allege that she or her party was deprived of a CA seat has no standing. Under primary jurisdiction, claims about a chamber’s CA contingent must first be raised in that chamber.",
-  "f": "Senators questioned the composition of the House contingent in the CA, which had no Liberal Party members.",
-  "h": "Petition dismissed.",
+  "f": "Two petitions attacked the CA’s composition. In the first, Liberal Party petitioners claimed one House seat in the CA on the strength of the LP’s 20 representatives; in the second, Senator Madrigal alleged that both the Senate and House contingents over-represented certain parties and asked the Court to order a reorganization.",
+  "h": "Petitions dismissed: the first as moot after the LP was given a House seat in the CA; the second for lack of standing and prematurity, because Senator Madrigal showed no direct injury to herself or her party and had not first raised the matter in the Senate.",
   "x": "Standing and prior resort in composition disputes."
  },
  {
@@ -141,11 +142,11 @@
   "t": "et",
   "sub": "V.A.6 Commission on Appointments",
   "a": 1,
-  "r": "Proportional representation in the CA is mandatory: fractional shares cannot be rounded up at the expense of other parties. The CA can function with fewer than 12 senators as long as it has a majority of its membership.",
+  "r": "Proportional representation in the CA is mandatory: fractional shares cannot be rounded up at the expense of other parties. The CA can function with fewer than 12 senators as long as it has a majority of its membership. A party needs at least two senators to earn a seat, so a lone senator’s half-seat cannot be turned into a full seat at others’ expense. The rule is mandatory and leaves no discretion to the majority, and whether CA members were elected in accordance with it is a justiciable, not a political, question.",
   "f": "The Senate gave the LDP 8 seats (from 7.5) and a lone-senator party 1 seat (from 0.5).",
-  "h": "Elections of the extra members (Romulo, Tañada) were void.",
+  "h": "The elections of Romulo (the LDP’s eighth member) and Tañada were void; a writ of prohibition barred them from sitting in the CA and the Senate President from recognizing them.",
   "x": "Computing CA and tribunal seats.",
-  "test": "Senate seats in the CA = (party’s senators ÷ 24) × 12. Fractions are not rounded up if it reduces another party’s share.",
+  "test": "Senate seats in the CA = (party’s senators ÷ 24) × 12. Fractions are not rounded up if it reduces another party’s share. A party needs at least two senators for one seat; a lone senator (0.5) gets none.",
   "s": "Proportional representation in the CA is mandatory; no rounding up fractions."
  }
 ]
