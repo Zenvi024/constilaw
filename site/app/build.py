@@ -82,51 +82,65 @@ tbl = meth[meth.find('id="method-numbers"'):]
 numbers = [[html.unescape(re.sub('<[^>]+>', '', a)), html.unescape(re.sub('<[^>]+>', '', b))]
            for a, b in re.findall(r'<tr><td>(.*?)</td><td>(.*?)</td></tr>', tbl)]
 
-# day plan (from the prep plan, adjusted to 22-minute answers)
+# day plan: the week of Oct 11 (mirrors the study blocks on Zen's Google Calendar)
 R = lambda *a: list(a)
+P = lambda k, t, **kw: dict(k=k, t=t, **kw)
 plan = [
-    dict(date='2026-10-08', short='Thu 8', label='Thursday, October 8', focus='Set-up and diagnostic', items=[
-        dict(k='Read', t='How to answer his midterm: format, the four question shapes, ALAC, the checklist.', rv=R('method')),
-        dict(k='Diagnose', t='Take the 2016 multiple-choice midterm cold to see where you stand.', go='mcq:2016 Midterm', goL='Start 2016 MCQs'),
-        dict(k='News', t='Skim the 2026 news watch: these stories are likely exam material.', rv=R('news'))]),
-    dict(date='2026-10-09', short='Fri 9', label='Friday, October 9', focus='Block A: judicial review, interpretation, amendment', items=[
-        dict(k='Write cold', t='Before studying: 22 minutes each, handwritten, then grade against the rubric.', e=R('e24m-2', 'e24m-3')),
-        dict(k='Learn', t='Separation of powers, political questions, actual case, ripeness, mootness, all standing types, earliest opportunity, lis mota. Then interpretation and amendment (Javellana, Lambino, Francisco).', rv=R('jr', 'interp')),
-        dict(k='Drill', t='Case → rule for judicial review and interpretation.', go='drill:jr,basics', goL='Drill Block A'),
-        dict(k='Evening', t='2015 midterm as quick multiple choice.', go='mcq:2015 Midterm', goL='Start 2015 MCQs')]),
-    dict(date='2026-10-10', short='Sat 10', label='Saturday, October 10', focus='Block B: state, people, government', items=[
-        dict(k='Review', t='20 minutes of due cards first.', go='due', goL='Review due cards'),
-        dict(k='Learn', t='Inherent powers (police power versus taking), immunity from suit, de facto government, citizenship, suffrage, territory.', rv=R('gov', 'cit', 'suff', 'terr')),
-        dict(k='Write', t='22 minutes each.', e=R('e23m-2', 'e15f-2')),
-        dict(k='Drill', t='Facts → case for Block B.', go='drill:gov,cit,suff,terr', goL='Drill Block B')]),
-    dict(date='2026-10-11', short='Sun 11', label='Sunday, October 11', focus='Block C: Congress structure', items=[
-        dict(k='Review', t='20 minutes of due cards first.', go='due', goL='Review due cards'),
-        dict(k='Learn', t='Party-list (Atong Paglaum to Duterte Youth), qualifications, elections, officers and quorum, discipline, privileges, incompatible offices, electoral tribunals, CA.', rv=R('comp', 'internal', 'priv', 'et')),
-        dict(k='Write', t='22 minutes each.', e=R('e23m-1', 'e23m-4', 'e24m-1')),
-        dict(k='Drill', t='Case → rule for Congress.', go='drill:house,org,et', goL='Drill Block C')]),
-    dict(date='2026-10-12', short='Mon 12', label='Monday, October 12', focus='Block D: powers of Congress', items=[
-        dict(k='Review', t='20 minutes of due cards first.', go='due', goL='Review due cards'),
-        dict(k='Learn', t='Plenary power and limits, delegation and ABAKADA, title rule, the appropriations line (Demetria to Macalintal 2023), tax (Tolentino, Lung Center, Garcia, John Hay).', rv=R('powers', 'money')),
-        dict(k='Write', t='22 minutes each.', e=R('e23m-3', 'e24m-4', 'n26-5')),
-        dict(k='Drill', t='Rule → case for powers, appropriations and tax.', go='drill:powers,approp,tax', goL='Drill Block D')]),
-    dict(date='2026-10-13', short='Tue 13', label='Tuesday, October 13', focus='Class day: patch weak spots', items=[
-        dict(k='Review', t='Due cards; then re-read the rule map where you missed the most.', go='due', goL='Review due cards'),
-        dict(k='Write', t='One answer from your weakest block, or this news problem.', e=R('n26-3')),
-        dict(k='Spot', t='Two issue-spotter rounds on problems you have not written.')]),
-    dict(date='2026-10-14', short='Wed 14', label='Wednesday, October 14', focus='Timed set: four news problems in 90 minutes', items=[
-        dict(k='Timed', t='Four 2026 news problems back to back, 22 minutes each, on one sheet. Grade the same day, then rewrite your two weakest.', e=R('n26-1', 'n26-2', 'n26-4', 'n26-7')),
-        dict(k='Review', t='Due cards in the evening.', go='due', goL='Review due cards')]),
-    dict(date='2026-10-15', short='Thu 15', label='Thursday, October 15', focus='Class day: light review', items=[
-        dict(k='Read', t='The checklist and the anchor-case list only. No new material after 9:00 PM.', go='print', goL='Open printables'),
-        dict(k='Optional', t='One last timed answer.', e=R('n26-6')),
-        dict(k='Review', t='Due cards, then sleep.', go='due', goL='Review due cards')]),
-    dict(date='2026-10-16', short='Fri 16', label='Friday, October 16', focus='Midterm (morning)', items=[
-        dict(k='Before', t='45 minutes before: the checklist and anchor list. Outline one warm-up problem in your head; do not write it out.', go='print', goL='Open printables'),
-        dict(k='In the room', t='90 minutes, about 22 per problem. Answer first, ALAC, half a page each. Read every fact: the stories ‘may have been altered’.', rv=R('method'))]),
+    dict(date='2026-10-11', short='Sun 11', label='Sunday, October 11', focus='Tue class prep, then judicial review', items=[
+        P('4:30 PM', 'Tue class prep 1/5: read and digest cases 1–5 (facts, issue, ruling, one-line doctrine). Star the hard ones.'),
+        P('7:00 PM', 'Tue class prep 2/5: cases 6–12. Five-minute break after case 9.'),
+        P('10:30 PM', 'Exam method: format, the four question shapes, ALAC, the checklist.', rv=R('method')),
+        P('10:50 PM', 'Judicial review, part 1: requisites and every type of standing. Then list the standing types from memory.', rv=R('jr')),
+        P('11:35 PM', 'Drill Case → rule, Judicial review (one round of 20). Sleep at 12.', go='drill:cr:jr', goL='Start the drill')]),
+    dict(date='2026-10-12', short='Mon 12', label='Monday, October 12', focus='Judicial review, interpretation, government, suffrage', items=[
+        P('8:00 AM', 'Commute (phone): due cards, then Facts → case for Judicial review.', go='drill:fc:jr', goL='Facts → case drill'),
+        P('11:30 AM', 'Tue class prep 3–4/5: digest cases 13–20, clean up every digest, write a likely recit question per starred case.'),
+        P('3:30 PM', 'Commute home (phone): the 2015 multiple-choice midterm; retake the misses.', go='mcq:2015 Midterm', goL='Start 2015 MCQs'),
+        P('4:30 PM', 'Judicial review, part 2: political questions, mootness exceptions, effects, forum.', rv=R('jr-pq', 'jr-effects', 'jr-forum')),
+        P('5:15 PM', 'Write and grade (22 min + 15).', e=R('e20f-8')),
+        P('7:00 PM', 'Interpreting and amending the Constitution, including the Kapatiran 2026 box.', rv=R('interp')),
+        P('8:15 PM', 'Government, immunity and inherent powers: police power versus taking.', rv=R('gov')),
+        P('9:30 PM', 'Suffrage: qualifications versus registration.', rv=R('suff')),
+        P('10:00 PM', 'Write and grade two answers.', e=R('e23m-2', 'e15f-2')),
+        P('11:20 PM', 'Drill Case → rule for these topics, then all due cards.', go='drill:cr:basics,gov,suff', goL='Start the drill')]),
+    dict(date='2026-10-13', short='Tue 13', label='Tuesday, October 13', focus='Consti class day; Congress structure', items=[
+        P('9:00 AM', 'Commute (phone): due cards, then the issue spotter.', go='due', goL='Review due cards', sp=R('n26-1', 'e15f-3')),
+        P('12:00 PM', 'Tue class prep 5/5: recite each starred case out loud in under 60 seconds.'),
+        P('3:00 PM', 'Commute home (phone): the 2016 multiple-choice midterm.', go='mcq:2016 Midterm', goL='Start 2016 MCQs'),
+        P('4:00 PM', 'Thu class prep 1/6: digest cases 1–5.'),
+        P('7:00 PM', 'Thu class prep 2/6: digest cases 6–10.'),
+        P('9:10 PM', 'Congress: composition, party-list, qualifications and elections.', rv=R('comp')),
+        P('10:30 PM', 'Congress: officers, quorum, discipline, the Journal. Read the Teves box twice.', rv=R('internal')),
+        P('11:15 PM', 'Write and grade.', e=R('e23m-1'))]),
+    dict(date='2026-10-14', short='Wed 14', label='Wednesday, October 14', focus='Thu class prep; powers, appropriations, tax', items=[
+        P('8:00 AM', 'Commute (phone): due cards, then Case → rule for Congress.', go='drill:cr:house,org,et', goL='Start the drill'),
+        P('11:30 AM', 'Thu class prep 3–4/6: digest cases 11–20 (break at 1:15 PM).'),
+        P('5:00 PM', 'Commute home (phone): read the privileges rule map.', rv=R('priv')),
+        P('7:00 PM', 'Thu class prep 5/6: finish and clean up every digest.'),
+        P('8:30 PM', 'Electoral tribunals and the CA.', rv=R('et')),
+        P('9:00 PM', 'Powers of Congress: limits, ABAKADA, delegation and IRRs, the title rule. Highest-yield block of the week.', rv=R('powers')),
+        P('10:15 PM', 'Appropriation and tax laws.', rv=R('money')),
+        P('11:15 PM', 'Write and grade.', e=R('e23m-3'))]),
+    dict(date='2026-10-15', short='Thu 15', label='Thursday, October 15', focus='Consti class day; timed set; printables', items=[
+        P('9:00 AM', 'Commute (phone): the 2013 multiple-choice midterm.', go='mcq:2013 Midterm', goL='Start 2013 MCQs'),
+        P('12:00 PM', 'Thu class prep 6/6: recit rehearsal.'),
+        P('3:00 PM', 'Commute home (phone): Rule → case for powers, appropriations and tax.', go='drill:rc:powers,approp,tax', goL='Start the drill'),
+        P('4:00 PM', 'Write and grade three answers, 40 minutes each.', e=R('e24m-1', 'e24m-4', 'e24m-3')),
+        P('7:00 PM', 'Timed set under exam conditions: four news problems in 90 minutes on one sheet. Grade them from 8:30 PM.', e=R('n26-2', 'n26-3', 'n26-4', 'n26-5')),
+        P('9:15 PM', 'The 2026 news watch, then re-read your weakest rule map. No new material after this.', rv=R('news')),
+        P('10:15 PM', 'Printables twice, then an anchors-only Rule → case drill.', go='print', goL='Open printables'),
+        P('11:30 PM', 'Due cards; pack yellow paper, pens, ID. Sleep by 12.', go='due', goL='Review due cards')]),
+    dict(date='2026-10-16', short='Fri 16', label='Friday, October 16', focus='Midterm, 10:00–11:30 AM', items=[
+        P('6:00 AM', 'Due cards, then an anchors-only Case → rule drill.', go='drill:cr:anchors', goL='Anchors drill'),
+        P('7:00 AM', 'Issue checklist and numbers. Outline two problems in the margin without writing them out, then check the model answers.', go='print', goL='Open printables', sp=R('e23m-4', 'n26-7')),
+        P('8:00 AM', 'Anchor-case list and the last-minute checklist of each rule map.', rv=R('method')),
+        P('9:00 AM', 'Commute: the two printables only.'),
+        P('10:00 AM', 'Midterm: 90 minutes, about 22 per problem. Answer first, ALAC, half a page each. Read every fact.')]),
 ]
 for d in plan:
     for it in d['items']:
-        for e in it.get('e', []): assert e in eid, e
+        for e in it.get('e', []) + it.get('sp', []): assert e in eid, e
+        for r in it.get('rv', []): assert ('id="%s"' % r) in rev, r
 
 D = dict(examDate='2026-10-16', topics=topics, cases=cases, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers, plan=plan)
 t = open(os.path.join(HERE, 'template.html')).read()

@@ -44,7 +44,7 @@ function manilaToday(){ // yyyy-mm-dd in Asia/Manila
 function daysTo(iso){ const a = new Date(manilaToday() + "T00:00:00Z"), b = new Date(iso + "T00:00:00Z"); return Math.round((b - a) / 864e5); }
 function renderClock(){
   const n = daysTo(D.examDate);
-  if (n > 1){ $("cdN").textContent = n; $("cdL").textContent = "days to the midterm (Fri, Oct 16, morning)"; }
+  if (n > 1){ $("cdN").textContent = n; $("cdL").textContent = "days to the midterm (Fri, Oct 16, 10:00 AM)"; }
   else if (n === 1){ $("cdN").textContent = "1"; $("cdL").textContent = "day to go. Light review, early night."; }
   else if (n === 0){ $("cdN").textContent = "Today"; $("cdL").textContent = "Checklist and anchor list, then go."; }
   else { $("cdN").textContent = "Done"; $("cdL").textContent = "The midterm was on Oct 16."; }
@@ -113,7 +113,7 @@ function renderToday(){
   const d = days.find(x => x.date === planDay);
   $("dayH").textContent = d.label;
   $("dayF").textContent = (d.date === today ? "Today · " : "") + d.focus;
-  $("dayTodo").innerHTML = d.items.map(it => `<li><span class="k">${esc(it.k)}</span><div>${esc(it.t)}${(it.rv || it.e || it.go) ? `<div class="links">${(it.rv || []).map(id => `<button class="btn small" data-rv="${id}">${esc(rvTitle(id))}</button>`).join("")}${(it.e || []).map(id => ESS[id] ? `<button class="btn small" data-essay="${id}">Write: ${esc(ESS[id].short)}</button>` : "").join("")}${it.go ? `<button class="btn small" data-go="${it.go}">${esc(it.goL)}</button>` : ""}</div>` : ""}</div></li>`).join("");
+  $("dayTodo").innerHTML = d.items.map(it => `<li><span class="k">${esc(it.k)}</span><div>${esc(it.t)}${(it.rv || it.e || it.go || it.sp) ? `<div class="links">${(it.rv || []).map(id => `<button class="btn small" data-rv="${id}">${esc(rvTitle(id))}</button>`).join("")}${(it.e || []).map(id => ESS[id] ? `<button class="btn small" data-essay="${id}">Write: ${esc(ESS[id].short)}</button>` : "").join("")}${(it.sp || []).map(id => ESS[id] ? `<button class="btn small" data-spot="${id}">Spot: ${esc(ESS[id].short)}</button>` : "").join("")}${it.go ? `<button class="btn small" data-go="${it.go}">${esc(it.goL)}</button>` : ""}</div>` : ""}</div></li>`).join("");
   $("week").innerHTML = days.map(x => `<button data-day="${x.date}" aria-current="${x.date === planDay}" class="${x.date < today ? "past" : ""}"><span class="w">${esc(x.short)}</span><span>${esc(x.focus)}</span></button>`).join("");
   // stats
   const seen = CASES().filter(c => SRS["cr:" + c.id] || SRS["fc:" + c.id] || SRS["rc:" + c.id]).length;
@@ -133,7 +133,13 @@ function goAction(g){
   if (g === "due"){ setTab("cases"); setCaseMode("drill"); startDrill(true); }
   else if (g.startsWith("mcq:")){ setTab("exams"); setExamMode("mcq"); qExamSel = new Set(g.slice(4).split(",")); renderQSetup(); }
   else if (g === "print") setTab("print");
-  else if (g.startsWith("drill:")){ setTab("cases"); setCaseMode("drill"); dTop = new Set(g.slice(6).split(",")); renderDSetup(); }
+  else if (g.startsWith("drill:")){ // drill:<topics> or drill:<dir>:<topics>; topics "all" or "anchors"
+    const p = g.split(":"); const topics = p.length === 3 ? p[2] : p[1]; if (p.length === 3) dDir = p[1];
+    setTab("cases"); setCaseMode("drill");
+    $("dAnchor").checked = topics === "anchors";
+    dTop = new Set(topics === "all" || topics === "anchors" ? D.topics.map(t => t.key) : topics.split(","));
+    renderDSetup();
+  }
 }
 $("goDue").onclick = () => goAction("due");
 $("goMcq").onclick = () => { setTab("exams"); setExamMode("mcq"); $("qN").value = "10"; startQuiz(); };
