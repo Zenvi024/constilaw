@@ -13,6 +13,15 @@ const ESS = Object.fromEntries(D.essays.map(e => [e.id, e]));
 const ISS = {}; D.issues.forEach(g => g.items.forEach(i => ISS[i.id] = {...i, g: g.g}));
 const tname = k => (TOP[k] ? TOP[k].name : k);
 
+/* ================= scope toggle: citizenship and territory ================= */
+const OUT_TOPICS = ["cit", "terr"], OUT_SECS = ["cit", "terr"], OUT_ISSUES = ["ppl_citizen", "ppl_dual", "terr"];
+let HIDE = store.get("hideCitTerr", true);
+const shownT = t => !HIDE || !OUT_TOPICS.includes(t);
+const TOPS = () => D.topics.filter(t => shownT(t.key));
+const CASES = () => D.cases.filter(c => shownT(c.t));
+const MCQS = () => D.mcq.filter(q => shownT(q.t));
+const ISSUES = () => D.issues.map(g => ({...g, items: g.items.filter(i => !HIDE || !OUT_ISSUES.includes(i.id))})).filter(g => g.items.length);
+
 /* ================= tabs ================= */
 const TABS = ["today","rules","cases","exams","spot","write","print"];
 function setTab(t, push){
@@ -91,7 +100,7 @@ function nextLbl(k, g){
 }
 const isDue = k => SRS[k] && SRS[k].d <= Date.now();
 const dueKeys = () => Object.keys(SRS).filter(k => isDue(k) && validKey(k));
-function validKey(k){ const [p, id] = k.split(":"); return p === "m" ? D.mcq.some(q => q.id === id) : !!CASE[id]; }
+function validKey(k){ const [p, id] = k.split(":"); if (p === "m"){ const q = D.mcq.find(x => x.id === id); return !!q && shownT(q.t); } return !!CASE[id] && shownT(CASE[id].t); }
 function dueBadge(){ const n = dueKeys().length, b = $("dueBadge"); b.textContent = n; b.hidden = n === 0; }
 setInterval(dueBadge, 30000);
 
@@ -107,13 +116,13 @@ function renderToday(){
   $("dayTodo").innerHTML = d.items.map(it => `<li><span class="k">${esc(it.k)}</span><div>${esc(it.t)}${(it.rv || it.e || it.go) ? `<div class="links">${(it.rv || []).map(id => `<button class="btn small" data-rv="${id}">${esc(rvTitle(id))}</button>`).join("")}${(it.e || []).map(id => ESS[id] ? `<button class="btn small" data-essay="${id}">Write: ${esc(ESS[id].short)}</button>` : "").join("")}${it.go ? `<button class="btn small" data-go="${it.go}">${esc(it.goL)}</button>` : ""}</div>` : ""}</div></li>`).join("");
   $("week").innerHTML = days.map(x => `<button data-day="${x.date}" aria-current="${x.date === planDay}" class="${x.date < today ? "past" : ""}"><span class="w">${esc(x.short)}</span><span>${esc(x.focus)}</span></button>`).join("");
   // stats
-  const seen = D.cases.filter(c => SRS["cr:" + c.id] || SRS["fc:" + c.id] || SRS["rc:" + c.id]).length;
-  const known = D.cases.filter(c => ["cr:","fc:","rc:"].some(p => SRS[p + c.id] && SRS[p + c.id].s >= 3)).length;
+  const seen = CASES().filter(c => SRS["cr:" + c.id] || SRS["fc:" + c.id] || SRS["rc:" + c.id]).length;
+  const known = CASES().filter(c => ["cr:","fc:","rc:"].some(p => SRS[p + c.id] && SRS[p + c.id].s >= 3)).length;
   const qh = store.get("qhist", {}); const qa = Object.values(qh); const qr = qa.filter(x => x.r === 1).length;
   const att = store.get("attempts", {}); const al = Object.values(att).flat(); const avg = al.length ? (al.reduce((s, a) => s + a.score, 0) / al.length) : 0;
   $("stats").innerHTML = [
     [dueKeys().length, "cards due now"],
-    [`${seen}/${D.cases.length}`, `cases drilled · ${known} at 1 day or more`],
+    [`${seen}/${CASES().length}`, `cases drilled · ${known} at 1 day or more`],
     [qa.length ? Math.round(100 * qr / qa.length) + "%" : "–", `MCQ accuracy (${qa.length} answered)`],
     [al.length ? avg.toFixed(1) : "–", `average essay score /10 (${al.length} written)`]
   ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
@@ -133,9 +142,11 @@ $("goMcq").onclick = () => { setTab("exams"); setExamMode("mcq"); $("qN").value 
 const SECS = [...document.querySelectorAll("#rcontent section.rv")];
 let curSec = 0;
 function rvTitle(id){ const el = document.getElementById(id); if (!el) return id; const s = el.closest("section.rv"); return el.tagName === "SECTION" ? el.dataset.title : el.textContent; }
+const secShown = i => !HIDE || !OUT_SECS.includes(SECS[i].id);
+const visIdx = () => SECS.map((s, i) => i).filter(secShown);
 function buildSide(){
-  $("rsecs").innerHTML = SECS.map((s, i) => `<li data-i="${i}"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)}</small></button></li>`).join("");
-  $("rsel").innerHTML = SECS.map((s, i) => `<option value="${i}">${esc(s.dataset.title)}</option>`).join("");
+  $("rsecs").innerHTML = SECS.map((s, i) => !secShown(i) ? "" : `<li data-i="${i}"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)}</small></button></li>`).join("");
+  $("rsel").innerHTML = SECS.map((s, i) => !secShown(i) ? "" : `<option value="${i}">${esc(s.dataset.title)}</option>`).join("");
 }
 function openSec(i, scroll){
   curSec = i; SECS.forEach((s, j) => s.hidden = j !== i);
@@ -146,9 +157,10 @@ function openSec(i, scroll){
   });
   $("rsel").value = i;
   $("rtoc").innerHTML = `<option value="">Jump to a heading…</option>` + [...SECS[i].querySelectorAll("h3[id]")].map(h => `<option value="${h.id}">${esc(h.textContent)}</option>`).join("");
-  $("rprev").hidden = i === 0; $("rnext").hidden = i === SECS.length - 1;
-  if (i > 0) $("rprev").textContent = "← " + SECS[i - 1].dataset.title;
-  if (i < SECS.length - 1) $("rnext").textContent = SECS[i + 1].dataset.title + " →";
+  const vis = visIdx(), prevI = vis.filter(j => j < i).pop(), nextI = vis.find(j => j > i);
+  $("rprev").hidden = prevI === undefined; $("rnext").hidden = nextI === undefined;
+  if (prevI !== undefined){ $("rprev").textContent = "← " + SECS[prevI].dataset.title; $("rprev").dataset.to = prevI; }
+  if (nextI !== undefined){ $("rnext").textContent = SECS[nextI].dataset.title + " →"; $("rnext").dataset.to = nextI; }
   store.set("sec", i);
   if (scroll !== false) window.scrollTo({top: 0});
 }
@@ -166,14 +178,14 @@ $("rsecs").addEventListener("click", e => {
 });
 $("rsel").onchange = () => { clearSearch(); openSec(+$("rsel").value); };
 $("rtoc").onchange = () => { const v = $("rtoc").value; if (v) goToId(v); $("rtoc").value = ""; };
-$("rprev").onclick = () => openSec(curSec - 1); $("rnext").onclick = () => openSec(curSec + 1);
+$("rprev").onclick = () => openSec(+$("rprev").dataset.to); $("rnext").onclick = () => openSec(+$("rnext").dataset.to);
 let blocks = null, sT = null, hits = [];
 function clearSearch(){ $("rq").value = ""; $("rresults").hidden = true; $("rresults").innerHTML = ""; }
 function runSearch(){
   const q = $("rq").value.trim().toLowerCase(), box = $("rresults");
   if (q.length < 3){ box.hidden = true; box.innerHTML = ""; return; }
   blocks = blocks || [...document.querySelectorAll("#rcontent :is(p,li,.codal,td,h3,h4,.test,aside)")].filter(el => !el.querySelector("p,li,td"));
-  hits = blocks.filter(el => el.textContent.toLowerCase().includes(q));
+  hits = blocks.filter(el => el.textContent.toLowerCase().includes(q) && secShown(SECS.indexOf(el.closest("section.rv"))));
   box.hidden = false;
   box.innerHTML = `<div class="spread"><span class="lbl">${hits.length} match${hits.length === 1 ? "" : "es"}${hits.length > 120 ? " · first 120" : ""}</span><button class="btn small ghost" id="rclear">Clear</button></div>` +
     hits.slice(0, 120).map((el, k) => { const sec = el.closest("section.rv"); const txt = el.textContent.replace(/\s+/g, " ").trim(); const p = txt.toLowerCase().indexOf(q); const s = Math.max(0, p - 70);
@@ -185,13 +197,14 @@ $("rresults").addEventListener("click", e => { if (e.target.id === "rclear"){ cl
 /* ================= CASES: browse ================= */
 function setCaseMode(m){ document.querySelectorAll("[data-cm]").forEach(b => b.setAttribute("aria-pressed", b.dataset.cm === m)); $("c-browse").hidden = m !== "browse"; $("c-drill").hidden = m !== "drill"; if (m === "drill") renderDSetup(); }
 document.querySelector("[data-cm]").parentElement.addEventListener("click", e => { const b = e.target.closest("[data-cm]"); if (b) setCaseMode(b.dataset.cm); });
-$("ctopic").innerHTML = `<option value="">All topics</option>` + D.topics.map(t => `<option value="${t.key}">${esc(t.name)}</option>`).join("");
+function fillTopicSel(){ const v = $("ctopic").value; $("ctopic").innerHTML = `<option value="">All topics</option>` + TOPS().map(t => `<option value="${t.key}">${esc(t.name)}</option>`).join(""); $("ctopic").value = TOPS().some(t => t.key === v) ? v : ""; }
+fillTopicSel();
 function renderCases(){
   const q = $("cq").value.trim().toLowerCase(), tp = $("ctopic").value, an = $("canchor").checked;
-  const list = D.cases.filter(c => (!tp || c.t === tp) && (!an || c.a) && (!q || [c.n, c.r, c.f, c.h, c.x, c.y, c.sub].join(" ").toLowerCase().includes(q)));
-  $("caseCt").textContent = `${list.length} of ${D.cases.length} cases`;
+  const list = CASES().filter(c => (!tp || c.t === tp) && (!an || c.a) && (!q || [c.n, c.r, c.f, c.h, c.x, c.y, c.sub].join(" ").toLowerCase().includes(q)));
+  $("caseCt").textContent = `${list.length} of ${CASES().length} cases`;
   let html = "", last = "";
-  D.topics.forEach(t => {
+  TOPS().forEach(t => {
     const g = list.filter(c => c.t === t.key); if (!g.length) return;
     html += `<div class="grouph">${esc(t.name)} <small>${esc(t.part)} · ${g.length}</small></div>`;
     html += g.map(c => `<button class="crow" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span></span><span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
@@ -207,11 +220,11 @@ const DIRS = {
   rc: {p: "rc", help: "You see the rule. Pick the case that laid it down."}
 };
 let dDir = store.get("ddir", "cr"), dTop = new Set(store.get("dtop", D.topics.map(t => t.key))), R = [], ri = 0, rDone = 0, rRight = 0;
-function dPool(){ return D.cases.filter(c => dTop.has(c.t) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || (dDir === "fc" ? c.f : c.r))); }
+function dPool(){ return CASES().filter(c => dTop.has(c.t) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || (dDir === "fc" ? c.f : c.r))); }
 function renderDSetup(){
   document.querySelectorAll("#dDir [data-d]").forEach(b => b.setAttribute("aria-pressed", b.dataset.d === dDir));
   $("dDirHelp").textContent = DIRS[dDir].help;
-  $("dTopics").innerHTML = D.topics.map(t => `<label class="chip${dTop.has(t.key) ? " on" : ""}" for="dt_${t.key}"><input type="checkbox" id="dt_${t.key}" data-t="${t.key}"${dTop.has(t.key) ? " checked" : ""}>${esc(t.name)}</label>`).join("");
+  $("dTopics").innerHTML = TOPS().map(t => `<label class="chip${dTop.has(t.key) ? " on" : ""}" for="dt_${t.key}"><input type="checkbox" id="dt_${t.key}" data-t="${t.key}"${dTop.has(t.key) ? " checked" : ""}>${esc(t.name)}</label>`).join("");
   const p = dPool(), due = p.filter(c => isDue(dDir + ":" + c.id)).length, fresh = p.filter(c => !SRS[dDir + ":" + c.id]).length;
   $("dCount").textContent = `${p.length} cases selected · ${due} due · ${fresh} not yet seen`;
   $("dSetup").hidden = false; $("dCard").hidden = true;
@@ -244,7 +257,7 @@ function maskName(text, c){
   return t;
 }
 function distractors(c, n){
-  const same = shuffle(D.cases.filter(x => x.id !== c.id && x.t === c.t)), other = shuffle(D.cases.filter(x => x.id !== c.id && x.t !== c.t));
+  const same = shuffle(CASES().filter(x => x.id !== c.id && x.t === c.t)), other = shuffle(CASES().filter(x => x.id !== c.id && x.t !== c.t));
   return [...same, ...other].slice(0, n);
 }
 function showCard(){
@@ -292,13 +305,13 @@ const EXAMS = [...new Set(D.mcq.map(q => q.exam))];
 let qExamSel = new Set(store.get("qexams", EXAMS));
 let qhist = store.get("qhist", {});
 function qPool(){
-  let p = D.mcq.filter(q => qExamSel.has(q.exam) && (!$("inCov").checked || q.cov === "in"));
+  let p = MCQS().filter(q => qExamSel.has(q.exam) && (!$("inCov").checked || q.cov === "in"));
   if ($("qMissed").checked) p = p.filter(q => qhist[q.id] && qhist[q.id].r === 0);
   return p;
 }
 function renderQSetup(){
-  $("qExams").innerHTML = EXAMS.map(x => { const n = D.mcq.filter(q => q.exam === x && (!$("inCov").checked || q.cov === "in")).length; return `<label class="chip${qExamSel.has(x) ? " on" : ""}" for="qe_${x.replace(/\W/g, "")}"><input type="checkbox" id="qe_${x.replace(/\W/g, "")}" data-x="${esc(x)}"${qExamSel.has(x) ? " checked" : ""}>${esc(x)} <span class="tiny">${n}</span></label>`; }).join("");
-  $("qMissedCt").textContent = `(${D.mcq.filter(q => qhist[q.id] && qhist[q.id].r === 0).length})`;
+  $("qExams").innerHTML = EXAMS.map(x => { const n = MCQS().filter(q => q.exam === x && (!$("inCov").checked || q.cov === "in")).length; return `<label class="chip${qExamSel.has(x) ? " on" : ""}" for="qe_${x.replace(/\W/g, "")}"><input type="checkbox" id="qe_${x.replace(/\W/g, "")}" data-x="${esc(x)}"${qExamSel.has(x) ? " checked" : ""}>${esc(x)} <span class="tiny">${n}</span></label>`; }).join("");
+  $("qMissedCt").textContent = `(${MCQS().filter(q => qhist[q.id] && qhist[q.id].r === 0).length})`;
   $("qPool").textContent = `${qPool().length} items in this selection`;
   store.set("qexams", [...qExamSel]);
   $("qSetup").hidden = false; $("qBox").hidden = true;
@@ -370,6 +383,7 @@ function modelHTML(e, withRubric){
 let spId = store.get("spid", D.essays[0].id), spHist = store.get("sphist", {});
 $("spSel").innerHTML = D.essays.map(e => `<option value="${e.id}">${esc(e.exam)}${e.n ? " Q" + e.n : ""}: ${esc(e.short)}</option>`).join("");
 $("spGroups").innerHTML = D.issues.map(g => `<div class="igroup"><h4>${esc(g.g)}</h4><div class="ilist">${g.items.map(i => `<label class="iitem" data-iid="${i.id}" for="is_${i.id}"><input type="checkbox" id="is_${i.id}" value="${i.id}"><span>${esc(i.l)}<span class="h">${esc(i.h)}</span><span class="why"></span></span></label>`).join("")}</div></div>`).join("");
+function applySpotScope(){ document.querySelectorAll(".iitem").forEach(l => { const off = HIDE && OUT_ISSUES.includes(l.dataset.iid); l.classList.toggle("off", off); if (off) l.querySelector("input").checked = false; }); }
 function openSpot(id){ setTab("spot"); spId = id; renderSpot(); }
 function renderSpot(){
   const e = ESS[spId] || D.essays[0]; spId = e.id; store.set("spid", spId); $("spSel").value = spId;
@@ -457,15 +471,31 @@ let printed = false;
 function renderPrint(){
   if (printed) return; printed = true;
   $("sheet1").innerHTML = `<h2>Issue checklist</h2><div class="sub">Consti 1 midterm · run it in the margin of every problem · 22 minutes each: read 3, outline 3, write 14, check 2</div>
-  <div class="cl">${D.issues.map(g => `<div class="grp"><h4>${esc(g.g)}</h4><ul>${g.items.map(i => `<li><b>${esc(i.l)}.</b> ${esc(i.h)}</li>`).join("")}</ul></div>`).join("")}
+  <div class="cl">${ISSUES().map(g => `<div class="grp"><h4>${esc(g.g)}</h4><ul>${g.items.map(i => `<li><b>${esc(i.l)}.</b> ${esc(i.h)}</li>`).join("")}</ul></div>`).join("")}
   <div class="grp"><h4>Numbers</h4><ul>${D.numbers.map(([a, b]) => `<li><b>${esc(a)}:</b> ${esc(b)}</li>`).join("")}</ul></div>
   <div class="grp"><h4>Write it</h4><ul><li>Answer first (Yes/No; valid/void).</li><li>Rule + provision + one anchor case per issue.</li><li>Apply to the exact words of the law or story.</li><li>One-line conclusion. 150–180 words.</li><li>Did you answer the question asked (‘in his favor’, ‘no procedural issues’)?</li></ul></div></div>`;
-  const anc = D.cases.filter(c => c.a);
-  $("sheet2").innerHTML = `<h2>Anchor cases</h2><div class="sub">${anc.length} cases that carry a test · grouped by syllabus part</div><div class="anc">${D.topics.map(t => { const g = anc.filter(c => c.t === t.key); return g.length ? `<div class="grp"><h4>${esc(t.name)}</h4>${g.map(c => `<p><b>${esc(c.n)}</b> (${esc(c.y)}): ${esc(c.s || firstSentence(c.r))}</p>`).join("")}</div>` : ""; }).join("")}</div>`;
+  const anc = CASES().filter(c => c.a);
+  $("sheet2").innerHTML = `<h2>Anchor cases</h2><div class="sub">${anc.length} cases that carry a test · grouped by syllabus part${HIDE ? " · citizenship and territory left out" : ""}</div><div class="anc">${TOPS().map(t => { const g = anc.filter(c => c.t === t.key); return g.length ? `<div class="grp"><h4>${esc(t.name)}</h4>${g.map(c => `<p><b>${esc(c.n)}</b> (${esc(c.y)}): ${esc(c.s || firstSentence(c.r))}</p>`).join("")}</div>` : ""; }).join("")}</div>`;
 }
+
+/* ================= scope toggle wiring ================= */
+function applyScope(){
+  $("scopeBtn").setAttribute("aria-pressed", HIDE); $("scopeState").textContent = HIDE ? "hidden" : "shown";
+  store.set("hideCitTerr", HIDE);
+  buildSide(); if (!secShown(curSec)) openSec(visIdx()[0], false); else openSec(curSec, false);
+  if ($("rq").value) runSearch();
+  fillTopicSel(); renderCases(); applySpotScope(); dueBadge();
+  if ($("c-drill").hidden === false && $("dSetup").hidden === false) renderDSetup();
+  if ($("qSetup").hidden === false) renderQSetup();
+  printed = false; if (!$("v-print").hidden) renderPrint();
+  if (!$("v-today").hidden) renderToday();
+}
+$("scopeBtn").onclick = () => { HIDE = !HIDE; applyScope(); };
 
 /* ================= boot ================= */
 renderClock(); setInterval(renderClock, 60000);
 buildSide(); openSec(Math.min(store.get("sec", 0), SECS.length - 1), false);
-renderCases(); renderDSetup(); setCaseMode("browse"); renderQSetup(); renderSpot(); renderWrite(); dueBadge();
+$("scopeBtn").setAttribute("aria-pressed", HIDE); $("scopeState").textContent = HIDE ? "hidden" : "shown";
+if (!secShown(curSec)) openSec(visIdx()[0], false);
+applySpotScope(); renderCases(); renderDSetup(); setCaseMode("browse"); renderQSetup(); renderSpot(); renderWrite(); dueBadge();
 (() => { const h = (location.hash || "").slice(1); setTab(TABS.includes(h) ? h : store.get("tab", "today"), false); })();

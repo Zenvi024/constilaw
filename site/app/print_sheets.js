@@ -20,12 +20,15 @@ html,body{background:#fff!important;color:#111!important}
   const b = await chromium.launch(); const p = await b.newPage();
   await p.goto('file://' + file + '#print'); await p.waitForTimeout(800);
   await p.addStyleTag({content: CSS}); await p.emulateMedia({media: 'print'});
-  for (const [id, name] of [['sheet1', 'issue-checklist'], ['sheet2', 'anchor-cases']]) {
-    await p.evaluate(id => { for (const s of ['sheet1', 'sheet2']) document.getElementById(s).hidden = s !== id; document.querySelector('#v-print > .stack > p').hidden = true; }, id);
-    const pdf = path.join(out, `consti1-${name}.pdf`);
-    await p.pdf({path: pdf, width: '8.5in', height: '13in', printBackground: true, margin: {top: '0.45in', bottom: '0.45in', left: '0.5in', right: '0.5in'}});
-    const pages = (fs.readFileSync(pdf, 'latin1').match(/\/Type\s*\/Page[^s]/g) || []).length;
-    console.log(pdf, pages, pages === 1 ? 'page' : 'PAGES (too long)');
+  for (const full of [false, true]) {
+    if (full) { await p.emulateMedia({media: 'screen'}); await p.click('#scopeBtn'); await p.click('[data-tab="today"]'); await p.click('[data-tab="print"]'); await p.emulateMedia({media: 'print'}); }
+    for (const [id, name] of [['sheet1', 'issue-checklist'], ['sheet2', 'anchor-cases']]) {
+      await p.evaluate(id => { for (const s of ['sheet1', 'sheet2']) document.getElementById(s).hidden = s !== id; document.querySelector('#v-print > .stack > p').hidden = true; }, id);
+      const pdf = path.join(out, `consti1-${name}${full ? '-with-citizenship-territory' : ''}.pdf`);
+      await p.pdf({path: pdf, width: '8.5in', height: '13in', printBackground: true, margin: {top: '0.45in', bottom: '0.45in', left: '0.5in', right: '0.5in'}});
+      const pages = (fs.readFileSync(pdf, 'latin1').match(/\/Type\s*\/Page[^s]/g) || []).length;
+      console.log(pdf, pages, pages === 1 ? 'page' : 'PAGES (too long)');
+    }
   }
   await b.close();
 })();

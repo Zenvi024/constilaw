@@ -15,6 +15,11 @@ require('fs').mkdirSync(out, {recursive: true});
     const sw = async () => p.evaluate(() => document.documentElement.scrollWidth);
     const check = async (name) => { const w = await sw(); if (w > vp.width + 1){ fail++; console.log(`  OVERFLOW ${tag} ${name}: ${w}`); } };
     await p.screenshot({path: `${out}/${tag}-today.png`}); await check('today');
+    // scope toggle: hidden by default, everything back when switched off
+    const scope = async () => p.evaluate(() => ({secs: document.querySelectorAll('#rsecs>li').length, cases: document.querySelectorAll('#clist .crow').length, tecson: !!document.querySelector('#clist [data-case="tecson"]'), dual: getComputedStyle(document.querySelector('[data-iid="ppl_dual"]')).display !== 'none', pool: document.getElementById('qPool').textContent}));
+    const s1 = await scope(); await p.click('#scopeBtn'); const s2 = await scope(); await p.click('#scopeBtn'); const s3 = await scope();
+    const scopeOK = !s1.tecson && !s1.dual && s2.tecson && s2.dual && s2.secs === s1.secs + 2 && s2.cases > s1.cases && JSON.stringify(s1) === JSON.stringify(s3);
+    if (!scopeOK){ fail++; console.log('  SCOPE', JSON.stringify([s1, s2, s3])); }
     // rule maps + search + case modal
     await p.click('[data-tab="rules"]'); await check('rules');
     await p.fill('#rq', 'ABAKADA'); await p.waitForTimeout(400);
@@ -26,7 +31,7 @@ require('fs').mkdirSync(out, {recursive: true});
     await p.keyboard.press('Escape');
     await p.screenshot({path: `${out}/${tag}-rules.png`});
     // cases browse + drill (all three directions)
-    await p.click('[data-tab="cases"]'); await p.fill('#cq', 'foundling'); await p.waitForTimeout(100);
+    await p.click('[data-tab="cases"]'); await p.fill('#cq', 'quorum'); await p.waitForTimeout(100);
     const cn = await p.$$eval('#clist .crow', x => x.length); await check('cases');
     await p.click('[data-cm="drill"]'); await p.click('#dStart'); await p.click('#dFlip'); await p.click('.grade [data-g="2"]');
     await p.click('#dQuit'); await p.click('#dBack');
@@ -49,7 +54,7 @@ require('fs').mkdirSync(out, {recursive: true});
     // printables + today again
     await p.click('[data-tab="print"]'); await p.screenshot({path: `${out}/${tag}-print.png`, fullPage: true}); await check('print');
     await p.click('[data-tab="today"]'); await p.click('#week [data-day="2026-10-11"]'); await p.screenshot({path: `${out}/${tag}-today2.png`}); await check('today2');
-    console.log(`${tag}: search=${hits} modal=${modal} cases=${cn} drillfb=${fb} mcq=${expl} spot=${spr} timer=${tt} words=${wn} errors=${JSON.stringify(errs)}`);
+    console.log(`${tag}: scope=${scopeOK} search=${hits} modal=${modal} cases=${cn} drillfb=${fb} mcq=${expl} spot=${spr} timer=${tt} words=${wn} errors=${JSON.stringify(errs)}`);
     if (errs.length || !modal || !hits || !expl || !spr || !fb) fail++;
     await p.close();
   }
