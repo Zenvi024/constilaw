@@ -6,7 +6,7 @@
   "t": "approp",
   "sub": "V.A.8 Appropriation laws",
   "a": 0,
-  "r": "Automatic appropriations for debt service under existing decrees are valid: they are appropriations ‘made by law’, need not be re-enacted yearly, and have sufficient standards. The mandate to give education the highest budgetary priority does not bar Congress from meeting other national needs.",
+  "r": "Automatic appropriations for debt service under existing decrees are valid: they are appropriations ‘made by law’, need not be re-enacted yearly, and have sufficient standards. The mandate to give education the highest budgetary priority does not bar Congress from meeting other national needs. The standards: debt service is paid only as the loans fall due, and the amount is determinable (only what is needed to service the debt), so the purpose and amount are fixed by law. The debt decrees (PDs 81, 1177 and 1967) survived the 1987 Constitution because they are not inconsistent with it (Art. XVIII, Sec. 3). Education still got the highest allocation among the departments, which satisfied the mandate.",
   "f": "Senators challenged the ₱86.8-billion automatic debt service appropriation in the 1990 budget, larger than the education budget.",
   "h": "Petition dismissed.",
   "x": "Continuing or automatic appropriations; the ‘highest budgetary priority to education’ argument."
@@ -18,12 +18,13 @@
   "t": "approp",
   "sub": "V.A.8 Appropriation laws",
   "a": 1,
-  "r": "The Countrywide Development Fund was valid (legislators only recommended projects). Provisions in the GAA that do not relate to a particular appropriation are ‘inappropriate provisions’ that the President may veto separately. Congress may impose conditions on items, but the President cannot veto a condition without vetoing the item.",
+  "r": "The Countrywide Development Fund was valid (legislators only recommended projects). Provisions in the GAA that do not relate to a particular appropriation are ‘inappropriate provisions’ that the President may veto separately. Congress may impose conditions on items, but the President cannot veto a condition without vetoing the item. Members of Congress may only propose realignment of their allocations; the Senate President or Speaker, who alone may augment under Sec. 25(5), must approve it. The education mandate did not bar giving debt service a larger allocation.",
   "f": "Senators and Philconsa challenged the CDF, special provisions in the 1994 GAA, and several presidential vetoes and conditions.",
-  "h": "Mixed: CDF upheld; some vetoes upheld as vetoes of inappropriate provisions, others void as vetoes of conditions.",
+  "h": "Petitions largely dismissed: CDF upheld (recommendatory only); most vetoes and conditions sustained. Three vetoes were void because they struck appropriate provisions inseparable from their items without vetoing the items: (1) the debt service provision limiting the fund to principal and interest of foreign and domestic debt (not Central Bank-Board of Liquidators liabilities); (2) the DPWH rule that road maintenance be 70% by contract and 30% by administration; (3) the special provision on AFP purchases of medicines. Vetoes upheld include the provision letting SUCs keep their income in revolving funds (it amended existing law) and the provision letting the AFP Chief of Staff augment pension funds from savings (contrary to Sec. 25(5)).",
   "x": "Riders in the GAA; item veto versus veto of conditions.",
   "w": "Its pork barrel holding was abandoned in Belgica (2013).",
-  "s": "Inappropriate GAA provisions may be vetoed separately; conditions cannot be vetoed without the item."
+  "s": "Inappropriate GAA provisions may be vetoed separately; conditions cannot be vetoed without the item.",
+  "test": "Item veto: (1) an item is an indivisible sum of money for a stated purpose; the President vetoes it whole or not at all. (2) A provision that does not relate to a particular appropriation, or that amends substantive law or belongs in separate legislation, is an ‘inappropriate provision’ and may be vetoed as if it were an item. (3) An appropriate provision or condition can be struck only by vetoing the item it qualifies."
  },
  {
   "id": "lamp",
@@ -32,7 +33,7 @@
   "t": "approp",
   "sub": "V.A.8 Appropriation laws",
   "a": 0,
-  "r": "The PDAF was upheld on the premise that legislators merely recommend projects and the Executive implements; the burden of proving otherwise was not met.",
+  "r": "The PDAF was upheld on the premise that legislators merely recommend projects and the Executive implements; the burden of proving otherwise was not met. Media reports, conjecture and general allegations of misuse are speculation, not proof. Absent evidence that the DBM released funds directly to legislators or that they controlled spending, the presumption of constitutionality of the appropriation law and the presumption of regularity in the release of PDAF funds stood. The Court nonetheless said that, after enactment, Congress’s role is limited to oversight; budget execution belongs to the Executive.",
   "f": "LAMP challenged the 2004 PDAF as allowing direct releases to individual legislators.",
   "h": "Petition dismissed.",
   "x": "Historical; overturned by Belgica (2013)."
@@ -44,7 +45,7 @@
   "t": "approp",
   "sub": "V.A.8 Appropriation laws",
   "a": 1,
-  "r": "The congressional pork barrel (PDAF) is unconstitutional: post-enactment identification of projects and realignment by legislators violates separation of powers, non-delegability (individual legislators cannot appropriate), checks and balances (no proper item for veto), accountability, and local autonomy. Presidential funds (Malampaya, Presidential Social Fund) were partly struck for overbroad ‘catch-all’ phrases.",
+  "r": "The congressional pork barrel (PDAF) is unconstitutional: post-enactment identification of projects and realignment by legislators violates separation of powers, non-delegability (individual legislators cannot appropriate), checks and balances (no proper item for veto), accountability, and local autonomy. Presidential funds (Malampaya, Presidential Social Fund) were partly struck for overbroad ‘catch-all’ phrases. The PDAF was an intermediate appropriation, a ‘budget within a budget’: the GAA set a lump sum and legislators made the real appropriation after enactment, so the President had no proper item to veto and Congress could not check its own members. Identification was not merely recommendatory, since the fund could not be used without it; after enactment Congress’s power is limited to oversight (scrutiny and investigation). Discretionary presidential funds are not per se invalid and the decrees creating them are appropriations made by law, but their disbursement must meet valid-delegation standards: the Court voided ‘and for such other purposes as may be hereafter directed by the President’ (Malampaya Fund, PD 910) and ‘to finance the priority infrastructure development projects’ (Presidential Social Fund, PD 1869 as amended). Stare decisis did not bar the ruling: LAMP turned on lack of proof, and Philconsa’s premise that legislators merely recommend was belied by practice.",
   "f": "After the Napoles scandal, petitioners challenged the 2013 PDAF and the President’s Malampaya and Social Funds.",
   "h": "PDAF and similar provisions void; Philconsa v. Enriquez and LAMP abandoned to that extent; specified phrases in the presidential funds void.",
   "x": "Any budget provision letting legislators choose projects after the budget passes, or a lump sum with no specific purpose (2015 midterm; 2020 finals).",
@@ -59,7 +60,7 @@
   "t": "approp",
   "sub": "V.A.8 Appropriation laws",
   "a": 0,
-  "r": "Lump-sum funds are valid if they meet singular correspondence or have sufficient standards. The 2014 Unprogrammed Fund, Contingent Fund, E-Government Fund and Local Government Support Fund were upheld.",
+  "r": "Lump-sum appropriations are not per se unconstitutional. A lump sum is a valid item if it funds multiple programs, projects or activities that all fall under one singular appropriation purpose; that purpose may be as general or specific as Congress wishes, so long as it does not negate the President’s item veto (it cannot cover multiple unrelated or vague and amorphous purposes). The 2014 Unprogrammed Fund, Contingent Fund, E-Government Fund and Local Government Support Fund passed: each had one purpose and sufficient standards, and unlike the PDAF none involved post-enactment discretion by legislators.",
   "f": "Belgica challenged lump-sum ‘discretionary’ funds in the 2014 GAA as pork in disguise.",
   "h": "Petition dismissed (per curiam).",
   "x": "Not every lump sum is pork: ask if the fund has one purpose (even with sub-projects) or clear standards."
@@ -73,7 +74,7 @@
   "a": 1,
   "r": "Parts of the DAP were unconstitutional: (1) withdrawing unobligated allotments and declaring them ‘savings’ before year-end, contrary to the GAA’s definition; (2) cross-border transfers to offices outside the Executive; (3) funding projects with no appropriation in the GAA; (4) using unprogrammed funds without the required excess revenue certification. The operative fact doctrine applied to projects that could not be undone, not to the authors without findings of good faith.",
   "f": "The Aquino administration pooled ‘savings’ and unprogrammed funds into the Disbursement Acceleration Program, funding projects across branches.",
-  "h": "Specified DAP acts declared unconstitutional (modified on reconsideration in 2015).",
+  "h": "Specified DAP acts declared unconstitutional (modified on reconsideration in 2015). DAP as a fiscal strategy was not itself void, only the specified practices. On reconsideration (2015) the Court clarified that the DAP’s authors, proponents and implementors are presumed in good faith; whether they are liable is for the proper tribunals to determine.",
   "x": "Any executive realignment of funds; ‘savings’ declared mid-year; transfers to Congress, COA or other branches.",
   "test": "Sec. 25(5) requisites: (1) a law authorizes the transfer; (2) actual savings exist; (3) the transfer augments an existing item in the GAA; (4) within the official’s own office. ‘Savings’: the purpose was completed or abandoned, or efficiencies achieved, after the appropriation was fully provided for.",
   "s": "DAP partly void: mid-year ‘savings’, cross-border transfers, no-item projects; unprogrammed funds need excess revenue."
@@ -89,7 +90,8 @@
   "f": "RA 11935 moved the barangay and SK elections to October 2023 and extended incumbents in hold-over.",
   "h": "RA 11935 declared unconstitutional, but under the operative fact doctrine the October 2023 elections proceeded; incumbents’ terms deemed to end Dec. 31, 2022, with hold-over.",
   "x": "Election postponements and budget realignment through ordinary legislation. Read the substantive issues (the syllabus says to go straight to them).",
-  "s": "Election postponements need compelling reasons; RA 11935 void (disguised transfer of appropriations)."
+  "s": "Election postponements need compelling reasons; RA 11935 void (disguised transfer of appropriations).",
+  "test": "Valid postponement of elections: (1) an important, substantial or compelling reason, such as a public emergency, and only to the extent strictly required; election fatigue, divisiveness, shortness of the existing term or other superficial reasons alone will not do; (2) the reason must mainly be to safeguard suffrage or other fundamental rights, or meet a public emergency; (3) elections must still be held at regular intervals that are not unduly long, and be free, honest, orderly and safe. A postponement used as a vehicle to transfer funds is invalid: only the COMELEC Chairperson may augment COMELEC items, from COMELEC savings (Sec. 25(5); fiscal autonomy)."
  },
  {
   "id": "delacruz",
@@ -123,8 +125,8 @@
   "sub": "V.A.8 Appropriation laws",
   "a": 0,
   "r": "A law granting benefits does not by itself authorize payment; there must be an appropriation. Using savings to pay benefits with no GAA item violates Sec. 25(5) and Sec. 29(1): there is no item to augment.",
-  "f": "A DOST regional office paid Magna Carta for Scientists benefits in 1998 with no appropriation, then sought presidential approval to use savings.",
-  "h": "COA disallowance upheld.",
+  "f": "DOST Region IX personnel were paid Magna Carta for Scientists (RA 8439) benefits from 1998 to 2001, with no specific appropriation in the GAA, out of the regional office’s savings. A presidential approval (April 12, 2000, through the Executive Secretary) to use savings covered only 1998–2000, so COA lifted those disallowances but kept the 2001 disallowance.",
+  "h": "COA disallowance upheld. Only the 2001 payments were before the Court; RA 8439 itself required the benefits to be funded through the GAA.",
   "x": "Benefit laws without funding; ‘augmentation’ of non-existent items."
  },
  {
@@ -134,9 +136,9 @@
   "t": "approp",
   "sub": "V.A.8 Appropriation laws",
   "a": 0,
-  "r": "Rules on return of disallowed amounts: approving and certifying officers acting in good faith, in the regular performance of duties and with diligence are not civilly liable; those in bad faith, malice or gross negligence are solidarily liable for the net disallowed amount. Payees generally return what they received, unless they received it for services actually rendered or other bona fide exceptions apply.",
-  "f": "Officials of Mondragon, Northern Samar granted crisis allowances to employees after Typhoon Yolanda; COA disallowed them.",
-  "h": "Disallowance upheld; officials excused from refund for good faith.",
+  "r": "Rules on return of disallowed amounts: approving and certifying officers acting in good faith, in the regular performance of duties and with diligence are not civilly liable; those in bad faith, malice or gross negligence are solidarily liable for the net disallowed amount. Payees generally return what they received, unless they received it for services actually rendered or other bona fide exceptions apply. If the disallowance is set aside, no one returns anything. The payees’ duty to return rests on solutio indebiti (unjust enrichment), so their good faith does not excuse them. ‘Net disallowed amount’ means the total disallowed less what payees are excused from returning. The Court may also excuse payees for undue prejudice or social justice reasons, case by case. Badges of officers’ good faith: certificates of availability of funds, an in-house or DOJ legal opinion, no precedent disallowing a similar case, a long agency practice with no prior disallowance, and a reasonable textual reading of the law supporting legality.",
+  "f": "Mondragon, Northern Samar granted about ₱7.7 million in allowances (Economic Crisis Assistance, Monetary Augmentation, Agricultural Crisis Assistance, Mitigation Allowance) to local and national employees under Sangguniang Bayan ordinances and resolutions. COA disallowed them (11 notices, February 2014) under the Salary Standardization Law and held the approving officers liable; the recipients were excused.",
+  "h": "Disallowance upheld; officials excused from refund for good faith. The allowances were void because, under Sec. 12 of RA 6758, allowances not expressly excluded are integrated into standardized salaries; the Sanggunian’s powers under the Local Government Code cannot override the SSL, and long practice creates no vested right.",
   "x": "Liability for illegal disbursements (budget and audit stories).",
   "w": "The masterfile notes a correction to this digest. Some online summaries misdate the decision; it is September 8, 2020."
  },
@@ -147,7 +149,7 @@
   "t": "tax",
   "sub": "V.A.8 Tax laws",
   "a": 1,
-  "r": "Only the revenue bill must originate in the House; the Senate may propose amendments, even a substitute bill, so the final law need not be the House version. A bicameral committee may insert new provisions germane to the subject. Presidential certification of urgency dispenses with both three readings on separate days and printing three days before. The E-VAT law did not violate uniformity or the progressive taxation directive (a moral incentive, not an enforceable right).",
+  "r": "Only the revenue bill must originate in the House; the Senate may propose amendments, even a substitute bill, so the final law need not be the House version. A bicameral committee may insert new provisions germane to the subject. Presidential certification of urgency dispenses with both three readings on separate days and printing three days before. The E-VAT law did not violate uniformity or the progressive taxation directive (a moral incentive, not an enforceable right). It is enough that the law arose from a revenue bill that originated in the House; requiring the law to be substantially the House bill would deny the Senate’s power to propose amendments and make the House superior. The Senate may even file a substitute bill in anticipation of the House bill, so long as the Senate as a body withholds action until the House bill is received. The conference committee may include entirely new provisions found in neither version, so long as they are germane. The VAT, a general tax, did not single out the press or religion.",
   "f": "Petitioners challenged the Expanded VAT Law (RA 7716) on origination, bicameral changes, urgency certification, and substantive grounds.",
   "h": "RA 7716 upheld.",
   "x": "Tax bill origination and bicameral conference changes (2015 midterm item on income tax reform).",
@@ -161,9 +163,9 @@
   "t": "tax",
   "sub": "V.A.8 Tax laws",
   "a": 1,
-  "r": "A charitable institution is exempt from real property tax only on property actually, directly and exclusively used for charitable purposes. Portions leased to private parties for commercial use are taxable; it is the use of the property, not of the income, that counts.",
+  "r": "A charitable institution is exempt from real property tax only on property actually, directly and exclusively used for charitable purposes. Portions leased to private parties for commercial use are taxable; it is the use of the property, not of the income, that counts. Charging paying patients and receiving government subsidies did not defeat its charitable character: the test is whether it exists for a purpose recognized in law as charitable or is maintained for gain, profit or private advantage. ‘Exclusively’ means solely, so any commercial use of a portion makes that portion taxable. The claimant bears the burden of proving the exemption, which is strictly construed.",
   "f": "The Lung Center leased parts of its land and building to private businesses and claimed exemption from all real property taxes.",
-  "h": "Portions used commercially are taxable; portions used for the hospital exempt.",
+  "h": "Lung Center is a charitable institution, but only the portions of its land and hospital used for its patients, paying or non-paying, are exempt. The portions leased to private doctors for clinics, to a canteen and stores, and to Elliptical Orchids and Garden Center are taxable.",
   "x": "Tax exemption claims by charitable, religious and educational institutions (Art. VI, Sec. 28(3)).",
   "test": "Exemption requires proof that (1) the institution is charitable and (2) the property is actually, directly and exclusively used for charitable purposes.",
   "s": "Charitable exemption covers only property actually, directly and exclusively used for charity."
@@ -175,7 +177,7 @@
   "t": "tax",
   "sub": "V.A.8 Tax laws",
   "a": 0,
-  "r": "Congress may delegate to the President, within specified limits, the power to fix tariff rates and other duties (Art. VI, Sec. 28(2)). Executive orders imposing additional duties on crude oil under the Tariff and Customs Code were valid, even if they also raise revenue.",
+  "r": "Congress may delegate to the President, within specified limits, the power to fix tariff rates and other duties (Art. VI, Sec. 28(2)). Executive orders imposing additional duties on crude oil under the Tariff and Customs Code were valid, even if they also raise revenue. Section 401 of the Tariff and Customs Code lets the President act ‘in the interest of national economy, general welfare and/or national security’; protecting local industries is not the only permissible aim. EOs 475 and 478, though substantially moved by the desire to raise revenue, were therefore valid, and since the President acted under a statute Congress enacted under Sec. 28(2), the origination rule was not violated.",
   "f": "President Aquino imposed additional import duties on crude oil and petroleum products through executive orders.",
   "h": "Executive orders upheld.",
   "x": "Delegated tariff powers; presidential levies on imports."
@@ -187,9 +189,9 @@
   "t": "tax",
   "sub": "V.A.8 Tax laws",
   "a": 1,
-  "r": "Only Congress may grant tax exemptions, by a majority of all its members (Art. VI, Sec. 28(4)), and exemptions must be expressly granted. A presidential proclamation cannot extend to the John Hay economic zone the tax incentives that RA 7227 gave only to the Subic zone.",
+  "r": "Only Congress may grant tax exemptions, by a majority of all its members (Art. VI, Sec. 28(4)), and exemptions must be expressly granted. A presidential proclamation cannot extend to the John Hay economic zone the tax incentives that RA 7227 gave only to the Subic zone. Apart from Congress, only the Constitution itself grants tax exemptions, and local governments may exempt only from local taxes. The other privileges extended to John Hay are likewise matters Congress traditionally legislates, so extending them by proclamation was an unwarranted delegation.",
   "f": "Proclamation 420 created the John Hay Special Economic Zone and granted it the same tax incentives as Subic.",
-  "h": "The tax exemption provision of Proclamation 420 was void; the rest stood.",
+  "h": "Section 3 of Proclamation 420, which gave the John Hay SEZ the Subic tax exemptions and other incentives, was void; the creation of the zone itself stood.",
   "x": "Any executive grant of tax incentives or exemptions without a law (e.g., a new economic zone by proclamation).",
   "s": "Only Congress grants tax exemptions, expressly, by a majority of all members; not by proclamation."
  }
