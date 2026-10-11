@@ -42,7 +42,7 @@ cid = set(ids)
 # the block's 2026 class reviewer, case by case (shown collapsed in each case card)
 CASEBY = {c['id']: c for c in cases}
 for k, v in load('dg_reviewer.json').items():
-    if k not in cid: print('note: class-reviewer text has no card yet:', k); continue
+    assert k in cid, 'class-reviewer text for unknown case ' + k
     CASEBY[k]['dg'] = v
 
 rev = '\n'.join(open(f).read() for f in sorted(glob.glob(os.path.join(DATA, 'reviewer', '*.html'))))

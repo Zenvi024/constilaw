@@ -6,7 +6,7 @@
   "t": "terr",
   "sub": "IV.A Territory",
   "a": 1,
-  "r": "RA 9522 (baselines law) is constitutional. UNCLOS III and baselines laws do not add to or reduce territory; States acquire or lose territory only by occupation, accretion, cession and prescription. Treating the Kalayaan Island Group and Scarborough Shoal as a ‘regime of islands’ does not cede them.",
+  "r": "RA 9522 (baselines law) is constitutional. UNCLOS III and baselines laws do not add to or reduce territory; States acquire or lose territory only by occupation, accretion, cession and prescription. Treating the Kalayaan Island Group and Scarborough Shoal as a ‘regime of islands’ does not cede them. RA 9522 is only a statutory tool to demarcate the maritime zones and continental shelf under UNCLOS. Calling the waters inside the baselines ‘archipelagic waters’ subject to innocent passage and sea lanes passage does not violate Art. I: the Philippines keeps sovereignty over them, and those passage rights already bind it under international law.",
   "f": "Law professors and students, as citizens and taxpayers, challenged the 2009 baselines law for allegedly shrinking territory and converting internal waters into archipelagic waters.",
   "h": "Petition dismissed; RA 9522 upheld.",
   "x": "West Philippine Sea stories: distinguish territory (sovereignty) from maritime zones (sovereign rights under UNCLOS). Also applies to the Maritime Zones Act (RA 12064, 2024) and the Archipelagic Sea Lanes Act (RA 12065, 2024).",
@@ -19,9 +19,9 @@
   "t": "terr",
   "sub": "IV.A Territory",
   "a": 1,
-  "r": "China’s claim to historic rights within the nine-dash line has no legal basis to the extent it exceeds UNCLOS entitlements. No Spratly feature is a fully entitled island that generates an EEZ. China violated the Philippines’ sovereign rights in its EEZ.",
+  "r": "China’s claim to historic rights within the nine-dash line has no legal basis to the extent it exceeds UNCLOS entitlements. No Spratly feature is a fully entitled island that generates an EEZ. China violated the Philippines’ sovereign rights in its EEZ. Whatever historic rights China had were extinguished by UNCLOS to the extent incompatible with it. A feature’s entitlement is judged in its natural condition: one that cannot sustain human habitation or economic life of its own is a rock with only a 12-nautical-mile territorial sea, and artificial islands or outside supplies do not change that.",
   "f": "The Philippines brought an UNCLOS Annex VII arbitration over China’s nine-dash line, the status of features, and Chinese conduct (fishing, reclamation, obstruction).",
-  "h": "Award in favor of the Philippines on most claims (July 12, 2016). The tribunal did not rule on sovereignty over features.",
+  "h": "Award in favor of the Philippines on most claims (July 12, 2016). The tribunal did not rule on sovereignty over features. China was also found to have interfered with Philippine fishing and petroleum exploration, to have harmed the marine environment through reclamation at seven Spratly features, to have prevented traditional fishing at Scarborough Shoal, and to have created a serious risk of collision there in 2012.",
   "x": "Use for any West Philippine Sea fact pattern: maritime entitlements, EEZ rights, enforcement. Remember the award decides entitlements, not sovereignty.",
   "s": "Nine-dash line has no legal basis beyond UNCLOS; no Spratly feature generates an EEZ."
  },
@@ -32,7 +32,7 @@
   "t": "terr",
   "sub": "IV.A Territory",
   "a": 1,
-  "r": "The MOA-AD was unconstitutional: the Executive cannot guarantee constitutional amendments or create a ‘Bangsamoro Juridical Entity’ with associative status, which presupposes a State. The case was decided despite mootness (the MOA-AD was not signed) because of grave constitutional issues.",
+  "r": "The MOA-AD was unconstitutional: the Executive cannot guarantee constitutional amendments or create a ‘Bangsamoro Juridical Entity’ with associative status, which presupposes a State. The case was decided despite mootness (the MOA-AD was not signed) because of grave constitutional issues. The President’s power to negotiate peace is implied from her powers as Chief Executive and Commander-in-Chief, and she may submit the solutions she favors to Congress as recommendations; what she cannot do is implement them unilaterally or guarantee to a third party that the amendments will be adopted. The panel also committed grave abuse by not consulting the affected LGUs and indigenous peoples (right to information; LGC; IPRA).",
   "f": "The GRP panel initialed a Memorandum of Agreement on Ancestral Domain with the MILF, promising to effect the constitutional and legal changes needed; a TRO stopped the signing.",
   "h": "MOA-AD declared contrary to law and the Constitution.",
   "x": "Peace agreement stories: the President may negotiate and propose but cannot bind Congress or the people to amend the Constitution. Contrast PHILCONSA (2016) on ripeness.",
@@ -45,10 +45,11 @@
   "t": "terr",
   "sub": "IV.A Territory",
   "a": 0,
-  "r": "The constitutionality of IPRA (RA 8371) was challenged under the Regalian Doctrine. The Court was split 7–7; after redeliberation the tie remained, so the petition was dismissed and the law stands (Rule 56 on ties).",
+  "r": "The constitutionality of IPRA (RA 8371) was challenged under the Regalian Doctrine. The Court was split 7–7; after redeliberation the tie remained, so the petition was dismissed and the law stands (Rule 56 on ties). Under Rule 56, Sec. 7 of the Rules of Court, a tie in an original action that persists after redeliberation means dismissal: IPRA stands, but no ruling on its validity is made. Justice Puno’s separate opinion (native title under Cariño as an exception to the Regalian Doctrine) is the usual cite for upholding IPRA.",
   "f": "Citizens and taxpayers attacked IPRA’s recognition of ancestral domains, including natural resources, as ‘private but community property’ of indigenous peoples.",
   "h": "Petition dismissed on a tie vote; IPRA not declared unconstitutional.",
-  "x": "Use for the effect of a tie vote and for native title versus the Regalian Doctrine (Puno’s separate opinion). Also listed under Judiciary (Voting)."
+  "x": "Use for the effect of a tie vote and for native title versus the Regalian Doctrine (Puno’s separate opinion). Also listed under Judiciary (Voting).",
+  "s": "IPRA survives a 7–7 tie: the petition is dismissed, so the law stands without a ruling on its validity."
  },
  {
   "id": "chua2016",
@@ -69,7 +70,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 1,
-  "r": "An illegitimate child of a Filipino father and an alien mother is a Filipino citizen if paternity is proven; the 1935 Constitution’s ‘father is a citizen’ rule draws no distinction by legitimacy. Evidence suggested FPJ’s grandfather became a Filipino under the Philippine Bill of 1902.",
+  "r": "An illegitimate child of a Filipino father and an alien mother is a Filipino citizen if paternity is proven; the 1935 Constitution’s ‘father is a citizen’ rule draws no distinction by legitimacy. Evidence suggested FPJ’s grandfather became a Filipino under the Philippine Bill of 1902. Civil-law rules on legitimacy govern private rights such as support and succession, not citizenship, which is a matter of political law. Lorenzo Pou, a Spanish subject presumed to have resided in the Philippines and who died in Pangasinan in 1954, became Filipino by the Philippine Bill of 1902, and that citizenship passed to Allan Poe and then to FPJ, whose filiation was shown by his birth certificate.",
   "f": "Petitions to disqualify Fernando Poe Jr. for President argued he was illegitimate and so followed his American mother’s citizenship.",
   "h": "Petitions dismissed; COMELEC did not commit grave abuse in refusing to cancel the COC. Jurisdiction over a President’s qualifications after the election belongs to the PET.",
   "x": "Use for natural-born status by blood (jus sanguinis), the 1935 rules, and forum (COMELEC before the election; PET after).",
@@ -82,10 +83,10 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 1,
-  "r": "Foundlings are natural-born citizens: the Constitution, its deliberations, the statistical probability that a child found in the Philippines has Filipino parents, and international law support a presumption of Filipino parentage. Grace Poe was qualified as Senator.",
+  "r": "Foundlings are natural-born citizens: the Constitution, its deliberations, the statistical probability that a child found in the Philippines has Filipino parents, and international law support a presumption of Filipino parentage. Grace Poe was qualified as Senator. The international-law basis is the generally accepted principle (1930 Hague Convention, Art. 14; 1961 Convention on the Reduction of Statelessness, Art. 2) that a foundling is presumed born in, and of nationals of, the State where found; the Philippines is bound through Art. II, Sec. 2 even without ratifying those treaties. Poe’s reacquisition under RA 9225 restored, rather than replaced, her natural-born status.",
   "f": "A defeated senatorial candidate filed quo warranto in the SET, arguing Senator Poe, a foundling, was not natural-born.",
   "h": "The SET did not commit grave abuse; petition dismissed.",
-  "x": "Foundling status and the SET’s jurisdiction over a sitting Senator’s qualifications.",
+  "x": "Foundling status and the SET’s jurisdiction over a sitting Senator’s qualifications. RA 11767 (Foundling Recognition and Protection Act, 2022) now presumes foundlings found in the Philippines natural-born.",
   "g": "Gatmaytan, ‘Hard Cases Make Bad Movies: The Candidates Poe and Philippine Citizenship Law as Screenplay’ (2021) is assigned with this case. The Poe cases appeared on his 2015 midterm (forum, ripeness, and whether the SET and the PET may reach different results).",
   "s": "Foundlings are presumed natural-born; Poe qualified as Senator."
  },
@@ -96,7 +97,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 1,
-  "r": "Election of Philippine citizenship (for those born of Filipino mothers before Jan. 17, 1973) may be implied from positive acts such as voting and holding office. A person whose father was naturalized while he was a minor, and who elected, is natural-born. Residence means domicile and is not lost by temporary absence.",
+  "r": "Election of Philippine citizenship (for those born of Filipino mothers before Jan. 17, 1973) may be implied from positive acts such as voting and holding office. A person whose father was naturalized while he was a minor, and who elected, is natural-born. Residence means domicile and is not lost by temporary absence. The sworn statement is for those who still have to elect; for those already treated as Filipinos when the time to elect came, deliberate acts such as entering a profession open only to Filipinos, holding an office requiring citizenship, and voting are election enough. Art. IV, Sec. 1(3) and the ‘deemed natural-born’ clause correct the 1935 rule that only the father’s citizenship passed, and apply to those who elected before 1987.",
   "f": "Jose Ong Jr., born in Samar to a Chinese father later naturalized and a Filipina mother, was elected to Congress; losing candidates said he was not natural-born or a resident.",
   "h": "HRET ruling upheld; Ong was natural-born and a resident. The Court reviews the HRET only for grave abuse.",
   "x": "Election of citizenship; who is natural-born under Art. IV, Sec. 2; and HRET deference.",
@@ -109,7 +110,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 0,
-  "r": "A naturalized Filipino who later obtains and uses a foreign passport and declares a foreign nationality in documents expressly renounces Philippine citizenship. Citizenship is not a commodity to be displayed when required and suppressed when convenient.",
+  "r": "A naturalized Filipino who later obtains and uses a foreign passport and declares a foreign nationality in documents expressly renounces Philippine citizenship. Citizenship is not a commodity to be displayed when required and suppressed when convenient. A renunciation is express when it is made known distinctly and explicitly; Yu’s acts, taken together, met that standard.",
   "f": "A naturalized Filipino of Portuguese origin renewed and used a Portuguese passport and described himself as Portuguese in business papers.",
   "h": "He was held to have lost Philippine citizenship; his detention for deportation was valid.",
   "x": "Loss of citizenship by express renunciation through conduct."
@@ -121,7 +122,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 0,
-  "r": "Repatriation under RA 8171 is done by filing with the Special Committee on Naturalization, not the regional trial court. An RTC that grants repatriation acts without jurisdiction.",
+  "r": "Repatriation under RA 8171 is done by filing with the Special Committee on Naturalization, not the regional trial court. An RTC that grants repatriation acts without jurisdiction. RA 965 and RA 2630 did not apply because they cover only those who lost citizenship by serving in, or taking a commission from, the armed forces of an allied country or the United States. RA 8171 covers Filipino women who lost citizenship by marrying aliens and natural-born Filipinos who lost it through political or economic necessity; repatriation is completed by taking the oath and registering it with the civil registry and the Bureau of Immigration.",
   "f": "A natural-born Filipino who became a US citizen petitioned the RTC to regain citizenship and took his oath there.",
   "h": "RTC proceedings void for lack of jurisdiction.",
   "x": "Right forum and mode for reacquiring citizenship."
@@ -133,7 +134,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 1,
-  "r": "Repatriation restores a person to his original status: a natural-born Filipino who lost citizenship (here by serving in the US armed forces) and is repatriated is again natural-born and may sit in the House.",
+  "r": "Repatriation restores a person to his original status: a natural-born Filipino who lost citizenship (here by serving in the US armed forces) and is repatriated is again natural-born and may sit in the House. Citizenship is reacquired by naturalization, repatriation, or direct act of Congress. Repatriation needs only an oath of allegiance registered with the civil registry, not naturalization proceedings, so it recovers the original status. The Constitution recognizes only two kinds of citizens, natural-born and naturalized, and one who is not naturalized is natural-born.",
   "f": "Teodoro Cruz, a natural-born Filipino, became a US citizen through military service, was repatriated under RA 2630, and was elected Representative.",
   "h": "Cruz was natural-born and qualified; HRET upheld.",
   "x": "Use when a former Filipino who reacquired citizenship runs for an office requiring natural-born status (compare RA 9225 reacquisition, which also restores natural-born status).",
@@ -146,9 +147,9 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 0,
-  "r": "CA 473 (minor children of a naturalized father become citizens) and the law under which the father was naturalized (LOI 270) are in pari materia: minor children of those naturalized under LOI 270 also become Filipinos.",
+  "r": "CA 473 (minor children of a naturalized father become citizens) and the law under which the father was naturalized (LOI 270) are in pari materia: minor children of those naturalized under LOI 270 also become Filipinos. Under CA 473, Sec. 15, minor children born in the Philippines of a person naturalized become citizens. LOI 270 and CA 473 share the same purpose (to naturalize aliens who have shown loyalty and affinity to the country), so they are read together as one law.",
   "f": "Siblings sought to correct their birth records to show Philippine citizenship after their father was naturalized under LOI 270 while they were minors.",
-  "h": "Correction allowed; they are Filipino citizens.",
+  "h": "RTC dismissal set aside; the petition for correction of the birth records (a substantial change, allowed in an adversarial Rule 108 proceeding) was ordered reinstated and heard, since Sec. 15 of CA 473 extends to minor children of those naturalized under LOI 270.",
   "x": "Derivative naturalization of minor children."
  },
  {
@@ -158,7 +159,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 0,
-  "r": "Election under CA 625 requires a sworn statement of election, an oath of allegiance, and registration with the civil registry, within a reasonable time (generally three years) after majority. Election cannot be done by judicial declaration.",
+  "r": "Election under CA 625 requires a sworn statement of election, an oath of allegiance, and registration with the civil registry, within a reasonable time (generally three years) after majority. Election cannot be done by judicial declaration. The three-year ‘reasonable time’ may be extended only in special circumstances, which Sagun did not show.",
   "f": "A legitimate child of a Chinese father and Filipina mother took an oath 12 years after majority and never registered it, then sought a court declaration.",
   "h": "Petition dismissed; no valid election, and courts cannot declare citizenship in a petition of this kind.",
   "x": "Contrast Co v. HRET: implied election applies only to those already treated as Filipino; Sagun’s formal election was late and defective."
@@ -170,7 +171,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 0,
-  "r": "Naturalization is a privilege, strictly construed. Character witnesses must be credible persons with personal knowledge vouching for the applicant; omissions in required petition contents (e.g., former residences) are fatal.",
+  "r": "Naturalization is a privilege, strictly construed. Character witnesses must be credible persons with personal knowledge vouching for the applicant; omissions in required petition contents (e.g., former residences) are fatal. CA 473 requires two credible witnesses, persons of good standing who can vouch for the applicant from intimate knowledge, and the statement of former residences is jurisdictional.",
   "f": "A Manila-born son of Chinese parents applied for judicial naturalization under CA 473.",
   "h": "Petition denied.",
   "x": "Judicial naturalization requirements."
@@ -182,7 +183,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 0,
-  "r": "Failure to attach a certificate of arrival to a petition for naturalization is fatal; it is separate from the declaration of intention and is not excused by exemption from the latter.",
+  "r": "Failure to attach a certificate of arrival to a petition for naturalization is fatal; it is separate from the declaration of intention and is not excused by exemption from the latter. The certificate of arrival shows that the applicant is a documented alien whose entry and stay were lawful and in good faith; its absence makes the petition incomplete and it must be denied outright.",
   "f": "An applicant exempt from filing a declaration of intention did not attach his certificate of arrival.",
   "h": "Petition denied.",
   "x": "Strict compliance in naturalization."
@@ -194,7 +195,7 @@
   "t": "cit",
   "sub": "IV.B.1 Citizenship",
   "a": 0,
-  "r": "A ‘lucrative trade, profession or lawful occupation’ means income with an appreciable margin over expenses, proven by documents; a comfortable lifestyle is not proof.",
+  "r": "A ‘lucrative trade, profession or lawful occupation’ means income with an appreciable margin over expenses, proven by documents; a comfortable lifestyle is not proof. An income tax return showing income enough for basic needs does not prove the appreciable margin.",
   "f": "An Indian national applied for naturalization but did not show his actual financial status.",
   "h": "Petition denied.",
   "x": "Strict proof of naturalization qualifications."
@@ -265,6 +266,20 @@
   "s": "RA 9225 renunciation applies only to naturalized dual citizens who reacquire; dual citizens by birth need not renounce."
  },
  {
+  "id": "aznar",
+  "n": "Aznar v. COMELEC",
+  "y": "1990",
+  "t": "cit",
+  "sub": "IV.B.1 Citizenship",
+  "a": 0,
+  "r": "Loss of Philippine citizenship is not presumed. A person born of a Filipino father is presumed to remain Filipino until loss under CA 63 is proved (naturalization abroad, express renunciation, oath of allegiance to another State, and the other statutory grounds). Holding an alien certificate of registration (ACR), or being certified as an American, is not express renunciation; at most it shows dual citizenship, which by itself does not cost Philippine citizenship.",
+  "f": "Emilio ‘Lito’ Osmeña ran for Governor of Cebu in the January 1988 local elections. Jose Aznar sought his disqualification as an alien, citing an ACR and permit to reside issued to him as an American and certifications that he was a US citizen. Osmeña showed that he was the son of a Filipino father, held a Philippine passport, had lived continuously in the Philippines, and had been a registered voter since 1965. He won and was proclaimed; COMELEC dismissed the petition.",
+  "h": "Petition dismissed; COMELEC’s ruling for Osmeña affirmed. There was no proof that he had been naturalized abroad or had expressly renounced Philippine citizenship, so he remained a Filipino and qualified.",
+  "x": "Candidate attacked as a foreigner on the strength of alien registration or foreign documents: the challenger must prove a CA 63 ground of loss. Contrast Frivaldo (1989) and Labo (1989), where naturalization abroad was proved, and Willie Yu, where conduct amounted to express renunciation. Mercado v. Manzano (1999) later built on Aznar in separating dual citizenship from dual allegiance.",
+  "test": "Has the citizen lost Philippine citizenship? (1) Start from the presumption of continuing citizenship (born of a Filipino parent). (2) The challenger must prove a CA 63 ground, such as naturalization abroad, express renunciation, or an oath to another State. (3) An ACR, foreign residence documents, or being ‘considered’ a foreigner by another State is not enough; it shows at most dual citizenship.",
+  "s": "An ACR does not mean renunciation: loss of citizenship must be proved, and dual citizenship alone does not disqualify."
+ },
+ {
   "id": "gallego",
   "n": "Gallego v. Verra",
   "y": "1941",
@@ -272,8 +287,8 @@
   "sub": "IV.B.2 Suffrage",
   "a": 0,
   "r": "For election purposes, residence means domicile. Domicile is not lost by working and even voting elsewhere unless three things concur: physical presence in the new place, intention to remain there, and intention to abandon the old domicile.",
-  "f": "A man from Abuyog worked in Bukidnon for a time (and voted there) while keeping property and family ties in Abuyog, then won as mayor of Abuyog.",
-  "h": "He had not lost his Abuyog domicile; he was qualified.",
+  "f": "Pedro Gallego, a native of Abuyog, Leyte, lost the 1937 mayoral race and in 1938 took work as a nurseryman at a Bureau of Forestry plantation in Malaybalay, Bukidnon, where he obtained a residence certificate and registered and voted. He won the December 1940 Abuyog mayoral race by about 800 votes; the loser, Vera, challenged his residence, and the CFI and Court of Appeals declared his election void.",
+  "h": "Reversed: he had not lost his Abuyog domicile and was qualified. His stay in Malaybalay was for employment, not to settle there indefinitely.",
   "x": "Residence or domicile questions for voters and candidates.",
   "test": "New domicile by choice: (1) bodily presence in the new place; (2) animus manendi (intent to remain); (3) animus non revertendi (intent to abandon the old)."
  },
@@ -284,10 +299,11 @@
   "t": "suff",
   "sub": "IV.B.2 Suffrage",
   "a": 0,
-  "r": "A change of domicile must be voluntary. Leaving the country out of fear for one’s safety after EDSA is not abandonment of domicile.",
+  "r": "A change of domicile must be voluntary. Leaving the country out of fear for one’s safety after EDSA is not abandonment of domicile. Domicile is a fixed residence to which, when absent for some cause, one intends to return (animus revertendi). It is lost only by acquiring a domicile of choice, which needs bodily presence, intent to remain, and intent to abandon the old domicile.",
   "f": "Philip Romualdez fled to the US in 1986, returned in 1991, and registered in his old barangay in Leyte; his exclusion from the voters’ list was sought.",
   "h": "He remained a resident and a qualified voter.",
-  "x": "Involuntary absence does not change domicile."
+  "x": "Involuntary absence does not change domicile.",
+  "test": "New domicile by choice: (1) bodily presence in the new place; (2) animus manendi (intent to remain); (3) animus non revertendi (intent to abandon the old). The change must also be voluntary."
  },
  {
   "id": "akbayan",
@@ -296,7 +312,7 @@
   "t": "suff",
   "sub": "IV.B.2 Suffrage",
   "a": 0,
-  "r": "Registration is a valid procedural regulation of suffrage, not a substantive requirement. COMELEC cannot be compelled to hold special registration within the 120-day prohibitive period of RA 8189, Sec. 8, and its ‘stand-by’ power may be used only if pre-election acts cannot reasonably be held within the law’s periods.",
+  "r": "Registration is a valid procedural regulation of suffrage, not a substantive requirement. COMELEC cannot be compelled to hold special registration within the 120-day prohibitive period of RA 8189, Sec. 8, and its ‘stand-by’ power may be used only if pre-election acts cannot reasonably be held within the law’s periods. Suffrage is not absolute: it is subject to substantive requirements (Art. V, Sec. 1) and procedural ones, chiefly registration, which the State may regulate under police power. The Court accepted COMELEC’s showing that the remaining pre-election work (project of precincts, boards of election inspectors, sealing the book of voters, printing the computerized voters’ list) left no time for special registration.",
   "f": "Youth groups sought a two-day special registration in February 2001, within 120 days of the May 2001 election.",
   "h": "Petitions dismissed.",
   "x": "Registration deadlines that fall within the statutory prohibitive period. Contrast Palatino."
@@ -321,7 +337,7 @@
   "t": "suff",
   "sub": "IV.B.2 Suffrage",
   "a": 1,
-  "r": "COMELEC cannot cut short the continuing registration Congress fixed in RA 8189, Sec. 8 (registration closes only 120 days before a regular election). Its stand-by power to fix other dates applies only when pre-election acts cannot reasonably be held within the statutory period, which COMELEC must show.",
+  "r": "COMELEC cannot cut short the continuing registration Congress fixed in RA 8189, Sec. 8 (registration closes only 120 days before a regular election). Its stand-by power to fix other dates applies only when pre-election acts cannot reasonably be held within the statutory period, which COMELEC must show. Congress itself judged the 120-day and 90-day periods enough for COMELEC to prepare, and that legislative judgment binds COMELEC.",
   "f": "For the 2010 elections, COMELEC moved the registration deadline to October 31, 2009, months before the 120-day prohibitive period.",
   "h": "Petition granted; the resolution setting the October 31 deadline was declared void and registration extended until January 9, 2010.",
   "x": "Distinguish AKBAYAN: there the extension sought fell inside the prohibitive period; here it did not. The 2015 Finals (Ridon, October 31, 2015 deadline) is a near-copy; read the dates carefully.",
@@ -335,10 +351,10 @@
   "t": "suff",
   "sub": "IV.B.2 Suffrage",
   "a": 0,
-  "r": "Excluding voters of highly urbanized cities (and of component cities whose charters so provide) from voting for provincial officials does not violate equal protection or impose a ‘substantive requirement’: the classification by income is reasonable, and there is no right to vote for officials of a unit that does not govern you.",
+  "r": "Excluding voters of highly urbanized cities (and of component cities whose charters so provide) from voting for provincial officials does not violate equal protection or impose a ‘substantive requirement’: the classification by income is reasonable, and there is no right to vote for officials of a unit that does not govern you. A prohibited ‘substantive requirement’ is a burden on suffrage that achieves no permissible State objective; here voters face no added condition. Income is a substantial distinction because it shows a city’s capacity to exist and develop independently, and independence from the province carries the loss of a vote in its elections.",
   "f": "Voters of Cebu City and Mandaue City challenged BP 51, which barred them from voting for Cebu provincial officials.",
   "h": "BP 51 upheld.",
-  "x": "Use when a law changes which voters may vote for which offices (e.g., new provinces, HUC conversions)."
+  "x": "Use when a law changes which voters may vote for which offices (e.g., new provinces, HUC conversions). Under the 1987 Constitution, Art. X, Sec. 12 keeps the rule: voters of highly urbanized cities, and of component cities whose charters prohibit it, do not vote for provincial officials."
  },
  {
   "id": "macalintal2003",
@@ -347,10 +363,10 @@
   "t": "suff",
   "sub": "IV.B.2 Suffrage",
   "a": 1,
-  "r": "Absentee voting by Filipinos abroad (RA 9189) is an exception to the residence requirement under Art. V, Sec. 2; the affidavit of intent to return is valid. But a Joint Congressional Oversight Committee that reviews and approves COMELEC’s rules violates COMELEC’s independence, and COMELEC cannot canvass and proclaim the President and Vice President (Congress does).",
+  "r": "Absentee voting by Filipinos abroad (RA 9189) is an exception to the residence requirement under Art. V, Sec. 2; the affidavit of intent to return is valid. But a Joint Congressional Oversight Committee that reviews and approves COMELEC’s rules violates COMELEC’s independence, and COMELEC cannot canvass and proclaim the President and Vice President (Congress does). The affidavit is how an immigrant or permanent resident abroad shows that the Philippine domicile was never abandoned; by necessary implication, Art. V, Sec. 2 carves overseas voters out of the residence requirement of Sec. 1.",
   "f": "A lawyer challenged several provisions of the Overseas Absentee Voting Act of 2003.",
   "h": "Law upheld except the JCOC approval provisions and the COMELEC proclamation of President and Vice President.",
-  "x": "Use with ABAKADA for legislative vetoes over independent bodies; also overseas voting questions.",
+  "x": "Use with ABAKADA for legislative vetoes over independent bodies; also overseas voting questions. RA 9189 is now amended by RA 10590 (Overseas Voting Act of 2013).",
   "s": "Overseas absentee voting valid; a JCOC approving COMELEC rules violates its independence."
  },
  {
