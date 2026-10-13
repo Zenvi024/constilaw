@@ -1,0 +1,162 @@
+{
+ "e23m-1": {
+  "C": "Teves’ expulsion is void.",
+  "L": "Art. VI, Sec. 16(3) lets the House expel a Member for disorderly behavior by a two-thirds vote of all its Members and caps suspension at 60 days. No conviction is needed (Osmeña v. Pendatun), but due process still applies.",
+  "A": "First, his absence was already punished by two 60-day suspensions; expelling him for it punishes him twice and evades the cap. Second, the terrorist designation is the Anti-Terrorism Council’s act, not his conduct as a Member. Third, the dance video and asylum bid are private acts that disrupted no House proceeding. Finally, expelling him for killings never tried, without a hearing, denies due process.",
+  "R": "The expulsion cannot stand."
+ },
+ "e23m-2": {
+  "C": "Sec. 2 deprives theater owners of property without due process.",
+  "L": "Police power requires a lawful subject and reasonable means; an ordinance must not be unreasonable (White Light). Compelling the free use of property for public purposes is a taking that requires just compensation (PPI v. COMELEC; Quezon City v. Ericta).",
+  "A": "Informing the public is lawful, but the means fail. Screen time is what theaters sell; demanding it free appropriates rather than regulates it. TELEBAP differs: broadcasters use public airwaves under a franchise the State may condition. Cinemas hold only a business permit, which cannot be used to extract property.",
+  "R": "Sec. 2 is void unless the city pays for the screen time."
+ },
+ "e23m-3": {
+  "C": "Sec. 290-A is partly unconstitutional: duty (4) is void, but the rest stands.",
+  "L": "After enactment, Congress may only scrutinize and investigate; taking part in implementation violates separation of powers (ABAKADA). The President ensures that the laws are faithfully executed (Art. VII, Sec. 17).",
+  "A": "Duties (1)–(3), reviewing BIR and BOC performance, requiring reports and holding hearings, are valid oversight. Duty (4), deputizing the BIR, BOC, PNP and NBI, directs law enforcement, an executive function; the ‘in aid of legislation’ label cannot change that (cf. Belgica). Duty (5) must be read narrowly to avoid the same defect. The valid duties can stand alone.",
+  "R": "Only Sec. 290-A(4) is unconstitutional, and it is separable."
+ },
+ "e23m-4": {
+  "C": "The law is void, for national and local offices alike.",
+  "L": "The Constitution fixes the qualifications of the President, Vice President, Senators and Representatives (Art. VII, Secs. 2–3; Art. VI, Secs. 3, 6); Congress cannot add to them (SJS v. DDB). Local qualifications, being statutory, must be reasonable and germane (Albano).",
+  "A": "Disqualifying a candidate for skipping a debate adds a condition the Constitution does not require; Congress cannot do by statute what only an amendment can (cf. Endencia). For local offices, debate attendance measures willingness to speak, not fitness, so it violates equal protection. Forcing a candidate to speak or lose his candidacy also burdens free speech and the voters’ choice.",
+  "R": "The law is void."
+ },
+ "e24m-1": {
+  "C": "Garcia’s proposals are valid only in part.",
+  "L": "Art. VI, Sec. 5(1) creates a system of ‘national, regional, and sectoral parties’ ‘as provided by law’; the sectoral reservation in Sec. 5(2) lasted three terms. Atong Paglaum held the system is not reserved for the marginalized. Each restriction needs a rational basis (Albano).",
+  "A": "As mere proposals, they are not yet justiciable (Montesclaros), and COMELEC cannot adopt them by resolution. A law confining the system to the listed sectors would exclude national and regional parties the Constitution includes. But requiring sectoral parties’ nominees to genuinely belong to or advocate for their sector is reasonable; Atong Paglaum itself requires it.",
+  "R": "Nominee rules are valid; excluding non-sectoral parties is not."
+ },
+ "e24m-2": {
+  "C": "Sec. 4 is a valid exercise of police power.",
+  "L": "The State must make quality education accessible (Art. XIV, Secs. 1–2) and reasonably supervises and regulates all schools (Sec. 4(1)). Police power requires a lawful subject and reasonable means.",
+  "A": "Entrance fees can keep poor but able students from applying. The means are reasonable: only ‘qualified’ students, high-ranking and in financial need, benefit; the fee is small; and schools still decide admission. Unlike the free print space in PPI v. COMELEC, this incidental burden on an expressly regulated business takes no defined property for State use. Separating private HEIs from public ones, already free, rests on substantial distinctions.",
+  "R": "Sec. 4 is constitutional."
+ },
+ "e24m-3": {
+  "C": "Sec. 29 is constitutional.",
+  "L": "Congress may delegate rule-making if the law is complete and sets sufficient standards. Implementing rules must be published (Tañada v. Tuvera; EO 200) and filed with the ONAR (Administrative Code).",
+  "A": "RA 11999 sets the policy; the DTI only fills in details. Unlike ABAKADA, Congress keeps no approval role, so there is no legislative veto. Consulting the DOF, NEDA, Bulacan and an airport representative is not subdelegation, since the DTI alone issues the rules; it would fail only if the private representative dictated them (KMU v. Garcia). Newspaper publication with 15-day effectivity suffices, though ONAR filing is still required. The 90-day period is directory.",
+  "R": "Sec. 29 is valid."
+ },
+ "e24m-4": {
+  "C": "RA 10530 settles both Liban issues: the PNRC is neither a GOCC nor a private corporation.",
+  "L": "Art. VI, Sec. 13 unseats a legislator holding GOCC office; Art. XII, Sec. 16 bars chartering private corporations. Liban (2009) held the PNRC private, so Gordon kept his seat, but voided RA 95’s charter provisions; in 2011 the Court reversed: the issue was not the lis mota, and the PNRC is sui generis.",
+  "A": "RA 10530 recognizes the PNRC as an independent, autonomous, non-governmental organization auxiliary to the Government in the humanitarian field (Geneva Conventions). Not being a GOCC, it may be chaired by a legislator; not being a for-profit private corporation, it may hold a special charter.",
+  "R": "RA 10530 thus codifies the 2011 resolution."
+ },
+ "e15f-1": {
+  "C": "No, the Ombudsman cannot intercede.",
+  "L": "Only each House may ‘compel the attendance of absent Members’ under penalties it provides (Art. VI, Sec. 16(2)) and punish its Members (Sec. 16(3)). RA 6770, Sec. 21 excludes Members of Congress from the Ombudsman’s disciplinary authority.",
+  "A": "Ordering lawmakers to attend would intrude into a matter committed to the House, violating separation of powers; even the Court defers on internal proceedings (Osmeña; Santiago v. Guingona). The Enrile–Marcos debate is governed by Senate rules, and speech in debate is privileged (Sec. 11). Whether absentees forfeit pay is for each House’s rules and the law fixing salaries.",
+  "R": "The Ombudsman cannot act; the groups’ remedy is political."
+ },
+ "e15f-2": {
+  "C": "The petition is proper, but ‘No Bio, No Boto’ is constitutional.",
+  "L": "Certiorari and prohibition lie under expanded judicial power (Art. VIII, Sec. 1). Art. V, Sec. 1 bars any ‘literacy, property, or other substantive requirement’, but registration is procedural, not a qualification (AKBAYAN).",
+  "A": "Imminent deactivation makes an actual case; Kabataan and affected voters have standing; three million votes are of transcendental importance. Biometrics validation, part of registration, passes strict scrutiny: a clean list free of ‘flying voters’ is compelling, and the means are least restrictive, given years to comply, notice and reactivation. No one has a vested right to vote without valid registration. Kabataan v. COMELEC (2015) upheld RA 10367.",
+  "R": "The petition should be dismissed."
+ },
+ "e15f-3": {
+  "C": "The resolutions are void.",
+  "L": "RA 8189, Sec. 8 bars registration only within 120 days before a regular election; COMELEC may shorten the period only if pre-election acts cannot reasonably be held within it (Palatino).",
+  "A": "Procedurally, certiorari lies for acts contrary to law; mandamus, only if extension is a legal duty. Voters and the party-list group have standing; transcendental importance and urgency justify direct resort. For May 9, 2016, the ban starts about January 10, so January 8 is allowed. COMELEC’s admitted long lines and few machines show more time is needed. AKBAYAN differs: that extension fell inside the ban. The COC-week suspension stands only if proven necessary.",
+  "R": "Registration must be extended to January 8, 2016."
+ },
+ "e20f-2": {
+  "C": "Drilon is right: issuing IRRs is executive power; courts are the remedy.",
+  "L": "Rule-making flows from the duty to execute laws. Congress cannot craft or approve IRRs (ABAKADA). IRRs must be authorized, within the law, published (Tañada) and reasonable.",
+  "A": "(1) Deleting the IRR clause would not remove the power; Congress should write complete laws with sufficient standards. (2) It may hold hearings or amend the law. (3) IRRs that ‘mangle’ the law are void. A complete law takes effect without an IRR; mandamus may compel one due by a deadline. (4) Senators have standing against usurpation, but need a specific IRR contradicting a specific law; a caucus list is not ripe.",
+  "R": "They must challenge specific IRRs in court."
+ },
+ "e20f-4": {
+  "C": "The Ombudsman should dismiss the complaint.",
+  "L": "No Member ‘shall be questioned nor be held liable in any other place’ for legislative acts (Art. VI, Sec. 11; Jimenez v. Cabangbang). RA 6770, Sec. 21 excludes Members of Congress from Ombudsman discipline, which belongs to each House (Sec. 16(3); Pobre).",
+  "A": "Proposing and voting on a budget provision is core legislative work. Nor is the provision unlawful: it is not a rider under Sec. 25(2), because it limits the PAO’s own appropriation, and Congress may refuse to fund a unit. PAO’s remedy is to seek a veto, but under Philconsa v. Enriquez a condition cannot be vetoed apart from its item.",
+  "R": "The complaint must be dismissed."
+ },
+ "e20f-6": {
+  "C": "(a) Valid. (b) Invalid.",
+  "L": "Art. VI, Sec. 25(2) bars GAA provisions not relating to a particular appropriation and limits their operation to it (Philconsa v. Enriquez). Congress may cut appropriations (Sec. 25(1)).",
+  "A": "(a) Limiting the PAO’s MOOE is a condition on its own appropriation, not a rider. The DBM, not a law, created the lab, so it has no statutory claim to funds; security of tenure protects against removal, not budget cuts. (b) Creating positions and restructuring agencies is substantive legislation relating to no appropriation: an inappropriate provision. Standing reorganization power must come from a general law with standards.",
+  "R": "The MOOE condition stands; the DBM provision falls."
+ },
+ "e20f-7": {
+  "C": "No House discipline for acts as governor; prosecution proceeds, without immunity.",
+  "L": "The House punishes Members’ disorderly behavior (Art. VI, Sec. 16(3)). RA 6770, Sec. 21 excludes Members from Ombudsman discipline. Sec. 11 bars arrest only for offenses punishable by six years or less, while in session.",
+  "A": "Acts as governor predate membership and are not disorderly behavior; administrative charges are barred while he sits. Prosecution is not discipline: the Ombudsman may prosecute malversation and graft before the Sandiganbayan, and RA 3019 preventive suspension is no penalty. Malversation of P56 million carries over six years; speech and debate covers only legislative acts. Detained, he cannot attend sessions (Jalosjos).",
+  "R": "He faces the courts without immunity."
+ },
+ "e20f-8": {
+  "C": "Yes, the Court should accept the case although it is moot.",
+  "L": "A case is moot when a supervening event leaves nothing to grant (Atlas Fertilizer).",
+  "E": "But the Court decides moot cases with grave constitutional violations, paramount public interest, a need for guiding principles, or issues capable of repetition yet evading review (Sanlakas).",
+  "A": "River’s death made reunion impossible. Yet separation orders against detained mothers recur, and infancy is so brief that challenges always end before review. Trial courts need standards for weighing a jail’s facilities against a child’s welfare. Still, no advisory ruling; KAPIT (2026) applied these strictly. If it declines, it may use its rule-making power (Art. VIII, Sec. 5(5)).",
+  "R": "The Court should take the case."
+ },
+ "e24f-1": {
+  "C": "Yes, RA 12077 is a valid exercise of police power.",
+  "L": "Police power needs a lawful subject and means; non-impairment (Art. III, Sec. 10) yields to it (Iloilo I Electric Cooperative). The State must make education accessible (Art. XIV, Secs. 1–2).",
+  "A": "Calamities cut families’ income and push students out of school. The moratorium is temporary (calamity plus 30 days), defers rather than cancels payments, and protects enrolment. Loan contracts are subject to the reserved police power. The interest bar, the strongest objection, costs lenders limited time value, incidental to a temporary emergency measure, and takes no property for public use. Students in calamity areas form a reasonable class.",
+  "R": "The law is constitutional."
+ },
+ "e24f-2": {
+  "C": "His options are limited; Congress holds the purse.",
+  "L": "Congress may reduce, not increase, his recommendations (Art. VI, Sec. 25(1)). Savings augment only existing items (Sec. 25(5); Araullo; Nazareth). Supplemental appropriations need a purpose and available funds (Sec. 25(4)) and originate in the House (Sec. 24).",
+  "A": "(1) Recommend the subsidy and press the bicameral conference to restore it. (2) An item veto cannot create items; vetoing the whole GAA re-enacts last year’s budget (Sec. 25(7)), restoring any prior subsidy but losing the 2025 budget. (3) Without a PhilHealth item, no augmentation. (4) Unprogrammed funds need certified excess revenue (Araullo). (5) Request a supplemental appropriation.",
+  "R": "Only Congress can ultimately fund it."
+ },
+ "e23f-1": {
+  "C": "The petition should be dismissed.",
+  "L": "Petitioners need personal injury (IBP v. Zamora) and an actual case, not fear of future acts (PACU). Admitting and deporting aliens is executive. International bodies and officers may claim immunity (cf. Minucher; Arigo).",
+  "A": "Neither a lawyer nor an OFW shows injury from an ICC investigation, and the petition rests on fear that personnel might come. Courts cannot pre-empt immigration and foreign-relations decisions by injunction. A Calbayog RTC’s injunction binds only within its region, not nationwide. Pangilinan v. Cayetano (2021) dismissed the withdrawal petitions as moot; its remarks on cooperation are obiter.",
+  "R": "The RTC should dismiss the petition."
+ },
+ "n26-1": {
+  "C": "The senator is partly right but wrong on the main point.",
+  "L": "Art. II provisions are generally unenforceable policies (Tañada v. Angara), but provisions are presumed self-executing (Manila Prince).",
+  "E": "Sec. 26 commands Congress: the State ‘shall … prohibit political dynasties’.",
+  "A": "‘As may be defined by law’ leaves definition and scope to Congress (cf. Santiago v. COMELEC), so the Court compelled the act, not its content, and denied COMELEC power to act alone. Filing bills is not enacting; 39 years’ inaction is grave abuse reviewable under Art. VIII, Sec. 1. His strongest point: mandamus does not ordinarily compel discretionary legislation, and the Court cannot enforce it.",
+  "R": "The duty binds Congress; enforcement remains political."
+ },
+ "n26-2": {
+  "C": "(a) Yes. (b) Doubtful: absent senators still count.",
+  "L": "(a) Courts require ripeness and standing (PACU) but may enforce constitutional limits on impeachment (Francisco). (b) Verba legis; the Senate cannot amend by interpretation (Endencia).",
+  "A": "(a) No verdict yet: injury is speculative, citizens with a general interest lack standing, and mid-trial rulings interfere. The issue may return after the vote. (b) The Constitution distinguishes ‘Members present’ from ‘all the Members’ (Art. XI, Sec. 3(6); Art. VI, Sec. 16(3)). Avelino excluded an absent senator only for a quorum, ‘a majority of each House’. A detained senator remains a Member (Jalosjos). The Senate lowered its own threshold.",
+  "R": "(a) Correct; (b) all sitting senators count."
+ },
+ "n26-3": {
+  "C": "Dela Rosa has no immunity; ‘protective custody’ has no constitutional basis.",
+  "L": "Art. VI, Sec. 11 bars arrest only for offenses punishable by six years or less, while in session; membership is no shield (Jalosjos; Trillanes). Sec. 16 covers officers, rules, attendance and discipline.",
+  "A": "Murder as a crime against humanity carries far more than six years. No Sec. 16 power shields a Member from executive law enforcement; ‘sanctity’ may justify rules on serving process, not refusal. Courts, not the Senate, decide if an ICC warrant binds after the Rome Statute withdrawal. His vote stands: he was present, and 13 of 24 is a majority of all Members. His absence called for compelled attendance or discipline.",
+  "R": "He may be arrested, and the Senate cannot shield him."
+ },
+ "n26-4": {
+  "C": "Grant the petition as to postponing the November 2026 elections.",
+  "L": "Congress’s plenary power over election dates is limited by suffrage: postponement needs important, substantial or compelling reasons (not election fatigue), a reasonable interval and narrow tailoring (Macalintal v. COMELEC, 2023).",
+  "A": "Hence, no political question. RA 12326 states no compelling reason; a two-year deferral after two postponements is a badge of unreasonableness. Congress may fix five-year terms for future officials, but Sec. 5 admits an ‘extension of their terms’: keeping incumbents beyond their mandate is a legislative appointment, not a hold-over. The one-subject challenge fails; terms and election dates are germane (Giron).",
+  "R": "The 2026 elections should proceed as soon as practicable."
+ },
+ "n26-5": {
+  "C": "Uphold unprogrammed appropriations as a device, but strike down congressional increases.",
+  "L": "Standby lump sums need singular correspondence and clear release standards (Belgica, 2019) and certified excess revenue (Araullo). Congress may not increase the President’s recommendations (Art. VI, Sec. 25(1)) or keep a post-enactment role (Belgica, 2013).",
+  "A": "Legislators have standing to protect the power of the purse; taxpayers may question disbursements. The 2026 items stand insofar as each specifies its purpose and trigger. But Congress’s 2024–2025 additions beyond the President’s budget violate Sec. 25(1), and legislators later identifying funded projects revives the role Belgica (2013) condemned.",
+  "R": "Valid in principle; void as to congressional increases."
+ },
+ "n26-6": {
+  "C": "Void, at least as to PhilHealth and GOCCs whose funds are earmarked by law.",
+  "L": "A GAA cannot amend substantive law (Pimentel v. House, 2025); such provisions are inappropriate (Art. VI, Sec. 25(2); Philconsa v. Enriquez). Special-purpose taxes are special funds (Sec. 29(3)). Only the President augments, from Executive savings (Sec. 25(5)).",
+  "E": "GOCCs whose charters allow surplus remittance may remit, but use must follow the GAA.",
+  "A": "Sweeping PhilHealth’s UHC Act reserve fund changes another law and relates to no appropriation; it is vetoable. Earmarked sin taxes serve their purpose only. Letting the Finance Secretary define and redirect ‘excess’ funds is a disguised transfer, which Pimentel forbids.",
+  "R": "Void as to earmarked funds."
+ },
+ "n26-7": {
+  "C": "The challenge fails; the law is valid.",
+  "L": "Congress generally cannot add to constitutional qualifications (SJS v. Dangerous Drugs Board).",
+  "E": "Art. II, Sec. 26 commands Congress to ‘prohibit political dynasties as may be defined by law’ (Kapatiran Party v. Congress, 2026).",
+  "A": "The disqualification thus rests on a constitutional grant, not unaided legislative power. Incumbents’ relatives form a real class with access to incumbents’ machinery; the distinction is germane to equal access to public service and applies to all in the class (cf. Albano). The degree and succession rules are choices Sec. 26 leaves to Congress. Finally, the congressman suffers no direct injury; his daughter, a would-be candidate, is the proper party.",
+  "R": "The anti-dynasty law is constitutional."
+ }
+}
