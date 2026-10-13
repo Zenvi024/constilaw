@@ -287,6 +287,27 @@ function spy(){
 window.addEventListener("scroll", () => { if (!spyRaf) spyRaf = requestAnimationFrame(spy); }, {passive: true});
 window.addEventListener("resize", () => { if (!spyRaf) spyRaf = requestAnimationFrame(spy); });
 
+/* ================= rule-map visuals: steppers and the quorum calculator ================= */
+document.querySelectorAll("#rcontent .stepper").forEach(st => {
+  const btns = [...st.querySelectorAll(".sp-btns button")], ps = [...st.querySelectorAll(".sp-p")];
+  const show = i => { btns.forEach((b, j) => b.setAttribute("aria-pressed", j === i)); ps.forEach((p, j) => p.hidden = j !== i); };
+  btns.forEach((b, i) => b.addEventListener("click", () => show(i))); show(+(st.dataset.start || 0));
+});
+document.querySelectorAll("#rcontent .qwidget").forEach(w => {
+  const N = +w.dataset.total || 24, dots = w.querySelector(".qdots"), st = new Array(N).fill(0); // 0 present, 1 absent in the country, 2 abroad
+  dots.innerHTML = st.map((_, i) => `<button type="button" aria-label="Senator ${i + 1}"></button>`).join("");
+  const bs = [...dots.children];
+  const paint = () => {
+    bs.forEach((b, i) => { b.className = ["", "out", "abroad"][st[i]]; b.title = ["present", "absent (in the country)", "abroad"][st[i]]; });
+    const abroad = st.filter(x => x === 2).length, present = st.filter(x => x === 0).length, base = N - abroad, need = Math.floor(base / 2) + 1, ok = present >= need;
+    w.querySelector(".qread").innerHTML = `<div class="vn"><b>${present}</b><span class="s">present</span></div><div class="vn"><b>${base}</b><span class="s">base (all ${N} minus ${abroad} abroad)</span></div><div class="vn"><b>${need}</b><span class="s">needed for a quorum</span></div><div class="vn ${ok ? "ok" : "no"}"><b>${ok ? "Quorum" : "No quorum"}</b><span class="s">${ok ? "may do business" : "may only adjourn or compel attendance"}</span></div><div class="vn sun"><b>${Math.floor(N / 2) + 1}</b><span class="s">votes to elect the Senate President today: a majority of <em>all</em> ${N} (Sec. 16(1))</span></div>`;
+  };
+  bs.forEach((b, i) => b.addEventListener("click", () => { st[i] = (st[i] + 1) % 3; paint(); }));
+  w.querySelector("[data-q=reset]").onclick = () => { st.fill(0); paint(); };
+  w.querySelector("[data-q=avelino]").onclick = () => { st.fill(0); st[N - 1] = 2; for (let i = N - 12; i < N - 1; i++) st[i] = 1; paint(); };
+  paint();
+});
+
 /* ================= CASES: browse ================= */
 function setCaseMode(m){ document.querySelectorAll("[data-cm]").forEach(b => b.setAttribute("aria-pressed", b.dataset.cm === m)); $("c-browse").hidden = m !== "browse"; $("c-drill").hidden = m !== "drill"; if (m === "drill") renderDSetup(); }
 document.querySelector("[data-cm]").parentElement.addEventListener("click", e => { const b = e.target.closest("[data-cm]"); if (b) setCaseMode(b.dataset.cm); });
