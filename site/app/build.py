@@ -45,7 +45,25 @@ for k, v in load('dg_reviewer.json').items():
     assert k in cid, 'class-reviewer text for unknown case ' + k
     CASEBY[k]['dg'] = v
 
-rev = '\n'.join(open(f).read() for f in sorted(glob.glob(os.path.join(DATA, 'reviewer', '*.html'))))
+# rule maps: link every case mention to its card (see caselink.py)
+import sys; sys.path.insert(0, HERE)
+import caselink
+rv_files = sorted(glob.glob(os.path.join(DATA, 'reviewer', '*.html')))
+link_texts = {}
+for f in rv_files:
+    for c, t in re.findall(r'<a class="cref" data-c="([^"]+)"[^>]*>(.*?)</a>', open(f).read()):
+        t = html.unescape(re.sub('<[^>]+>', '', t)).strip(); link_texts.setdefault(t, set()).add(c)
+link_texts = {t: next(iter(v)) for t, v in link_texts.items() if len(v) == 1 and re.search('[A-Z]', t) and t != 'case card'}
+CASEMAP = {c['id']: c for c in cases}
+ALIASES = caselink.build_aliases(CASEMAP, link_texts)
+linked, parts, leftover = {}, [], []
+for f in rv_files:
+    src = caselink.link_file(open(f).read(), os.path.basename(f)[:2], ALIASES, CASEMAP, linked)
+    leftover += [(os.path.basename(f)[:2], v) for v in caselink.unlinked_vs(src)]
+    parts.append(src)
+rev = '\n'.join(parts)
+print(f'case links added: {sum(linked.values())} mentions of {len(linked)} cases')
+for fp, v in leftover: print(f'  note: unlinked mention in rule map {fp}: {v}')
 for m in re.findall(r'data-c="([^"]+)"', rev):
     assert m in cid, 'reviewer cites unknown case ' + m
 

@@ -56,7 +56,7 @@ function renderClock(){
 function caseHTML(c){
   const t = TOP[c.t];
   return `<div class="spread"><h3 id="mTitle">${esc(c.n)}</h3><button class="btn small ghost" data-close>Close</button></div>
-  <div class="meta">${esc(c.y)} · ${esc(c.sub || (t ? t.name : ""))}${c.a ? " · anchor case" : ""}</div>
+  <div class="meta">${esc(c.y)} · ${esc(c.sub || (t ? t.name : ""))}${c.a ? " · anchor case" : ""}${c.ref ? " · mentioned in the rule maps; not on the syllabus list, not drilled" : ""}</div>
   <dl>
     <div><dt>Rule</dt><dd class="rule">${esc(c.r)}</dd></div>
     ${c.test ? `<div><dt>Test</dt><dd>${esc(c.test)}</dd></div>` : ""}
@@ -128,13 +128,14 @@ function renderToday(){
   $("dayTodo").innerHTML = d.items.map(it => `<li><span class="k">${esc(it.k)}</span><div>${esc(it.t)}${(it.rv || it.e || it.go || it.sp) ? `<div class="links">${(it.rv || []).map(id => `<button class="btn small" data-rv="${id}">${esc(rvTitle(id))}</button>`).join("")}${(it.e || []).map(id => ESS[id] ? `<button class="btn small" data-essay="${id}">Write: ${esc(ESS[id].short)}</button>` : "").join("")}${(it.sp || []).map(id => ESS[id] ? `<button class="btn small" data-spot="${id}">Spot: ${esc(ESS[id].short)}</button>` : "").join("")}${it.go ? `<button class="btn small" data-go="${it.go}">${esc(it.goL)}</button>` : ""}</div>` : ""}</div></li>`).join("");
   $("week").innerHTML = days.map(x => `<button data-day="${x.date}" aria-current="${x.date === planDay}" class="${x.date < today ? "past" : ""}"><span class="w">${esc(x.short)}</span><span>${esc(x.focus)}</span></button>`).join("");
   // stats
-  const seen = CASES().filter(c => SRS["cr:" + c.id] || SRS["fc:" + c.id] || SRS["rc:" + c.id]).length;
-  const known = CASES().filter(c => ["cr:","fc:","rc:"].some(p => SRS[p + c.id] && SRS[p + c.id].s >= 3)).length;
+  const SYL = CASES().filter(c => !c.ref);
+  const seen = SYL.filter(c => SRS["cr:" + c.id] || SRS["fc:" + c.id] || SRS["rc:" + c.id]).length;
+  const known = SYL.filter(c => ["cr:","fc:","rc:"].some(p => SRS[p + c.id] && SRS[p + c.id].s >= 3)).length;
   const qh = store.get("qhist", {}); const qa = Object.values(qh); const qr = qa.filter(x => x.r === 1).length;
   const att = store.get("attempts", {}); const al = Object.values(att).flat(); const avg = al.length ? (al.reduce((s, a) => s + a.score, 0) / al.length) : 0;
   $("stats").innerHTML = [
     [dueKeys().length, "cards due now"],
-    [`${seen}/${CASES().length}`, `cases drilled · ${known} at 1 day or more`],
+    [`${seen}/${SYL.length}`, `cases drilled · ${known} at 1 day or more`],
     [qa.length ? Math.round(100 * qr / qa.length) + "%" : "–", `MCQ accuracy (${qa.length} answered)`],
     [al.length ? avg.toFixed(1) : "–", `average essay score /10 (${al.length} written)`]
   ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
@@ -321,7 +322,7 @@ function renderCases(){
   TOPS().forEach(t => {
     const g = list.filter(c => c.t === t.key); if (!g.length) return;
     html += `<div class="grouph">${esc(t.name)} <small>${esc(t.part)} · ${g.length}</small></div>`;
-    html += g.map(c => `<button class="crow" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span></span><span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
+    html += g.map(c => `<button class="crow" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span></span><span>${c.a ? '<span class="tag anchor">anchor</span>' : c.ref ? '<span class="tag">mentioned only</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
   });
   $("clist").innerHTML = html || `<p class="empty">No case matches. Try fewer words.</p>`;
 }
@@ -334,7 +335,7 @@ const DIRS = {
   rc: {p: "rc", help: "You see the rule. Pick the case that laid it down."}
 };
 let dDir = store.get("ddir", "cr"), dTop = new Set(store.get("dtop", D.topics.map(t => t.key))), R = [], ri = 0, rDone = 0, rRight = 0;
-function dPool(){ return CASES().filter(c => dTop.has(c.t) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || (dDir === "fc" ? c.f : c.r))); }
+function dPool(){ return CASES().filter(c => !c.ref && dTop.has(c.t) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || (dDir === "fc" ? c.f : c.r))); }
 function renderDSetup(){
   document.querySelectorAll("#dDir [data-d]").forEach(b => b.setAttribute("aria-pressed", b.dataset.d === dDir));
   $("dDirHelp").textContent = DIRS[dDir].help;
@@ -377,7 +378,7 @@ function maskName(text, c){
   return t;
 }
 function distractors(c, n){
-  const same = shuffle(CASES().filter(x => x.id !== c.id && x.t === c.t)), other = shuffle(CASES().filter(x => x.id !== c.id && x.t !== c.t));
+  const same = shuffle(CASES().filter(x => !x.ref && x.id !== c.id && x.t === c.t)), other = shuffle(CASES().filter(x => !x.ref && x.id !== c.id && x.t !== c.t));
   return [...same, ...other].slice(0, n);
 }
 /* ================= card runner: case drills, lists, sessions, fix list ================= */
@@ -509,11 +510,11 @@ function buildSession(){
   const nDue = rest.length, tp = new Set(planTopics()), room = Math.max(0, 20 - fix.length - rest.length);
   const newL = shuffle(LISTS().filter(l => tp.has(l.t) && !SRS["l:" + l.id])).slice(0, Math.min(4, Math.ceil(room / 3)));
   const newM = shuffle(MCQS().filter(q => tp.has(q.t) && q.cov === "in" && !qhist[q.id] && !SRS["m:" + q.id])).slice(0, Math.min(3, Math.floor(room / 5)));
-  const cs = CASES().filter(c => tp.has(c.t) && !SRS["cr:" + c.id]);
+  const cs = CASES().filter(c => !c.ref && tp.has(c.t) && !SRS["cr:" + c.id]);
   const newC = [...shuffle(cs.filter(c => c.a)), ...shuffle(cs.filter(c => !c.a))].slice(0, Math.max(0, room - newL.length - newM.length));
   newL.forEach(l => add(rest, "l", l.id)); newM.forEach(q => add(rest, "m", q.id)); newC.forEach(c => add(rest, "cr", c.id));
   if (fix.length + rest.length < 12){ // everything is fresh in memory: review ahead, soonest due first
-    CASES().filter(c => tp.has(c.t) && SRS["cr:" + c.id]).sort((a, b) => SRS["cr:" + a.id].d - SRS["cr:" + b.id].d).slice(0, 15 - fix.length - rest.length).forEach(c => add(rest, "cr", c.id));
+    CASES().filter(c => !c.ref && tp.has(c.t) && SRS["cr:" + c.id]).sort((a, b) => SRS["cr:" + a.id].d - SRS["cr:" + b.id].d).slice(0, 15 - fix.length - rest.length).forEach(c => add(rest, "cr", c.id));
   }
   const cards = [...fix, ...shuffle(rest)];
   return {cards, nFix: fix.length, nDue, nNew: rest.length - nDue, topics: [...tp], mins: Math.round(cards.reduce((s, c) => s + (c.p === "l" ? 1.5 : c.p === "m" ? 1.2 : 0.8), 0))};
