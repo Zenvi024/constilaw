@@ -99,7 +99,7 @@ tbl = meth[meth.find('id="method-numbers"'):]
 numbers = [[html.unescape(re.sub('<[^>]+>', '', a)), html.unescape(re.sub('<[^>]+>', '', b))]
            for a, b in re.findall(r'<tr><td>(.*?)</td><td>(.*?)</td></tr>', tbl)]
 
-# day plan: the week of Oct 11 (mirrors the study blocks on Zen's Google Calendar)
+# day plan: the week of Oct 11 (mirrors the study blocks on Zen's Google Calendar; revised Oct 13: no Consti class Thursday, review until 1 AM)
 R = lambda *a: list(a)
 P = lambda k, t, **kw: dict(k=k, t=t, **kw)
 plan = [
@@ -120,35 +120,39 @@ plan = [
         P('9:30 PM', 'Suffrage: qualifications versus registration.', rv=R('suff')),
         P('10:00 PM', 'Write and grade two answers.', e=R('e23m-2', 'e15f-2')),
         P('11:20 PM', 'Drill Case → rule for these topics, then all due cards.', go='drill:cr:basics,gov,suff', goL='Start the drill')]),
-    dict(date='2026-10-13', short='Tue 13', label='Tuesday, October 13', focus='Consti class day; Congress structure', items=[
-        P('9:00 AM', 'Commute (phone): due cards, then the issue spotter.', go='due', goL='Review due cards', sp=R('n26-1', 'e15f-3')),
-        P('12:00 PM', 'Tue class prep 5/5: recite each starred case out loud in under 60 seconds.'),
-        P('3:00 PM', 'Commute home (phone): the 2016 multiple-choice midterm.', go='mcq:2016 Midterm', goL='Start 2016 MCQs'),
-        P('4:00 PM', 'Thu class prep 1/6: digest cases 1–5.'),
-        P('7:00 PM', 'Thu class prep 2/6: digest cases 6–10.'),
-        P('9:10 PM', 'Congress: composition, party-list, qualifications and elections.', rv=R('comp')),
-        P('10:30 PM', 'Congress: officers, quorum, discipline, the Journal. Read the Teves box twice.', rv=R('internal')),
-        P('11:15 PM', 'Write and grade.', e=R('e23m-1'))]),
-    dict(date='2026-10-14', short='Wed 14', label='Wednesday, October 14', focus='Thu class prep; powers, appropriations, tax', items=[
-        P('8:00 AM', 'Commute (phone): due cards, then Case → rule for Congress.', go='drill:cr:house,org,et', goL='Start the drill'),
-        P('11:30 AM', 'Thu class prep 3–4/6: digest cases 11–20 (break at 1:15 PM).'),
-        P('5:00 PM', 'Commute home (phone): read the privileges rule map.', rv=R('priv')),
-        P('7:00 PM', 'Thu class prep 5/6: finish and clean up every digest.'),
-        P('8:30 PM', 'Electoral tribunals and the CA.', rv=R('et')),
-        P('9:00 PM', 'Powers of Congress: limits, ABAKADA, delegation and IRRs, the title rule. Highest-yield block of the week.', rv=R('powers')),
-        P('10:15 PM', 'Appropriation and tax laws.', rv=R('money')),
-        P('11:15 PM', 'Write and grade.', e=R('e23m-3'))]),
-    dict(date='2026-10-15', short='Thu 15', label='Thursday, October 15', focus='Consti class day; timed set; printables', items=[
+    dict(date='2026-10-13', short='Tue 13', label='Tuesday, October 13', focus='Government catch-up; Congress structure (until 1 AM)', items=[
+        P('9:15 PM', 'Catch-up from last night: government, immunity from suit, inherent powers. Then the Arigo, Minucher, Zabal (with the dissent), Rubi and Iloilo I cards.', rv=R('gov')),
+        P('10:15 PM', 'Lists: Government and inherent powers. Drill 10.', go='lists:gov', goL='Drill Government lists'),
+        P('10:35 PM', 'Congress: composition and party-list. Then recite Atong Paglaum’s six parameters from memory.', rv=R('comp')),
+        P('11:35 PM', 'Congress: officers, quorum, discipline, the Journal. Read the Teves box twice.', rv=R('internal')),
+        P('12:25 AM', 'Start session (fix list, due cards, new items). Sleep at 1.', go='session', goL='Start session')]),
+    dict(date='2026-10-14', short='Wed 14', label='Wednesday, October 14', focus='Congress privileges; tribunals, powers, money (until 1 AM)', items=[
+        P('8:00 AM', 'Commute (phone): Start session, then the 2019 multiple-choice midterm (read every key note).', go='mcq:2019 Midterm', goL='Start 2019 MCQs'),
+        P('11:00 AM', 'At school: Congress privileges, salaries and offices. Then a second pass with Blur mode on.', rv=R('priv')),
+        P('2:00 PM', 'At school: write Teves (22 min + grade), then lists for both Congress topics.', e=R('e23m-1'), go='lists:org', goL='Drill Congress lists'),
+        P('5:00 PM', 'Commute home (phone): the fix list, then Start session.', go='fix', goL='Review fix list'),
+        P('7:00 PM', 'Electoral tribunals and the CA.', rv=R('et')),
+        P('7:40 PM', 'Powers of Congress: limits, ABAKADA, delegation and IRRs, the title rule. Highest-yield block of the week.', rv=R('powers')),
+        P('9:10 PM', 'Appropriation and tax laws.', rv=R('money')),
+        P('10:20 PM', 'Write and grade.', e=R('e23m-3')),
+        P('11:00 PM', 'Write and grade.', e=R('e24m-1')),
+        P('11:40 PM', 'Lists: Powers, then Appropriations, then Taxation.', go='lists:powers', goL='Drill Powers lists'),
+        P('12:20 AM', 'Start session. Sleep at 1.', go='session', goL='Start session')]),
+    dict(date='2026-10-15', short='Thu 15', label='Thursday, October 15', focus='No Consti class: Kapihan at Malcolm Hall (until 1 AM)', items=[
         P('9:00 AM', 'Commute (phone): the 2013 multiple-choice midterm.', go='mcq:2013 Midterm', goL='Start 2013 MCQs'),
-        P('12:00 PM', 'Thu class prep 6/6: recit rehearsal.'),
-        P('3:00 PM', 'Commute home (phone): Rule → case for powers, appropriations and tax.', go='drill:rc:powers,approp,tax', goL='Start the drill'),
-        P('4:00 PM', 'Write and grade three answers, 40 minutes each.', e=R('e24m-1', 'e24m-4', 'e24m-3')),
+        P('12:15 PM', 'Kapihan: Blur pass on Judicial review, then Interpretation. Say each hidden term before you tap it.', rv=R('jr', 'interp'), go='blur:jr', goL='Blur mode: Judicial review'),
+        P('1:45 PM', 'Kapihan: Blur pass on Government, Suffrage and Congress composition. Then a 15-minute break.', rv=R('gov', 'suff', 'comp'), go='blur:gov', goL='Blur mode: Government'),
+        P('3:00 PM', 'Kapihan: Rule → case for Powers, Appropriations and Tax (20 cards), then due lists.', go='drill:rc:powers,approp,tax', goL='Start the drill'),
+        P('4:00 PM', 'Kapihan: write and grade two answers, 40 minutes each.', e=R('e24m-4', 'e24m-3')),
+        P('5:20 PM', 'Kapihan: the fix list.', go='fix', goL='Review fix list'),
         P('7:00 PM', 'Timed set under exam conditions: four news problems in 90 minutes on one sheet. Grade them from 8:30 PM.', e=R('n26-2', 'n26-3', 'n26-4', 'n26-5')),
         P('9:15 PM', 'The 2026 news watch, then re-read your weakest rule map. No new material after this.', rv=R('news')),
-        P('10:15 PM', 'Printables twice, then an anchors-only Rule → case drill.', go='print', goL='Open printables'),
-        P('11:30 PM', 'Due cards; pack yellow paper, pens, ID. Sleep by 12.', go='due', goL='Review due cards')]),
+        P('10:00 PM', 'Commute home (phone): the fix list.', go='fix', goL='Review fix list'),
+        P('11:00 PM', 'Printables twice, then an anchors-only Rule → case drill.', go='print', goL='Open printables'),
+        P('11:40 PM', 'Blur pass on Powers of Congress, then Appropriations and tax. Recall only.', rv=R('powers', 'money'), go='blur:powers', goL='Blur mode: Powers'),
+        P('12:30 AM', 'Due cards; pack yellow paper, pens, ID. Sleep at 1.', go='due', goL='Review due cards')]),
     dict(date='2026-10-16', short='Fri 16', label='Friday, October 16', focus='Midterm, 10:00–11:30 AM', items=[
-        P('6:00 AM', 'Due cards, then an anchors-only Case → rule drill.', go='drill:cr:anchors', goL='Anchors drill'),
+        P('6:00 AM', 'The fix list first, then due cards, then an anchors-only Case → rule drill.', go='fix', goL='Review fix list'),
         P('7:00 AM', 'Issue checklist and numbers. Outline two problems in the margin without writing them out, then check the model answers.', go='print', goL='Open printables', sp=R('e23m-4', 'n26-7')),
         P('8:00 AM', 'Anchor-case list and the last-minute checklist of each rule map.', rv=R('method')),
         P('9:00 AM', 'Commute: the two printables only.'),
@@ -158,6 +162,10 @@ for d in plan:
     for it in d['items']:
         for e in it.get('e', []) + it.get('sp', []): assert e in eid, e
         for r in it.get('rv', []): assert ('id="%s"' % r) in rev, r
+        g = it.get('go', '')
+        if g.startswith('mcq:'): assert g[4:] in {q['exam'] for q in mcq}, g
+        if g.startswith('lists:'): assert g[6:] == 'due' or g[6:] in tkeys, g
+        if g.startswith('blur:'): assert ('id="%s"' % g[5:]) in rev, g
 
 D = dict(examDate='2026-10-16', topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers, plan=plan)
 t = open(os.path.join(HERE, 'template.html')).read()

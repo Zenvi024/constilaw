@@ -141,12 +141,20 @@ function renderToday(){
   renderSessPlan(); renderFix();
 }
   // (session plan and fix list are refreshed by renderToday)
-$("week").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (b){ planDay = b.dataset.day; renderToday(); } });
+$("week").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (b){ planDay = b.dataset.day; renderToday(); const t = document.querySelector(".dayplan").getBoundingClientRect().top; if (t < 0) window.scrollTo({top: window.scrollY + t - 12, behavior: "smooth"}); } });
 $("dayTodo").addEventListener("click", e => { const b = e.target.closest("[data-go]"); if (b) goAction(b.dataset.go); });
 function goAction(g){
   if (g === "due"){ setTab("cases"); setCaseMode("drill"); startDrill(true); }
   else if (g.startsWith("mcq:")){ setTab("exams"); setExamMode("mcq"); qExamSel = new Set(g.slice(4).split(",")); renderQSetup(); }
   else if (g === "print") setTab("print");
+  else if (g === "session") startRun(buildSession().cards, "Session");
+  else if (g === "fix"){ const ks = fixKeys(); if (ks.length) $("fixGo").click(); else { setTab("cases"); setCaseMode("drill"); startDrill(true); } }
+  else if (g.startsWith("lists:")){ // lists:<topic> or lists:due
+    const t = g.slice(6); setTab("lists"); $("lRun").hidden = true; $("lSetup").hidden = false; $("lList").hidden = false;
+    $("lq").value = ""; $("lTopic").value = t === "due" ? "" : t; renderLists();
+    startLists(lDrillCards(t === "due"));
+  }
+  else if (g.startsWith("blur:")){ BLUR = true; store.set("blur", true); applyBlur(); setTab("rules"); openSecById(g.slice(5)); }
   else if (g.startsWith("drill:")){ // drill:<topics> or drill:<dir>:<topics>; topics "all" or "anchors"
     const p = g.split(":"); const topics = p.length === 3 ? p[2] : p[1]; if (p.length === 3) dDir = p[1];
     setTab("cases"); setCaseMode("drill");
