@@ -89,6 +89,13 @@ for e in essays:
     for i in e['issues']: assert i in iid, (e['id'], i)
     for c in e['cases']: assert c in cid, (e['id'], c)
     for t in e['t']: assert t in tkeys, (e['id'], t)
+clear = load('exams/clear.json') if os.path.exists(os.path.join(DATA, 'exams', 'clear.json')) else {}
+for e in essays:
+    c = clear.get(e['id'])
+    if c:
+        assert set(c) <= set('CLEAR') and all(c.get(k) for k in 'CLAR'), e['id']
+        n = sum(len(v.split()) for v in c.values()); assert n <= 125, (e['id'], n)
+        e['clear'] = c
 eid = {e['id'] for e in essays}
 for m in re.findall(r'data-e="([^"]+)"', rev):
     assert m in eid, 'reviewer cites unknown essay ' + m
@@ -106,7 +113,7 @@ plan = [
     dict(date='2026-10-11', short='Sun 11', label='Sunday, October 11', focus='Tue class prep, then judicial review', items=[
         P('4:30 PM', 'Tue class prep 1/5: read and digest cases 1–5 (facts, issue, ruling, one-line doctrine). Star the hard ones.'),
         P('7:00 PM', 'Tue class prep 2/5: cases 6–12. Five-minute break after case 9.'),
-        P('10:30 PM', 'Exam method: format, the four question shapes, ALAC, the checklist.', rv=R('method')),
+        P('10:30 PM', 'Exam method: format, the four question shapes, the answer formula, the checklist.', rv=R('method')),
         P('10:50 PM', 'Judicial review, part 1: requisites and every type of standing. Then list the standing types from memory.', rv=R('jr')),
         P('11:35 PM', 'Drill Case → rule, Judicial review (one round of 20). Sleep at 12.', go='drill:cr:jr', goL='Start the drill')]),
     dict(date='2026-10-12', short='Mon 12', label='Monday, October 12', focus='Judicial review, interpretation, government, suffrage', items=[
@@ -145,18 +152,18 @@ plan = [
         P('3:00 PM', 'Kapihan: Rule → case for Powers, Appropriations and Tax (20 cards), then due lists.', go='drill:rc:powers,approp,tax', goL='Start the drill'),
         P('4:00 PM', 'Kapihan: write and grade two answers, 40 minutes each.', e=R('e24m-4', 'e24m-3')),
         P('5:20 PM', 'Kapihan: the fix list.', go='fix', goL='Review fix list'),
-        P('7:00 PM', 'Timed set under exam conditions: four news problems in 90 minutes on one sheet. Grade them from 8:30 PM.', e=R('n26-2', 'n26-3', 'n26-4', 'n26-5')),
+        P('7:00 PM', 'Timed set under the real rules: four news problems in 90 minutes, all four answers on ONE side of one page (like the back of the questionnaire), pen only, phone away. Use CLEAR. Grade them from 8:30 PM.', e=R('n26-2', 'n26-3', 'n26-4', 'n26-5')),
         P('9:15 PM', 'The 2026 news watch, then re-read your weakest rule map. No new material after this.', rv=R('news')),
         P('10:00 PM', 'Commute home (phone): the fix list.', go='fix', goL='Review fix list'),
         P('11:00 PM', 'Printables twice, then an anchors-only Rule → case drill.', go='print', goL='Open printables'),
         P('11:40 PM', 'Blur pass on Powers of Congress, then Appropriations and tax. Recall only.', rv=R('powers', 'money'), go='blur:powers', goL='Blur mode: Powers'),
-        P('12:30 AM', 'Due cards; pack yellow paper, pens, ID. Sleep at 1.', go='due', goL='Review due cards')]),
+        P('12:30 AM', 'Due cards; pack two pens (same ink) and correction tape. No yellow paper: answers go on the back of the questionnaire. Sleep at 1.', go='due', goL='Review due cards')]),
     dict(date='2026-10-16', short='Fri 16', label='Friday, October 16', focus='Midterm, 10:00–11:30 AM', items=[
         P('6:00 AM', 'The fix list first, then due cards, then an anchors-only Case → rule drill.', go='fix', goL='Review fix list'),
         P('7:00 AM', 'Issue checklist and numbers. Outline two problems in the margin without writing them out, then check the model answers.', go='print', goL='Open printables', sp=R('e23m-4', 'n26-7')),
-        P('8:00 AM', 'Anchor-case list and the last-minute checklist of each rule map.', rv=R('method')),
-        P('9:00 AM', 'Commute: the two printables only.'),
-        P('10:00 AM', 'Midterm: 90 minutes, about 22 per problem. Answer first, ALAC, half a page each. Read every fact.')]),
+        P('8:00 AM', 'Exam-room rules and the CLEAR formula once more; then the anchor-case list and the last-minute checklist of each rule map.', rv=R('method-rules', 'method-clear')),
+        P('9:00 AM', 'Commute: the two printables only. Before you enter the room, phone off and into your bag; only your pen and correction tape on the table.'),
+        P('10:00 AM', 'Midterm: student number only. Divide the back of the questionnaire into one box per question before reading. About 22 minutes each: read twice, decide the conclusion, write in CLEAR (80–120 legible words), check that R agrees with C.')]),
 ]
 for d in plan:
     for it in d['items']:

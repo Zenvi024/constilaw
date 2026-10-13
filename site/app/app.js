@@ -639,8 +639,13 @@ function renderEssays(){
 }
 $("esrc").onchange = renderEssays;
 $("elist").addEventListener("click", e => { const b = e.target.closest("[data-show]"); if (!b) return; const box = $("elist").querySelector(`[data-m="${b.dataset.show}"]`); const es = ESS[b.dataset.show]; box.hidden = !box.hidden; if (!box.innerHTML) box.innerHTML = modelHTML(es, false); b.textContent = box.hidden ? "Model answer" : "Hide model answer"; });
+const CLEAR_L = [["C", "Conclusion"], ["L", "Legal basis"], ["E", "Exception"], ["A", "Analysis"], ["R", "Restatement"]];
+const clearWords = c => CLEAR_L.reduce((n, [k]) => n + (c[k] ? c[k].trim().split(/\s+/).length : 0), 0);
+function clearHTML(c){
+  return `<div class="model clear">${CLEAR_L.filter(([k]) => c[k]).map(([k, l]) => `<p><b class="ck" title="${l}">${k}</b> ${esc(c[k])}</p>`).join("")}</div>`;
+}
 function modelHTML(e, withRubric){
-  return `<div class="stack" style="gap:10px"><div class="lbl">Model answer · ${e.model.split(/\s+/).length} words</div><div class="model">${esc(e.model)}</div>
+  return `<div class="stack" style="gap:10px">${e.clear ? `<div class="lbl">Back-page answer in CLEAR · ${clearWords(e.clear)} words · the length that fits</div>${clearHTML(e.clear)}<details class="fullm"><summary class="lbl">Full model answer for study · ${e.model.split(/\s+/).length} words</summary><div class="model">${esc(e.model)}</div></details>` : `<div class="lbl">Model answer · ${e.model.split(/\s+/).length} words</div><div class="model">${esc(e.model)}</div>`}
   <div class="lbl">Must-hit points</div><ul class="core">${e.core.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
   ${e.cases && e.cases.length ? `<p class="tiny" style="margin:0">Cases: ${caseLinks(e.cases)}</p>` : ""}
   ${e.note ? `<div class="keynote"><b>Note:</b> ${esc(e.note)}</div>` : ""}
@@ -697,12 +702,12 @@ function renderWrite(){
 $("wSel").onchange = () => { wId = $("wSel").value; renderWrite(); };
 function words(s){ return (s.trim().match(/\S+/g) || []).length; }
 function wc(){
-  const n = words($("pad").value), max = 240;
+  const n = words($("pad").value), max = 200;
   $("wcN").textContent = n;
   $("wcBar").querySelector("i").style.width = Math.min(100, 100 * n / max) + "%";
-  $("wcBar").querySelector(".band").style.left = (100 * 150 / max) + "%"; $("wcBar").querySelector(".band").style.width = (100 * 30 / max) + "%";
-  $("wcBar").classList.toggle("over", n > 220);
-  $("wcMsg").textContent = n === 0 ? "" : n < 120 ? "Too thin: name the rule and a case" : n <= 190 ? "Good length" : n <= 220 ? "Long: four of these will not fit on one sheet" : "Too long: cut to the decisive issues";
+  $("wcBar").querySelector(".band").style.left = (100 * 80 / max) + "%"; $("wcBar").querySelector(".band").style.width = (100 * 40 / max) + "%";
+  $("wcBar").classList.toggle("over", n > 150);
+  $("wcMsg").textContent = n === 0 ? "" : n < 60 ? "Too thin: you need the rule and the analysis" : n <= 120 ? "Fits your box on the back page" : n <= 150 ? "Long: four of these will not fit on the back" : "A dissertation: cut to C, L, A, R";
 }
 let saveT = null;
 $("pad").addEventListener("input", () => { wc(); clearTimeout(saveT); saveT = setTimeout(() => { drafts[wId] = $("pad").value; store.set("drafts", drafts); }, 400); });
@@ -725,7 +730,8 @@ $("wReveal").onclick = () => {
   $("wModel").innerHTML = `<div class="panel"><h2>Grade yourself</h2><p class="tiny" style="margin:0">Tick only what your answer actually does. Gatmaytan grades ‘mastery’ and ‘comprehensive and accurate arguments’; 7 of 10 passes.</p>
   <div class="rubric" id="rub">${e.points.map(([t, p], i) => `<label for="rb_${i}"><input type="checkbox" id="rb_${i}" data-p="${p}"><span>${esc(t)}</span><span class="p">${p} pt${p === 1 ? "" : "s"}</span></label>`).join("")}</div>
   <div class="spread"><span class="score"><span class="big" id="rbS">0</span><span class="tiny">/ 10</span></span><button class="btn primary" id="rbSave">Save this attempt</button></div>
-  <div class="hist" id="rbHist"></div></div>` + `<div class="panel">${modelHTML(e, true)}</div>`;
+  <div class="hist" id="rbHist"></div>
+  <div class="clearchk"><div class="lbl">Format check (not scored)</div>${["Conclusion is the first sentence", "Legal basis names the rule (a case only if you are sure)", "Analysis uses the specific facts", "Restatement agrees with the conclusion", "Fits the box: about 80–120 words", "Every word would be readable by hand"].map((t, i) => `<label for="cc_${i}"><input type="checkbox" id="cc_${i}"> ${t}</label>`).join("")}</div></div>` + `<div class="panel">${modelHTML(e, true)}</div>`;
   const sum = () => { const s = [...document.querySelectorAll("#rub input:checked")].reduce((a, x) => a + +x.dataset.p, 0); $("rbS").textContent = s; return s; };
   $("rub").onchange = sum;
   const hist = () => { const a = store.get("attempts", {})[wId] || []; $("rbHist").innerHTML = a.length ? a.slice(-6).reverse().map(x => `<span>${esc(x.date)} · ${x.score}/10 · ${x.words} words · ${x.mins} min</span>`).join("") : ""; };
@@ -739,10 +745,11 @@ function firstSentence(r){ const m = r.match(/^.*?[a-z0-9)’'”][.;](?=\s+[A-Z
 let printed = false;
 function renderPrint(){
   if (printed) return; printed = true;
-  $("sheet1").innerHTML = `<h2>Issue checklist</h2><div class="sub">Consti 1 midterm · run it in the margin of every problem · 22 minutes each: read 3, outline 3, write 14, check 2</div>
+  $("sheet1").innerHTML = `<h2>Issue checklist</h2><div class="sub">Consti 1 midterm · run it in the margin of every problem · 22 minutes each: read twice 4, outline 4, write 11, check 3</div>
   <div class="cl">${ISSUES().map(g => `<div class="grp"><h4>${esc(g.g)}</h4><ul>${g.items.map(i => `<li><b>${esc(i.l)}.</b> ${esc(i.h)}</li>`).join("")}</ul></div>`).join("")}
   <div class="grp"><h4>Numbers</h4><ul>${D.numbers.map(([a, b]) => `<li><b>${esc(a)}:</b> ${esc(b)}</li>`).join("")}</ul></div>
-  <div class="grp"><h4>Write it</h4><ul><li>Answer first (Yes/No; valid/void).</li><li>Rule + provision + one anchor case per issue.</li><li>Apply to the exact words of the law or story.</li><li>One-line conclusion. 150–180 words.</li><li>Did you answer the question asked (‘in his favor’, ‘no procedural issues’)?</li></ul></div></div>`;
+  <div class="grp"><h4>Write it in CLEAR</h4><ul><li><b>C</b> Conclusion first (valid/void; Yes/No).</li><li><b>L</b> Rule + provision; a case only if you are sure (else ‘in one case, the Court held…’).</li><li><b>E</b> Exception only if one applies.</li><li><b>A</b> Apply to the exact words of the law or story.</li><li><b>R</b> Restate; it must agree with C.</li><li>80–120 words; all answers fit on the back of the questionnaire.</li><li>Did you answer the question asked (‘in his favor’, ‘no procedural issues’)?</li></ul></div>
+  <div class="grp"><h4>Exam room (5.0 if broken)</h4><ul><li>Student ID number only; no name or other marks.</li><li>Write at the back of the questionnaire; everything must fit.</li><li>Pen and correction tape only; no devices; nothing else on the table.</li><li>No talking or signals. Write legibly: unreadable = wrong.</li></ul></div></div>`;
   const anc = CASES().filter(c => c.a);
   $("sheet2").innerHTML = `<h2>Anchor cases</h2><div class="sub">${anc.length} cases that carry a test · grouped by syllabus part${HIDE ? " · citizenship and territory left out" : ""}</div><div class="anc">${TOPS().map(t => { const g = anc.filter(c => c.t === t.key); return g.length ? `<div class="grp"><h4>${esc(t.name)}</h4>${g.map(c => `<p><b>${esc(c.n)}</b> (${esc(c.y)}): ${esc(c.s || firstSentence(c.r))}</p>`).join("")}</div>` : ""; }).join("")}</div>`;
 }

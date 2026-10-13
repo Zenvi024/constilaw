@@ -5,30 +5,102 @@
   "title": "Four steps per exam problem (with minutes)",
   "ask": "What are the four steps for each 22-minute problem, and how many minutes go to each?",
   "items": [
-   "Read and mark (3 minutes): who acted, under what power, exact words, numbers, dates, the question asked.",
-   "Spot and outline (3 minutes): run the issue checklist; pick 2–3 decisive issues, one anchor case each.",
-   "Write (14 minutes): about 150–180 words; answer first, then rule, application, conclusion.",
-   "Check (2 minutes): did I answer the question actually asked, and cite a provision and a case?"
+   "Read twice (4 minutes): first for ideas, then slowly; mark actors, powers, exact words, numbers, repeated facts, the question asked.",
+   "Analyze and outline (4 minutes): the six questions; two or three issues; decide your conclusion before writing.",
+   "Write in CLEAR (11 minutes): about 80–120 legible words in your box on the back of the questionnaire.",
+   "Check (3 minutes): R agrees with C; the question asked is answered; every word readable; student number written."
   ],
-  "src": "Exam method (rule map 00); 1 hr 30 min, four problems, one yellow sheet",
+  "src": "Exam method (rule map 00); 1 hr 30 min, four problems, all answers on the back of the questionnaire",
   "rv": "method-format",
-  "hook": "3–3–14–2",
+  "hook": "4–4–11–3",
   "ordered": true
  },
  {
-  "id": "a-method-alac",
+  "id": "a-method-clear",
   "t": "basics",
-  "title": "The ALAC template",
-  "ask": "What do the four letters of ALAC stand for, in order?",
+  "title": "The CLEAR answer",
+  "ask": "What do the five letters of CLEAR stand for, and what goes in each?",
   "items": [
-   "A – Answer: lead with Yes/No or ‘Section 4 is unconstitutional.’",
-   "L – Law: the provision and an anchor case.",
-   "A – Application: tie the rule to the exact words of the law or the facts.",
-   "C – Conclusion: one sentence that answers again."
+   "C – Conclusion: the short answer first (‘The expulsion is void.’).",
+   "L – Legal basis: the provision and rule; name a case only if you are sure of it.",
+   "E – Exception: only if one actually applies; usually omitted.",
+   "A – Analysis: apply the law to the specific facts; non-negotiable.",
+   "R – Restatement: restate the conclusion; it must agree with C."
   ],
-  "src": "Exam method (rule map 00); Gatmaytan block intel",
-  "rv": "method-alac",
+  "src": "Essay-exam module Sir Dan shared (Atty. Tanya Lat, UP College of Law)",
+  "rv": "method-clear",
   "ordered": true
+ },
+ {
+  "id": "a-method-room-rules",
+  "t": "basics",
+  "title": "Exam-room rules (Sir Dan, Oct. 2026)",
+  "ask": "What are Sir Dan’s six exam-room rules, and what is the penalty for breaking one?",
+  "items": [
+   "Identify yourself only by your student ID number; no other identification.",
+   "Use the questionnaire as the answer sheet; write at the back; all answers must fit there.",
+   "Do not write a dissertation.",
+   "No communication with classmates in any manner.",
+   "No electronic devices: only a pen and correction tape; nothing else on the table.",
+   "Unreadable answers are marked incorrect.",
+   "Penalty for any violation: a 5.0 for the exam."
+  ],
+  "src": "Sir Dan’s reminders via the beadle (Oct. 13, 2026)",
+  "rv": "method-rules",
+  "ordered": false
+ },
+ {
+  "id": "a-method-six-questions",
+  "t": "basics",
+  "title": "Six questions before you write",
+  "ask": "What six questions should you answer, in order, before writing an essay answer?",
+  "items": [
+   "What is the question being asked (usually the last sentence)?",
+   "What issues are relevant to that question?",
+   "Which facts are material, and how do the issues relate to them?",
+   "What legal principles apply (provision, doctrine, case)?",
+   "How do those principles apply to these facts?",
+   "What is my conclusion? Decide it before writing."
+  ],
+  "src": "Essay-exam module Sir Dan shared",
+  "rv": "method-clear",
+  "hook": "Question → Issues → Facts → Law → Apply → Conclude",
+  "ordered": true
+ },
+ {
+  "id": "a-method-rls-components",
+  "t": "basics",
+  "title": "Three RLs and three components of a good answer",
+  "ask": "What are the three RLs every good answer satisfies, and its three components?",
+  "items": [
+   "Right law: the correct doctrine or principle.",
+   "Right logic: reasoning that flows from premise to conclusion.",
+   "Right language: cohesive and grammatical.",
+   "Component 1: the short answer to the question asked.",
+   "Component 2: the legal basis for that answer.",
+   "Component 3: the analysis applying the law to the facts."
+  ],
+  "src": "Essay-exam module Sir Dan shared",
+  "rv": "method-clear",
+  "ordered": false
+ },
+ {
+  "id": "a-method-abc-pitfalls",
+  "t": "basics",
+  "title": "ABCs of legal writing and the four pitfalls",
+  "ask": "What are the ABCs of legal writing, and the four common pitfalls in essay answers?",
+  "items": [
+   "Accuracy: correct law and cases; name a case only if sure (else ‘in one case, the Supreme Court held…’).",
+   "Brevity: one correct, focused paragraph can earn full credit.",
+   "Conciseness: brief but comprehensive; one sentence is too short.",
+   "Pitfall: the obviously wrong answer (missing the real issue).",
+   "Pitfall: too long (not getting to the heart of the matter).",
+   "Pitfall: too short (no application of law to facts).",
+   "Pitfall: stream of consciousness (writing before deciding; C and R contradict)."
+  ],
+  "src": "Essay-exam module Sir Dan shared",
+  "rv": "method-clear",
+  "ordered": false
  },
  {
   "id": "a-method-shapes",

@@ -3,7 +3,7 @@
   --paper:#f3f4f7; --card:#ffffff; --ink:#151a2d; --muted:#596079; --line:#dadde6;
   --accent:#1d3a9e; --accent-soft:#e5eafa; --accent-ink:#ffffff;
   --sun:#f0b915; --sun-soft:#fdf3d2;
-  --pad:#fdf7cf; --pad-rule:#bccbe9; --pad-margin:#e19b9b; --pad-ink:#1b2340;
+  --pad:#fcfcfa; --pad-rule:#d3d9e6; --pad-margin:#e8b4b4; --pad-ink:#1b2340;
   --codal:#eceef4; --hl:#ffe58a;
   --good:#1b6b46; --good-soft:#e0f1e8; --bad:#a72a2f; --bad-soft:#f8e1e1; --warn:#865a00; --warn-soft:#fbefd4;
   --display:"Spectral",Georgia,"Times New Roman",serif;
@@ -14,14 +14,14 @@
   --paper:#0e1120; --card:#161a2b; --ink:#e7e9f2; --muted:#9ba2ba; --line:#2a3048;
   --accent:#93a9ff; --accent-soft:#1e2748; --accent-ink:#0e1120;
   --sun:#e9b730; --sun-soft:#33290d;
-  --pad:#24220f; --pad-rule:#3a4466; --pad-margin:#7d3b3b; --pad-ink:#ecead8;
+  --pad:#1a1e2e; --pad-rule:#323a57; --pad-margin:#6b3a3a; --pad-ink:#ecead8;
   --codal:#1d2235; --hl:#5c4b10;
   --good:#7fd4a6; --good-soft:#16301f; --bad:#f2a09b; --bad-soft:#3a1c1c; --warn:#efc66b; --warn-soft:#352a12; color-scheme:dark}}
 :root[data-theme="dark"]{
   --paper:#0e1120; --card:#161a2b; --ink:#e7e9f2; --muted:#9ba2ba; --line:#2a3048;
   --accent:#93a9ff; --accent-soft:#1e2748; --accent-ink:#0e1120;
   --sun:#e9b730; --sun-soft:#33290d;
-  --pad:#24220f; --pad-rule:#3a4466; --pad-margin:#7d3b3b; --pad-ink:#ecead8;
+  --pad:#1a1e2e; --pad-rule:#323a57; --pad-margin:#6b3a3a; --pad-ink:#ecead8;
   --codal:#1d2235; --hl:#5c4b10;
   --good:#7fd4a6; --good-soft:#16301f; --bad:#f2a09b; --bad-soft:#3a1c1c; --warn:#efc66b; --warn-soft:#352a12; color-scheme:dark}
 *{box-sizing:border-box}
@@ -381,3 +381,13 @@ footer.ft{max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:0 40p
 #rcontent.blurmode .bl:not(.shown):hover{background:color-mix(in srgb,var(--accent) 30%,transparent)}
 #rcontent.blurmode .bl.shown{background:var(--sun-soft);border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 @media (max-width:520px){.blurct{display:none}.mtoc a{max-width:20ch}}
+
+/* CLEAR answers */
+.model.clear p{margin:0 0 6px}
+.model.clear p:last-child{margin:0}
+.model.clear .ck{display:inline-block;min-width:1.5em;font:700 .8rem/1.5 var(--mono);color:var(--accent-ink);background:var(--accent);border-radius:4px;text-align:center;margin-right:6px}
+details.fullm summary{cursor:pointer}
+details.fullm .model{margin-top:8px}
+.clearchk{display:flex;flex-direction:column;gap:4px;border-top:1px dashed var(--line);padding-top:10px;font-size:.88rem}
+.clearchk label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.clearchk input{accent-color:var(--good);margin-top:4px}
