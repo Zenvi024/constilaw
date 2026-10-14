@@ -490,3 +490,20 @@ details.fullm .model{margin-top:8px}
 }
 .rung .bar{padding-bottom:6px}
 .rung .bar i{inset:auto auto 0 0;height:6px;border-right:0;background:var(--accent)}
+
+/* universal search */
+.gsearch{position:relative;flex:1 1 300px;max-width:460px;min-width:0;align-self:center}
+.gsearch input{width:100%;padding:9px 34px 9px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:.92rem}
+.gsearch input:focus{border-color:var(--accent);background:var(--card)}
+.gsearch kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);font:500 .7rem var(--mono);color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;pointer-events:none}
+.gsearch input:focus+kbd,.gsearch input:not(:placeholder-shown)+kbd{display:none}
+@media (max-width:700px){.gsearch{flex-basis:100%;max-width:none;order:3}}
+.glist{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.gres{display:flex;flex-direction:column;gap:3px;text-align:left;width:100%;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:10px 12px;cursor:pointer;line-height:1.45;color:var(--ink)}
+.gres:hover,.gres:focus-visible{border-color:var(--accent)}
+.gres .gk{font:500 .66rem/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.gres b{font:600 .98rem/1.35 var(--display)}
+.gres .gx{font-size:.86rem;color:var(--muted)}
+.gres mark{background:var(--hl);color:inherit;border-radius:2px}
+.gmore{margin-top:6px}
+details.item.flash{outline:2px solid var(--sun);outline-offset:3px}

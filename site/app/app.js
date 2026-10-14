@@ -26,7 +26,7 @@ const ISSUES = () => D.issues.map(g => ({...g, items: g.items.filter(i => !HIDE 
 const TABS = ["today","rules","lists","cases","exams","spot","write","print"];
 function setTab(t, push){
   if (!TABS.includes(t)) t = "today";
-  TABS.forEach(x => { $("v-" + x).hidden = x !== t; });
+  TABS.forEach(x => { $("v-" + x).hidden = x !== t; }); $("v-search").hidden = true;
   document.querySelectorAll(".tabs [data-tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === t));
   store.set("tab", t);
   if (push !== false){ try { history.replaceState(null, "", "#" + t); } catch(e){} }
@@ -562,7 +562,7 @@ function renderLists(){
     const g = p.filter(l => l.t === t.key); if (!g.length) return;
     html += `<div class="grouph">${esc(t.name)} <small>${esc(t.part)} · ${g.length}</small></div>`;
     html += g.map(l => { const r = LRES[l.id], mk = !r ? `<span class="mk">–</span>` : r.m.length ? `<span class="mk no">✗</span>` : `<span class="mk ok">✓</span>`, tag = l.ordered ? "ol" : "ul";
-      return `<details class="item"><summary>${mk}<span class="t"><b>${esc(l.title)}</b> <span class="tiny">· ${l.items.length}</span></span></summary><div class="body"><p class="tiny" style="margin:0">${esc(l.ask)}</p><${tag} class="lbody">${l.items.map((x, i) => `<li${r && r.m.includes(i) ? ' class="missed" title="Missed last time"' : ""}>${esc(x)}</li>`).join("")}</${tag}>${l.hook ? `<div class="lhook">${esc(l.hook)}</div>` : ""}<p class="tiny" style="margin:0">Source: ${esc(l.src)}${l.cases && l.cases.length ? " · " + caseLinks(l.cases) : ""}${l.rv ? ` · <a href="#" data-rv="${esc(l.rv)}">rule map</a>` : ""}</p><div class="row"><button class="btn small" data-drill1="${l.id}">Drill this list</button></div></div></details>`; }).join("");
+      return `<details class="item" data-lid="${l.id}"><summary>${mk}<span class="t"><b>${esc(l.title)}</b> <span class="tiny">· ${l.items.length}</span></span></summary><div class="body"><p class="tiny" style="margin:0">${esc(l.ask)}</p><${tag} class="lbody">${l.items.map((x, i) => `<li${r && r.m.includes(i) ? ' class="missed" title="Missed last time"' : ""}>${esc(x)}</li>`).join("")}</${tag}>${l.hook ? `<div class="lhook">${esc(l.hook)}</div>` : ""}<p class="tiny" style="margin:0">Source: ${esc(l.src)}${l.cases && l.cases.length ? " · " + caseLinks(l.cases) : ""}${l.rv ? ` · <a href="#" data-rv="${esc(l.rv)}">rule map</a>` : ""}</p><div class="row"><button class="btn small" data-drill1="${l.id}">Drill this list</button></div></div></details>`; }).join("");
   });
   $("lList").innerHTML = html || `<p class="empty">No list matches.</p>`;
 }
@@ -776,6 +776,98 @@ function renderPrint(){
   $("sheet2").innerHTML = `<h2>Anchor cases</h2><div class="sub">${anc.length} cases that carry a test · grouped by syllabus part${HIDE ? " · citizenship and territory left out" : ""}</div><div class="anc">${TOPS().map(t => { const g = anc.filter(c => c.t === t.key); return g.length ? `<div class="grp"><h4>${esc(t.name)}</h4>${g.map(c => `<p><b>${esc(c.n)}</b> (${esc(c.y)}): ${esc(c.s || firstSentence(c.r))}</p>`).join("")}</div>` : ""; }).join("")}</div>`;
 }
 
+/* ================= universal search ================= */
+// One box in the header searches rule maps (and their diagrams), cases, lists, the issue checklist, numbers, MCQs and essays.
+const fold = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+let GIDX = null, gT = null, gPrevTab = "today", gRx = {};
+function gIndex(){
+  const items = [];
+  const heads = new Map();
+  SECS.forEach(sec => { let h = sec.dataset.title; sec.querySelectorAll("h3, :is(p,li,.codal,td,h4,.test,aside,.vn,figcaption,.vt)").forEach(el => {
+    if (el.tagName === "H3"){ h = el.textContent; }
+    heads.set(el, `${sec.dataset.title} › ${h}`);
+  }); });
+  [...document.querySelectorAll("#rcontent :is(p,li,.codal,td,h3,h4,.test,aside,.vn,figcaption,.vt)")].filter(el => !el.querySelector("p,li,td,.vn,.test,aside") && el.textContent.trim().length > 2).forEach(el => {
+    const sec = el.closest("section.rv"), isHead = /^H[34]$/.test(el.tagName) || el.classList.contains("vt");
+    const sm = el.querySelector("small"), title = isHead ? el.textContent.replace(sm ? sm.textContent : "", "").trim() : "";
+    let text = el.textContent;
+    if (isHead){ let nx = el.classList.contains("vt") ? el.parentElement.querySelector("figcaption") : el.nextElementSibling; while (nx && nx.tagName === "FIGURE") nx = nx.nextElementSibling; text = nx ? nx.textContent : ""; }
+    items.push({g: "rule", el: el.classList.contains("vt") ? el.parentElement : el, sec, title, text: text.replace(/\s+/g, " ").trim(), ctx: heads.get(el) || sec.dataset.title});
+  });
+  D.cases.forEach(c => items.push({g: "case", id: c.id, t: c.t, title: c.n + " (" + c.y + ")", text: [c.s, c.r, c.test, c.f, c.h, c.x, c.g, c.sub].filter(Boolean).join(" · "), ctx: tname(c.t) + (c.a ? " · anchor" : c.ref ? " · mentioned only" : "")}));
+  D.lists.forEach(l => items.push({g: "list", id: l.id, t: l.t, title: l.title, text: [l.ask, ...l.items, l.src, l.hook].filter(Boolean).join(" · "), ctx: tname(l.t) + " · " + l.items.length + " items"}));
+  D.issues.forEach(gr => gr.items.forEach(i => items.push({g: "issue", id: i.id, title: i.l, text: i.h, ctx: gr.g, rv: i.rv})));
+  D.numbers.forEach(([a, b]) => items.push({g: "num", title: a, text: b, ctx: "Numbers he can alter"}));
+  D.mcq.forEach(q => items.push({g: "mcq", id: q.id, t: q.t, title: `${q.exam} #${q.n}`, text: [q.q, ...q.c, q.e, q.k].filter(Boolean).join(" · "), ctx: tname(q.t)}));
+  D.essays.forEach(e => items.push({g: "essay", id: e.id, title: `${e.exam}${e.n ? " Q" + e.n : ""}: ${e.short}`, text: [e.ask, e.prompt, ...(e.core || []), e.model].join(" · "), ctx: e.news ? "2026 news problem" : "Past essay question"}));
+  items.forEach(it => { it.ft = fold(it.title); it.fx = fold(it.text); });
+  return items;
+}
+const G_LBL = {rule: "Rule maps", case: "Cases", list: "Lists and requisites", issue: "Issue checklist", num: "Numbers", mcq: "Past exams: multiple choice", essay: "Essay and news problems"};
+function gVisible(it){
+  if (it.g === "rule") return secShown(SECS.indexOf(it.sec));
+  if (it.g === "issue") return !(HIDE && OUT_ISSUES.includes(it.id));
+  return !it.t || shownT(it.t);
+}
+const G_STOP = new Set("of the a an and in on to for by or is at as v vs".split(" "));
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function gScore(it, terms, phrase){
+  let s = 0;
+  for (const t of terms){ const rx = gRx[t], a = rx.test(it.ft), b = a || rx.test(it.fx); if (!a && !b) return 0; s += a ? 10 : 2; }
+  if (phrase && (it.ft.includes(phrase))) s += 25; else if (phrase && it.fx.includes(phrase)) s += 6;
+  if (it.ft.startsWith(terms[0])) s += 6;
+  if (it.g === "case" || it.g === "list") s += 3;
+  return s;
+}
+function gMark(text, terms, len){
+  const f = fold(text); let i = -1;
+  for (const t of terms){ const k = f.indexOf(t); if (k >= 0 && (i < 0 || k < i)) i = k; }
+  let a = 0, b = text.length;
+  if (len && text.length > len){ a = Math.max(0, i - Math.floor(len / 3)); b = Math.min(text.length, a + len); }
+  const sub = text.slice(a, b), fs = f.slice(a, b), aligned = f.length === text.length;
+  let out = "", pos = 0;
+  if (aligned){
+    const hits = [];
+    terms.forEach(t => { let k = fs.indexOf(t); while (k >= 0){ hits.push([k, k + t.length]); k = fs.indexOf(t, k + t.length); } });
+    hits.sort((x, y) => x[0] - y[0]);
+    hits.forEach(([x, y]) => { if (x < pos) return; out += esc(sub.slice(pos, x)) + "<mark>" + esc(sub.slice(x, y)) + "</mark>"; pos = y; });
+  }
+  out += esc(sub.slice(pos));
+  return (a > 0 ? "…" : "") + out + (b < text.length ? "…" : "");
+}
+function gSearch(){
+  const raw = $("gq").value.trim(), q = fold(raw);
+  if (q.length < 2){ if (!$("v-search").hidden) gClose(); return; }
+  GIDX = GIDX || gIndex();
+  const all = q.split(/\s+/).filter(Boolean), kept = all.filter(t => !G_STOP.has(t)), terms = kept.length ? kept : all, phrase = all.length > 1 ? q : "";
+  gRx = Object.fromEntries(terms.map(t => [t, new RegExp("(?:^|[^a-z0-9])" + reEsc(t))]));
+  const res = GIDX.filter(gVisible).map(it => ({it, s: gScore(it, terms, phrase)})).filter(r => r.s > 0).sort((x, y) => y.s - x.s);
+  if ($("v-search").hidden){ gPrevTab = store.get("tab", "today"); TABS.forEach(x => $("v-" + x).hidden = true); document.querySelectorAll(".tabs [data-tab]").forEach(b => b.setAttribute("aria-selected", false)); $("v-search").hidden = false; window.scrollTo({top: 0}); }
+  $("gHead").textContent = `Results for “${raw}”`;
+  $("gSum").textContent = res.length ? `${res.length} match${res.length === 1 ? "" : "es"}. Tap a result to go there. Press Esc to close.` : "No matches. Try fewer or shorter words (for example “quorum”, “two-thirds”, “Avelino”).";
+  const groups = Object.keys(G_LBL).map(g => [g, res.filter(r => r.it.g === g)]).filter(([, r]) => r.length);
+  const best = res.slice(0, 5);
+  const card = (r, i) => { const it = r.it; return `<button class="gres" data-gi="${GIDX.indexOf(it)}"><span class="gk">${esc(G_LBL[it.g].split(":")[0])} · ${esc(it.ctx)}</span>${it.title ? `<b>${gMark(it.title, terms)}</b>` : ""}<span class="gx">${gMark(it.text, terms, it.title ? 170 : 240)}</span></button>`; };
+  $("gRes").innerHTML = (res.length > 6 ? `<section><div class="lbl">Best matches</div><div class="glist">${best.map(card).join("")}</div></section>` : "") +
+    groups.map(([g, r]) => `<section data-gg="${g}"><div class="lbl">${G_LBL[g]} · ${r.length}</div><div class="glist">${r.slice(0, 8).map(card).join("")}</div>${r.length > 8 ? `<button class="btn small ghost gmore" data-gm="${g}">Show all ${r.length}</button>` : ""}</section>`).join("");
+  $("gRes").querySelectorAll("[data-gm]").forEach(b => b.onclick = () => { const r = groups.find(([g]) => g === b.dataset.gm)[1]; b.previousElementSibling.innerHTML = r.map(card).join(""); b.remove(); });
+}
+function gClose(){ $("v-search").hidden = true; setTab(gPrevTab || "today"); }
+function gGo(it){
+  if (it.g === "rule"){ setTab("rules"); const i = SECS.indexOf(it.sec); if (i !== curSec) openSec(i, false); requestAnimationFrame(() => { it.el.scrollIntoView({block: "center"}); it.el.classList.add("flash"); setTimeout(() => it.el.classList.remove("flash"), 1800); }); return; }
+  if (it.g === "case") return openCase(it.id);
+  if (it.g === "list"){ setTab("lists"); $("lRun").hidden = true; $("lSetup").hidden = false; $("lList").hidden = false; $("lq").value = ""; $("lTopic").value = ""; renderLists(); const d = $("lList").querySelector(`[data-lid="${it.id}"]`); if (d){ d.open = true; d.scrollIntoView({block: "center"}); d.classList.add("flash"); setTimeout(() => d.classList.remove("flash"), 1800); } return; }
+  if (it.g === "issue"){ setTab("rules"); goToId(it.rv); return; }
+  if (it.g === "num"){ setTab("rules"); goToId("method-numbers"); return; }
+  if (it.g === "mcq"){ const q = D.mcq.find(x => x.id === it.id); openModal(`<div class="spread"><h3 id="mTitle" style="font-style:normal">${esc(q.exam)} · item ${q.n}</h3><button class="btn small ghost" data-close>Close</button></div>${mcqBody(q, null)}`); bindMcq($("modal"), q, ok => { qhist[q.id] = {r: ok ? 1 : 0, n: ((qhist[q.id] || {}).n || 0) + 1}; store.set("qhist", qhist); rate("m:" + q.id, ok ? 2 : 0); }, closeModal); return; }
+  if (it.g === "essay"){ const e = ESS[it.id]; openModal(`<div class="spread"><h3 id="mTitle" style="font-style:normal">${esc(it.title)}</h3><button class="btn small ghost" data-close>Close</button></div><div class="facts" style="font-size:.95rem">${esc(e.prompt)}</div><div class="askbox">${esc(e.ask)}</div><div class="row"><button class="btn primary small" data-essay="${e.id}">Write it (22 min)</button><button class="btn small" data-spot="${e.id}">Spot the issues</button></div><details class="dgrev"><summary>Show the answer</summary><div style="padding:0 12px 12px">${modelHTML(e, false)}</div></details>`); $("modal").querySelectorAll("[data-essay],[data-spot]").forEach(b => b.addEventListener("click", closeModal)); }
+}
+$("gq").addEventListener("input", () => { clearTimeout(gT); gT = setTimeout(gSearch, 160); });
+$("gq").addEventListener("keydown", e => { if (e.key === "Escape"){ $("gq").value = ""; gClose(); $("gq").blur(); } if (e.key === "Enter"){ clearTimeout(gT); gSearch(); const f = $("gRes").querySelector(".gres"); if (f && e.altKey) f.click(); } });
+$("gBack").onclick = () => { $("gq").value = ""; gClose(); };
+$("gRes").addEventListener("click", e => { const b = e.target.closest("[data-gi]"); if (b) gGo(GIDX[+b.dataset.gi]); });
+document.addEventListener("keydown", e => { if (e.key === "/" && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) && $("scrim").hidden){ e.preventDefault(); $("gq").focus(); $("gq").select(); } });
+
 /* ================= scope toggle wiring ================= */
 function applyScope(){
   $("scopeBtn").setAttribute("aria-pressed", HIDE); $("scopeState").textContent = HIDE ? "hidden" : "shown";
@@ -788,6 +880,7 @@ function applyScope(){
   printed = false; if (!$("v-print").hidden) renderPrint();
   fillLTopic(); if (!$("lList").hidden) renderLists();
   if (!$("v-today").hidden) renderToday();
+  if (!$("v-search").hidden) gSearch();
 }
 $("scopeBtn").onclick = () => { HIDE = !HIDE; applyScope(); };
 
