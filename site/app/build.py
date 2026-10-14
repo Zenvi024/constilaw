@@ -47,18 +47,21 @@ for k, v in load('dg_reviewer.json').items():
 
 # rule maps: link every case mention to its card (see caselink.py)
 import sys; sys.path.insert(0, HERE)
-import caselink
+import caselink, figures
 rv_files = sorted(glob.glob(os.path.join(DATA, 'reviewer', '*.html')))
+# diagrams (figures.py) go in first, so the case names inside them are linked too
+rv_src = {f: figures.insert(open(f).read(), os.path.basename(f)[:2]) for f in rv_files}
+print(f'diagrams: {sum(s.count(chr(60) + "figure class=") for s in rv_src.values())}, walk-through fact patterns: {sum(s.count("class=" + chr(34) + "fact" + chr(34)) for s in rv_src.values())}')
 link_texts = {}
 for f in rv_files:
-    for c, t in re.findall(r'<a class="cref" data-c="([^"]+)"[^>]*>(.*?)</a>', open(f).read()):
+    for c, t in re.findall(r'<a class="cref" data-c="([^"]+)"[^>]*>(.*?)</a>', rv_src[f]):
         t = html.unescape(re.sub('<[^>]+>', '', t)).strip(); link_texts.setdefault(t, set()).add(c)
 link_texts = {t: next(iter(v)) for t, v in link_texts.items() if len(v) == 1 and re.search('[A-Z]', t) and t != 'case card'}
 CASEMAP = {c['id']: c for c in cases}
 ALIASES = caselink.build_aliases(CASEMAP, link_texts)
 linked, parts, leftover = {}, [], []
 for f in rv_files:
-    src = caselink.link_file(open(f).read(), os.path.basename(f)[:2], ALIASES, CASEMAP, linked)
+    src = caselink.link_file(rv_src[f], os.path.basename(f)[:2], ALIASES, CASEMAP, linked)
     leftover += [(os.path.basename(f)[:2], v) for v in caselink.unlinked_vs(src)]
     parts.append(src)
 rev = '\n'.join(parts)
@@ -66,6 +69,9 @@ print(f'case links added: {sum(linked.values())} mentions of {len(linked)} cases
 for fp, v in leftover: print(f'  note: unlinked mention in rule map {fp}: {v}')
 for m in re.findall(r'data-c="([^"]+)"', rev):
     assert m in cid, 'reviewer cites unknown case ' + m
+ids_in_rev = set(re.findall(r' id="([^"]+)"', rev))
+for m in re.findall(r'class="xref" data-h="([^"]+)"', rev):
+    assert m in ids_in_rev, 'diagram link to a missing id ' + m
 
 # lists and requisites (one file per group; validated against topics, cases and rule-map ids)
 lists = []

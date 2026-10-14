@@ -288,7 +288,7 @@ function spy(){
 window.addEventListener("scroll", () => { if (!spyRaf) spyRaf = requestAnimationFrame(spy); }, {passive: true});
 window.addEventListener("resize", () => { if (!spyRaf) spyRaf = requestAnimationFrame(spy); });
 
-/* ================= rule-map visuals: steppers and the quorum calculator ================= */
+/* ================= rule-map visuals: steppers, calculators, walk-throughs and test-me covers ================= */
 document.querySelectorAll("#rcontent .stepper").forEach(st => {
   const btns = [...st.querySelectorAll(".sp-btns button")], ps = [...st.querySelectorAll(".sp-p")];
   const show = i => { btns.forEach((b, j) => b.setAttribute("aria-pressed", j === i)); ps.forEach((p, j) => p.hidden = j !== i); };
@@ -301,13 +301,153 @@ document.querySelectorAll("#rcontent .qwidget").forEach(w => {
   const paint = () => {
     bs.forEach((b, i) => { b.className = ["", "out", "abroad"][st[i]]; b.title = ["present", "absent (in the country)", "abroad"][st[i]]; });
     const abroad = st.filter(x => x === 2).length, present = st.filter(x => x === 0).length, base = N - abroad, need = Math.floor(base / 2) + 1, ok = present >= need;
-    w.querySelector(".qread").innerHTML = `<div class="vn"><b>${present}</b><span class="s">present</span></div><div class="vn"><b>${base}</b><span class="s">base (all ${N} minus ${abroad} abroad)</span></div><div class="vn"><b>${need}</b><span class="s">needed for a quorum</span></div><div class="vn ${ok ? "ok" : "no"}"><b>${ok ? "Quorum" : "No quorum"}</b><span class="s">${ok ? "may do business" : "may only adjourn or compel attendance"}</span></div><div class="vn sun"><b>${Math.floor(N / 2) + 1}</b><span class="s">votes to elect the Senate President today: a majority of <em>all</em> ${N} (Sec. 16(1))</span></div>`;
+    w.querySelector(".qread").innerHTML = `<div class="vn plain"><b>${present}</b><span class="s">present</span></div><div class="vn plain"><b>${base}</b><span class="s">base (all ${N} minus ${abroad} abroad)</span></div><div class="vn plain"><b>${need}</b><span class="s">needed for a quorum</span></div><div class="vn ${ok ? "ok" : "no"}"><b>${ok ? "Quorum" : "No quorum"}</b><span class="s">${ok ? "may do business" : "may only adjourn or compel attendance"}</span></div><div class="vn sun"><b>${Math.floor(N / 2) + 1}</b><span class="s">votes to elect the Senate President today: a majority of <em>all</em> ${N} (Sec. 16(1))</span></div>`;
   };
   bs.forEach((b, i) => b.addEventListener("click", () => { st[i] = (st[i] + 1) % 3; paint(); }));
   w.querySelector("[data-q=reset]").onclick = () => { st.fill(0); paint(); };
   w.querySelector("[data-q=avelino]").onclick = () => { st.fill(0); st[N - 1] = 2; for (let i = N - 12; i < N - 1; i++) st[i] = 1; paint(); };
   paint();
 });
+// vote counter: turns each rung of the vote ladder into a head count for the chamber you pick
+document.querySelectorAll("#rcontent .votec").forEach(w => {
+  const all = w.querySelector("[data-v=all]"), pres = w.querySelector("[data-v=present]");
+  const paint = () => {
+    const n = Math.max(1, +all.value || 24), p = Math.min(n, Math.max(0, +pres.value || 0)), maj = Math.floor(n / 2) + 1;
+    const val = {p5: Math.ceil(p / 5), quorum: maj, maj, two3: Math.ceil(2 * n / 3), three4: Math.ceil(3 * n / 4)};
+    const how = {p5: `of ${p} present`, quorum: `of ${n} Members`, maj: `of all ${n}`, two3: `of all ${n}`, three4: `of all ${n}`};
+    w.querySelectorAll(".rung[data-r]").forEach(r => { r.querySelector(".cnt").textContent = `${val[r.dataset.r]} ${how[r.dataset.r]}`; });
+  };
+  w.querySelectorAll("[data-set]").forEach(b => b.addEventListener("click", () => { all.value = b.dataset.set; pres.value = b.dataset.set; paint(); }));
+  [all, pres].forEach(x => x.addEventListener("input", paint)); paint();
+});
+// Commission on Appointments: proportional representation, fractions never rounded up
+document.querySelectorAll("#rcontent .cacalc").forEach(w => {
+  const preset = JSON.parse(w.dataset.parties), tot = w.querySelector("[data-v=total]");
+  const body = w.querySelector("tbody");
+  const load = ps => { body.innerHTML = ps.map(([n, k]) => `<tr><td>${esc(n)}</td><td><input type="number" min="0" value="${k}" aria-label="${esc(n)} members"></td><td class="sh"></td><td class="hi"></td></tr>`).join(""); paint(); };
+  const paint = () => {
+    const T = Math.max(1, +tot.value || 24); let seats = 0, mem = 0;
+    body.querySelectorAll("tr").forEach(tr => { const k = Math.max(0, +tr.querySelector("input").value || 0); mem += k; const sh = k / T * 12, s = Math.floor(sh + 1e-9); seats += s; tr.querySelector(".sh").textContent = sh.toFixed(2); tr.querySelector(".hi").textContent = s; });
+    const lost = 12 - seats;
+    w.querySelector(".msg").innerHTML = `<b>${seats} of 12 seats</b> filled from this chamber${lost > 0 ? `; ${lost} stay${lost === 1 ? "s" : ""} empty because no party can round a fraction up at another party’s expense. The CA can still work with fewer than 12 (Guingona v. Gonzales).` : "."}${mem !== T ? ` <span class="fill">Party members add up to ${mem}, not ${T}.</span>` : ""} A party needs at least ${Math.ceil(T / 12)} member${Math.ceil(T / 12) === 1 ? "" : "s"} (one-twelfth of the chamber) for one seat.`;
+  };
+  w.querySelector("[data-a=guingona]").onclick = () => { tot.value = 24; load(preset); };
+  body.addEventListener("input", paint); tot.addEventListener("input", paint);
+  load(preset);
+});
+// party-list seats: the BANAT rounds, with the 2% guaranteed seat, proportional additional seats and the three-seat cap
+document.querySelectorAll("#rcontent .plcalc").forEach(w => {
+  const preset = JSON.parse(w.dataset.groups), other = JSON.parse(w.dataset.others), dist = w.querySelector("[data-v=district]");
+  const body = w.querySelector("tbody");
+  const load = () => { dist.value = w.dataset.district; body.innerHTML = preset.map(([n, v]) => `<tr><td>${esc(n)}</td><td><input type="number" min="0" step="1000" value="${v}" aria-label="votes for ${esc(n)}"></td><td class="pc"></td><td></td><td></td><td></td><td class="hi"></td></tr>`).join("") + `<tr class="oth"><td>${other.n} others</td><td>${other.v.toLocaleString("en-US")} each</td><td class="pc"></td><td></td><td></td><td></td><td class="hi"></td></tr>`; paint(); };
+  const paint = () => {
+    const D = Math.max(0, +dist.value || 0), seats = Math.floor(D / 0.8 * 0.2 + 1e-9);
+    const rows = [...body.querySelectorAll("tr:not(.oth)")].map(tr => ({tr, v: Math.max(0, +tr.querySelector("input").value || 0)}));
+    const total = rows.reduce((a, r) => a + r.v, 0) + other.n * other.v;
+    const gs = rows.map(r => ({...r, p: total ? r.v / total : 0})).concat(Array.from({length: other.n}, () => ({v: other.v, p: total ? other.v / total : 0, o: 1})));
+    gs.sort((a, b) => b.v - a.v);
+    gs.forEach(g => { g.r1 = g.p >= 0.02 ? 1 : 0; g.r2 = 0; g.r3 = 0; });
+    let left = seats - gs.reduce((a, g) => a + g.r1, 0);
+    if (left < 0){ let k = seats; gs.forEach(g => { if (g.r1){ if (k > 0) k--; else g.r1 = 0; } }); left = 0; }
+    const pool = left;
+    gs.forEach(g => { const want = Math.floor(pool * g.p + 1e-9), room = 3 - g.r1; g.r2 = Math.max(0, Math.min(want, room, left)); g.capped = want > room; left -= g.r2; });
+    for (const g of gs){ if (left <= 0) break; if (g.r1 + g.r2 === 0){ g.r3 = 1; left--; } }
+    rows.forEach(r => { const g = gs.find(x => x.tr === r.tr), td = r.tr.querySelectorAll("td");
+      td[2].textContent = (g.p * 100).toFixed(2) + "%"; td[3].textContent = g.r1 || "·"; td[4].textContent = g.r2 || "·"; td[4].className = g.capped ? "cap" : ""; td[5].textContent = g.r3 || "·"; td[6].textContent = g.r1 + g.r2 + g.r3; });
+    const os = gs.filter(g => g.o), otd = body.querySelector(".oth").querySelectorAll("td");
+    otd[2].textContent = (other.v / (total || 1) * 100).toFixed(2) + "% each"; otd[3].textContent = os.reduce((a, g) => a + g.r1, 0) || "·"; otd[4].textContent = os.reduce((a, g) => a + g.r2, 0) || "·"; const o3 = os.reduce((a, g) => a + g.r3, 0); otd[5].textContent = o3 || "·"; otd[6].textContent = o3 ? `${o3} groups × 1` : "0";
+    const r1 = gs.reduce((a, g) => a + g.r1, 0), r2 = gs.reduce((a, g) => a + g.r2, 0), r3 = gs.reduce((a, g) => a + g.r3, 0);
+    w.querySelector(".msg").innerHTML = `<b>${seats} party-list seats</b> = ${D} district seats ÷ 0.80 × 0.20, whole seats only. Round 1 gave <b>${r1}</b> guaranteed seats (2% or more); round 2 split the remaining <b>${pool}</b> by vote share (whole numbers, no 2% floor, cap of three in all) for <b>${r2}</b> more; round 3 gave <b>${r3}</b> groups next in rank one seat each.${left > 0 ? ` ${left} seat${left === 1 ? "" : "s"} could not be filled.` : ""} Divisor: all ${total.toLocaleString("en-US")} valid party-list votes.`;
+  };
+  w.querySelector("[data-a=reset]").onclick = load; body.addEventListener("input", paint); dist.addEventListener("input", paint);
+  load();
+});
+// walk-throughs: run one fact pattern through the gates, one question at a time
+document.querySelectorAll("#rcontent figure.viz .gates").forEach(G => {
+  const fig = G.closest("figure.viz"), kids = [...G.children], gs = kids.filter(x => x.classList.contains("gate")), end = G.querySelector(":scope>.gend");
+  const fx = G.nextElementSibling && G.nextElementSibling.classList.contains("facts") ? [...G.nextElementSibling.querySelectorAll(".fact")] : [];
+  if (!fx.length) return;
+  const bar = document.createElement("div"); bar.className = "walkbar";
+  bar.innerHTML = `<span class="vlab">Walk it</span>` + fx.map((f, i) => `<button type="button" class="chip" data-f="${i}">${esc(f.querySelector(".fn").textContent)}</button>`).join("") + `<button type="button" class="chip" data-f="own">Your own facts</button>`;
+  const panel = document.createElement("div"); panel.className = "walkp"; panel.hidden = true;
+  const out = document.createElement("div"); out.className = "walkout"; out.hidden = true;
+  G.before(bar); bar.after(panel); G.after(out);
+  let path = null, fact = null, right = 0, asked = 0;
+  const yes = a => a === "y" ? "yes" : "no";
+  function clear(){
+    G.classList.remove("walking"); kids.forEach(c => { c.hidden = false; c.classList.remove("cur", "done", "hit"); });
+    G.querySelectorAll(".yn,.fb").forEach(x => x.remove()); panel.hidden = out.hidden = true;
+    bar.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", "false"));
+  }
+  function ask(i){
+    const g = gs[i]; g.hidden = false; g.classList.add("cur");
+    const box = document.createElement("div"); box.className = "yn";
+    box.innerHTML = `<button type="button" class="btn small" data-a="y">Yes</button><button type="button" class="btn small" data-a="n">No</button>`;
+    g.querySelector(".q").append(box); box.querySelector("button").focus({preventScroll: true});
+    box.addEventListener("click", e => { const b = e.target.closest("[data-a]"); if (b) answer(i, b.dataset.a); });
+  }
+  function answer(i, a){
+    const g = gs[i]; g.querySelector(".yn").remove(); g.classList.remove("cur"); g.classList.add("done");
+    let exp = path ? (path[i] || a) : a; const loose = exp.endsWith("?"); exp = exp.replace("?", "");
+    const fb = document.createElement("div"); fb.className = "fb";
+    if (path){ asked++; const ok = loose || a === exp; if (ok) right++; fb.classList.add(ok ? "good" : "bad");
+      fb.textContent = loose && a !== exp ? `Arguable: “${yes(a)}” can be defended, but the walk follows “${yes(exp)}”.` : loose ? `✓ ${yes(a)} (arguable, but the better reading).` : ok ? `✓ ${yes(a)}: right.` : `✕ You said ${yes(a)}; on these facts it is ${yes(exp)}.`;
+    } else fb.textContent = `You said ${yes(a)}.`;
+    g.querySelector(".q").append(fb);
+    if (exp === (g.dataset.exit === "yes" ? "y" : "n")){ g.classList.add("hit"); return finish(g.querySelector(".gx")); }
+    const nx = g.nextElementSibling; if (nx && nx.classList.contains("ve")) nx.hidden = false;
+    if (i + 1 < gs.length) ask(i + 1); else { end.hidden = false; finish(end); }
+  }
+  function finish(node){
+    out.hidden = false;
+    out.innerHTML = `<span class="vlab">Result</span><div class="vres">${node.innerHTML}</div>` + (fact ? `<p class="why">${fact.querySelector(".why").innerHTML}</p>` : "") + (path ? `<p class="score">You matched ${right} of ${asked} answer${asked === 1 ? "" : "s"}.</p>` : "") + `<div class="row"><button type="button" class="btn small" data-w="again">Walk another</button><button type="button" class="btn small ghost" data-w="map">Show the whole map</button></div>`;
+    out.scrollIntoView({block: "nearest", behavior: "smooth"});
+  }
+  bar.addEventListener("click", e => {
+    const c = e.target.closest("[data-f]"); if (!c) return;
+    if (c.getAttribute("aria-pressed") === "true"){ clear(); return; }
+    clear(); setTest(fig, false); G.classList.add("walking"); c.setAttribute("aria-pressed", "true");
+    fact = c.dataset.f === "own" ? null : fx[+c.dataset.f]; path = fact ? fact.dataset.path.split(",") : null; right = asked = 0;
+    panel.hidden = false;
+    panel.innerHTML = fact ? `<span class="vlab">The facts</span>${fact.querySelector(".ft").innerHTML}` : `<span class="vlab">Your own facts</span>Keep the problem in front of you and answer each question for those facts.`;
+    kids.forEach(k => k.hidden = true); ask(0);
+  });
+  out.addEventListener("click", e => { const b = e.target.closest("[data-w]"); if (!b) return; clear(); if (b.dataset.w === "again") bar.scrollIntoView({block: "nearest", behavior: "smooth"}); });
+});
+// test me: cover the details of a figure; tap each one to check your recall
+const COVER = ".vn .s, .vcmp .c, .vtl .t, .rung .lab, .gate>.gx, .gend, .acro .w, .wr .ln>span, [data-cover]";
+const coverEls = fig => [...fig.querySelectorAll(COVER)].filter(el => !el.closest(".calc,.facts,.walkp,.walkout") && !(el.parentElement.closest(COVER) && fig.contains(el.parentElement.closest(COVER))));
+function setTest(fig, on){
+  const b = fig.querySelector(".vtools .test"); if (!b) return;
+  fig.classList.toggle("testing", on); b.setAttribute("aria-pressed", on); b.textContent = on ? "Done" : "Test me";
+  fig.querySelectorAll(".rv").forEach(x => x.classList.remove("rv")); updTest(fig);
+}
+function updTest(fig){
+  const ct = fig.querySelector(".vtools .ct"); if (!ct) return;
+  if (!fig.classList.contains("testing")){ ct.textContent = ""; return; }
+  const els = coverEls(fig); ct.textContent = `${els.filter(x => x.classList.contains("rv")).length} of ${els.length}`;
+}
+document.querySelectorAll("#rcontent figure.viz").forEach(fig => {
+  if (fig.hasAttribute("data-notest") || !coverEls(fig).length) return;
+  const t = document.createElement("span"); t.className = "vtools"; t.innerHTML = `<span class="ct"></span><button type="button" class="chip test" aria-pressed="false" title="Cover the details, then tap each to check yourself">Test me</button>`;
+  fig.querySelector(".vt").append(t);
+  t.querySelector(".test").addEventListener("click", () => {
+    const on = !fig.classList.contains("testing");
+    if (on){ const w = fig.querySelector(".walkbar [aria-pressed=true]"); if (w) w.click(); }
+    setTest(fig, on);
+  });
+});
+document.addEventListener("click", e => {
+  const fig = e.target.closest("#rcontent figure.viz.testing"); if (!fig || e.target.closest(".vtools,.walkbar,.calc,.yn,input,select")) return;
+  let el = e.target.closest(COVER); if (!el || !fig.contains(el)) return;
+  for (let up = el.parentElement.closest(COVER); up && fig.contains(up); up = up.parentElement.closest(COVER)) el = up;
+  if (el.classList.contains("rv")) return;
+  e.preventDefault(); e.stopPropagation();
+  el.classList.add("rv"); el.querySelectorAll(COVER).forEach(x => x.classList.add("rv")); updTest(fig);
+}, true);
+// links from one diagram (or the hook wall and the issue radar) to another
+$("rcontent").addEventListener("click", e => { const a = e.target.closest("a.xref"); if (a){ e.preventDefault(); goToId(a.dataset.h); } });
+function applyScopeMarks(){ document.querySelectorAll("#rcontent [data-scope]").forEach(x => x.hidden = HIDE && OUT_SECS.includes(x.dataset.scope)); }
 
 /* ================= CASES: browse ================= */
 function setCaseMode(m){ document.querySelectorAll("[data-cm]").forEach(b => b.setAttribute("aria-pressed", b.dataset.cm === m)); $("c-browse").hidden = m !== "browse"; $("c-drill").hidden = m !== "drill"; if (m === "drill") renderDSetup(); }
@@ -783,16 +923,16 @@ let GIDX = null, gT = null, gPrevTab = "today", gRx = {};
 function gIndex(){
   const items = [];
   const heads = new Map();
-  SECS.forEach(sec => { let h = sec.dataset.title; sec.querySelectorAll("h3, :is(p,li,.codal,td,h4,.test,aside,.vn,figcaption,.vt)").forEach(el => {
+  SECS.forEach(sec => { let h = sec.dataset.title; sec.querySelectorAll("h3, :is(p,li,.codal,td,h4,.test,aside,.vn,figcaption,.vt,.hk,.ln,.ft,.rrow)").forEach(el => {
     if (el.tagName === "H3"){ h = el.textContent; }
     heads.set(el, `${sec.dataset.title} › ${h}`);
   }); });
-  [...document.querySelectorAll("#rcontent :is(p,li,.codal,td,h3,h4,.test,aside,.vn,figcaption,.vt)")].filter(el => !el.querySelector("p,li,td,.vn,.test,aside") && el.textContent.trim().length > 2).forEach(el => {
+  [...document.querySelectorAll("#rcontent :is(p,li,.codal,td,h3,h4,.test,aside,.vn,figcaption,.vt,.hk,.ln,.ft,.rrow)")].filter(el => !el.querySelector("p,li,td,.vn,.test,aside,.rrow") && !el.closest(".calc,.hwall,.walkbar,.walkp,.walkout,.vtools,.qread") && el.textContent.trim().length > 2).forEach(el => {
     const sec = el.closest("section.rv"), isHead = /^H[34]$/.test(el.tagName) || el.classList.contains("vt");
-    const sm = el.querySelector("small"), title = isHead ? el.textContent.replace(sm ? sm.textContent : "", "").trim() : "";
+    const sm = el.querySelector("small"), vtt = el.querySelector(".vtt"), title = isHead ? (vtt ? vtt.textContent : el.textContent.replace(sm ? sm.textContent : "", "")).trim() : "";
     let text = el.textContent;
     if (isHead){ let nx = el.classList.contains("vt") ? el.parentElement.querySelector("figcaption") : el.nextElementSibling; while (nx && nx.tagName === "FIGURE") nx = nx.nextElementSibling; text = nx ? nx.textContent : ""; }
-    items.push({g: "rule", el: el.classList.contains("vt") ? el.parentElement : el, sec, title, text: text.replace(/\s+/g, " ").trim(), ctx: heads.get(el) || sec.dataset.title});
+    items.push({g: "rule", el: el.classList.contains("vt") || el.closest(".facts") ? el.closest("figure") : el, sec, title, text: text.replace(/\s+/g, " ").trim(), ctx: heads.get(el) || sec.dataset.title});
   });
   D.cases.forEach(c => items.push({g: "case", id: c.id, t: c.t, title: c.n + " (" + c.y + ")", text: [c.s, c.r, c.test, c.f, c.h, c.x, c.g, c.sub].filter(Boolean).join(" · "), ctx: tname(c.t) + (c.a ? " · anchor" : c.ref ? " · mentioned only" : "")}));
   D.lists.forEach(l => items.push({g: "list", id: l.id, t: l.t, title: l.title, text: [l.ask, ...l.items, l.src, l.hook].filter(Boolean).join(" · "), ctx: tname(l.t) + " · " + l.items.length + " items"}));
@@ -881,6 +1021,7 @@ function applyScope(){
   fillLTopic(); if (!$("lList").hidden) renderLists();
   if (!$("v-today").hidden) renderToday();
   if (!$("v-search").hidden) gSearch();
+  applyScopeMarks();
 }
 $("scopeBtn").onclick = () => { HIDE = !HIDE; applyScope(); };
 
@@ -889,6 +1030,6 @@ renderClock(); setInterval(renderClock, 60000);
 buildSide(); openSec(Math.min(store.get("sec", 0), SECS.length - 1), false);
 $("scopeBtn").setAttribute("aria-pressed", HIDE); $("scopeState").textContent = HIDE ? "hidden" : "shown";
 if (!secShown(curSec)) openSec(visIdx()[0], false);
-fillLTopic(); renderLists(); applyBlur();
+fillLTopic(); renderLists(); applyBlur(); applyScopeMarks();
 applySpotScope(); renderCases(); renderDSetup(); setCaseMode("browse"); renderQSetup(); renderSpot(); renderWrite(); dueBadge();
 (() => { const h = (location.hash || "").slice(1); setTab(TABS.includes(h) ? h : store.get("tab", "today"), false); })();
