@@ -14,7 +14,7 @@ __CSS__
         <h1>Consti 1 <em>Midterm Desk</em></h1>
       </div>
       <div class="gsearch" role="search"><input type="search" id="gq" placeholder="Search everything: a case, rule, list, number…" aria-label="Search the whole site" autocomplete="off"><kbd>/</kbd></div>
-      <div class="hdr-right"><button class="scope" id="scopeBtn" aria-pressed="true" title="Citizenship and national territory are not in this year’s midterm">Citizenship &amp; territory: <b id="scopeState">hidden</b></button><div class="clock" aria-live="polite"><span class="n" id="cdN">–</span><span class="l" id="cdL">days to the midterm (Fri, Oct 16, 10:00 AM)</span></div></div>
+      <div class="hdr-right"><button class="scope" id="scopeBtn" aria-pressed="true" title="Citizenship and national territory are not in this year’s midterm">Citizenship &amp; territory: <b id="scopeState">hidden</b></button><button class="scope themebtn" id="themeBtn" type="button">Theme: <b>auto</b></button><div class="clock" aria-live="polite"><div class="cl1"><span class="n" id="cdN">–</span><span class="l" id="cdL">Fri, Oct 16 · 10:00 AM</span></div><span class="adv" id="cdA"></span></div></div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button role="tab" data-tab="today" aria-selected="true">Today</button>
@@ -28,6 +28,8 @@ __CSS__
     </nav>
   </div>
 </header>
+
+<div class="focusbar" id="focusBar" hidden><span class="fbt"><b>Consti 1</b> · <span id="fbWhat">Case drill</span></span><span class="fbc" id="fbClock"></span><span class="row" style="gap:6px"><button class="btn small" id="fbExit" type="button" title="Show the header and tabs again (Esc)">Exit focus</button></span></div>
 
 <!-- SEARCH RESULTS -->
 <main class="page narrow" id="v-search" hidden aria-live="polite">
@@ -65,6 +67,7 @@ __CSS__
       <section class="panel" aria-labelledby="progH">
         <h2 id="progH">Your progress</h2>
         <div class="stats" id="stats"></div>
+        <div class="rvprog" id="rvProg"></div>
         <div class="row"><button class="btn primary" id="goDue">Review due cards</button><button class="btn" id="goMcq">Quick 10 MCQs</button></div>
         <p class="tiny" style="margin:0">Progress is saved in this browser only. It stays when the page is updated, but not across devices.</p>
       </section>
@@ -255,7 +258,7 @@ __REVIEWER__
 
 <div class="scrim" id="scrim" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modal"></div></div>
 
-<footer class="ft">Built for Zen (UP Law 1-B, 2030) from the syllabus, the 2025 class reviewer, the block reviewers, the digest masterfile and Gatmaytan’s <em>Constitutional Law in the Philippines</em>. Verify anything that looks off against the class reviewers. Current through October 13, 2026.</footer>
+<footer class="ft">Built for Zen (UP Law 1-B, 2030) from the syllabus, the 2025 class reviewer, the block reviewers, the digest masterfile and Gatmaytan’s <em>Constitutional Law in the Philippines</em>. Verify anything that looks off against the class reviewers. Current through October 15, 2026.</footer>
 
 <script>
 const D = __DATA__;

@@ -43,5 +43,32 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     check(tag, 'no page errors', !errs.length, errs);
     await p.close();
   }
+  // phone: tap to flip, swipe right to grade good; reading progress; theme switch
+  { const ctx = await b.newContext({viewport: {width: 400, height: 800}, hasTouch: true}); const p = await ctx.newPage(); const tag = 'touch';
+    const errs = []; p.on('pageerror', e => errs.push(e.message));
+    await p.goto('file://' + file + '#cases'); await p.waitForTimeout(300);
+    await p.click('[data-cm="drill"]'); await p.click('#dDir [data-d="cr"]'); await p.click('#dStart');
+    const swipe = (dx, dy) => p.evaluate(([dx, dy]) => { const f = document.querySelector('#dCard .card-face .casename'), r = f.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+      const ev = (t, X, Y) => f.dispatchEvent(new PointerEvent(t, {bubbles: true, pointerId: 7, pointerType: 'touch', clientX: X, clientY: Y}));
+      ev('pointerdown', x, y); ev('pointermove', x + dx / 2, y + dy / 2); ev('pointermove', x + dx, y + dy); ev('pointerup', x + dx, y + dy); }, [dx, dy]);
+    const lbl = () => p.textContent('#dCard .lbl');
+    await swipe(0, 0); await p.waitForTimeout(100);
+    const flipped = await p.isVisible('#dCard .grade');
+    const sticky = await p.$eval('#dCard .grade', e => getComputedStyle(e).position);
+    await swipe(120, 0); await p.waitForTimeout(150);
+    const l2 = await lbl(), st = await p.$eval('#dCard .streak b', e => +e.textContent);
+    check(tag, 'tap flips, swipe right grades good, grade bar is sticky', flipped && /Card 2 of/.test(l2) && st >= 1 && sticky === 'sticky', {flipped, l2, st, sticky});
+    await p.click('#fbExit'); await p.click('#dCard [data-quit]'); await p.click('#dCard [data-a="back"]');
+    // reading progress
+    await p.click('[data-tab="rules"]'); await p.click('#rcontent section.rv:not([hidden]) .rdone >> nth=0');
+    const rd = await p.evaluate(() => ({h: document.querySelector('#rcontent section.rv:not([hidden]) h3.isread') !== null, side: document.querySelector('#rsecs [data-rp]').textContent}));
+    await p.click('[data-tab="today"]'); const prog = await p.textContent('#rvProg');
+    check(tag, 'reading progress', rd.h && /^1\//.test(rd.side) && /1 of \d+ parts/.test(prog), {rd, prog: prog.slice(0, 60)});
+    // theme
+    await p.click('#themeBtn'); const t1 = await p.evaluate(() => document.documentElement.dataset.theme); await p.click('#themeBtn'); const t2 = await p.evaluate(() => document.documentElement.dataset.theme);
+    await p.click('#themeBtn'); const t3 = await p.evaluate(() => document.documentElement.dataset.theme || 'auto');
+    check(tag, 'theme cycles', t1 === 'light' && t2 === 'dark' && t3 === 'auto', [t1, t2, t3]);
+    check(tag, 'no page errors', !errs.length, errs);
+    await ctx.close(); }
   await b.close(); console.log(fail ? `FAIL (${fail})` : 'PASS'); process.exit(fail ? 1 : 0);
 })();

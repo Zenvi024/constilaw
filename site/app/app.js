@@ -46,11 +46,20 @@ function manilaToday(){ // yyyy-mm-dd in Asia/Manila
 function daysTo(iso){ const a = new Date(manilaToday() + "T00:00:00Z"), b = new Date(iso + "T00:00:00Z"); return Math.round((b - a) / 864e5); }
 function renderClock(){
   const n = daysTo(D.examDate);
-  if (n > 1){ $("cdN").textContent = n; $("cdL").textContent = "days to the midterm (Fri, Oct 16, 10:00 AM)"; }
-  else if (n === 1){ $("cdN").textContent = "1"; $("cdL").textContent = "day to go. Light review, early night."; }
-  else if (n === 0){ $("cdN").textContent = "Today"; $("cdL").textContent = "Checklist and anchor list, then go."; }
-  else { $("cdN").textContent = "Done"; $("cdL").textContent = "The midterm was on Oct 16."; }
+  const when = "Fri, Oct 16 · 10:00 AM";
+  const [a, b, c] = n > 1 ? [`${n} days`, when, "to the midterm"] : n === 1 ? ["1 day", when, "Light review, early night."] : n === 0 ? ["Today", "10:00 AM", "Checklist and anchor list, then go."] : ["Done", "Oct 16", "The midterm is over."];
+  $("cdN").textContent = a; $("cdL").textContent = b; $("cdA").textContent = c;
+  const fb = $("fbClock"); if (fb) fb.textContent = `${a} · ${b}`;
 }
+
+/* ================= theme: auto (device), light or dark ================= */
+let THEME = store.get("theme", "auto");
+function applyTheme(){
+  if (THEME === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.dataset.theme = THEME;
+  const b = $("themeBtn"); b.innerHTML = `Theme: <b>${{auto: "auto", light: "light", dark: "dark"}[THEME]}</b>`; b.title = `Theme: ${THEME === "auto" ? "follows your device" : THEME}. Click to change.`;
+}
+$("themeBtn").onclick = () => { THEME = {auto: "light", light: "dark", dark: "auto"}[THEME]; store.set("theme", THEME); applyTheme(); };
+applyTheme();
 
 /* ================= case modal ================= */
 function caseHTML(c){
@@ -139,7 +148,7 @@ function renderToday(){
     [qa.length ? Math.round(100 * qr / qa.length) + "%" : "–", `MCQ accuracy (${qa.length} answered)`],
     [al.length ? avg.toFixed(1) : "–", `average essay score /10 (${al.length} written)`]
   ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
-  renderSessPlan(); renderFix();
+  renderSessPlan(); renderFix(); if (typeof renderRvProg === "function") renderRvProg();
 }
   // (session plan and fix list are refreshed by renderToday)
 $("week").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (b){ planDay = b.dataset.day; renderToday(); const t = document.querySelector(".dayplan").getBoundingClientRect().top; if (t < 0) window.scrollTo({top: window.scrollY + t - 12, behavior: "smooth"}); } });
@@ -174,7 +183,7 @@ function rvTitle(id){ const el = document.getElementById(id); if (!el) return id
 const secShown = i => !HIDE || !OUT_SECS.includes(SECS[i].id);
 const visIdx = () => SECS.map((s, i) => i).filter(secShown);
 function buildSide(){
-  $("rsecs").innerHTML = SECS.map((s, i) => !secShown(i) ? "" : `<li data-i="${i}"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)}</small></button></li>`).join("");
+  $("rsecs").innerHTML = SECS.map((s, i) => !secShown(i) ? "" : `<li data-i="${i}"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)} · <span data-rp="${s.id}"></span></small></button></li>`).join("");
   $("rsel").innerHTML = SECS.map((s, i) => !secShown(i) ? "" : `<option value="${i}">${esc(s.dataset.title)}</option>`).join("");
 }
 function openSec(i, scroll){
@@ -192,7 +201,7 @@ function openSec(i, scroll){
   if (nextI !== undefined){ $("rnext").textContent = SECS[nextI].dataset.title + " →"; $("rnext").dataset.to = nextI; }
   store.set("sec", i);
   if (scroll !== false) window.scrollTo({top: 0});
-  buildMtoc(); updateBlurCt(); requestAnimationFrame(spy);
+  buildMtoc(); updateBlurCt(); requestAnimationFrame(spy); if (typeof updRead === "function") updRead();
 }
 function openSecById(id){ const i = SECS.findIndex(s => s.id === id); if (i >= 0) openSec(i); }
 function goToId(id){
@@ -447,6 +456,29 @@ document.addEventListener("click", e => {
 }, true);
 // links from one diagram (or the hook wall and the issue radar) to another
 $("rcontent").addEventListener("click", e => { const a = e.target.closest("a.xref"); if (a){ e.preventDefault(); goToId(a.dataset.h); } });
+// reading progress: a "mark read" switch at the end of every part of every rule map
+let READ = store.get("read", {});
+SECS.forEach(sec => {
+  const hs = [...sec.querySelectorAll(":scope > h3[id]")];
+  hs.forEach((h, k) => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "rdone"; b.dataset.rd = h.id;
+    const nx = hs[k + 1]; if (nx) nx.before(b); else sec.append(b);
+  });
+});
+const rdParts = sec => [...sec.querySelectorAll(":scope > h3[id]")].map(h => h.id);
+function updRead(){
+  document.querySelectorAll("#rcontent .rdone").forEach(b => { const on = !!READ[b.dataset.rd]; b.setAttribute("aria-pressed", on); b.textContent = on ? "✓ Read · tap to undo" : "Mark this part read"; });
+  document.querySelectorAll("#rcontent h3[id]").forEach(h => h.classList.toggle("isread", !!READ[h.id]));
+  document.querySelectorAll("[data-rp]").forEach(x => { const ps = rdParts(document.getElementById(x.dataset.rp)); x.textContent = `${ps.filter(id => READ[id]).length}/${ps.length} read`; });
+  document.querySelectorAll("#mtoc a").forEach(a => a.classList.toggle("isread", !!READ[a.dataset.h]));
+}
+$("rcontent").addEventListener("click", e => { const b = e.target.closest(".rdone"); if (!b) return; READ[b.dataset.rd] = !READ[b.dataset.rd]; if (!READ[b.dataset.rd]) delete READ[b.dataset.rd]; store.set("read", READ); updRead(); });
+function renderRvProg(){
+  const rows = SECS.filter((s, i) => secShown(i) && s.id !== "news").map(s => { const ps = rdParts(s), n = ps.filter(id => READ[id]).length; return {s, n, t: ps.length}; });
+  const N = rows.reduce((a, r) => a + r.n, 0), T = rows.reduce((a, r) => a + r.t, 0);
+  $("rvProg").innerHTML = `<div class="spread"><span class="lbl">Rule maps read</span><span class="tiny">${N} of ${T} parts · ${T ? Math.round(100 * N / T) : 0}%</span></div><div class="rvrows">${rows.map(r => `<button class="rvrow" data-gosec2="${r.s.id}"><span class="nm">${esc(r.s.dataset.title)}</span><span class="bar"><i style="width:${r.t ? 100 * r.n / r.t : 0}%"></i></span><span class="ct">${r.n}/${r.t}</span></button>`).join("")}</div>`;
+}
+$("rvProg").addEventListener("click", e => { const b = e.target.closest("[data-gosec2]"); if (b){ setTab("rules"); openSecById(b.dataset.gosec2); } });
 function applyScopeMarks(){ document.querySelectorAll("#rcontent [data-scope]").forEach(x => x.hidden = HIDE && OUT_SECS.includes(x.dataset.scope)); }
 
 /* ================= CASES: browse ================= */
@@ -538,7 +570,18 @@ function runCards(box, cards, opts){
   box._r = {cards: cards.filter(cardOK), i: 0, done: 0, right: 0, res: [], snap: [], dir: "fwd", opts: opts || {}};
   box.hidden = false; drawCard(box);
 }
-function endRun(box){ const r = box._r; dueBadge(); (r.opts.onEnd || drillEnd)(box, r); }
+function endRun(box){ const r = box._r; setFocus(null); dueBadge(); (r.opts.onEnd || drillEnd)(box, r); }
+// focus mode: while cards are on screen, the header and everything else step aside
+let FOCUS_ON = store.get("focus", true), FOCUS_BOX = null;
+function setFocus(box){
+  document.querySelectorAll(".run-active").forEach(x => x.classList.remove("run-active"));
+  FOCUS_BOX = box; const on = !!box && FOCUS_ON;
+  if (box) box.classList.add("run-active");
+  document.body.classList.toggle("focus", on); $("focusBar").hidden = !on;
+  if (on){ const r = box._r, c = r.cards[r.i]; $("fbWhat").textContent = r.opts.label === "Card" || !r.opts.label ? "Case drill" : r.opts.label; }
+}
+$("fbExit").onclick = () => { FOCUS_ON = false; store.set("focus", false); setFocus(FOCUS_BOX); if (FOCUS_BOX) drawCard(FOCUS_BOX); };
+document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("focus") && $("scrim").hidden){ $("fbExit").click(); } });
 // streak: correct answers in a row, kept across rounds; the best is remembered
 let STREAK = store.get("streak", {cur: 0, best: 0});
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -583,7 +626,7 @@ function drawCard(box){
   if (r.i >= r.cards.length) return endRun(box);
   const {p, id} = r.cards[r.i];
   if (!r.snap[r.i]){ const k = p + ":" + id; r.snap[r.i] = {k, s: SRS[k] ? {...SRS[k]} : null, f: FIX[k] ? {...FIX[k]} : null}; }
-  const head = `<div class="spread runhead"><span class="lbl">${esc(r.opts.label || "Card")} ${r.i + 1} of ${r.cards.length} · ${KIND_LBL[p]}</span>${streakHTML()}<span class="row" style="gap:6px">${r.i > 0 ? `<button class="btn small ghost" data-prev title="Back to the previous card (←)">← Previous</button>` : ""}<button class="btn small ghost" data-quit>${esc(r.opts.quit || "End round")}</button></span></div><div class="dprog"><i style="width:${100 * r.i / r.cards.length}%"></i></div>`;
+  const head = `<div class="spread runhead"><span class="lbl">${esc(r.opts.label || "Card")} ${r.i + 1} of ${r.cards.length} · ${KIND_LBL[p]}</span>${streakHTML()}<span class="row" style="gap:6px">${r.i > 0 ? `<button class="btn small ghost" data-prev title="Back to the previous card (←)">← Previous</button>` : ""}${FOCUS_ON ? "" : `<button class="btn small ghost" data-focus title="Hide everything but the card">Focus</button>`}<button class="btn small ghost" data-quit>${esc(r.opts.quit || "End round")}</button></span></div><div class="dprog"><i style="width:${100 * r.i / r.cards.length}%"></i></div>`;
   if (p === "m") mcqCard(box, head, D.mcq.find(x => x.id === id));
   else if (p === "l") listCard(box, head, LIST[id]);
   else if (p === "i") issueCard(box, head, id);
@@ -591,8 +634,36 @@ function drawCard(box){
   else pickCard(box, head, p, CASE[id]);
   box.querySelector("[data-quit]").onclick = () => endRun(box);
   const pv = box.querySelector("[data-prev]"); if (pv) pv.onclick = () => prevCard(box);
+  const fo = box.querySelector("[data-focus]"); if (fo) fo.onclick = () => { FOCUS_ON = true; store.set("focus", true); drawCard(box); };
+  setFocus(box); if (FOCUS_ON) window.scrollTo({top: 0});
   const face = box.querySelector(".card-face"); if (face && !REDUCED) face.classList.add(r.dir === "back" ? "in-back" : "in-fwd");
 }
+// touch: tap the card to flip; after the flip swipe right = good, left = again, up = easy
+(function swipe(){
+  let st = null;
+  document.addEventListener("pointerdown", e => {
+    if (e.pointerType === "mouse") return;
+    const face = e.target.closest(".run-active .card-face, #dCard .card-face, #sessRun .card-face, #lRun .card-face"); if (!face || e.target.closest("button,a,input,label,.choice,.litem")) return;
+    st = {face, x: e.clientX, y: e.clientY, id: e.pointerId, moved: false};
+  }, {passive: true});
+  document.addEventListener("pointermove", e => {
+    if (!st || e.pointerId !== st.id) return;
+    const dx = e.clientX - st.x, dy = e.clientY - st.y;
+    if (Math.abs(dx) > 8 || Math.abs(dy) > 8) st.moved = true;
+    if (st.face.querySelector(".grade") && Math.abs(dx) > Math.abs(dy)){ st.face.style.transform = `translateX(${dx * .5}px) rotate(${dx / 60}deg)`; st.face.dataset.sw = dx > 40 ? "good" : dx < -40 ? "again" : ""; }
+  }, {passive: true});
+  const end = e => {
+    if (!st || e.pointerId !== st.id) return;
+    const {face, x, y, moved} = st, dx = e.clientX - x, dy = e.clientY - y; st = null;
+    face.style.transform = ""; delete face.dataset.sw;
+    const fl = face.querySelector("[data-flip]:not([hidden])");
+    if (!moved && fl){ fl.click(); return; }
+    const g = Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 2 : 0) : (dy < -70 && Math.abs(dy) > Math.abs(dx) ? 3 : null);
+    if (g === null) return;
+    const b = face.querySelector(`.grade [data-g="${g}"]`); if (b) b.click();
+  };
+  document.addEventListener("pointerup", end); document.addEventListener("pointercancel", e => { if (st && e.pointerId === st.id){ st.face.style.transform = ""; st = null; } });
+})();
 // keyboard: space or enter flips, 1-4 grade (again, hard, good, easy), left arrow goes back
 document.addEventListener("keydown", e => {
   if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) || !$("scrim").hidden || e.metaKey || e.ctrlKey || e.altKey) return;
@@ -608,28 +679,28 @@ function mcqCard(box, head, q){
 }
 function crCard(box, head, c){
   const k = "cr:" + c.id;
-  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt casename">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" data-flip>Show the rule</button><div class="reveal" hidden></div></div>`;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt casename">${esc(c.n)}</div><p class="cue">The rule? The fact that decided it?</p><button class="btn flipbtn" data-flip>Show the rule <kbd>Space</kbd></button><div class="reveal" hidden></div></div>`;
   const rev = box.querySelector(".reveal");
   box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
     rev.hidden = false; face.dataset.hc = c.hc || "";
-    rev.innerHTML = `${hookChip(c, true)}<div class="prompt facts" style="font-size:1.05rem">${esc(c.r)}</div>${c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(c.test)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+    rev.innerHTML = `${hookChip(c, true)}<div class="prompt facts" style="font-size:1.05rem">${esc(c.r)}</div>${c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(c.test)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<p class="swipehint">Swipe right: good · left: again · up: easy</p><button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
     rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
   }); };
 }
 // facts → case and rule → case: name the case yourself, then flip (no multiple choice)
 function pickCard(box, head, p, c){
   const k = p + ":" + c.id, front = p === "fc" ? maskName(c.f, c) : maskName(c.r, c);
-  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt facts">${esc(front)}</div>${p === "rc" && c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(maskName(c.test, c))}</p>` : ""}<p class="tiny" style="margin:0">${p === "fc" ? "Which case is this? Say the name, then the rule it stands for." : "Which case laid down this rule? Say the name and the fact that decided it."}</p><button class="btn primary" data-flip>Show the case</button><div class="reveal" hidden></div></div>`;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt facts">${esc(front)}</div>${p === "rc" && c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(maskName(c.test, c))}</p>` : ""}<p class="cue">${p === "fc" ? "Which case? Name it, then its rule." : "Which case? Name it, then the deciding fact."}</p><button class="btn flipbtn" data-flip>Show the case <kbd>Space</kbd></button><div class="reveal" hidden></div></div>`;
   const rev = box.querySelector(".reveal");
   box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
     rev.hidden = false; face.dataset.hc = c.hc || "";
-    rev.innerHTML = `${hookChip(c, true)}<div class="prompt casename">${esc(c.n)}<span class="cy">${esc(c.y)}</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+    rev.innerHTML = `${hookChip(c, true)}<div class="prompt casename">${esc(c.n)}<span class="cy">${esc(c.y)}</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<p class="swipehint">Swipe right: good · left: again · up: easy</p><button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
     rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
   }); };
 }
 function issueCard(box, head, id){
   const [eid, iid] = id.split(":"), e = ESS[eid], is = ISS[iid], k = "i:" + id;
-  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">Issue spotter</span><span class="tag${e.news ? " news" : ""}">${esc(e.exam)}${e.n ? " · Q" + e.n : ""}</span></div><div class="story">${esc(e.prompt)}</div><div class="prompt" style="font-size:1.05rem">You missed an issue in this problem last time. Which issue is it, and what is the rule?</div><button class="btn primary" data-flip>Show the issue</button><div class="reveal" hidden></div></div>`;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">Issue spotter</span><span class="tag${e.news ? " news" : ""}">${esc(e.exam)}${e.n ? " · Q" + e.n : ""}</span></div><div class="story">${esc(e.prompt)}</div><div class="prompt" style="font-size:1.05rem">You missed an issue in this problem last time. Which issue is it, and what is the rule?</div><button class="btn flipbtn" data-flip>Show the issue <kbd>Space</kbd></button><div class="reveal" hidden></div></div>`;
   const rev = box.querySelector(".reveal");
   box.querySelector("[data-flip]").onclick = ev => {
     ev.target.hidden = true; rev.hidden = false;
@@ -1082,6 +1153,6 @@ renderClock(); setInterval(renderClock, 60000);
 buildSide(); openSec(Math.min(store.get("sec", 0), SECS.length - 1), false);
 $("scopeBtn").setAttribute("aria-pressed", HIDE); $("scopeState").textContent = HIDE ? "hidden" : "shown";
 if (!secShown(curSec)) openSec(visIdx()[0], false);
-fillLTopic(); renderLists(); applyBlur(); applyScopeMarks();
+fillLTopic(); renderLists(); applyBlur(); applyScopeMarks(); updRead();
 applySpotScope(); renderCases(); renderDSetup(); setCaseMode("browse"); renderQSetup(); renderSpot(); renderWrite(); dueBadge();
 (() => { const h = (location.hash || "").slice(1); setTab(TABS.includes(h) ? h : store.get("tab", "today"), false); })();

@@ -43,6 +43,10 @@ require('fs').mkdirSync(out, {recursive: true});
     await p.screenshot({path: `${out}/${tag}-drill.png`}); await check('drill');
     await p.click('#dCard [data-quit]'); await p.click('#dCard [data-a="back"]'); await p.click('[data-d="rc"]'); await p.click('#dStart'); await p.click('#dCard [data-flip]'); await p.click('#dCard .grade [data-g="2"]');
     await p.click('#dCard [data-quit]'); await p.click('#dCard [data-a="back"]'); await p.click('[data-d="mix"]'); await p.click('#dStart'); await p.click('#dCard [data-flip]'); await p.click('#dCard .grade [data-g="2"]');
+    const focusOn = await p.evaluate(() => document.body.classList.contains('focus') && getComputedStyle(document.querySelector('.hdr')).display === 'none' && !document.getElementById('focusBar').hidden);
+    await p.click('#fbExit'); const focusOff = await p.evaluate(() => !document.body.classList.contains('focus') && getComputedStyle(document.querySelector('.hdr')).display !== 'none');
+    await p.click('#dCard [data-focus]'); await p.click('#dCard [data-quit]'); await p.click('#dCard [data-a="back"]');
+    if (!focusOn || !focusOff){ fail++; console.log('  FOCUS', tag, focusOn, focusOff); }
     // past exams: mcq
     await p.click('[data-tab="exams"]'); await p.click('#qStart'); await p.click('#qBox .choice'); const expl = await p.isVisible('#qBox .expl');
     await p.screenshot({path: `${out}/${tag}-mcq.png`}); await check('mcq');
