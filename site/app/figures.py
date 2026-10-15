@@ -86,7 +86,7 @@ def gates(rows, end, facts=()):
         else:
             assert len(toks) == len(rows), f'path for {l!r} stops before the last gate'
     if facts:
-        out += '<div class="facts">' + ''.join(f'<div class="fact" data-path="{p}"><span class="fn">{l}</span><span class="ft">{t}</span><span class="why">{w}</span></div>' for l, t, p, w in facts) + '</div>'
+        out += '<div class="vfacts">' + ''.join(f'<div class="vfact" data-path="{p}"><span class="fn">{l}</span><span class="vft">{t}</span><span class="vwhy">{w}</span></div>' for l, t, p, w in facts) + '</div>'
     return out
 
 def write(*lines):
@@ -131,11 +131,11 @@ fig('00', 'before', '<h3 id="method-rules">', 'legend', 'How to read every diagr
               N('Hook · On the exam, write', 'the mnemonic to carry into the room, and the CLEAR lines it turns into', 'plain'), m=150)),
     kind='key', cap='Four colors, everywhere: once you know them, a red box at the end of a path means you write “void” or “dismissed” in your C line.', notest=True, wall=False)
 
-_clock = '<div class="clock" role="img" aria-label="The 90 minutes: two minutes of setup, then four 22-minute blocks">' + \
+_clock = '<div class="xclock" role="img" aria-label="The 90 minutes: two minutes of setup, then four 22-minute blocks">' + \
     '<div style="flex:2"><span class="hd">ID</span><span class="bands"><i class="b-set" style="flex:1"></i></span><span class="tm">10:00</span></div>' + \
     ''.join(f'<div style="flex:22"><span class="hd">Q{i + 1}</span><span class="bands"><i class="b-read" style="flex:4"></i><i class="b-an" style="flex:4"></i><i class="b-wr" style="flex:11"></i><i class="b-ck" style="flex:3"></i></span><span class="tm">{a}–{b}</span></div>'
             for i, (a, b) in enumerate([('10:02', '10:24'), ('10:24', '10:46'), ('10:46', '11:08'), ('11:08', '11:30')])) + '</div>' + \
-    '<div class="clockkey"><span><i class="b-set"></i>student no. + four boxes</span><span><i class="b-read"></i>read twice 4</span><span><i class="b-an"></i>analyze 4</span><span><i class="b-wr"></i>write 11</span><span><i class="b-ck"></i>check 3</span></div>'
+    '<div class="xclockkey"><span><i class="b-set"></i>student no. + four boxes</span><span><i class="b-read"></i>read twice 4</span><span><i class="b-an"></i>analyze 4</span><span><i class="b-wr"></i>write 11</span><span><i class="b-ck"></i>check 3</span></div>'
 _wbar = '<div class="wbar"><div style="flex:9;background:var(--accent);color:var(--accent-ink)">C<small>9</small></div><div style="flex:32;background:var(--accent-soft)">L<small>32 words</small></div><div style="flex:61;background:var(--sun-soft)">A · Analysis<small>61 words: the facts, applied</small></div><div style="flex:7;background:var(--accent);color:var(--accent-ink)">R<small>7</small></div></div>'
 _sheet = '<div class="qsheet" role="img" aria-label="The back of the questionnaire divided into four answer boxes, student number at the top"><div class="id">student no. only</div>' + ''.join(f'<div>Q{i}<i class="c"></i><i></i><i></i><i></i><i style="width:60%"></i></div>' for i in range(1, 5)) + '</div>'
 fig('00', 'before', '<aside class="note trap"><strong>Length trap:</strong>', 'clock', 'Your 90 minutes on one strip; one answer in one box',
@@ -435,7 +435,7 @@ fig('05', 'after', '<h3 id="suff-residence">Residence</h3>\n', 'domicile', 'Did 
 # 06 · government, immunity, inherent powers
 # =====================================================================
 fig('06', 'after', '<h3 id="gov-defacto">De jure, de facto and revolutionary governments</h3>\n', 'govkinds', 'Kinds of government',
-    '<div class="tree"><div class="root">Government</div><div class="stem"></div><div class="kids">'
+    '<div class="tree"><div class="root">Government</div><div class="tstem"></div><div class="kids">'
     + N('De jure: of right', 'placed in power under the constitution and laws', 'ok')
     + '<div>' + N('De facto: in fact', 'must be obeyed in civil matters while it lasts; its non-political acts survive restoration (postliminy)', 'acc')
     + '<div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">' + N('1 · Usurper', 'usurps the legitimate government by force or the majority’s will', 'plain') + N('2 · Invader', 'established by an invading force: paramount force (Co Kim Cham); may suspend laws but must respect those on public order and commerce', 'plain') + N('3 · Secessionist', 'set up by insurgents who secede', 'plain') + '</div></div>'

@@ -365,10 +365,10 @@ document.querySelectorAll("#rcontent .plcalc").forEach(w => {
 // walk-throughs: run one fact pattern through the gates, one question at a time
 document.querySelectorAll("#rcontent figure.viz .gates").forEach(G => {
   const fig = G.closest("figure.viz"), kids = [...G.children], gs = kids.filter(x => x.classList.contains("gate")), end = G.querySelector(":scope>.gend");
-  const fx = G.nextElementSibling && G.nextElementSibling.classList.contains("facts") ? [...G.nextElementSibling.querySelectorAll(".fact")] : [];
+  const fx = G.nextElementSibling && G.nextElementSibling.classList.contains("vfacts") ? [...G.nextElementSibling.querySelectorAll(".vfact")] : [];
   if (!fx.length) return;
   const bar = document.createElement("div"); bar.className = "walkbar";
-  bar.innerHTML = `<span class="vlab">Walk it</span>` + fx.map((f, i) => `<button type="button" class="chip" data-f="${i}">${esc(f.querySelector(".fn").textContent)}</button>`).join("") + `<button type="button" class="chip" data-f="own">Your own facts</button>`;
+  bar.innerHTML = `<span class="vlab">Walk it</span>` + fx.map((f, i) => `<button type="button" class="vchip" data-f="${i}">${esc(f.querySelector(".fn").textContent)}</button>`).join("") + `<button type="button" class="vchip" data-f="own">Your own facts</button>`;
   const panel = document.createElement("div"); panel.className = "walkp"; panel.hidden = true;
   const out = document.createElement("div"); out.className = "walkout"; out.hidden = true;
   G.before(bar); bar.after(panel); G.after(out);
@@ -400,7 +400,7 @@ document.querySelectorAll("#rcontent figure.viz .gates").forEach(G => {
   }
   function finish(node){
     out.hidden = false;
-    out.innerHTML = `<span class="vlab">Result</span><div class="vres">${node.innerHTML}</div>` + (fact ? `<p class="why">${fact.querySelector(".why").innerHTML}</p>` : "") + (path ? `<p class="score">You matched ${right} of ${asked} answer${asked === 1 ? "" : "s"}.</p>` : "") + `<div class="row"><button type="button" class="btn small" data-w="again">Walk another</button><button type="button" class="btn small ghost" data-w="map">Show the whole map</button></div>`;
+    out.innerHTML = `<span class="vlab">Result</span><div class="vres">${node.innerHTML}</div>` + (fact ? `<p class="vwhy">${fact.querySelector(".vwhy").innerHTML}</p>` : "") + (path ? `<p class="score">You matched ${right} of ${asked} answer${asked === 1 ? "" : "s"}.</p>` : "") + `<div class="row"><button type="button" class="btn small" data-w="again">Walk another</button><button type="button" class="btn small ghost" data-w="map">Show the whole map</button></div>`;
     out.scrollIntoView({block: "nearest", behavior: "smooth"});
   }
   bar.addEventListener("click", e => {
@@ -409,16 +409,16 @@ document.querySelectorAll("#rcontent figure.viz .gates").forEach(G => {
     clear(); setTest(fig, false); G.classList.add("walking"); c.setAttribute("aria-pressed", "true");
     fact = c.dataset.f === "own" ? null : fx[+c.dataset.f]; path = fact ? fact.dataset.path.split(",") : null; right = asked = 0;
     panel.hidden = false;
-    panel.innerHTML = fact ? `<span class="vlab">The facts</span>${fact.querySelector(".ft").innerHTML}` : `<span class="vlab">Your own facts</span>Keep the problem in front of you and answer each question for those facts.`;
+    panel.innerHTML = fact ? `<span class="vlab">The facts</span>${fact.querySelector(".vft").innerHTML}` : `<span class="vlab">Your own facts</span>Keep the problem in front of you and answer each question for those facts.`;
     kids.forEach(k => k.hidden = true); ask(0);
   });
   out.addEventListener("click", e => { const b = e.target.closest("[data-w]"); if (!b) return; clear(); if (b.dataset.w === "again") bar.scrollIntoView({block: "nearest", behavior: "smooth"}); });
 });
 // test me: cover the details of a figure; tap each one to check your recall
 const COVER = ".vn .s, .vcmp .c, .vtl .t, .rung .lab, .gate>.gx, .gend, .acro .w, .wr .ln>span, [data-cover]";
-const coverEls = fig => [...fig.querySelectorAll(COVER)].filter(el => !el.closest(".calc,.facts,.walkp,.walkout") && !(el.parentElement.closest(COVER) && fig.contains(el.parentElement.closest(COVER))));
+const coverEls = fig => [...fig.querySelectorAll(COVER)].filter(el => !el.closest(".calc,.vfacts,.walkp,.walkout") && !(el.parentElement.closest(COVER) && fig.contains(el.parentElement.closest(COVER))));
 function setTest(fig, on){
-  const b = fig.querySelector(".vtools .test"); if (!b) return;
+  const b = fig.querySelector(".vtools .vtest"); if (!b) return;
   fig.classList.toggle("testing", on); b.setAttribute("aria-pressed", on); b.textContent = on ? "Done" : "Test me";
   fig.querySelectorAll(".rv").forEach(x => x.classList.remove("rv")); updTest(fig);
 }
@@ -429,9 +429,9 @@ function updTest(fig){
 }
 document.querySelectorAll("#rcontent figure.viz").forEach(fig => {
   if (fig.hasAttribute("data-notest") || !coverEls(fig).length) return;
-  const t = document.createElement("span"); t.className = "vtools"; t.innerHTML = `<span class="ct"></span><button type="button" class="chip test" aria-pressed="false" title="Cover the details, then tap each to check yourself">Test me</button>`;
+  const t = document.createElement("span"); t.className = "vtools"; t.innerHTML = `<span class="ct"></span><button type="button" class="vchip vtest" aria-pressed="false" title="Cover the details, then tap each to check yourself">Test me</button>`;
   fig.querySelector(".vt").append(t);
-  t.querySelector(".test").addEventListener("click", () => {
+  t.querySelector(".vtest").addEventListener("click", () => {
     const on = !fig.classList.contains("testing");
     if (on){ const w = fig.querySelector(".walkbar [aria-pressed=true]"); if (w) w.click(); }
     setTest(fig, on);
@@ -471,16 +471,24 @@ function renderCases(){
 /* ================= CASES: drill ================= */
 const DIRS = {
   cr: {p: "cr", help: "You see the case name. Say the rule out loud, then flip and grade yourself honestly."},
-  fc: {p: "fc", help: "You see the facts. Pick the case. Wrong answers come from the same topic, so read closely."},
-  rc: {p: "rc", help: "You see the rule. Pick the case that laid it down."}
+  fc: {p: "fc", help: "You see the facts. Name the case out loud, then flip and grade yourself honestly."},
+  rc: {p: "rc", help: "You see the rule. Name the case that laid it down, then flip and grade yourself honestly."},
+  mix: {p: "mix", help: "Any of the three, shuffled: a case name, a rule or a set of facts. Answer out loud, flip, grade."}
 };
+// formats a case can be drilled in; in Mixed, prefer a format that is due, then one never seen, else any
+const FMTS = c => ["cr", ...(c.f ? ["fc"] : []), ...(c.r ? ["rc"] : [])];
+function fmtFor(c){
+  if (dDir !== "mix") return dDir;
+  const f = FMTS(c), due = f.filter(x => isDue(x + ":" + c.id)), fr = f.filter(x => !SRS[x + ":" + c.id]);
+  return shuffle(due.length ? due : fr.length ? fr : f)[0];
+}
 let dDir = store.get("ddir", "cr"), dTop = new Set(store.get("dtop", D.topics.map(t => t.key))), R = [], ri = 0, rDone = 0, rRight = 0;
-function dPool(){ return CASES().filter(c => !c.ref && dTop.has(c.t) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || (dDir === "fc" ? c.f : c.r))); }
+function dPool(){ return CASES().filter(c => !c.ref && dTop.has(c.t) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || dDir === "mix" || (dDir === "fc" ? c.f : c.r))); }
 function renderDSetup(){
   document.querySelectorAll("#dDir [data-d]").forEach(b => b.setAttribute("aria-pressed", b.dataset.d === dDir));
   $("dDirHelp").textContent = DIRS[dDir].help;
   $("dTopics").innerHTML = TOPS().map(t => `<label class="chip${dTop.has(t.key) ? " on" : ""}" for="dt_${t.key}"><input type="checkbox" id="dt_${t.key}" data-t="${t.key}"${dTop.has(t.key) ? " checked" : ""}>${esc(t.name)}</label>`).join("");
-  const p = dPool(), due = p.filter(c => isDue(dDir + ":" + c.id)).length, fresh = p.filter(c => !SRS[dDir + ":" + c.id]).length;
+  const fm = c => dDir === "mix" ? FMTS(c) : [dDir], p = dPool(), due = p.filter(c => fm(c).some(x => isDue(x + ":" + c.id))).length, fresh = p.filter(c => fm(c).some(x => !SRS[x + ":" + c.id])).length;
   $("dCount").textContent = `${p.length} cases selected · ${due} due · ${fresh} not yet seen`;
   $("dSetup").hidden = false; $("dCard").hidden = true;
   store.set("ddir", dDir); store.set("dtop", [...dTop]);
@@ -498,8 +506,10 @@ function startDrill(dueOnly){
     cards = shuffle(cards).slice(0, 30);
   } else {
     const p = dPool(); if (!p.length){ $("dCount").textContent = "Pick at least one topic."; return; }
-    const due = shuffle(p.filter(c => isDue(dDir + ":" + c.id))), fresh = shuffle(p.filter(c => !SRS[dDir + ":" + c.id])), rest = shuffle(p.filter(c => SRS[dDir + ":" + c.id] && !isDue(dDir + ":" + c.id))).sort((a, b) => SRS[dDir + ":" + a.id].d - SRS[dDir + ":" + b.id].d);
-    cards = [...due, ...fresh, ...rest].slice(0, 20).map(c => ({p: dDir, id: c.id}));
+    // due cards first, then unseen, then the soonest reviews; the round itself is then shuffled so topics and formats interleave
+    const all = shuffle(p).map(c => ({p: fmtFor(c), id: c.id})), k = x => x.p + ":" + x.id;
+    const due = all.filter(x => isDue(k(x))), fresh = all.filter(x => !SRS[k(x)]), rest = all.filter(x => SRS[k(x)] && !isDue(k(x))).sort((a, b) => SRS[k(a)].d - SRS[k(b)].d);
+    cards = shuffle([...due, ...fresh, ...rest].slice(0, 20));
   }
   $("dSetup").hidden = true;
   runCards($("dCard"), cards, {label: "Card", onEnd: drillEnd});
@@ -516,10 +526,6 @@ function maskName(text, c){
   let t = text || "";
   toks.forEach(w => { t = t.replace(new RegExp("\\b" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "gi"), "▁▁▁"); });
   return t;
-}
-function distractors(c, n){
-  const same = shuffle(CASES().filter(x => !x.ref && x.id !== c.id && x.t === c.t)), other = shuffle(CASES().filter(x => !x.ref && x.id !== c.id && x.t !== c.t));
-  return [...same, ...other].slice(0, n);
 }
 /* ================= card runner: case drills, lists, sessions, fix list ================= */
 const KIND_LBL = {cr: "Case → rule", fc: "Facts → case", rc: "Rule → case", m: "Multiple choice", l: "List", i: "Missed issue"};
@@ -561,18 +567,15 @@ function crCard(box, head, c){
     rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
   };
 }
+// facts → case and rule → case: name the case yourself, then flip (no multiple choice)
 function pickCard(box, head, p, c){
-  const opts = shuffle([c, ...distractors(c, 3)]);
-  const prompt = p === "fc" ? maskName(c.f, c) : maskName(c.r, c);
-  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span></div><div class="prompt facts">${esc(prompt)}</div><div class="choices">${opts.map((o, i) => `<button class="choice" data-i="${i}"><span class="L">${LET[i]}.</span><span><i>${esc(o.n)}</i> <span class="tiny">(${esc(o.y)})</span></span></button>`).join("")}</div><div class="dfb"></div></div>`;
-  const ch = box.querySelector(".choices");
-  ch.onclick = e => {
-    const b = e.target.closest("[data-i]"); if (!b || b.disabled) return;
-    const pick = opts[+b.dataset.i], ok = pick.id === c.id;
-    ch.querySelectorAll("[data-i]").forEach((x, i) => { x.disabled = true; if (opts[i].id === c.id) x.classList.add("right"); else if (x === b) x.classList.add("wrong"); });
-    rate(p + ":" + c.id, ok ? 2 : 0); cardDone(box, ok);
-    box.querySelector(".dfb").innerHTML = `<div class="expl"><div class="verdict ${ok ? "ok" : "no"}">${ok ? "Correct." : "Not this one."} ${esc(c.n)} (${esc(c.y)})</div><p>${esc(p === "fc" ? c.r : (c.f || c.h || ""))}</p>${!ok ? `<p class="tiny">You picked <a class="cref" data-c="${pick.id}" href="#">${esc(pick.n)}</a>: ${esc(pick.r)}</p>` : ""}<div class="row"><button class="btn primary" data-next>Next card</button></div></div>`;
-    const nx = box.querySelector("[data-next]"); nx.onclick = () => nextCard(box); nx.focus({preventScroll: true});
+  const k = p + ":" + c.id, front = p === "fc" ? maskName(c.f, c) : maskName(c.r, c);
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt facts">${esc(front)}</div>${p === "rc" && c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(maskName(c.test, c))}</p>` : ""}<p class="tiny" style="margin:0">${p === "fc" ? "Which case is this? Say the name, then the rule it stands for." : "Which case laid down this rule? Say the name and the fact that decided it."}</p><button class="btn primary" data-flip>Show the case</button><div class="reveal" hidden></div></div>`;
+  const rev = box.querySelector(".reveal");
+  box.querySelector("[data-flip]").onclick = e => {
+    e.target.hidden = true; rev.hidden = false;
+    rev.innerHTML = `<div class="prompt" style="font-style:italic">${esc(c.n)} <span class="tiny" style="font-style:normal">(${esc(c.y)})</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+    rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
   };
 }
 function issueCard(box, head, id){
@@ -923,16 +926,16 @@ let GIDX = null, gT = null, gPrevTab = "today", gRx = {};
 function gIndex(){
   const items = [];
   const heads = new Map();
-  SECS.forEach(sec => { let h = sec.dataset.title; sec.querySelectorAll("h3, :is(p,li,.codal,td,h4,.test,aside,.vn,figcaption,.vt,.hk,.ln,.ft,.rrow)").forEach(el => {
+  SECS.forEach(sec => { let h = sec.dataset.title; sec.querySelectorAll("h3, :is(p,li,.codal,td,h4,.test,aside,.vn,figcaption,.vt,.hk,.ln,.vft,.rrow)").forEach(el => {
     if (el.tagName === "H3"){ h = el.textContent; }
     heads.set(el, `${sec.dataset.title} › ${h}`);
   }); });
-  [...document.querySelectorAll("#rcontent :is(p,li,.codal,td,h3,h4,.test,aside,.vn,figcaption,.vt,.hk,.ln,.ft,.rrow)")].filter(el => !el.querySelector("p,li,td,.vn,.test,aside,.rrow") && !el.closest(".calc,.hwall,.walkbar,.walkp,.walkout,.vtools,.qread") && el.textContent.trim().length > 2).forEach(el => {
+  [...document.querySelectorAll("#rcontent :is(p,li,.codal,td,h3,h4,.test,aside,.vn,figcaption,.vt,.hk,.ln,.vft,.rrow)")].filter(el => !el.querySelector("p,li,td,.vn,.test,aside,.rrow") && !el.closest(".calc,.hwall,.walkbar,.walkp,.walkout,.vtools,.qread") && el.textContent.trim().length > 2).forEach(el => {
     const sec = el.closest("section.rv"), isHead = /^H[34]$/.test(el.tagName) || el.classList.contains("vt");
     const sm = el.querySelector("small"), vtt = el.querySelector(".vtt"), title = isHead ? (vtt ? vtt.textContent : el.textContent.replace(sm ? sm.textContent : "", "")).trim() : "";
     let text = el.textContent;
     if (isHead){ let nx = el.classList.contains("vt") ? el.parentElement.querySelector("figcaption") : el.nextElementSibling; while (nx && nx.tagName === "FIGURE") nx = nx.nextElementSibling; text = nx ? nx.textContent : ""; }
-    items.push({g: "rule", el: el.classList.contains("vt") || el.closest(".facts") ? el.closest("figure") : el, sec, title, text: text.replace(/\s+/g, " ").trim(), ctx: heads.get(el) || sec.dataset.title});
+    items.push({g: "rule", el: el.classList.contains("vt") || el.closest(".vfacts") ? el.closest("figure") : el, sec, title, text: text.replace(/\s+/g, " ").trim(), ctx: heads.get(el) || sec.dataset.title});
   });
   D.cases.forEach(c => items.push({g: "case", id: c.id, t: c.t, title: c.n + " (" + c.y + ")", text: [c.s, c.r, c.test, c.f, c.h, c.x, c.g, c.sub].filter(Boolean).join(" · "), ctx: tname(c.t) + (c.a ? " · anchor" : c.ref ? " · mentioned only" : "")}));
   D.lists.forEach(l => items.push({g: "list", id: l.id, t: l.t, title: l.title, text: [l.ask, ...l.items, l.src, l.hook].filter(Boolean).join(" · "), ctx: tname(l.t) + " · " + l.items.length + " items"}));

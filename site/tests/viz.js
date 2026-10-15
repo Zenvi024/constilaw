@@ -12,21 +12,21 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     const txt = sel => p.$eval(sel, e => e.textContent.trim());
     const go = async id => { await p.evaluate(id => goToId(id), id); await p.waitForTimeout(150); };
     // every diagram carries a title; gate diagrams with fact patterns get a walk bar
-    const counts = await p.evaluate(() => ({figs: document.querySelectorAll('#rcontent figure.viz').length, walk: document.querySelectorAll('#rcontent .walkbar').length, tests: document.querySelectorAll('#rcontent .vtools .test').length, hooks: document.querySelectorAll('#rcontent .hook').length}));
+    const counts = await p.evaluate(() => ({figs: document.querySelectorAll('#rcontent figure.viz').length, walk: document.querySelectorAll('#rcontent .walkbar').length, tests: document.querySelectorAll('#rcontent .vtools .vtest').length, hooks: document.querySelectorAll('#rcontent .hook').length}));
     check(tag, 'counts', counts.figs >= 50 && counts.walk >= 20 && counts.tests >= 40 && counts.hooks >= 45, counts);
     // the issue radar links to the arrest diagram
     await go('fig-radar'); await p.click('#fig-radar .rrow:has-text("protective custody") a.xref'); await p.waitForTimeout(250);
     const arrTop = await p.evaluate(() => Math.round(document.getElementById('fig-arrest').getBoundingClientRect().top));
     check(tag, 'radar link lands on the arrest diagram', arrTop > -5 && arrTop < 200, arrTop);
     // walk a fact pattern, answering wrongly on purpose
-    await p.click('#fig-arrest .walkbar .chip:has-text("Dimaporo")');
+    await p.click('#fig-arrest .walkbar .vchip:has-text("Dimaporo")');
     check(tag, 'walk shows the facts', await p.isVisible('#fig-arrest .walkp'), await txt('#fig-arrest .walkp'));
     const hiddenGate2 = await p.evaluate(() => document.querySelectorAll('#fig-arrest .gate')[1].hidden);
     await p.click('#fig-arrest .gate.cur .yn [data-a="y"]');
     const r1 = {fb: await txt('#fig-arrest .fb'), res: await txt('#fig-arrest .walkout .vres'), score: await txt('#fig-arrest .walkout .score')};
     check(tag, 'wrong answer is corrected and the walk ends at the exit', hiddenGate2 && /on these facts it is no/.test(r1.fb) && /Arrest allowed/.test(r1.res) && /0 of 1/.test(r1.score), r1);
     await p.click('#fig-arrest .walkout [data-w="again"]');
-    await p.click('#fig-arrest .walkbar .chip:has-text("light offense")');
+    await p.click('#fig-arrest .walkbar .vchip:has-text("light offense")');
     await p.click('#fig-arrest .gate.cur .yn [data-a="y"]'); await p.click('#fig-arrest .gate.cur .yn [data-a="y"]');
     const r2 = {res: await txt('#fig-arrest .walkout .vres'), score: await txt('#fig-arrest .walkout .score')};
     check(tag, 'right answers reach the end box', /Privileged from arrest/.test(r2.res) && /2 of 2/.test(r2.score), r2);
@@ -34,23 +34,23 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     const restored = await p.evaluate(() => [...document.querySelectorAll('#fig-arrest .gates > *')].every(x => !x.hidden) && !document.querySelector('#fig-arrest .yn'));
     check(tag, 'show the whole map restores the diagram', restored, restored);
     // an arguable answer is accepted either way
-    await go('fig-lambino'); await p.click('#fig-lambino .walkbar .chip:has-text("Economic")');
+    await go('fig-lambino'); await p.click('#fig-lambino .walkbar .vchip:has-text("Economic")');
     await p.click('#fig-lambino .gate.cur .yn [data-a="n"]');
     const arg = await txt('#fig-lambino .fb'); check(tag, 'arguable answer', /Arguable/.test(arg), arg);
-    await p.click('#fig-lambino .walkbar .chip[aria-pressed="true"]');
+    await p.click('#fig-lambino .walkbar .vchip[aria-pressed="true"]');
     // your own facts follow your answers
-    await go('fig-augment'); await p.click('#fig-augment .walkbar .chip:has-text("Your own facts")');
+    await go('fig-augment'); await p.click('#fig-augment .walkbar .vchip:has-text("Your own facts")');
     await p.click('#fig-augment .gate.cur .yn [data-a="y"]'); await p.click('#fig-augment .gate.cur .yn [data-a="n"]');
     const own = await txt('#fig-augment .walkout .vres'); check(tag, 'own facts', /Void/.test(own) && !(await p.isVisible('#fig-augment .walkout .score')), own);
     await p.click('#fig-augment .walkout [data-w="map"]');
     // test me: covers, counts and reveals without opening a case
-    await go('fig-speech'); await p.click('#fig-speech .vtools .test');
+    await go('fig-speech'); await p.click('#fig-speech .vtools .vtest');
     const ct1 = await txt('#fig-speech .vtools .ct');
     const covered = await p.evaluate(() => { const el = document.querySelector('#fig-speech .gate > .gx'); return getComputedStyle(el.querySelector('b')).color; });
     await p.click('#fig-speech .gate >> nth=0 >> .gx'); const ct2 = await txt('#fig-speech .vtools .ct');
     const modal = await p.isVisible('#scrim');
     check(tag, 'test me covers and reveals', /^0 of \d+$/.test(ct1) && /^1 of \d+$/.test(ct2) && covered === 'rgba(0, 0, 0, 0)' && !modal, {ct1, ct2, covered, modal});
-    await p.click('#fig-speech .vtools .test');
+    await p.click('#fig-speech .vtools .vtest');
     // vote counter
     await go('fig-votes'); await p.fill('#fig-votes [data-v="all"]', '316'); await p.fill('#fig-votes [data-v="present"]', '300');
     const v = await p.$$eval('#fig-votes .rung .cnt', x => x.map(e => e.textContent));
@@ -79,6 +79,9 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     await p.click('#gRes .gres >> nth=0'); await p.waitForTimeout(400);
     const ripeVis = await p.evaluate(() => { const r = document.getElementById('fig-ripe').getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; });
     check(tag, 'search a hook', nres > 0 && ripeVis, {nres, ripeVis});
+    // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
+    const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
+    check(tag, 'no style leaks outside the diagrams', leak === 0, leak);
     const w = await p.evaluate(() => document.documentElement.scrollWidth); check(tag, 'no horizontal overflow', w <= vp.width + 1, w);
     check(tag, 'no page errors', !errs.length, errs);
     console.log(`${tag}: ${JSON.stringify(counts)} wall=${JSON.stringify(wall)}`);
