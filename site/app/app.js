@@ -570,25 +570,11 @@ function prevCard(box){
   undoCard(r, r.i); undoCard(r, r.i - 1); r.i--; r.dir = "back"; drawCard(box); dueBadge();
 }
 function nextCard(box){
-  const r = box._r, f = box.querySelector(".card-face"), ok = r.res[r.i];
-  let ghost = null;
-  if (f && !REDUCED){ // the answered card slides off while the next one comes in
-    ghost = f.cloneNode(true); ghost.className = "card-ghost " + (ok === false ? "out-miss" : "out-ok"); ghost.setAttribute("aria-hidden", "true");
-    ghost.querySelectorAll("button,input,[hidden]").forEach(x => x.remove());
-    ghost.querySelectorAll("*").forEach(x => { x.removeAttribute("id"); x.removeAttribute("class"); x.removeAttribute("data-g"); x.removeAttribute("data-case"); });
-    ghost.style.top = f.offsetTop + "px"; ghost.style.height = f.offsetHeight + "px"; ghost.style.width = f.offsetWidth + "px";
-  }
-  r.i++; r.dir = "fwd"; drawCard(box);
-  if (ghost && box._r === r && r.i < r.cards.length){ box.append(ghost); setTimeout(() => ghost.remove(), 420); }
+  const r = box._r; r.i++; r.dir = "fwd"; drawCard(box);
   const top = box.getBoundingClientRect().top; if (top < 0) window.scrollTo({top: window.scrollY + top - 12});
 }
-// flip a flashcard: the face turns edge-on, the answer is swapped in, and it turns back
-function flipFace(face, swap){
-  face.classList.add("flipped");
-  if (REDUCED){ swap(); return; }
-  face.classList.remove("in-fwd", "in-back"); face.classList.add("flipping");
-  setTimeout(() => { if (face.isConnected) swap(); }, 160); setTimeout(() => face.classList.remove("flipping"), 340);
-}
+// flip a flashcard: the answer fades in under the prompt
+function flipFace(face, swap){ face.classList.add("flipped"); swap(); }
 const HC_LBL = {ok: "upheld or valid", no: "struck down or void", sun: "dismissed on procedure, or a twist", acc: "a principle or a definition"};
 const hookChip = (c, big) => c && c.hk ? `<span class="hookchip hc-${c.hc}${big ? " big" : ""}" title="Hook · ${HC_LBL[c.hc]}">${esc(c.hk)}</span>` : "";
 function gradeRow(k){ return `<div class="grade">${[["again","Again",0],["hard","Hard",1],["good","Good",2],["easy","Easy",3]].map(([cl, l, g]) => `<button class="btn ${cl}" data-g="${g}">${l}<small>${nextLbl(k, g)}</small></button>`).join("")}</div>`; }
@@ -622,7 +608,7 @@ function mcqCard(box, head, q){
 }
 function crCard(box, head, c){
   const k = "cr:" + c.id;
-  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt" style="font-style:italic">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" data-flip>Show the rule</button><div class="reveal" hidden></div></div>`;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt casename">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" data-flip>Show the rule</button><div class="reveal" hidden></div></div>`;
   const rev = box.querySelector(".reveal");
   box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
     rev.hidden = false; face.dataset.hc = c.hc || "";
@@ -637,7 +623,7 @@ function pickCard(box, head, p, c){
   const rev = box.querySelector(".reveal");
   box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
     rev.hidden = false; face.dataset.hc = c.hc || "";
-    rev.innerHTML = `${hookChip(c, true)}<div class="prompt" style="font-style:italic">${esc(c.n)} <span class="tiny" style="font-style:normal">(${esc(c.y)})</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+    rev.innerHTML = `${hookChip(c, true)}<div class="prompt casename">${esc(c.n)}<span class="cy">${esc(c.y)}</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
     rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
   }); };
 }

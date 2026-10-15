@@ -696,20 +696,10 @@ a.xref::after{content:" →"}
 .runhead{gap:8px;flex-wrap:wrap}
 .card-face{border-radius:14px;box-shadow:0 7px 0 -3px var(--card),0 7px 0 -2px var(--line),0 14px 0 -7px var(--card),0 14px 0 -6px var(--line),0 18px 30px -22px rgba(0,0,0,.45);margin-bottom:14px;transform-origin:50% 50%;backface-visibility:hidden;border-top-width:5px;border-top-color:var(--accent);transition:border-top-color .3s}
 .card-face[data-hc="ok"]{border-top-color:var(--good)} .card-face[data-hc="no"]{border-top-color:var(--bad)} .card-face[data-hc="sun"]{border-top-color:var(--sun)} .card-face[data-hc="acc"]{border-top-color:var(--accent)}
-.card-face.flipped>.prompt,.card-face.flipped>.tags+.prompt{font-size:1rem;color:var(--muted)}
+.card-face.flipped>.prompt:not(.casename),.card-face.flipped>.tags+.prompt:not(.casename){font-size:1rem;color:var(--muted)}
 .card-face.flipped>p.tiny:not(.reveal p){display:none}
-.card-face.in-fwd{animation:cardInF .3s .12s cubic-bezier(.2,.8,.2,1) both}
-.card-face.in-back{animation:cardInB .32s cubic-bezier(.2,.8,.2,1)}
-.card-face.flipping{animation:cardFlip .34s ease-in-out}
-@keyframes cardInF{from{opacity:0;transform:translateX(42px) rotate(1.5deg)}to{opacity:1;transform:none}}
-@keyframes cardInB{from{opacity:0;transform:translateX(-42px) rotate(-1.5deg)}to{opacity:1;transform:none}}
-@keyframes cardFlip{0%{transform:perspective(1100px) rotateY(0)}47%{transform:perspective(1100px) rotateY(90deg)}53%{transform:perspective(1100px) rotateY(-90deg)}100%{transform:perspective(1100px) rotateY(0)}}
-.card-ghost{position:absolute;left:0;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:22px;overflow:hidden;pointer-events:none;z-index:2;display:flex;flex-direction:column;gap:14px}
-.card-ghost .reveal[hidden]{display:none}
-.card-ghost.out-ok{animation:ghostOk .34s ease-in forwards;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);border-color:var(--good)}
-.card-ghost.out-miss{animation:ghostMiss .34s ease-in forwards;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);border-color:var(--bad)}
-@keyframes ghostOk{60%{opacity:.35}to{opacity:0;transform:translate(160px,-24px) rotate(8deg)}}
-@keyframes ghostMiss{60%{opacity:.35}to{opacity:0;transform:translate(-160px,18px) rotate(-8deg)}}
+.card-face.in-fwd,.card-face.in-back{animation:cardIn .16s ease-out}
+@keyframes cardIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 .streak{display:inline-flex;align-items:baseline;gap:5px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);font:500 .72rem var(--mono);color:var(--muted);white-space:nowrap}
 .streak .fl{filter:grayscale(1);opacity:.5}
 .streak b{font:800 1.05rem/1 var(--display);color:var(--muted)}
@@ -718,8 +708,8 @@ a.xref::after{content:" →"}
 .streak.on b{color:var(--warn)}
 .streak.pulse{animation:streakPulse .45s ease-out}
 .streak.drop{animation:streakDrop .4s ease-out}
-@keyframes streakPulse{0%{transform:scale(1)}40%{transform:scale(1.22)}100%{transform:scale(1)}}
-@keyframes streakDrop{0%,100%{transform:none}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@keyframes streakPulse{0%{transform:scale(1)}40%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes streakDrop{from{opacity:.5}to{opacity:1}}
 @media (max-width:520px){.streak small{display:none}}
 .mtoast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:60;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--paper);font:700 .95rem var(--body);box-shadow:0 10px 30px -10px rgba(0,0,0,.5);animation:toastIn .3s cubic-bezier(.2,.8,.2,1);transition:opacity .4s,transform .4s}
 .mtoast.bye{opacity:0;transform:translate(-50%,10px)}
@@ -731,12 +721,18 @@ a.xref::after{content:" →"}
 .hc-no{color:var(--bad);border-color:var(--bad);background:var(--bad-soft)}
 .hc-sun{color:var(--warn);border-color:var(--sun);background:var(--sun-soft)}
 .hc-acc{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
-.reveal .hookchip.big{animation:hookPop .35s cubic-bezier(.2,.9,.3,1.4)}
-@keyframes hookPop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+.card-face.flipped .reveal{animation:revealIn .16s ease-out}
+@keyframes revealIn{from{opacity:0}to{opacity:1}}
 .hclegend{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .kbdhint{font:500 .68rem var(--mono);color:var(--muted)}
 .kbdhint kbd{border:1px solid var(--line);border-radius:4px;padding:0 4px;font:inherit}
-@media (prefers-reduced-motion: reduce){.card-face,.card-ghost,.streak,.mtoast,.reveal .hookchip.big{animation:none!important}}
+@media (prefers-reduced-motion: reduce){.card-face,.card-face .reveal,.streak,.mtoast{animation:none!important}}
+.card-face .prompt.casename{font:700 italic 1.9rem/1.25 var(--display);text-align:center;color:var(--ink);padding:18px 0 6px;text-wrap:balance}
+.card-face .prompt.casename .cy{display:block;font:500 .78rem var(--mono);font-style:normal;color:var(--muted);margin-top:6px}
+.card-face.flipped>.prompt.casename{font-size:1.5rem;padding:4px 0 0;color:var(--ink)}
+.card-face .reveal .prompt.casename{font-size:1.7rem;padding:6px 0 2px}
+.reveal .hookchip.big{align-self:center}
+@media (max-width:520px){.card-face .prompt.casename{font-size:1.5rem}.card-face .reveal .prompt.casename{font-size:1.4rem}}
 
 </style>
 
@@ -2481,25 +2477,11 @@ function prevCard(box){
   undoCard(r, r.i); undoCard(r, r.i - 1); r.i--; r.dir = "back"; drawCard(box); dueBadge();
 }
 function nextCard(box){
-  const r = box._r, f = box.querySelector(".card-face"), ok = r.res[r.i];
-  let ghost = null;
-  if (f && !REDUCED){ // the answered card slides off while the next one comes in
-    ghost = f.cloneNode(true); ghost.className = "card-ghost " + (ok === false ? "out-miss" : "out-ok"); ghost.setAttribute("aria-hidden", "true");
-    ghost.querySelectorAll("button,input,[hidden]").forEach(x => x.remove());
-    ghost.querySelectorAll("*").forEach(x => { x.removeAttribute("id"); x.removeAttribute("class"); x.removeAttribute("data-g"); x.removeAttribute("data-case"); });
-    ghost.style.top = f.offsetTop + "px"; ghost.style.height = f.offsetHeight + "px"; ghost.style.width = f.offsetWidth + "px";
-  }
-  r.i++; r.dir = "fwd"; drawCard(box);
-  if (ghost && box._r === r && r.i < r.cards.length){ box.append(ghost); setTimeout(() => ghost.remove(), 420); }
+  const r = box._r; r.i++; r.dir = "fwd"; drawCard(box);
   const top = box.getBoundingClientRect().top; if (top < 0) window.scrollTo({top: window.scrollY + top - 12});
 }
-// flip a flashcard: the face turns edge-on, the answer is swapped in, and it turns back
-function flipFace(face, swap){
-  face.classList.add("flipped");
-  if (REDUCED){ swap(); return; }
-  face.classList.remove("in-fwd", "in-back"); face.classList.add("flipping");
-  setTimeout(() => { if (face.isConnected) swap(); }, 160); setTimeout(() => face.classList.remove("flipping"), 340);
-}
+// flip a flashcard: the answer fades in under the prompt
+function flipFace(face, swap){ face.classList.add("flipped"); swap(); }
 const HC_LBL = {ok: "upheld or valid", no: "struck down or void", sun: "dismissed on procedure, or a twist", acc: "a principle or a definition"};
 const hookChip = (c, big) => c && c.hk ? `<span class="hookchip hc-${c.hc}${big ? " big" : ""}" title="Hook · ${HC_LBL[c.hc]}">${esc(c.hk)}</span>` : "";
 function gradeRow(k){ return `<div class="grade">${[["again","Again",0],["hard","Hard",1],["good","Good",2],["easy","Easy",3]].map(([cl, l, g]) => `<button class="btn ${cl}" data-g="${g}">${l}<small>${nextLbl(k, g)}</small></button>`).join("")}</div>`; }
@@ -2533,7 +2515,7 @@ function mcqCard(box, head, q){
 }
 function crCard(box, head, c){
   const k = "cr:" + c.id;
-  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt" style="font-style:italic">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" data-flip>Show the rule</button><div class="reveal" hidden></div></div>`;
+  box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt casename">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" data-flip>Show the rule</button><div class="reveal" hidden></div></div>`;
   const rev = box.querySelector(".reveal");
   box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
     rev.hidden = false; face.dataset.hc = c.hc || "";
@@ -2548,7 +2530,7 @@ function pickCard(box, head, p, c){
   const rev = box.querySelector(".reveal");
   box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
     rev.hidden = false; face.dataset.hc = c.hc || "";
-    rev.innerHTML = `${hookChip(c, true)}<div class="prompt" style="font-style:italic">${esc(c.n)} <span class="tiny" style="font-style:normal">(${esc(c.y)})</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+    rev.innerHTML = `${hookChip(c, true)}<div class="prompt casename">${esc(c.n)}<span class="cy">${esc(c.y)}</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
     rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
   }); };
 }

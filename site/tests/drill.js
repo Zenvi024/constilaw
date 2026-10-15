@@ -32,8 +32,8 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     for (let i = 0; i < 5; i++){ await p.click('#dCard [data-flip]'); await p.waitForTimeout(380); await p.click('#dCard .grade [data-g="2"]'); await p.waitForTimeout(60); }
     const toast = await p.isVisible('.mtoast');
     check(tag, 'streak of five', (await n()) === 5 && toast, [await n(), toast]);
-    await p.waitForTimeout(450);
-    const ghosts = await p.$$eval('#dCard .card-ghost', x => x.length); check(tag, 'ghost cards cleaned up', ghosts === 0, ghosts);
+    const nameCentered = await p.evaluate(() => { const e = document.querySelector('#dCard .casename'); return e && getComputedStyle(e).textAlign === 'center'; });
+    check(tag, 'case name centered', nameCentered, nameCentered);
     await p.screenshot({path: `site/build/drill-${tag}.png`});
     await p.click('#dCard [data-quit]'); const end = await p.textContent('#dCard .endpanel'); check(tag, 'end shows longest run', /Longest run this round: 5/.test(end), end.slice(0, 120));
     // browse rows carry hook chips
