@@ -45,6 +45,14 @@ for k, v in load('dg_reviewer.json').items():
     assert k in cid, 'class-reviewer text for unknown case ' + k
     CASEBY[k]['dg'] = v
 
+# memory hooks: 1 to 3 words per case, colour-coded by outcome (ok upheld, no struck down, sun procedure or twist, acc principle)
+HOOKS = json.load(open(os.path.join(DATA, 'case_hooks.json')))
+for c in cases:
+    h = HOOKS.get(c['id']); assert h, 'no hook for case ' + c['id']
+    assert 1 <= len(h['k'].split()) <= 3 and h['c'] in ('ok', 'no', 'sun', 'acc'), ('bad hook', c['id'], h)
+    c['hk'], c['hc'] = h['k'], h['c']
+assert not set(HOOKS) - {c['id'] for c in cases}, 'hook for unknown case'
+
 # rule maps: link every case mention to its card (see caselink.py)
 import sys; sys.path.insert(0, HERE)
 import caselink, figures

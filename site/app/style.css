@@ -685,3 +685,50 @@ a.xref::after{content:" →"}
 .hwall .acro .w{font-size:.64rem;overflow-wrap:anywhere}
 .vtools .vchip{padding:3px 9px;font-size:.7rem}
 .xclock>div:first-child{flex:0 0 38px!important}
+
+/* ================= flashcards: deck, flip, streak, hooks ================= */
+#dCard,#sessRun,#lRun{position:relative;overflow-x:clip;overflow-clip-margin:8px}
+.runhead{gap:8px;flex-wrap:wrap}
+.card-face{border-radius:14px;box-shadow:0 7px 0 -3px var(--card),0 7px 0 -2px var(--line),0 14px 0 -7px var(--card),0 14px 0 -6px var(--line),0 18px 30px -22px rgba(0,0,0,.45);margin-bottom:14px;transform-origin:50% 50%;backface-visibility:hidden;border-top-width:5px;border-top-color:var(--accent);transition:border-top-color .3s}
+.card-face[data-hc="ok"]{border-top-color:var(--good)} .card-face[data-hc="no"]{border-top-color:var(--bad)} .card-face[data-hc="sun"]{border-top-color:var(--sun)} .card-face[data-hc="acc"]{border-top-color:var(--accent)}
+.card-face.flipped>.prompt,.card-face.flipped>.tags+.prompt{font-size:1rem;color:var(--muted)}
+.card-face.flipped>p.tiny:not(.reveal p){display:none}
+.card-face.in-fwd{animation:cardInF .3s .12s cubic-bezier(.2,.8,.2,1) both}
+.card-face.in-back{animation:cardInB .32s cubic-bezier(.2,.8,.2,1)}
+.card-face.flipping{animation:cardFlip .34s ease-in-out}
+@keyframes cardInF{from{opacity:0;transform:translateX(42px) rotate(1.5deg)}to{opacity:1;transform:none}}
+@keyframes cardInB{from{opacity:0;transform:translateX(-42px) rotate(-1.5deg)}to{opacity:1;transform:none}}
+@keyframes cardFlip{0%{transform:perspective(1100px) rotateY(0)}47%{transform:perspective(1100px) rotateY(90deg)}53%{transform:perspective(1100px) rotateY(-90deg)}100%{transform:perspective(1100px) rotateY(0)}}
+.card-ghost{position:absolute;left:0;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:22px;overflow:hidden;pointer-events:none;z-index:2;display:flex;flex-direction:column;gap:14px}
+.card-ghost .reveal[hidden]{display:none}
+.card-ghost.out-ok{animation:ghostOk .34s ease-in forwards;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);border-color:var(--good)}
+.card-ghost.out-miss{animation:ghostMiss .34s ease-in forwards;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);border-color:var(--bad)}
+@keyframes ghostOk{60%{opacity:.35}to{opacity:0;transform:translate(160px,-24px) rotate(8deg)}}
+@keyframes ghostMiss{60%{opacity:.35}to{opacity:0;transform:translate(-160px,18px) rotate(-8deg)}}
+.streak{display:inline-flex;align-items:baseline;gap:5px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);font:500 .72rem var(--mono);color:var(--muted);white-space:nowrap}
+.streak .fl{filter:grayscale(1);opacity:.5}
+.streak b{font:800 1.05rem/1 var(--display);color:var(--muted)}
+.streak.on{border-color:var(--sun);background:var(--sun-soft)}
+.streak.on .fl{filter:none;opacity:1}
+.streak.on b{color:var(--warn)}
+.streak.pulse{animation:streakPulse .45s ease-out}
+.streak.drop{animation:streakDrop .4s ease-out}
+@keyframes streakPulse{0%{transform:scale(1)}40%{transform:scale(1.22)}100%{transform:scale(1)}}
+@keyframes streakDrop{0%,100%{transform:none}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@media (max-width:520px){.streak small{display:none}}
+.mtoast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:60;padding:10px 18px;border-radius:999px;background:var(--ink);color:var(--paper);font:700 .95rem var(--body);box-shadow:0 10px 30px -10px rgba(0,0,0,.5);animation:toastIn .3s cubic-bezier(.2,.8,.2,1);transition:opacity .4s,transform .4s}
+.mtoast.bye{opacity:0;transform:translate(-50%,10px)}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,16px) scale(.9)}to{opacity:1;transform:translate(-50%,0)}}
+.hookchip{display:inline-block;padding:2px 9px;border-radius:999px;font:700 .74rem/1.5 var(--body);border:1px solid;vertical-align:middle;font-style:normal;white-space:nowrap}
+.hookchip.big{font:700 1rem/1.4 var(--display);padding:4px 13px;align-self:flex-start}
+.hookchip.big::before{content:"Hook · ";font:600 .62rem var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.hc-ok{color:var(--good);border-color:var(--good);background:var(--good-soft)}
+.hc-no{color:var(--bad);border-color:var(--bad);background:var(--bad-soft)}
+.hc-sun{color:var(--warn);border-color:var(--sun);background:var(--sun-soft)}
+.hc-acc{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.reveal .hookchip.big{animation:hookPop .35s cubic-bezier(.2,.9,.3,1.4)}
+@keyframes hookPop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+.hclegend{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.kbdhint{font:500 .68rem var(--mono);color:var(--muted)}
+.kbdhint kbd{border:1px solid var(--line);border-radius:4px;padding:0 4px;font:inherit}
+@media (prefers-reduced-motion: reduce){.card-face,.card-ghost,.streak,.mtoast,.reveal .hookchip.big{animation:none!important}}

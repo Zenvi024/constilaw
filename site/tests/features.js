@@ -14,7 +14,7 @@ require('fs').mkdirSync(out, {recursive: true});
     // answer whatever card is showing; miss on purpose every other card
     const answer = async (box, k) => {
       const miss = k % 2 === 0;
-      if (await p.isVisible(`${box} [data-flip]`)) { await p.click(`${box} [data-flip]`); }
+      if (await p.isVisible(`${box} [data-flip]`)) { await p.click(`${box} [data-flip]`); await p.waitForSelector(`${box} .card-face .grade, ${box} .litem, ${box} .choice`, {timeout: 2000}).catch(() => {}); }
       if (await p.isVisible(`${box} .grade`)) { await p.click(`${box} .grade [data-g="${miss ? 0 : 2}"]`); return; }
       if (await p.isVisible(`${box} [data-ok]`)) { await p.click(`${box} [data-ok="${miss ? 0 : 1}"]`); return; }
       if (await p.isVisible(`${box} .litem`)) {

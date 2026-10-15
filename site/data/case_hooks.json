@@ -1,0 +1,762 @@
+{
+"303creative": {
+"k": "Wedding websites",
+"c": "no"
+},
+"abakada": {
+"k": "JCOC legislative veto",
+"c": "no"
+},
+"abanglingkod": {
+"k": "Altered photos",
+"c": "no"
+},
+"abayon": {
+"k": "Precincts wrongly annulled",
+"c": "no"
+},
+"abayon2010": {
+"k": "Oath, then HRET",
+"c": "acc"
+},
+"abbas": {
+"k": "Can't disqualify all",
+"c": "acc"
+},
+"adaza": {
+"k": "Oath forfeits governorship",
+"c": "ok"
+},
+"agustin": {
+"k": "Early warning triangles",
+"c": "ok"
+},
+"aiwa": {
+"k": "Ten unions",
+"c": "sun"
+},
+"akbayan": {
+"k": "120-day ban",
+"c": "ok"
+},
+"akma": {
+"k": "Uncanvassed votes irrelevant",
+"c": "ok"
+},
+"albano": {
+"k": "Losers' ban void",
+"c": "no"
+},
+"alejandrino": {
+"k": "Year-long suspension",
+"c": "sun"
+},
+"angara": {
+"k": "Late protest",
+"c": "acc"
+},
+"angat": {
+"k": "RTC can't repatriate",
+"c": "acc"
+},
+"angbagongbayani": {
+"k": "Marginalized only",
+"c": "acc"
+},
+"angladlad": {
+"k": "No Bible grounds",
+"c": "no"
+},
+"anwaray": {
+"k": "Unproclaimed second seat",
+"c": "ok"
+},
+"aquino95": {
+"k": "Rented Makati condo",
+"c": "ok"
+},
+"araro": {
+"k": "Disqualified votes count",
+"c": "acc"
+},
+"araullo": {
+"k": "DAP fake savings",
+"c": "no"
+},
+"arceta": {
+"k": "BP 22 shortcut",
+"c": "sun"
+},
+"arigo": {
+"k": "Tubbataha minesweeper",
+"c": "acc"
+},
+"arroyodevenecia": {
+"k": "Sin tax railroad",
+"c": "ok"
+},
+"astorga": {
+"k": "Withdrawn signatures",
+"c": "no"
+},
+"atlas": {
+"k": "Fishpond moot",
+"c": "sun"
+},
+"atongpaglaum": {
+"k": "Six new parameters",
+"c": "acc"
+},
+"avelino": {
+"k": "12 of 23",
+"c": "ok"
+},
+"aznar": {
+"k": "ACR isn't renunciation",
+"c": "acc"
+},
+"baguilat": {
+"k": "Runner-up tradition",
+"c": "ok"
+},
+"banasnograles": {
+"k": "GenSan reset vote",
+"c": "no"
+},
+"banat": {
+"k": "2% threshold void",
+"c": "no"
+},
+"belgica2013": {
+"k": "Pork barrel dead",
+"c": "no"
+},
+"belgica2019": {
+"k": "Lump sum OK",
+"c": "ok"
+},
+"bengson": {
+"k": "Soldier repatriated",
+"c": "acc"
+},
+"bondoc": {
+"k": "Expelled for voting",
+"c": "no"
+},
+"calilung": {
+"k": "Not dual allegiance",
+"c": "ok"
+},
+"ceniza": {
+"k": "No provincial vote",
+"c": "ok"
+},
+"chavezpea": {
+"k": "Freedom Islands",
+"c": "no"
+},
+"chrea": {
+"k": "Upgraded CHR posts",
+"c": "no"
+},
+"chua2016": {
+"k": "Winning won't cure",
+"c": "ok"
+},
+"cocham": {
+"k": "Japanese occupation courts",
+"c": "acc"
+},
+"cocofed": {
+"k": "Only two nominees",
+"c": "ok"
+},
+"codilla": {
+"k": "Void second-placer proclamation",
+"c": "no"
+},
+"cohret": {
+"k": "Implied election",
+"c": "acc"
+},
+"coseteng": {
+"k": "Lone KAIBA member",
+"c": "ok"
+},
+"cotescup": {
+"k": "K-12 signatures conclusive",
+"c": "ok"
+},
+"cruzdenr": {
+"k": "7-7 tie",
+"c": "sun"
+},
+"cruzparas": {
+"k": "Bocaue nightclub ban",
+"c": "no"
+},
+"davidgma": {
+"k": "Moot but decided",
+"c": "sun"
+},
+"davidset": {
+"k": "Foundling Poe",
+"c": "acc"
+},
+"daza": {
+"k": "LDP mass transfer",
+"c": "ok"
+},
+"delacruz": {
+"k": "License plates included",
+"c": "ok"
+},
+"demetria": {
+"k": "Transfer any fund",
+"c": "no"
+},
+"devenecia": {
+"k": "Suspension, not penalty",
+"c": "ok"
+},
+"dobbs": {
+"k": "15-week ban",
+"c": "ok"
+},
+"dorr": {
+"k": "Government, not officials",
+"c": "no"
+},
+"drilondevenecia": {
+"k": "Madrigal no-standing",
+"c": "sun"
+},
+"duterteyouth": {
+"k": "Guanzon slate swap",
+"c": "no"
+},
+"endencia": {
+"k": "Congress can't interpret",
+"c": "no"
+},
+"ericta": {
+"k": "Paupers' graves",
+"c": "no"
+},
+"execseccA": {
+"k": "Recruiters' members only",
+"c": "sun"
+},
+"falcis": {
+"k": "Never applied",
+"c": "sun"
+},
+"fertiphil": {
+"k": "Fertilizer levy",
+"c": "no"
+},
+"fetalvero": {
+"k": "Funds not garnishable",
+"c": "ok"
+},
+"filoteo": {
+"k": "Mail-van confession",
+"c": "ok"
+},
+"floresdrilon": {
+"k": "Mayor-chairman banned",
+"c": "no"
+},
+"francisco": {
+"k": "Second impeachment complaint",
+"c": "no"
+},
+"frivaldo": {
+"k": "Retroactive repatriation",
+"c": "acc"
+},
+"gallego": {
+"k": "Nurseryman in Bukidnon",
+"c": "acc"
+},
+"ganacarait": {
+"k": "Dual by birth",
+"c": "no"
+},
+"garciaexecsec": {
+"k": "Oil import duties",
+"c": "ok"
+},
+"giron": {
+"k": "Deemed-resigned repeal",
+"c": "ok"
+},
+"gmacomelec": {
+"k": "Aggregate airtime cap",
+"c": "no"
+},
+"gonzales67": {
+"k": "Same-day plebiscite",
+"c": "ok"
+},
+"gopeihung": {
+"k": "No arrival certificate",
+"c": "ok"
+},
+"gorep": {
+"k": "Weak witnesses",
+"c": "ok"
+},
+"gtz": {
+"k": "German aid agency",
+"c": "acc"
+},
+"guingonacarague": {
+"k": "Automatic debt service",
+"c": "ok"
+},
+"guingonagonzales": {
+"k": "Half-seat, no round-up",
+"c": "no"
+},
+"hagedorn": {
+"k": "Uncertified House vacancy",
+"c": "sun"
+},
+"ibpzamora": {
+"k": "Marines on patrol",
+"c": "ok"
+},
+"ileco": {
+"k": "MORE Power expansion",
+"c": "ok"
+},
+"itf": {
+"k": "Failed counting machines",
+"c": "no"
+},
+"jalosjos": {
+"k": "Jailed, no sessions",
+"c": "ok"
+},
+"javellana": {
+"k": "Show of hands",
+"c": "sun"
+},
+"jdf": {
+"k": "Mandamus against Congress",
+"c": "sun"
+},
+"jimenez": {
+"k": "Open letter",
+"c": "sun"
+},
+"jmtuason": {
+"k": "Tatalon Estate",
+"c": "ok"
+},
+"johnhay": {
+"k": "Proclamation can't exempt",
+"c": "no"
+},
+"joya": {
+"k": "Old Masters paintings",
+"c": "sun"
+},
+"kabataan2015": {
+"k": "Biometrics or deactivation",
+"c": "ok"
+},
+"kapatiran2026": {
+"k": "Anti-dynasty mandamus",
+"c": "no"
+},
+"kapit": {
+"k": "NCAP moot",
+"c": "sun"
+},
+"kida": {
+"k": "ARMM OICs",
+"c": "ok"
+},
+"kmu": {
+"k": "Fare band",
+"c": "no"
+},
+"labo": {
+"k": "Aussie mayor",
+"c": "acc"
+},
+"lacsonperez": {
+"k": "May 1 siege",
+"c": "sun"
+},
+"lambino": {
+"k": "Signature sheets",
+"c": "ok"
+},
+"lamp": {
+"k": "PDAF, no proof",
+"c": "sun"
+},
+"laureldesierto": {
+"k": "Centennial Expo",
+"c": "ok"
+},
+"laureta": {
+"k": "Tanodbayan can't review",
+"c": "acc"
+},
+"liban": {
+"k": "Red Cross seat",
+"c": "sun"
+},
+"lico": {
+"k": "Expulsion goes HRET",
+"c": "acc"
+},
+"lidasan": {
+"k": "Hidden Cotabato barrios",
+"c": "no"
+},
+"ligot": {
+"k": "Inflated retirement gratuity",
+"c": "ok"
+},
+"lokin": {
+"k": "Rival CIBAC nominations",
+"c": "acc"
+},
+"lozano": {
+"k": "Con-ass resolution",
+"c": "sun"
+},
+"lungcenter": {
+"k": "Leased parts taxable",
+"c": "sun"
+},
+"macalintal2003": {
+"k": "Affidavit to return",
+"c": "sun"
+},
+"macalintal2023": {
+"k": "Barangay polls postponed",
+"c": "no"
+},
+"maceda": {
+"k": "Detainee stays put",
+"c": "acc"
+},
+"madera": {
+"k": "Who returns what",
+"c": "acc"
+},
+"magallona": {
+"k": "Baselines law",
+"c": "ok"
+},
+"mahtani": {
+"k": "Comfortable isn't lucrative",
+"c": "ok"
+},
+"mangudadatu": {
+"k": "Second-placer abandoned",
+"c": "ok"
+},
+"manilamemorial": {
+"k": "Senior discount",
+"c": "ok"
+},
+"manilaprince": {
+"k": "Filipino First",
+"c": "no"
+},
+"maquiling": {
+"k": "US passport reuse",
+"c": "acc"
+},
+"marbury": {
+"k": "Judicial review born",
+"c": "acc"
+},
+"marcos95": {
+"k": "'Seven months' slip",
+"c": "no"
+},
+"mariano": {
+"k": "Makati district",
+"c": "ok"
+},
+"marinemammals": {
+"k": "Dolphin petitioners",
+"c": "no"
+},
+"minucher": {
+"k": "DEA agent",
+"c": "acc"
+},
+"miranda": {
+"k": "Santiago City downgrade",
+"c": "no"
+},
+"montesclaros": {
+"k": "SK age bill",
+"c": "sun"
+},
+"moralessubido": {
+"k": "Omitted police phrase",
+"c": "ok"
+},
+"nazareth": {
+"k": "Nothing to augment",
+"c": "ok"
+},
+"nitafan": {
+"k": "Judges get taxed",
+"c": "ok"
+},
+"northcotabato": {
+"k": "Bangsamoro Juridical Entity",
+"c": "no"
+},
+"obergefell": {
+"k": "Marriage for all",
+"c": "no"
+},
+"ople": {
+"k": "National ID",
+"c": "no"
+},
+"oposa": {
+"k": "Generations yet unborn",
+"c": "acc"
+},
+"osmena": {
+"k": "Garcia bribery speech",
+"c": "ok"
+},
+"pacete": {
+"k": "Motion never voted",
+"c": "no"
+},
+"pacu": {
+"k": "Private school permits",
+"c": "sun"
+},
+"palatino": {
+"k": "October 31 deadline",
+"c": "no"
+},
+"pangilinan2018": {
+"k": "Detainee can't argue",
+"c": "ok"
+},
+"pangilinan2021": {
+"k": "ICC withdrawal",
+"c": "sun"
+},
+"pasi": {
+"k": "Orbital slot",
+"c": "acc"
+},
+"perfecto": {
+"k": "₱802 refund",
+"c": "no"
+},
+"philconsa2016": {
+"k": "Bangsamoro deals",
+"c": "sun"
+},
+"philconsaenriquez": {
+"k": "Inappropriate provisions",
+"c": "acc"
+},
+"philconsamathay": {
+"k": "Premature salary raise",
+"c": "no"
+},
+"pichay": {
+"k": "PAGC abolished",
+"c": "ok"
+},
+"pimentelcow": {
+"k": "Publish rules first",
+"c": "sun"
+},
+"pimentelhouse2025": {
+"k": "PhilHealth ₱60B",
+"c": "no"
+},
+"pimentelhret": {
+"k": "Ask House first",
+"c": "sun"
+},
+"planas": {
+"k": "Moot but justiciable",
+"c": "sun"
+},
+"pobre": {
+"k": "Spit on Justices",
+"c": "acc"
+},
+"poe2016": {
+"k": "Foundling natural-born",
+"c": "acc"
+},
+"pons": {
+"k": "Stopped clock",
+"c": "ok"
+},
+"ppi": {
+"k": "Free print space",
+"c": "no"
+},
+"puyat": {
+"k": "Ten shares",
+"c": "no"
+},
+"repsandiganbayan": {
+"k": "Interregnum raid",
+"c": "no"
+},
+"reyescomelec": {
+"k": "Oath outside session",
+"c": "acc"
+},
+"reyeshret": {
+"k": "One-Justice quorum",
+"c": "ok"
+},
+"romualdezrtc": {
+"k": "Fled after EDSA",
+"c": "acc"
+},
+"rubi": {
+"k": "Mangyan reservation",
+"c": "ok"
+},
+"sagun": {
+"k": "12 years late",
+"c": "sun"
+},
+"sanlakas": {
+"k": "Oakwood mutiny",
+"c": "ok"
+},
+"santiago97": {
+"k": "Delfin petition",
+"c": "no"
+},
+"santiagoguingona": {
+"k": "Senate minority leader",
+"c": "ok"
+},
+"santiagosb": {
+"k": "Suspend a senator",
+"c": "ok"
+},
+"scsarbitration": {
+"k": "Nine-dash line",
+"c": "acc"
+},
+"sema": {
+"k": "ARMM province void",
+"c": "no"
+},
+"seniorcitizens": {
+"k": "Term-sharing covenant",
+"c": "no"
+},
+"sjsddb": {
+"k": "Drug-test candidates",
+"c": "no"
+},
+"sobejana": {
+"k": "Unsworn renunciation",
+"c": "ok"
+},
+"spark": {
+"k": "Curfew for minors",
+"c": "sun"
+},
+"tanada85": {
+"k": "Publish the laws",
+"c": "no"
+},
+"tanco": {
+"k": "LOI 270 kids",
+"c": "acc"
+},
+"tandelrosario": {
+"k": "Four-part classification",
+"c": "ok"
+},
+"tecson": {
+"k": "FPJ's grandfather",
+"c": "acc"
+},
+"telebap": {
+"k": "Free airtime",
+"c": "ok"
+},
+"tinio": {
+"k": "Late-night TRAIN",
+"c": "ok"
+},
+"tolentino04": {
+"k": "13th-place senator",
+"c": "ok"
+},
+"tolentino71": {
+"k": "Age-18 piecemeal",
+"c": "no"
+},
+"tolentinofinance": {
+"k": "E-VAT Senate substitute",
+"c": "ok"
+},
+"torralba": {
+"k": "Pre-Code town",
+"c": "ok"
+},
+"torrecampo": {
+"k": "C-5 route",
+"c": "sun"
+},
+"trillanesmarigomen": {
+"k": "Media interviews",
+"c": "ok"
+},
+"trillanespimentel": {
+"k": "Oakwood mutiny detainee",
+"c": "ok"
+},
+"velasco": {
+"k": "Stray votes, swear-in",
+"c": "no"
+},
+"vera": {
+"k": "Probation Act",
+"c": "no"
+},
+"vicencio": {
+"k": "Plain meaning",
+"c": "acc"
+},
+"vigilar": {
+"k": "Unpaid dike works",
+"c": "no"
+},
+"whitelight": {
+"k": "Short-time motels",
+"c": "no"
+},
+"willieyu": {
+"k": "Portuguese passport",
+"c": "acc"
+},
+"zabal": {
+"k": "Boracay closure",
+"c": "ok"
+}
+}

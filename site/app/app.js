@@ -56,7 +56,7 @@ function renderClock(){
 function caseHTML(c){
   const t = TOP[c.t];
   return `<div class="spread"><h3 id="mTitle">${esc(c.n)}</h3><button class="btn small ghost" data-close>Close</button></div>
-  <div class="meta">${esc(c.y)} · ${esc(c.sub || (t ? t.name : ""))}${c.a ? " · anchor case" : ""}${c.ref ? " · mentioned in the rule maps; not on the syllabus list, not drilled" : ""}</div>
+  ${c.hk ? `<div style="margin:2px 0 6px">${hookChip(c, true)} <span class="tiny">${esc(HC_LBL[c.hc])}</span></div>` : ""}<div class="meta">${esc(c.y)} · ${esc(c.sub || (t ? t.name : ""))}${c.a ? " · anchor case" : ""}${c.ref ? " · mentioned in the rule maps; not on the syllabus list, not drilled" : ""}</div>
   <dl>
     <div><dt>Rule</dt><dd class="rule">${esc(c.r)}</dd></div>
     ${c.test ? `<div><dt>Test</dt><dd>${esc(c.test)}</dd></div>` : ""}
@@ -462,7 +462,7 @@ function renderCases(){
   TOPS().forEach(t => {
     const g = list.filter(c => c.t === t.key); if (!g.length) return;
     html += `<div class="grouph">${esc(t.name)} <small>${esc(t.part)} · ${g.length}</small></div>`;
-    html += g.map(c => `<button class="crow" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span></span><span>${c.a ? '<span class="tag anchor">anchor</span>' : c.ref ? '<span class="tag">mentioned only</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
+    html += g.map(c => `<button class="crow" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span> ${hookChip(c)}</span><span>${c.a ? '<span class="tag anchor">anchor</span>' : c.ref ? '<span class="tag">mentioned only</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
   });
   $("clist").innerHTML = html || `<p class="empty">No case matches. Try fewer words.</p>`;
 }
@@ -516,7 +516,8 @@ function startDrill(dueOnly){
 }
 $("dStart").onclick = () => startDrill(false);
 function drillEnd(box, r){
-  box.innerHTML = `<div class="panel"><div class="score"><span class="big">${r.right}/${r.done}</span><span class="tiny">remembered or answered correctly this round</span></div><p class="tiny" style="margin:0">Missed cards come back in about a minute and go on your fix list; known cards move out to hours and days. ${dueKeys().length} cards are due now.</p><div class="row"><button class="btn primary" data-a="again">Another round</button><button class="btn" data-a="due">Review due cards</button><button class="btn ghost" data-a="back">Change settings</button></div></div>`;
+  let run = 0, top = 0; r.res.forEach(x => { if (x === undefined) return; run = x ? run + 1 : 0; top = Math.max(top, run); });
+  box.innerHTML = `<div class="panel endpanel"><div class="score"><span class="big">${r.right}/${r.done}</span><span class="tiny">remembered or answered correctly this round</span></div><div class="row" style="gap:8px"><span class="hookchip hc-sun">Longest run this round: ${top}</span>${streakHTML()}</div><p class="tiny" style="margin:0">Missed cards come back in about a minute and go on your fix list; known cards move out to hours and days. ${dueKeys().length} cards are due now.</p><div class="row"><button class="btn primary" data-a="again">Another round</button><button class="btn" data-a="due">Review due cards</button><button class="btn ghost" data-a="back">Change settings</button></div></div>`;
   box.querySelector('[data-a="again"]').onclick = () => startDrill(false); box.querySelector('[data-a="due"]').onclick = () => startDrill(true); box.querySelector('[data-a="back"]').onclick = renderDSetup;
   dueBadge();
 }
@@ -534,25 +535,87 @@ function cardOK({p, id}){
   return validKey(p + ":" + id) && (p !== "fc" || !!(CASE[id] || {}).f);
 }
 function runCards(box, cards, opts){
-  box._r = {cards: cards.filter(cardOK), i: 0, done: 0, right: 0, opts: opts || {}};
+  box._r = {cards: cards.filter(cardOK), i: 0, done: 0, right: 0, res: [], snap: [], dir: "fwd", opts: opts || {}};
   box.hidden = false; drawCard(box);
 }
 function endRun(box){ const r = box._r; dueBadge(); (r.opts.onEnd || drillEnd)(box, r); }
-function cardDone(box, ok){ box._r.done++; if (ok) box._r.right++; }
-function nextCard(box){ box._r.i++; drawCard(box); const top = box.getBoundingClientRect().top; if (top < 0) window.scrollTo({top: window.scrollY + top - 12}); }
+// streak: correct answers in a row, kept across rounds; the best is remembered
+let STREAK = store.get("streak", {cur: 0, best: 0});
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const streakHTML = () => `<span class="streak${STREAK.cur ? " on" : ""}" title="Correct in a row. Best: ${STREAK.best}"><span class="fl" aria-hidden="true">🔥</span><b>${STREAK.cur}</b><small>in a row · best ${STREAK.best}</small></span>`;
+function cardDone(box, ok){
+  const r = box._r; if (r.res[r.i] !== undefined) return;
+  r.done++; if (ok) r.right++; r.res[r.i] = ok;
+  if (r.snap[r.i]) r.snap[r.i].st = {...STREAK};
+  STREAK.cur = ok ? STREAK.cur + 1 : 0; STREAK.best = Math.max(STREAK.best, STREAK.cur); store.set("streak", STREAK);
+  const el = box.querySelector(".streak");
+  if (el){ el.outerHTML = streakHTML(); const n = box.querySelector(".streak"); if (!REDUCED) n.classList.add(ok ? "pulse" : "drop"); }
+  if (ok && [5, 10, 15, 20, 30, 40, 50, 75, 100].includes(STREAK.cur)) toast(`🔥 ${STREAK.cur} in a row${STREAK.cur === STREAK.best ? " · a new best" : ""}`);
+}
+function toast(msg){
+  const t = document.createElement("div"); t.className = "mtoast"; t.setAttribute("role", "status"); t.textContent = msg; document.body.append(t);
+  setTimeout(() => t.classList.add("bye"), 1700); setTimeout(() => t.remove(), 2200);
+}
+// go back one card: undo its grade (and the current card's, if graded) so the schedule is exactly as before
+function undoCard(r, j){
+  const sn = r.snap[j]; if (!sn || r.res[j] === undefined) return;
+  if (sn.s) SRS[sn.k] = sn.s; else delete SRS[sn.k];
+  if (sn.f) FIX[sn.k] = sn.f; else delete FIX[sn.k];
+  if (sn.st){ STREAK = {...sn.st}; store.set("streak", STREAK); }
+  store.set("srs", SRS); store.set("fix", FIX);
+  r.done--; if (r.res[j]) r.right--; r.res[j] = undefined;
+}
+function prevCard(box){
+  const r = box._r; if (r.i <= 0) return;
+  undoCard(r, r.i); undoCard(r, r.i - 1); r.i--; r.dir = "back"; drawCard(box); dueBadge();
+}
+function nextCard(box){
+  const r = box._r, f = box.querySelector(".card-face"), ok = r.res[r.i];
+  let ghost = null;
+  if (f && !REDUCED){ // the answered card slides off while the next one comes in
+    ghost = f.cloneNode(true); ghost.className = "card-ghost " + (ok === false ? "out-miss" : "out-ok"); ghost.setAttribute("aria-hidden", "true");
+    ghost.querySelectorAll("button,input,[hidden]").forEach(x => x.remove());
+    ghost.querySelectorAll("*").forEach(x => { x.removeAttribute("id"); x.removeAttribute("class"); x.removeAttribute("data-g"); x.removeAttribute("data-case"); });
+    ghost.style.top = f.offsetTop + "px"; ghost.style.height = f.offsetHeight + "px"; ghost.style.width = f.offsetWidth + "px";
+  }
+  r.i++; r.dir = "fwd"; drawCard(box);
+  if (ghost && box._r === r && r.i < r.cards.length){ box.append(ghost); setTimeout(() => ghost.remove(), 420); }
+  const top = box.getBoundingClientRect().top; if (top < 0) window.scrollTo({top: window.scrollY + top - 12});
+}
+// flip a flashcard: the face turns edge-on, the answer is swapped in, and it turns back
+function flipFace(face, swap){
+  face.classList.add("flipped");
+  if (REDUCED){ swap(); return; }
+  face.classList.remove("in-fwd", "in-back"); face.classList.add("flipping");
+  setTimeout(() => { if (face.isConnected) swap(); }, 160); setTimeout(() => face.classList.remove("flipping"), 340);
+}
+const HC_LBL = {ok: "upheld or valid", no: "struck down or void", sun: "dismissed on procedure, or a twist", acc: "a principle or a definition"};
+const hookChip = (c, big) => c && c.hk ? `<span class="hookchip hc-${c.hc}${big ? " big" : ""}" title="Hook · ${HC_LBL[c.hc]}">${esc(c.hk)}</span>` : "";
 function gradeRow(k){ return `<div class="grade">${[["again","Again",0],["hard","Hard",1],["good","Good",2],["easy","Easy",3]].map(([cl, l, g]) => `<button class="btn ${cl}" data-g="${g}">${l}<small>${nextLbl(k, g)}</small></button>`).join("")}</div>`; }
 function drawCard(box){
   const r = box._r;
   if (r.i >= r.cards.length) return endRun(box);
   const {p, id} = r.cards[r.i];
-  const head = `<div class="spread"><span class="lbl">${esc(r.opts.label || "Card")} ${r.i + 1} of ${r.cards.length} · ${KIND_LBL[p]}</span><button class="btn small ghost" data-quit>${esc(r.opts.quit || "End round")}</button></div><div class="dprog"><i style="width:${100 * r.i / r.cards.length}%"></i></div>`;
+  if (!r.snap[r.i]){ const k = p + ":" + id; r.snap[r.i] = {k, s: SRS[k] ? {...SRS[k]} : null, f: FIX[k] ? {...FIX[k]} : null}; }
+  const head = `<div class="spread runhead"><span class="lbl">${esc(r.opts.label || "Card")} ${r.i + 1} of ${r.cards.length} · ${KIND_LBL[p]}</span>${streakHTML()}<span class="row" style="gap:6px">${r.i > 0 ? `<button class="btn small ghost" data-prev title="Back to the previous card (←)">← Previous</button>` : ""}<button class="btn small ghost" data-quit>${esc(r.opts.quit || "End round")}</button></span></div><div class="dprog"><i style="width:${100 * r.i / r.cards.length}%"></i></div>`;
   if (p === "m") mcqCard(box, head, D.mcq.find(x => x.id === id));
   else if (p === "l") listCard(box, head, LIST[id]);
   else if (p === "i") issueCard(box, head, id);
   else if (p === "cr") crCard(box, head, CASE[id]);
   else pickCard(box, head, p, CASE[id]);
   box.querySelector("[data-quit]").onclick = () => endRun(box);
+  const pv = box.querySelector("[data-prev]"); if (pv) pv.onclick = () => prevCard(box);
+  const face = box.querySelector(".card-face"); if (face && !REDUCED) face.classList.add(r.dir === "back" ? "in-back" : "in-fwd");
 }
+// keyboard: space or enter flips, 1-4 grade (again, hard, good, easy), left arrow goes back
+document.addEventListener("keydown", e => {
+  if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) || !$("scrim").hidden || e.metaKey || e.ctrlKey || e.altKey) return;
+  const box = [...document.querySelectorAll("#dCard,#sessRun,#lRun")].find(b => !b.hidden && b.offsetParent && b._r && b.querySelector(".card-face")); if (!box) return;
+  const fl = box.querySelector(".card-face [data-flip]:not([hidden])");
+  if ((e.key === " " || e.key === "Enter") && fl){ e.preventDefault(); fl.click(); return; }
+  if (/^[1-4]$/.test(e.key)){ const g = box.querySelector(`.card-face .grade [data-g="${+e.key - 1}"]`); if (g && g.offsetParent){ e.preventDefault(); g.click(); } return; }
+  if (e.key === "ArrowLeft"){ const pv = box.querySelector("[data-prev]"); if (pv){ e.preventDefault(); pv.click(); } }
+});
 function mcqCard(box, head, q){
   box.innerHTML = head + `<div class="card-face">${mcqBody(q, null)}</div>`;
   bindMcq(box, q, (ok) => { qhist[q.id] = {r: ok ? 1 : 0, n: ((qhist[q.id] || {}).n || 0) + 1}; store.set("qhist", qhist); rate("m:" + q.id, ok ? 2 : 0); cardDone(box, ok); }, () => nextCard(box));
@@ -561,22 +624,22 @@ function crCard(box, head, c){
   const k = "cr:" + c.id;
   box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span><span class="tag">${esc(c.y)}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt" style="font-style:italic">${esc(c.n)}</div><p class="tiny" style="margin:0">What rule or test does this case stand for? What fact decided it?</p><button class="btn primary" data-flip>Show the rule</button><div class="reveal" hidden></div></div>`;
   const rev = box.querySelector(".reveal");
-  box.querySelector("[data-flip]").onclick = e => {
-    e.target.hidden = true; rev.hidden = false;
-    rev.innerHTML = `<div class="prompt facts" style="font-size:1.05rem">${esc(c.r)}</div>${c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(c.test)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+  box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
+    rev.hidden = false; face.dataset.hc = c.hc || "";
+    rev.innerHTML = `${hookChip(c, true)}<div class="prompt facts" style="font-size:1.05rem">${esc(c.r)}</div>${c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(c.test)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
     rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
-  };
+  }); };
 }
 // facts → case and rule → case: name the case yourself, then flip (no multiple choice)
 function pickCard(box, head, p, c){
   const k = p + ":" + c.id, front = p === "fc" ? maskName(c.f, c) : maskName(c.r, c);
   box.innerHTML = head + `<div class="card-face"><div class="tags"><span class="tag">${esc(tname(c.t))}</span>${c.a ? '<span class="tag anchor">anchor</span>' : ""}</div><div class="prompt facts">${esc(front)}</div>${p === "rc" && c.test ? `<p class="tiny" style="margin:0"><b>Test:</b> ${esc(maskName(c.test, c))}</p>` : ""}<p class="tiny" style="margin:0">${p === "fc" ? "Which case is this? Say the name, then the rule it stands for." : "Which case laid down this rule? Say the name and the fact that decided it."}</p><button class="btn primary" data-flip>Show the case</button><div class="reveal" hidden></div></div>`;
   const rev = box.querySelector(".reveal");
-  box.querySelector("[data-flip]").onclick = e => {
-    e.target.hidden = true; rev.hidden = false;
-    rev.innerHTML = `<div class="prompt" style="font-style:italic">${esc(c.n)} <span class="tiny" style="font-style:normal">(${esc(c.y)})</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
+  box.querySelector("[data-flip]").onclick = e => { e.target.hidden = true; const face = box.querySelector(".card-face"); flipFace(face, () => {
+    rev.hidden = false; face.dataset.hc = c.hc || "";
+    rev.innerHTML = `${hookChip(c, true)}<div class="prompt" style="font-style:italic">${esc(c.n)} <span class="tiny" style="font-style:normal">(${esc(c.y)})</span></div>${p === "fc" ? `<p style="margin:0">${esc(c.r)}</p>` : c.f ? `<p class="tiny" style="margin:0"><b>Facts:</b> ${esc(c.f)}</p>` : ""}${c.h ? `<p class="tiny" style="margin:0"><b>Holding:</b> ${esc(c.h)}</p>` : ""}${gradeRow(k)}<button class="btn small ghost" data-case="${c.id}">Open full card</button>`;
     rev.querySelector(".grade").onclick = ev => { const b = ev.target.closest("[data-g]"); if (!b) return; const g = +b.dataset.g; rate(k, g); cardDone(box, g >= 2); nextCard(box); };
-  };
+  }); };
 }
 function issueCard(box, head, id){
   const [eid, iid] = id.split(":"), e = ESS[eid], is = ISS[iid], k = "i:" + id;
