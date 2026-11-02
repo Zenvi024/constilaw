@@ -1,0 +1,108 @@
+[
+ {
+  "id": "e23m-1",
+  "exam": "2023 Midterm",
+  "n": 1,
+  "t": [
+   "org"
+  ],
+  "cov": "in",
+  "minutes": 22,
+  "prompt": "The House of Representatives voted to expel Negros Oriental Rep. Arnolfo Teves Jr. on several grounds, including abandonment of public office and indecent behavior. Except for the Makabayan bloc who abstained, the lawmakers approved the report of the House committee on ethics and privileges recommending the removal of Teves, making him the first House member to be dropped from the roll without a prior court conviction for a criminal offense.\n\nIn May 2002, then Zamboanga del Norte Rep. Romeo Jalosjos was dropped from the House roll months after the Supreme Court upheld his rape conviction. A similar action was taken against then Dinagat Island Rep. Ruben Ecleo Jr. in May 2012, following his conviction for corruption and parricide.\n\nBefore his expulsion, Teves served two consecutive 60-day suspensions this year for disorderly behavior (March 22 to May 21 and May 31 to July 30) for his refusal to come home from abroad and face allegations linking him to the assassination of his political rival, Negros Oriental Gov. Roel Degamo, on March 4.\n\nThe committee report cited three reasons for Teves’ expulsion: (1) abandonment of public office and violation of oath of office; (2) his designation as a terrorist [by the Anti-Terrorism Council, on Aug. 2, for his alleged role in several killings in Negros, including Degamo’s]; and (3) indecent behavior after he posted online a video of himself dancing in his boxer shorts [posted June 5, after reports that the government would recommend his designation as a terrorist].\n\nFor the House committee, the video ‘caused dishonor’ to the chamber as Teves’ actions were ‘not necessary to discharge the duties of his office nor [was] it made in furtherance of any legislative role.’ Another ground cited was Teves’ ‘relentless pursuit’ of political asylum and continued absence in the House, which were considered ‘tantamount to abandonment’ of duty and a violation of his oath of office. [His application for asylum in Timor-Leste had been denied twice, and he had appealed.] It added that Teves’ refusal to participate in the Department of Justice’s preliminary investigation into the charges against him regarding the series of killings in his province was likewise a violation of his oath of office.",
+  "ask": "Assume Teves challenges his expulsion on the three grounds cited by the House Committee and additionally, that his expulsion is void because he was not found guilty of any offense. Resolve the case in his favor. (For this question, do not raise or resolve procedural or jurisdictional issues.)",
+  "issues": [
+   "cong_discipline",
+   "equal"
+  ],
+  "core": [
+   "Art. VI, Sec. 16(3): disorderly behavior; two-thirds of all Members; 60-day cap on suspension",
+   "No conviction needed (Osmeña), so the ‘no conviction’ argument must be reframed as due process",
+   "Absence already punished twice by 60-day suspensions: expulsion for the same absence evades the cap",
+   "Terrorist designation is an executive act, not his conduct as a Member",
+   "Video and asylum do not obstruct legislative work; due process before the gravest penalty"
+  ],
+  "cases": [
+   "osmena",
+   "jalosjos",
+   "devenecia"
+  ],
+  "model": "Teves should prevail. Art. VI, Sec. 16(3) lets the House expel a Member for disorderly behavior with two-thirds of all its Members, and no conviction is required (Osmeña v. Pendatun). But the power is bounded by the Constitution. First, his absence and refusal to return were already punished by two 60-day suspensions; expelling him for the same absence punishes him twice and evades the 60-day cap the framers imposed. Second, the terrorist designation is an act of the Anti-Terrorism Council, not his behavior as a Member; the House cannot adopt another branch’s unadjudicated finding as its own ground. Third, a dance video posted abroad and an asylum application are private acts that did not disrupt any proceeding of the House. Finally, while conviction is not a precondition, the committee rested its decision on the killings he has not been tried for; turning unproven accusations into the gravest penalty, without a hearing on them, denies due process. The expulsion is void.",
+  "points": [
+   [
+    "Answer first: expulsion void",
+    1
+   ],
+   [
+    "Sec. 16(3) rule stated correctly (two-thirds of all Members; 60-day cap; no conviction needed, Osmeña)",
+    2
+   ],
+   [
+    "Double punishment and evasion of the 60-day cap",
+    2
+   ],
+   [
+    "Each of the three grounds answered on its facts",
+    3
+   ],
+   [
+    "Due process framing of the ‘not found guilty’ argument",
+    1
+   ],
+   [
+    "Conclusion",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "e23m-2",
+  "exam": "2023 Midterm",
+  "n": 2,
+  "t": [
+   "gov"
+  ],
+  "cov": "in",
+  "minutes": 22,
+  "prompt": "The City of Manila enacted Ordinance No. 8343 in 2014, providing in part:\n\nSEC. 2. The City Government of Manila shall be allocated free screen time for the airing of its public service announcements and/or messages by all cinemas, movie houses and theaters located within the territorial jurisdiction of the city as an additional requirement for the grant or renewal of their business registration.",
+  "ask": "Assume theater owners challenge the constitutionality of the ordinance as a deprivation of property without due process of law. Resolve the case.",
+  "issues": [
+   "inh_police",
+   "inh_taking",
+   "equal"
+  ],
+  "core": [
+   "Police power: lawful subject and lawful means; LGU ordinance must also be reasonable and consistent with law",
+   "Screen time is property; requiring it free appropriates its use for public purposes = taking",
+   "PPI v. COMELEC (free print space: taking); Ericta (6% cemetery land: taking)",
+   "TELEBAP distinguished: broadcasters use a public resource under a franchise; cinemas only hold a business permit",
+   "Conditioning a business permit on giving up property without pay does not make it regulation"
+  ],
+  "cases": [
+   "cruzparas",
+   "whitelight"
+  ],
+  "model": "Yes, the ordinance deprives theater owners of property without due process. Police power may regulate a business when the subject is lawful and the means are reasonable and not unduly oppressive; an ordinance must also not be unreasonable (White Light). Informing the public is a lawful subject, but the means fail. Screen time is the theater’s property: it is what the owner sells. Requiring that it be given free to the city does not restrain a harmful use; it appropriates the property’s use for a public purpose, which is eminent domain and requires just compensation. In Philippine Press Institute v. COMELEC, the Court held that forcing newspapers to give free print space is a taking; in City Government of Quezon City v. Ericta, requiring cemeteries to give 6% of their land for paupers was the same. TELEBAP is different: broadcasters use airwaves, a public resource, under a franchise that the State may condition. Cinemas hold no franchise; a business permit is regulatory and cannot be used to extract property. Sec. 2 is void unless the city pays for the screen time.",
+  "points": [
+   [
+    "Answer first",
+    1
+   ],
+   [
+    "Police power test (lawful subject, lawful means) and LGU reasonableness",
+    2
+   ],
+   [
+    "Regulation versus taking analysis on these facts",
+    3
+   ],
+   [
+    "PPI/Ericta applied; TELEBAP distinguished (franchise over public resource)",
+    3
+   ],
+   [
+    "Conclusion with the just-compensation alternative",
+    1
+   ]
+  ]
+ }
+]

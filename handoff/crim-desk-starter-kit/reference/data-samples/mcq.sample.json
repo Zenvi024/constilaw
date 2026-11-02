@@ -1,0 +1,62 @@
+[
+ {
+  "id": "m13-01",
+  "exam": "2013 Midterm",
+  "n": 1,
+  "t": "powers",
+  "cov": "in",
+  "q": "Publication of laws of general application in the ONAR is necessary for a law to become [effective]:",
+  "c": [
+   "False",
+   "True",
+   "The law is unclear on this point"
+  ],
+  "a": 0,
+  "e": "Laws take effect after publication in the Official Gazette or a newspaper of general circulation (Civil Code, Art. 2, as amended by EO 200; Tañada v. Tuvera). Filing with the Office of the National Administrative Register (ONAR, at the UP Law Center) is a requirement for administrative rules under the Administrative Code, Book VII, not for statutes.",
+  "cs": [
+   "tanada85"
+  ],
+  "k": "The stem says ‘to become necessary’; read it as ‘effective’."
+ },
+ {
+  "id": "m13-02",
+  "exam": "2013 Midterm",
+  "n": 2,
+  "t": "powers",
+  "cov": "in",
+  "q": "Which of the following can be legally enacted by Congress?",
+  "c": [
+   "Delegation of powers",
+   "Higher votes for repeal or amendment of laws",
+   "Legislative vetoes",
+   "None of the above"
+  ],
+  "a": 0,
+  "e": "Congress may delegate within limits (completeness and sufficient standard; the five permitted delegations). It may not require a supermajority to repeal or amend a law (one of Gatmaytan’s substantive limits), and legislative vetoes are void (ABAKADA).",
+  "cs": [
+   "abakada",
+   "vera"
+  ]
+ },
+ {
+  "id": "m13-03",
+  "exam": "2013 Midterm",
+  "n": 3,
+  "t": "org",
+  "cov": "in",
+  "story": "s13dimaporo",
+  "q": "Which answer best describes Dimaporo’s arrest?",
+  "c": [
+   "It is illegal because Congress is in session",
+   "It is illegal because he enjoys parliamentary immunity",
+   "It is legal",
+   "Impossible to tell with the given facts"
+  ],
+  "a": 2,
+  "e": "Art. VI, Sec. 11 protects a member from arrest only for offenses punishable by not more than six years’ imprisonment while Congress is in session. Malversation here is punishable by more than six years, so the privilege does not apply whether or not Congress is in session.",
+  "cs": [
+   "jalosjos",
+   "trillanespimentel"
+  ]
+ }
+]

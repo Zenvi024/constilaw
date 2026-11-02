@@ -1,0 +1,67 @@
+{
+ "groups": [
+  {
+   "g": "Court and procedure",
+   "items": [
+    {
+     "id": "proc_actual",
+     "l": "Actual case or ripeness",
+     "h": "A bill, draft IRR, proposal or mere threat is not ripe (Montesclaros; Lozano; PACU).",
+     "rv": "jr-req"
+    },
+    {
+     "id": "proc_moot",
+     "l": "Mootness and its exceptions",
+     "h": "A supervening event ends the controversy; four exceptions (grave violation, exceptional character, guiding principles, capable of repetition yet evading review).",
+     "rv": "jr-req"
+    },
+    {
+     "id": "proc_standing",
+     "l": "Standing",
+     "h": "Citizen, taxpayer, voter, legislator, association or third party, environmental; transcendental importance.",
+     "rv": "jr-req"
+    }
+   ]
+  },
+  {
+   "g": "Separation of powers",
+   "items": [
+    {
+     "id": "sep_encroach",
+     "l": "Encroachment on another branch",
+     "h": "Congress executing laws, the Executive legislating, or either intruding on the courts or independent bodies.",
+     "rv": "jr-basis"
+    },
+    {
+     "id": "sep_legveto",
+     "l": "Legislative veto or post-enactment role",
+     "h": "Committee approval of rules, deputizing agencies, legislators identifying projects (ABAKADA; Belgica).",
+     "rv": "powers-veto"
+    },
+    {
+     "id": "sep_addqual",
+     "l": "Adding qualifications to constitutional offices",
+     "h": "Congress cannot add to qualifications the Constitution fixes (SJS v. DDB); statutory offices differ.",
+     "rv": "comp-quals"
+    }
+   ]
+  },
+  {
+   "g": "Delegation",
+   "items": [
+    {
+     "id": "del_standard",
+     "l": "Completeness and sufficient standard",
+     "h": "The law must set the policy and the limits; no subdelegation to private parties (Vera; KMU).",
+     "rv": "powers-delegation"
+    },
+    {
+     "id": "del_irr",
+     "l": "IRR validity, publication and filing",
+     "h": "Authorized, within scope, proper procedure, reasonable; published (Tañada); filed with ONAR.",
+     "rv": "powers-delegation"
+    }
+   ]
+  }
+ ]
+}

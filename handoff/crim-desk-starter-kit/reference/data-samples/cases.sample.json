@@ -1,0 +1,43 @@
+[
+ {
+  "id": "kapit",
+  "n": "KAPIT v. City of Manila",
+  "y": "2026",
+  "t": "jr",
+  "sub": "III.D Requisites of judicial review",
+  "a": 1,
+  "r": "Petitions against the No Contact Apprehension Policy ordinances were dismissed: supervening events (suspension of the ordinances and the Metro Manila Traffic Code of 2023) made them moot, no exception to mootness applied, and most petitioners lacked standing or capacity to sue.",
+  "f": "Transport groups challenged NCAP ordinances of several Metro Manila cities; the Court issued a TRO in 2022, and the cities later adopted a uniform Traffic Code.",
+  "h": "Dismissed without prejudice to a future challenge to the new scheme. Unregistered associations lacked capacity to sue; groups claiming third-party standing failed to identify their members or show the members wanted them to sue. The class reviewer adds two more grounds: violation of the hierarchy of courts (petitioners went straight to the Supreme Court) and forum shopping (identity of interests in cases filed in different courts).",
+  "x": "A 2026 case: a fresh source for mootness (relief would be ‘illusory’), the four exceptions applied strictly, and third-party standing requirements. Likely to be used against weak procedural pleading.",
+  "w": "Decided June 3, 2026, with separate opinions (Leonen, Lazaro-Javier, Dimaampao). Details here follow the block digest and the Supreme Court’s July 2026 press briefer; read the decision if time allows.",
+  "s": "Supervening repeal makes a case moot; exceptions applied strictly; associations must show capacity and members’ consent."
+ },
+ {
+  "id": "avelino",
+  "n": "Avelino v. Cuenco",
+  "y": "1949",
+  "t": "org",
+  "sub": "V.A.3 Quorum",
+  "a": 1,
+  "r": "Quorum is a majority of the members within the coercive jurisdiction of the House. The Senate had 24 members; 12 is only half of 24 and not a majority, but one senator was abroad, beyond the Senate’s power to compel attendance, so the base was 23, and 12 is a majority of 23: a quorum. The walkout of Avelino’s group did not stop the 12 from continuing the session; the answer would differ had ten or fewer remained. The Court first refused jurisdiction (election of the Senate President is internal), then assumed it on reconsideration.",
+  "f": "After Senate President Avelino walked out, 12 senators elected Cuenco as acting Senate President; one senator was in the US.",
+  "h": "Cuenco’s election valid (on reconsideration the Court assumed jurisdiction and ruled on quorum).",
+  "x": "Quorum disputes (absent, detained, or abroad members). Compare Jalosjos: absence due to lawful detention. Under the 1987 Constitution, quorum and the vote to elect are different: Sec. 16(1) requires the Senate President or Speaker to be elected by a majority of all the Members, so a 12-vote election in a 24-member Senate is open to attack even if 12 is a quorum under Avelino; argue both ways.",
+  "s": "Quorum counts members within the coercive jurisdiction of the House."
+ },
+ {
+  "id": "lungcenter",
+  "n": "Lung Center of the Philippines v. Quezon City",
+  "y": "2004",
+  "t": "tax",
+  "sub": "V.A.8 Tax laws",
+  "a": 1,
+  "r": "A charitable institution is exempt from real property tax only on property actually, directly and exclusively used for charitable purposes. Portions leased to private parties for commercial use are taxable; it is the use of the property, not of the income, that counts. Charging paying patients and receiving government subsidies did not defeat its charitable character: the test is whether it exists for a purpose recognized in law as charitable or is maintained for gain, profit or private advantage. ‘Exclusively’ means solely, so any commercial use of a portion makes that portion taxable. The claimant bears the burden of proving the exemption, which is strictly construed.",
+  "f": "The Lung Center leased parts of its land and building to private businesses and claimed exemption from all real property taxes.",
+  "h": "Lung Center is a charitable institution, but only the portions of its land and hospital used for its patients, paying or non-paying, are exempt. The portions leased to private doctors for clinics, to a canteen and stores, and to Elliptical Orchids and Garden Center are taxable.",
+  "x": "Tax exemption claims by charitable, religious and educational institutions (Art. VI, Sec. 28(3)).",
+  "test": "Exemption requires proof that (1) the institution is charitable and (2) the property is actually, directly and exclusively used for charitable purposes.",
+  "s": "Charitable exemption covers only property actually, directly and exclusively used for charity."
+ }
+]
