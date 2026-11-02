@@ -31,7 +31,7 @@ SETS = [
             ('Lagman_v_Medialdea_2017_Resolution', 'Lagman v. Medialdea (Resolution on MR)'),
             ('Padilla_v_Congress', 'Padilla v. Congress'),
             ('Lagman_v_Pimentel', 'Lagman v. Pimentel III'),
-            (None, 'Lagman v. Medialdea (2019)', 'G.R. No. 243522 · Feb. 19, 2019'),
+            ('Lagman_v_Medialdea_2019', 'Lagman v. Medialdea (2019)'),
             ('Olaguer_v_Military', 'Olaguer v. Military Commission No. 34'),
             ('In_re_De_Villa', 'In re De Villa')]},
     ]},
