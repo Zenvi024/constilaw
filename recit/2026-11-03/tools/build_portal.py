@@ -13,7 +13,8 @@ SETS = [
             ('Funa_v_CSC', 'Funa v. CSC'),
             ('Gaminde_v_COA', 'Gaminde v. COA'),
             ('Ifurung_v_Carpio-Morales', 'Ifurung v. Carpio-Morales'),
-            (None, 'Gonzales III v. Office of the President', 'G.R. No. 196231 · Sept. 4, 2012 and Jan. 28, 2014')]},
+            ('Gonzales_III_v_OP_2012', 'Gonzales III v. Office of the President'),
+            ('Gonzales_III_v_OP_2014', 'Gonzales III v. OP (Decision on MR)')]},
         {'key': 'clem', 'hue': 318, 'code': 'V.B.2(e)', 'name': 'Executive Clemency', 'note': '', 'rows': [
             ('Barrioquinto_v_Fernandez', 'Barrioquinto v. Fernandez'),
             ('Vera_v_People', 'Vera v. People'),
