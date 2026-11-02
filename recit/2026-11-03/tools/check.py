@@ -3,7 +3,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from parse import all_text_docx
 cases = json.load(open(sys.argv[2]))
 def ext(c):
-    T=[c['title']]
+    T=[c['title']] + [p['text'] for p in c.get('subtitle', [])]
     for h in c['headnote']: T.append(h['label']); T += [p['text'] for p in h['paras']]
     for s in c['sections']:
         T.append(s.get('label','')); T.append(s.get('kindLabel',''))

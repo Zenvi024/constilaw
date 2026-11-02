@@ -156,6 +156,8 @@ def parse(path):
     case = {'file': os.path.basename(path), 'title': '', 'headnote': [], 'sections': [], 'front': [], 'back': []}
     i = 0
     assert blocks[0][0] == 'p'; case['title'] = blocks[0][1]['text'].strip(); case['titleHtml'] = blocks[0][1]['html']; i = 1
+    case['subtitle'] = []  # note paragraphs between the title and the headnote table
+    while blocks[i][0] == 'p': case['subtitle'].append(blocks[i][1]); i += 1
     # headnote: the 3x4 table -> pairs (label, paras)
     t = blocks[i][1]; assert blocks[i][0] == 't' and plain(t[0][0]).startswith('Topic'), path
     for row in t:
@@ -189,6 +191,10 @@ def parse(path):
         rows = b; c0 = plain(rows[0][0])
         ncols = max(len(r) for r in rows)
         if c0.startswith('WRITE'):
+            if re.sub(r'[\sWRITE▸:]', '', c0):  # a labelled box, e.g. "WRITE ▸ (#1.1) ▸": keep the label
+                cur['write'] += [dict(p, wl=True) for p in rows[0][0]]
+            elif cur['write']:  # a second WRITE box in the same section: keep it visibly separate
+                cur['write'] += [dict(p, wl=True) for p in rows[0][0]]
             cur['write'] += rows[0][1] if len(rows[0]) > 1 else []
             for r in rows[1:]:
                 for c in r: cur['write'] += c
