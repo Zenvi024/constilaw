@@ -2,3 +2,5 @@ build/
 __pycache__/
 node_modules/
 .DS_Store
+# screenshots written by site/tests/digests.js on every run
+fd-*.png
