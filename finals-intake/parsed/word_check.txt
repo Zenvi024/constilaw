@@ -1,0 +1,184 @@
+Adaza_v_Aquino_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Agcaoili_v_Farinas_2018_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Agcaoili_v_Farinas_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Aguinaldo_v_Aquino_III_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Aguirre_v_Rana_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Akbayan_v_Aquino_2008_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Almora_v_Dela_Rosa_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Almora_v_Dela_Rosa_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Ampatuan_v_Puno_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Balag_v_Senate_2018_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Balag_v_Senate_2018_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Banda_v_Ermita_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Barrioquinto_v_Fernandez_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Barrioquinto_v_Fernandez_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bautista_v_Dannug-Salucon_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bayan_Muna_v_Romulo_2011_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bayan_Muna_v_Romulo_2011_Digest (2).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bayan_Muna_v_Romulo_2011_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bengzon_v_Drilon_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bengzon_v_Drilon_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bengzon_v_Senate_Blue_Ribbon_1991_Digest MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Bengzon_v_Senate_Blue_Ribbon_1991_Digest MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Biraogo_v_PTC_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Blaquera_v_Alcala_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Buenafe_v_COMELEC_2022_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Buklod_ng_Kawaning_EIIB_v_Zamora_Digest. MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+CSC_v_Andal_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Calderon_v_Carale_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Caram_v_Segui_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Chavez_v_JBC_2013_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Chavez_v_JBC_2013_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Civil_Liberties_Union_v_Executive_Secret MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Colmenares_v_Duterte_Digest.docx MISSING {} EXTRA {'Final': 1, 'Headnote': 1, 'Facts': 1, 'decision': 1}
+Constantino_v_Cuisia_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Corona_v_Senate_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Cristobal_v_Labrador_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Cristobal_v_Labrador_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Cruz_v_DENR_Digest_Kapunan (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Cruz_v_DENR_Digest_Kapunan.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Cuevas_v_Bacal_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+DBP_v_COA_2002_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+DENR_v_DENR_Region_12_Employees_2003_Dig MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+David_v_Macapagal-Arroyo_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+De_Castro_v_JBC_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+De_Leon_v_Duterte_2020_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+De_Lima_v_Duterte_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+De_Rama_v_CA_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+De_la_Llana_v_Alba_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+De_los_Santos_v_Mallare_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Deduro_v_Vinoya_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Dela_Cruz_v_COA_2001_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Dulay_v_JBC_2012_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Duterte_v_HOR_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 2, 'Final': 2}
+Duterte_v_HOR_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 2, 'Final': 2}
+Estrada_v_Desierto_2001_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Felipe_v_Leuterio_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Felipe_v_Leuterio_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Flores_v_Drilon_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Fortun_v_Macapagal-Arroyo_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Francisco_v_House_of_Representatives_Dig MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Funa_v_Agra_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Funa_v_Agra_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Funa_v_CSC_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Funa_v_CSC_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Funa_v_MECO_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Funa_v_Villar_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Funa_v_Villar_Digest (2).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Funa_v_Villar_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Gaminde_v_COA_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Gaminde_v_COA_Digest (2).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Gaminde_v_COA_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Garcia_v_Macaraig_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Garcillano_v_HOR_2008_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Garrido_v_Garrido_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+General_v_Urro_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Generillo_Jr_v_Senate_2026_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Gloria_v_CA_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'decision': 1, 'Facts': 1, 'Final': 1}
+Go_Tek_v_Deportation_Board_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Goh_v_Bayron_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Gonzales_III_v_OP_2012_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Gonzales_III_v_OP_2012_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Gonzales_III_v_OP_2014_MR_Digest (1).doc MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Gonzales_III_v_OP_2014_MR_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Gutierrez_v_HOR_Committee_on_Justice_Dig MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Hutchison_v_SBMA_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+IBP_v_Zamora_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Ifurung_v_Carpio-Morales_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Ifurung_v_Carpio-Morales_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+In_re_1989_IBP_Elections_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+In_re_Biraogo_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+In_re_De_Villa_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+In_re_Demetria_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+In_re_Edillon_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+In_re_Gadon_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+In_re_Gonzalez_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+In_re_Production_of_Court_Records_2012_D MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Jardeleza_v_Sereno_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Kilosbayan_Foundation_v_Ermita_Digest.do MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Lagman_v_Medialdea_2017_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Lagman_v_Medialdea_2017_Digest (2).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Lagman_v_Medialdea_2017_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Lagman_v_Medialdea_2017_Resolution_Diges MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Lagman_v_Medialdea_2019_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Lagman_v_Pimentel_III_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Larin_v_Executive_Secretary_1997_Digest. MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Legaspi_v_COMELEC_2016_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Macalintal_v_PET_2011_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Maceda_v_Vasquez_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Manalo_v_Sistoza_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Marcos_Jr_v_Republic_2014_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Marcos_Jr_v_Robredo_2021_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Marcos_v_Manglapus_1989_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Martinez_v_CA_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Matibag_v_Benipayo_2002_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Meralco_v_Pasay_Transportation_1932_Dige MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Monsanto_v_Factoran_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Monsanto_v_Factoran_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+NEA_v_COA_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+National_Amnesty_Commission_v_COA_2004_D MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Neri_v_Senate_Committees_2008_Digest.doc MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 2, 'Final': 2}
+Neri_v_Senate_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 2, 'Final': 2}
+Nicolas_v_Romulo_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Nitafan_v_CIR_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+OCA_v_Fuentes_III_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Ocampo_v_Secretary_of_Justice_Digest.doc MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Olaguer_v_Military_Commission_No_34_Dige MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Ong_v_Senate_2023_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Ong_v_Senate_Tricomm_2025_Digest (1).doc MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Ong_v_Senate_Tricomm_2025_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Padilla_v_Congress_2017_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Padilla_v_Congress_2017_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Pamatong_v_Duterte_2019_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Pangilinan_v_Cayetano_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+People_v_Gacott_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+People_v_Pilotin_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+People_v_Sola_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Philconsa-v-Enriquez-Detailed-Digest.doc MISSING {} EXTRA {'Headnote': 1, 'Facts': 1}
+Pimentel_v_Aguirre_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Pimentel_v_Ermita_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Pimentel_v_Executive_Secretary_2005_Dige MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Pimentel_v_Joint_Committee_2004_Digest.d MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Pimentel_v_LEB_2019_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Pimentel_v_LEB_2019_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Pormento_v_Estrada_2010_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Province_of_North_Cotabato_v_GRP_Peace_P MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Re_COA_Opinion_2012_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Re_COA_Opinion_2012_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Re_Delays_in_Sandiganbayan_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Re_Divina_2024_Consti_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Re_Letter_of_Mrs_Corona_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Re_PHCCI_Cooperatives_Court_Fees_2012_Di MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Re_PHCCI_Cooperatives_Court_Fees_2012_Di MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Rep_v_Sereno_2018_Resolution_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Republic_v_Sandiganbayan_2003_Digest.doc MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Republic_v_Sereno_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Republic_v_Sereno_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Risos-Vidal_v_COMELEC_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Rodriguez_v_Macapagal-Arroyo_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Sabio_v_Gordon_2006_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Saguisag_v_Ochoa_2016_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 2, 'decision': 2}
+Saguisag_v_Ochoa_2016_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 2, 'decision': 2}
+Sanlakas_v_Reyes_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Sarmiento_v_Mison_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Senate_v_Ermita_2006_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Senate_v_Medialdea_2022_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Soliven_v_Makasiar_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Soriano_v_Lista_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Special_Audit_Team_v_CA_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Sula_v_COMELEC_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+TIDCORP_v_CSC_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Torreon_v_HOR_Committee_on_Justice_Petit MISSING {} EXTRA {'Headnote': 1}
+Torreon_v_HOR_Committee_on_Justice_Petit MISSING {} EXTRA {'Headnote': 1}
+Torres_v_Gonzales_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Trillanes_IV_v_Medialdea_2024_Digest.doc MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+Umali_v_JBC_2017_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Velicaria-Garafil_v_OP_2015_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Vera_v_People_1963_Digest (1).docx MISSING {} EXTRA {'Headnote': 1, 'decision': 1, 'Facts': 1, 'Final': 1}
+Vera_v_People_1963_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'decision': 1, 'Facts': 1, 'Final': 1}
+Villanueva_v_JBC_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Water_for_All_v_MWSS_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Zabal_v_Duterte_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'Final': 1, 'decision': 1}
+Zaldivar_v_Sandiganbayan_Digest.docx MISSING {} EXTRA {'Headnote': 1, 'Facts': 1, 'decision': 1, 'Final': 1}
+Zoleta_v_Sandiganbayan_Digest.docx MISSING {} EXTRA {'decision': 1, 'Headnote': 1, 'Facts': 1, 'Final': 1}
+cases with MISSING words: 0 of 183
