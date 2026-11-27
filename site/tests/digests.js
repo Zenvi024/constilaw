@@ -1,5 +1,5 @@
-// node site/tests/digests.js [built-html]: the finals Digests tab — list, reader, versions, recall mode, card link, phone layout,
-// and the completeness check: every word of every source digest appears in the rendered reader text.
+// node site/tests/digests.js [built-html]: the finals Digests tab — list, reader (one digest per case), recall mode, card link, phone layout,
+// and the completeness check: every word of every source digest, except the hidden WRITE boxes and 5×8 card, appears in the rendered reader text.
 const {chromium} = require('playwright');
 const path = require('path'), fs = require('fs');
 const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.html');
@@ -19,11 +19,15 @@ const words = t => { const m = {}; for (const w of (t.toLowerCase().match(/[\p{L
     await p.click('#fdList .fdrow'); await p.waitForSelector('#fdDoc .fddoc');
     const first = await p.evaluate(() => ({title: document.querySelector('#fdRead h2').textContent, hn: !!document.querySelector('#fdDoc .fdhn'), jump: document.querySelectorAll('#fdRead .fdjump button').length}));
     check(tag, 'reader shows the digest', first.title.length > 5 && first.hn && first.jump >= 3, first);
-    const two = await p.evaluate(() => { const r = [...document.querySelectorAll('#fdList .fdrow')].find(x => /2 digests/.test(x.textContent)); if (r) r.click(); return !!r; });
+    // one digest per case: no version tabs, no WRITE boxes, no 5×8 card, no source labels; a decision and its resolution read as one
+    const plain = await p.evaluate(() => ({ver: !!document.querySelector('#fdRead .fdver'), write: /WRITE ▸|5×8 recit card/.test(document.querySelector('#fdRead').innerText), tags: [...document.querySelectorAll('#fdList .fdtag')].filter(t => /digests/.test(t.textContent)).length, src: /Zen|manual digest|block i-b|\.docx/i.test(document.querySelector('#fdRead').innerText)}));
+    check(tag, 'one digest, no versions, no WRITE boxes or 5×8 card, no source labels', !plain.ver && !plain.write && !plain.tags && !plain.src, plain);
+    const two = await p.evaluate(() => { const r = [...document.querySelectorAll('#fdList .fdrow')].find(x => /Gonzales III/.test(x.textContent)); if (r) r.click(); return !!r; });
     await p.waitForTimeout(300);
-    const vers = await p.$$eval('#fdRead .fdver button', x => x.length);
-    check(tag, 'a case with two digests offers both', two && vers === 2, [two, vers]);
-    if (vers === 2){ const t0 = await p.textContent('#fdDoc'); await p.click('#fdRead .fdver button:nth-child(2)'); await p.waitForTimeout(200); check(tag, 'switching versions changes the text', (await p.textContent('#fdDoc')) !== t0, ''); }
+    const vers = await p.evaluate(() => ({next: document.querySelectorAll('#fdDoc .fdnext').length, btn: [...document.querySelectorAll('#fdRead .fdjump button')].some(b => /Resolution|Next ruling/.test(b.textContent))}));
+    check(tag, 'decision and resolution read as one digest', two && vers.next === 1 && vers.btn, [two, vers]);
+    const hlc = await p.evaluate(() => [...new Set([...document.querySelectorAll('#fdDoc .hl-y, #fdDoc .hl-p, #fdDoc .hl-o')].map(h => getComputedStyle(h).backgroundColor))]);
+    check(tag, 'one highlight color', hlc.length === 1, hlc);
     // recall mode hides highlights; tapping one reveals it (use a digest that has highlights)
     await p.evaluate(() => { const rows = [...document.querySelectorAll('#fdList .fdrow')]; const r = rows.find(x => /Funa v\. Commission on Audit/.test(x.textContent)) || rows[20]; r.click(); });
     await p.waitForTimeout(300);
@@ -76,7 +80,7 @@ const words = t => { const m = {}; for (const w of (t.toLowerCase().match(/[\p{L
     }
     if (vp.width === 400 && scheme === 'dark') await p.screenshot({path: (process.env.SHOTS || '.') + '/fd-400-dark.png'}).catch(() => {});
     check(tag, 'no page errors', errs.length === 0, errs);
-    console.log(`${tag}: rows=${rows} first=${JSON.stringify(first)} versions=${vers} search=${hits} all=${all.n} errors=${errs.length}`);
+    console.log(`${tag}: rows=${rows} first=${JSON.stringify(first)} merged=${JSON.stringify(vers)} search=${hits} all=${all.n} errors=${errs.length}`);
     await p.close();
   }
   await b.close();

@@ -38,7 +38,7 @@ function setTab(t, push){
   if (t === "rules") requestAnimationFrame(spy);
   window.scrollTo({top: 0});
 }
-document.querySelector(".tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b) setTab(b.dataset.tab); });
+document.querySelector(".tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b){ NAV.length = 0; setTab(b.dataset.tab); navUI(); } });
 
 /* ================= countdown ================= */
 function manilaToday(){ // yyyy-mm-dd in Asia/Manila
@@ -66,7 +66,7 @@ applyTheme();
 /* ================= case modal ================= */
 function caseHTML(c){
   const t = TOP[c.t];
-  return `<div class="spread"><h3 id="mTitle">${esc(c.n)}</h3><button class="btn small ghost" data-close>Close</button></div>
+  return `<div class="spread"><h3 id="mTitle">${esc(c.n)}</h3><span class="row">${NAV.length ? `<button class="btn small" data-navback>← Back</button>` : ""}<button class="btn small ghost" data-close>Close</button></span></div>
   ${c.hk ? `<div style="margin:2px 0 6px">${hookChip(c, true)} <span class="tiny">${esc(HC_LBL[c.hc])}</span></div>` : ""}<div class="meta">${esc(c.y)} · ${esc(c.sub || (t ? t.name : ""))}${c.a ? " · anchor case" : ""}${c.ref ? " · mentioned in the rule maps; not on the syllabus list, not drilled" : ""}</div>
   <dl>
     <div><dt>Rule</dt><dd class="rule">${esc(c.r)}</dd></div>
@@ -77,8 +77,8 @@ function caseHTML(c){
   </dl>
   ${c.g ? `<div class="gatn"><strong>Gatmaytan:</strong> ${esc(c.g)}</div>` : ""}
   ${c.w ? `<div class="warnn"><strong>Caution:</strong> ${esc(c.w)}</div>` : ""}
-  ${c.dg ? `<details class="dgrev"><summary>2026 block reviewer: full digest</summary><div class="dgnote">Student-written class reviewer, kept as written. The card above was checked against it; where they differ, follow the card.</div>${dgHTML(c.dg)}</details>` : ""}
-  ${FD_BY_CARD[c.id] ? `<div><button class="btn small primary" data-fdcard="${c.id}">Read the full digest${FD_BY_CARD[c.id].length > 1 ? "s" : ""}</button></div>` : ""}
+  ${c.dg ? `<details class="dgrev"><summary>Reviewer notes</summary><div class="dgnote">Kept as written. The card above was checked against them; where they differ, follow the card.</div>${dgHTML(c.dg)}</details>` : ""}
+  ${FD_BY_CARD[c.id] ? `<div><button class="btn small primary" data-fdcard="${c.id}">Read the full digest</button></div>` : ""}
   ${t && t.sec ? `<div><button class="btn small" data-gosec="${t.sec}">Open the rule map: ${esc(t.name)}</button></div>` : ""}`;
 }
 function dgHTML(txt){
@@ -91,20 +91,53 @@ function dgHTML(txt){
 }
 let lastFocus = null;
 function openModal(html){ lastFocus = document.activeElement; $("modal").innerHTML = html; $("scrim").hidden = false; const b = $("modal").querySelector("[data-close]"); if (b) b.focus(); }
-function closeModal(){ $("scrim").hidden = true; $("modal").innerHTML = ""; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
-function openCase(id){ const c = CASE[id]; if (c) openModal(caseHTML(c)); }
+function closeModal(quiet){ $("scrim").hidden = true; $("modal").innerHTML = ""; CUR_CASE = null; if (!quiet && lastFocus && lastFocus.focus) lastFocus.focus(); navUI(); }
+function openCase(id){ const c = CASE[id]; if (!c) return; if (!$("scrim").hidden && CUR_CASE && CUR_CASE !== id) navPush(); CUR_CASE = id; openModal(caseHTML(c)); }
 $("scrim").addEventListener("click", e => {
   if (e.target === $("scrim") || e.target.closest("[data-close]")) { closeModal(); return; }
-  const g = e.target.closest("[data-gosec]"); if (g){ closeModal(); setTab("rules"); openSecById(g.dataset.gosec); }
+  if (e.target.closest("[data-navback]")){ e.stopPropagation(); navBack(); return; }
+  const g = e.target.closest("[data-gosec]"); if (g){ navPush(); closeModal(true); setTab("rules"); openSecById(g.dataset.gosec); }
 });
-document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("scrim").hidden) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("scrim").hidden){ e.preventDefault(); closeModal(); } });
 document.addEventListener("click", e => {
   const a = e.target.closest("a.cref,[data-case]"); if (a){ e.preventDefault(); openCase(a.dataset.c || a.dataset.case); return; }
   const r = e.target.closest("a.eref,[data-essay]"); if (r){ e.preventDefault(); openEssay(r.dataset.e || r.dataset.essay); return; }
   const s = e.target.closest("[data-spot]"); if (s){ e.preventDefault(); openSpot(s.dataset.spot); return; }
-  const v = e.target.closest("[data-rv]"); if (v){ e.preventDefault(); setTab("rules"); goToId(v.dataset.rv); return; }
+  const v = e.target.closest("[data-rv]"); if (v){ e.preventDefault(); navPush(); setTab("rules"); goToId(v.dataset.rv); return; }
 });
 const caseLinks = ids => (ids || []).filter(id => CASE[id]).map(id => `<a class="cref" data-c="${id}" href="#">${esc(CASE[id].n)}</a>`).join("; ");
+
+/* ================= navigation stack: "← Back" returns to where a link was followed ================= */
+// A snapshot holds the tab, the scroll position, the open case card (and its scroll) and the open digest.
+// Pushed when following a link: case card → digest or rule map, a case card from another, diagram and list links.
+let CUR_CASE = null, navSkip = false;
+const NAV = [];
+function navSnap(){
+  return {tab: store.get("tab", "today"), y: window.scrollY, c: $("scrim").hidden ? null : CUR_CASE, my: $("scrim").scrollTop,
+          sec: curSec, fd: typeof fdSel === "number" ? fdSel : -1, fdm: typeof fdReadingMobile === "boolean" ? fdReadingMobile : false};
+}
+function navPush(){ NAV.push(navSnap()); if (NAV.length > 30) NAV.shift(); try { history.pushState({nav: NAV.length}, "", location.hash); } catch(e){} navUI(); }
+function navBack(fromPop){
+  const s = NAV.pop(); if (!s){ navUI(); return; }
+  if (!fromPop){ navSkip = true; try { history.back(); } catch(e){ navSkip = false; } }
+  closeModal(true);
+  setTab(s.tab);
+  if (s.tab === "rules" && s.sec !== curSec) openSec(s.sec, false);
+  const finish = () => { window.scrollTo({top: s.y, behavior: "instant"}); if (s.c){ openCase(s.c); $("scrim").scrollTop = s.my; } navUI(); };
+  if (s.tab === "digests"){ fdSel = s.fd; fdReadingMobile = s.fdm; fdLoad().then(() => { renderDigests(); requestAnimationFrame(() => requestAnimationFrame(finish)); }); }
+  else requestAnimationFrame(() => requestAnimationFrame(finish));
+}
+function navUI(){
+  const b = $("navBackBtn"); if (!b) return;
+  b.hidden = !NAV.length || !$("scrim").hidden || document.body.classList.contains("focus");
+}
+window.addEventListener("popstate", () => { if (navSkip){ navSkip = false; return; } if (NAV.length) navBack(true); });
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape" || e.defaultPrevented || !$("scrim").hidden || document.body.classList.contains("focus") || !NAV.length) return;
+  if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) return;
+  navBack();
+});
+document.addEventListener("click", e => { if (e.target.closest("#navBackBtn,[data-navback]") && $("scrim").hidden){ e.preventDefault(); navBack(); } });
 
 /* ================= SRS ================= */
 const MIN = 60000, STEPS = [1, 10, 60, 360, 1440, 2880, 5760], STEP_LBL = ["1 min","10 min","1 hr","6 hr","1 day","2 days","4 days"];
@@ -458,7 +491,7 @@ document.addEventListener("click", e => {
   el.classList.add("rv"); el.querySelectorAll(COVER).forEach(x => x.classList.add("rv")); updTest(fig);
 }, true);
 // links from one diagram (or the hook wall and the issue radar) to another
-$("rcontent").addEventListener("click", e => { const a = e.target.closest("a.xref"); if (a){ e.preventDefault(); goToId(a.dataset.h); } });
+$("rcontent").addEventListener("click", e => { const a = e.target.closest("a.xref"); if (a){ e.preventDefault(); navPush(); goToId(a.dataset.h); } });
 // reading progress: a "mark read" switch at the end of every part of every rule map
 let READ = store.get("read", {});
 SECS.forEach(sec => {
@@ -1178,7 +1211,7 @@ function fdLoad(){
 const fdP = ps => (ps || []).map(p => p.list ? `<p class="fdp fdli" style="--lv:${p.list[2]}"><span class="fdlb">${esc(p.list[1])}</span><span>${p.html}</span></p>` : `<p class="fdp">${p.html}</p>`).join("");
 const fdL = ps => (ps || []).map(p => p.wl ? `<div class="fdwsub">${p.html}</div>` : p.list ? `<div class="fdwline fdli" style="--lv:${p.list[2]}"><span class="fdlb">${esc(p.list[1])}</span>${p.html}</div>` : `<div class="fdwline">${p.html}</div>`).join("");
 const fdT = ps => (ps || []).map(p => p.text).join(" ");
-const fdWrite = (lines, what) => lines && lines.length ? `<div class="fdw"><div class="fdwl">WRITE ▸ ${esc(what || "")}</div>${fdL(lines)}</div>` : "";
+const fdWrite = () => "";   // the WRITE ▸ boxes are not shown
 const fdAns = ps => { const t = fdT(ps).trim().toUpperCase(); return t.startsWith("YES") ? "fdyes" : t.startsWith("NO") && !t.startsWith("NOT") ? "fdno" : "fdoth"; };
 const fdMainIss = s => /^\s*Main/i.test(s.kindLabel || "");
 function fdParts(parts){
@@ -1195,8 +1228,8 @@ function fdCardFace(d, side){
 }
 function fdSection(s, k, pre){
   const id = `${pre}-${k}`;
-  if (s.kind === "headwrite") return `<div id="${id}">${fdWrite(s.write, "· headnote")}</div>`;
-  if (s.kind === "group") return `<div class="fdgrp" id="${id}">${s.labelHtml || esc(s.label)}</div>${(s.parts || []).length || (s.write || []).length ? `<section class="fdblk">${fdParts(s.parts || [])}${fdWrite(s.write, "· " + s.label)}</section>` : ""}`;
+  if (s.kind === "headwrite") return "";
+  if (s.kind === "group") return `<div class="fdgrp" id="${id}">${s.labelHtml || esc(s.label)}</div>${(s.parts || []).length ? `<section class="fdblk">${fdParts(s.parts)}</section>` : ""}`;
   if (s.kind === "issue"){
     const m = fdMainIss(s);
     return `<section class="fdblk fdis${m ? " fdmain" : ""}" id="${id}"><div class="fdih"><span class="fdn">${esc(s.label)}</span><span class="fdkind${m ? " fdmain" : ""}">${esc(s.kindLabel)}</span></div>
@@ -1215,8 +1248,7 @@ function fdDocHTML(id, pre){
   }
   const hn = `<div class="fdhn" id="${pre}-hn">${d.headnote.map(h => `<div class="fdk">${esc(h.label)}</div><div>${fdP(h.paras)}</div>`).join("")}</div>`;
   const sub = (d.subtitle || []).length ? `<div class="fdmeta">${fdP(d.subtitle)}</div>` : "";
-  const card = (d.front || []).length || (d.back || []).length ? `<section class="fdblk" id="${pre}-card"><h3>5×8 recit card</h3>${fdCardFace(d, "front")}${fdCardFace(d, "back")}</section>` : "";
-  return `<div class="fddoc">${sub}${hn}${d.sections.map((s, k) => fdSection(s, k, pre)).join("")}${card}</div>`;
+  return `<div class="fddoc">${sub}${hn}${d.sections.map((s, k) => fdSection(s, k, pre)).join("")}</div>`;   // no 5×8 card
 }
 function fdJump(id, pre){
   const d = FDZ[id] && FDZ[id].data; if (!d || d.raw) return "";
@@ -1227,10 +1259,9 @@ function fdJump(id, pre){
     else if (s.kind === "decision") L.push(["Decision", `${pre}-${k}`, ""]);
     else if (s.kind === "opinions") L.push(["Opinions", `${pre}-${k}`, ""]);
   });
-  if ((d.front || []).length) L.push(["5×8 card", pre + "-card", ""]);
   return `<div class="fdjump">${L.map(([l, h, c]) => `<button type="button" data-fdto="${h}" class="${c}">${esc(l)}</button>`).join("")}</div>`;
 }
-let fdScope = store.get("fdScope", "fin"), fdSel = store.get("fdSel", -1), fdVer = 0, fdBlur = store.get("fdBlur", false);
+let fdScope = store.get("fdScope", "fin"), fdSel = store.get("fdSel", -1), fdBlur = store.get("fdBlur", false);
 const fdFirstFin = FIN.findIndex(e => e.f);
 function fdVisible(){
   const q = ($("fdq").value || "").trim().toLowerCase();
@@ -1258,30 +1289,32 @@ function renderDigests(){
   $("fdList").innerHTML = rows.map(r => {
     if (r.h !== undefined){ const e = FIN[r.h]; return `<div class="fdh fdlv${e.lv}">${esc(e.h)}</div>`; }
     const e = FIN[r.i], n = (e.d || []).length;
-    return `<button type="button" class="fdrow${n ? "" : " fdnone"}" data-fde="${r.i}" aria-current="${r.i === fdSel}"><span>${esc(e.s)}</span>${n ? (n > 1 ? `<span class="fdtag">${n} digests</span>` : "") : e.card ? `<span class="fdtag">card</span>` : `<span class="fdtag">—</span>`}</button>`;
+    return `<button type="button" class="fdrow${n ? "" : " fdnone"}" data-fde="${r.i}" aria-current="${r.i === fdSel}"><span>${esc(e.s)}</span>${n ? "" : e.card ? `<span class="fdtag">card</span>` : `<span class="fdtag">—</span>`}</button>`;
   }).join("") || `<p class="empty">No case matches.</p>`;
   fdLoad().then(() => renderFdRead());
 }
 function renderFdRead(){
   const box = $("fdRead"), e = FIN[fdSel];
   $("fdWrap").classList.toggle("fdreading", !!e && window.innerWidth <= 900 && fdReadingMobile);
-  if (!e || e.h){ box.innerHTML = `<p class="fdempty">Pick a case on the left. Every digest here is shown in full, exactly as written in your files: headnote, facts, every issue, ruling, WRITE ▸ box and the 5×8 card.</p>`; return; }
-  const ids = e.d || []; if (fdVer >= ids.length) fdVer = 0;
-  const id = ids[fdVer], v = id && FDZ[id];
-  const ver = ids.length > 1 ? `<div class="fdver" role="group" aria-label="Versions">${ids.map((x, k) => `<button type="button" data-fdver="${k}" aria-pressed="${k === fdVer}">${esc((FDZ[x] && FDZ[x].data.title) ? (k + 1) + ". " + FDZ[x].label : x)}</button>`).join("")}</div>` : "";
-  box.innerHTML = `<div class="fdtop"><div class="fdbar"><button type="button" class="btn small fdback" data-fdback>← All digests</button></div>
-    <h2>${esc(v ? (v.data.title || e.s) : e.s)}</h2><div class="fdmeta">${esc(e.c)}${v ? " · " + esc(v.label) + " · " + esc(v.src.split("/").pop()) : ""}</div>
-    <div class="fdbar">${ver}${e.card ? `<button type="button" class="btn small" data-case="${e.card}">Case card</button>` : ""}${v ? `<button type="button" class="btn small" data-fdblur aria-pressed="${fdBlur}">${fdBlur ? "Show highlights" : "Hide highlights (recall)"}</button>` : ""}</div>
-    ${v ? fdJump(id, "fdx") : ""}</div>
-    <div class="fd${fdBlur ? " fdblur" : ""}" id="fdDoc">${v ? fdDocHTML(id, "fdx") : `<p class="fdempty">No digest for this case in your files${e.card ? "; open the case card instead" : ""}.</p>`}</div>`;
+  if (!e || e.h){ box.innerHTML = `<p class="fdempty">Pick a case on the left. Each digest is shown in full: headnote, facts, every issue, the ruling and the separate opinions.</p>`; return; }
+  const ids = (e.d || []).filter(x => FDZ[x]), v = ids.length ? FDZ[ids[0]] : null;
+  // a decision and its resolution are read as one digest, one after the other
+  const more = ids.slice(1).map((x, k) => `<div class="fdnext" id="fdx${k + 1}-top"><h2>${esc(FDZ[x].data.title || "")}</h2></div>${fdDocHTML(x, "fdx" + (k + 1))}`).join("");
+  const nextBtns = ids.slice(1).map((x, k) => `<button type="button" data-fdto="fdx${k + 1}-top">${/resolution|mr\b|motion/i.test(FDZ[x].data.title || x) ? "Resolution" : "Next ruling"}</button>`).join("");
+  let jump = v ? fdJump(ids[0], "fdx") : "";
+  if (jump && nextBtns) jump = jump.replace(/<\/div>$/, nextBtns + "</div>");
+  box.innerHTML = `<div class="fdtop"><div class="fdbar">${NAV.length ? `<button type="button" class="btn small primary" data-navback>← Back</button>` : ""}<button type="button" class="btn small fdback" data-fdback>← All digests</button></div>
+    <h2>${esc(v ? (v.data.title || e.s) : e.s)}</h2><div class="fdmeta">${esc(e.c)}</div>
+    <div class="fdbar">${e.card ? `<button type="button" class="btn small" data-case="${e.card}">Case card</button>` : ""}${v ? `<button type="button" class="btn small" data-fdblur aria-pressed="${fdBlur}">${fdBlur ? "Show highlights" : "Hide highlights (recall)"}</button>` : ""}</div>
+    ${jump}</div>
+    <div class="fd${fdBlur ? " fdblur" : ""}" id="fdDoc">${v ? fdDocHTML(ids[0], "fdx") + more : `<p class="fdempty">No digest for this case yet${e.card ? "; open the case card instead" : ""}.</p>`}</div>`;
 }
 let fdReadingMobile = false;
-function fdOpen(i, ver){ fdSel = i; fdVer = ver || 0; store.set("fdSel", i); fdReadingMobile = true; document.querySelectorAll(".fdrow").forEach(b => b.setAttribute("aria-current", +b.dataset.fde === i)); fdLoad().then(() => { renderFdRead(); $("fdRead").scrollIntoView({block: "start"}); }); }
-function openDigestFor(cardId){ const i = FIN.findIndex(e => e.card === cardId && e.d && e.d.length); if (i < 0) return; closeModal(); setTab("digests"); fdOpen(i); }
+function fdOpen(i){ fdSel = i; store.set("fdSel", i); fdReadingMobile = true; document.querySelectorAll(".fdrow").forEach(b => b.setAttribute("aria-current", +b.dataset.fde === i)); fdLoad().then(() => { renderFdRead(); $("fdRead").scrollIntoView({block: "start"}); }); }
+function openDigestFor(cardId){ const i = FIN.findIndex(e => e.card === cardId && e.d && e.d.length); if (i < 0) return; navPush(); closeModal(true); setTab("digests"); fdOpen(i); }
 document.addEventListener("click", e => {
   const r = e.target.closest("[data-fde]"); if (r){ fdOpen(+r.dataset.fde); return; }
   const s = e.target.closest("[data-fdscope]"); if (s){ fdScope = s.dataset.fdscope; store.set("fdScope", fdScope); renderDigests(); return; }
-  const v = e.target.closest("[data-fdver]"); if (v){ fdVer = +v.dataset.fdver; renderFdRead(); return; }
   const j = e.target.closest("[data-fdto]"); if (j){ const el = document.getElementById(j.dataset.fdto); if (el){ el.scrollIntoView({block: "start"}); el.classList.add("fdflash"); setTimeout(() => el.classList.remove("fdflash"), 1200); } return; }
   if (e.target.closest("[data-fdblur]")){ fdBlur = !fdBlur; store.set("fdBlur", fdBlur); renderFdRead(); return; }
   if (e.target.closest("[data-fdback]")){ fdReadingMobile = false; $("fdWrap").classList.remove("fdreading"); window.scrollTo({top: 0}); return; }

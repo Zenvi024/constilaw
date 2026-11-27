@@ -1186,7 +1186,7 @@ fig('15', 'after', '<h3 id="ocong-2026">VP Sara Duterte, 2024 to 2026: the whole
     hook='<em>2025: barred. 2026: impeached again.</em> Bar, forthwith, moot, two-thirds of the able.',
     wr=write(('C', '[State the answer to the card’s question].'), ('L', '[The rule for that step: Sec. 3(2), (4), (5), (6) or (7), with its case].'), ('A', '[Place the event on the timeline; apply the rule to the dates and votes.]'), ('R', 'Hence, [restate C].')),
     oral='For any news card on the Vice President’s impeachment, place the event on the timeline first. Then pick the rule: initiation and the one-year bar under Francisco, Gutierrez and Duterte v. House; the Senate’s timing under Generillo; mootness once the Articles reach the Senate, as in Torreon; and the two-thirds vote under Article XI, Section 3(6). Here, [the event is __], so the governing rule is [__].',
-    cap='Dates from the digests and the saved news articles (E_news). The verdict had not been rendered as of the latest news item (November 13, 2026).')
+    cap='Dates from the digests and saved news articles. The verdict had not been rendered as of the latest news item (November 13, 2026).')
 
 
 # =====================================================================

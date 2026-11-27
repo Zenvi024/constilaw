@@ -177,14 +177,35 @@ for o in syl:
 for e in entries:
     if 'd' in e and len(e['d']) > 1 and all(x.startswith('z:') for x in e['d']):
         pass  # keep syllabus-meaningful order (decision before resolution)
-for pair in [('z:Bengzon_v_Senate_Blue_Ribbon_1991', 'z:Bengzon_v_Senate_Blue_Ribbon_1991_1'), ('z:Padilla_v_Congress_2017_1', 'z:Padilla_v_Congress_2017'),
-             ('z:Neri_v_Senate', 'z:Neri_v_Senate_Committees_2008'), ('z:Agcaoili_v_Farinas', 'z:Agcaoili_v_Farinas_2018')]:
+DUPS = [('z:Bengzon_v_Senate_Blue_Ribbon_1991', 'z:Bengzon_v_Senate_Blue_Ribbon_1991_1'), ('z:Padilla_v_Congress_2017_1', 'z:Padilla_v_Congress_2017'),
+        ('z:Neri_v_Senate', 'z:Neri_v_Senate_Committees_2008'), ('z:Agcaoili_v_Farinas', 'z:Agcaoili_v_Farinas_2018'), ('z:Funa_v_Villar', 'z:Funa_v_Villar_1')]
+for pair in DUPS:
     for p in pair: assert p in LIB, p
+# Zen's rule (Nov. 27, 2026): one digest per case. Order: Zen's single digest > Zen's compilation > manual file > block.
+# Two of Zen's digests of the same ruling: keep the fuller. Two of Zen's digests of different rulings (a decision and its
+# resolution) stay together and are read as one continuous digest.
+fuller = lambda i: sum(SRCWORDS[i].values())
+DROP = set()
+for a, b in DUPS:
+    lose = b if fuller(a) >= fuller(b) else a
+    DROP.add(lose)
+for e in entries:
+    ds = e.get('d') or []
+    if not ds: continue
+    if ds[0].startswith('z:'):
+        keep_ids = sorted((i for i in ds if i.startswith('z:') and i not in DROP), key=lambda i: bool(re.search(r'Resolution|_MR', i)))   # decision first
+    else:
+        keep_ids = ds[:1]
+    DROP.update(i for i in ds if i not in keep_ids)
+    e['d'] = keep_ids
+DROP -= {i for e in entries for i in e.get('d', [])}
+for i in DROP: LIB.pop(i, None)
+print('dropped as duplicates or lower in the source order:', len(DROP))
 
 # digests not reached from any syllabus entry are still kept, listed at the end
 used = {i for e in entries for i in e.get('d', [])}
 extra = sorted(i for i in LIB if i not in used)
-entries.append({'h': 'Other digests in your files (not matched to a syllabus line)', 'lv': 0})
+entries.append({'h': 'Other digests (not matched to a syllabus line)', 'lv': 0})
 for i in extra:
     entries.append({'c': LIB[i]['data'].get('title', i), 's': LIB[i]['data'].get('title', i), 'f': False, 'x': False, 'card': None, 'd': [i], 'other': True})
 
@@ -208,9 +229,14 @@ print('digests:', len(LIB), '· with missing words:', bad)
 assert bad == 0
 
 json.dump({'entries': entries}, open(OUT + '/syllabus.json', 'w'), ensure_ascii=False, separators=(',', ':'))
-blob = json.dumps({i: {k2: v[k2] for k2 in ('kind', 'src', 'label', 'data')} for i, v in LIB.items()}, ensure_ascii=False, separators=(',', ':')).encode()
+blob = json.dumps({i: {'kind': v['kind'], 'data': v['data']} for i, v in LIB.items()}, ensure_ascii=False, separators=(',', ':')).encode()   # no source labels on the page
+json.dump({i: v['src'] for i, v in LIB.items()}, open(ROOT + '/finals-intake/parsed/digest_sources.json', 'w'), ensure_ascii=False, indent=1)
 open(OUT + '/digests.json.gz', 'wb').write(gzip.compress(blob, 9, mtime=0))
-json.dump({i: dict(c) for i, c in SRCWORDS.items()}, open(ROOT + '/finals-intake/parsed/source_words.json', 'w'), ensure_ascii=False)
+def hidden_words(d):
+    if d.get('raw'): return collections.Counter()
+    T = [p['text'] for s in d['sections'] for p in s.get('write', [])] + [p['text'] for p in d.get('front', []) + d.get('back', [])]
+    return W(' '.join(T))
+json.dump({i: dict(SRCWORDS[i] - hidden_words(v['data'])) for i, v in LIB.items()}, open(ROOT + '/finals-intake/parsed/source_words.json', 'w'), ensure_ascii=False)
 F = [e for e in entries if e.get('f')]
 print(f'entries: {sum(1 for e in entries if "c" in e)} ({len(F)} finals; finals without a digest: {sum(1 for e in F if not e["d"])}); extra digests listed: {len(extra)}')
 print(f'digests.json.gz: {len(blob)//1024} KB raw → {os.path.getsize(OUT + "/digests.json.gz")//1024} KB gzip')
