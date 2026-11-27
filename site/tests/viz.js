@@ -86,6 +86,13 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     await p.click('#fig-initiate .gate.cur .yn [data-a="y"]');
     const gut = await txt('#fig-initiate .walkout .vres'); check(tag, 'Gutierrez walk: one proceeding', /One proceeding/.test(gut), gut);
     await p.click('#fig-initiate .walkout [data-w="map"]');
+    // finals V.B.1–2(c): orals lines everywhere; the IRA walk ends where Pimentel v. Aguirre did
+    const pr = await p.evaluate(() => { const f = [...document.querySelectorAll('#pres figure.viz')]; return {n: f.length, oral: f.filter(x => x.querySelector('.vor')).length, walks: f.filter(x => x.querySelector('.walkbar')).length}; });
+    check(tag, 'V.B.1–2(c) diagrams carry orals lines', pr.n >= 9 && pr.oral === pr.n && pr.walks >= 6, pr);
+    await go('fig-lguorder'); await p.click('#fig-lguorder .walkbar .vchip:has-text("AO 372, Sec. 4")');
+    await p.click('#fig-lguorder .gate.cur .yn [data-a="n"]'); await p.click('#fig-lguorder .gate.cur .yn [data-a="y"]');
+    const ira = await txt('#fig-lguorder .walkout .vres'); check(tag, 'IRA walk: holdback void', /Sec\. 284/.test(ira), ira);
+    await p.click('#fig-lguorder .walkout [data-w="map"]');
     // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
     const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
     check(tag, 'no style leaks outside the diagrams', leak === 0, leak);

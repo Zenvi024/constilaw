@@ -30,12 +30,15 @@ AMBIG = {
     'Duterte': {'*': None},   # usually the person; link the cases by full name
     'Corona': {'*': None},    # two Corona cases and the person
     'Sereno': {'15': 'sereno'},  # elsewhere it is the Chief Justice (e.g., 'Sereno, C.J., dissented')
+    'Estrada': {'*': None},   # usually the person; link Estrada v. Arroyo and Pormento v. Estrada by full name
+    'De Leon': {'*': None},   # De Leon v. Duterte, but also De Leon v. Carpio and Justice De Leon
+    'Republic v. Sandiganbayan': {'16': 'swissdeposits', '*': 'repsandiganbayan'},  # two 2003 cases: Swiss deposits and Ramas-Dimaano
 }
 # names that are also people: link only as a citation, i.e. right after '(' or '; ' and before ')' ';' or ','
 CITE_ONLY = {'Marcos': {'05': 'marcos95', '07': 'marcos95'}, 'Aquino': {'05': 'aquino95', '07': 'aquino95'}, 'Garcia': {'12': 'garciaexecsec'}}
 # never link these words on their own
 STOP = {'People', 'Republic', 'Province', 'City', 'Philippine', 'Philippines', 'Senate', 'House', 'Commission', 'Council', 'Coalition', 'Association',
-        'Executive', 'Secretary', 'Social', 'Ang', 'An', 'The', 'Vera', 'Cruz', 'Co', 'Chavez', 'Planas', 'Lambino Group', 'Teves', 'Dimaporo', 'Muhlach', 'Gatmaytan', 'IBP'}
+        'Executive', 'Secretary', 'Social', 'Ang', 'An', 'The', 'Vera', 'Cruz', 'Co', 'Chavez', 'Planas', 'Lambino Group', 'Teves', 'Dimaporo', 'Muhlach', 'Gatmaytan', 'IBP', 'DENR', 'NEA'}
 # extra spellings used in the rule maps
 EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco', 'GTZ': 'gtz', 'Chavez v. PEA': 'chavezpea', 'In re JDF': 'jdf', 'JDF': 'jdf',
          'Ericta': 'ericta', 'PPI v. COMELEC': 'ppi', 'PPI': 'ppi', 'TELEBAP': 'telebap', 'Manila Memorial': 'manilamemorial', 'Manila Memorial Park v. DSWD': 'manilamemorial', 'Oposa': 'oposa', 'Kida': 'kida',
@@ -48,7 +51,10 @@ EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco'
          'Ong v. Senate (2023)': 'ong2023', 'Ong v. Senate, 2023': 'ong2023', 'Ong (2023)': 'ong2023', 'Ong 2023': 'ong2023', 'Ong v. Senate Tricomm': 'ong2025',
          'Pimentel v. Congress': 'pimentelcongress', 'Pimentel v. Joint Committee': 'pimentelcongress', 'Pimentel v. Executive Secretary': 'pimentelexec',
          'Duterte v. House': 'duterte2025', 'Corona v. Senate': 'coronasenate', 'Re: Corona': 'recorona', 'Re: Letter of Mrs. Corona': 'recorona',
-         'Gutierrez v. House': 'gutierrez', 'Generillo v. Senate': 'generillo', 'Generillo': 'generillo', 'Torreon': 'torreon', 'Republic v. Sereno': 'sereno'}
+         'Gutierrez v. House': 'gutierrez', 'Generillo v. Senate': 'generillo', 'Generillo': 'generillo', 'Torreon': 'torreon', 'Republic v. Sereno': 'sereno',
+         'Civil Liberties Union': 'clu', 'Cruz v. COA': 'cruzcoa', 'Dela Cruz v. COA': 'cruzcoa', 'National Amnesty Commission v. COA': 'nacoa',
+         'NAC v. COA': 'nacoa', 'Manglapus': 'manglapus', 'DENR v. DENR Region 12': 'denr12', 'Biraogo v. PTC': 'biraogo', 'Hutchison': 'hutchison',
+         'Hutchison v. SBMA': 'hutchison', 'North Cotabato': 'northcotabato', 'Pimentel v. Aguirre': 'pimentelaguirre', 'Estrada v. Desierto': 'estradaarroyo'}
 
 def build_aliases(cases, link_texts):
     al = {}

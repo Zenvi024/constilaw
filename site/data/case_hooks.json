@@ -878,5 +878,77 @@
  "torreon": {
   "k": "Moot after transmittal",
   "c": "sun"
+ },
+ "pormento": {
+  "k": "Lost, so moot",
+  "c": "sun"
+ },
+ "pamatong": {
+  "k": "Self-styled caretaker",
+  "c": "sun"
+ },
+ "buenafe": {
+  "k": "Fines only",
+  "c": "ok"
+ },
+ "swissdeposits": {
+  "k": "Swiss deposits forfeited",
+  "c": "ok"
+ },
+ "arelma": {
+  "k": "Arelma abroad",
+  "c": "ok"
+ },
+ "estradaarroyo": {
+  "k": "Ayoko na",
+  "c": "ok"
+ },
+ "deleon": {
+  "k": "Health records",
+  "c": "ok"
+ },
+ "clu": {
+  "k": "No second hat",
+  "c": "no"
+ },
+ "cruzcoa": {
+  "k": "Alternates too",
+  "c": "no"
+ },
+ "nacoa": {
+  "k": "Guests, not members",
+  "c": "no"
+ },
+ "manglapus": {
+  "k": "Residual power",
+  "c": "ok"
+ },
+ "denr12": {
+  "k": "Alter ego moves",
+  "c": "ok"
+ },
+ "banda": {
+  "k": "Printing monopoly ends",
+  "c": "ok"
+ },
+ "biraogo": {
+  "k": "Previous administration only",
+  "c": "no"
+ },
+ "blaquera": {
+  "k": "Bonus cap",
+  "c": "ok"
+ },
+ "hutchison": {
+  "k": "Award not final",
+  "c": "ok"
+ },
+ "neacoa": {
+  "k": "One Chief Executive",
+  "c": "ok"
+ },
+ "pimentelaguirre": {
+  "k": "No holdback",
+  "c": "no"
  }
 }

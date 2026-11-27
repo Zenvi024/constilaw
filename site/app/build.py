@@ -30,7 +30,7 @@ TOPICS = [  # key, name, syllabus part, rule-map section
     # finals (rule-map section ids are added as each batch writes its rule map)
     ('legproc', 'Congress: legislative process and investigations', 'V.A.7(c)–8', 'legproc'),
     ('ocong', 'Congress: other powers and impeachment', 'V.A.9', 'ocong'),
-    ('pres', 'The President: office, succession, executive power', 'V.B.1–2(c)', ''),
+    ('pres', 'The President: office, succession, executive power', 'V.B.1–2(c)', 'pres'),
     ('appt', 'Appointment and clemency', 'V.B.2(d)–(e)', ''),
     ('cinc', 'Commander-in-Chief, other powers, the Vice President', 'V.B.2(f)–(k), V.B.3', ''),
     ('court', 'The Supreme Court', 'V.C.1–2(o)', ''),

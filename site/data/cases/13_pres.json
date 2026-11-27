@@ -1,0 +1,318 @@
+[
+ {
+  "id": "pormento",
+  "n": "Pormento v. Estrada",
+  "y": "2010",
+  "t": "pres",
+  "sub": "V.B.1(a) Qualifications, election, term: the ban on “any reelection”",
+  "a": 0,
+  "r": "The Court did not interpret the ban on “any reelection” (Art. VII, Sec. 4): Estrada lost in 2010, so there was no actual case and the petition was moot. “Capable of repetition yet evading review” needs both a challenged action too short to litigate and a reasonable expectation that the same party will face it again; the second was missing.",
+  "f": "Joseph Estrada, elected President in 1998 and out of office since 2001, ran for President again in 2010. Atty. Pormento’s petition to disqualify him under the ban on “any reelection” was denied by the COMELEC Division and en banc. He filed certiorari on May 7, 2010, three days before the election, without asking for a TRO, so Estrada ran; he placed second, and Aquino was proclaimed.",
+  "h": "Petition denied due course and dismissed as moot (13–0, Corona, C.J., Resolution, August 31, 2010). There was no live conflict of legal rights and no relief to grant; the Court refused to make a “grand pronouncement” that would be only a non-binding opinion. The reelection question was left unanswered.",
+  "test": "Capable of repetition yet evading review: (1) the challenged action is too short in duration to be fully litigated before it ends; and (2) there is a reasonable expectation that the same complaining party will be subjected to the same action again.",
+  "x": "Use when a news card asks whether a former President, or a successor who served more than four years, may run again: quote Sec. 4 (“any reelection”; “no person who has succeeded as President and has served as such for more than four years”) and say the Court has never ruled on a non-immediate reelection (Pormento). Also for mootness after an election.",
+  "w": "The phrase “second (whether immediate or not) election” in the Resolution describes the premise of the question; it is not a ruling that the ban covers a non-immediate reelection.",
+  "s": "May Estrada run again? Moot after he lost in 2010; “any reelection” left uninterpreted.",
+  "sy": [
+   "Pormento v. Estrada"
+  ]
+ },
+ {
+  "id": "pamatong",
+  "n": "Pamatong v. Duterte",
+  "y": "2019",
+  "t": "pres",
+  "sub": "V.B.1(a) Election of the President: quo warranto by a private person",
+  "a": 0,
+  "r": "Quo warranto is the Government’s action; a private person may bring it only in his own name, claiming to be entitled to the office (Rule 66, Sec. 5). Against the President, that means a candidate who ran and lost to him. A private quo warranto must be filed within one year (Sec. 11); the State’s imprescriptible quo warranto (Republic v. Sereno) does not help him.",
+  "f": "In November 2015, Rodrigo Duterte substituted for PDP-Laban’s Martin Diño as presidential candidate; the COMELEC upheld the substitution and dismissed Pamatong’s nuisance petition against him. Pamatong’s own candidacy had been rejected as a nuisance candidacy, affirmed with finality on January 12, 2016. Duterte won and was inaugurated on June 30, 2016. On June 6, 2018, Pamatong filed quo warranto, calling Duterte a usurper and himself the “caretaker President.”",
+  "h": "Dismissed (unsigned Resolution, January 22, 2019). No standing: Pamatong was not a candidate who ran and lost to Duterte, so he had no claim to the office. Even with standing, the petition was late: his right, if any, arose on June 30, 2016 and prescribed on June 30, 2017. The validity of the substitution was not reached.",
+  "test": "A private person’s quo warranto: (1) he claims to be entitled to the office usurped (Rule 66, Sec. 5); and (2) he files within one year after the cause of ouster, or his right to the office, arose (Sec. 11).",
+  "x": "Use when someone other than a losing candidate challenges a sitting President’s title, or files years late. Contrast the State’s imprescriptible quo warranto (Republic v. Sereno) and the PET’s own quo warranto (within 10 days of proclamation, by any voter, on ineligibility or disloyalty).",
+  "w": "The Resolution restates Pamatong’s claim that Duterte substituted for Diño’s certificate “for Mayor of Pasay City,” but its own undisputed facts say Diño filed for President. No ponente or vote is stated.",
+  "s": "A nuisance candidate’s quo warranto against President Duterte: no standing, and filed out of time.",
+  "sy": [
+   "Pamatong v. Duterte"
+  ]
+ },
+ {
+  "id": "buenafe",
+  "n": "Buenafe v. COMELEC",
+  "y": "2022",
+  "t": "pres",
+  "sub": "V.B.1(a) Qualifications of the President: cancelling a candidate’s COC",
+  "a": 1,
+  "r": "A presidential candidate needs the constitutional qualifications and none of the statutory ineligibilities: a false claim of eligibility is material (OEC, Sec. 78). But failing to file tax returns is not moral turpitude, and perpetual disqualification is not deemed imposed unless the fallo says so. Winning does not cure, or moot, a lack of qualification.",
+  "f": "Ferdinand Marcos Jr. was convicted in 1995 for failing to file income tax returns for 1982 to 1985; the CA (1997) imposed fines only, with no imprisonment and no perpetual disqualification, and the judgment became final in 2001. Before the 2022 election, Buenafe and others petitioned to cancel his certificate of candidacy (Sec. 78), and Ilagan and others to disqualify him (Sec. 12). The COMELEC denied both. He won with 31,629,783 votes and was proclaimed on May 25, 2022, before the Court ruled.",
+  "h": "Petitions dismissed; COMELEC affirmed (13–0, Zalameda, J., June 28, 2022). Not moot, and the Court, not the PET, had jurisdiction because Marcos had not yet taken his oath and assumed office. He is not disqualified, and his statements that he is eligible were material but true.",
+  "test": "The PET takes over only when (a) a petition is filed with it (b) against a candidate validly proclaimed who has taken the oath and assumed office. Sec. 78 versus disqualification: different grounds (a deliberate false material representation versus a ground under Secs. 12 and 68), periods and effects (a cancelled COC means the person was never a candidate and cannot be substituted).",
+  "x": "Use for any challenge to a presidential candidate’s eligibility: what counts (constitutional and statutory), which remedy (Sec. 78 or Sec. 12), which forum (the COMELEC, then the Court under Rules 64 and 65, then the PET after oath and assumption), and why winning does not cure ineligibility.",
+  "w": "The eight separate concurring opinions are not in the files. Inting and Kho, JJ., took no part. Whether Marcos was still a public officer when his 1985 return fell due was not decided.",
+  "s": "Marcos Jr. is qualified: not filing tax returns is not moral turpitude, and no perpetual disqualification was imposed.",
+  "sy": [
+   "Buenafe v. Commission on Elections"
+  ]
+ },
+ {
+  "id": "swissdeposits",
+  "n": "Republic v. Sandiganbayan (Swiss deposits)",
+  "y": "2003",
+  "t": "pres",
+  "sub": "V.B.1(b) Privileges and salary: the President’s only lawful income",
+  "a": 0,
+  "r": "The Marcos Swiss deposits were forfeited as ill-gotten. Their only lawful income was their salaries (about US$304,000 in all): the Constitution barred the President from other emoluments and from managing a business. Wealth manifestly out of proportion to lawful income is presumed ill-gotten (RA 1379, Sec. 2), and the officer must prove other lawful income.",
+  "f": "In 1991 the Republic, through the PCGG, sued under RA 1379 to forfeit US$356 million held in Swiss banks by foundations that Ferdinand and Imelda Marcos had set up through dummies and aliases (“William Saunders,” “Jane Ryan”). The Marcoses’ answer denied for “lack of knowledge” and called the money lawfully acquired; they later signed settlement agreements, Imelda claimed 90% of it, and at pre-trial they disowned it. The Sandiganbayan granted summary judgment in 2000, then reversed itself in 2002.",
+  "h": "Petition granted (12–0, Corona, J., July 15, 2003). The deposits in escrow at PNB (US$658,175,373.60 as of January 31, 2002, plus interest) were forfeited to the Republic. There was no genuine issue: the denials were sham and the admissions binding; the presumption arose and was not rebutted. Laches and estoppel do not run against the State.",
+  "test": "The prima facie presumption of ill-gotten wealth (RA 1379, Sec. 2): (1) a public officer (2) acquired a considerable amount during his incumbency (3) manifestly out of proportion to his salary and other lawful income. The officer must then prove lawful acquisition.",
+  "x": "Use with Art. VII, Sec. 6: the President’s salary is fixed by law and he may receive no other emolument, so his salary is his whole lawful income; wealth beyond it is presumed ill-gotten, and the officer, not the State, must prove any other lawful income.",
+  "w": "Not the same case as Republic v. Sandiganbayan (Ramas-Dimaano, 2003) on the revolutionary government. The Decision dates the assailed Resolution January 31, 2002 throughout but “January 21, 2002” once.",
+  "s": "Swiss deposits forfeited: Marcos wealth far beyond the President’s lawful salary is presumed ill-gotten.",
+  "sy": [
+   "Republic v. Sandiganbayan, G.R. No. 152154"
+  ]
+ },
+ {
+  "id": "arelma",
+  "n": "Marcos, Jr. v. Republic",
+  "y": "2014",
+  "t": "pres",
+  "sub": "V.B.1(b) Privileges and salary: ill-gotten wealth abroad (Arelma)",
+  "a": 0,
+  "r": "Winning on the Swiss deposits did not bar a later partial summary judgment on other assets named in the same forfeiture petition: it is a separate judgment (Rule 36, Sec. 5). Forfeiture is in rem or quasi in rem; filing the case gives the Sandiganbayan potential jurisdiction over assets abroad. How to enforce the judgment is a separate, ministerial matter.",
+  "f": "The Republic’s 1991 forfeiture petition also listed Arelma, an entity created by Ferdinand Marcos that kept an account with Merrill Lynch in New York. In 2009 the Sandiganbayan granted partial summary judgment forfeiting Arelma’s assets, and the Court affirmed on April 25, 2012. Marcos Jr. and Imelda Marcos moved for reconsideration: the case had ended with the Swiss deposits, the Republic had reserved a separate action, and the court had no jurisdiction over assets in the United States.",
+  "h": "Motions for reconsideration denied with finality (5–0, Sereno, C.J., Special Second Division, March 12, 2014). The Arelma forfeiture stands.",
+  "x": "Use for the reach of the forfeiture of a former President’s ill-gotten wealth: assets hidden abroad can still be declared forfeited at home, and enforcement is a separate question. Pair it with the Swiss deposits case and Art. VII, Sec. 6.",
+  "w": "The Resolution calls the entity both “Arelma, S.A.” and “Arelma, Inc.” The April 25, 2012 Decision it reconsiders is not in the files.",
+  "s": "Arelma’s New York assets forfeited: filing the case gives potential jurisdiction over a res abroad.",
+  "sy": [
+   "Marcos, Jr. v. Republic"
+  ]
+ },
+ {
+  "id": "estradaarroyo",
+  "n": "Estrada v. Arroyo",
+  "y": "2001",
+  "t": "pres",
+  "sub": "V.B.1(c) Succession: resignation, temporary inability, and immunity after office",
+  "a": 1,
+  "r": "Resignation needs intent to resign and acts of relinquishment, in any form, judged by the totality of prior, contemporaneous and posterior acts: Estrada resigned on January 20, 2001. Whether a President is only temporarily unable (Sec. 11) is for Congress, which recognized Arroyo. A former President has no immunity from suits for crimes committed in office.",
+  "f": "After the jueteng exposé, the House impeached President Estrada in November 2000. On January 16, 2001, the Senate voted 11–10 not to open the “second envelope”; the prosecutors walked out and EDSA II began. The AFP and PNP withdrew support, and on January 20 Chief Justice Davide swore in Vice-President Arroyo. Estrada left Malacañang with a statement doubting her legality, and sent Congress a letter declaring himself unable to act (Sec. 11). He then sued to be declared a President on leave and to stop the Ombudsman’s cases against him.",
+  "h": "Petitions dismissed; Arroyo is the de jure 14th President (11–0 in the result, Puno, J., March 2, 2001). The case raised legal, not political, questions: EDSA II was intra-constitutional, unlike EDSA I. Estrada resigned (the Angara Diary; his farewell statement); RA 3019, Sec. 12 did not bar it; his claim of inability had been rejected by Congress; he had no immunity, and no impeachment conviction was needed first.",
+  "test": "Resignation: intent to resign plus acts of relinquishment; no formal requirement (oral or written, express or implied); with no letter, the totality of prior, contemporaneous and posterior facts.",
+  "x": "Use for vacancy and succession (Art. VII, Sec. 8): did the President resign, die, become permanently disabled or get removed? For a claim of temporary inability, Sec. 11 leaves it to Congress. And for prosecuting a former President for acts in office.",
+  "w": "Davide, C.J. and Panganiban, J. took no part; the separate opinions reserved by Kapunan, Ynares-Santiago and Sandoval-Gutierrez, JJ. are not in the files. The Decision gives Arroyo’s oath as 12:00 noon in one place and about 12:30 p.m. in another.",
+  "s": "EDSA II: Estrada resigned by his acts; Congress recognized Arroyo; no immunity after office.",
+  "sy": [
+   "Estrada v. Arroyo"
+  ]
+ },
+ {
+  "id": "deleon",
+  "n": "De Leon v. Duterte",
+  "y": "2020",
+  "t": "pres",
+  "sub": "V.B.1(c) The President’s serious illness (Art. VII, Sec. 12)",
+  "a": 0,
+  "r": "Art. VII, Sec. 12 requires the public to be told of the President’s health only in case of serious illness, and leaves the means of disclosure to the Office of the President. There is no ministerial duty to release medical records, so mandamus will not lie. Serious illness must be shown; news articles are hearsay twice removed.",
+  "f": "Citing President Duterte’s absences and his March 12, 2020 COVID-19 press conference, De Leon asked the Office of the President, under the Freedom of Information order, for the President’s medical records; the Records Office said it had none. He then sought mandamus to compel disclosure of all medical and psychological records since 2016 and new examinations, relying on Sec. 12, the right to information and full public disclosure.",
+  "h": "Dismissed outright (unsigned Resolution, May 8, 2020), with Leonen and Caguioa, JJ., dissenting. No prima facie case for mandamus: no clear legal right and no ministerial duty; the claims of illness rested on news reports, and the President was visibly holding Cabinet meetings and televised addresses.",
+  "x": "Use when the public demands the President’s medical records: Sec. 12 is triggered by serious illness, and the Office of the President chooses the means; mandamus will not lie. Then argue the other side with the right to information, which the Court did not resolve.",
+  "w": "The dissents of Leonen and Caguioa, JJ. are not in the files. The right-to-information claim (Art. III, Sec. 7) and the prayer for new examinations were not resolved.",
+  "s": "No mandamus for the President’s medical records: Sec. 12 leaves the means of disclosure to the Office of the President.",
+  "sy": [
+   "De Leon v. Duterte"
+  ]
+ },
+ {
+  "id": "clu",
+  "n": "Civil Liberties Union v. Executive Secretary",
+  "y": "1991",
+  "t": "pres",
+  "sub": "V.B.1(e)–(f) Prohibitions on the President’s official family, and the ex officio exception",
+  "a": 1,
+  "r": "Art. VII, Sec. 13 is stricter than Art. IX-B, Sec. 7(2): the President, VP, Cabinet members and their deputies or assistants may hold no other office, public or private, unless the Constitution itself provides. EO 284 (two extra posts allowed) is void. Exception: posts held ex officio, as provided by law and required by primary functions, without additional compensation.",
+  "f": "Executive Order No. 284 (July 25, 1987), resting on a DOJ opinion, allowed Cabinet members, undersecretaries and assistant secretaries to hold up to two other government or GOCC positions besides their primary posts, with pay. Under Marcos, Cabinet members had sat on dozens of GOCC boards each, collecting per diems and perquisites. Two groups of citizens challenged EO 284.",
+  "h": "Petitions granted; EO 284 declared null and void (13–0, Fernan, C.J., February 22, 1991), subject to the ex officio exception. Five Secretaries were ordered to give up their other posts at once; as to the others the petitions were moot. Having served as de facto officers, they keep the pay received for actual services.",
+  "test": "Ex officio exception: the post is (1) provided by law, (2) required, not merely allowed, by the primary functions of the official’s office, and (3) held without additional compensation (no per diem, honorarium or allowance, by whatever name).",
+  "x": "Use whenever a Cabinet member, undersecretary or assistant secretary is named to a GOCC board, a commission or a private post: is it ex officio, required by the primary functions, and unpaid? If not, Sec. 13 forbids it. Contrast the looser rule for other appointive officials (Art. IX-B, Sec. 7(2): allowed by law or by primary functions).",
+  "s": "EO 284 void: the President’s official family may hold no other office, except unpaid ex officio posts required by their functions.",
+  "sy": [
+   "Civil Liberties Union"
+  ]
+ },
+ {
+  "id": "cruzcoa",
+  "n": "Cruz v. Commission on Audit",
+  "y": "2001",
+  "t": "pres",
+  "sub": "V.B.1(f) Exceptions to the prohibition: alternates of ex officio members",
+  "a": 0,
+  "r": "Cabinet Secretaries sitting ex officio on a board may receive no additional compensation (Civil Liberties Union), so their alternates, whose acts are the acts of their principals, cannot receive it either: “a contrary rule would give petitioners a better right than their principals.”",
+  "f": "Under PD 757, the NHA Board consists of several Cabinet Secretaries and others, who may have alternates “whose acts shall be considered the acts of their principals.” From 1991 to 1996, Eleanor Dela Cruz and 19 others sat as alternates of the Secretaries of Finance, Trade and Industry, Labor, and Public Works, and were paid per diems and representation allowances. The COA disallowed ₱276,600 paid after Civil Liberties Union became final (August 19, 1991). They argued that the ban covers only Cabinet members and their deputies and assistants, and that they were of lower rank.",
+  "h": "Petition dismissed (13–0, Sandoval-Gutierrez, J., November 29, 2001); the disallowance stands. The alternates’ positions are derivative: they cannot receive what their principals are barred from receiving.",
+  "x": "Use when the official on a board is not the Secretary but an alternate or representative: the ban on extra pay follows the principal down. Pair with National Amnesty Commission v. COA.",
+  "w": "The syllabus lists the case as “Cruz v. Commission on Audit”; the decision is captioned Dela Cruz v. COA. The Court did not separately address the alternates’ rank below Assistant Secretary.",
+  "s": "Alternates of ex officio Cabinet members cannot be paid what their principals cannot.",
+  "sy": [
+   "Cruz v. Commission on Audit"
+  ]
+ },
+ {
+  "id": "nacoa",
+  "n": "National Amnesty Commission v. Commission on Audit",
+  "y": "2004",
+  "t": "pres",
+  "sub": "V.B.1(f) Exceptions to the prohibition: representatives of ex officio members",
+  "a": 0,
+  "r": "Representatives of Cabinet members sitting ex officio are barred from extra pay by both provisions: no law created their positions or authorized pay (Art. IX-B, Sec. 7(2)), and designation is not appointment; and their principals cannot be paid (Art. VII, Sec. 13). The representative cannot have a better right than his principal, and a mere designee is not a de facto officer.",
+  "f": "The National Amnesty Commission (1994) had three ex officio members: the Secretaries of Justice, National Defense, and the Interior and Local Government. After the first meetings, they sent representatives, all below Assistant Secretary, who were paid honoraria from December 1994. In 1997 the COA disallowed ₱255,750 under a memorandum enforcing Civil Liberties Union. A 1999 NAC administrative order said the representatives “shall be entitled to per diems … as may be authorized by law”; the COA declared that clause void.",
+  "h": "Petition dismissed (12–0, Corona, J., September 8, 2004); the disallowance stands. The COA memorandum needed no publication; the COA could reopen accounts within three years; and the representatives are not de facto officers. But the administrative order’s clause is valid on its face: no law authorizes the pay, and representatives may attend only as guests, not vote or count toward a quorum.",
+  "test": "Appointment versus designation: an appointment selects a person to exercise an office; a designation merely adds duties to one already in the service, and does not carry the salary of the position.",
+  "x": "Use when a Cabinet member sends a representative to a commission or board and the representative is paid, votes or counts toward the quorum. Two prohibitions apply: Art. IX-B, Sec. 7(2) (no law, no pay) and Art. VII, Sec. 13 (no better right than the principal).",
+  "s": "Representatives of ex officio Cabinet members: no honoraria, no vote, not de facto officers.",
+  "sy": [
+   "National Amnesty Commission"
+  ]
+ },
+ {
+  "id": "manglapus",
+  "n": "Marcos v. Manglapus",
+  "y": "1989",
+  "t": "pres",
+  "sub": "V.B.2(a) Executive power: the residual powers of the President",
+  "a": 1,
+  "r": "Executive power is more than the sum of the powers the Constitution lists: the President keeps residual, unstated powers implicit in the duty to protect the general welfare, including the power, as protector of the peace, to bar the Marcoses’ return. The right to return is distinct from the right to travel. The Court asks only whether factual bases support the decision.",
+  "f": "Ferdinand Marcos, ousted in February 1986 and in exile in Hawaii, asked to return to the Philippines to die. Amid coup attempts by his loyalists, a communist insurgency, a Mindanao secessionist movement and an economy still recovering from plunder, President Aquino barred him and his family from returning. 103 Representatives urged her to relent. The Marcoses sought mandamus and prohibition to compel the issuance of travel documents.",
+  "h": "Petition dismissed (Cortes, J., September 15, 1989; seven Justices concurred and six dissented in the printed vote). Justiciable, but limited to grave abuse: factual bases existed (the briefing by the AFP and the National Security Adviser; the “catalytic effect” of the return on the threats), so the President did not act arbitrarily.",
+  "test": "Review of a residual-power decision: not whether the President was right, but whether factual bases exist for her conclusion (Lansang v. Garcia); if they do, there is no grave abuse.",
+  "x": "Use when the President acts without a specific constitutional or statutory grant (bars entry, creates a body, takes a peace-and-order measure): argue residual executive power under Art. VII, Sec. 1 and the duty to protect the general welfare, then test for factual bases. The dissents give the other side: rights, not power, and no law authorizes the restriction.",
+  "w": "The printed vote lists seven concurring (with the ponente) and six dissenting; later decisions (Sanlakas; North Cotabato) describe it as decided “by a slim 8–7 margin.” The Court said the case “should not create a precedent.” The dissenters’ dates for the closed-door briefing differ.",
+  "s": "Aquino could bar the Marcoses’ return: residual executive power to protect the general welfare.",
+  "sy": [
+   "Marcos v. Manglapus"
+  ]
+ },
+ {
+  "id": "denr12",
+  "n": "DENR v. DENR Region 12 Employees",
+  "y": "2003",
+  "t": "pres",
+  "sub": "V.B.2(a)–(b) Executive power and control: qualified political agency and reorganization",
+  "a": 0,
+  "r": "Under qualified political agency, department heads are the President’s alter egos: their acts in the regular course of business are presumptively the President’s unless he disapproves them. The President’s continuing power to reorganize the executive branch may be delegated to the Secretary, who may move a regional office. Whether the move is timely is a matter of wisdom, not legality.",
+  "f": "Under a 1999 DENR administrative order realigning regional units, the Region XII Executive Director ordered the regional offices moved from Cotabato City to Koronadal, South Cotabato (the regional center under EO 429, issued under the ARMM Organic Act). Employees sued; the RTC enjoined the transfer and ordered the offices returned. The CA dismissed the DENR’s certiorari petition on procedural defects.",
+  "h": "Petition granted; the CA resolutions and the RTC decision reversed and the injunction lifted (4–0, Ynares-Santiago, J., First Division, August 19, 2003). The Court relaxed the rules given the public interest; the Secretary validly ordered the transfer; the objections went to its wisdom.",
+  "test": "Qualified political agency: the Secretaries’ acts in the regular course of business are presumptively the President’s, unless the Constitution or law requires the President to act personally, or the President disapproves or reprobates them.",
+  "x": "Use when a Secretary’s order is attacked as lacking the President’s personal approval: the Secretary is the alter ego, and the act stands unless the President disowns it or the Constitution requires the President to act in person. Also for reorganizing or transferring offices.",
+  "w": "The respondent’s representative is “Baguidali Karim” in the caption and “Baguindanai A. Karim” in the body. The state immunity and cause-of-action arguments were not separately ruled on.",
+  "s": "The DENR Secretary, as alter ego, may move a regional office: qualified political agency and delegated reorganization.",
+  "sy": [
+   "DENR v. DENR"
+  ]
+ },
+ {
+  "id": "banda",
+  "n": "Banda v. Ermita",
+  "y": "2010",
+  "t": "pres",
+  "sub": "V.B.2(a)–(b) Executive power: the President’s power to reorganize",
+  "a": 0,
+  "r": "The President may reorganize the executive branch under the power of control (Art. VII, Sec. 17) and the continuing authority Congress delegated (Administrative Code, Book III, Sec. 31; the GAAs). Besides abolishing, merging and transferring, she may make lesser changes, such as narrowing an agency’s functions. The power excludes the Judiciary, Congress and constitutional bodies, and must be exercised in good faith.",
+  "f": "EO 285 (1987), issued by President Aquino while she still had legislative powers, created the National Printing Office with exclusive jurisdiction over government printing. In 2004, President Arroyo issued EO 378: the NPO would keep election printing but compete with private printers for other government work, and its appropriation would be limited to its income. NPO employees, styling the case a class suit, argued that only Congress could amend EO 285 and that EO 378 would lead to the NPO’s abolition.",
+  "h": "Petition dismissed and TRO denied (14–0, Leonardo-de Castro, J., April 20, 2010). Not a valid class suit, but the Court ruled on the merits. EO 378 is a valid exercise of the President’s continuing delegated power to reorganize the Office of the President: it abolished and transferred nothing; it only altered a function. No bad faith was proved.",
+  "test": "Valid reorganization: (1) within the Executive (the OP and the executive departments and agencies; not the Judiciary, Congress or constitutional bodies); (2) authorized by the power of control and a statute; (3) in good faith, for economy or efficiency (Dario v. Mison). Bad faith must be proved by whoever alleges it.",
+  "x": "Use when the President, by executive order, abolishes, merges, transfers or trims an executive agency, or when employees claim the reorganization is a disguised dismissal. Then check the limits: executive agencies only, and good faith.",
+  "w": "Carpio, J. concurred in the result on a different ground (EO 378 implements the procurement law); his view that PD 1416 is an undue delegation is the best argument against the majority’s broad reading.",
+  "s": "EO 378 ending the NPO’s printing monopoly is valid: the President’s delegated power to reorganize her office.",
+  "sy": [
+   "Banda v. Ermita"
+  ]
+ },
+ {
+  "id": "biraogo",
+  "n": "Biraogo v. Philippine Truth Commission of 2010",
+  "y": "2010",
+  "t": "pres",
+  "sub": "V.B.2(a)–(b) Executive power: creating a fact-finding body; control is not creation",
+  "a": 1,
+  "r": "The President may create an ad hoc fact-finding body under the duty to ensure that the laws are faithfully executed (Art. VII, Sec. 17), not under the power to reorganize (which alters existing offices), the power of control (which reviews subordinates’ acts), or PD 1416 (functus officio). But EO 1 violated equal protection by singling out the “previous administration,” one member of the class of past administrations.",
+  "f": "President Benigno Aquino III, elected on an anti-corruption platform, issued EO 1 (July 30, 2010) creating the Philippine Truth Commission to investigate reports of large-scale graft “during the previous administration” of President Arroyo and recommend action to the President, Congress and the Ombudsman. It had subpoena powers but no contempt power and could not adjudicate. A citizen-taxpayer and four Representatives sued.",
+  "h": "Petitions granted; EO 1 declared unconstitutional insofar as it violates equal protection, and its implementation stopped (10–5, Mendoza, J., December 7, 2010). The President had the power to create the Commission; it did not usurp the power to appropriate (an allotment of OP funds) or supplant the Ombudsman and the DOJ (fact-finding is not adjudication). The defect was the deliberate singling out of one administration.",
+  "test": "Reasonable classification (Victoriano): (1) substantial distinctions; (2) germane to the purpose; (3) not limited to existing conditions; (4) applies equally to all members of the class. Equal protection binds the Executive too.",
+  "x": "Use when the President creates a commission or task force by executive order: the source of the power is the faithful-execution clause (not reorganization or control); funding from existing OP appropriations is an allotment; findings are only recommendatory. Then check whom it targets: picking one administration or group deliberately invites the equal protection objection. The dissents give the other side.",
+  "w": "Abad, J. is listed among those who “concur” but wrote a dissent joining Carpio, J. Several concurring opinions (Corona, Leonardo-de Castro, Brion, Peralta, Bersamin, Perez) are not in the files.",
+  "s": "Truth Commission: the President may create a fact-finding body, but EO 1 singled out one administration.",
+  "sy": [
+   "Biraogo"
+  ]
+ },
+ {
+  "id": "blaquera",
+  "n": "Blaquera v. Alcala",
+  "y": "1998",
+  "t": "pres",
+  "sub": "V.B.2(b) Control of executive departments: capping and recalling bonuses",
+  "a": 1,
+  "r": "Control is the power to alter, modify or set aside what a subordinate has done and substitute one’s own judgment; the President may exercise it motu proprio. Capping productivity bonuses, requiring prior presidential approval and ordering refunds of the excess was valid control, not an encroachment on the CSC. Bodies with fiscal autonomy are not covered.",
+  "f": "President Aquino’s AO 268 (1992) granted productivity incentive benefits for 1991 and barred agency heads from granting them in later years pending a study. Some agencies paid 1992 incentives anyway. President Ramos’s AO 29 (1993) capped the 1992 benefit at ₱1,000, barred further grants without prior approval by administrative order, and ordered the excess refunded; salaries were docked. Employees of several departments, and employees of the Philippine Tourism Authority whose bonus the COA disallowed, sued.",
+  "h": "Petitions dismissed; the AOs are valid (13–0, Purisima, J., September 11, 1998). But since everyone acted in good faith, the employees need not refund the 1992 benefits, and further deductions were stopped. The COA’s disallowance of the PTA bonus was affirmed: RA 6971 covers only private firms and GOCCs under the general corporation law.",
+  "test": "Control (Mondano v. Silvosa): the power to alter, modify, nullify or set aside what a subordinate did in the performance of his duties, and to substitute one’s judgment for his. Contrast supervision: seeing that subordinates perform their duties, without substituting judgment.",
+  "x": "Use when the President overrides, caps, reverses or claws back what a department or agency head did: control lets the President substitute his judgment, motu proprio. Then check the limits: the agency must be in the Executive (not a body with fiscal autonomy), and good-faith recipients may keep what they received.",
+  "s": "The President may cap and recall agencies’ bonuses: the power of control; good-faith recipients need not refund.",
+  "sy": [
+   "Blaquera v. Alcala"
+  ]
+ },
+ {
+  "id": "hutchison",
+  "n": "Hutchison Ports Philippines v. SBMA",
+  "y": "2000",
+  "t": "pres",
+  "sub": "V.B.2(b) Control of executive departments: reversing a chartered agency’s award",
+  "a": 0,
+  "r": "The SBMA, a chartered instrumentality, is under the control and supervision of the Office of the President; contracts of ₱2 million and up need the President’s approval (LOI 620). The President may, for justifiable reasons, overturn the SBMA Board’s award and order a rebidding, so an award not yet approved gives the winning bidder no clear right.",
+  "f": "In 1996 the SBMA bid out a container terminal in the Subic Bay Freeport. Its committee rejected ICTSI’s bid and awarded the project to Hutchison Ports (HPPL), whose business plan the consultants rated “far superior.” On ICTSI’s appeal, President Ramos ordered a re-evaluation; the SBMA Board again chose HPPL. The Office of the President then directed the SBMA not to sign with HPPL and to rebid. HPPL sued for specific performance and asked the Supreme Court to stop the rebidding.",
+  "h": "Petition dismissed and TRO lifted (Ynares-Santiago, J., First Division, August 31, 2000). HPPL had no clear and unmistakable right: the award was not final without the President’s approval, and setting it aside was a valid exercise of his prerogative. HPPL, an unlicensed foreign corporation doing business here by bidding, also lacked capacity to sue.",
+  "x": "Use when the President, or the Office of the President, overturns a decision of a GOCC or chartered agency’s board (an award, a contract, an appointment): the agency is under the President’s control, so the board’s act is not final until approved. Courts defer on bids unless discretion shields unfairness.",
+  "w": "The Decision dates LOI 620 “October 27, 1997,” after the January 2, 1997 memorandum it is used to support.",
+  "s": "The President may reverse the SBMA Board’s award and order a rebidding: control over a chartered agency.",
+  "sy": [
+   "Hutchison Ports"
+  ]
+ },
+ {
+  "id": "neacoa",
+  "n": "NEA v. COA",
+  "y": "2002",
+  "t": "pres",
+  "sub": "V.B.2(b) Control of executive departments: one Chief Executive",
+  "a": 0,
+  "r": "The President’s control reaches every executive employee, from Cabinet Secretary to the lowliest clerk; it is self-executing and cannot be limited or withdrawn by Congress. Subordinates must carry out his directives in good faith. An appropriation is not authority to disburse: a salary increase needs a law or budget circular, so NEA’s early payment of a raise the President scheduled in two tranches was void.",
+  "f": "Under Joint Resolution No. 01 (1994), salary increases were phased in over four years by executive orders. EO 389 (1996) paid the fourth year in two tranches: January 1 and November 1, 1997. The National Electrification Administration, a GOCC, paid both tranches from January 1, 1997, saying it had the funds in the 1997 GAA. The COA disallowed ₱14,155,342 and ordered refunds; NEA also questioned the President’s authority to issue EO 389.",
+  "h": "Petition dismissed; the COA decision affirmed in toto (14–0, Carpio, J., February 15, 2002). The GAA is not self-executory; EO 389, the OP memorandum and the DBM’s approval of NEA’s budget did not authorize the acceleration; the President validly issued EO 389; the COA may disallow disbursements that violate law.",
+  "x": "Use when an agency or GOCC disregards a presidential order on pay, spending or policy because it has the funds or reads a law its own way: control is self-executing, there is only one Chief Executive, and the agency must comply. Also for the COA’s power to disallow beyond the existence of an appropriation.",
+  "w": "The COA decision quotes the appropriation rule as “Article 29 (1)” of the Constitution (it is Art. VI, Sec. 29(1)). The Decision spells the maxim “expressium facit cessare tacitum.”",
+  "s": "NEA cannot pay a raise ahead of the President’s schedule: control is self-executing; one Chief Executive.",
+  "sy": [
+   "NEA v. COA"
+  ]
+ },
+ {
+  "id": "pimentelaguirre",
+  "n": "Pimentel v. Aguirre",
+  "y": "2000",
+  "t": "pres",
+  "sub": "V.B.2(c) General supervision over local governments: supervision is not control",
+  "a": 1,
+  "r": "The President has general supervision, not control, over local governments (Art. X, Sec. 4): he may see that the rules are followed, but may not lay down, change or replace them, or withhold any power the Constitution and law give LGUs. Withholding 10% of their internal revenue allotment, even temporarily, is a prohibited holdback; an order to cut spending is valid only as an advisory.",
+  "f": "Amid the 1997 peso depreciation, President Ramos’s AO 372 (1997) ordered all agencies, including local government units, to cut non-personal-services spending by at least 25% (Sec. 1), and withheld 10% of the LGUs’ internal revenue allotment (IRA) pending a review of the fiscal situation (Sec. 4). President Estrada’s AO 43 (1998) cut the withholding to 5%. Senator Pimentel, joined by the president of the League of Provinces, sued.",
+  "h": "Petition granted (12–3, Panganiban, J., July 19, 2000); the respondents permanently prohibited from implementing AO 372 and AO 43 insofar as LGUs are concerned. Sec. 1 stands only as a non-binding advisory, with no sanction for LGUs that ignore it; Sec. 4 has no color of validity.",
+  "test": "The President may adjust the IRA only under LGC Sec. 284: (1) an unmanaged public sector deficit; (2) consultation with the Senate President, the Speaker and the presidents of the leagues; (3) the recommendation of the Secretaries of Finance, the Interior and Local Government, and Budget; and never below 30% of the national internal revenue of the third preceding fiscal year.",
+  "x": "Use when the President or a department orders LGUs to do something, or holds back their money: supervision lets the President see that LGUs follow the law, not substitute his judgment; the IRA is released automatically (Art. X, Sec. 6), with no lien or holdback. Contrast control over executive departments (Blaquera; NEA v. COA).",
+  "w": "The body sustains Sec. 1 as an advisory and strikes only Sec. 4, but the fallo prohibits implementing both orders “insofar as local government units are concerned” without carving out Sec. 1.",
+  "s": "The President may advise LGUs to cut spending but may not withhold their IRA: supervision, not control.",
+  "sy": [
+   "Pimentel v. Aguirre"
+  ]
+ }
+]

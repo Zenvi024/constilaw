@@ -1146,5 +1146,422 @@
    }
   ],
   "vote": "Petition dated March 27, 2026; consolidated with the VP's own petition; dismissed as moot on August 5, 2026."
+ },
+ "pormento": {
+  "iss": [
+   {
+    "q": "Was there an actual case or controversy, or had the petition become moot?",
+    "a": "MOOT",
+    "why": "Estrada was not elected the second time he ran, and the question of “any reelection” is premised on a second election. No live conflict of legal rights remained and no relief could benefit either party. The petition did not stay the COMELEC resolutions (Rule 64, Sec. 8) and no TRO was sought, so Estrada ran and lost before the Court could rule."
+   },
+   {
+    "q": "Does the “capable of repetition yet evading review” exception apply?",
+    "a": "NO",
+    "why": "Both requisites must concur: an action too short to be fully litigated, and a reasonable expectation that the same complaining party will be subjected to it again. The second was absent: it was “highly speculative and hypothetical” that Pormento would face the same action again."
+   },
+   {
+    "q": "Is a former President like Estrada barred by the ban on “any reelection” (Art. VII, Sec. 4)?",
+    "a": "NOT RULED",
+    "why": "The Court framed the question but declined to answer it: prudence called for judicial restraint once the issue was mooted, and the actual-case requirement bars a pronouncement that would be only a non-binding opinion."
+   }
+  ],
+  "vote": "13–0, Corona, C.J. (Resolution, August 31, 2010). Brion, J., on leave; Peralta, J., on official leave. No separate opinions."
+ },
+ "pamatong": {
+  "iss": [
+   {
+    "q": "Does Pamatong have standing to bring quo warranto against the President?",
+    "a": "NO",
+    "why": "Quo warranto is by nature the Government’s action (Rule 66, Sec. 1); the sole exception is a person suing in his own name who claims to be entitled to the office (Sec. 5). He must have run for President and lost to the respondent. Pamatong’s candidacy had been rejected as a nuisance, so his claim to be the “caretaker President” had no factual basis."
+   },
+   {
+    "q": "Even granting standing, was the petition filed on time?",
+    "a": "NO",
+    "why": "An action to oust a public officer must be filed within one year after the cause of ouster or the petitioner’s right arose (Rule 66, Sec. 11); the period is a condition precedent, and inaction is a waiver (Bumanglag v. Fernandez). His right, if any, arose on June 30, 2016; he filed on June 6, 2018. The State’s imprescriptible quo warranto (Republic v. Sereno) does not extend to private persons."
+   },
+   {
+    "q": "Is Duterte a usurper because of an invalid substitution and the lack of a COMELEC-approved certificate of candidacy?",
+    "a": "NOT RULED",
+    "why": "The petition was dismissed on standing and timeliness. Only the COMELEC ruled on the substitution: Diño’s certificate was valid and withdrawable, Duterte substituted him within the period, and the nuisance claims were unproven."
+   }
+  ],
+  "vote": "Unsigned Notice of Resolution, January 22, 2019. No ponente, vote or separate opinions stated."
+ },
+ "buenafe": {
+  "iss": [
+   {
+    "q": "Did Marcos’s election and proclamation make the petitions moot?",
+    "a": "NO",
+    "why": "A candidate’s qualification is not waived by election: one may get 99% of the votes, but if disqualified the law bars him from office. Whether he made a false material representation and whether he is disqualified remained live controversies."
+   },
+   {
+    "q": "Had jurisdiction passed to the Presidential Electoral Tribunal?",
+    "a": "NO",
+    "why": "The PET takes cognizance only when a petition is filed with it against a candidate who has been validly proclaimed, has taken the oath and has assumed office (as with the HRET in Reyes v. COMELEC). Marcos had not yet taken his oath or assumed office, and these were Rule 64/65 petitions from the COMELEC. In any case the PET is the Supreme Court itself (Macalintal v. PET). Petitioners, as registered voters and the parties aggrieved, had standing."
+   },
+   {
+    "q": "Should the Sec. 78 petition have been dismissed for raising grounds for disqualification?",
+    "a": "NOT DECISIVE",
+    "why": "The COMELEC relaxed its rules and ruled on the merits. The two remedies differ in grounds, periods and effects, but a ground for disqualification may support a Sec. 78 petition when it makes the sworn statement of eligibility false (Chua; Ty-Delgado)."
+   },
+   {
+    "q": "Is Marcos disqualified under Sec. 12 of the Omnibus Election Code?",
+    "a": "NO",
+    "why": "Qualifications are not limited to Art. VII, Sec. 2; statutory grounds apply too. But (1) failing to file a return may come from mere neglect and is not fraudulent per se, so it is not moral turpitude (unlike tax evasion); (2) the CA could impose fines alone under the 1977 Tax Code, so there was no sentence over 18 months; (3) perpetual disqualification under Sec. 286(c) is not deemed imposed unless the fallo says so, and a final judgment cannot be changed; (4) non-filing is not a continuing offense; (5) the fines were paid."
+   },
+   {
+    "q": "Did the COMELEC gravely abuse its discretion in refusing to cancel his certificate of candidacy?",
+    "a": "NO",
+    "why": "The statements “I am eligible” and “no” to the question on perpetual disqualification are material: “eligible” means having all the qualifications and none of the ineligibilities, and perpetual disqualification is an ineligibility (Aratea; Dimapilis). But they were true, because no perpetual disqualification was ever imposed. Vox populi does not validate an ineligible candidate; the ruling rests on his eligibility, not his votes."
+   }
+  ],
+  "vote": "13–0, Zalameda, J. Separate concurring opinions by Leonen, Caguioa, Dimaampao, Singh, M.V. Lopez, Gaerlan and J.Y. Lopez, JJ.; Lazaro-Javier, J., concurring. Inting and Kho, JJ., took no part.",
+  "ops": "The ponencia itself relies on three: J.Y. Lopez, J. (the term begins at noon of June 30, so the Court keeps jurisdiction until then); Lazaro-Javier, J. (not filing a compensation income tax return is no act of baseness or depravity); and Dimaampao, J. (the TRAIN Law did not decriminalize non-filing)."
+ },
+ "swissdeposits": {
+  "iss": [
+   {
+    "q": "Is certiorari (Rule 65) a proper remedy against the Sandiganbayan’s resolution?",
+    "a": "YES",
+    "why": "Normally the remedy is a Rule 45 appeal, but certiorari is allowed where the case is ingrained with immense public interest and deep historical repercussions. Recovering the Marcos wealth was the reason the PCGG was created; after almost two decades, the Court settled all issues with finality."
+   },
+   {
+    "q": "Did the Marcoses raise any genuine issue of fact that would bar summary judgment?",
+    "a": "NO",
+    "why": "Denials for “lack of knowledge” of matters plainly within their knowledge are no denials; the bare claim of lawful acquisition stated no facts; denying only that they “clandestinely stashed” the money was a negative pregnant that admitted the deposits and their amount. They offered no opposing affidavits, and their positions shifted from “lawfully acquired” to “90% mine” to “not ours.”"
+   },
+   {
+    "q": "Did the Republic waive summary judgment by agreeing to go to trial, or lose it by laches?",
+    "a": "NO",
+    "why": "A claimant may move for summary judgment at any stage after the answer is served (Rule 35, Sec. 1). The Republic was never remiss: its first motion was set aside for the compromise, and it moved again after the Marcoses disowned the money. Laches and estoppel do not apply when the government sues as a sovereign."
+   },
+   {
+    "q": "Did the Republic prove that the Swiss deposits were ill-gotten wealth to be forfeited?",
+    "a": "YES",
+    "why": "All three elements of the RA 1379 presumption were shown: the Marcoses were admittedly public officers; they owned the deposits (admissions in the answer, the void settlement agreements, Marcos Jr.’s testimony, Imelda’s 90% claim); and US$356 million was “way, way beyond” their total salaries of ₱2,319,583.33 (US$304,372.43). Those salaries were their only known lawful income: they filed no statements of assets, and the 1935 and 1973 Constitutions barred the President from other emoluments and from managing a business. They did not rebut the presumption."
+   },
+   {
+    "q": "Were the foreign foundations indispensable parties?",
+    "a": "NO",
+    "why": "Imelda admitted that she owned 90% and the estate 10%, so the foundations had no interest; firms set up with ill-gotten money are only the res. Non-joinder is curable in any case and is no ground for dismissal (Rule 3, Sec. 11)."
+   },
+   {
+    "q": "Did the lack of authenticated translations of the Swiss decisions justify the reversal?",
+    "a": "NO",
+    "why": "The ruling did not depend on the Swiss courts’ findings; forfeiture turns on the Philippine courts’ own assessment of the evidence, which tilted convincingly for the Republic."
+   }
+  ],
+  "vote": "12–0, Corona, J. Puno and Vitug, JJ., in the result. Carpio, J., took no part (as Presidential Legal Counsel he had chaired the committee that oversaw the transfer of the funds). Quisumbing and Sandoval-Gutierrez, JJ., on official leave. No separate opinions."
+ },
+ "arelma": {
+  "iss": [
+   {
+    "q": "Did the Sandiganbayan err in granting partial summary judgment on Arelma after the Swiss deposits ruling?",
+    "a": "NO",
+    "why": "The 2003 ruling covered only the five Swiss accounts because the 2000 motion named only those; the same petition covers every asset it lists. A ruling on one claim is a separate judgment (Rule 36, Sec. 5), and the action goes on as to the rest. The alleged reservation of a separate action was never proved, and nothing in RA 1379 bars a partial judgment."
+   },
+   {
+    "q": "Does the Sandiganbayan lack jurisdiction over the Arelma assets because they are held in the United States?",
+    "a": "NO",
+    "why": "Rendering judgment differs from executing it; execution is a ministerial phase. Forfeiture is in rem or quasi in rem: jurisdiction over the res comes from seizure or from the institution of proceedings, and potential custody suffices (Perkins v. Dizon). Holding otherwise would reward officials who hide public assets abroad. A New York court had itself deferred to Philippine courts out of comity."
+   }
+  ],
+  "vote": "5–0, Sereno, C.J. (Special Second Division). Brion, J., sat in place of Carpio, J., who took no part. No separate opinions."
+ },
+ "estradaarroyo": {
+  "iss": [
+   {
+    "q": "Do the petitions present a political question beyond the Court’s power?",
+    "a": "NO",
+    "why": "EDSA I was extra-constitutional: it overthrew the whole government, and the legitimacy of the government it produced was beyond review (Lawyers League v. Aquino). EDSA II was intra-constitutional: an exercise of speech and assembly that affected only the Office of the President; Arroyo took her oath under the 1987 Constitution. The issues (Art. VII, Secs. 8 and 11, immunity) are legal."
+   },
+   {
+    "q": "Did Estrada resign as President on January 20, 2001?",
+    "a": "YES",
+    "why": "Resignation is a question of fact: intent to resign plus acts of relinquishment, in any form. The Angara Diary shows he proposed a snap election he would not run in, negotiated only the terms of his exit, and said “Ayoko na”; his farewell statement acknowledged Arroyo’s oath and left “for the sake of peace.” RA 3019, Sec. 12 (no resignation while a case is pending) did not bar it: it aims to stop resignation as a shield, the Ombudsman cases were not pending against a sitting President, and the impeachment had collapsed."
+   },
+   {
+    "q": "Is Estrada only temporarily unable to act, making Arroyo merely Acting President?",
+    "a": "NOT REVIEWABLE",
+    "why": "Sec. 11 commits the question of inability to Congress. Both Houses recognized Arroyo as President (House Res. Nos. 175, 176 and 178; Senate Res. Nos. 82, 83 and 84; laws sent to her for signature; her nominee confirmed as Vice-President). That decision of a co-equal branch is a political question the Court cannot revise."
+   },
+   {
+    "q": "Must Estrada be convicted by the Senate before he can be prosecuted, and is he immune from suit?",
+    "a": "NO; NO",
+    "why": "The impeachment court was declared functus officio; requiring conviction first would make him better off than a President never impeached. Immunity lasts only during tenure (In re Bermudez); the 1987 Constitution did not reenact the 1981 amendment’s post-tenure immunity. Plunder, bribery and graft are not covered: public office is a public trust."
+   },
+   {
+    "q": "Should the Ombudsman’s investigation be stopped because of prejudicial publicity?",
+    "a": "NO",
+    "why": "Pervasive publicity is not prejudicial per se. Under the actual prejudice test (Martelino; Webb), he must prove that the investigators were actually influenced, not that they might be; he offered news reports and no proof of the panel’s bias."
+   }
+  ],
+  "vote": "11–0 in the result, Puno, J. Buena, Kapunan, Pardo, Ynares-Santiago and Sandoval-Gutierrez, JJ., concurred in the result (Pardo, J.: Estrada “was constrained to resign”; he reserved his vote on immunity). Davide, C.J. and Panganiban, J., took no part.",
+  "ops": "Panganiban, J. explained his inhibition (not a vote on the merits): inhibition is voluntary and discretionary, and he stepped aside so that no one could doubt the integrity of the proceedings. Davide, C.J.’s explanation and the reserved separate opinions are not in the files."
+ },
+ "deleon": {
+  "iss": [
+   {
+    "q": "Does Sec. 12 impose a ministerial duty to release the President’s medical records, enforceable by mandamus?",
+    "a": "NO",
+    "why": "Mandamus needs a well-defined, clear and certain right and a ministerial duty. The framers left it to the Office of the President “to choose the appropriate means of releasing information,” and the President’s condition “to the President and his doctor” (Commissioner Ople). The petition failed to show a prima facie case, so it was dismissed outright."
+   },
+   {
+    "q": "Did the petitioner show a serious illness that triggers Sec. 12?",
+    "a": "NO",
+    "why": "The claimed illnesses rested on online news articles, hearsay twice removed (Lagman v. Medialdea), while the President was visibly holding regular Cabinet meetings and televised addresses on the pandemic. The claim was surmise and conjecture."
+   },
+   {
+    "q": "Does the right to information (Art. III, Sec. 7) entitle the petitioner to the records, or to new examinations?",
+    "a": "NOT RULED",
+    "why": "Having found no clear legal right under Sec. 12, the Court found it unnecessary to address the other issues."
+   }
+  ],
+  "vote": "Unsigned Resolution, May 8, 2020. Leonen and Caguioa, JJ., dissented (opinions not in the files)."
+ },
+ "clu": {
+  "iss": [
+   {
+    "q": "Does Art. VII, Sec. 13 admit the broad exceptions for appointive officials in Art. IX-B, Sec. 7(2), so that EO 284 is valid?",
+    "a": "NO",
+    "why": "The framers wrote a separate provision for the President’s official family to impose a stricter rule, after the Marcos-era practice of Cabinet members sitting on dozens of boards. Sec. 13 is not limited to office “in the Government,” so it covers public and private office. “Unless otherwise provided in this Constitution” means only the Constitution’s own exceptions: the VP as Cabinet member, the VP acting as President, and the Secretary of Justice on the JBC. Reading Art. IX-B into it would erase the distinction. EO 284, which allows two more offices, is void."
+   },
+   {
+    "q": "Does the prohibition cover posts held ex officio, without additional compensation, as provided by law and as required by primary functions?",
+    "a": "NO",
+    "why": "Such posts are additional duties of the principal office, not “any other office”; otherwise the President could not chair the National Security Council and the Finance Secretary could not sit on the Monetary Board. The duty must be required, not merely allowed, by the primary functions; posts that are incidental or alien to them, or that carry management functions or pay (GOCC chairmanships, directorships), are not covered. No extra compensation may be received, by whatever name."
+   },
+   {
+    "q": "Must the officials give up the other posts and refund what they received?",
+    "a": "RELINQUISH; NO REFUND",
+    "why": "Five Secretaries still holding other offices were ordered to give them up immediately; the petitions were moot as to the rest. As de facto officers who served in good faith, they may keep the per diems and allowances received for actual services (Castillo v. Arrieta)."
+   }
+  ],
+  "vote": "13–0, Fernan, C.J. Sarmiento and Griño-Aquino, JJ., took no part.",
+  "ops": "Paras, J., concurring: “cabinet members like the members of the Supreme Court are not supermen.”"
+ },
+ "cruzcoa": {
+  "iss": [
+   {
+    "q": "Did the COA gravely abuse its discretion in disallowing the per diems and allowances paid to the alternates of Cabinet members on the NHA Board?",
+    "a": "NO",
+    "why": "PD 757 names the Secretaries as the Board members; the petitioners sat only as their alternates, whose acts are the acts of their principals. Under Civil Liberties Union, Secretaries sitting ex officio may receive no extra compensation by whatever name, because the ex officio post is part of their principal office. The alternates cannot have a better right than their principals, so PD 757’s “right to receive their benefit” is limited to what the principals may lawfully receive."
+   }
+  ],
+  "vote": "13–0, Sandoval-Gutierrez, J. Quisumbing, J. (a former Labor Secretary) took no part; Buena, J., on official leave. No separate opinions."
+ },
+ "nacoa": {
+  "iss": [
+   {
+    "q": "Is the COA memorandum enforcing the ban void for lack of publication?",
+    "a": "NO",
+    "why": "It is an internal, interpretative letter of instruction to COA auditors to enforce the self-executing Art. VII, Sec. 13, not a rule implementing a statute, so Tañada v. Tuvera does not require publication. Civil Liberties Union had already explained the prohibition, and the Court’s interpretation is part of the law."
+   },
+   {
+    "q": "Are the representatives of the ex officio members, all below Assistant Secretary, covered by the prohibitions on multiple offices and additional compensation?",
+    "a": "YES, BY BOTH",
+    "why": "Art. IX-B, Sec. 7(2): no law or order created a position for them or authorized extra pay, and they were merely designated, not appointed; designation carries no salary (Dimaandal v. COA). Art. VII, Sec. 13: their principals cannot receive per diems or honoraria under Civil Liberties Union, and the representative cannot have a better right than his principal (Dela Cruz v. COA; Bitonio v. COA)."
+   },
+   {
+    "q": "Could the COA reopen accounts already settled?",
+    "a": "YES",
+    "why": "PD 1445, Sec. 52 allows the COA to open and revise settled accounts within three years. The Government is not estopped by its agents’ mistakes."
+   },
+   {
+    "q": "Is the NAC administrative order’s clause on the representatives’ pay void, as the COA ruled?",
+    "a": "NO",
+    "why": "On its face it makes pay subject to what is “authorized by law,” and the law prohibits it; the error lay in how it was read. Representatives may attend only as guests or witnesses; they cannot take the ex officio members’ place in determining a quorum, deliberating or deciding."
+   },
+   {
+    "q": "Are the representatives de facto officers who may keep the allowances?",
+    "a": "NO",
+    "why": "A de facto officer holds under a colorable appointment; designees have none. They also cannot claim good faith after Civil Liberties Union became final and the prohibition was express."
+   }
+  ],
+  "vote": "12–0, Corona, J. Austria-Martinez and Carpio Morales, JJ., on official leave. No separate opinions."
+ },
+ "manglapus": {
+  "iss": [
+   {
+    "q": "Is the President’s decision to bar the Marcoses a political question beyond the Court’s power?",
+    "a": "NO",
+    "why": "Art. VIII, Sec. 1 lets the Court determine grave abuse of discretion by any branch, so the doctrine is narrowed. But review is limited: the Court checks, it does not supplant, the Executive (Lansang v. Garcia)."
+   },
+   {
+    "q": "Is the right involved the right to travel and liberty of abode (Art. III, Sec. 6)?",
+    "a": "NO",
+    "why": "It is the right to return to one’s country, distinct under the UDHR (Art. 13(2)) and the ICCPR (Art. 12(4): no one may be arbitrarily deprived of it). It is not in the Bill of Rights but is part of the law of the land as a generally accepted principle of international law (Art. II, Sec. 2). The limits on travel and abode do not govern it."
+   },
+   {
+    "q": "May the President, under the Constitution, bar the Marcoses from returning?",
+    "a": "YES",
+    "why": "Art. VII, Sec. 1 vests “the executive power” without defining it; the list of specific powers does not exhaust it. The President is head of state and of government, and the 1987 Constitution, while limiting specific powers, keeps intact what is traditionally executive power. Her residual power to protect the general welfare (Art. II, Secs. 4 and 5), as protector of the peace, covers day-to-day peace and order short of the Commander-in-Chief powers. Even the House resolution appealed to her compassion, not her power."
+   },
+   {
+    "q": "Did the President act arbitrarily or with grave abuse of discretion in finding that the return threatened the national interest?",
+    "a": "NO",
+    "why": "Factual bases existed: the insurgency, secessionists, rightist plots and the Marcoses’ documented efforts to destabilize the government; their return could be the “final straw.” The State may act pre-emptively against nascent threats, and the economic risk was within judicial notice."
+   }
+  ],
+  "vote": "Dismissed, Cortes, J. Concurring as printed: Narvasa, Melencio-Herrera, Gancayco, Griño-Aquino, Medialdea and Regalado, JJ. Dissenting: Gutierrez, Jr. (joined by Bidin), Sarmiento, Padilla, Cruz and Paras, JJ. Feliciano, J., on leave. Later cases call it 8–7.",
+  "ops": "Gutierrez, Jr., J.: a question of rights, not power; liberty of abode yields only to a court and travel only to a law, and none exists; the “catalytic effect” is speculation. Sarmiento, J.: the 1987 Constitution took the President “out of the picture”; there is no getting even in a democracy. Padilla, J.: police power may limit travel even without a law, but not arbitrarily, and the threat was not shown; Ninoy had the same right in 1983. Cruz, J.: the government “failed dismally” to prove its case; residual powers are “a great leap backward.” Paras, J.: let him return under house arrest in Ilocos Norte."
+ },
+ "denr12": {
+  "iss": [
+   {
+    "q": "Should the Court relax the procedural defects and allow certiorari despite the lapse of the period to appeal?",
+    "a": "YES",
+    "why": "Rules serve, not override, substantial justice. Given the public interest, the need for stability in the public service and the effect on the executive department, the Court reached the merits; executing the RTC decision would be an oppressive exercise of judicial authority."
+   },
+   {
+    "q": "May the DENR Secretary reorganize the department by moving the Region XII offices from Cotabato City to Koronadal?",
+    "a": "YES",
+    "why": "Under qualified political agency (Joson v. Torres), a corollary of the control power (Art. VII, Sec. 17), the Secretary’s acts are presumptively the President’s unless disapproved. The President’s continuing power to reorganize (Administrative Code, Book III, Sec. 20; PD 1416 as amended) may be delegated to the Secretary (DOTC v. Mabalot). The RTC should have taken judicial notice of RA 6734 and EO 429, which made Koronadal the regional center; the power to reorganize regions includes fixing their centers (Chiongbian v. Orbos)."
+   },
+   {
+    "q": "May the courts stop the transfer as untimely or unwise?",
+    "a": "NO",
+    "why": "No buildings yet, Ramadan, schooling and the lack of consultation go to wisdom, not legality. Without a constitutional infirmity or grave abuse, the courts will not oversee the bureaucracy."
+   }
+  ],
+  "vote": "4–0, Ynares-Santiago, J. (First Division). Davide, C.J., abroad on official business. No separate opinions."
+ },
+ "banda": {
+  "iss": [
+   {
+    "q": "Does the petition qualify as a class suit?",
+    "a": "NO",
+    "why": "Designating a case a class suit does not make it one (Rule 3, Sec. 12). The petition did not state how many employees were affected (about 549); only 20 of the 67 signatories subscribed before the notary, 32 desisted, and the employees’ association opposed the suit, showing a divergence of interests. The Court nonetheless ruled on the merits."
+   },
+   {
+    "q": "Could President Arroyo amend EO 285, a law issued by President Aquino with legislative powers, through EO 378?",
+    "a": "YES",
+    "why": "The President may reorganize executive offices under the power of control and under statutes delegating the power to reorganize: the Administrative Code (Book III, Sec. 31, read with the residual powers in Sec. 20) and the appropriations laws (Larin; Buklod ng Kawaning EIIB). The NPO is part of the Office of the President. The express power to abolish, merge and transfer carries the lesser power to modify functions; EO 378 abolished nothing and transferred nothing. The power covers only the Executive, not the Judiciary, Congress or constitutional bodies."
+   },
+   {
+    "q": "Does EO 378 violate the employees’ security of tenure because it is a bad-faith step toward abolishing the NPO?",
+    "a": "NO",
+    "why": "A reorganization in good faith, for economy or efficiency, is valid even if positions are lost; one done for political reasons or to defeat tenure is void (Dario v. Mison). Whoever alleges bad faith must prove it, and the employees showed no position abolished or employee removed, and no political motive."
+   }
+  ],
+  "vote": "14–0, Leonardo-de Castro, J. Abad, J., on official leave.",
+  "ops": "Carpio, J., concurring in the result: Sec. 31 is a narrow, closed list (restructure the OP Proper; transfer functions or agencies), and the NPO is not part of the OP Proper; PD 1416, on which Larin rests, is an undue delegation that lapsed when Congress convened; control means reviewing a subordinate’s acts, not restructuring offices. EO 378 is valid only because it implements the competitive-bidding policy of RA 9184."
+ },
+ "biraogo": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing?",
+    "a": "YES",
+    "why": "The Representatives sue to protect the powers of Congress: an injury to Congress injures each member (PHILCONSA v. Enriquez). Biraogo showed no direct injury, but the rule was relaxed for a matter of transcendental importance."
+   },
+   {
+    "q": "Does EO 1 usurp Congress’s power to create public offices and appropriate funds?",
+    "a": "NO",
+    "why": "Not because of the power to reorganize: Administrative Code, Book III, Sec. 31 covers altering existing offices, not creating one. Not because of control: control is the power to alter or set aside a subordinate’s acts, “entirely different from the power to create public offices.” Not because of PD 1416, a transitional delegation that became functus officio when Congress convened. The basis is the faithful-execution clause: the power to investigate, and to create ad hoc bodies to do so, is inherent in the Chief Executive (Marcos v. Manglapus; DOH v. Camposano). Funding from existing OP appropriations is an allotment, not an appropriation."
+   },
+   {
+    "q": "Does the Truth Commission supplant the Ombudsman and the DOJ?",
+    "a": "NO",
+    "why": "It is fact-finding, not quasi-judicial: to investigate is to inquire; to adjudicate is to settle rights finally (Cariño v. CHR). Its findings are recommendatory; probable cause stays with the Ombudsman and the DOJ, whose investigative powers are not exclusive (Ombudsman v. Galicia). It complements them."
+   },
+   {
+    "q": "Does EO 1 violate the equal protection clause?",
+    "a": "YES",
+    "why": "Equal protection binds all state action, including the Executive’s. EO 1 names the “previous administration” three times; that administration is “but just a member of a class” of past administrations. Reports of corruption, the risk of overburden and the freshness of evidence are not substantial distinctions. Underinclusion is not fatal when inadvertent, but here it was deliberate, and Sec. 17 (expansion at the President’s discretion) does not cure it. Reasonable prioritization is allowed; a revised order covering earlier administrations could pass."
+   },
+   {
+    "q": "Are the petitioners entitled to injunctive relief?",
+    "a": "YES",
+    "why": "Not discussed separately; the fallo, “as also prayed for,” ordered the respondents to cease and desist from carrying out EO 1."
+   }
+  ],
+  "vote": "10–5, Mendoza, J. With him: Corona, C.J., Velasco, Leonardo-de Castro, Brion, Peralta, Bersamin, Del Castillo, Villarama and Perez, JJ. Dissenting: Carpio (joined by Abad), Carpio Morales and Sereno, JJ.; Nachura, J., concurring and dissenting (dissenting on equal protection).",
+  "ops": "Carpio, J. (joined by Abad, J.): EO 1 is valid in every respect; Sec. 31 includes creating offices in the OP Proper; the focus on the last administration is reasonable (prescription, earlier administrations already investigated, fresher evidence); the ruling gives every administration “a cloak of immunity.” Carpio Morales, J.: equal protection was not properly raised by these petitioners, and the classification rests on period, not personalities. Nachura, J.: the President may create the body under control and the take-care clause; rational basis test met; “previous administration” sets a time frame, not a class. Abad, J.: “you cannot order five men to pull a train that a thousand men cannot move.” Sereno, J.: prioritization is not classification; the ruling defeats public accountability."
+ },
+ "blaquera": {
+  "iss": [
+   {
+    "q": "Is the Philippine Tourism Authority, a GOCC, covered by the Productivity Incentives Act (RA 6971), putting its employees’ 1992 bonus beyond AO 29?",
+    "a": "NO",
+    "why": "The PTA’s functions are mostly governmental, but the test is legislative intent: RA 6971’s provisions on collective bargaining, strikes and the NCMB fit only private firms and GOCCs incorporated under the general corporation law. GOCCs with original charters are under the Civil Service and have their own incentive award system."
+   },
+   {
+    "q": "Are AO 268 and AO 29 valid?",
+    "a": "YES",
+    "why": "They are an exercise of the President’s control over executive departments (Art. VII, Sec. 17): he may alter, modify or set aside a subordinate’s acts and substitute his judgment, motu proprio (Mondano; Lacson-Magallanes). Uneven bonuses caused dissension and conflicted with salary standardization. Bodies with fiscal autonomy (the Judiciary, the CSC, COA, COMELEC, the Ombudsman) are not covered."
+   },
+   {
+    "q": "Did the AOs usurp the Civil Service Commission’s authority over the incentive awards system?",
+    "a": "NO",
+    "why": "They regulated the grant and amount; they did not revoke the privilege. Managing government money is an executive function, and the Administrative Code itself authorizes “the President or the head of each department” to incur the expense."
+   },
+   {
+    "q": "Is the forced refund an impairment of contracts, or the personal liability of the officials who granted the benefits?",
+    "a": "NO; NO",
+    "why": "A bonus is not a demandable obligation, and the acts were governmental. Officials are not personally liable without bad faith; good faith and regularity are presumed."
+   },
+   {
+    "q": "Must the employees refund the 1992 benefits they received?",
+    "a": "NO",
+    "why": "All parties acted in good faith: the officials paid in the honest belief that the benefits were due, and the employees received them believing they deserved them. Further deductions were enjoined."
+   }
+  ],
+  "vote": "13–0, Purisima, J. Regalado, J., on official leave. No separate opinions."
+ },
+ "hutchison": {
+  "iss": [
+   {
+    "q": "Is HPPL entitled to an injunction against the rebidding, as the declared winning bidder?",
+    "a": "NO",
+    "why": "Injunction needs a clear and unmistakable right. The SBMA Board and officers are under the control and supervision of the Office of the President, and LOI 620 requires the President’s approval for contracts of ₱2 million and up. The President may, for justifiable reasons, overturn the Board’s award; the discretion to accept or reject bids, or recall an award, is so wide that courts will not interfere unless it shields unfairness. The award was not final, so HPPL had no clear right."
+   },
+   {
+    "q": "Does HPPL, a foreign corporation without a license to do business here, have capacity to sue?",
+    "a": "NO",
+    "why": "Taking part in a bidding is doing business in the Philippines: it exercises the purpose for which the corporation was created (Granger Associates). An unlicensed foreign corporation doing business here cannot sue in Philippine courts."
+   }
+  ],
+  "vote": "Ynares-Santiago, J. (First Division). Puno, Kapunan and Pardo, JJ., concur; Davide, C.J., concurs in the result. No separate opinions."
+ },
+ "neacoa": {
+  "iss": [
+   {
+    "q": "Did NEA’s early payment of the 1997 salary increases have legal basis?",
+    "a": "NO",
+    "why": "The 1997 GAA is not self-executory: personal services are appropriated in lump sums and need an itemization and expenditure program approved by the President, and no salary increase may be paid without a law or budget circular (Administrative Code, Book IV, Secs. 23 and 34; Book VI, Sec. 60). EO 389’s exception covers only GOCCs without enough funds; the 1995 OP memorandum allowed acceleration only with prior DBM approval, which NEA never got; approval of a proposed budget is not approval to disburse."
+   },
+   {
+    "q": "Did the President lack authority to issue EO 389?",
+    "a": "NO",
+    "why": "Executive orders implement constitutional or statutory powers (Administrative Code, Book III); Joint Resolution No. 01 itself contemplated a governing executive order. And the President’s control over all executive offices (Art. VII, Sec. 17) reaches every employee, is self-executing and cannot be limited by Congress (De Leon v. Carpio); there is only one Chief Executive (Villena), whose directives subordinates must implement in good faith."
+   },
+   {
+    "q": "Did the COA exceed its powers by asking whether NEA violated laws, not just whether an appropriation existed?",
+    "a": "NO",
+    "why": "Guevara v. Gimenez was decided under the 1935 Constitution and is no longer controlling (Caltex v. COA). Under Art. IX-D, Sec. 2, the COA audits all accounts, including GOCCs’, and may disallow irregular or illegal expenditures. It properly read RA 8244 and EO 389 together."
+   }
+  ],
+  "vote": "14–0, Carpio, J. No separate opinions."
+ },
+ "pimentelaguirre": {
+  "iss": [
+   {
+    "q": "Do standing, mootness or prematurity bar the petition?",
+    "a": "NO",
+    "why": "The intervention of the president of the League of Provinces made standing academic; mootness was not raised and was deemed waived. On prematurity (raised only by the dissent), an act seriously alleged to violate the Constitution ripens into a controversy upon its issuance (Tañada v. Angara)."
+   },
+   {
+    "q": "Is Sec. 1 of AO 372, “directing” LGUs to cut spending by 25%, a valid exercise of general supervision?",
+    "a": "YES, AS AN ADVISORY",
+    "why": "Supervision is oversight: seeing that subordinates perform their duties, without laying down or replacing the rules (Mondano; Drilon v. Lim). LGUs enjoy fiscal autonomy, and Sec. 284’s conditions were not met. The Court accepted the Solicitor General’s assurance that Sec. 1 is only an advisory, so no sanction may be imposed on LGUs that do not follow it."
+   },
+   {
+    "q": "Is Sec. 4, withholding 10% of the LGUs’ internal revenue allotment, valid?",
+    "a": "NO",
+    "why": "The just share “shall be automatically released” (Art. X, Sec. 6) and “shall not be subject to any lien or holdback … for whatever purpose” (LGC Sec. 286). A holdback is something withheld, often temporarily, so the temporary nature does not matter. The President may adjust the IRA only under Sec. 284, and the government showed no unmanageable deficit and no consultation with the leagues. Laudable purposes must be pursued by legal means."
+   }
+  ],
+  "vote": "12–3, Panganiban, J. Kapunan, J., dissented, joined by Purisima and Ynares-Santiago, JJ.",
+  "ops": "Kapunan, J., dissenting: the case was premature, since the withholding was temporary and no refusal to release was shown. The President, as chief fiscal officer, may withhold temporarily: the power to reduce the IRA in a deficit (Sec. 284) includes the lesser power to hold it back until the fiscal picture is known. “No lien or holdback” is not in the Constitution, and consultation is presumed."
  }
 }

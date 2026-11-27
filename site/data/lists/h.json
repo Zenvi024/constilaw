@@ -1,0 +1,316 @@
+[
+ {
+  "id": "h-pr-quals",
+  "t": "pres",
+  "title": "The five qualifications of the President (Art. VII, Sec. 2)",
+  "ask": "State the qualifications for President.",
+  "items": [
+   "A natural-born citizen of the Philippines",
+   "A registered voter",
+   "Able to read and write",
+   "At least forty years of age on the day of the election",
+   "A resident of the Philippines for at least ten years immediately preceding the election"
+  ],
+  "ordered": true,
+  "src": "Art. VII, Sec. 2",
+  "rv": "pres-quals",
+  "hook": "Born here, listed, literate, forty, ten years home. Statute adds the ineligibilities (Buenafe).",
+  "cases": [
+   "buenafe"
+  ]
+ },
+ {
+  "id": "h-pr-term",
+  "t": "pres",
+  "title": "The term rules (Art. VII, Sec. 4)",
+  "ask": "State the rules on the term of the President and the Vice-President.",
+  "items": [
+   "Elected by direct vote of the people for six years",
+   "The term begins at noon on June 30 after the election and ends at noon of the same date six years later",
+   "The President is not eligible for any reelection",
+   "A successor who served more than four years may never be elected President",
+   "The Vice-President may not serve more than two successive terms",
+   "Voluntary renunciation does not interrupt the continuity of service",
+   "The regular election is on the second Monday of May, unless the law provides otherwise",
+   "The Supreme Court en banc is the sole judge of contests on the election, returns and qualifications of the President and VP"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 4",
+  "rv": "pres-quals",
+  "hook": "Six years from noon of June 30; no second term for the elected; four years for the successor; two for the VP.",
+  "cases": [
+   "pormento"
+  ]
+ },
+ {
+  "id": "h-pr-remedies",
+  "t": "pres",
+  "title": "Stopping an ineligible candidate: Sec. 78 or disqualification (Buenafe)",
+  "ask": "How do a petition to cancel a COC and a petition for disqualification differ?",
+  "items": [
+   "Sec. 78 ground: a deliberate false material representation in the COC (eligibility, age, citizenship, residence)",
+   "Disqualification ground: Secs. 12 and 68 of the OEC (final sentence over 18 months, moral turpitude, insanity, election offenses)",
+   "Sec. 78 period: within five days after the last day for filing COCs, not later than 25 days from the filing of the COC",
+   "Disqualification period: after the last day for filing COCs, not later than proclamation",
+   "Cancelled COC: the person was never a candidate and cannot be substituted",
+   "Disqualified: stops being a candidate; may be substituted if the COC was valid",
+   "Overlap: a disqualification ground may support Sec. 78 when it makes the sworn claim of eligibility false"
+  ],
+  "ordered": false,
+  "src": "Buenafe v. COMELEC (2022)",
+  "rv": "pres-quals",
+  "hook": "Lie in the COC: cancel (never a candidate). Ground in the law: disqualify (may be substituted).",
+  "cases": [
+   "buenafe"
+  ]
+ },
+ {
+  "id": "h-pr-pet",
+  "t": "pres",
+  "title": "When the PET takes over (Buenafe)",
+  "ask": "When does the Presidential Electoral Tribunal acquire jurisdiction, and what may be filed there?",
+  "items": [
+   "A petition is filed with the PET",
+   "Against a candidate who has been validly proclaimed",
+   "Who has taken the oath",
+   "And who has assumed office (the term starts at noon of June 30)",
+   "Election protest: within 30 days of proclamation, by the second or third placer",
+   "Quo warranto: within 10 days of proclamation, by any voter, on ineligibility or disloyalty",
+   "Before that, Rule 64/65 petitions from the COMELEC stay with the Court; and the PET is the Court itself"
+  ],
+  "ordered": false,
+  "src": "Buenafe v. COMELEC (2022); Art. VII, Sec. 4",
+  "rv": "pres-quals",
+  "hook": "Proclaimed, sworn, seated: then the PET.",
+  "cases": [
+   "buenafe",
+   "pamatong"
+  ]
+ },
+ {
+  "id": "h-pr-salary",
+  "t": "pres",
+  "title": "The President’s salary and privileges (Art. VII, Sec. 6)",
+  "ask": "State the rules on the President’s residence and compensation.",
+  "items": [
+   "An official residence",
+   "Salaries of the President and VP are determined by law",
+   "They may not be decreased during the tenure",
+   "An increase takes effect only after the term of the incumbent during which it was approved",
+   "No other emolument during the tenure, from the Government or any other source",
+   "So the salary is the whole lawful income from office; wealth manifestly out of proportion is presumed ill-gotten (RA 1379, Sec. 2)"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 6; Republic v. Sandiganbayan (2003)",
+  "rv": "pres-priv",
+  "hook": "One salary, no extras; no cut now, no raise till the next term.",
+  "cases": [
+   "swissdeposits",
+   "arelma"
+  ]
+ },
+ {
+  "id": "h-pr-swiss",
+  "t": "pres",
+  "title": "Why the Swiss deposits were forfeited (2003)",
+  "ask": "Why did the Court forfeit the Marcos Swiss deposits?",
+  "items": [
+   "The Marcoses were public officers (admitted)",
+   "They owned the deposits: admissions in the answer, the settlement agreements, Marcos Jr.’s testimony, Imelda’s 90% claim",
+   "US$356 million was manifestly out of proportion to their salaries of about US$304,000",
+   "Their salaries were their only lawful income: no statements of assets, and the President could receive no other emolument",
+   "The presumption under RA 1379 arose and the burden shifted to them; they did not prove lawful acquisition",
+   "Their denials were sham, so summary judgment was proper",
+   "Laches and estoppel do not run against the State"
+  ],
+  "ordered": false,
+  "src": "Republic v. Sandiganbayan (2003)",
+  "rv": "pres-priv",
+  "hook": "Officer, ownership, out of proportion: the burden shifts.",
+  "cases": [
+   "swissdeposits"
+  ]
+ },
+ {
+  "id": "h-pr-succ",
+  "t": "pres",
+  "title": "Who becomes or acts as President",
+  "ask": "Give the rule of succession for each situation.",
+  "items": [
+   "President-elect fails to qualify: the VP-elect acts as President until he qualifies (Sec. 7)",
+   "No President chosen: the VP-elect acts as President until one is chosen and qualified (Sec. 7)",
+   "President-elect dies or is permanently disabled at the beginning of the term: the VP-elect becomes President (Sec. 7)",
+   "Neither chosen or qualified, or both dead or disabled: the Senate President, or the Speaker, acts as President (Sec. 7)",
+   "President dies, is permanently disabled, removed or resigns: the VP becomes President for the unexpired term (Sec. 8)",
+   "Both offices vacant during the term: the Senate President, or the Speaker, acts as President; Congress calls a special election (Secs. 8 and 10)",
+   "VP office vacant: the President nominates a Member of Congress, confirmed by a majority of all the Members of both Houses voting separately (Sec. 9)",
+   "Temporary inability: the VP acts as President on a written declaration (Sec. 11)"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Secs. 7–11",
+  "rv": "pres-succ",
+  "hook": "Vacancy: the VP becomes. Failure to qualify or inability: someone only acts.",
+  "cases": [
+   "estradaarroyo"
+  ]
+ },
+ {
+  "id": "h-pr-resign",
+  "t": "pres",
+  "title": "Estrada resigned: the acts the Court counted",
+  "ask": "What acts showed that Estrada resigned on January 20, 2001?",
+  "items": [
+   "He proposed a snap election in which he would not run",
+   "He did not object to a “dignified exit or resignation”",
+   "He negotiated only the terms of his exit: a transition period, his family’s security, the second envelope",
+   "“Pagod na pagod na ako. Ayoko na”: words of resignation",
+   "Both sides’ draft agreements were premised on his resignation",
+   "His farewell statement acknowledged Arroyo’s oath and left the Palace “for the sake of peace”",
+   "He spoke of his presidency in the past tense and called for reconciliation, without saying he would return"
+  ],
+  "ordered": false,
+  "src": "Estrada v. Arroyo (2001)",
+  "rv": "pres-succ",
+  "hook": "Before, during, after: the totality test.",
+  "cases": [
+   "estradaarroyo"
+  ]
+ },
+ {
+  "id": "h-pr-sec13",
+  "t": "pres",
+  "title": "What Art. VII, Sec. 13 forbids the President’s official family",
+  "ask": "What does Sec. 13 prohibit, and to whom?",
+  "items": [
+   "Covered: the President, VP, Cabinet members, and their deputies or assistants",
+   "No other office or employment, public or private, during the tenure, unless the Constitution provides otherwise",
+   "No practice of any other profession",
+   "No participation in any business",
+   "No financial interest in any contract, franchise or special privilege granted by the Government or a GOCC",
+   "Strictly avoid conflict of interest",
+   "The President’s spouse and relatives within the fourth civil degree may not be appointed to the Constitutional Commissions, the Ombudsman, or as Secretaries, Undersecretaries, or heads of bureaus, offices or GOCCs"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 13",
+  "rv": "pres-prohib",
+  "hook": "No second office, profession, business or stake; and no relatives in the top posts.",
+  "cases": [
+   "clu"
+  ]
+ },
+ {
+  "id": "h-pr-exofficio",
+  "t": "pres",
+  "title": "The exceptions to Sec. 13 (Civil Liberties Union)",
+  "ask": "When may a member of the President’s official family hold another post?",
+  "items": [
+   "The VP as a Cabinet member (Art. VII, Sec. 3), without confirmation",
+   "The VP acting as President (Art. VII, Sec. 7)",
+   "The Secretary of Justice as ex officio member of the JBC (Art. VIII, Sec. 8(1))",
+   "An ex officio post provided by law",
+   "And required, not merely allowed, by the primary functions of the office",
+   "And held without additional compensation: no per diem, honorarium or allowance by any name",
+   "Alternates and representatives cannot be paid either (Cruz; NAC v. COA)"
+  ],
+  "ordered": false,
+  "src": "Civil Liberties Union (1991); Cruz v. COA (2001); NAC v. COA (2004)",
+  "rv": "pres-prohib",
+  "hook": "By law, required, unpaid.",
+  "cases": [
+   "clu",
+   "cruzcoa",
+   "nacoa"
+  ]
+ },
+ {
+  "id": "h-pr-ptc",
+  "t": "pres",
+  "title": "Where the Truth Commission’s power came from (Biraogo)",
+  "ask": "Which sources did the Court reject and accept for the President’s power to create the Truth Commission?",
+  "items": [
+   "Not the power to reorganize (Administrative Code, Book III, Sec. 31): it alters existing offices, it does not create them",
+   "Not the power of control: it reviews subordinates’ acts; it is different from creating offices",
+   "Not PD 1416: a transitional delegation, functus officio when Congress convened",
+   "Yes, the faithful-execution clause (Art. VII, Sec. 17): the inherent power to investigate and create ad hoc bodies",
+   "Funding from existing OP appropriations is an allotment, not an appropriation",
+   "Fact-finding is not adjudication: it does not supplant the Ombudsman or the DOJ",
+   "But EO 1 violated equal protection by singling out the previous administration"
+  ],
+  "ordered": true,
+  "src": "Biraogo v. PTC (2010)",
+  "rv": "pres-exec",
+  "hook": "Not reorganize, not control, not PD 1416: faithful execution. Then equal protection.",
+  "cases": [
+   "biraogo"
+  ]
+ },
+ {
+  "id": "h-pr-reorg",
+  "t": "pres",
+  "title": "A valid reorganization of the Executive (Banda)",
+  "ask": "What makes a presidential reorganization valid?",
+  "items": [
+   "The office is in the Executive: not the Judiciary, Congress or a constitutional body",
+   "It alters an existing structure (abolish, merge, transfer, modify functions); creating a new office is not reorganization",
+   "A statutory basis: Administrative Code, Book III, Secs. 20 and 31, and the GAAs, read with the power of control",
+   "Good faith: for economy or efficiency (Dario v. Mison)",
+   "Bad faith (a change of names, false economy, a purge) voids it; whoever alleges it must prove it",
+   "The power may be delegated to the Secretary as alter ego (DENR v. DENR Region 12)"
+  ],
+  "ordered": false,
+  "src": "Banda v. Ermita (2010); Biraogo (2010); DENR v. DENR Region 12 (2003)",
+  "rv": "pres-control",
+  "hook": "Executive, existing, authorized, honest.",
+  "cases": [
+   "banda",
+   "biraogo",
+   "denr12"
+  ]
+ },
+ {
+  "id": "h-pr-ctrlsup",
+  "t": "pres",
+  "title": "Control versus supervision",
+  "ask": "Define control and supervision, and say whom each covers.",
+  "items": [
+   "Control: alter, modify, nullify or set aside a subordinate’s act and substitute one’s judgment (Mondano v. Silvosa)",
+   "Control covers all executive departments, bureaus and offices (Art. VII, Sec. 17), every employee, and may be exercised motu proprio",
+   "Control is self-executing and cannot be withdrawn by Congress (NEA v. COA)",
+   "Qualified political agency: the Secretaries’ acts are presumptively the President’s unless disapproved",
+   "Supervision: see that the rules are followed; may not lay down, modify or replace them (Drilon v. Lim)",
+   "Supervision covers local governments and autonomous regions (Art. X, Secs. 4 and 16)",
+   "Supervision allows investigation and discipline as the law provides, but not withholding LGU powers or funds (Pimentel v. Aguirre)"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 17; Art. X, Secs. 4 and 16",
+  "rv": "pres-control",
+  "hook": "Control substitutes; supervision only checks.",
+  "cases": [
+   "blaquera",
+   "neacoa",
+   "denr12",
+   "pimentelaguirre"
+  ]
+ },
+ {
+  "id": "h-pr-ira",
+  "t": "pres",
+  "title": "When the President may adjust the LGUs’ share (LGC Sec. 284)",
+  "ask": "What must concur before the President may reduce the internal revenue allotment?",
+  "items": [
+   "An unmanaged public sector deficit of the national government",
+   "Consultation with the Senate President and the Speaker",
+   "Consultation with the presidents of the leagues of local governments",
+   "The recommendation of the Secretaries of Finance, the Interior and Local Government, and Budget",
+   "The allotment may never go below 30% of the national internal revenue of the third preceding fiscal year",
+   "Otherwise the share is released automatically, with no lien or holdback, even temporarily (Art. X, Sec. 6; LGC Sec. 286)"
+  ],
+  "ordered": false,
+  "src": "Pimentel v. Aguirre (2000); LGC Secs. 284, 286",
+  "rv": "pres-lgu",
+  "hook": "Deficit, consult, recommend, 30% floor; else no holdback.",
+  "cases": [
+   "pimentelaguirre"
+  ]
+ }
+]
