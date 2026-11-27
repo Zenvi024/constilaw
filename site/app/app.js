@@ -17,13 +17,13 @@ const tname = k => (TOP[k] ? TOP[k].name : k);
 const OUT_TOPICS = ["cit", "terr"], OUT_SECS = ["cit", "terr"], OUT_ISSUES = ["ppl_citizen", "ppl_dual", "terr"];
 let HIDE = store.get("hideCitTerr", true);
 const shownT = t => !HIDE || !OUT_TOPICS.includes(t);
-const TOPS = () => D.topics.filter(t => shownT(t.key));
+const TOPS = () => D.topics.filter(t => shownT(t.key) && (D.cases.some(c => c.t === t.key) || D.lists.some(l => l.t === t.key)));
 const CASES = () => D.cases.filter(c => shownT(c.t));
 const MCQS = () => D.mcq.filter(q => shownT(q.t));
 const ISSUES = () => D.issues.map(g => ({...g, items: g.items.filter(i => !HIDE || !OUT_ISSUES.includes(i.id))})).filter(g => g.items.length);
 
 /* ================= tabs ================= */
-const TABS = ["today","rules","lists","cases","exams","spot","write","print"];
+const TABS = ["today","rules","lists","cases","digests","exams","spot","write","print"];
 function setTab(t, push){
   if (!TABS.includes(t)) t = "today";
   TABS.forEach(x => { $("v-" + x).hidden = x !== t; }); $("v-search").hidden = true;
@@ -32,6 +32,7 @@ function setTab(t, push){
   if (push !== false){ try { history.replaceState(null, "", "#" + t); } catch(e){} }
   if (t === "today") renderToday();
   if (t === "print") renderPrint();
+  if (t === "digests") requestAnimationFrame(() => renderDigests());   // defined at the end of the script
   if (t === "lists" && !$("lList").hidden) renderLists();
   if (t === "rules") requestAnimationFrame(spy);
   window.scrollTo({top: 0});
@@ -46,8 +47,8 @@ function manilaToday(){ // yyyy-mm-dd in Asia/Manila
 function daysTo(iso){ const a = new Date(manilaToday() + "T00:00:00Z"), b = new Date(iso + "T00:00:00Z"); return Math.round((b - a) / 864e5); }
 function renderClock(){
   const n = daysTo(D.examDate);
-  const when = "Fri, Oct 16 · 10:00 AM";
-  const [a, b, c] = n > 1 ? [`${n} days`, when, "to the midterm"] : n === 1 ? ["1 day", when, "Light review, early night."] : n === 0 ? ["Today", "10:00 AM", "Checklist and anchor list, then go."] : ["Done", "Oct 16", "The midterm is over."];
+  const when = "Wed, Dec 16 · orals";
+  const [a, b, c] = n > 1 ? [`${n} days`, when, "to the oral finals"] : n === 1 ? ["1 day", when, "Light review, early night."] : n === 0 ? ["Today", "Oral finals", "Three news cards out loud, then go."] : ["Done", "Dec 16", "The finals are over."];
   $("cdN").textContent = a; $("cdL").textContent = b; $("cdA").textContent = c;
   const fb = $("fbClock"); if (fb) fb.textContent = `${a} · ${b}`;
 }
@@ -76,6 +77,7 @@ function caseHTML(c){
   ${c.g ? `<div class="gatn"><strong>Gatmaytan:</strong> ${esc(c.g)}</div>` : ""}
   ${c.w ? `<div class="warnn"><strong>Caution:</strong> ${esc(c.w)}</div>` : ""}
   ${c.dg ? `<details class="dgrev"><summary>2026 block reviewer: full digest</summary><div class="dgnote">Student-written class reviewer, kept as written. The card above was checked against it; where they differ, follow the card.</div>${dgHTML(c.dg)}</details>` : ""}
+  ${FD_BY_CARD[c.id] ? `<div><button class="btn small primary" data-fdcard="${c.id}">Read the full digest${FD_BY_CARD[c.id].length > 1 ? "s" : ""}</button></div>` : ""}
   ${t && t.sec ? `<div><button class="btn small" data-gosec="${t.sec}">Open the rule map: ${esc(t.name)}</button></div>` : ""}`;
 }
 function dgHTML(txt){
@@ -1156,3 +1158,135 @@ if (!secShown(curSec)) openSec(visIdx()[0], false);
 fillLTopic(); renderLists(); applyBlur(); applyScopeMarks(); updRead();
 applySpotScope(); renderCases(); renderDSetup(); setCaseMode("browse"); renderQSetup(); renderSpot(); renderWrite(); dueBadge();
 (() => { const h = (location.hash || "").slice(1); setTab(TABS.includes(h) ? h : store.get("tab", "today"), false); })();
+
+/* ================= full digests (finals): lossless reader. Data: D.fin (syllabus entries) + #fdz (gzip, base64) ================= */
+const FIN = D.fin;
+const FD_BY_CARD = {};
+FIN.forEach(e => { if (e.card && e.d && e.d.length) FD_BY_CARD[e.card] = [...new Set([...(FD_BY_CARD[e.card] || []), ...e.d])]; });
+let FDZ = null, FDZP = null;
+function fdLoad(){
+  if (FDZ) return Promise.resolve(FDZ);
+  if (!FDZP) FDZP = (async () => {
+    const b64 = $("fdz").textContent.trim(), bin = atob(b64), u = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+    const txt = await new Response(new Blob([u]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+    FDZ = JSON.parse(txt); return FDZ;
+  })();
+  return FDZP;
+}
+const fdP = ps => (ps || []).map(p => p.list ? `<p class="fdp fdli" style="--lv:${p.list[2]}"><span class="fdlb">${esc(p.list[1])}</span><span>${p.html}</span></p>` : `<p class="fdp">${p.html}</p>`).join("");
+const fdL = ps => (ps || []).map(p => p.wl ? `<div class="fdwsub">${p.html}</div>` : p.list ? `<div class="fdwline fdli" style="--lv:${p.list[2]}"><span class="fdlb">${esc(p.list[1])}</span>${p.html}</div>` : `<div class="fdwline">${p.html}</div>`).join("");
+const fdT = ps => (ps || []).map(p => p.text).join(" ");
+const fdWrite = (lines, what) => lines && lines.length ? `<div class="fdw"><div class="fdwl">WRITE ▸ ${esc(what || "")}</div>${fdL(lines)}</div>` : "";
+const fdAns = ps => { const t = fdT(ps).trim().toUpperCase(); return t.startsWith("YES") ? "fdyes" : t.startsWith("NO") && !t.startsWith("NOT") ? "fdno" : "fdoth"; };
+const fdMainIss = s => /^\s*Main/i.test(s.kindLabel || "");
+function fdParts(parts){
+  let h = "", i = 0;
+  while (i < parts.length){
+    const p = parts[i];
+    if (/ARGUMENT/i.test(p.h)){ const g = []; while (i < parts.length && /ARGUMENT/i.test(parts[i].h)) g.push(parts[i++]); h += `<div class="fdargs">${g.map(a => `<div class="fdarg"><h4>${esc(a.h)}</h4>${fdP(a.paras)}</div>`).join("")}</div>`; continue; }
+    h += `<div class="fdpart${/RULING/i.test(p.h) ? " fdruling" : ""}">${p.h ? `<h4>${esc(p.h)}</h4>` : ""}${fdP(p.paras)}</div>`; i++;
+  }
+  return h;
+}
+function fdCardFace(d, side){
+  return `<div class="fdic"><span class="fdcs">${side.toUpperCase()}</span>${(d[side] || []).map(p => `<div class="fdln${p.list ? " fdli" : ""}"${p.list ? ` style="--lv:${p.list[2]}"` : ""}>${p.list ? `<span class="fdlb">${esc(p.list[1])}</span>` : ""}${p.html}</div>`).join("")}</div>`;
+}
+function fdSection(s, k, pre){
+  const id = `${pre}-${k}`;
+  if (s.kind === "headwrite") return `<div id="${id}">${fdWrite(s.write, "· headnote")}</div>`;
+  if (s.kind === "group") return `<div class="fdgrp" id="${id}">${s.labelHtml || esc(s.label)}</div>${(s.parts || []).length || (s.write || []).length ? `<section class="fdblk">${fdParts(s.parts || [])}${fdWrite(s.write, "· " + s.label)}</section>` : ""}`;
+  if (s.kind === "issue"){
+    const m = fdMainIss(s);
+    return `<section class="fdblk fdis${m ? " fdmain" : ""}" id="${id}"><div class="fdih"><span class="fdn">${esc(s.label)}</span><span class="fdkind${m ? " fdmain" : ""}">${esc(s.kindLabel)}</span></div>
+      <div class="fdq">${fdP(s.question)}</div><div class="fdans ${fdAns(s.answer)}">${fdP(s.answer)}</div>
+      ${(s.subs || []).length ? `<div class="fdsubs">${s.subs.map(x => `<div><div>${fdP(x.q)}</div><div>${fdP(x.a)}</div></div>`).join("")}</div>` : ""}
+      ${fdParts(s.parts)}${fdWrite(s.write, "· " + s.label)}</section>`;
+  }
+  const title = s.kind === "facts" ? "Facts" : s.kind === "decision" ? (s.label && s.label !== "Final decision" ? s.label : "Final decision") : s.label;
+  return `<section class="fdblk" id="${id}"><h3>${esc(title)}</h3>${fdParts(s.parts)}${fdWrite(s.write, "· " + title)}</section>`;
+}
+function fdDocHTML(id, pre){
+  const v = FDZ[id]; if (!v) return `<p class="fdempty">Digest not found.</p>`;
+  const d = v.data;
+  if (d.raw){
+    return `<div class="fddoc fdraw"><section class="fdblk">${d.paras.map(p => /heading ?1|title/i.test(p.st) ? `<h3>${p.html}</h3>` : /heading/i.test(p.st) ? `<h4>${p.html}</h4>` : p.st === "cell" ? `<p class="fdp fdcell">${p.html}</p>` : (p.list ? fdP([p]) : `<p class="fdp">${p.html}</p>`)).join("")}</section></div>`;
+  }
+  const hn = `<div class="fdhn" id="${pre}-hn">${d.headnote.map(h => `<div class="fdk">${esc(h.label)}</div><div>${fdP(h.paras)}</div>`).join("")}</div>`;
+  const sub = (d.subtitle || []).length ? `<div class="fdmeta">${fdP(d.subtitle)}</div>` : "";
+  const card = (d.front || []).length || (d.back || []).length ? `<section class="fdblk" id="${pre}-card"><h3>5×8 recit card</h3>${fdCardFace(d, "front")}${fdCardFace(d, "back")}</section>` : "";
+  return `<div class="fddoc">${sub}${hn}${d.sections.map((s, k) => fdSection(s, k, pre)).join("")}${card}</div>`;
+}
+function fdJump(id, pre){
+  const d = FDZ[id] && FDZ[id].data; if (!d || d.raw) return "";
+  const L = [["Headnote", pre + "-hn", ""]];
+  d.sections.forEach((s, k) => {
+    if (s.kind === "issue") L.push([s.label.replace("ISSUE", "Issue") + (fdMainIss(s) ? " ★" : ""), `${pre}-${k}`, fdMainIss(s) ? "fdmain" : ""]);
+    else if (s.kind === "facts") L.push(["Facts", `${pre}-${k}`, ""]);
+    else if (s.kind === "decision") L.push(["Decision", `${pre}-${k}`, ""]);
+    else if (s.kind === "opinions") L.push(["Opinions", `${pre}-${k}`, ""]);
+  });
+  if ((d.front || []).length) L.push(["5×8 card", pre + "-card", ""]);
+  return `<div class="fdjump">${L.map(([l, h, c]) => `<button type="button" data-fdto="${h}" class="${c}">${esc(l)}</button>`).join("")}</div>`;
+}
+let fdScope = store.get("fdScope", "fin"), fdSel = store.get("fdSel", -1), fdVer = 0, fdBlur = store.get("fdBlur", false);
+const fdFirstFin = FIN.findIndex(e => e.f);
+function fdVisible(){
+  const q = ($("fdq").value || "").trim().toLowerCase();
+  const out = []; let pendingHeads = [];
+  FIN.forEach((e, i) => {
+    if (e.h){ pendingHeads = pendingHeads.filter(h => FIN[h].lv < e.lv); pendingHeads.push(i); return; }   // shown only above a visible case
+    if (fdScope === "fin" && i < fdFirstFin) return;
+    if (HIDE && e.x) return;
+    if (fdScope === "fin" && !e.f && !e.other) return;
+    if (q && !(e.s + " " + e.c).toLowerCase().includes(q) && !fdTextHit(e, q)) return;
+    out.push(...pendingHeads.map(h => ({h})), {i}); pendingHeads = [];
+  });
+  return out;
+}
+let FDTXT = null;
+function fdTextHit(e, q){
+  if (!FDZ || q.length < 3) return false;
+  if (!FDTXT){ FDTXT = {}; for (const [id, v] of Object.entries(FDZ)) FDTXT[id] = JSON.stringify(v.data).replace(/<[^>]+>/g, " ").toLowerCase(); }
+  return (e.d || []).some(id => FDTXT[id] && FDTXT[id].includes(q));
+}
+function renderDigests(){
+  document.querySelectorAll("[data-fdscope]").forEach(b => b.setAttribute("aria-pressed", b.dataset.fdscope === fdScope));
+  const rows = fdVisible();
+  $("fdCount").textContent = `${rows.filter(r => r.i !== undefined).length} cases`;
+  $("fdList").innerHTML = rows.map(r => {
+    if (r.h !== undefined){ const e = FIN[r.h]; return `<div class="fdh fdlv${e.lv}">${esc(e.h)}</div>`; }
+    const e = FIN[r.i], n = (e.d || []).length;
+    return `<button type="button" class="fdrow${n ? "" : " fdnone"}" data-fde="${r.i}" aria-current="${r.i === fdSel}"><span>${esc(e.s)}</span>${n ? (n > 1 ? `<span class="fdtag">${n} digests</span>` : "") : e.card ? `<span class="fdtag">card</span>` : `<span class="fdtag">—</span>`}</button>`;
+  }).join("") || `<p class="empty">No case matches.</p>`;
+  fdLoad().then(() => renderFdRead());
+}
+function renderFdRead(){
+  const box = $("fdRead"), e = FIN[fdSel];
+  $("fdWrap").classList.toggle("fdreading", !!e && window.innerWidth <= 900 && fdReadingMobile);
+  if (!e || e.h){ box.innerHTML = `<p class="fdempty">Pick a case on the left. Every digest here is shown in full, exactly as written in your files: headnote, facts, every issue, ruling, WRITE ▸ box and the 5×8 card.</p>`; return; }
+  const ids = e.d || []; if (fdVer >= ids.length) fdVer = 0;
+  const id = ids[fdVer], v = id && FDZ[id];
+  const ver = ids.length > 1 ? `<div class="fdver" role="group" aria-label="Versions">${ids.map((x, k) => `<button type="button" data-fdver="${k}" aria-pressed="${k === fdVer}">${esc((FDZ[x] && FDZ[x].data.title) ? (k + 1) + ". " + FDZ[x].label : x)}</button>`).join("")}</div>` : "";
+  box.innerHTML = `<div class="fdtop"><div class="fdbar"><button type="button" class="btn small fdback" data-fdback>← All digests</button></div>
+    <h2>${esc(v ? (v.data.title || e.s) : e.s)}</h2><div class="fdmeta">${esc(e.c)}${v ? " · " + esc(v.label) + " · " + esc(v.src.split("/").pop()) : ""}</div>
+    <div class="fdbar">${ver}${e.card ? `<button type="button" class="btn small" data-case="${e.card}">Case card</button>` : ""}${v ? `<button type="button" class="btn small" data-fdblur aria-pressed="${fdBlur}">${fdBlur ? "Show highlights" : "Hide highlights (recall)"}</button>` : ""}</div>
+    ${v ? fdJump(id, "fdx") : ""}</div>
+    <div class="fd${fdBlur ? " fdblur" : ""}" id="fdDoc">${v ? fdDocHTML(id, "fdx") : `<p class="fdempty">No digest for this case in your files${e.card ? "; open the case card instead" : ""}.</p>`}</div>`;
+}
+let fdReadingMobile = false;
+function fdOpen(i, ver){ fdSel = i; fdVer = ver || 0; store.set("fdSel", i); fdReadingMobile = true; document.querySelectorAll(".fdrow").forEach(b => b.setAttribute("aria-current", +b.dataset.fde === i)); fdLoad().then(() => { renderFdRead(); $("fdRead").scrollIntoView({block: "start"}); }); }
+function openDigestFor(cardId){ const i = FIN.findIndex(e => e.card === cardId && e.d && e.d.length); if (i < 0) return; closeModal(); setTab("digests"); fdOpen(i); }
+document.addEventListener("click", e => {
+  const r = e.target.closest("[data-fde]"); if (r){ fdOpen(+r.dataset.fde); return; }
+  const s = e.target.closest("[data-fdscope]"); if (s){ fdScope = s.dataset.fdscope; store.set("fdScope", fdScope); renderDigests(); return; }
+  const v = e.target.closest("[data-fdver]"); if (v){ fdVer = +v.dataset.fdver; renderFdRead(); return; }
+  const j = e.target.closest("[data-fdto]"); if (j){ const el = document.getElementById(j.dataset.fdto); if (el){ el.scrollIntoView({block: "start"}); el.classList.add("fdflash"); setTimeout(() => el.classList.remove("fdflash"), 1200); } return; }
+  if (e.target.closest("[data-fdblur]")){ fdBlur = !fdBlur; store.set("fdBlur", fdBlur); renderFdRead(); return; }
+  if (e.target.closest("[data-fdback]")){ fdReadingMobile = false; $("fdWrap").classList.remove("fdreading"); window.scrollTo({top: 0}); return; }
+  const o = e.target.closest("[data-fdcard]"); if (o){ openDigestFor(o.dataset.fdcard); return; }
+  const h = e.target.closest("#fdDoc.fdblur :is(.hl-y,.hl-p,.hl-o)"); if (h){ h.classList.add("fdshown"); }
+});
+let fdQT = 0;
+$("fdq").addEventListener("input", () => { clearTimeout(fdQT); fdQT = setTimeout(renderDigests, 150); });
+window.__fdRender = async id => { await fdLoad(); return `<h2>${esc(FDZ[id].data.title || "")}</h2>` + fdDocHTML(id, "fdt"); };   // test hook: title (shown in the reader header) + body

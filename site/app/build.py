@@ -27,6 +27,16 @@ TOPICS = [  # key, name, syllabus part, rule-map section
     ('powers', 'Powers of Congress and delegation', 'V.A.7–8(a)(1)', 'powers'),
     ('approp', 'Appropriations', 'V.A.8(a)(2)', 'money'),
     ('tax', 'Taxation', 'V.A.8(b)', 'money'),
+    # finals (rule-map section ids are added as each batch writes its rule map)
+    ('legproc', 'Congress: legislative process and investigations', 'V.A.7(c)–8', ''),
+    ('ocong', 'Congress: other powers and impeachment', 'V.A.9', ''),
+    ('pres', 'The President: office, succession, executive power', 'V.B.1–2(c)', ''),
+    ('appt', 'Appointment and clemency', 'V.B.2(d)–(e)', ''),
+    ('cinc', 'Commander-in-Chief, other powers, the Vice President', 'V.B.2(f)–(k), V.B.3', ''),
+    ('court', 'The Supreme Court', 'V.C.1–2(o)', ''),
+    ('scadmin', 'The SC’s administrative and rule-making powers', 'V.C.2(p)', ''),
+    ('jbc', 'Lower courts and the JBC', 'V.C.3–6', ''),
+    ('concom', 'Constitutional Commissions', 'Constitutional Commissions', ''),
 ]
 topics = [dict(key=k, name=n, part=p, sec=s) for k, n, p, s in TOPICS]
 tkeys = {t['key'] for t in topics}
@@ -206,13 +216,26 @@ for d in plan:
         if g.startswith('lists:'): assert g[6:] == 'due' or g[6:] in tkeys, g
         if g.startswith('blur:'): assert ('id="%s"' % g[5:]) in rev, g
 
-D = dict(examDate='2026-10-16', topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers, plan=plan)
+# finals: the whole syllabus with full digests (site/data/finals, built by finals-intake/tools/digest_data.py)
+import base64
+FIN = load('finals/syllabus.json')['entries']
+FDZ = open(os.path.join(DATA, 'finals', 'digests.json.gz'), 'rb').read()
+import gzip as _gz
+_fd = json.loads(_gz.decompress(FDZ))
+for e in FIN:
+    if e.get('card'): assert e['card'] in cid, ('syllabus entry links an unknown card', e['card'])
+    for i in e.get('d', []): assert i in _fd, ('syllabus entry links an unknown digest', i)
+assert all(e['d'] for e in FIN if e.get('f')), 'a finals case has no digest'
+print(f'finals: {sum(1 for e in FIN if e.get("f"))} syllabus cases, {len(_fd)} full digests ({len(FDZ)//1024} KB gzip)')
+
+D = dict(examDate='2026-12-16', fin=FIN, topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers, plan=plan)
 t = open(os.path.join(HERE, 'template.html')).read()
 t = t.replace('__CSS__', open(os.path.join(HERE, 'style.css')).read())
 t = t.replace('__REVIEWER__', rev)
 t = t.replace('__JS__', open(os.path.join(HERE, 'app.js')).read())
+t = t.replace('__FDZ__', base64.b64encode(FDZ).decode())
 t = t.replace('__DATA__', J(D))
-assert '__DATA__' not in t and '__JS__' not in t and '__REVIEWER__' not in t
+assert '__DATA__' not in t and '__JS__' not in t and '__REVIEWER__' not in t and '__FDZ__' not in t
 os.makedirs(os.path.dirname(os.path.abspath(A.out)), exist_ok=True)
 open(A.out, 'w').write(t)
 print(f'wrote {A.out}: {len(t):,} bytes · {len(cases)} cases ({sum(c["a"] for c in cases)} anchors, {sum(1 for c in cases if c.get("dg"))} with class-reviewer text) · {len(lists)} lists · {len(mcq)} MCQs · {len(essays)} essays · {len(numbers)} numbers')

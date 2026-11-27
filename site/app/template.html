@@ -1,4 +1,4 @@
-<title>Consti 1 Midterm Desk</title>
+<title>CONSTI Desk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Libre+Franklin:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -10,17 +10,18 @@ __CSS__
   <div class="hdr-in">
     <div class="hdr-top">
       <div class="brand">
-        <div class="eyebrow">Law 121 · Constitutional Law 1 · Prof. Dante B. Gatmaytan · 1-B</div>
-        <h1>Consti 1 <em>Midterm Desk</em></h1>
+        <div class="eyebrow">Law 121 · Constitutional Law 1 · Prof. Dante B. Gatmaytan · 1-B · Finals: oral exam</div>
+        <h1>Consti 1 <em>Desk</em></h1>
       </div>
       <div class="gsearch" role="search"><input type="search" id="gq" placeholder="Search everything: a case, rule, list, number…" aria-label="Search the whole site" autocomplete="off"><kbd>/</kbd></div>
-      <div class="hdr-right"><button class="scope" id="scopeBtn" aria-pressed="true" title="Citizenship and national territory are not in this year’s midterm">Citizenship &amp; territory: <b id="scopeState">hidden</b></button><button class="scope themebtn" id="themeBtn" type="button">Theme: <b>auto</b></button><div class="clock" aria-live="polite"><div class="cl1"><span class="n" id="cdN">–</span><span class="l" id="cdL">Fri, Oct 16 · 10:00 AM</span></div><span class="adv" id="cdA"></span></div></div>
+      <div class="hdr-right"><button class="scope" id="scopeBtn" aria-pressed="true" title="Citizenship and national territory are not in this year’s midterm or finals coverage">Citizenship &amp; territory: <b id="scopeState">hidden</b></button><button class="scope themebtn" id="themeBtn" type="button">Theme: <b>auto</b></button><div class="clock" aria-live="polite"><div class="cl1"><span class="n" id="cdN">–</span><span class="l" id="cdL">Wed, Dec 16 · orals</span></div><span class="adv" id="cdA"></span></div></div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button role="tab" data-tab="today" aria-selected="true">Today</button>
       <button role="tab" data-tab="rules" aria-selected="false">Rule maps</button>
       <button role="tab" data-tab="lists" aria-selected="false">Lists</button>
       <button role="tab" data-tab="cases" aria-selected="false">Cases<span class="badge" id="dueBadge" hidden></span></button>
+      <button role="tab" data-tab="digests" aria-selected="false">Digests</button>
       <button role="tab" data-tab="exams" aria-selected="false">Past exams</button>
       <button role="tab" data-tab="spot" aria-selected="false">Issue spotter</button>
       <button role="tab" data-tab="write" aria-selected="false">Essay trainer</button>
@@ -170,6 +171,19 @@ __REVIEWER__
 </main>
 
 <!-- PAST EXAMS -->
+<!-- DIGESTS (finals): every digest in full -->
+<main class="page" id="v-digests" hidden>
+  <div class="fdwrap" id="fdWrap">
+    <aside class="fdside">
+      <div class="spread"><h2 class="h2" style="margin:0">Digests</h2><span class="tiny" id="fdCount"></span></div>
+      <div class="seg" role="group" aria-label="Which cases"><button type="button" data-fdscope="fin" aria-pressed="true">Finals coverage</button><button type="button" data-fdscope="all" aria-pressed="false">Whole syllabus</button></div>
+      <input type="search" id="fdq" placeholder="Filter by name, or search inside the digests…" aria-label="Filter digests" autocomplete="off">
+      <div class="fdlist" id="fdList"></div>
+    </aside>
+    <section class="fdread" id="fdRead" aria-live="polite"></section>
+  </div>
+</main>
+
 <main class="page narrow" id="v-exams" hidden>
   <div class="stack">
     <div class="spread">
@@ -258,8 +272,9 @@ __REVIEWER__
 
 <div class="scrim" id="scrim" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modal"></div></div>
 
-<footer class="ft">Built for Zen (UP Law 1-B, 2030) from the syllabus, the 2025 class reviewer, the block reviewers, the digest masterfile and Gatmaytan’s <em>Constitutional Law in the Philippines</em>. Verify anything that looks off against the class reviewers. Current through October 15, 2026.</footer>
+<footer class="ft">Built for Zen (UP Law 1-B, 2030) from the syllabus, the 2025 class reviewer, the block reviewers, the digest masterfile and Gatmaytan’s <em>Constitutional Law in the Philippines</em>. Full digests in the Digests tab are shown exactly as written in your files. Verify anything that looks off against the class reviewers and the decisions. Current through November 27, 2026.</footer>
 
+<script type="application/octet-stream" id="fdz">__FDZ__</script>
 <script>
 const D = __DATA__;
 __JS__

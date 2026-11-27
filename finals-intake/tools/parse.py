@@ -143,17 +143,19 @@ def table(tbl, num):
 def plain(ps): return ' '.join(p['text'] for p in ps).strip()
 
 
-def parse(path):
-    d = docx.Document(path); num = Numbering(d)
+def parse(path, elements=None, num=None, name=None):
+    """Parse a whole .docx, or (elements, num) = one case's slice of a compilation's body."""
+    if elements is None:
+        d = docx.Document(path); num = Numbering(d); elements = list(d.element.body.iterchildren())
     blocks = []
-    for ch in d.element.body.iterchildren():
+    for ch in elements:
         t = ch.tag.split('}')[1]
         if t == 'p':
             x = para(ch, num)
             if x['text'].strip(): blocks.append(('p', x))
         elif t == 'tbl':
             blocks.append(('t', table(ch, num)))
-    case = {'file': os.path.basename(path), 'title': '', 'headnote': [], 'sections': [], 'front': [], 'back': []}
+    case = {'file': name or os.path.basename(path), 'title': '', 'headnote': [], 'sections': [], 'front': [], 'back': []}
     i = 0
     assert blocks[0][0] == 'p'; case['title'] = blocks[0][1]['text'].strip(); case['titleHtml'] = blocks[0][1]['html']; i = 1
     case['subtitle'] = []  # note paragraphs between the title and the headnote table
