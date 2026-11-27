@@ -47,7 +47,9 @@ This repo builds Zen's personal study site for **Constitutional Law 1** (Prof. D
 4. Syllabus typos: "General v. Urra" = General v. Urro; "Gudani v. Sena" = Gudani v. Senga; "Demaisip v. Bacal" = Cuevas v. Bacal (G.R. 139382); "Beltran v. Macasiar" = Soliven v. Makasiar (G.R. 82585); "Zaldivar v. Gonzales" = Zaldivar v. Sandiganbayan (1988); Ong v. Senate Tricomm is G.R. No. 275469.
 5. Some cases appear under two headings, with a different focus in each (e.g. Agcaoili: issue 4 under legislative investigations, issues 1–3 under amparo; Padilla; Gaminde; Bengzon v. Drilon; Republic v. Sereno; Marcos v. Robredo; Francisco). One card, tagged to both places, with the right issue emphasized in each.
 6. News items in `E_news/` were gathered after the model's knowledge cutoff. Use the saved article PDFs and the full-text decisions as the source of truth; never fill gaps from memory.
-7. The professor's own views (his articles in `B_articles/`, video transcripts in `F_videos/`, LME 4.0) go in highlighted "professor" boxes and the card's `g` field. He tests them.
+7. **New uploads:** when Zen uploads more files (for example the Senate impeachment rules, P&S, or articles), first commit them to `sources/finals/extra/` and push, then use them. Chat uploads vanish when the container resets.
+8. Books on hand: `Constitutional Law in the Philippines.pdf` at the repo root is Gatmaytan's 2015 *Government Structure*, the predecessor of the assigned *P&S* (2024); use it for his views until P&S arrives, and note where it may be outdated. *LME* 4.0 is in `A_my_files/books/` (the syllabus assigns the 5th ed.; 4.0 is accepted).
+9. The professor's own views (his articles in `B_articles/`, video transcripts in `F_videos/`, LME 4.0) go in highlighted "professor" boxes and the card's `g` field. He tests them.
 
 ## Quality bar (same as midterms, or better)
 
