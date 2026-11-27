@@ -579,10 +579,10 @@ details.item.flash{outline:2px solid var(--sun);outline-offset:3px}
 .walkout .score{font:600 .76rem var(--mono);color:var(--muted)}
 .walkout .row{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
 /* test-me mode: covers the details; tap one to check yourself */
-.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,[data-cover]):not(.rv){color:transparent!important;background:color-mix(in srgb,var(--muted) 20%,var(--card))!important;border-color:var(--line)!important;border-radius:5px;cursor:pointer;user-select:none;-webkit-user-select:none}
-.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,[data-cover]):not(.rv) *{color:transparent!important;background:transparent!important;border-color:transparent!important;text-decoration-color:transparent!important}
-.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,[data-cover]):not(.rv) b::before{color:transparent!important}
-.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,[data-cover]):not(.rv):hover{background:color-mix(in srgb,var(--accent) 22%,var(--card))!important}
+.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,.vor p,[data-cover]):not(.rv){color:transparent!important;background:color-mix(in srgb,var(--muted) 20%,var(--card))!important;border-color:var(--line)!important;border-radius:5px;cursor:pointer;user-select:none;-webkit-user-select:none}
+.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,.vor p,[data-cover]):not(.rv) *{color:transparent!important;background:transparent!important;border-color:transparent!important;text-decoration-color:transparent!important}
+.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,.vor p,[data-cover]):not(.rv) b::before{color:transparent!important}
+.viz.testing :is(.vn .s,.vcmp .c,.vtl .t,.rung .lab,.gate>.gx,.gend,.acro .w,.wr .ln>span,.vor p,[data-cover]):not(.rv):hover{background:color-mix(in srgb,var(--accent) 22%,var(--card))!important}
 .viz.testing .rv{box-shadow:0 0 0 2px var(--sun-soft)}
 .viz.testing .rung .lab:not(.rv){min-height:1.6em}
 /* doors (Art. XVII) */
@@ -869,3 +869,8 @@ body.focus .run-active .card-face.flipped{justify-content:flex-start}
 @media (max-width:560px){.fdhn{grid-template-columns:minmax(0,1fr)}.fdhn .fdk{padding-bottom:0}.fdsubs>div{grid-template-columns:minmax(0,1fr)}}
 .fdside>*{flex:none}
 .fdside input[type=search]{flex:none;width:100%}
+/* "Say it in orals": the spoken answer under a diagram (finals) */
+.vor{margin-top:12px;padding:10px 12px;border-radius:8px;background:var(--accent-soft);border-left:4px solid var(--accent)}
+.vor .vlab{color:var(--accent)}
+.vor p{margin:0!important;font-size:.92rem;line-height:1.55}
+.vor .fill{color:var(--muted);font-style:italic}

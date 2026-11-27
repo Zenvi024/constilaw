@@ -154,7 +154,10 @@
   "h": "RA 7716 upheld.",
   "x": "Tax bill origination and bicameral conference changes (2015 midterm item on income tax reform).",
   "g": "Gatmaytan’s book adopts this reading of Art. VI, Sec. 24: initiative must come from the House because district representatives are closer to local needs.",
-  "s": "The revenue bill, not the law, must originate in the House; Senate may substitute; urgency waives readings and printing."
+  "s": "The revenue bill, not the law, must originate in the House; Senate may substitute; urgency waives readings and printing.",
+  "also": [
+   "legproc"
+  ]
  },
  {
   "id": "lungcenter",

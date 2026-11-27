@@ -227,7 +227,10 @@
   "h": "Publication ordered. (The 1986 resolution extended the rule: all statutes, including those of local application and private laws, must be published, 15 days after publication unless the law provides otherwise.)",
   "x": "Use for citizen standing and for any IRR, ordinance or rule that took effect without publication.",
   "test": "Must be published: statutes, PDs and EOs in the exercise of legislative power, and IRRs that implement laws. Need not: purely interpretative rules, internal rules for agency personnel, letters of instruction to subordinates.",
-  "s": "Citizens may enforce a public right without special injury; all laws and implementing rules must be published."
+  "s": "Citizens may enforce a public right without special injury; all laws and implementing rules must be published.",
+  "also": [
+   "legproc"
+  ]
  },
  {
   "id": "chavezpea",

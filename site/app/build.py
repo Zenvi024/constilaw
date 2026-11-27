@@ -28,7 +28,7 @@ TOPICS = [  # key, name, syllabus part, rule-map section
     ('approp', 'Appropriations', 'V.A.8(a)(2)', 'money'),
     ('tax', 'Taxation', 'V.A.8(b)', 'money'),
     # finals (rule-map section ids are added as each batch writes its rule map)
-    ('legproc', 'Congress: legislative process and investigations', 'V.A.7(c)–8', ''),
+    ('legproc', 'Congress: legislative process and investigations', 'V.A.7(c)–8', 'legproc'),
     ('ocong', 'Congress: other powers and impeachment', 'V.A.9', ''),
     ('pres', 'The President: office, succession, executive power', 'V.B.1–2(c)', ''),
     ('appt', 'Appointment and clemency', 'V.B.2(d)–(e)', ''),
@@ -48,6 +48,7 @@ ids = [c['id'] for c in cases]
 assert len(ids) == len(set(ids)), 'duplicate case id'
 for c in cases:
     assert c['t'] in tkeys, (c['id'], c['t'])
+    for k in c.get('also', []): assert k in tkeys and k != c['t'], (c['id'], 'also', k)
 cid = set(ids)
 # the block's 2026 class reviewer, case by case (shown collapsed in each case card)
 CASEBY = {c['id']: c for c in cases}
@@ -222,6 +223,14 @@ FIN = load('finals/syllabus.json')['entries']
 FDZ = open(os.path.join(DATA, 'finals', 'digests.json.gz'), 'rb').read()
 import gzip as _gz
 _fd = json.loads(_gz.decompress(FDZ))
+# finals cards say which syllabus line(s) they belong to ('sy': citation prefixes); link them so the card opens the digest
+for c in cases:
+    for pre in c.get('sy', []):
+        hits = [e for e in FIN if 'c' in e and e['c'].startswith(pre)]
+        assert hits, ('card points to no syllabus line', c['id'], pre)
+        for e in hits:
+            assert e.get('card') in (None, c['id']), ('syllabus line already linked to another card', pre, e.get('card'), c['id'])
+            e['card'] = c['id']
 for e in FIN:
     if e.get('card'): assert e['card'] in cid, ('syllabus entry links an unknown card', e['card'])
     for i in e.get('d', []): assert i in _fd, ('syllabus entry links an unknown digest', i)

@@ -1,0 +1,301 @@
+[
+ {
+  "id": "fabian",
+  "n": "Fabian v. Desierto",
+  "y": "1998",
+  "t": "legproc",
+  "sub": "V.A.7(c) Appellate jurisdiction of the Supreme Court",
+  "a": 1,
+  "r": "A law that increases the Supreme Court's appellate jurisdiction without its advice and concurrence violates Art. VI, Sec. 30. Sec. 27 of RA 6770 (appeal by certiorari to the SC from the Ombudsman's decisions in administrative disciplinary cases) is void; those appeals go to the Court of Appeals under Rule 43.",
+  "f": "A complainant whose administrative case was dismissed by the Ombudsman appealed to the Supreme Court under Sec. 27 of the Ombudsman Act, which allowed appeals by certiorari to the SC.",
+  "h": "Sec. 27 of RA 6770, Sec. 7, Rule III of Ombudsman AO 7, and any provision allowing appeals in administrative disciplinary cases from the Ombudsman to the SC are invalid; the appeal was referred to the Court of Appeals. The rule on where to appeal is procedural, not substantive, so it may be applied to pending cases.",
+  "test": "Art. VI, Sec. 30: no law shall be passed increasing the appellate jurisdiction of the Supreme Court as provided in the Constitution without its advice and concurrence.",
+  "x": "Use when a statute sends appeals from an agency straight to the Supreme Court, or otherwise adds to its appellate jurisdiction.",
+  "s": "RA 6770 Sec. 27 (Ombudsman appeals to the SC) void: no SC advice and concurrence.",
+  "sy": [
+   "Fabian v. Desierto"
+  ]
+ },
+ {
+  "id": "carpiomorales",
+  "n": "Carpio-Morales v. Court of Appeals",
+  "y": "2015",
+  "t": "legproc",
+  "sub": "V.A.7(c) Appellate jurisdiction of the Supreme Court",
+  "a": 1,
+  "r": "Congress cannot expand the Court's appellate jurisdiction without its consent, nor encroach on its exclusive power to promulgate rules of procedure. The second paragraph of Sec. 14 of RA 6770 (no appeal or application for remedy against an Ombudsman decision except to the SC on pure questions of law) is unconstitutional, and the first paragraph (no court may enjoin an Ombudsman investigation) is ineffective until the Court adopts it as part of its rules.",
+  "f": "The Ombudsman preventively suspended Makati Mayor Binay, Jr.; the Court of Appeals issued a TRO and then a writ of preliminary injunction against the suspension, relying on the condonation doctrine. The Ombudsman went to the SC, invoking Sec. 14 of RA 6770.",
+  "h": "Petition partly granted. Sec. 14, par. 2 of RA 6770 declared unconstitutional; the policy against provisional injunctive writs by courts other than the SC (par. 1) was declared ineffective until the Court adopts it. The CA had jurisdiction to issue the TRO and injunction, and did not gravely abuse its discretion in relying on condonation, but the condonation doctrine was abandoned prospectively.",
+  "x": "Use with Fabian whenever a law limits which court may hear a case against an agency, or bars courts from issuing injunctions.",
+  "w": "The abandonment of the condonation doctrine is the famous holding, but the syllabus lists the case here for Sec. 30 and the rule-making power.",
+  "s": "RA 6770 Sec. 14: Congress cannot expand SC appellate jurisdiction or make rules of procedure.",
+  "sy": [
+   "Carpio-Morales v. Court of Appeals"
+  ]
+ },
+ {
+  "id": "gonzalesmacaraig",
+  "n": "Gonzales v. Macaraig, Jr.",
+  "y": "1990",
+  "t": "legproc",
+  "sub": "V.A.8(b) Procedure for the passage of bills: the item veto",
+  "a": 1,
+  "r": "Inappropriate provisions, matters of general legislation unrelated to appropriations that are more properly dealt with in separate enactments, may be treated as items and vetoed by the President when inserted in an appropriation bill. The Court may review the validity of a presidential veto.",
+  "f": "President Aquino vetoed Sec. 55 (on the use of savings) and Sec. 16 of the 1989 General Appropriations Bill. Senators argued that the item veto covers only items, not provisions.",
+  "h": "The veto was upheld and the petition dismissed. The omission of the word 'provision' from the 1987 text did not take away the power to veto inappropriate provisions; Secs. 55 and 16 were inappropriate provisions, so they could be vetoed as items.",
+  "test": "Item veto (Art. VI, Sec. 27(2)): only in appropriation, revenue or tariff bills; only an item (or an inappropriate provision treated as an item); the President may not veto part of an item.",
+  "x": "Use when the President vetoes a rider or a 'provision' in the GAA rather than an amount of money.",
+  "s": "Inappropriate provisions in the GAA may be vetoed as items.",
+  "sy": [
+   "Gonzales v. Macaraig"
+  ]
+ },
+ {
+  "id": "bengzondrilon",
+  "n": "Bengzon v. Drilon",
+  "y": "1992",
+  "t": "legproc",
+  "sub": "V.A.8(b) Procedure for the passage of bills: the item veto (also V.C.6 automatic release)",
+  "a": 1,
+  "r": "The President may veto only a particular item, an indivisible sum of money dedicated to a stated purpose, in an appropriation, revenue or tariff bill; she cannot veto part of an item or provisions that are not items. A veto that withholds the Chief Justice's authority to use savings to fund retired justices' pensions dictates to the Judiciary how its funds should be used and violates its fiscal autonomy and the automatic release of its appropriations (Art. VIII, Sec. 3). A veto cannot repeal an existing law or set aside a final ruling of the Court.",
+  "f": "RA 1797 provided automatic readjustment of retired justices' pensions; PD 644 repealed it. Congress re-enacted it and President Aquino vetoed the bill. In the 1992 GAA, Congress included special provisions for the adjusted pensions; the President vetoed them.",
+  "h": "Petition granted (14–0). The veto was set aside as illegal and unconstitutional; the vetoed provisions of the 1992 Appropriations Act were declared valid and subsisting, and respondents were ordered to release the funds automatically and regularly.",
+  "test": "Item = an indivisible sum of money dedicated to a stated purpose; a provision is not an item unless it is an inappropriate provision (Gonzales v. Macaraig).",
+  "x": "Use when the President vetoes a condition or a part of an appropriation for the Judiciary or another constitutionally autonomous body, or uses the veto to undo an existing law.",
+  "s": "Veto of special provisions on retired justices' pensions void: not items; violates fiscal autonomy.",
+  "sy": [
+   "Bengzon v. Drilon"
+  ]
+ },
+ {
+  "id": "millermardo",
+  "n": "Miller v. Mardo",
+  "y": "1961",
+  "t": "legproc",
+  "sub": "V.A.8(b) Procedure for the passage of bills",
+  "a": 0,
+  "r": "A law cannot be enacted through congressional silence, adjournment or failure to pass a disapproving resolution; a reorganization plan does not become a statute because Congress did not disapprove it. Congress also cannot let an executive reorganization body create courts or confer judicial power over money claims on administrative offices.",
+  "f": "Reorganization Plan No. 20-A, prepared under RA 997, gave the Labor Department's regional offices original and exclusive jurisdiction over money claims under labor standards laws. RA 997 provided that plans not disapproved by Congress would take effect.",
+  "h": "The plan was invalid insofar as it conferred that jurisdiction, and the defect was not cured by Congress's failure to disapprove it. The CFI decisions holding that the hearing officer lacked jurisdiction were affirmed.",
+  "x": "Use when a law says a proposal 'shall take effect unless Congress disapproves it', or tries to make law without passing a bill.",
+  "s": "No law by congressional silence; Reorganization Plan 20-A invalid.",
+  "sy": [
+   "Miller v. Mardo"
+  ]
+ },
+ {
+  "id": "angnars",
+  "n": "Ang Nars Party-List v. Executive Secretary",
+  "y": "2019",
+  "t": "legproc",
+  "sub": "V.A.8(b) Procedure for the passage of bills",
+  "a": 1,
+  "r": "Only a bill can become a law (Art. VI, Secs. 26(2) and 27(1)). A joint resolution is not a bill; even if it passes through the procedure for enacting a bill, it does not become a law and cannot amend or repeal an existing law.",
+  "f": "Sec. 32 of RA 9173 (Philippine Nursing Act) fixed the entry-level salary of government nurses at Salary Grade 15. Joint Resolution No. 4 (2008), implemented by EO 811, set a lower grade.",
+  "h": "Petition granted in part. Sec. 32 of RA 9173 remains valid; par. 16 of Joint Resolution No. 4 and Sec. 6 of EO 811, insofar as they purport to amend or repeal it, have no effect. Mandamus to compel implementation was denied, because funding depends on appropriations.",
+  "x": "Use when Congress tries to amend a law by joint resolution, or a 'resolution' is treated as if it were a statute.",
+  "s": "A joint resolution is not a bill: it cannot amend RA 9173's nurse salary grade.",
+  "sy": [
+   "Ang Nars Party-List"
+  ]
+ },
+ {
+  "id": "balag",
+  "n": "Balag v. Senate",
+  "y": "2018",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: contempt",
+  "a": 1,
+  "r": "Detention under the Senate's inherent power of contempt during inquiries in aid of legislation is not indefinite: it lasts only until the termination of the legislative inquiry, that is, upon the approval or disapproval of the committee report, or upon the expiration of one Congress. Detention may continue during recess until the report is acted on. To detain longer, Congress must use statutory contempt (e.g., Art. 150, RPC), tried in the courts.",
+  "f": "In the Senate inquiry into the hazing death of UST law student Horacio 'Atio' Castillo, Arvin Balag invoked the right against self-incrimination when asked whether he was the fraternity's president, and was cited in contempt and ordered detained 'until he gives true testimony'.",
+  "h": "The petition was denied as moot (Balag had been released), but the Court ruled on the duration of contempt detention because of its importance (Gesmundo, J.).",
+  "x": "Use whenever a witness is detained by a congressional committee and the question is how long the detention may last.",
+  "s": "Senate contempt detention lasts only until the inquiry ends.",
+  "sy": [
+   "Balag v. Senate"
+  ]
+ },
+ {
+  "id": "sabio",
+  "n": "Sabio v. Gordon",
+  "y": "2006",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation (listed as In re Sabio)",
+  "a": 1,
+  "r": "The power of inquiry is co-extensive with the power to legislate and reaches executive officials and agencies that Congress may regulate or abolish. A mere statute cannot exempt anyone from it without a constitutional basis: Sec. 4(b) of EO 1 (PCGG members and staff cannot be required to testify in any legislative proceeding) is repealed by the 1987 Constitution. Committees may punish for contempt; pendency of a related case in court does not bar the inquiry; the right against self-incrimination is invoked question by question.",
+  "f": "Senate committees investigating losses of POTC, PHILCOMSAT and PHC subpoenaed PCGG Chairman Sabio and other commissioners. They refused, citing Sec. 4(b) of EO 1; Sabio was cited in contempt and arrested.",
+  "h": "Habeas corpus dismissed as moot; the other petitions dismissed. Sec. 4(b) of EO 1 declared repealed; the Senate committees were ordered to continue the inquiry, and the PCGG officials and PHC officers to comply with the subpoenas.",
+  "x": "Use when an official claims a statute or executive order exempts the office from appearing before Congress.",
+  "s": "PCGG exemption from legislative inquiry (EO 1 Sec. 4(b)) repealed by the Constitution.",
+  "sy": [
+   "In Re Sabio"
+  ]
+ },
+ {
+  "id": "ong2025",
+  "n": "Ong v. Senate Tricomm",
+  "y": "2025",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: rights of persons appearing",
+  "a": 1,
+  "r": "A resource person in a legislative inquiry is a witness, not an accused: she cannot refuse to appear or testify altogether, and may invoke the right against self-incrimination only when a specific incriminating question is asked. A legislative inquiry is not a custodial investigation, so the right to remain silent and the right to counsel of persons under custodial investigation do not apply. A direct resort to the SC must show how an exception to the hierarchy of courts applies.",
+  "f": "Katherine Cassandra Li Ong, linked to illegal POGOs, was cited in contempt and detained by the House Quadcomm and was investigated by the Senate Tricomm. She asked the SC to stop the inquiries, invoking her rights to remain silent, against self-incrimination and to counsel.",
+  "h": "The petition for certiorari and prohibition was dismissed; the TRO and the motion for oral arguments were denied (J.Y. Lopez, J.).",
+  "x": "Use when a witness before Congress refuses to answer at all, demands custodial-investigation rights, or claims the hearing is really a criminal trial.",
+  "s": "POGO inquiries: a witness cannot refuse to testify altogether; no custodial rights before Congress.",
+  "sy": [
+   "Ong v. The Senate Tricomm"
+  ]
+ },
+ {
+  "id": "bengzonbr",
+  "n": "Bengzon, Jr. v. Senate Blue Ribbon Committee",
+  "y": "1991",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: in aid of legislation",
+  "a": 1,
+  "r": "The power of inquiry is not absolute: the inquiry must be in aid of legislation, judged by the speech or resolution under which it is made. An inquiry into whether private persons violated a law (Sec. 5, RA 3019) is not in aid of legislation; it belongs to the courts, and there is no general authority to expose private affairs. Where the same issue is already pending before a court, the inquiry encroaches on judicial power. The Court may review legislative inquiries; separation of powers and the political question doctrine are no bar.",
+  "f": "After Senator Enrile's privilege speech, the Blue Ribbon Committee investigated the sale of Benjamin 'Kokoy' Romualdez's corporations to the Lopa Group. The same transactions were the subject of a pending Sandiganbayan case in which Bengzon and others were defendants. They were subpoenaed and refused to testify.",
+  "h": "Petition granted; the committee was enjoined from requiring the petitioners to testify and produce evidence.",
+  "test": "Sec. 21, Art. VI: (1) in aid of legislation; (2) in accordance with duly published rules of procedure; (3) the rights of persons appearing in or affected by the inquiry are respected.",
+  "x": "Use when an inquiry looks like a trial of specific persons for a crime, especially one already pending in court.",
+  "w": "Two different digests of this case are in Zen's files; both are in the Digests tab.",
+  "s": "Blue Ribbon probe of the Romualdez-Lopa sale not in aid of legislation; enjoined.",
+  "sy": [
+   "Bengzon v. Senate Blue Ribbon"
+  ]
+ },
+ {
+  "id": "senateermita",
+  "n": "Senate of the Philippines v. Ermita",
+  "y": "2006",
+  "t": "legproc",
+  "sub": "V.A.8(d)–(e) Question hour and legislative investigation; executive privilege",
+  "a": 1,
+  "r": "Secs. 21 and 22 of Art. VI are distinct: appearance of department heads in the question hour (Sec. 22, oversight) is discretionary, while appearance in inquiries in aid of legislation (Sec. 21) is mandatory, and the only way out is a valid claim of privilege. Only the President and the Justices of the Supreme Court are exempt from the power of inquiry. Executive privilege covers kinds of information, not categories of persons; it must be claimed expressly, with a specific basis, by the President or the Executive Secretary 'by order of the President'. The presumption inclines heavily against secrecy.",
+  "f": "President Arroyo issued EO 464 requiring executive officials to secure her prior consent before appearing before Congress. Officials then skipped Senate hearings on the NorthRail project, the fertilizer fund and alleged wiretapping.",
+  "h": "Petitions partly granted (14–0). Secs. 2(b) and 3 of EO 464 declared void; Secs. 1 and 2(a) valid. Implementing EO 464 before its publication was grave abuse of discretion.",
+  "test": "Question hour (Sec. 22): department heads, on request or with consent of the President, discretionary, oversight. Inquiry (Sec. 21): anyone, compulsory, in aid of legislation, subject to valid privilege.",
+  "x": "Use when the executive orders officials not to attend congressional hearings, or claims privilege in general terms.",
+  "s": "EO 464 partly void: privilege covers information, not persons; Sec. 21 vs. Sec. 22.",
+  "sy": [
+   "Senate of the Philippines v. Ermita"
+  ]
+ },
+ {
+  "id": "gudani",
+  "n": "Gudani v. Senga",
+  "y": "2006",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: military officers",
+  "a": 0,
+  "r": "As Commander-in-Chief, the President may prevent members of the armed forces from testifying before a legislative inquiry, and the military officers who defy the order may be disciplined. Congress cannot compel their attendance on its own, but it may go to the courts, which may order the officers to appear. The remedy lies with the judiciary.",
+  "f": "General Gudani and Lt. Col. Balutan testified at a Senate hearing on alleged cheating in the 2004 elections despite an order from the President, through the AFP Chief of Staff, not to appear. They were relieved and faced court-martial proceedings.",
+  "h": "The petition was denied. Gudani remained under court-martial jurisdiction despite his retirement; the President's order was valid.",
+  "x": "Use when the President bars soldiers or police officers from a congressional hearing, and contrast with civilian officials under Senate v. Ermita.",
+  "w": "The syllabus spells the case 'Gudani v. Sena'. Only block and manual digests exist for it in Zen's files, and no full text was gathered.",
+  "s": "The Commander-in-Chief may bar military officers from congressional hearings; Congress's remedy is the courts.",
+  "sy": [
+   "Gudani v. Sena"
+  ]
+ },
+ {
+  "id": "neri",
+  "n": "Neri v. Senate Committee on Accountability of Public Officers and Investigations",
+  "y": "2008",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: executive privilege",
+  "a": 1,
+  "r": "Presidential communications are presumptively privileged when: (1) they relate to a quintessential and non-delegable presidential power; (2) they were authored, or solicited and received, by the President or a close advisor in operational proximity; and (3) no adequate showing of compelling need and unavailability elsewhere overcomes the privilege. Entering into an executive agreement is such a power. Against a co-equal branch, the committees must show the information is critical to their legislative functions; mere pertinence is not enough. A contempt order requires the vote of a majority of all the members of the committee after deliberation (Sec. 18, Senate Rules), and the inquiry rules must be published in each Congress or state that they continue in force.",
+  "f": "In the Senate inquiry into the DOTC–ZTE national broadband network deal, NEDA Director-General Neri testified that he had been offered ₱200 million and had told President Arroyo, but invoked executive privilege on three questions about his conversations with her. The Executive Secretary claimed the privilege 'by order of the President'. Neri skipped the next hearing and was cited in contempt and ordered arrested.",
+  "h": "Petition granted; the January 30, 2008 contempt and arrest order was nullified (Leonardo-de Castro, J.). The committees' motion for reconsideration was denied on September 4, 2008.",
+  "test": "Presidential communications privilege: quintessential and non-delegable power; operational proximity; not overcome by a showing of compelling need and unavailability.",
+  "x": "Use when an official refuses to disclose conversations with the President, or a committee cites someone in contempt for invoking privilege.",
+  "w": "Two different digests of this case are in Zen's files; both are in the Digests tab.",
+  "s": "NBN–ZTE: Neri's conversations with the President privileged; contempt order void.",
+  "sy": [
+   "Neri v. Senate Committee"
+  ]
+ },
+ {
+  "id": "garcillano",
+  "n": "Garcillano v. House of Representatives Committees",
+  "y": "2008",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: duly published rules",
+  "a": 1,
+  "r": "The Senate may conduct inquiries in aid of legislation only in accordance with its duly published rules of procedure, and it must publish those rules in each Congress, unless the published rules themselves say they remain effective in later Congresses until amended or repealed. Publication means publication in the Official Gazette or a newspaper of general circulation; a booklet or the Senate's website is not enough, and the E-Commerce Act does not make the internet a medium of publication. Publishing the rules later does not cure an inquiry begun without them.",
+  "f": "The 'Hello Garci' tapes allegedly recorded President Arroyo instructing COMELEC Commissioner Garcillano to rig the 2004 election. House committees played the tapes; the Senate later began its own inquiry without publishing its rules of procedure in the 14th Congress.",
+  "h": "G.R. No. 170338 (against the House) dismissed as moot; G.R. No. 179275 granted: the Senate and its committees were enjoined from conducting the inquiry until the rules are duly published.",
+  "x": "Use whenever a new Congress starts an inquiry: ask whether its rules were published in that Congress and how.",
+  "s": "Hello Garci: Senate inquiry enjoined; rules must be published in each Congress.",
+  "sy": [
+   "Garcillano v. The House"
+  ]
+ },
+ {
+  "id": "senatemedialdea",
+  "n": "Senate of the Philippines v. Medialdea",
+  "y": "2022",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: jurisdictional challenges",
+  "a": 0,
+  "r": "When the President objects that an inquiry is not in aid of legislation and belongs to another body, the objection is a jurisdictional challenge that the committee must first resolve under its own rules (Sec. 3, Senate Rules of Procedure Governing Inquiries). Until the Senate resolves it with finality, certiorari is premature: there is a plain, speedy and adequate remedy within the Senate, and no ripe actual case.",
+  "f": "During the Blue Ribbon Committee's inquiry into the DOH's COVID-19 fund purchases (Pharmally), the Executive Secretary, by order of President Duterte, issued a memorandum directing all executive officials to stop attending, saying the hearings were not in aid of legislation.",
+  "h": "The petition was dismissed as premature and the application for preliminary injunction denied (14–1, Lazaro-Javier, J.). The Court distinguished Senate v. Ermita, which involved executive privilege and a blanket consent requirement.",
+  "x": "Use when the executive boycotts an inquiry by attacking its legislative purpose rather than claiming privilege.",
+  "s": "Pharmally boycott memo: a jurisdictional challenge goes to the committee first; petition premature.",
+  "sy": [
+   "The Senate of the Philippines v. Medialdea"
+  ]
+ },
+ {
+  "id": "ong2023",
+  "n": "Ong v. Senate of the Philippines",
+  "y": "2023",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: contempt",
+  "a": 1,
+  "r": "Contempt for testifying falsely or evasively is punitive in nature, so even in a legislative inquiry it must observe the minimum requirements of due process: the witness must at least be given a chance to explain why the testimony is not false or evasive before being cited and arrested. Inconsistent or incomplete answers do not by themselves show evasiveness. The standard 'testifies falsely or evasively' is not vague, the power to arrest witnesses is inherent, and rules stated to be in force until amended or repealed need no republication.",
+  "f": "In the Blue Ribbon Committee's Pharmally inquiry, Pharmally director Linconn Ong and former presidential economic adviser Michael Yang were cited in contempt for testifying 'falsely and evasively' and ordered arrested on the same day they testified.",
+  "h": "Petitions partly granted (14–1, Inting, J.): the September 10, 2021 contempt and arrest order was nullified for grave abuse of discretion; Sec. 18 of the Senate Rules and Sec. 6, Art. 6 of the Blue Ribbon Rules were upheld.",
+  "x": "Use when a committee cites a witness for lying or evading without first asking the witness to explain.",
+  "s": "Pharmally contempt for 'false and evasive' testimony void: no chance to explain.",
+  "sy": [
+   "Ong v. Senate of the Philippines"
+  ]
+ },
+ {
+  "id": "akbayanjpepa",
+  "n": "AKBAYAN Citizens Action Party v. Aquino",
+  "y": "2008",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation: diplomatic negotiations privilege",
+  "a": 1,
+  "r": "Diplomatic negotiations are presumptively privileged. The final text of a treaty cannot be kept confidential forever, but the offers exchanged during negotiations remain privileged even after the treaty is published. Once the executive shows the information falls under a recognized privilege, the burden shifts to the party seeking it, whether citizens or Congress, to make a sufficient showing of need. Treaty negotiation belongs to the President alone.",
+  "f": "House members and NGOs sought the full text of the Japan–Philippines Economic Partnership Agreement (JPEPA) during negotiations and the Philippine and Japanese offers. The executive refused; a House committee's planned subpoena was held in abeyance. The agreement was later signed and made public.",
+  "h": "The petition was dismissed (Carpio Morales, J.). The privilege was not waived by raising it only in the Comment, and the claim was sufficiently made.",
+  "x": "Use when Congress or citizens demand drafts, positions or offers in an ongoing or completed treaty negotiation.",
+  "s": "JPEPA offers covered by the diplomatic negotiations privilege; no sufficient showing of need.",
+  "sy": [
+   "AKBAYAN v. Aquino"
+  ]
+ },
+ {
+  "id": "agcaoili",
+  "n": "Agcaoili, Jr. v. Fariñas",
+  "y": "2018",
+  "t": "legproc",
+  "sub": "V.A.8(e) Legislative investigation (fourth issue); also V.C.2(p)(5) amparo and habeas corpus",
+  "a": 1,
+  "r": "Under its expanded jurisdiction, the Court may enjoin a legislative inquiry, but only on a showing that it violates the Constitution or is attended by grave abuse of discretion; a mere apprehension of arrest is not enough. The SC, CA and RTC have concurrent jurisdiction over habeas corpus, and once the CA acquires it, the SC cannot wrest the case through its administrative supervision. Amparo covers only extralegal killings and enforced disappearances, or threats of them. Congress cannot cite Court of Appeals Justices in contempt; their acts are reviewable only by the SC.",
+  "f": "A House committee investigating Ilocos Norte's use of tobacco excise funds for vehicles cited six provincial employees (the 'Ilocos 6') in contempt and detained them. The CA issued a writ of habeas corpus; the House then threatened the CA Justices with contempt. The detainees and Governor Imee Marcos filed an omnibus petition in the SC.",
+  "h": "The omnibus petition was dismissed (Tijam, J.); the release of the detainees mooted the habeas corpus prayer, which the Court decided under the exceptions to mootness.",
+  "x": "Use when witnesses detained by Congress look for a remedy, or Congress threatens judges who intervene.",
+  "w": "The syllabus lists this case twice: the fourth issue here, issues one to three under the rules on constitutional rights (V.C.2(p)(5)). Two different digests are in Zen's files.",
+  "s": "Ilocos 6: prohibition against an inquiry needs grave abuse; amparo unavailable; Congress cannot cite CA Justices.",
+  "sy": [
+   "Agcaoili, Jr. v. Farinas"
+  ]
+ }
+]

@@ -14,10 +14,10 @@ import re
 FIGS = {}    # file prefix -> [(mode, anchor, html)]
 WALL = []    # (prefix, figure id, title, hook html) for the hook wall
 SEC = {'00': 'method', '01': 'interp', '02': 'jr', '03': 'terr', '04': 'cit', '05': 'suff', '06': 'gov', '07': 'comp',
-       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '13': 'news'}
+       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '90': 'news'}
 SHORT = {'00': 'Exam method', '01': 'Interpretation', '02': 'Judicial review', '03': 'Territory', '04': 'Citizenship', '05': 'Suffrage',
          '06': 'Government', '07': 'Composition', '08': 'Internal', '09': 'Privileges', '10': 'Tribunals and CA', '11': 'Powers',
-         '12': 'Money', '13': 'News'}
+         '12': 'Money', '14': 'Legislative process', '90': 'News'}
 
 
 # ---------- small builders ----------
@@ -94,13 +94,14 @@ def write(*lines):
     def fill(t): return re.sub(r'\[([^\]]+)\]', r'<span class="fill">[\1]</span>', t)
     return ''.join(f'<div class="ln"><i class="{"e" if k == "E" else ""}">{k}</i><span>{fill(t)}</span></div>' for k, t in lines)
 
-def fig(prefix, mode, anchor, fid, title, body, kind='diagram', when=None, hook=None, wr=None, cap='', notest=False, wall=True):
+def fig(prefix, mode, anchor, fid, title, body, kind='diagram', when=None, hook=None, wr=None, cap='', notest=False, wall=True, oral=None):
     h = (f'<figure class="viz" id="fig-{fid}" data-kind="{kind}"' + (' data-notest' if notest else '') + f' aria-label="{re.sub(r"<[^>]+>", "", title)}">'
          f'<div class="vt"><span class="vtt">{title}</span> <small>{kind}</small></div>')
     if when: h += f'<p class="vwhen"><span class="vlab">Use it when</span>{when}</p>'
     h += body
     if hook: h += f'<div class="hook"><span class="vlab">Hook</span><div class="hk">{hook}</div></div>'
     if wr: h += f'<div class="wr"><span class="vlab">On the exam, write</span>{wr}</div>'
+    if oral: h += '<div class="vor"><span class="vlab">Say it in orals</span><p>' + re.sub(r'\[([^\]]+)\]', r'<span class="fill">[\1]</span>', oral) + '</p></div>'
     if cap: h += f'<figcaption>{cap}</figcaption>'
     h += '</figure>\n'
     FIGS.setdefault(prefix, []).append((mode, anchor, h))
@@ -888,7 +889,7 @@ fig('12', 'before', '<aside class="note news"><strong>2015 midterm (income tax r
 def _story(title, rules, practice):
     return ('<div class="vn acc"><b>' + title + '</b><span class="s">' + ' · '.join(rules) + '</span>'
             + '<span class="s" style="margin-top:6px">Practice: ' + '; '.join(f'<a class="eref" data-e="{e}">{t}</a>' for e, t in practice) + '</span></div>')
-fig('13', 'before', '<h3 id="news-dynasty">', 'news', 'Five stories, the rules they wear',
+fig('90', 'before', '<h3 id="news-dynasty">', 'news', 'Five stories, the rules they wear',
     grid(_story('Political dynasties (Kapatiran)', [X('fig-kapatiran', 'duty, definition, default'), X('fig-review', 'expanded review of inaction'), X('fig-quals', 'adding qualifications (Sec. 26 is the source)')], [('n26-1', 'a senator’s critique'), ('n26-7', 'a dynasty law')]),
          _story('VP impeachment: “all the Members”', [X('fig-www', 'Words: “present” versus “all”'), X('fig-votes', 'the denominators'), X('fig-quorum', 'Avelino'), X('fig-jr', 'ripeness and standing')], [('n26-2', 'the two-thirds count')]),
          _story('Sen. dela Rosa and the ICC warrant', [X('fig-arrest', 'six years, in session'), X('fig-votes', 'electing the Senate President'), X('fig-discipline', 'what Sec. 16 lets the Senate do')], [('n26-3', 'immunity and the Senate’s actions')]),
@@ -897,6 +898,117 @@ fig('13', 'before', '<h3 id="news-dynasty">', 'news', 'Five stories, the rules t
     kind='map', when='the problem reads like a headline: find the story here, then walk the diagrams it points to.',
     hook='Every story is an <em>old rule in new clothes</em>: name the rule, then the case, then apply it to the new facts.',
     cap='Impeachment itself (Art. XI) is not in the midterm syllabus: use that story for interpretation, quorum and judicial review only.', notest=True)
+
+
+# =====================================================================
+# 14 · legislative process and investigations (finals)
+# =====================================================================
+fig('14', 'after', '<h3 id="legproc-sc30">Congress and the Supreme Court’s appellate jurisdiction (Art. VI, Sec. 30)</h3>\n', 'sc30', 'May Congress send this case to the Supreme Court, or take a remedy away?',
+    gates([G('Does the law prescribe remedies or procedure, or bar courts from issuing writs?', 'e.g., “no court shall enjoin an Ombudsman investigation”', 'Void, or ineffective until the Court adopts it', 'rule-making belongs to the Court alone (Art. VIII, Sec. 5(5)); ' + C('carpiomorales', 'Carpio-Morales') + ', RA 6770 Sec. 14', 'yes', 'no'),
+           G('Does it add a new appeal to the Supreme Court?', 'a new class of cases, or a direct appeal from an agency', 'No Sec. 30 problem', 'Congress may define and apportion lower courts’ jurisdiction (Art. VIII, Sec. 2)', 'no', 'ok'),
+           G('Did the Court give its advice and concurrence?', '', 'Void (Art. VI, Sec. 30)', C('fabian', 'Fabian') + ': appeals go to the CA under Rule 43', 'no', 'no')],
+          ('Valid', 'the Court concurred in the new appeal', 'ok'),
+          facts=[fact('Fabian v. Desierto (1998)', 'RA 6770, Sec. 27 allows appeals by certiorari to the Supreme Court from the Ombudsman’s decisions in administrative disciplinary cases.', 'n,y,n', 'A new appeal to the SC, passed without its advice and concurrence: void. The appeal goes to the Court of Appeals.'),
+                 fact('Carpio-Morales v. CA (2015)', 'RA 6770, Sec. 14 bars any court except the SC from hearing an appeal or application for remedy against an Ombudsman decision, and bars injunctions against Ombudsman investigations.', 'y', 'Congress cannot dictate remedies or bar a court from issuing writs incidental to its jurisdiction: par. 2 void; par. 1 ineffective until the Court adopts it.'),
+                 fact('New Family Courts', 'A law creates new Family Courts with exclusive jurisdiction over child-custody cases, appealable to the Court of Appeals.', 'n,n', 'Apportioning lower courts’ jurisdiction is Congress’s to do; nothing is added to the SC.')]),
+    kind='gates', when='a statute routes appeals from an agency to the Supreme Court, or tells courts which remedies they may (not) grant.',
+    hook='<em>No A&amp;C, no appeal</em>: no new appeal to the SC without its Advice and Concurrence; and the rules of procedure are the Court’s alone.',
+    wr=write(('C', 'Sec. [__] is void.'), ('L', 'No law may increase the appellate jurisdiction of the Supreme Court without its advice and concurrence (Art. VI, Sec. 30; Fabian v. Desierto), and only the Court promulgates rules of procedure (Art. VIII, Sec. 5(5); Carpio-Morales v. CA).'), ('A', '[Show that the provision adds an appeal to the SC, or takes away a court’s remedy, without the Court’s concurrence.]'), ('R', 'Hence, [restate C]; the appeal lies with the Court of Appeals.')),
+    oral='The issue is whether Congress may send these appeals straight to the Supreme Court. Article VI, Section 30 says no law may increase the Court’s appellate jurisdiction without its advice and concurrence. In Fabian v. Desierto, Section 27 of the Ombudsman Act did exactly that and was struck down, so the appeals went to the Court of Appeals. Here, there was no concurrence, so the provision is void.',
+    cap='Two different limits: Sec. 30 protects the Court’s docket; Art. VIII, Sec. 5(5) protects its rule-making. Carpio-Morales used both.')
+
+fig('14', 'after', '<h3 id="legproc-bills">Passing a bill: readings, urgency, the bicameral committee and the enrolled bill</h3>\n', 'passage', 'Did the measure validly become a law?',
+    hflow(N('1st reading', 'title; referral to committee', 'acc'), HE(''), N('2nd reading', 'debate and amendments', 'acc'), HE('printed copies 3 days before'), N('3rd reading', 'no amendment; vote at once; yeas and nays in the Journal', 'acc'), HE('other House, then'), N('Bicameral committee', 'reconciles; may add germane provisions (Tolentino)', 'acc'), HE(''), N('Enrolled bill', 'signed by both presiding officers: conclusive', 'acc'), HE(''), N('President', 'sign · veto within 30 days · or it lapses into law', 'acc'))
+    + sp(gates([G('Is it a bill?', 'a joint resolution, or a plan Congress merely failed to disapprove, is not', 'Not a law', C('angnars', 'Ang Nars') + ' (joint resolution); ' + C('millermardo', 'Miller v. Mardo') + ' (silence)', 'no', 'no'),
+                G('Three readings; no amendment on the last; vote immediately, with the yeas and nays in the Journal?', 'a certification of urgency cannot waive these', 'Not validly passed', '', 'no', 'no'),
+                G('Readings on separate days and printed copies 3 days before, or a presidential certification of urgency?', 'certified: necessity of immediate enactment to meet a public calamity or emergency', 'Not validly passed', 'the Court generally does not review the certification’s factual basis (Kida)', 'no', 'no'),
+                G('Signed by the President, not vetoed within 30 days, or the veto overridden by two-thirds of all the Members of each House?', '', 'Not a law (vetoed)', '', 'no', 'no')],
+               ('A law', 'effective 15 days after publication, unless it fixes another date (Tañada; EO 200)', 'ok'),
+               facts=[fact('Ang Nars (2019)', 'Joint Resolution No. 4 (2008), passed by both Houses and approved by the President, set the nurses’ entry salary below the grade fixed by RA 9173, Sec. 32.', 'n', 'A joint resolution is not a bill, so it cannot amend RA 9173 even if it went through the steps for passing a bill.'),
+                      fact('Kida v. Senate (2011)', 'RA 10153 (ARMM synchronization) passed both Houses after three readings, on the President’s certification of urgency, without readings on separate days.', 'y,y,y,y', 'The certification dispenses with the separate-day readings and the 3-day printing; the three readings were held. Valid law.'),
+                      fact('A same-day bill', 'A bill passes second and third reading on the same day, without printed copies three days earlier and without any certification from the President.', 'y,y,n', 'Without a certification, separate days and the 3-day printing are required. Not validly passed.'),
+                      fact('Reorganization Plan 20-A (Miller v. Mardo)', 'RA 997 says reorganization plans take effect unless Congress disapproves them; Congress did nothing about Plan 20-A.', 'n', 'Congressional silence is not lawmaking: the plan did not become a statute.')])),
+    kind='flow + gates', when='a law was passed in a day, by joint resolution, or “unless Congress disapproves”, or someone attacks the bicameral committee’s changes.',
+    hook='<em>Bill · 3 readings · separate days · 3 days printed · signed</em>. A certification waives only the <em>separate days</em> and the <em>3 days</em>, never the readings.',
+    wr=write(('C', 'RA [__] was [validly / not validly] enacted.'), ('L', 'Only a bill becomes a law (Ang Nars); it must pass three readings on separate days, with printed copies distributed three days before passage, unless the President certifies its urgency, which waives only those two requirements (Art. VI, Sec. 26(2); Kida v. Senate).'), ('A', '[Walk the facts through each step; say what was certified.]'), ('R', 'Hence, [restate C].')),
+    oral='The issue is whether the law was validly passed. Under Article VI, Section 26(2), a bill needs three readings on separate days and printed copies three days before passage, unless the President certifies it as urgent. In Kida v. Senate, the Court held that the certification waives only the separate days and the three-day printing, not the three readings. Here, [it was certified and had three readings], so the law is valid.',
+    cap='The enrolled bill, signed by the Senate President and the Speaker, is conclusive on the Court as to internal procedure (Tolentino); the constitutional steps in Sec. 26(2) remain the floor.')
+
+fig('14', 'after', '<h3 id="legproc-veto">The veto: whole bills, items, and inappropriate provisions</h3>\n', 'itemveto', 'Is this partial veto valid?',
+    gates([G('Is it an appropriation, revenue or tariff bill?', 'any other bill: the President signs or vetoes the whole', 'Whole-bill veto only', 'a partial veto of an ordinary bill is not allowed', 'no', 'sun'),
+           G('Is the vetoed part an item, or an inappropriate provision?', 'item: an indivisible sum of money for a stated purpose; inappropriate provision: general legislation unrelated to a particular appropriation (Sec. 25(2))', 'Invalid veto', 'no vetoing part of an item, or a provision that is not an item (' + C('bengzondrilon', 'Bengzon v. Drilon') + ')', 'no', 'no'),
+           G('Does the veto dictate how a fiscally autonomous body uses its funds, or try to repeal an existing law?', 'the Judiciary, ConComs, Ombudsman, CHR', 'Invalid veto', C('bengzondrilon', 'Bengzon v. Drilon') + ': violates fiscal autonomy and automatic release', 'yes', 'no')],
+          ('Valid item veto', 'Congress may override by two-thirds of all the Members of each House; the rest of the bill stands', 'ok'),
+          facts=[fact('Gonzales v. Macaraig (1990)', 'The President vetoes Sec. 55 (on the use of savings) and Sec. 16 of the 1989 General Appropriations Bill.', 'y,y,n', 'Secs. 55 and 16 were inappropriate provisions, so they could be vetoed as items. Valid.'),
+                 fact('Bengzon v. Drilon (1992)', 'In the 1992 GAA, the President vetoes the special provisions authorizing the use of the Judiciary’s savings to pay retired justices’ adjusted pensions under RA 1797.', 'y,n', 'The special provisions were not items; the veto also dictated how the Judiciary may use its funds and in effect repealed RA 1797. Void.'),
+                 fact('An anti-hazing amendment', 'The President approves an amendment to the Anti-Hazing Law but vetoes one section.', 'n', 'Not an appropriation, revenue or tariff bill: the President must approve or veto the whole bill.'),
+                 fact('Half an item', 'The GAA appropriates ₱10 billion for farm-to-market roads; the President vetoes ₱5 billion of it.', 'y,n', 'An item is indivisible: the President may veto the whole ₱10 billion or none of it.')]),
+    kind='gates', when='the President vetoes a “provision”, a condition, a rider, or part of an amount in the budget or a tax bill.',
+    hook='<em>ART</em> bills only (Appropriation, Revenue, Tariff). Veto a <em>whole item</em> or an <em>inappropriate provision</em>, never a slice, and never to <em>dictate</em> or <em>repeal</em>.',
+    wr=write(('C', 'The veto of [__] is [valid / void].'), ('L', 'The President may veto particular items in an appropriation, revenue or tariff bill (Art. VI, Sec. 27(2)); an item is an indivisible sum for a stated purpose, and inappropriate provisions may be vetoed as items (Gonzales v. Macaraig), but not part of an item, nor so as to dictate the use of a fiscally autonomous body’s funds (Bengzon v. Drilon).'), ('A', '[Identify the bill, then what exactly was vetoed: an item, a provision, or a slice?]'), ('R', 'Hence, [restate C].')),
+    oral='The issue is whether the President may veto that part of the budget. Article VI, Section 27(2) allows item vetoes only in appropriation, revenue or tariff bills, and an item is an indivisible sum for a stated purpose. In Gonzales v. Macaraig, the Court allowed vetoing inappropriate provisions as items; but in Bengzon v. Drilon, it voided a veto of special provisions that dictated how the Judiciary may use its funds. Here, [the vetoed part is or is not an item], so the veto is [valid or void].',
+    cap='The money-provisions map has the related rule on riders (Sec. 25(2)); see the midterm figure on the GAA.')
+
+fig('14', 'after', '<h3 id="legproc-qh">The question hour (Sec. 22) is not an inquiry (Sec. 21)</h3>\n', 'qh21', 'Question hour or inquiry: can Congress compel this official?',
+    cmp(['Question hour (Sec. 22)', 'Inquiry in aid of legislation (Sec. 21)'], [
+        ('Purpose', 'oversight: how laws are being carried out', 'legislation: information to make or change laws'),
+        ('Who', 'heads of departments only', 'anyone: officials and private persons'),
+        ('Attendance', 'on their own initiative, with the President’s consent, or on request: discretionary', 'compulsory, by subpoena; contempt for refusal'),
+        ('Who may decline', 'the department head, if the President withholds consent', 'only the President and SC Justices, or anyone with a valid claim of privilege'),
+        ('Closed door', 'executive session when the President states in writing that security or public interest requires', 'per the published rules'),
+        ('Leading case', C('senateermita', 'Senate v. Ermita') + ' (2006)', C('senateermita', 'Senate v. Ermita') + '; ' + C('sabio', 'Sabio v. Gordon')),
+    ]),
+    kind='comparison', when='an official “declines the invitation” or the President orders officials not to attend.',
+    hook='<em>22 asks; 21 compels.</em> A requirement of prior consent can work for the question hour, never for a Sec. 21 inquiry (EO 464).',
+    wr=write(('C', 'The order is void insofar as it covers inquiries in aid of legislation.'), ('L', 'Appearance in the question hour (Sec. 22) is discretionary, but appearance in inquiries in aid of legislation (Sec. 21) is compulsory, and the only way out is a valid claim of privilege by the President (Senate v. Ermita).'), ('A', '[Is the hearing a Sec. 21 inquiry? Who claimed privilege, for what information?]'), ('R', 'Hence, [restate C].')),
+    oral='The issue is whether officials may skip the Senate hearing on the President’s order. Senate v. Ermita distinguishes the question hour under Section 22, where department heads appear with the President’s consent, from inquiries in aid of legislation under Section 21, where appearance is compulsory. The only way out of a Section 21 inquiry is a valid, specific claim of executive privilege. Here, [it is a Section 21 inquiry and no specific privilege was claimed], so the officials must appear.',
+    cap='The 1987 Constitution removed the mandatory question hour (Gatmaytan), which makes the compulsory power of inquiry all the more important.')
+
+fig('14', 'after', '<h3 id="legproc-inq">Inquiries in aid of legislation: the three requisites</h3>\n', 'inquiry', 'Must this witness answer the committee?',
+    gates([G('Is the inquiry in aid of legislation?', 'judged by the speech or resolution behind it; probing whether specific persons committed a crime already pending in court is not', 'Void inquiry; may be enjoined', C('bengzonbr', 'Bengzon v. Senate Blue Ribbon') + '; mere pendency of a case is no bar (' + C('sabio', 'Sabio') + ')', 'no', 'no'),
+           G('Were its rules duly published in this Congress?', 'Official Gazette or a newspaper of general circulation; a website or booklet is not enough, unless the rules say they continue until amended', 'Enjoined until published', C('garcillano', 'Garcillano') + '; ' + C('neri', 'Neri'), 'no', 'no'),
+           G('Can Congress compel this witness?', 'not the President or SC Justices; military officers barred by the Commander-in-Chief need a court order; no statute exempts anyone else', 'Cannot be compelled by Congress alone', C('gudani', 'Gudani') + ' (go to court); ' + C('sabio', 'Sabio') + ' (no statutory exemption)', 'no', 'sun'),
+           G('Does the witness validly claim privilege for this information?', 'claimed by the President or the ES “by order of the President”, specific; presidential communications or diplomatic negotiations', 'May refuse those questions', C('neri', 'Neri') + '; ' + C('akbayanjpepa', 'AKBAYAN v. Aquino') + '; ' + C('senateermita', 'Senate v. Ermita'), 'yes', 'sun'),
+           G('Are the witness’s rights respected?', 'self-incrimination only per question; no custodial rights; a chance to explain before contempt for false or evasive testimony', 'Contempt or arrest void', C('ong2023', 'Ong (2023)') + '; ' + C('ong2025', 'Ong v. Senate Tricomm'), 'no', 'no')],
+          ('Must testify; contempt valid', 'detention lasts only until the committee report is acted on or the Congress ends (' + C('balag', 'Balag') + ')', 'ok'),
+          facts=[fact('Bengzon v. Senate Blue Ribbon (1991)', 'After a privilege speech, the Blue Ribbon Committee investigates whether the sale of Kokoy Romualdez’s corporations to the Lopa Group violated RA 3019, while the same transactions are in a pending Sandiganbayan case against the witnesses.', 'n', 'An inquiry into whether specific persons broke the law, already before a court, is not in aid of legislation. Enjoined.'),
+                 fact('Garcillano (2008)', 'In the 14th Congress, the Senate opens an inquiry into the “Hello Garci” tapes; its rules were published in an earlier Congress and posted on its website.', 'y,n', 'The rules must be published in each Congress, in the OG or a newspaper. Enjoined until published.'),
+                 fact('Neri (2008)', 'Neri refuses three questions about his conversations with the President on the NBN–ZTE deal; the Executive Secretary claims privilege “by order of the President”.', 'y,y,y,y', 'Presidential communications privilege, validly claimed; the committees did not show the answers were critical to legislation. The contempt order was void.'),
+                 fact('Gudani v. Senga (2006)', 'Two generals testify at a Senate hearing despite the President’s order, through the AFP Chief of Staff, not to appear.', 'y,y,n', 'The Commander-in-Chief may bar military officers; Congress must go to the courts to compel them. The officers may be disciplined.'),
+                 fact('Sabio v. Gordon (2006)', 'PCGG commissioners refuse a Senate subpoena, citing EO 1, Sec. 4(b), which exempts them from testifying in legislative proceedings.', 'y,y,y,n,y', 'No statute can exempt anyone from Sec. 21 without a constitutional basis: they must testify, and contempt was proper.'),
+                 fact('Ong (2023)', 'In the Pharmally hearings, two witnesses are cited for testifying “falsely and evasively” and ordered arrested the same day, without being asked to explain.', 'y,y,y,n,n', 'Contempt for false or evasive testimony is punitive: the witness must first get a chance to explain. The order was void.'),
+                 fact('Ong v. Senate Tricomm (2025)', 'A witness in the POGO hearings refuses to testify at all, invoking the rights to remain silent, against self-incrimination and to counsel.', 'y,y,y,n,y', 'A witness, not an accused: she must take the stand and may refuse only specific incriminating questions. No custodial rights before Congress.')]),
+    kind='gates', when='someone refuses a subpoena, refuses to answer, or is cited in contempt by the Senate, the House or a committee.',
+    hook=acro(('A', 'in aid of legislation'), ('P', 'published rules, each Congress'), ('R', 'rights respected'), ('P', 'privilege, validly claimed'), ('P', 'persons beyond compulsion')) + '<em>A-P-R</em> are the three requisites of Sec. 21; the two <em>P</em>s are the only ways out.',
+    wr=write(('C', 'The witness [must testify / may refuse]; the contempt order is [valid / void].'), ('L', 'Congress may conduct inquiries in aid of legislation in accordance with duly published rules, respecting the rights of persons appearing (Art. VI, Sec. 21); only a valid claim of executive privilege, or the President’s and SC Justices’ exemption, excuses a witness (Senate v. Ermita; Neri).'), ('A', '[Run the five gates on the facts: purpose, rules, witness, privilege, rights.]'), ('R', 'Hence, [restate C].')),
+    oral='The issue is whether the witness must answer the committee. Article VI, Section 21 lets Congress conduct inquiries in aid of legislation, under duly published rules, with the witnesses’ rights respected. In Bengzon v. Senate Blue Ribbon, an inquiry into whether specific persons broke the law was not in aid of legislation; in Neri, a valid presidential communications privilege let the witness refuse. Here, [apply the gates], so the witness [must testify or may refuse].',
+    cap='The first three gates are the requisites in the text of Sec. 21; the last two are the defenses the Court has recognized. Detention for contempt lasts only until the inquiry ends (Balag).')
+
+fig('14', 'after', '<h3 id="legproc-priv">Executive privilege</h3>\n', 'privilege', 'Is the privilege validly claimed, and does it hold?',
+    sub('How it must be claimed (Senate v. Ermita)') + grid(N('By the President', 'or the Executive Secretary “by order of the President”', 'acc'), N('Expressly and specifically', 'stating the kind of privilege and why; no blanket order', 'acc'), N('For information, not persons', 'EO 464’s coverage of whole classes of officials (Secs. 2(b), 3) was void', 'no'), m=170)
+    + sub('Presidential communications (Neri)') + vflow(N('1 · A quintessential, non-delegable power', 'e.g., entering into an executive agreement', 'acc'), VE('and'), N('2 · Operational proximity', 'authored, or solicited and received, by the President or a close advisor', 'acc'), VE('then'), N('3 · Presumed privileged', 'overcome only by a showing of compelling need and unavailability elsewhere; against Congress, the information must be critical to legislation, not merely pertinent', 'sun'))
+    + sub('Diplomatic negotiations (AKBAYAN v. Aquino)') + grid(N('Offers stay privileged', 'even after the treaty’s final text is public', 'acc'), N('Burden shifts', 'once the privilege is shown, citizens or Congress must show sufficient need', 'sun'), m=170),
+    kind='checklist', when='an official refuses to answer “by order of the President”, or the executive withholds drafts, offers or conversations.',
+    hook='<em>Who, how, what</em>: the President, expressly, for information. Neri’s three: <em>Quintessential power, Proximity, No compelling need shown</em>.',
+    wr=write(('C', 'The privilege [holds / does not hold].'), ('L', 'Executive privilege covers kinds of information, not persons, and must be claimed expressly by the President or the Executive Secretary by order of the President (Senate v. Ermita); presidential communications on a quintessential, non-delegable power, made in operational proximity, are presumptively privileged unless a compelling need is shown (Neri).'), ('A', '[Who claimed it, how specifically, for what? Is the information critical to legislation?]'), ('R', 'Hence, [restate C].')),
+    oral='The issue is whether the executive may withhold this information from Congress. Under Senate v. Ermita, privilege covers kinds of information, not classes of persons, and must be claimed expressly by the President or the Executive Secretary by order of the President. In Neri, conversations with the President on the NBN–ZTE deal were presumptively privileged because they concerned a quintessential power and a close advisor, and the Senate did not show a compelling need. Here, [apply], so the privilege [holds or fails].',
+    cap='The presumption runs against secrecy in general (Senate v. Ermita), but for presidential communications it runs in favor of privilege (Neri). Know which presumption you are in.')
+
+fig('14', 'after', '<h3 id="legproc-contempt">Contempt, arrest and detention</h3>\n', 'contempt', 'From subpoena to release: the contempt clock',
+    tl([('1', 'Subpoena; the witness refuses to appear, to answer, or answers falsely or evasively', ''),
+        ('2', 'A chance to explain, required before citing for false or evasive testimony (' + C('ong2023', 'Ong 2023') + ')', 'key'),
+        ('3', 'Contempt order: a majority of all the committee’s members, after deliberation (Senate Rules, Sec. 18; ' + C('neri', 'Neri') + ')', ''),
+        ('4', 'Arrest and detention under the inherent power of contempt (' + C('sabio', 'Sabio') + ')', ''),
+        ('5', 'Release: when the committee report is approved or disapproved, or the Congress ends; recess does not end it (' + C('balag', 'Balag') + ')', 'key'),
+        ('6', 'Longer punishment: only statutory contempt (Art. 150, RPC), tried in court with a definite term', '')])
+    + sub('The detained witness’s remedies') + grid(N('Habeas corpus', 'SC, CA and RTC have concurrent jurisdiction; the SC will not take a case already with the CA (' + C('agcaoili', 'Agcaoili') + ')', 'acc'),
+                                                    N('Certiorari or prohibition', 'needs grave abuse; if the President attacks the inquiry’s purpose, the committee decides that first (' + C('senatemedialdea', 'Senate v. Medialdea') + ')', 'sun'),
+                                                    N('Amparo', 'not available: only extralegal killings and enforced disappearances (' + C('agcaoili', 'Agcaoili') + ')', 'no'), m=170),
+    kind='timeline', when='a witness has been detained by the Senate or House, and you are asked whether, how long, and what remedy.',
+    hook='<em>Explain, vote, detain, release</em>: a chance to explain; a majority of all; detention only until the report or the Congress ends.',
+    wr=write(('C', 'The detention [is valid until __ / must end].'), ('L', 'Each House may punish for contempt in inquiries in aid of legislation, but detention under its inherent power lasts only until the inquiry ends, on the approval or disapproval of the committee report or the end of the Congress (Balag v. Senate), and a witness cited for false testimony must first be given a chance to explain (Ong v. Senate, 2023).'), ('A', '[Where is the inquiry now? Was the witness heard before the citation?]'), ('R', 'Hence, [restate C].')),
+    oral='The issue is how long the Senate may detain the witness. In Balag v. Senate, the Court held that detention under the Senate’s inherent contempt power lasts only until the inquiry ends, that is, when the committee report is approved or disapproved, or when the Congress ends. And under Ong v. Senate (2023), a witness cited for lying must first be given a chance to explain. Here, [the report was approved on __], so the detention must end.',
+    cap='The Senate is a continuing body for some purposes, but its business, and the inherent-contempt detention tied to it, ends with each Congress (Balag; Neri).')
 
 
 # =====================================================================

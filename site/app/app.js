@@ -12,12 +12,13 @@ const CASE = Object.fromEntries(D.cases.map(c => [c.id, c]));
 const ESS = Object.fromEntries(D.essays.map(e => [e.id, e]));
 const ISS = {}; D.issues.forEach(g => g.items.forEach(i => ISS[i.id] = {...i, g: g.g}));
 const tname = k => (TOP[k] ? TOP[k].name : k);
+const inT = (c, k) => c.t === k || (c.also || []).includes(k);   // a case can sit under a second syllabus heading
 
 /* ================= scope toggle: citizenship and territory ================= */
 const OUT_TOPICS = ["cit", "terr"], OUT_SECS = ["cit", "terr"], OUT_ISSUES = ["ppl_citizen", "ppl_dual", "terr"];
 let HIDE = store.get("hideCitTerr", true);
 const shownT = t => !HIDE || !OUT_TOPICS.includes(t);
-const TOPS = () => D.topics.filter(t => shownT(t.key) && (D.cases.some(c => c.t === t.key) || D.lists.some(l => l.t === t.key)));
+const TOPS = () => D.topics.filter(t => shownT(t.key) && (D.cases.some(c => inT(c, t.key)) || D.lists.some(l => l.t === t.key)));
 const CASES = () => D.cases.filter(c => shownT(c.t));
 const MCQS = () => D.mcq.filter(q => shownT(q.t));
 const ISSUES = () => D.issues.map(g => ({...g, items: g.items.filter(i => !HIDE || !OUT_ISSUES.includes(i.id))})).filter(g => g.items.length);
@@ -426,7 +427,7 @@ document.querySelectorAll("#rcontent figure.viz .gates").forEach(G => {
   out.addEventListener("click", e => { const b = e.target.closest("[data-w]"); if (!b) return; clear(); if (b.dataset.w === "again") bar.scrollIntoView({block: "nearest", behavior: "smooth"}); });
 });
 // test me: cover the details of a figure; tap each one to check your recall
-const COVER = ".vn .s, .vcmp .c, .vtl .t, .rung .lab, .gate>.gx, .gend, .acro .w, .wr .ln>span, [data-cover]";
+const COVER = ".vn .s, .vcmp .c, .vtl .t, .rung .lab, .gate>.gx, .gend, .acro .w, .wr .ln>span, .vor p, [data-cover]";
 const coverEls = fig => [...fig.querySelectorAll(COVER)].filter(el => !el.closest(".calc,.vfacts,.walkp,.walkout") && !(el.parentElement.closest(COVER) && fig.contains(el.parentElement.closest(COVER))));
 function setTest(fig, on){
   const b = fig.querySelector(".vtools .vtest"); if (!b) return;
@@ -490,11 +491,11 @@ function fillTopicSel(){ const v = $("ctopic").value; $("ctopic").innerHTML = `<
 fillTopicSel();
 function renderCases(){
   const q = $("cq").value.trim().toLowerCase(), tp = $("ctopic").value, an = $("canchor").checked;
-  const list = CASES().filter(c => (!tp || c.t === tp) && (!an || c.a) && (!q || [c.n, c.r, c.f, c.h, c.x, c.y, c.sub].join(" ").toLowerCase().includes(q)));
+  const list = CASES().filter(c => (!tp || inT(c, tp)) && (!an || c.a) && (!q || [c.n, c.r, c.f, c.h, c.x, c.y, c.sub].join(" ").toLowerCase().includes(q)));
   $("caseCt").textContent = `${list.length} of ${CASES().length} cases`;
   let html = "", last = "";
   TOPS().forEach(t => {
-    const g = list.filter(c => c.t === t.key); if (!g.length) return;
+    const g = list.filter(c => inT(c, t.key)); if (!g.length) return;
     html += `<div class="grouph">${esc(t.name)} <small>${esc(t.part)} · ${g.length}</small></div>`;
     html += g.map(c => `<button class="crow" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span> ${hookChip(c)}</span><span>${c.a ? '<span class="tag anchor">anchor</span>' : c.ref ? '<span class="tag">mentioned only</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
   });
@@ -517,7 +518,7 @@ function fmtFor(c){
   return shuffle(due.length ? due : fr.length ? fr : f)[0];
 }
 let dDir = store.get("ddir", "cr"), dTop = new Set(store.get("dtop", D.topics.map(t => t.key))), R = [], ri = 0, rDone = 0, rRight = 0;
-function dPool(){ return CASES().filter(c => !c.ref && dTop.has(c.t) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || dDir === "mix" || (dDir === "fc" ? c.f : c.r))); }
+function dPool(){ return CASES().filter(c => !c.ref && [...dTop].some(k => inT(c, k)) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || dDir === "mix" || (dDir === "fc" ? c.f : c.r))); }
 function renderDSetup(){
   document.querySelectorAll("#dDir [data-d]").forEach(b => b.setAttribute("aria-pressed", b.dataset.d === dDir));
   $("dDirHelp").textContent = DIRS[dDir].help;

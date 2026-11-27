@@ -11,7 +11,7 @@ import re, html
 AMBIG = {
     'Belgica': {'*': 'belgica2013'},
     'Macalintal': {'05': 'macalintal2003', '*': 'macalintal2023'},
-    'Tolentino': {'01': 'tolentino71', '02': 'tolentino04', '07': 'tolentino04', '11': 'tolentinofinance', '12': 'tolentinofinance', '13': 'tolentinofinance'},
+    'Tolentino': {'01': 'tolentino71', '02': 'tolentino04', '07': 'tolentino04', '11': 'tolentinofinance', '12': 'tolentinofinance', '14': 'tolentinofinance', '90': 'tolentinofinance'},
     'Santiago': {'01': 'santiago97', '08': 'santiagoguingona'},
     'Guingona': {'10': 'guingonagonzales', '12': 'guingonacarague'},
     'David': {'02': 'davidgma', '04': 'davidset'},
@@ -21,7 +21,7 @@ AMBIG = {
     'Philconsa': {'02': 'philconsa2016', '09': 'philconsamathay', '12': 'philconsaenriquez'},
     'Abayon': {'*': 'abayon'},
     'Reyes': {'10': 'reyescomelec'},
-    'Pimentel': {'08': 'pimentelcow', '10': 'pimentelhret', '12': 'pimentelhouse2025', '13': 'pimentelhouse2025'},
+    'Pimentel': {'08': 'pimentelcow', '10': 'pimentelhret', '12': 'pimentelhouse2025', '90': 'pimentelhouse2025'},
     'Gonzales': {'01': 'gonzales67'},
     'Drilon': {'10': 'drilondevenecia'},
     'Laurel': {'06': 'laureldesierto'},
@@ -41,7 +41,8 @@ EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco'
          'Tolentino v. Secretary of Finance': 'tolentinofinance', 'Belgica 2019': 'belgica2019', 'Belgica (2019)': 'belgica2019', 'Belgica 2013': 'belgica2013',
          'Belgica (2013)': 'belgica2013', 'Macalintal 2003': 'macalintal2003', 'Macalintal (2003)': 'macalintal2003', 'Macalintal 2023': 'macalintal2023',
          'Macalintal (2023)': 'macalintal2023', 'PHILCONSA 2016': 'philconsa2016', 'Pimentel v. House': 'pimentelhouse2025', 'Lacson': 'lacsonperez',
-         'Kabataan': 'kabataan2015', 'Osmeña': 'osmena', 'Chua': 'chua2016'}
+         'Kabataan': 'kabataan2015', 'Osmeña': 'osmena', 'Chua': 'chua2016',
+         'Ong v. Senate (2023)': 'ong2023', 'Ong v. Senate, 2023': 'ong2023', 'Ong (2023)': 'ong2023', 'Ong 2023': 'ong2023', 'Ong v. Senate Tricomm': 'ong2025'}
 
 def build_aliases(cases, link_texts):
     al = {}
