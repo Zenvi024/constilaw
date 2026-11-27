@@ -888,3 +888,31 @@ body.focus .nvb{display:none}
 .viz.vtidy .gate>.vn.q b{font-size:.95rem}
 .viz.vtidy .vor p{font-size:.9rem}
 .vchip.vdet[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+
+/* three-level case card: summary, doctrine, quick facts and ruling, then the detailed summary, then the digest */
+.modal .cksum{margin:2px 0 0;font:600 1rem/1.45 var(--body);color:var(--ink)}
+.modal .cklab{display:block;font:600 .66rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.modal .ckdoc{border:1px solid var(--accent);border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:8px;padding:12px 14px}
+.modal .ckdoc .cklab{color:var(--accent)}
+.modal .ckrule{font:400 1.08rem/1.55 var(--display);color:var(--ink)}
+.modal .ckglance{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:560px){.modal .ckglance{grid-template-columns:minmax(0,1fr)}}
+.modal .ckq3{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--paper);min-width:0}
+.modal .ckclamp{font-size:.92rem;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.modal .ckclamp.ckopen{display:block;-webkit-line-clamp:unset}
+.modal .ckmore{margin-top:4px;border:0;background:transparent;padding:0;color:var(--accent);font:600 .8rem var(--body);cursor:pointer}
+.modal .ckuse{margin:0;font-size:.88rem;line-height:1.45;color:var(--ink)}
+.modal .ckuse .cklab{display:inline;margin-right:6px}
+.modal .ckdet{border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.modal .ckdet>summary{cursor:pointer;padding:11px 12px;font-weight:700;font-size:.95rem;display:flex;gap:8px;align-items:baseline}
+.modal .ckcount{font:500 .72rem var(--mono);color:var(--muted)}
+.modal .ckiss{margin:0;padding:0 12px 4px 30px;display:flex;flex-direction:column;gap:12px}
+.modal .ckiss li{line-height:1.5}
+.modal .ckiss li::marker{font:600 .8rem var(--mono);color:var(--muted)}
+.modal .ckqq{font:600 .95rem/1.4 var(--display)}
+.modal .cka{display:inline-block;margin:5px 0 3px;padding:2px 8px;border-radius:999px;font:700 .74rem/1.4 var(--body);border:1px solid var(--line);background:var(--paper)}
+.modal .cka.ckyes{border-color:var(--good);background:var(--good-soft);color:var(--good)}
+.modal .cka.ckno{border-color:var(--bad);background:var(--bad-soft);color:var(--bad)}
+.modal .ckiss p{margin:0;font-size:.9rem;color:var(--ink)}
+.modal .ckrow{padding:8px 12px;border-top:1px dashed var(--line)}
+.modal .ckrow p{margin:0;font-size:.88rem;line-height:1.5}

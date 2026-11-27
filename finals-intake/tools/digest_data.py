@@ -177,6 +177,9 @@ for o in syl:
 for e in entries:
     if 'd' in e and len(e['d']) > 1 and all(x.startswith('z:') for x in e['d']):
         pass  # keep syllabus-meaningful order (decision before resolution)
+# the Ramas-Dimaano case (G.R. 104768) has no digest in the files; the 2003 'Republic v. Sandiganbayan' digest is G.R. 152154
+for e in entries:
+    if e.get('c', '').startswith('Republic v. Sandiganbayan, G.R. No. 104768'): e['d'] = []
 DUPS = [('z:Bengzon_v_Senate_Blue_Ribbon_1991', 'z:Bengzon_v_Senate_Blue_Ribbon_1991_1'), ('z:Padilla_v_Congress_2017_1', 'z:Padilla_v_Congress_2017'),
         ('z:Neri_v_Senate', 'z:Neri_v_Senate_Committees_2008'), ('z:Agcaoili_v_Farinas', 'z:Agcaoili_v_Farinas_2018'), ('z:Funa_v_Villar', 'z:Funa_v_Villar_1')]
 for pair in DUPS:

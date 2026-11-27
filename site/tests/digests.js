@@ -51,7 +51,7 @@ const words = t => { const m = {}; for (const w of (t.toLowerCase().match(/[\p{L
     await p.evaluate(() => openCase('francisco')); await p.waitForTimeout(150);
     const link = await p.$('[data-fdcard]');
     check(tag, 'case card has a full-digest button', !!link, '');
-    if (link){ await link.click(); await p.waitForSelector('#fdDoc .fddoc'); check(tag, 'button opens the digest', /Francisco/i.test(await p.textContent('#fdRead h2')), await p.textContent('#fdRead h2')); }
+    if (link){ await link.evaluate(b => b.scrollIntoView({block: 'center'})); await p.waitForTimeout(250); await link.click(); await p.waitForSelector('#fdDoc .fddoc'); check(tag, 'button opens the digest', /Francisco/i.test(await p.textContent('#fdRead h2')), await p.textContent('#fdRead h2')); }
     // no horizontal scroll, on the list and in the reader
     await p.goto('file://' + file + '#digests'); await p.waitForTimeout(400);
     for (const k of [0, 40, 120]){

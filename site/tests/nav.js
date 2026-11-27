@@ -13,6 +13,14 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     const state = () => p.evaluate(() => ({tab: localStorage.getItem('c1_tab'), y: Math.round(scrollY), modal: !document.getElementById('scrim').hidden,
       title: (document.querySelector('#modal h3') || {}).textContent || '', reader: !document.getElementById('v-digests').hidden && !!document.querySelector('#fdDoc .fddoc'),
       fab: !document.getElementById('navBackBtn').hidden}));
+    // 0. three-level case card: summary, doctrine, quick facts and ruling, detailed summary per issue, full digest
+    await p.evaluate(() => openCase('gutierrez')); await p.waitForTimeout(200);
+    const card = await p.evaluate(() => ({sum: !!document.querySelector('#modal .cksum'), doc: !!document.querySelector('#modal .ckdoc .ckrule'), glance: document.querySelectorAll('#modal .ckq3').length,
+      closed: !document.querySelector('#modal .ckdet').open, iss: document.querySelectorAll('#modal .ckiss li').length, dig: !!document.querySelector('#modal [data-fdcard]')}));
+    check(tag, 'three-level case card', card.sum && card.doc && card.glance === 2 && card.closed && card.iss >= 3 && card.dig, card);
+    const plain = await p.evaluate(() => { openCase('obergefell'); return !document.querySelector('#modal .ckdet') && !!document.querySelector('#modal dd.rule'); });
+    check(tag, 'cards without a digest keep the old layout', plain, plain);
+    await p.keyboard.press('Escape'); await p.waitForTimeout(150);
     // 1. rule map → case card → full digest → Back (button in the reader)
     await p.evaluate(() => goToId('fig-initiate')); await p.waitForTimeout(1200);
     await p.evaluate(() => scrollBy(0, 120)); await p.waitForTimeout(100);

@@ -65,6 +65,7 @@ applyTheme();
 
 /* ================= case modal ================= */
 function caseHTML(c){
+  if (c.iss) return case3HTML(c);
   const t = TOP[c.t];
   return `<div class="spread"><h3 id="mTitle">${esc(c.n)}</h3><span class="row">${NAV.length ? `<button class="btn small" data-navback>← Back</button>` : ""}<button class="btn small ghost" data-close>Close</button></span></div>
   ${c.hk ? `<div style="margin:2px 0 6px">${hookChip(c, true)} <span class="tiny">${esc(HC_LBL[c.hc])}</span></div>` : ""}<div class="meta">${esc(c.y)} · ${esc(c.sub || (t ? t.name : ""))}${c.a ? " · anchor case" : ""}${c.ref ? " · mentioned in the rule maps; not on the syllabus list, not drilled" : ""}</div>
@@ -81,6 +82,31 @@ function caseHTML(c){
   ${FD_BY_CARD[c.id] ? `<div><button class="btn small primary" data-fdcard="${c.id}">Read the full digest</button></div>` : ""}
   ${t && t.sec ? `<div><button class="btn small" data-gosec="${t.sec}">Open the rule map: ${esc(t.name)}</button></div>` : ""}`;
 }
+/* three-level case card (cards whose case has a digest): at a glance → detailed summary → full digest */
+const ckAns = a => /^\s*YES/i.test(a) ? "ckyes" : /^\s*NO\b/i.test(a) && !/^\s*NOT/i.test(a) ? "ckno" : "ckoth";
+const ckMore = (lab, txt) => `<div class="ckq3"><div class="cklab">${lab}</div><div class="ckclamp" data-ckclamp>${esc(txt)}</div><button type="button" class="ckmore" data-ckmore hidden>More</button></div>`;
+function case3HTML(c){
+  const t = TOP[c.t];
+  return `<div class="spread"><h3 id="mTitle">${esc(c.n)}</h3><span class="row">${NAV.length ? `<button class="btn small" data-navback>← Back</button>` : ""}<button class="btn small ghost" data-close>Close</button></span></div>
+  ${c.hk ? `<div style="margin:2px 0 2px">${hookChip(c, true)} <span class="tiny">${esc(HC_LBL[c.hc])}</span></div>` : ""}<div class="meta">${esc(c.y)} · ${esc(c.sub || (t ? t.name : ""))}${c.a ? " · anchor case" : ""}</div>
+  ${c.s ? `<p class="cksum">${esc(c.s)}</p>` : ""}
+  <div class="ckdoc"><div class="cklab">Doctrine</div><div class="ckrule">${esc(c.r)}</div></div>
+  <div class="ckglance">${c.f ? ckMore("Facts", c.f) : ""}${c.h ? ckMore("Ruling", c.h) : ""}</div>
+  ${c.x ? `<p class="ckuse"><span class="cklab">Use it when</span> ${esc(c.x)}</p>` : ""}
+  ${c.g ? `<div class="gatn"><strong>Gatmaytan:</strong> ${esc(c.g)}</div>` : ""}
+  ${c.w ? `<div class="warnn"><strong>Caution:</strong> ${esc(c.w)}</div>` : ""}
+  <details class="ckdet"><summary>Detailed summary <span class="ckcount">${c.iss.length} issue${c.iss.length > 1 ? "s" : ""}</span></summary>
+    <ol class="ckiss">${c.iss.map(i => `<li><div class="ckqq">${esc(i.q)}</div><span class="cka ${ckAns(i.a)}">${esc(i.a)}</span><p>${esc(i.why)}</p></li>`).join("")}</ol>
+    ${c.test ? `<div class="ckrow"><span class="cklab">Test</span><p>${esc(c.test)}</p></div>` : ""}
+    ${c.vote ? `<div class="ckrow"><span class="cklab">Vote</span><p>${esc(c.vote)}</p></div>` : ""}
+    ${c.ops ? `<div class="ckrow"><span class="cklab">Separate opinions</span><p>${esc(c.ops)}</p></div>` : ""}
+  </details>
+  ${c.dg ? `<details class="dgrev"><summary>Reviewer notes</summary><div class="dgnote">Kept as written. The card above was checked against them; where they differ, follow the card.</div>${dgHTML(c.dg)}</details>` : ""}
+  <div class="row">${FD_BY_CARD[c.id] ? `<button class="btn small primary" data-fdcard="${c.id}">Read the full digest</button>` : ""}${t && t.sec ? `<button class="btn small" data-gosec="${t.sec}">Open the rule map: ${esc(t.name)}</button>` : ""}</div>`;
+}
+function ckClampInit(root){
+  root.querySelectorAll("[data-ckclamp]").forEach(el => { const b = el.nextElementSibling; if (b && el.scrollHeight > el.clientHeight + 2) b.hidden = false; });
+}
 function dgHTML(txt){
   return `<div class="dgtxt">${txt.split("\n").map(l => l.trim()).filter(Boolean).map(l => {
     const m = l.match(/^([●•○◦▪■\-–]|\d+\.|[a-z]\.)\s*/);
@@ -91,11 +117,12 @@ function dgHTML(txt){
 }
 let lastFocus = null;
 function openModal(html){ lastFocus = document.activeElement; $("modal").innerHTML = html; $("scrim").hidden = false; const b = $("modal").querySelector("[data-close]"); if (b) b.focus(); }
-function closeModal(quiet){ $("scrim").hidden = true; $("modal").innerHTML = ""; CUR_CASE = null; if (!quiet && lastFocus && lastFocus.focus) lastFocus.focus(); navUI(); }
-function openCase(id){ const c = CASE[id]; if (!c) return; if (!$("scrim").hidden && CUR_CASE && CUR_CASE !== id) navPush(); CUR_CASE = id; openModal(caseHTML(c)); }
+function closeModal(quiet){ $("scrim").hidden = true; $("modal").innerHTML = ""; CUR_CASE = null; if (!quiet){ while (NAV.length && NAV[NAV.length - 1].kind === "case") NAV.pop(); if (lastFocus && lastFocus.focus) lastFocus.focus(); } navUI(); }
+function openCase(id){ const c = CASE[id]; if (!c) return; if (!$("scrim").hidden && CUR_CASE && CUR_CASE !== id) navPush("case"); CUR_CASE = id; openModal(caseHTML(c)); ckClampInit($("modal")); }
 $("scrim").addEventListener("click", e => {
   if (e.target === $("scrim") || e.target.closest("[data-close]")) { closeModal(); return; }
   if (e.target.closest("[data-navback]")){ e.stopPropagation(); navBack(); return; }
+  const mo = e.target.closest("[data-ckmore]"); if (mo){ const el = mo.previousElementSibling; const open = el.classList.toggle("ckopen"); mo.textContent = open ? "Less" : "More"; return; }
   const g = e.target.closest("[data-gosec]"); if (g){ navPush(); closeModal(true); setTab("rules"); openSecById(g.dataset.gosec); }
 });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("scrim").hidden){ e.preventDefault(); closeModal(); } });
@@ -116,7 +143,12 @@ function navSnap(){
   return {tab: store.get("tab", "today"), y: window.scrollY, c: $("scrim").hidden ? null : CUR_CASE, my: $("scrim").scrollTop,
           sec: curSec, fd: typeof fdSel === "number" ? fdSel : -1, fdm: typeof fdReadingMobile === "boolean" ? fdReadingMobile : false};
 }
-function navPush(){ NAV.push(navSnap()); if (NAV.length > 30) NAV.shift(); try { history.pushState({nav: NAV.length}, "", location.hash); } catch(e){} navUI(); }
+function navPush(kind){
+  NAV.push({...navSnap(), kind: kind || ""}); if (NAV.length > 30) NAV.shift();
+  // tag the entry we are leaving, so popstate knows a real "back" from a plain #fragment change
+  try { history.replaceState({navIdx: NAV.length - 1}, "", location.hash); history.pushState({navTop: NAV.length}, "", location.hash); } catch(e){}
+  navUI();
+}
 function navBack(fromPop){
   const s = NAV.pop(); if (!s){ navUI(); return; }
   if (!fromPop){ navSkip = true; try { history.back(); } catch(e){ navSkip = false; } }
@@ -131,7 +163,11 @@ function navUI(){
   const b = $("navBackBtn"); if (!b) return;
   b.hidden = !NAV.length || !$("scrim").hidden || document.body.classList.contains("focus");
 }
-window.addEventListener("popstate", () => { if (navSkip){ navSkip = false; return; } if (NAV.length) navBack(true); });
+window.addEventListener("popstate", e => {
+  if (navSkip){ navSkip = false; return; }
+  // only a real "back" lands on the entry tagged by navPush; a plain #fragment change has no tag
+  if (NAV.length && e.state && e.state.navIdx === NAV.length - 1) navBack(true);
+});
 document.addEventListener("keydown", e => {
   if (e.key !== "Escape" || e.defaultPrevented || !$("scrim").hidden || document.body.classList.contains("focus") || !NAV.length) return;
   if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) return;

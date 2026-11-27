@@ -1,0 +1,1150 @@
+{
+ "fabian": {
+  "iss": [
+   {
+    "q": "Is the proper remedy Rule 65 or Rule 45?",
+    "a": "Not resolved",
+    "why": "The Court did not settle it. It held only that Sec. 27 of RA 6770 comes into play when an appeal by certiorari under Rule 45 is taken from an administrative disciplinary decision; it does not govern an original Rule 65 action."
+   },
+   {
+    "q": "May the Court rule on the constitutionality of Sec. 27 though no party raised it?",
+    "a": "YES",
+    "why": "As a rule, constitutional questions must be raised by a party, but the rule is not inflexible. When a statute clearly exceeds legislative authority and the question is necessary to the case, the Court must declare that the Constitution governs."
+   },
+   {
+    "q": "Does Sec. 27 of RA 6770, allowing appeals by certiorari to the SC from the Ombudsman, violate Art. VI, Sec. 30? Should the appeal go to the CA?",
+    "a": "YES; YES",
+    "why": "Sec. 30 forbids any law increasing the Court's appellate jurisdiction without its advice and concurrence. Sec. 27 did exactly that, so it is invalid. Appeals from the Ombudsman in administrative disciplinary cases go to the Court of Appeals under Rule 43."
+   },
+   {
+    "q": "Is Sec. 27 substantive, so the Court cannot disregard it?",
+    "a": "NO",
+    "why": "A rule on which court hears an appeal is procedural: it affects only the remedy, not substantive rights. So it falls within the Court's rule-making power and may be applied to pending cases."
+   }
+  ],
+  "vote": "Regalado, J. (ponente). Sec. 27 of RA 6770, Sec. 7, Rule III of Ombudsman AO 7, and all provisions allowing such appeals to the SC declared invalid; the case was referred to the Court of Appeals."
+ },
+ "carpiomorales": {
+  "iss": [
+   {
+    "q": "Is the petition, rather than motions for reconsideration in the CA, the Ombudsman's plain, speedy and adequate remedy?",
+    "a": "YES",
+    "why": "A motion for reconsideration is normally required before certiorari, but not when the issue is purely legal, involves public interest, or needs urgent resolution. The CA's authority over the Ombudsman was such a question."
+   },
+   {
+    "q": "Does the CA have jurisdiction over Binay, Jr.'s certiorari petition against the preventive suspension order?",
+    "a": "YES",
+    "why": "The second paragraph of Sec. 14 of RA 6770 (no appeal or remedy against the Ombudsman except to the SC on pure questions of law) is unconstitutional: it increases the SC's appellate jurisdiction without its concurrence (Art. VI, Sec. 30) and limits remedies, a matter of procedure for the Court (Art. VIII, Sec. 5(5)). The CA keeps its certiorari jurisdiction under the Rules."
+   },
+   {
+    "q": "May the CA issue a TRO or preliminary injunction against the Ombudsman's preventive suspension order?",
+    "a": "YES",
+    "why": "The Ombudsman's independence protects it from political pressure, not from judicial review. The first paragraph of Sec. 14 (no writ of injunction against an Ombudsman investigation) intrudes on the Court's rule-making power; it is ineffective until the Court adopts it in its rules. Injunctive relief is incidental to the CA's jurisdiction."
+   },
+   {
+    "q": "Did the CA gravely abuse its discretion in enjoining the suspension on the strength of the condonation doctrine?",
+    "a": "NO",
+    "why": "The CA followed jurisprudence that was good law at the time (Aguinaldo, Garcia). But the Court abandoned the condonation doctrine prospectively: re-election no longer wipes out administrative liability for misconduct in a prior term."
+   },
+   {
+    "q": "Was the CA's order for the Ombudsman to comment on the contempt petition improper?",
+    "a": "NO",
+    "why": "The CA only required a comment, without giving due course to the petition. The challenge was premature."
+   }
+  ],
+  "vote": "Perlas-Bernabe, J. (ponente). Petition partly granted: Sec. 14, par. 2 of RA 6770 unconstitutional; par. 1 ineffective until adopted by the Court; the condonation doctrine abandoned prospectively."
+ },
+ "gonzalesmacaraig": {
+  "iss": [
+   {
+    "q": "May the Court rule on the President's veto?",
+    "a": "YES",
+    "why": "The Senate and the Executive disputed the extent of the veto power: an actual controversy between two departments. Senators and taxpayers had standing, and the 1987 Constitution narrowed the political question doctrine."
+   },
+   {
+    "q": "May the President veto 'provisions' of an appropriations bill (Secs. 55 and 16 of the 1989 GAA)?",
+    "a": "YES, if inappropriate",
+    "why": "As a rule the President may veto only items, not provisions, of an appropriation, revenue or tariff bill. But a provision that is unrelated to a particular appropriation (Art. VI, Sec. 25(2)), an 'inappropriate provision', may be vetoed as if it were an item. Secs. 55 and 16, on the use of savings, were such provisions, not conditions on an appropriation, so the veto was valid and did not upset the separation of powers."
+   }
+  ],
+  "vote": "Melencio-Herrera, J. (ponente). Veto upheld; petition dismissed.",
+  "ops": "Cruz, J. (concurring and dissenting) and Padilla, J. (dissenting): the veto violated the separation of powers by striking conditions Congress had attached to its appropriations."
+ },
+ "bengzondrilon": {
+  "iss": [
+   {
+    "q": "Was the veto of the special provisions on the retired justices' pensions a valid item veto?",
+    "a": "NO",
+    "why": "An item is an indivisible sum of money for a stated purpose. The ₱500 million General Fund Adjustment was the item and was left untouched; the President struck only the methods of paying obligations, which are provisions, not items. The President may not veto part of an item."
+   },
+   {
+    "q": "Does the veto violate the separation of powers?",
+    "a": "YES",
+    "why": "What was really vetoed was RA 1797 (1957) and the Court's final resolution restoring the adjusted pensions. A President cannot repeal a law, or reverse a final judgment of the Court, through a veto. PD 644, which purported to repeal RA 1797, was never validly published, so RA 1797 stands."
+   },
+   {
+    "q": "Does the veto impair the Judiciary's fiscal autonomy?",
+    "a": "YES",
+    "why": "Fiscal autonomy (Art. VIII, Sec. 3) means freedom from outside control in allocating and using funds already appropriated. A veto that tells the Judiciary how to use its savings dictates how its funds should be spent, which the Executive cannot do."
+   },
+   {
+    "q": "Do the retired justices have a vested right to the adjusted pensions under RA 1797?",
+    "a": "YES",
+    "why": "Once the statutory requirements are met, the right vests and cannot be revoked. Retirement laws are construed liberally in favor of the retiree."
+   }
+  ],
+  "vote": "Gutierrez, Jr., J. (ponente); 14–0, unanimous, no separate opinions."
+ },
+ "millermardo": {
+  "iss": [
+   {
+    "q": "Is Reorganization Plan No. 20-A valid in giving DOL regional offices original and exclusive jurisdiction over money claims?",
+    "a": "NO",
+    "why": "RA 997 delegated only the power to reorganize offices. Conferring judicial or quasi-judicial jurisdiction over money claims goes beyond the delegation, so that part of the Plan is void."
+   },
+   {
+    "q": "Did the Plan become a statute because Congress failed to disapprove it under RA 997?",
+    "a": "NO",
+    "why": "The Constitution prescribes how a bill becomes law: readings, printed copies, the yeas and nays in the Journal, and presentment to the President. There is no lawmaking by legislative silence or inaction, so the Plan did not become a law."
+   }
+  ],
+  "vote": "Barrera, J. (ponente). The trial courts' rulings that the Plan's grant of jurisdiction is invalid were affirmed."
+ },
+ "angnars": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing?",
+    "a": "YES as to Rep. Paquiz; NO as to PSLINK",
+    "why": "PSLINK is an unincorporated association without capacity to sue or authority from its members. Rep. Paquiz sued for a party-list representing government nurses directly affected."
+   },
+   {
+    "q": "May the petitioners bypass the hierarchy of courts, and is the remedy proper?",
+    "a": "YES",
+    "why": "A law passed in 2002 had gone unimplemented for 17 years, leaving nurses in limbo; the Court relaxed the hierarchy of courts and treated the petition as raising a constitutional question it may decide."
+   },
+   {
+    "q": "Is Joint Resolution No. 4 a law that validly amended Sec. 32 of RA 9173?",
+    "a": "NO",
+    "why": "Only a bill can become a law. A joint resolution, even one passed by both Houses and approved by the President, is not a bill and cannot amend or repeal a statute. Sec. 32 (Salary Grade 15 for entry-level nurses) remains valid."
+   },
+   {
+    "q": "Can the Court compel implementation of Sec. 32 by mandamus?",
+    "a": "NO",
+    "why": "Paying the higher salary grade needs an appropriation, and only Congress appropriates (Art. VI, Sec. 29(1)). The Court cannot order Congress to fund a law; until then Sec. 32 is an unfunded law."
+   }
+  ],
+  "vote": "Carpio, J. (ponente). Petition granted in part: Sec. 32 of RA 9173 remains valid; par. 16 of JR No. 4 and Sec. 6 of EO 811 cannot amend it.",
+  "ops": "Leonen, J. (concurring and dissenting): agrees with the result but considers JR No. 4 a law because it went through the process for passing bills."
+ },
+ "kida": {
+  "iss": [
+   {
+    "q": "Does the Constitution mandate the synchronization of elections?",
+    "a": "YES",
+    "why": "Not in so many words, but the Transitory Provisions (Art. XVIII) adjusted incumbents' terms to a common end date so that all elections would be held together every three years; the ConCom records and Osmeña v. COMELEC confirm the intent. ARMM elections are local elections covered by it."
+   },
+   {
+    "q": "Was RA 10153 passed in violation of Art. VI, Sec. 26(2)?",
+    "a": "NO",
+    "why": "The President certified the bill's immediate enactment. The certification dispenses with readings on separate days and with printed copies three days before passage; the three readings still took place. The Court generally will not review the factual basis of the certification."
+   },
+   {
+    "q": "Did RA 10153 need the supermajority vote and plebiscite that RA 9054 requires for its amendment?",
+    "a": "NO",
+    "why": "Postponing the ARMM elections did not amend RA 9054, which only fixed the first elections; election-date laws supplement the organic act. In any case, RA 9054's supermajority requirement is void: Congress acts by simple majority, and one Congress cannot bind later ones (irrepealable laws). The plebiscite applies to creating the autonomous region and to amendments that affect its basic structure, not to an election schedule."
+   },
+   {
+    "q": "Does RA 10153 violate ARMM autonomy?",
+    "a": "NO",
+    "why": "Autonomy is not independence: the region operates within national policies. Provisions are read together (ut magis valeat): synchronization and autonomy are both constitutional, and the law gives effect to both."
+   },
+   {
+    "q": "Is the President's power to appoint officers-in-charge valid?",
+    "a": "YES",
+    "why": "Of Congress's three options, holdover would extend a term fixed by the Constitution and special elections were a policy Congress chose not to adopt; appointing OICs for the interim was the only one available, and it is a valid exercise of the President's appointing power under Art. VII, Sec. 16."
+   },
+   {
+    "q": "May the Court or COMELEC order special elections instead?",
+    "a": "NO",
+    "why": "Setting election dates is legislative. The Court can strike an unconstitutional act but cannot dictate the policy Congress should have adopted; COMELEC only enforces election laws and cannot call elections Congress did not provide for."
+   }
+  ],
+  "vote": "Brion, J. (ponente). Petitions dismissed; RA 10153 upheld; the TRO lifted.",
+  "ops": "A separate opinion agreed that the supermajority requirement in RA 9054 is void as making the organic act irrepealable."
+ },
+ "balag": {
+  "iss": [
+   {
+    "q": "Did the Senate committees gravely abuse their discretion in conducting the inquiry and citing Balag in contempt?",
+    "a": "Not ruled (moot)",
+    "why": "Balag had been released and the inquiry had ended with the committee reports, so the basis for his detention was gone. His arguments on the merits (aid of prosecution, self-incrimination, equal protection) were left unresolved."
+   },
+   {
+    "q": "May the Court still rule on how long the Senate may detain a witness for contempt?",
+    "a": "YES",
+    "why": "The issue is capable of repetition yet evading review and involves liberty, a paramount public interest, so it falls within the exceptions to mootness."
+   },
+   {
+    "q": "Is detention under the Senate's inherent power of contempt indefinite?",
+    "a": "NO",
+    "why": "Contempt in an inquiry is for self-preservation, not punishment, and the rights of witnesses must be respected (Art. VI, Sec. 21). Detention lasts only until the inquiry ends: when the committee report is approved or disapproved, or when the Congress that began it ends, whichever is earlier. Arnault's 'no limit as to time' is tempered by Neri: the Senate continues, but its business ends with each Congress. A longer penalty requires statutory contempt prosecuted in court."
+   }
+  ],
+  "vote": "Gesmundo, J. (ponente). Petition dismissed as moot; all participating Justices concurred, with no separate opinions."
+ },
+ "sabio": {
+  "iss": [
+   {
+    "q": "Is the habeas corpus petition moot?",
+    "a": "YES",
+    "why": "Sabio was allowed to go home by agreement."
+   },
+   {
+    "q": "Did the 1987 Constitution repeal Sec. 4(b) of EO 1, which exempts PCGG members from testifying in legislative proceedings? Were they justified in refusing to appear?",
+    "a": "YES (repealed); NO (not justified)",
+    "why": "The power of inquiry is co-extensive with the power to legislate and reaches officials and agencies Congress may regulate or abolish, including the PCGG. No statute can exempt anyone from Art. VI, Sec. 21 without a constitutional basis; Sec. 4(b) is repugnant to Sec. 21, to public accountability (Art. XI, Sec. 1) and to the right to information, and was repealed under Art. XVIII, Sec. 3."
+   },
+   {
+    "q": "May the Senate committees cite Sabio and the commissioners in contempt?",
+    "a": "YES",
+    "why": "Sec. 21 grants the power of inquiry to the committees too, with the powers necessary to make it effective, including contempt and arrest. The arrest order carried the approval of the Senate President and a majority of senators."
+   },
+   {
+    "q": "Does the inquiry violate the PHC officers' rights to privacy and against self-incrimination?",
+    "a": "NO",
+    "why": "There is no reasonable expectation of privacy over acts as officers of corporations in which the government has an interest. The privilege against self-incrimination is invoked when an incriminating question is asked, not as a ground to refuse the inquiry altogether."
+   },
+   {
+    "q": "Does the pendency of cases in court bar the inquiry?",
+    "a": "NO",
+    "why": "Under the Senate Rules, a pending criminal or administrative case does not stop or abate an inquiry in aid of legislation."
+   }
+  ],
+  "vote": "Sandoval-Gutierrez, J. (ponente). The petitions of Sabio and the commissioners were dismissed; Sec. 4(b) of EO 1 declared repealed."
+ },
+ "ong2025": {
+  "iss": [
+   {
+    "q": "Was Ong's direct resort to the Supreme Court justified?",
+    "a": "NO",
+    "why": "The SC, CA and RTC share jurisdiction over such petitions; Ong merely listed exceptions to the hierarchy of courts without showing how they applied. The petition was dismissible on this ground alone."
+   },
+   {
+    "q": "May Ong invoke the rights to remain silent, against self-incrimination and to counsel to refuse to testify at all?",
+    "a": "NO",
+    "why": "A witness in a legislative inquiry is not an accused under custodial investigation, so the Miranda rights do not apply. The privilege against self-incrimination is invoked question by question, only when an incriminating question is asked; it does not excuse a witness from taking the stand. Ong did not attack the validity of the inquiry itself (purpose, rules, rights)."
+   },
+   {
+    "q": "Should a TRO or preliminary injunction issue, or oral arguments be held?",
+    "a": "NO",
+    "why": "Bare allegations established no clear right for injunctive relief, and the arguments had already been passed upon."
+   }
+  ],
+  "vote": "J.Y. Lopez, J. (ponente), May 6, 2025. Petition dismissed; no separate opinions."
+ },
+ "bengzonbr": {
+  "iss": [
+   {
+    "q": "May the Court inquire into, and enjoin, the Blue Ribbon Committee's inquiry?",
+    "a": "YES",
+    "why": "Fixing the constitutional boundaries between the branches is the Court's task (Angara); the political question doctrine is no obstacle under the expanded judicial power."
+   },
+   {
+    "q": "Is the inquiry into the sale of the Romualdez corporations to the Lopa Group in aid of legislation?",
+    "a": "NO",
+    "why": "The power of inquiry is limited: it must be in aid of legislation, under published rules, respecting witnesses' rights. Its purpose is judged from the speech or resolution behind it. Sen. Enrile's privilege speech suggested no legislation; it asked only whether specific private persons violated RA 3019. Determining violations of law is for the courts, and Congress has no power to expose private affairs for their own sake."
+   },
+   {
+    "q": "Does the inquiry encroach on judicial power, the same issue being pending in the Sandiganbayan?",
+    "a": "YES",
+    "why": "The sale was the principal issue in a case already joined before the Sandiganbayan. A legislative inquiry into it risked conflicting findings and influence on the court, which violates the separation of powers."
+   },
+   {
+    "q": "May the petitioners refuse to testify altogether by invoking the right against self-incrimination?",
+    "a": "Not the basis of the ruling",
+    "why": "The Court restated without modifying the doctrines: only an accused may refuse to take the stand; other witnesses invoke the privilege as each incriminating question is asked (Chavez v. CA). The petitioners won on the second and third issues."
+   }
+  ],
+  "vote": "Padilla, J. (ponente). Petition granted; the committee enjoined from requiring the petitioners to testify. 10–3, with 13 Justices listed.",
+  "ops": "Three Justices dissented. Later cases (e.g., Sabio) hold that a pending case does not by itself bar an inquiry that is genuinely in aid of legislation."
+ },
+ "senateermita": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing?",
+    "a": "YES, except PDP-Laban",
+    "why": "The Senate and its members may sue to protect their prerogatives; party-list representatives' power of inquiry and oversight was impaired; citizens and lawyers' groups asserted a public right. PDP-Laban showed only a generalized interest, with no public funds involved."
+   },
+   {
+    "q": "Is there an actual case ripe for decision?",
+    "a": "YES",
+    "why": "EO 464 itself barred officials from appearing without any act of the President, and officials had already stayed away; waiting would abandon the Court's duty."
+   },
+   {
+    "q": "Does EO 464 violate Congress's power of inquiry?",
+    "a": "PARTLY",
+    "why": "Inquiries (Sec. 21) compel appearance; the question hour (Sec. 22) depends on the President's consent. Executive privilege covers kinds of information (state secrets, informer's identity, deliberative process, presidential communications), not classes of persons, and must be claimed expressly by the President or the Executive Secretary by order of the President, stating the grounds. Secs. 2(b) and 3, requiring consent for whole classes of officials, are void; Secs. 1 and 2(a) are valid as to the question hour. Only the President and SC Justices are exempt from inquiries."
+   },
+   {
+    "q": "Does EO 464 violate the right to information?",
+    "a": "YES",
+    "why": "Congressional hearings are public, so information drawn out in them is presumed to be of public concern; blocking officials from appearing impairs the people's right to that information directly."
+   },
+   {
+    "q": "Did the respondents gravely abuse their discretion by implementing EO 464 before publication?",
+    "a": "YES",
+    "why": "Because it affects the people's right to information, due process required its publication before implementation (Tañada)."
+   }
+  ],
+  "vote": "Carpio Morales, J. (ponente). Petitions partly granted: Secs. 2(b) and 3 of EO 464 void; Secs. 1 and 2(a) valid. No separate opinions."
+ },
+ "gudani": {
+  "iss": [
+   {
+    "q": "What violation were the generals charged with?",
+    "a": "Disobeying a direct order",
+    "why": "They were charged not under EO 464 but for defying the AFP Chief of Staff's direct order, on the President's instruction, not to appear before the Senate committee: an order that stands on the Commander-in-Chief power."
+   },
+   {
+    "q": "Does the court-martial keep jurisdiction over Gen. Gudani despite his retirement?",
+    "a": "YES",
+    "why": "Jurisdiction that attached before retirement continues until the case ends (Abadilla v. Ramos); officers on the retired list remain subject to the Articles of War."
+   },
+   {
+    "q": "May the President bar military officers from attending a congressional hearing?",
+    "a": "YES",
+    "why": "Civilian supremacy and military discipline rest on the President's authority as Commander-in-Chief (Art. VII, Sec. 18); that authority is not limited the way executive privilege is. An officer who defies the order is liable under military justice."
+   },
+   {
+    "q": "May Congress compel military officers to attend despite the President's bar?",
+    "a": "NO, but it may go to court",
+    "why": "Congress cannot compel them directly, but it may seek judicial relief; a court order to attend would bind the President and the officer. Between the President and the Senate, the officer must obey the President."
+   }
+  ],
+  "vote": "Tinga, J. (ponente). Petition denied."
+ },
+ "neri": {
+  "iss": [
+   {
+    "q": "Are the answers to the three disputed questions (Neri's conversations with the President on the NBN–ZTE deal) covered by executive privilege?",
+    "a": "YES",
+    "why": "Presidential communications are presumptively privileged when they concern a quintessential, non-delegable power (entering into an executive agreement), are made by or to a close advisor in operational proximity, and no compelling need and unavailability elsewhere is shown. Against Congress, the information must be critical to legislation, not merely pertinent; the committees did not show that."
+   },
+   {
+    "q": "Was the privilege properly invoked through Executive Secretary Ermita?",
+    "a": "YES",
+    "why": "The privilege may be claimed by the President or by the Executive Secretary by order of the President, formally and with the precise ground, without disclosing the protected content. The revocation of EO 464 did not withdraw the claim."
+   },
+   {
+    "q": "Did the committees gravely abuse their discretion in issuing the January 30, 2008 contempt and arrest order?",
+    "a": "YES",
+    "why": "The privilege was valid; the notice was defective; it was doubtful that a majority of all the members deliberated and voted, as the Senate Rules require; the inquiry rules had not been published in that Congress; and Neri was arrested before the committees ruled on his claim of privilege."
+   }
+  ],
+  "vote": "Leonardo-de Castro, J. (ponente), March 25, 2008. Petition granted; the contempt and arrest order nullified. Motion for reconsideration denied, September 4, 2008.",
+  "ops": "Puno, C.J., dissenting (joined by Austria-Martinez and Azcuna, JJ.): the presumption was overcome by the Senate's specific need. Carpio Morales, J., dissenting. Carpio, J., concurring and dissenting: no valid privilege, but the arrest order was void for lack of published rules."
+ },
+ "garcillano": {
+  "iss": [
+   {
+    "q": "Do the petitioners and the intervenor have standing?",
+    "a": "YES",
+    "why": "Garcillano was publicly identified as a voice on the tapes; the others sued as citizens and taxpayers on the execution of laws and due process; and the issues were of transcendental importance."
+   },
+   {
+    "q": "Is Garcillano's petition against the House committees moot?",
+    "a": "YES",
+    "why": "The tapes had been played and the committee reports submitted; prohibition cannot undo acts already done."
+   },
+   {
+    "q": "May the Senate conduct the 'Hello Garci' inquiry under rules not published in the 14th Congress?",
+    "a": "NO",
+    "why": "Art. VI, Sec. 21 allows inquiries only 'in accordance with duly published rules'. Publication must be in the Official Gazette or a newspaper of general circulation, not a booklet or website, and must be made in each Congress, because the Senate's composition changes and its business ends with each Congress, unless the rules provide that they continue in force until amended."
+   },
+   {
+    "q": "Does the inquiry violate RA 4200 (Anti-Wiretapping Act) or the privacy of communication?",
+    "a": "Not ruled",
+    "why": "It was unnecessary to decide after the third issue."
+   }
+  ],
+  "vote": "Nachura, J. (ponente). The House petition dismissed as moot; the Senate enjoined from conducting the inquiry until its rules are duly published.",
+  "ops": "A separate opinion would have dismissed both petitions."
+ },
+ "senatemedialdea": {
+  "iss": [
+   {
+    "q": "Is direct resort to the Supreme Court proper to compel executive officials to attend, after the President challenged the inquiry's legislative purpose?",
+    "a": "NO (premature)",
+    "why": "The President's memorandum was a jurisdictional challenge: it said the hearings sought to identify persons to hold accountable and belonged to the Joint Congressional Oversight Committee under the Bayanihan Acts. The President may raise that the inquiry is not in aid of legislation; the committee must first resolve that challenge under its own rules. Until then there is a plain, speedy and adequate remedy, so certiorari and prohibition do not lie."
+   },
+   {
+    "q": "Is the memorandum unconstitutional? Were the hearings oversight rather than inquiries? Does the Joint Oversight Committee have exclusive jurisdiction? Other defenses?",
+    "a": "Not ruled",
+    "why": "No longer necessary after the first issue."
+   }
+  ],
+  "vote": "Lazaro-Javier, J. (ponente), July 5, 2022. Petition dismissed as premature.",
+  "ops": "Leonen, J., concurring and dissenting: agrees the petition was premature, but would hold that the memorandum deprived the Senate of information it was entitled to."
+ },
+ "ong2023": {
+  "iss": [
+   {
+    "q": "Are the petitions moot?",
+    "a": "YES, but decided",
+    "why": "Ong was released and the 18th Congress ended, terminating the inquiry (Balag). The Court still ruled under the exceptions: a grave constitutional question, paramount public interest, guidance to the bench and bar, and repetition."
+   },
+   {
+    "q": "Did the Blue Ribbon Committee gravely abuse its discretion in citing Ong and Yang in contempt for testifying 'falsely and evasively' and ordering their arrest the same day?",
+    "a": "YES",
+    "why": "The inquiry was in aid of legislation (Bayanihan funds, procurement, the GAA) and its rules were validly in force, since the Senate rules now say they continue until amended. But the third limit, respect for witnesses' rights, was violated: citing someone for false or evasive testimony is punitive, so the witness must first be given a chance to explain; Ong and Yang were not."
+   },
+   {
+    "q": "Is 'testifies falsely or evasively' in the Senate Rules void for vagueness or an encroachment on judicial power?",
+    "a": "NO",
+    "why": "The power to punish includes the power to judge whether testimony is contumacious; the words have a meaning people of common intelligence understand, and obviously false or evasive testimony amounts to a refusal to testify (Arnault). The Court intervenes only when a finding has no basis."
+   },
+   {
+    "q": "Did the committee gravely abuse its discretion in asking the DOJ to issue a lookout bulletin against Yang?",
+    "a": "NO",
+    "why": "It was a mere request the DOJ could heed or not; ensuring that witnesses remain available is part of the power to compel attendance (Standard Chartered)."
+   },
+   {
+    "q": "Did the committee violate Yang's right to privacy by asking about his properties and businesses?",
+    "a": "NO",
+    "why": "He had no reasonable expectation of privacy over matters tied to the use of public funds (Sabio test), and the state interest in addressing misuse of pandemic funds is compelling."
+   }
+  ],
+  "vote": "Inting, J. (ponente), March 28, 2023. The September 10, 2021 contempt and arrest order was nullified.",
+  "ops": "A dissent would have dismissed the petitions, deferring to the Senate's findings of contumacy."
+ },
+ "akbayanjpepa": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing to sue for mandamus?",
+    "a": "YES",
+    "why": "The right to information is a public right, so citizenship suffices; the House members also sued in that capacity."
+   },
+   {
+    "q": "Is the petition moot?",
+    "a": "PARTLY",
+    "why": "The full JPEPA text had become public, so that part was moot; the Philippine and Japanese offers in the negotiations were still withheld."
+   },
+   {
+    "q": "Are the offers exchanged in the JPEPA negotiations covered by executive privilege?",
+    "a": "YES",
+    "why": "Diplomatic negotiations are privileged (PMPF v. Manglapus; Chavez v. PCGG): negotiators need candor, and the President is the sole organ in foreign relations. The offers stay privileged even after the final text is published. The privilege is presumptive, so context can overcome it."
+   },
+   {
+    "q": "Did the petitioners show a sufficient need to overcome the privilege?",
+    "a": "NO",
+    "why": "Once the privilege is shown, the burden shifts to the party seeking disclosure to show a strong need. Citizens already had the text to debate; the House members never issued a subpoena or showed how the offers would aid legislation, and treaty negotiation belongs to the President alone."
+   },
+   {
+    "q": "Did the executive waive the privilege by raising it only in its Comment?",
+    "a": "NO",
+    "why": "The House committee only made requests, which are not compulsory process, and dropped its planned subpoena. The privilege is an exemption from the power of inquiry; there is no need to assert it until Congress compels."
+   },
+   {
+    "q": "Is the claim void for not being made by the President or by the Executive Secretary 'by order of the President'?",
+    "a": "NO",
+    "why": "There was partial compliance; the Senate v. Ermita requirement was new and not yet final when the Comment was filed."
+   }
+  ],
+  "vote": "Carpio Morales, J. (ponente), July 16, 2008. Petition dismissed.",
+  "ops": "Puno, C.J., dissenting (joined by Ynares-Santiago and Austria-Martinez, JJ.): would grant the petition; the public interest in participating in the JPEPA debate outweighs the privilege."
+ },
+ "agcaoili": {
+  "iss": [
+   {
+    "q": "May the Supreme Court take over the habeas corpus petition already pending in the Court of Appeals?",
+    "a": "NO",
+    "why": "The SC, CA and RTC have concurrent jurisdiction over habeas corpus; the court that first takes the case keeps it to the exclusion of the others, the SC included, until it ends. The petition was also moot after the detainees' release, but the Court ruled on it under the exceptions."
+   },
+   {
+    "q": "May a legislative inquiry (HR 882, on Ilocos Norte's tobacco funds) be enjoined by prohibition?",
+    "a": "YES in principle; NOT here",
+    "why": "Under the expanded judicial power, certiorari and prohibition lie against any branch for grave abuse, including Congress's inquiries. But the House committee acted within Art. VI, Sec. 21: the inquiry was in aid of legislation, under published rules, and no abuse was shown."
+   },
+   {
+    "q": "Does the petition state a cause of action for a writ of amparo?",
+    "a": "NO",
+    "why": "Amparo covers only extralegal killings and enforced disappearances, or threats of them; the petitioners alleged neither, the restraint ended on release, and the fears were speculative. A habeas corpus case was also pending in the CA."
+   },
+   {
+    "q": "May Congress use its contempt power and compulsory process against Court of Appeals Justices over their handling of a case?",
+    "a": "NO",
+    "why": "Disciplining lower-court judges belongs to the Supreme Court alone (Art. VIII, Sec. 6). Judicial privilege, rooted in the separation of powers, exempts the Judiciary's internal deliberative and adjudicatory matters from compulsory processes, including inquiries in aid of legislation; it does not cover crimes, misconduct or administrative matters."
+   }
+  ],
+  "vote": "Tijam, J. (ponente), July 3, 2018; unanimous (12–0 with the ponente), no separate opinions."
+ },
+ "tolentinofinance": {
+  "iss": [
+   {
+    "q": "Does RA 7716 (the expanded VAT law) violate Art. VI, Sec. 24, because it did not originate exclusively in the House?",
+    "a": "NO",
+    "why": "What must originate in the House is the revenue bill, not the law. The Senate may propose amendments, even a substitute bill; requiring the final law to be substantially the House bill would deny the Senate's power to amend and make the House superior to it."
+   },
+   {
+    "q": "Does RA 7716 violate Art. VI, Sec. 26(2) (three readings on separate days, printed copies three days before)?",
+    "a": "NO",
+    "why": "The President certified the Senate bill as urgent, which dispenses with both the three-day printing and the readings on separate days; the 'unless' and 'except' clauses are read together. The Court will not review the certification's basis absent a showing of abuse. (The digests disagree on this issue; the decision held the requirements complied with.)"
+   },
+   {
+    "q": "Did the bicameral conference committee act beyond its authority by inserting provisions found in neither bill?",
+    "a": "NO",
+    "why": "Conference committees may reconcile the bills and even add provisions germane to the subject, subject to approval by both Houses. Whether internal rules were followed is beyond judicial inquiry under the enrolled bill doctrine: the enrolled copy signed by the presiding officers is conclusive."
+   },
+   {
+    "q": "Does the VAT on the press violate press freedom?",
+    "a": "NO",
+    "why": "The press is not singled out: it merely lost an exemption. It is not immune from general regulation and taxation."
+   },
+   {
+    "q": "Does RA 7716 violate the rule that taxation be uniform, equitable and progressive (Sec. 28), due process, equal protection or non-impairment?",
+    "a": "NO",
+    "why": "The claims rested on no factual record of actual harm; they were academic arguments against the law's wisdom. The Constitution does not forbid indirect taxes; it only directs Congress to evolve a progressive system."
+   }
+  ],
+  "vote": "Mendoza, J. (ponente), 1994. Petitions dismissed; RA 7716 upheld.",
+  "ops": "Dissenting opinions would have voided RA 7716 under Art. VI, Sec. 24 (origination in the House)."
+ },
+ "tanada85": {
+  "iss": [
+   {
+    "q": "Do citizens have standing to seek mandamus to compel publication?",
+    "a": "YES",
+    "why": "The right to information and the duty to publish are public rights; a citizen interested in the execution of the laws need not show a special interest."
+   },
+   {
+    "q": "Must presidential decrees and issuances be published even if they provide for their own effectivity?",
+    "a": "YES",
+    "why": "Publication is indispensable to due process: people cannot be bound by laws they had no means of knowing. 'Unless it is otherwise provided' in Art. 2 of the Civil Code refers only to the date of effectivity (instead of 15 days after publication), never to dispensing with publication (1986 Resolution)."
+   },
+   {
+    "q": "What must be published, and where?",
+    "a": "All laws",
+    "why": "All statutes, including those of local application and private laws; presidential decrees and executive orders of general application; and administrative rules that implement or enforce a law. Not covered: interpretative regulations, internal rules for agency personnel, and letters of instruction to subordinates. Publication must be in full in the Official Gazette (now also a newspaper of general circulation, under EO 200)."
+   }
+  ],
+  "vote": "1985 Decision (Escolin, J.): publication ordered. 1986 Resolution (Cruz, J.): the rule extended to all statutes and implementing rules."
+ },
+ "nitafan": {
+  "iss": [
+   {
+    "q": "Is withholding income tax from judges' salaries a decrease in compensation prohibited by Art. VIII, Sec. 10?",
+    "a": "NO",
+    "why": "The ConCom records show the framers deliberately dropped an express exemption of judges' pay from income tax, to keep taxation uniform and equal. A general income tax is not a diminution of salary. Perfecto v. Meer and Endencia v. David are discarded on this point."
+   }
+  ],
+  "vote": "Melencio-Herrera, J. (ponente), July 23, 1987 (Resolution); 13–0, no separate opinions."
+ },
+ "sanlakas": {
+  "iss": [
+   {
+    "q": "Are the petitions moot after the President lifted the declaration of a state of rebellion, and may the Court still decide them?",
+    "a": "YES, moot; decided anyway",
+    "why": "Proclamation No. 435 lifted the declaration, but the issue is capable of repetition yet evading review: earlier declarations had been lifted within days, before the Court could rule."
+   },
+   {
+    "q": "Do the petitioners have standing?",
+    "a": "Legislators YES; groups and taxpayers NO",
+    "why": "Members of Congress may challenge executive acts that impair the powers of Congress. Sanlakas and Partido ng Manggagawa showed no member threatened with arrest; taxpayers showed no illegal disbursement; citizens no personal injury."
+   },
+   {
+    "q": "May the President declare a state of rebellion when calling out the armed forces?",
+    "a": "YES, but it is a superfluity",
+    "why": "Art. VII, Sec. 18 grants graduated powers: calling out, suspending the writ, martial law. Calling out needs no declaration, but Sec. 18 does not prohibit one, and the President's executive power supports it. The declaration has no legal effect: it does not suspend the writ, authorize warrantless arrests, or diminish any constitutional right."
+   }
+  ],
+  "vote": "Tinga, J. (ponente), February 3, 2004. Petitions dismissed.",
+  "ops": "Vitug, J. (concurring); Panganiban, J. (separate opinion); others concurred in the result, stressing that the ruling does not sanction rights-violating acts done under the declaration."
+ },
+ "ibpzamora": {
+  "iss": [
+   {
+    "q": "Does the IBP have standing to question the deployment of Marines with the police?",
+    "a": "NO (but relaxed)",
+    "why": "Its interest in the rule of law is too general and shared by all citizens; its president signed without a board resolution; no member was injured. The Court relaxed the rule because the issue was of transcendental importance."
+   },
+   {
+    "q": "Is the President's determination that it is necessary to call out the armed forces subject to judicial review?",
+    "a": "YES, but only for grave abuse",
+    "why": "Under the expanded judicial power, even political questions are reviewable for grave abuse. But 'whenever it becomes necessary' is the only criterion for calling out, so the Court defers to the President's judgment unless it is shown to be arbitrary; the petitioner showed no grave abuse."
+   },
+   {
+    "q": "Does deploying the Marines in joint patrols with the PNP violate civilian supremacy and the civilian character of the police?",
+    "a": "NO",
+    "why": "The police stayed in charge at all times: the NCRPO regional director commanded the task force, and the Marines exercised no regulatory, proscriptive or compulsory power over civilians. Military assistance to civil functions is long-standing practice."
+   }
+  ],
+  "vote": "Kapunan, J. (ponente), August 15, 2000. Petition dismissed.",
+  "ops": "Puno, J. (concurring): rejects the government's use of the political question doctrine to shield Commander-in-Chief acts from review."
+ },
+ "northcotabato": {
+  "iss": [
+   {
+    "q": "Are the petitions ripe for adjudication?",
+    "a": "YES",
+    "why": "An act seriously alleged to infringe the Constitution ripens on its approval, without any further overt act (Pimentel v. Aguirre). The MOA-AD had been negotiated and initialed and was about to be signed."
+   },
+   {
+    "q": "Do the petitioners and intervenors have standing?",
+    "a": "YES",
+    "why": "The LGUs whose territories would fall within the Bangsamoro Juridical Entity suffered direct injury; legislators and taxpayers had their own grounds; the others were allowed given the transcendental importance of the issues."
+   },
+   {
+    "q": "Were the petitions mooted by the decision not to sign the MOA-AD and the dissolution of the GRP panel?",
+    "a": "NO (except the mandamus aspect)",
+    "why": "All the David v. Macapagal-Arroyo exceptions applied, and voluntary cessation does not moot a case where the agreement could be renegotiated in the same form."
+   },
+   {
+    "q": "Did the respondents violate the right to information and the duty to consult in negotiating the MOA-AD?",
+    "a": "YES",
+    "why": "The right to information (Art. III, Sec. 7) and the policy of full public disclosure (Art. II, Sec. 28) cover negotiations leading to a consummated contract; EO 3, the Local Government Code and IPRA require consultation. The peace panel's 'furtive process' was grave abuse."
+   },
+   {
+    "q": "Is the MOA-AD consistent with the Constitution and the laws?",
+    "a": "NO",
+    "why": "The 'associative' relationship with the BJE is a step to independence: a state in all but name. It conflicts with Art. X on autonomous regions (which exist within the framework of the Constitution and national sovereignty), with the President's exclusive power over foreign relations, with RA 9054 and with IPRA."
+   },
+   {
+    "q": "Does the suspensive clause, making changes subject to later legal amendments, save the MOA-AD? How far does the President's peace power go?",
+    "a": "NO",
+    "why": "The President may conduct peace negotiations and recommend constitutional or legal changes to Congress and the people, but has no constituent power. The clause guaranteed the changes would be made, which usurps the powers of Congress and the people."
+   },
+   {
+    "q": "Would the signed MOA-AD bind the Philippines under international law?",
+    "a": "NO",
+    "why": "It would be neither a treaty nor a binding unilateral declaration; but the guarantee itself was grave abuse."
+   }
+  ],
+  "vote": "Carpio Morales, J. (ponente), October 14, 2008; 8–7. The MOA-AD declared contrary to law and the Constitution.",
+  "ops": "Seven Justices dissented, mostly on mootness and ripeness (the MOA-AD was never signed); Tinga, Velasco, Nachura, Leonardo-de Castro and Brion, JJ., wrote opinions."
+ },
+ "cruzdenr": {
+  "iss": [
+   {
+    "q": "Should the petition be dismissed given the 7–7 vote?",
+    "a": "YES",
+    "why": "No majority was reached even after redeliberation, so under Rule 56, Sec. 7 the original action was dismissed and IPRA stands. Seven Justices (Kapunan, joined by four; Puno; Mendoza) voted to dismiss; seven (Panganiban, Vitug and five others) to grant."
+   },
+   {
+    "q": "Do IPRA's provisions recognizing indigenous ownership of ancestral lands and domains violate the Regalian doctrine (Art. XII, Sec. 2)?",
+    "a": "Not ruled (7–7); Kapunan: NO",
+    "why": "Kapunan, J.: native title over land held since time immemorial predates the Regalian doctrine and was never public land (Cariño); ancestral domains are private but community property. Panganiban, J., for the other side: the domains include public lands and natural resources that belong to the State."
+   },
+   {
+    "q": "Do IPRA's provisions on natural resources within ancestral domains violate the State's ownership and full control?",
+    "a": "Not ruled (7–7); Kapunan: NO",
+    "why": "Kapunan, J.: natural resources within the domains remain the State's; IPRA gives indigenous peoples only priority rights, benefit-sharing and the right to consent, and the State keeps control through mining and other laws."
+   },
+   {
+    "q": "Procedural questions: actual controversy, standing, remedy, hierarchy of courts",
+    "a": "Not ruled; Kapunan: YES to all",
+    "why": "Kapunan, J. found an actual controversy (law, IRR and appropriation in place), citizen and taxpayer standing, prohibition and mandamus proper, and the hierarchy excused; Mendoza, J. alone voted to dismiss for lack of a justiciable controversy."
+   }
+  ],
+  "vote": "Per curiam Resolution, December 6, 2000; 7–7, petition dismissed."
+ },
+ "zabal": {
+  "iss": [
+   {
+    "q": "Is the President a proper respondent? Are prohibition and mandamus proper, and are the requisites of judicial review met?",
+    "a": "President NO; remedies YES",
+    "why": "The President is immune from suit during the tenure and was dropped. Prohibition and mandamus lie for constitutional issues; the closure was implemented, and though moot it was capable of repetition and of public interest. The residents' expected earnings were not a vested right, but the Court took up the issues given their importance."
+   },
+   {
+    "q": "Does Proclamation No. 475 impair the right to travel, and is it an invalid exercise of legislative power by the President?",
+    "a": "NO",
+    "why": "The proclamation's purpose was Boracay's rehabilitation; any effect on travel was merely incidental and temporary, so it is not a travel restriction under Art. III, Sec. 6. It rests on existing laws, including RA 10121 on disaster risk reduction, and on the President's executive power: it is not a law made by the President."
+   },
+   {
+    "q": "Even assuming it restricts travel, is it a valid police power measure?",
+    "a": "YES",
+    "why": "Lawful subject: protecting the environment and public health (Oposa). Lawful means: the tourist influx was the root cause, the works were major, the waters unsafe, and the closure lasted a definite six months, so it was reasonably necessary and not unduly oppressive."
+   },
+   {
+    "q": "Did the closure violate due process (livelihood) or the LGUs' autonomy?",
+    "a": "NO",
+    "why": "Earnings from tourists in the informal sector are not vested rights, and the closure was not a penalty. The proclamation directed the LGUs to implement it, consistent with RA 10121."
+   }
+  ],
+  "vote": "Del Castillo, J. (ponente), February 12, 2019; 11–2. Petition dismissed.",
+  "ops": "Carpio and Perlas-Bernabe, JJ., concurred (valid under existing laws; place-based, not a travel restriction). Jardeleza, J., concurred and dissented. Caguioa, J., dissented: only a law can restrict travel under Art. III, Sec. 6; Leonen, J., also dissented."
+ },
+ "philconsaenriquez": {
+  "iss": [
+   {
+    "q": "May individual Senators sue over allegedly unconstitutional vetoes and conditions without a Senate resolution?",
+    "a": "YES",
+    "why": "A member has a personal interest in protecting the powers of the office; an executive act that impairs Congress's powers injures each member. Override answers a policy veto, not one alleged to be ultra vires."
+   },
+   {
+    "q": "Is the Countrywide Development Fund, letting legislators propose and identify projects, unconstitutional?",
+    "a": "NO (1994)",
+    "why": "Congress fixed the purposes; legislators' proposals were merely recommendatory, and the President examined and implemented the projects. Belgica (2013) later abandoned this reasoning."
+   },
+   {
+    "q": "Does the provision letting members realign their operating-expense allocations violate Art. VI, Sec. 25(5)?",
+    "a": "NO, as construed",
+    "why": "Members only identify the need; approval belongs to the Senate President or the Speaker, who must verify that the funds are actual savings used to augment existing items."
+   },
+   {
+    "q": "Is a debt-service allocation larger than the education budget unconstitutional?",
+    "a": "NO",
+    "why": "The highest-budgetary-priority clause for education is directory (Guingona v. Carague); it does not stop Congress from meeting other national imperatives."
+   },
+   {
+    "q": "Could the President veto the debt-service special provisions while keeping the appropriation?",
+    "a": "IN PART",
+    "why": "The President may veto whole items and inappropriate provisions only. The requirement of congressional concurrence for payments beyond the appropriation was inappropriate (it reached funds outside the item and changed existing law): veto valid. The provisos on the use of the money and the ban on paying Central Bank liabilities were germane conditions: veto void."
+   },
+   {
+    "q": "Should prohibition issue against an anticipated failure to follow the conditions on automatic debt appropriations?",
+    "a": "NO",
+    "why": "The Court will not presume that the President will fail to execute the laws faithfully."
+   },
+   {
+    "q": "Was the veto of the SUCs' use-of-income and revolving-fund provisions invalid or discriminatory?",
+    "a": "NO",
+    "why": "Under the one-fund policy, retaining income needs authority from a substantive law; the agencies allowed to keep income had such laws."
+   },
+   {
+    "q": "Was the veto of the 30% cap on contracting out road maintenance valid?",
+    "a": "NO",
+    "why": "The cap fixed how that maintenance fund would be spent: an appropriate provision. A different policy preference does not turn it into a rider."
+   },
+   {
+    "q": "Was the veto of the AFP requirement to follow the National Drug Policy formulary valid?",
+    "a": "NO",
+    "why": "It was directly related to the medicines appropriation and echoed an existing law (the Generics Act)."
+   },
+   {
+    "q": "Were the vetoes of the requirement of congressional approval for AFP modernization releases valid?",
+    "a": "YES",
+    "why": "Requiring legislative approval of executive action is a legislative veto that belongs, if anywhere, in a separate substantive law, not a GAA rider; the Court did not rule on the validity of legislative vetoes as such."
+   },
+   {
+    "q": "Was the veto of the AFP Chief of Staff's authority to use savings for the pension fund valid?",
+    "a": "YES",
+    "why": "Only the officials named in Art. VI, Sec. 25(5) may be authorized to augment items from savings, and no money may be paid without an appropriation (Sec. 29(1))."
+   },
+   {
+    "q": "Did the CAFGU condition unlawfully impound an appropriation?",
+    "a": "NO, as resolved",
+    "why": "The provision did not require deactivating all 11,000 members in 1994; the Court discussed impoundment, the refusal to spend appropriated funds, for the first time."
+   },
+   {
+    "q": "Did the compensation-related provisions for the SC, COA, Ombudsman and CHR violate their independence or fiscal autonomy?",
+    "a": "NO",
+    "why": "They allowed the use of savings for specified purposes subject to lawful rates and auditing rules."
+   },
+   {
+    "q": "Were the conditions on COA revolving funds, DPWH overhead and NHA allocations unconstitutional?",
+    "a": "NO, on this record",
+    "why": "They only reminded officials to follow existing laws; guidelines not yet issued cannot be condemned in advance."
+   }
+  ],
+  "vote": "Quiason, J. (ponente), August 19, 1994; Narvasa, C.J., and ten Justices concurred.",
+  "ops": "Padilla, J. (concurring and dissenting): an item is an appropriation of money; a provision remains a provision and cannot be vetoed separately (disagreeing with Gonzales v. Macaraig). Vitug, J. (concurring): legislators may only recommend; they cannot exercise Congress's appropriation power individually."
+ },
+ "davidgma": {
+  "iss": [
+   {
+    "q": "Did lifting PP 1017 (by PP 1021) render the petitions moot?",
+    "a": "NO",
+    "why": "Illegal acts were done while PP 1017 was in force, and an unconstitutional act confers no rights. In any case all four exceptions to mootness applied: a grave violation of the Constitution, exceptional character and paramount public interest, the need for controlling principles, and capability of repetition yet evading review."
+   },
+   {
+    "q": "Do the petitioners have standing?",
+    "a": "YES",
+    "why": "David, Llamas and the Daily Tribune suffered direct injury; legislators alleged usurped powers; organizations sued for members. The IBP and Legarda lacked standing but were heard given transcendental importance. The President may not be impleaded while in office."
+   },
+   {
+    "q": "May the Court review the factual bases of PP 1017?",
+    "a": "YES",
+    "why": "Under the expanded judicial power the test is arbitrariness, not correctness: the petitioners must show the President's determination was totally bereft of factual basis. The OSG's unrefuted facts justified it."
+   },
+   {
+    "q": "Are PP 1017 and General Order No. 5 unconstitutional?",
+    "a": "PARTLY",
+    "why": "PP 1017 is valid as a call on the armed forces to prevent or suppress lawless violence, and it is not martial law. But the President cannot issue decrees, or take over private businesses affected with public interest without a law (Art. XII, Sec. 17 needs Congress). GO No. 5 is valid except for its reference to undefined 'acts of terrorism'. The warrantless arrests of David and Llamas, the dispersal of rallies and the raid on the Daily Tribune were illegal."
+   }
+  ],
+  "vote": "Sandoval-Gutierrez, J. (ponente), May 3, 2006; 11–3. Petitions partly granted."
+ },
+ "floresdrilon": {
+  "iss": [
+   {
+    "q": "Does the proviso in Sec. 13(d) of RA 7227, making the Olongapo mayor the first SBMA chairman, violate Art. IX-B, Sec. 7 (no elective official may be appointed to another post during the tenure)?",
+    "a": "YES",
+    "why": "The proviso directs the President to appoint an elective official to another public office, which is exactly what the Constitution forbids. The SBMA posts are not ex officio extensions of the mayor's office; public office is a full-time job (CLU v. Executive Secretary)."
+   },
+   {
+    "q": "Does the proviso encroach on the President's appointing power?",
+    "a": "YES",
+    "why": "Appointment is the selection of the appointee by the authority vested with the power; the choice is the heart of it. Congress may create an office and set qualifications, but it may not name who will fill it, which leaves the President no choice."
+   },
+   {
+    "q": "Is Mayor Gordon's appointment valid, and what are its effects?",
+    "a": "NO",
+    "why": "He was ineligible during his tenure as mayor, so the appointment is void; he could have resigned first. He did not forfeit the mayoralty, and as a de facto officer his acts as SBMA chairman are valid as to the public and third persons."
+   },
+   {
+    "q": "Did the appointment violate the election ban on appointments (Omnibus Election Code, Sec. 261(g))?",
+    "a": "Not ruled",
+    "why": "Unnecessary, since the appointment was void on constitutional grounds."
+   }
+  ],
+  "vote": "Bellosillo, J. (ponente), June 22, 1993; unanimous, no separate opinions."
+ },
+ "francisco": {
+  "iss": [
+   {
+    "q": "Does judicial review extend to impeachment proceedings, or are the issues political questions?",
+    "a": "YES, reviewable",
+    "why": "Under the expanded judicial power, the test is whether the Constitution imposes limits on the political branch. Art. XI, Sec. 3 does (manner of filing, votes, the one-year bar), so the Court must enforce them. Nixon v. US does not apply: the US Constitution sets no such limits. What counts as an impeachable offense, however, is a truly political question."
+   },
+   {
+    "q": "Are the requisites of judicial review present?",
+    "a": "YES",
+    "why": "Citizens, taxpayers and legislators had standing (the issue was of transcendental importance); the rules had been applied and the complaint filed, so the case was ripe; and the one-year bar was the lis mota."
+   },
+   {
+    "q": "Should the Court exercise judicial restraint?",
+    "a": "NO",
+    "why": "Restraint is not an option when the Constitution is at stake and no other tribunal can decide; that the Justices are themselves impeachable is no bar."
+   },
+   {
+    "q": "Are Secs. 16 and 17, Rule V of the 2001 House Impeachment Rules unconstitutional?",
+    "a": "YES",
+    "why": "To 'initiate' is to begin: an impeachment proceeding is initiated by the filing of the complaint and its referral to the Committee on Justice (the ConCom records, Maambong and Bernas). The House rules deeming it initiated only later postponed initiation by a legal fiction; the House's rule-making power (Sec. 3(8)) cannot contravene Sec. 3."
+   },
+   {
+    "q": "Is the second impeachment complaint against CJ Davide barred?",
+    "a": "YES",
+    "why": "The first complaint, filed June 2 and referred August 5, 2003, initiated a proceeding; the second, filed October 23, 2003, came within one year and is barred by Sec. 3(5)."
+   }
+  ],
+  "vote": "Carpio-Morales, J. (ponente), November 10, 2003; 11–3 (computed; Davide, C.J., took no part).",
+  "ops": "Puno and Ynares-Santiago, JJ. (concurring and dissenting) and Bellosillo, J.: dismiss, deferring to the House and Senate. Azcuna and Tinga, JJ.: the bar lasts only one year; the complaint may be refiled after."
+ },
+ "pimentelcongress": {
+  "iss": [
+   {
+    "q": "Should the Court take jurisdiction over the petition for prohibition?",
+    "a": "YES",
+    "why": "Given the importance of the issue and to settle the regularity of the canvass, under its power to review grave abuse by any branch and its original jurisdiction over prohibition."
+   },
+   {
+    "q": "Did the Joint Committee's existence and work end when both Houses adjourned sine die on June 11, 2004?",
+    "a": "NO",
+    "why": "Adjournment sine die ends the regular session, not the term of Congress, which runs to noon of June 30; Art. VI, Sec. 15 is about sessions. Canvassing is a non-legislative function: the joint session cannot adjourn sine die until it canvasses and proclaims, a board of canvassers is not functus officio until done, and it may reconvene without a call. The Senate's own rules and the 1992 and 1998 canvasses confirm it."
+   }
+  ],
+  "vote": "Unsigned Resolution, June 22, 2004. Petition dismissed; no separate opinions."
+ },
+ "padilla": {
+  "iss": [
+   {
+    "q": "Does the Court have jurisdiction, given the separation of powers and the political question doctrine?",
+    "a": "YES",
+    "why": "The issue is the meaning of Art. VII, Sec. 18; saying what the law is belongs to the Court, and its expanded power reviews legality, not wisdom."
+   },
+   {
+    "q": "Are the requisites of judicial review met?",
+    "a": "YES",
+    "why": "Citizens asserted a public right; Sen. De Lima sued to protect legislative prerogatives; there was an actual case. Though arguably moot (the 60 days lapsed and Congress later met jointly), the Court decided it to guide the bench and bar."
+   },
+   {
+    "q": "Must Congress convene in joint session whenever the President proclaims martial law or suspends the writ?",
+    "a": "NO",
+    "why": "'May revoke' is permissive, and 'voting jointly' attaches only to revocation (and extension 'in the same manner'). The framers dropped prior congressional concurrence and adopted joint voting to make revocation easier. The Constitution does not say how Congress expresses support, so each House may act under its own rules; but if either House resolves to revoke, Congress must convene jointly to vote."
+   },
+   {
+    "q": "May mandamus or certiorari issue?",
+    "a": "NO",
+    "why": "Mandamus requires a clear ministerial duty, absent here; asking for both writs over the same act is contradictory, and the Houses acted under their rules, so there was no grave abuse."
+   }
+  ],
+  "vote": "Leonardo-de Castro, J. (ponente), July 25, 2017; 13–2 on the doctrine, all 15 voting to dismiss.",
+  "ops": "Leonen, J. (joined by Caguioa, J.), concurring in the result only (moot) and dissenting on the doctrine: the power to revoke includes a duty to deliberate jointly; separate deliberations make the joint vote a mere ceremony and risk deadlock."
+ },
+ "pimentelexec": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing to seek mandamus?",
+    "a": "Only Sen. Pimentel",
+    "why": "Impairment of the Senate's power to concur in treaties is an injury to each senator. The others (advocates, a Representative, children, law students) showed no direct injury; the Rome Statute only complements Philippine courts."
+   },
+   {
+    "q": "Do the Executive Secretary and the DFA have a ministerial duty to transmit the signed Rome Statute to the Senate?",
+    "a": "NO",
+    "why": "The President ratifies treaties; the Senate only concurs in the ratification, by two-thirds of all its Members. Signature authenticates and shows good faith but does not bind; there is no legal or moral duty to ratify. The President may refuse to submit a treaty or, after concurrence, refuse to ratify it, and the Court cannot compel this by mandamus."
+   }
+  ],
+  "vote": "Puno, J. (ponente), July 6, 2005; unanimous (three Justices on leave). Petition dismissed."
+ },
+ "bayanmuna": {
+  "iss": [
+   {
+    "q": "Does Bayan Muna have standing?",
+    "a": "YES",
+    "why": "Standing is relaxed for issues of transcendental importance; citizens may assert a public right."
+   },
+   {
+    "q": "Is the Non-Surrender Agreement, concluded by exchange of notes, valid without Senate concurrence?",
+    "a": "YES",
+    "why": "An exchange of notes is a recognized form of executive agreement, binding under international law like a treaty. Executive agreements need no concurrence; the form depends on the parties' intent, and the Eastern Sea Trading list is not cast in stone. Only Art. XVIII, Sec. 25 requires a treaty by subject."
+   },
+   {
+    "q": "Does the Agreement defeat the object and purpose of the Rome Statute?",
+    "a": "NO",
+    "why": "The ICC is complementary to national jurisdiction; Art. 98(2) contemplates such agreements; and as a mere signatory the Philippines was bound only not to defeat the treaty's object."
+   },
+   {
+    "q": "Did the Philippines abdicate sovereignty, or is the Agreement immoral or contrary to international law?",
+    "a": "NO",
+    "why": "It affirms Philippine jurisdiction and is reciprocal; offenders may still be tried here, in the US, or by the ICC with consent."
+   },
+   {
+    "q": "Must the Agreement be a treaty because it amends RA 9851 or derogates from customary law?",
+    "a": "NO",
+    "why": "RA 9851, Sec. 17 says the Philippines 'may' surrender, so it is discretionary and not amended. The Rome Statute is not customary international law: ratification is far from universal."
+   }
+  ],
+  "vote": "Velasco, Jr., J. (ponente), February 1, 2011; 12–2. Petition dismissed.",
+  "ops": "Carpio, J. (joined by Carpio Morales, J.), dissenting: an executive agreement cannot amend a statute; it is unenforceable until the Senate concurs."
+ },
+ "saguisag": {
+  "iss": [
+   {
+    "q": "Are the requisites of judicial review present?",
+    "a": "YES (standing relaxed)",
+    "why": "There was an actual case. The petitioners lacked standing as citizens, taxpayers or House members, but the Court relaxed the rule given the transcendental importance of Sec. 25."
+   },
+   {
+    "q": "May the President enter into EDCA as an executive agreement without Senate concurrence?",
+    "a": "YES, if it implements an existing treaty",
+    "why": "Art. XVIII, Sec. 25 ('shall not be allowed in') governs only the initial entry of foreign bases, troops or facilities. After a treaty allows entry, the President may implement it by executive agreement, if it is traceable to the treaty, creates no new obligations, and is consistent with the Constitution and laws. The VFA and the MDT had allowed entry; EDCA implements them."
+   },
+   {
+    "q": "Is EDCA consistent with the Constitution, the MDT, the VFA and the laws?",
+    "a": "YES",
+    "why": "Agreed Locations are not bases: the Philippines keeps ownership, sovereignty, jurisdiction, access and primary security; US 'operational control' covers only its own personnel and construction. Prepositioning and activities were already within the VFA; contractors are subject to Philippine law."
+   },
+   {
+    "q": "Should the decision be reconsidered?",
+    "a": "NO",
+    "why": "Reading Sec. 25 to require a treaty for every later act would be absurd; disputes over US practice are questions of wisdom for the political branches."
+   }
+  ],
+  "vote": "Sereno, C.J. (ponente), January 12, 2016; 10–4. Motion for reconsideration denied, July 26, 2016.",
+  "ops": "Dissents: Leonardo-de Castro, Brion, Perlas-Bernabe and Leonen, JJ.: EDCA goes beyond the VFA (stationing, prepositioning, Agreed Locations as facilities) and needs a treaty. Carpio, J., concurred separately."
+ },
+ "pangilinan2021": {
+  "iss": [
+   {
+    "q": "Is the case justiciable: actual case, standing, political question, proper remedy?",
+    "a": "NO",
+    "why": "The withdrawal was complete under Art. 127 of the Rome Statute before the petitions were filed, so the case was moot. Senators lacked standing because the Senate as a body never asserted its prerogative; citizens, taxpayers and groups showed no injury. Treaties are not beyond review, but there was no grave abuse; certiorari and mandamus did not fit."
+   },
+   {
+    "q": "Was the withdrawal valid? May the President withdraw from a treaty unilaterally?",
+    "a": "Not ruled (moot); guidelines laid down",
+    "why": "The President has leeway to withdraw from a treaty bona fide deemed contrary to the Constitution or laws, but cannot withdraw unilaterally from a treaty entered into pursuant to, or affirmed by, a law, or where the Senate conditioned its concurrence on concurrence in withdrawal. A statute prevails over a treaty. Senate Resolution No. 546 had no withdrawal clause."
+   },
+   {
+    "q": "Does the withdrawal breach international law?",
+    "a": "NO",
+    "why": "The Philippines followed Art. 127; the ICC may still act on crimes committed while the Philippines was a party."
+   },
+   {
+    "q": "Does the withdrawal diminish Filipinos' protection?",
+    "a": "NO",
+    "why": "RA 9851 covers the same crimes and more; the fear is speculative."
+   }
+  ],
+  "vote": "Leonen, J. (ponente), March 16, 2021; 15–0. Petitions dismissed as moot."
+ },
+ "gutierrez": {
+  "iss": [
+   {
+    "q": "Are certiorari and prohibition proper against the Committee on Justice?",
+    "a": "YES",
+    "why": "Under Francisco, the Constitution limits the House in impeachment, and the Court must enforce those limits."
+   },
+   {
+    "q": "Is the petition premature?",
+    "a": "NO",
+    "why": "The simultaneous referral and the publication of the rules raised constitutional questions needing immediate answers."
+   },
+   {
+    "q": "Did the Committee violate Gutierrez's right to due process?",
+    "a": "NO",
+    "why": "The chair's alleged bias was speculation, and speed is not bias. The respondent's participation begins with her answer after the complaint is found sufficient. 'Promulgate' in Sec. 3(8) does not mean 'publish'; Congress decides how to make its rules known, and Art. XI is self-executing."
+   },
+   {
+    "q": "Did referring two complaints at the same time violate the one-year bar?",
+    "a": "NO",
+    "why": "Initiation is filing plus referral (Francisco). Two complaints referred together ignite one proceeding (two matches, one flame). The bar concerns time, not the number of complaints: one proceeding, one defense, per year."
+   },
+   {
+    "q": "Did the Committee abuse its discretion by disregarding criminal procedure rules (one offense per complaint; consolidation)?",
+    "a": "NO / not ruled",
+    "why": "Articles of impeachment may charge several offenses; consolidation had not yet been ordered."
+   }
+  ],
+  "vote": "Carpio Morales, J. (ponente), February 15, 2011. Petition dismissed; status quo ante order lifted.",
+  "ops": "Brion, J. (joined by four Justices), dissenting: 'promulgate' means publish, and Francisco should be revisited. Del Castillo and Perez, JJ.: the referrals were separate, so the second complaint was barred."
+ },
+ "coronasenate": {
+  "iss": [
+   {
+    "q": "May the Court's certiorari jurisdiction reach incidents of a Senate impeachment trial, and grant injunctive relief for due-process violations?",
+    "a": "Not ruled (moot)",
+    "why": "The Court restated that acts of any branch are reviewable for grave abuse (Francisco; Gutierrez), but did not decide how far that reaches the impeachment court."
+   },
+   {
+    "q": "Is the petition moot?",
+    "a": "YES",
+    "why": "Corona was convicted, accepted the verdict and left office without protest, and the JBC was screening his successor. A ruling would have no practical value."
+   },
+   {
+    "q": "Should Justices Carpio and Sereno inhibit?",
+    "a": "NO",
+    "why": "No compulsory ground; their alleged animosity and the claim that they were touted as replacements did not require inhibition."
+   }
+  ],
+  "vote": "Villarama, Jr., J. (ponente), July 17, 2012; 11–0. Petition dismissed as moot."
+ },
+ "sereno": {
+  "iss": [
+   {
+    "q": "May the Court take a quo warranto petition against an impeachable officer while an impeachment complaint is pending in the House?",
+    "a": "YES",
+    "why": "'May be removed' in Art. XI, Sec. 2 is permissive: impeachment is not the exclusive mode of removal. Quo warranto is judicial and tests title (eligibility at appointment); impeachment is political and tests fitness (acts in office). The two may proceed together; there was no forum shopping."
+   },
+   {
+    "q": "Is the petition barred by prescription (one year under Rule 66)?",
+    "a": "NO",
+    "why": "Prescription does not run against the State, and Sereno concealed her failure to file SALNs."
+   },
+   {
+    "q": "Is Sereno eligible to be Chief Justice?",
+    "a": "NO",
+    "why": "Proven integrity (Art. VIII, Sec. 7(3)) is a constitutional qualification. Her failure to file SALNs, and to submit them to the JBC, showed a lack of it; neither the JBC nomination nor the appointment cured the defect. She was a de facto officer removable by quo warranto."
+   },
+   {
+    "q": "Did Sereno violate the sub judice rule?",
+    "a": "YES (show cause)",
+    "why": "Her public statements attacking the Justices' impartiality while the case was pending were ordered explained."
+   }
+  ],
+  "vote": "Tijam, J. (ponente), May 11, 2018; 8–6. Petition granted; Sereno ousted.",
+  "ops": "Carpio, J.: SALN lapses are impeachable, only Congress removes. Leonen, J.: a 'legal abomination'; prescribed. Caguioa, J.: impeachment is exclusive. Velasco, Jr., J.: nullify the JBC nomination first. Perlas-Bernabe and Del Castillo, JJ., also voted to dismiss."
+ },
+ "recorona": {
+  "iss": [
+   {
+    "q": "Does an impeachment judgment go beyond removal and disqualification?",
+    "a": "NO",
+    "why": "Art. XI, Sec. 3(7) limits it to removal and disqualification. Impeachment is political, not civil, criminal or administrative; it touches neither the person nor the property of the officer. It differs from quo warranto (Sereno), which is judicial."
+   },
+   {
+    "q": "Was CJ Corona involuntarily retired?",
+    "a": "YES",
+    "why": "Removal by impeachment falls under involuntary retirement. No law forfeits benefits on impeachment alone, and his liability was never judicially established; equity fills the gap."
+   },
+   {
+    "q": "Is he entitled to retirement benefits under RA 9946?",
+    "a": "YES",
+    "why": "He met the optional retirement requirements (a magistrate, 15 years of service, over 60). Forfeiture needs an administrative dismissal or a criminal penalty, neither imposed; a later finding of liability would operate as a resolutory condition."
+   },
+   {
+    "q": "Is his widow entitled to survivorship benefits?",
+    "a": "YES",
+    "why": "Eligibility to retire optionally at death is enough under RA 9946, Sec. 3."
+   }
+  ],
+  "vote": "Hernando, J. (ponente), January 12, 2021; unanimous. Request granted."
+ },
+ "duterte2025": {
+  "iss": [
+   {
+    "q": "Is impeachment subject to judicial review?",
+    "a": "YES",
+    "why": "It is a sui generis legal, political and constitutional process, not purely political, so the Bill of Rights applies. The Court asks whether the process was followed, whether the grounds are proper, and whether rights were respected; it does not decide when, who or whether to remove."
+   },
+   {
+    "q": "Were the first three complaints acted on in time? Did the fourth toll the periods?",
+    "a": "NO; NO",
+    "why": "The Sec. 3(2) periods are mandatory and ministerial; the Secretary General and the Speaker cannot hold complaints. Under the Resolution, a session day is a calendar day with a plenary session, so the first complaint should have been in the Order of Business by January 14, 2025 and referred by January 21. The fourth complaint's transmittal did not toll those periods."
+   },
+   {
+    "q": "Is the fourth complaint barred by the one-year rule?",
+    "a": "YES",
+    "why": "Resolution: a first-mode complaint is deemed initiated when referred, when not included or referred within the periods, or when left unacted on at sine die; the first complaint's lapse triggered the bar. A second-mode complaint is initiated on valid endorsement by one-third; there is no priority between modes."
+   },
+   {
+    "q": "Did the fourth complaint violate due process?",
+    "a": "YES",
+    "why": "Decision: the respondent must receive the draft and evidence before transmittal. Resolution, relaxing it: the evidence must be available to all Members at plenary, and the respondent is fully heard at the Senate trial. The Articles were void ab initio, and the Senate acquired no jurisdiction."
+   }
+  ],
+  "vote": "Leonen, J. (ponente). Decision July 25, 2025 (13–0, partially granted); Resolution January 28, 2026 (13–0, reconsideration denied with finality).",
+  "ops": "Lazaro-Javier, J.: would affirm the Decision as it stood. Villanueva, J.: archiving was the right trigger; the due-process guidelines overreach. Hernando and Inting, JJ., wrote separately."
+ },
+ "generillo": {
+  "iss": [
+   {
+    "q": "Is mandamus the proper remedy to compel the Senate to convene as an impeachment court?",
+    "a": "NO",
+    "why": "The Senate, as part of a coordinate branch, cannot be controlled by mandamus in matters within its sphere, absent clear grave abuse. The Court treated the petition as certiorari pro hac vice."
+   },
+   {
+    "q": "Does the petitioner have standing, and is the issue justiciable?",
+    "a": "YES; YES",
+    "why": "The impeachment of the second-highest official is of transcendental importance; the question whether the Senate breached a constitutional limit is not political (Francisco)."
+   },
+   {
+    "q": "Is the petition moot?",
+    "a": "YES",
+    "why": "The Articles were declared void in Duterte v. House, and the Senate had already begun preparing; a writ would be futile."
+   },
+   {
+    "q": "Did the Senate gravely abuse its discretion in not convening at once?",
+    "a": "NO",
+    "why": "'Forthwith' in Sec. 3(4) means within a reasonable time under the circumstances, and the duty to try includes preparations. Unlike Sec. 3(2) for the House, no period is fixed for the Senate, which decides when the actual trial starts but may not unduly delay."
+   }
+  ],
+  "vote": "Zalameda, J. (ponente), April 22, 2026; 14–0. Petition dismissed.",
+  "ops": "Leonen, SAJ (concurring and dissenting): 'forthwith' is an immediate duty to convene; 126 days was too long. Singh, J.: the ruling on the merits is obiter, since the case was moot."
+ },
+ "torreon": {
+  "iss": [
+   {
+    "q": "Petition: is the Committee's threshold review a mandatory gate, so a defective complaint must be dismissed, not cured by subpoenas?",
+    "a": "Petitioners: YES",
+    "why": "They argued that sufficiency in form, substance and grounds requires ultimate facts and personal participation, and that subpoenas after a sufficiency finding are a fishing expedition."
+   },
+   {
+    "q": "Petition: did the Committee apply a double standard?",
+    "a": "Petitioners: YES",
+    "why": "The same Committee dismissed the complaints against the President for lacking ultimate facts, then passed weaker complaints against the Vice President: a violation of due process and equal protection."
+   },
+   {
+    "q": "Petition: may the VP be charged for acts outside her office or before the current term?",
+    "a": "Petitioners: NO",
+    "why": "They invoked Duterte v. House: charges must concern acts in relation to the office during the current term, so acts as Education Secretary are excluded."
+   },
+   {
+    "q": "Ruling: is the petition still live after the House impeached the VP and transmitted the Articles?",
+    "a": "NO (moot)",
+    "why": "The House approved the Articles on May 11 and sent them to the Senate on May 14, 2026; on August 5, 2026 the Court dismissed the consolidated petitions as moot."
+   }
+  ],
+  "vote": "Petition dated March 27, 2026; consolidated with the VP's own petition; dismissed as moot on August 5, 2026."
+ }
+}

@@ -63,6 +63,12 @@ for c in cases:
     assert 1 <= len(h['k'].split()) <= 3 and h['c'] in ('ok', 'no', 'sun', 'acc'), ('bad hook', c['id'], h)
     c['hk'], c['hc'] = h['k'], h['c']
 assert not set(HOOKS) - {c['id'] for c in cases}, 'hook for unknown case'
+# detailed summaries (three-level case cards): id -> {iss: [{q, a, why}], vote?, ops?}; only for cards whose case has a digest
+ISS = json.load(open(os.path.join(DATA, 'case_iss.json')))
+for k, v in ISS.items():
+    assert k in CASEBY, 'detailed summary for unknown case ' + k
+    assert v['iss'] and all(set(i) == {'q', 'a', 'why'} and all(i.values()) for i in v['iss']), ('bad detailed summary', k)
+    CASEBY[k].update({x: v[x] for x in ('iss', 'vote', 'ops') if v.get(x)})
 
 # rule maps: link every case mention to its card (see caselink.py)
 import sys; sys.path.insert(0, HERE)

@@ -59,7 +59,7 @@ This repo builds Zen's personal study site for **Constitutional Law 1** (Prof. D
 - **Back button.** Opening a digest (from a card, a rule map, the Digests list) or a case card (from a rule map, a list, a digest) must offer "← Back" that returns to the exact place Zen came from (same tab, same scroll position, same open card). Keep a small navigation stack; Esc and the browser/phone back gesture should do the same.
 - **Case card layout (three levels):**
   1. **At a glance:** the one-line summary (`s`) at the top; then the **doctrine** (`r`, the most prominent block); then quick facts (`f`) and quick ruling (`h`), each two or three lines at most; hook, professor box and warning stay.
-  2. **Detailed summary** (collapsed, opens on tap): one row per issue from the digest: the issue as a question, the answer (YES/NO), and the ratio in two to four sentences; then the vote and the notable separate opinions. New card field `iss`: `[{"q": issue, "a": "YES|NO|…", "why": ratio}]`, plus optional `vote`, `ops`. Cover every issue in the digest, main and side.
+  2. **Detailed summary** (collapsed, opens on tap): one row per issue from the digest: the issue as a question, the answer (YES/NO), and the ratio in two to four sentences; then the vote and the notable separate opinions. Stored in `site/data/case_iss.json` (id → `{"iss": [{"q", "a", "why"}], "vote", "ops"}`), merged into the card by build.py. Cover every issue in the digest, main and side.
   3. **Read the full digest** button.
   Keep `r`, `f`, `h`, `s`, `test`, `x`, `g`, `w` working: the drills (Case → rule, Rule → case, Facts → case, Mixed), search, lists and printables read them. Shorten an over-long `r` into a doctrine that fits a flashcard back; move the extra detail into `iss`.
 - **Diagrams: neater, never less accurate** (Zen, confirmed Nov. 27). Keep every rule, exception, case and vote a diagram needs; if it has to be full and complicated, it stays full and complicated. What changes is the look: clean layout, consistent spacing, short labels on the face with the details one tap away (hint, walk-through, Test me), no crowding. Split a crowded diagram into two clear ones rather than cutting content.
@@ -82,7 +82,7 @@ Don't let quality slide in later batches: copy the patterns already in `site/` (
 
 ## Verification before every publish
 
-`python3 site/app/build.py`, then `node site/tests/smoke.js`, `features.js`, `viz.js`, `drill.js` (all must pass at 400 px and 1280 px, light and dark, no console errors, no horizontal scroll), plus the digest word check. Look at one or two screenshots. Then commit, push and publish to the desk URL.
+`python3 site/app/build.py`, then `node site/tests/smoke.js`, `features.js`, `viz.js`, `drill.js`, `nav.js`, `digests.js` (all must pass at 400 px and 1280 px, light and dark, no console errors, no horizontal scroll), plus the digest word check. Look at one or two screenshots. Then commit, push and publish to the desk URL.
 
 ## Size
 
