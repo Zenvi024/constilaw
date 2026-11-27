@@ -460,7 +460,7 @@ document.querySelectorAll("#rcontent figure.viz .gates").forEach(G => {
   out.addEventListener("click", e => { const b = e.target.closest("[data-w]"); if (!b) return; clear(); if (b.dataset.w === "again") bar.scrollIntoView({block: "nearest", behavior: "smooth"}); });
 });
 // test me: cover the details of a figure; tap each one to check your recall
-const COVER = ".vn .s, .vcmp .c, .vtl .t, .rung .lab, .gate>.gx, .gend, .acro .w, .wr .ln>span, .vor p, [data-cover]";
+const COVER = ".vn .s, .vcmp .c, .vtl .t, .rung .lab, .gate>.gx, .gend, .acro .w, .vor p, [data-cover]";
 const coverEls = fig => [...fig.querySelectorAll(COVER)].filter(el => !el.closest(".calc,.vfacts,.walkp,.walkout") && !(el.parentElement.closest(COVER) && fig.contains(el.parentElement.closest(COVER))));
 function setTest(fig, on){
   const b = fig.querySelector(".vtools .vtest"); if (!b) return;
@@ -476,6 +476,10 @@ document.querySelectorAll("#rcontent figure.viz").forEach(fig => {
   if (fig.hasAttribute("data-notest") || !coverEls(fig).length) return;
   const t = document.createElement("span"); t.className = "vtools"; t.innerHTML = `<span class="ct"></span><button type="button" class="vchip vtest" aria-pressed="false" title="Cover the details, then tap each to check yourself">Test me</button>`;
   fig.querySelector(".vt").append(t);
+  if (fig.classList.contains("vtidy") && fig.querySelector(".gate .vn.q>.s")){   // finals: hints one tap away
+    const d = document.createElement("button"); d.type = "button"; d.className = "vchip vdet"; d.setAttribute("aria-pressed", "false"); d.textContent = "Details"; d.title = "Show the hint under each question";
+    t.prepend(d); d.addEventListener("click", () => { const on = fig.classList.toggle("vshowdet"); d.setAttribute("aria-pressed", on); });
+  }
   t.querySelector(".vtest").addEventListener("click", () => {
     const on = !fig.classList.contains("testing");
     if (on){ const w = fig.querySelector(".walkbar [aria-pressed=true]"); if (w) w.click(); }

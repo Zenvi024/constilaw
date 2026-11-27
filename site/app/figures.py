@@ -3,8 +3,8 @@
 Every figure follows one visual language:
   blue = the rule; green (✓) = valid, or the case goes on; red (✕) = void, or the case ends;
   yellow (!) = the trap or the exception.
-Each figure can carry a "Use it when" trigger, a memory hook, and the CLEAR lines to write on
-the exam. Gate diagrams carry fact patterns that the page turns into click-through walk-throughs.
+Each figure can carry a "Use it when" trigger, a memory hook, and a "Say it in orals" line (no CLEAR boxes).
+Gate diagrams carry fact patterns that the page turns into click-through walk-throughs.
 
 build.py calls insert(src, prefix) on each rule-map file before case names are linked, so case
 names inside figures become links too. All law here restates the rule maps and case cards.
@@ -95,12 +95,12 @@ def write(*lines):
     return ''.join(f'<div class="ln"><i class="{"e" if k == "E" else ""}">{k}</i><span>{fill(t)}</span></div>' for k, t in lines)
 
 def fig(prefix, mode, anchor, fid, title, body, kind='diagram', when=None, hook=None, wr=None, cap='', notest=False, wall=True, oral=None):
-    h = (f'<figure class="viz" id="fig-{fid}" data-kind="{kind}"' + (' data-notest' if notest else '') + f' aria-label="{re.sub(r"<[^>]+>", "", title)}">'
+    tidy = prefix >= '14' and prefix != '90' and kind != 'review'   # finals rule maps: the tidy face (hints one tap away)
+    h = (f'<figure class="viz{" vtidy" if tidy else ""}" id="fig-{fid}" data-kind="{kind}"' + (' data-notest' if notest else '') + f' aria-label="{re.sub(r"<[^>]+>", "", title)}">'
          f'<div class="vt"><span class="vtt">{title}</span> <small>{kind}</small></div>')
     if when: h += f'<p class="vwhen"><span class="vlab">Use it when</span>{when}</p>'
     h += body
     if hook: h += f'<div class="hook"><span class="vlab">Hook</span><div class="hk">{hook}</div></div>'
-    if wr: h += f'<div class="wr"><span class="vlab">On the exam, write</span>{wr}</div>'
     if oral: h += '<div class="vor"><span class="vlab">Say it in orals</span><p>' + re.sub(r'\[([^\]]+)\]', r'<span class="fill">[\1]</span>', oral) + '</p></div>'
     if cap: h += f'<figcaption>{cap}</figcaption>'
     h += '</figure>\n'
@@ -110,14 +110,20 @@ def fig(prefix, mode, anchor, fid, title, body, kind='diagram', when=None, hook=
 
 
 def insert(src, prefix):
-    """Insert this file's figures at their anchors (figures sharing an anchor keep their order); each anchor must occur exactly once."""
+    """Insert this file's figures. Each anchor must occur exactly once; the figure goes to the END of the h3 section the
+    anchor sits in (provision, explanation, professor boxes, then the diagrams), keeping document order."""
+    placed = []
+    for n, (mode, anchor, h) in enumerate(FIGS.get(prefix, [])):
+        c = src.count(anchor)
+        assert c == 1, f'figure anchor in {prefix} found {c} times: {anchor[:70]}'
+        pos = src.index(anchor) + (len(anchor) if mode == 'after' else 0)
+        ends = [x for x in (src.find('<h3', pos), src.find('</section>', pos)) if x >= 0]
+        placed.append((min(ends) if ends else len(src), pos, n, h))
     groups = {}
-    for mode, anchor, h in FIGS.get(prefix, []):
-        groups.setdefault((mode, anchor), []).append(h)
-    for (mode, anchor), hs in groups.items():
-        n = src.count(anchor)
-        assert n == 1, f'figure anchor in {prefix} found {n} times: {anchor[:70]}'
-        src = src.replace(anchor, anchor + ''.join(hs) if mode == 'after' else ''.join(hs) + anchor)
+    for end, pos, n, h in sorted(placed, key=lambda t: (t[1], t[2])):
+        groups.setdefault(end, []).append(h)
+    for end in sorted(groups, reverse=True):   # from the back, so earlier offsets stay valid
+        src = src[:end] + ''.join(groups[end]) + src[end:]
     return src
 
 
@@ -129,7 +135,7 @@ fig('00', 'before', '<h3 id="method-rules">', 'legend', 'How to read every diagr
     + sp(grid(N('Use it when', 'the fact-pattern words that should make you reach for the diagram', 'plain'),
               N('Walk it', 'run a fact pattern through the questions one at a time, and see whether you land where the Court did', 'plain'),
               N('Test me', 'covers the details; tap each grey box to check your recall', 'plain'),
-              N('Hook · On the exam, write', 'the mnemonic to carry into the room, and the CLEAR lines it turns into', 'plain'), m=150)),
+              N('Hook · Say it in orals', 'the mnemonic to carry into the room, and the spoken answer it turns into', 'plain'), m=150)),
     kind='key', cap='Four colors, everywhere: once you know them, a red box at the end of a path means you write “void” or “dismissed” in your C line.', notest=True, wall=False)
 
 _clock = '<div class="xclock" role="img" aria-label="The 90 minutes: two minutes of setup, then four 22-minute blocks">' + \
@@ -224,7 +230,6 @@ fig('01', 'before', '<div class="test"><b>Self-executing test (Manila Prince Hot
     + sp(sub('Name your mode of argument (Tribe, in Gatmaytan’s <em>Legal Method Essentials</em>)') + acro(('T', 'text'), ('S', 'structure'), ('O', 'original intent'), ('N', 'norms and pragmatics'), ('P', 'precedent'), ('+', 'a combination'))),
     kind='flow', when='the question turns on what a word or clause of the Constitution means.',
     hook='<em>Words, Will, Whole.</em> Start with the text; go to the framers only if it is unclear; then read it with everything around it.',
-    wr=write(('C', '[The clause] means [___], so [the act] is [valid/void].'), ('L', 'Under <i>verba legis</i>, the words of the Constitution are given their ordinary meaning (J.M. Tuason); where they are unclear, the intent of the framers and the people controls (Nitafan), and the provisions are read as a whole (Francisco).'), ('A', '[Quote the words; say what they ordinarily mean; show the reading that harmonizes the other provisions.]'), ('R', 'Hence, [restate C].')),
     cap='Naming the canon you use (and, if the question invites it, the mode of argument) is the fastest way to show method in a one-paragraph answer.')
 
 fig('01', 'before', '<h4>The judges’ salary line: a lesson in who interprets</h4>', 'kapatiran', 'Self-executing? And Kapatiran’s three questions',
@@ -242,7 +247,6 @@ fig('01', 'before', '<h4>The judges’ salary line: a lesson in who interprets</
                  N('Art. II is usually not enforceable', 'aids to interpretation and guides for legislation; exceptions: Secs. 15–16 (health, ecology: Oposa), and now Sec. 26’s duty (Kapatiran)', 'sun'), m=200))),
     kind='gates + three questions', when='a provision says “shall … as may be defined by law” and Congress has not acted, or someone asks a court or COMELEC to enforce an Art. II policy.',
     hook='Three D’s: <em>Duty</em> (shall), <em>Definition</em> (by law, so Congress), <em>Default</em> (decades of inaction = grave abuse).<small>The Court can compel the duty; only Congress writes the definition; COMELEC waits for the law.</small>',
-    wr=write(('C', 'Congress may be compelled to act, but [COMELEC/the Court] cannot itself define and enforce a ban.'), ('L', 'Art. II, Sec. 26 is a mandatory command; Congress’s failure to act on it for decades is grave abuse correctible under Art. VIII, Sec. 1, but “as may be defined by law” leaves the definition to Congress (Kapatiran, 2026).'), ('A', '[Who is asked to act? A court compelling Congress, or COMELEC acting without a law?]'), ('R', 'Hence, [restate C].')),
     cap='Kapatiran is the 2026 case most likely to reach a news question. Answer the three questions in order and you will not confuse “the Court ordered Congress” with “the Court banned dynasties”.')
 
 fig('01', 'after', '<h4>The judges’ salary line: a lesson in who interprets</h4>\n', 'salary', 'The judges’ salary line: who gets the last word', tl([
@@ -251,7 +255,6 @@ fig('01', 'after', '<h4>The judges’ salary line: a lesson in who interprets</h
     ('1987', f'<b>The Court, on new text</b> · {C("nitafan", "Nitafan v. CIR")}: under the 1987 Constitution the framers intended judges’ salaries to be taxable; Perfecto and Endencia discarded on that point.', 'key')]),
     kind='timeline', when='a bill “clarifies” a constitutional term or answers a Supreme Court ruling.',
     hook='<em>P-E-N</em>: Perfecto (no tax), Endencia (Congress cannot say otherwise), Nitafan (new text, framers say tax).<small>The answer changed only when the text changed; Congress never had the power to change it.</small>',
-    wr=write(('C', 'The law is void insofar as it declares what the Constitution means.'), ('L', 'Congress makes laws; the interpretation of the Constitution belongs to the courts, so Congress cannot declare by statute what a constitutional provision means (Endencia v. David).'), ('A', '[Identify the clause the bill “clarifies” and the ruling it overrides.]'), ('R', 'Hence, [restate C].')),
     cap='Same question, three answers: the text changed in 1987, and the framers’ intent (ratio legis) settled it. Congress never had the power to settle it by statute.')
 
 fig('01', 'before', '<h4>Leading cases in order</h4>', 'doors', 'Art. XVII: three doors in, one door out',
@@ -266,7 +269,6 @@ fig('01', 'before', '<h4>Leading cases in order</h4>', 'doors', 'Art. XVII: thre
               N('The initiative door is stuck', 'Congress must provide the implementing law; RA 6735 is inadequate (Santiago) and was never fixed', 'sun'), m=160)),
     kind='flow', when='a story mentions Charter change, a constituent assembly, a convention or a “people’s initiative”.',
     hook='Three doors, one exit. Doors: <em>¾</em> · <em>⅔ (or ½ to the voters)</em> · <em>12 + 3</em>. Exit: <em>60–90 days</em>, majority of votes cast.<small>Only the people’s door is “amendments only”, and it is locked until Congress passes an adequate law.</small>',
-    wr=write(('C', 'The proposal [may/may not] be validly submitted to the people.'), ('L', 'Under Art. XVII, Congress (by three-fourths of all its Members) or a constitutional convention may propose amendments or revisions; the people may propose only amendments, through an initiative of 12% of registered voters with 3% in every district; every proposal takes effect only when ratified by a majority of the votes cast in a plebiscite held 60 to 90 days after approval.'), ('A', '[Which door was used? Was the vote counted correctly? Is it an amendment or a revision?]'), ('R', 'Hence, [restate C].')),
     cap='Every proposal, whatever its source, needs a plebiscite. Only the people’s initiative is limited to amendments (Lambino); Santiago held RA 6735 inadequate for it.')
 
 fig('01', 'before', '<h4>Leading cases in order</h4>', 'lambino', 'Amendment or revision, and a valid initiative? (Lambino)',
@@ -279,7 +281,6 @@ fig('01', 'before', '<h4>Leading cases in order</h4>', 'lambino', 'Amendment or 
                  fact('A term change by Congress', 'Congress, sitting as a constituent assembly and voting by three-fourths of all its Members, proposes to lengthen the terms of district representatives.', 'y,y,y', 'One provision, no change to the basic plan: an amendment, which Congress may propose. It still needs a plebiscite 60 to 90 days later, and the joint-or-separate voting question remains open.')]),
     kind='gates', when='the facts describe a proposed change and ask whether the people can make it by initiative.',
     hook='Revision if <em>Quantity</em> or <em>Quality</em> fails; a valid initiative needs the people to <em>author and sign</em> the <em>full text</em>.',
-    wr=write(('C', 'The initiative is invalid.'), ('L', 'A people’s initiative may propose only amendments, not revisions, and the people must author and sign the entire proposal embodied in a petition (Lambino v. COMELEC); a change is a revision if it alters the substantial entirety of the Constitution or its basic plan of government.'), ('E', 'Even a proper amendment cannot proceed by initiative until Congress passes an adequate enabling law (Santiago v. COMELEC).'), ('A', '[Count what changes; ask whether the basic plan changes; check what the signers actually saw.]'), ('R', 'Hence, [restate C].')),
     cap='Either test alone can make a change a revision. Lambino’s proposal (presidential to parliamentary, bicameral to unicameral, 105 provisions) failed both.')
 
 
@@ -295,7 +296,6 @@ fig('02', 'before', '<div class="test"><b>Levels of scrutiny (class reviewer)</b
     + sp(N('Express, not implied', 'unlike the US, where judicial review rests on <i>Marbury v. Madison</i>, ours is granted in the text (Art. VIII, Secs. 1 and 5(2))', 'plain')),
     kind='comparison', when='a respondent says the issue is “political” or that the Court has no business reviewing Congress or the President.',
     hook='Clause 1 decides <em>disputes</em>; clause 2 polices <em>grave abuse</em> by anyone. The Court <em>checks</em>, <em>legitimates</em>, <em>symbolizes</em>.',
-    wr=write(('L', 'Judicial power includes the duty to determine whether there has been grave abuse of discretion amounting to lack or excess of jurisdiction on the part of any branch or instrumentality of the Government (Art. VIII, Sec. 1).'), ('A', '[Name the constitutional limit the respondent allegedly ignored: that is what makes it reviewable.]')),
     cap='Angara: when the Court draws constitutional boundaries it asserts no superiority; it performs a duty, limited to actual cases and the lis mota, with a presumption of constitutionality.')
 
 fig('02', 'before', '<p>Use the levels when a news question', 'scrutiny', 'From deference to suspicion: the three levels',
@@ -307,7 +307,6 @@ fig('02', 'before', '<p>Use the levels when a news question', 'scrutiny', 'From 
         ('Seen in', 'Albano: nominee rules by law must at least pass this; the ban on losing candidates did not', '(no case in your coverage)', 'SPARK: curfews of Manila and Navotas struck down; Kabataan: biometrics passed')])),
     kind='scale', when='a law classifies people (an age cap, a curfew for minors, a rule for one group) or burdens a right such as suffrage.',
     hook='Ends climb <em>legitimate → important → compelling</em>; means tighten <em>reasonable → substantial → narrowest</em>.<small>Pick the level in one sentence, then apply it. Saying which level and why is half the credit.</small>',
-    wr=write(('C', 'The [ordinance] is [void/valid].'), ('L', 'Because it burdens [a fundamental right / a suspect class], strict scrutiny applies: the government must show a compelling interest pursued by the least restrictive means (SPARK v. Quezon City).'), ('A', '[Name the government’s interest; then ask whether a narrower measure would serve it.]'), ('R', 'Hence, [restate C].')),
     cap='Pick the level first, in one sentence, then apply it. SPARK applied strict scrutiny to the curfews and struck down the Manila and Navotas ordinances.')
 
 fig('02', 'after', '<h3 id="jr-req">The requisites of judicial review</h3>\n', 'jr', 'Can the Court rule on it? Six gates before the merits',
@@ -324,7 +323,6 @@ fig('02', 'after', '<h3 id="jr-req">The requisites of judicial review</h3>\n', '
                  fact('A highway route', 'Residents ask the Court to order a different alignment for a government expressway because the chosen route is unwise.', 'n', 'Choosing a route on grounds of wisdom is for the political branches (Torrecampo); the Court asks only whether there was grave abuse.')]),
     kind='gates', when='the question says “resolve” or “will the petition prosper”: these gates are your procedural paragraph.',
     hook=acro(('A', 'actual case: ripe, not moot'), ('P', 'proper party'), ('E', 'earliest opportunity'), ('L', 'lis mota')) + '<em>APEL</em>: no appeal to the Court without all four, and justiciability before any of them.',
-    wr=write(('C', 'The petition [should be dismissed / may be resolved on the merits].'), ('L', 'Judicial review requires an actual case (ripe and not moot), a proper party, the constitutional question raised at the earliest opportunity, and that question being the lis mota of the case.'), ('A', '[Remedy and forum] · [only a bill or proposal?] · [who sues, and as what?] · [did events overtake it?]'), ('R', 'Hence, [restate C], [and the Court proceeds to the merits].')),
     cap='Read the gates top to bottom in the procedural paragraph of your answer. Any “no” ends the case before the merits, which is why KAPIT (2026) never reached the NCAP ordinances.')
 
 fig('02', 'before', '<h4>1. Actual case: ripeness</h4>', 'ripe', 'The ripeness window: too early, just right, too late',
@@ -337,7 +335,6 @@ fig('02', 'before', '<h4>1. Actual case: ripeness</h4>', 'ripe', 'The ripeness w
               N('Gatmaytan on Pangilinan (ICC withdrawal)', '“variant technicalities”: the Court called it moot and denied senators standing; he argues an invalid withdrawal could not take effect and the case fit every exception', 'sun'), m=200)),
     kind='timeline', when='the facts mention a bill, a draft, a proposal, or an event that ended before the case was decided.',
     hook='Goldilocks: <em>too early</em> (a bill), <em>too late</em> (moot), <em>just right</em> (an accomplished act that hurts you). Moot rescue: <em>G-E-F-C</em>.',
-    wr=write(('C', 'The petition is [premature / moot, but the Court may still resolve it].'), ('L', 'Courts decide only actual controversies: the act must be accomplished and directly injure the petitioner (Montesclaros). A moot case may still be decided if there is a grave violation of the Constitution, exceptional character and paramount public interest, a need for controlling principles, or the issue is capable of repetition yet evading review (David v. Macapagal-Arroyo).'), ('A', '[Is it still a proposal? What event ended the controversy? Which exception fits, and why?]'), ('R', 'Hence, [restate C].')),
     cap='Ripeness and mootness are two ends of the same “actual case” requirement. Say which end you are at in one sentence.')
 
 fig('02', 'after', '<h4>2. Proper party (standing)</h4>\n', 'standing', 'Who may sue? The rule and seven doors around it',
@@ -352,7 +349,6 @@ fig('02', 'after', '<h4>2. Proper party (standing)</h4>\n', 'standing', 'Who may
         ('Transcendental importance', 'relaxes all of the above; factors: the funds involved, a clear disregard of a prohibition, no party with a more direct interest. IBP v. Zamora: ruled anyway; AIWA: refused', 'sun')]),
     kind='mind map', when='you reach the “proper party” sentence of your procedural paragraph: name the door and justify it in one line.',
     hook=acro(('C', 'citizen'), ('T', 'taxpayer'), ('V', 'voter'), ('L', 'legislator'), ('A', 'association / third party'), ('G', 'government'), ('E', 'environment')) + '“<em>C</em>an <em>T</em>he <em>V</em>oters <em>L</em>ift <em>A</em> <em>G</em>rave <em>E</em>rror?”',
-    wr=write(('C', 'Petitioner has standing [as a taxpayer].'), ('L', 'A petitioner must show a personal and substantial interest, a direct injury fairly traceable to the act and redressable by a ruling (AIWA v. Romulo); [taxpayers may sue to stop an illegal disbursement of public funds].'), ('E', 'Even without direct injury, the Court may relax the rule for issues of transcendental importance.'), ('A', '[What injury, to whom, from which act? Which door fits these facts?]'), ('R', 'Hence, [restate C].')),
     cap='The center is the general rule; each spoke is an exception you must name and justify in one line.')
 
 fig('02', 'after', '<h3 id="jr-effects">Effects of a declaration of unconstitutionality</h3>\n', 'effects', 'Void from the start, but…',
@@ -361,7 +357,6 @@ fig('02', 'after', '<h3 id="jr-effects">Effects of a declaration of unconstituti
            ('…the rest may stand', 'partial unconstitutionality: valid parts survive if separable; a separability clause only creates a presumption (ABAKADA kept RA 9335 but Sec. 12; Lidasan voided a whole law). Gatmaytan: severability should not depend on the clause.', 'sun')]),
     kind='three panels', when='the question asks what happens to acts already done under the void law, or to the rest of the statute.',
     hook='<em>Void</em>… but the <em>past</em> may stand (operative fact) and the <em>rest</em> may stand (separability).',
-    wr=write(('E', 'Under the operative fact doctrine, acts done in good-faith reliance on the law before it was struck down may be respected (Araullo), unless that would reward the beneficiary of the void law (Fertiphil).'), ('E', 'The valid provisions stand if they are separable from the void one; a separability clause is only a presumption.')),
     cap='These are the E lines of CLEAR: write them only when the facts ask about consequences, not as filler.')
 
 fig('02', 'after', '<h3 id="jr-forum">Remedies and forum (quick guide)</h3>\n', 'forum', 'Where does the case go?',
@@ -373,7 +368,6 @@ fig('02', 'after', '<h3 id="jr-forum">Remedies and forum (quick guide)</h3>\n', 
               N('Raise it below first', 'in Arceta the accused should first have moved to quash in the trial court', 'sun'), m=200)),
     kind='map', when='you write the first clause of the procedural paragraph.',
     hook='<em>Remedy and forum</em> first, then <em>A-P-E-L</em>, then the merits.',
-    wr=write(('L', 'The proper remedy is [certiorari under Rule 65] in the [Supreme Court], which may take cognizance directly because the issue is of transcendental importance [or: under the hierarchy of courts, it should go first to the RTC].')),
     cap='Two or three lines of procedure, in this order, then turn to the merits.')
 
 
@@ -388,7 +382,6 @@ fig('03', 'after', '<h3 id="terr-zones">Territory versus maritime zones</h3>\n',
     + sp(sub('What a feature generates (UNCLOS Art. 121, as applied in the 2016 Award)') + grid(N('Island', 'sustains human habitation or economic life of its own: EEZ and continental shelf', 'ok'), N('Rock', 'cannot: a 12-nm territorial sea only', 'sun'), N('Low-tide elevation', 'none; judged in its natural condition, so reclamation does not upgrade it', 'no'), m=150)),
     kind='scale', when='a West Philippine Sea story asks about “territory”, “sovereignty” or “sovereign rights”.',
     hook='<em>12 · 24 · 200</em>. Sovereignty stops at 12; beyond it, sovereign rights, not territory.',
-    wr=write(('L', 'Baselines laws and UNCLOS mark maritime zones; they neither add nor cede territory, which is acquired only by occupation, accretion, cession and prescription (Magallona v. Ermita).')),
     cap='Sovereignty stops at 12 nm; beyond it the Philippines has sovereign rights, not territory. Magallona: baselines laws mark zones; they neither add nor cede territory.')
 
 fig('04', 'after', '<h3 id="cit-natural">Natural-born or naturalized</h3>\n', 'natural', 'Natural-born or naturalized?',
@@ -397,7 +390,6 @@ fig('04', 'after', '<h3 id="cit-natural">Natural-born or naturalized</h3>\n', 'n
               N('Reacquired under RA 9225 or by repatriation', 'natural-born status restored (David v. SET; Bengson)', 'sun'), N('Naturalized (CA 473; RA 9139; by statute)', 'not natural-born', 'no'), m=150)),
     kind='flow', when='the facts ask whether someone may hold an office reserved for natural-born citizens.',
     hook='<em>Blood, not soil.</em> A Filipino parent at birth = natural-born; three yellow side doors also lead there: <em>elected</em>, <em>found</em>, <em>reacquired</em>.',
-    wr=write(('L', 'Natural-born citizens are those who are citizens from birth without having to perform any act to acquire or perfect their citizenship; those who elect under Sec. 1(3) are deemed natural-born (Art. IV, Sec. 2).')),
     cap='The yellow boxes are the routes students forget: election under the 1935 rule, foundlings, and reacquisition all end at natural-born.')
 
 
@@ -418,7 +410,6 @@ fig('05', 'after', '<h3 id="suff-quals">Qualifications versus regulation</h3>\n'
                       fact('An early deadline', 'COMELEC sets the registration deadline for the May 2028 elections on September 30, 2027, citing its new automated system, and shows nothing more.', 'y,y?,n', 'Congress fixed continuing registration until 120 days before a regular election. COMELEC’s stand-by power needs proof that pre-election acts cannot reasonably be done in time (Palatino; AKBAYAN); convenience is not enough.')])),
     kind='gates', when='a law or COMELEC rule adds anything a voter must do, show, pass or pay, or moves a registration deadline.',
     hook='<em>18 · 1 · 6</em>, and no <em>L-P-S</em> (literacy, property, other substantive requirement).<small>Registration is procedure: valid if reasonable; the 120/90-day wall belongs to Congress.</small>',
-    wr=write(('C', 'The requirement is [void / valid].'), ('L', 'Art. V, Sec. 1 fixes the qualifications of voters and bars any literacy, property or other substantive requirement; registration is a procedure the State may reasonably regulate (AKBAYAN; Kabataan).'), ('A', '[Is it a qualification or a step in registration? Who made it, and within what law and period?]'), ('R', 'Hence, [restate C].')),
     cap='Sort the measure first: a new qualification is void; a registration rule is valid if reasonable and made by the body the law empowers.')
 
 fig('05', 'after', '<h3 id="suff-residence">Residence</h3>\n', 'domicile', 'Did he really move? Three keys to a new domicile',
@@ -428,7 +419,6 @@ fig('05', 'after', '<h3 id="suff-residence">Residence</h3>\n', 'domicile', 'Did 
         ('Examples', 'absence to work or study; forced exile (Romualdez); marriage, for a wife (Marcos). A minor simply follows the parents’ domicile.', 'leasing a unit, which shows an intent to lease (Aquino); registering, voting and getting a residence certificate where one works (Gallego); a sitting official who keeps serving elsewhere (Mangudadatu)')]),
     kind='keys', when='a voter or candidate “moved”, “transferred”, “leased”, “works abroad” or married into another place.',
     hook='Body there, heart staying, heart left home: <em>all three</em>, or you never moved.',
-    wr=write(('L', 'Residence in election law means domicile; acquiring a new one requires bodily presence, the intent to remain, and the intent to abandon the old domicile, and the change is not presumed (Gallego v. Verra; Romualdez v. RTC).'), ('A', '[Take each key in turn against the facts: where was he, what did he intend, what did he do?]')),
     cap='The same rule governs voters and candidates (Aquino; Marcos; Mangudadatu), so this figure also answers the residence question for Senators and Representatives.')
 
 
@@ -456,7 +446,6 @@ fig('06', 'after', '<h3 id="gov-immunity">Immunity from suit</h3>\n', 'immunity'
                  fact('GTZ (2009)', 'Filipino employees sue GTZ, a German implementing agency, for illegal dismissal. It claims immunity but shows no charter, no proof of German law and no DFA certification.', 'y?,y', 'An incorporated agency’s suability depends on its charter or the general law; GTZ, organized under private law, failed to establish immunity, so the Labor Arbiter had jurisdiction.')]),
     kind='gates', when='anyone sues an agency, an officer, a foreign State or its agent, or tries to garnish or levy on public funds.',
     hook='Three questions: <em>Is it the State? Did it consent? Can you collect?</em><small>Winning the suit is not collecting the money: COA first.</small>',
-    wr=write(('C', 'The suit [may proceed / must be dismissed].'), ('L', 'The State may not be sued without its consent (Art. XVI, Sec. 3). A suit against an officer is a suit against the State if the judgment would require the State to pay or act (Arigo); consent is given expressly by law, or impliedly when the State sues or enters into a proprietary contract.'), ('E', 'Even if the State is suable, public funds cannot be garnished; the claim goes to COA (Fetalvero).'), ('A', '[Who is the real defendant? What relief is sought? Where is the consent?]'), ('R', 'Hence, [restate C].')),
     cap='Two questions in order, then the payoff warning. Most exam traps are in the last box: winning the suit is not collecting the money.')
 
 fig('06', 'before', '<h4>Regulation or taking?</h4>', 'powers3', 'The three inherent powers side by side', cmp(['Police power', 'Eminent domain', 'Taxation'], [
@@ -479,7 +468,6 @@ fig('06', 'before', '<aside class="note news"><strong>In a news question (2023: 
                  fact('Cinema screen time (2023 Q3)', 'A Manila ordinance requires every cinema to show city messages before each screening, free of charge.', 'y?,n', 'Answer either way, but apply both tests to the exact words. Cinemas hold no franchise over a public resource, so PPI and Ericta point to a taking.')]),
     kind='gates', when='a law or ordinance makes private businesses give something for free, set aside property, or grant discounts.',
     hook='<em>Restrain</em> = police power, no pay. <em>Take</em> = eminent domain, pay. <em>Franchise over a public resource</em> = the condition rides with the privilege.',
-    wr=write(('C', 'The ordinance is [a taking without just compensation, and void / a valid police measure].'), ('L', 'Police power regulates property without compensation if it has a lawful subject and lawful means; when the State appropriates property or its use for the public, it exercises eminent domain and must pay just compensation (Ericta; PPI v. COMELEC).'), ('A', '[What exactly must the owner give up? Is it a restraint or an appropriation? Is there a franchise over a public resource?]'), ('R', 'Hence, [restate C].')),
     cap='Non-impairment yields to police power (Iloilo I), but only to a valid exercise of it.')
 
 
@@ -503,7 +491,6 @@ fig('07', 'after', '<h3 id="comp-quals">Qualifications cannot be added by law</h
                       fact('Nominee age cap', 'A new law caps party-list nominees’ age at 60.', 'n', 'Nominee qualifications are “as provided by law”, so Congress may legislate them, but they must pass equal protection (Albano): argue whether the cap has a rational basis.')])),
     kind='comparison + gates', when='a law, COMELEC rule or proposal disqualifies candidates who do, or fail to do, something.',
     hook=plates(('35·2·6·2', 'Senator: age · years in PH · years per term · terms'), ('25·1·3·3', 'Representative: age · years in district · years per term · terms')) + 'Fixed by the Constitution, so <em>Congress cannot add</em>; only party-list nominees’ rules are “as provided by law”.',
-    wr=write(('C', 'The law is void insofar as it applies to [Senators/Representatives].'), ('L', 'The qualifications of Senators and Representatives in Art. VI, Secs. 3 and 6 are exclusive; Congress cannot add to them, directly or indirectly (SJS v. DDB).'), ('A', '[Show that the condition operates as a qualification: failing it bars the candidate.]'), ('R', 'Hence, [restate C].')),
     cap='These are fixed by the Constitution; Congress cannot add to them (SJS v. DDB). Only party-list nominees’ qualifications are “as provided by law” (Albano).')
 
 _PL_GROUPS = '[["Group A",1000000],["Group B",600000],["Group C",400000],["Group D",300000],["Group E",250000],["Group F",200000],["Group G",190000],["Group H",100000]]'
@@ -513,7 +500,6 @@ fig('07', 'after', '<h3 id="comp-partylist">The party-list system</h3>\n', 'part
     + sp(f'<div class="calc plcalc" data-district="252" data-groups=\'{_PL_GROUPS}\' data-others=\'{{"n":100,"v":69600}}\'><div class="ctl"><label>District seats<input type="number" min="0" data-v="district"></label><button type="button" class="btn small ghost" data-a="reset">Reset the example</button></div><div class="tw2"><table><thead><tr><th>Group</th><th>Votes</th><th class="pc">Share</th><th>Rd 1</th><th>Rd 2</th><th>Rd 3</th><th>Seats</th></tr></thead><tbody></tbody></table></div><div class="msg"></div></div>'),
     kind='interactive', when='the facts give vote shares, ask how many seats a group gets, or propose changing the formula.',
     hook='<em>80/20</em> · <em>2%</em> buys one seat · the rest by share, no 2% floor · <em>3</em> seats max.<small>Try it: in the example, Group G has only 1.9% yet wins a round-2 seat, and Group A is stopped by the cap.</small>',
-    wr=write(('L', 'Party-list representatives constitute twenty per cent of the House (Art. VI, Sec. 5(2)); under BANAT, each group with at least 2% of the votes gets one seat, the remaining seats are shared in proportion to the votes in whole numbers, and no group gets more than three.')),
     cap='Change the district seats or any group’s votes; the table reruns all three rounds. The example is invented; the rounds are BANAT’s.', notest=True)
 
 fig('07', 'before', '<h4>Nominees</h4>', 'plhist', 'How party-list doctrine moved, and who decides what',
@@ -530,7 +516,6 @@ fig('07', 'before', '<h4>Nominees</h4>', 'plhist', 'How party-list doctrine move
               N('Membership is continuing', 'a nominee must stay a bona fide member; expelling a sitting member is for the HRET (Lico)', 'plain'), m=160)),
     kind='timeline + forum', when='a story is about who may join the party-list system, nominee rules, substitution, or expelling a party-list member.',
     hook='Atong Paglaum <em>opened the door</em>; Albano lets Congress <em>set nominee rules, rationally</em>.<small>COMELEC keeps <em>the group</em>; the HRET gets <em>the seated member</em>.</small>',
-    wr=write(('L', 'National and regional parties may participate in the party-list system without representing the marginalized and underrepresented (Atong Paglaum); Congress may set nominee qualifications by law, but they must satisfy equal protection (Albano).')),
     cap='Atong Paglaum is the turning point; every later case applies it. Read the forum column before you name a remedy.')
 
 fig('07', 'after', '<h3 id="comp-elections">Elections and vacancies</h3>\n', 'vacancy', 'A seat falls vacant: who calls the special election, and when?',
@@ -541,7 +526,6 @@ fig('07', 'after', '<h3 id="comp-elections">Elections and vacancies</h3>\n', 'va
               N('A new district mid-period', 'applies at the next regular election; resetting the vote would cut the three-year term (Bañas-Nograles)', 'sun'), m=160)),
     kind='two lanes', when='a member dies, resigns or is removed, or someone wants an election moved.',
     hook='The Senate waits for May; the House gets <em>60–90 days</em>, and <em>COMELEC</em> calls it.',
-    wr=write(('L', 'A special election may be called to fill a vacancy in the manner prescribed by law, and the winner serves only the unexpired term (Art. VI, Sec. 9); for the House, COMELEC must call it 60 to 90 days after a vacancy occurring at least one year before the term ends, without waiting for a House resolution (Hagedorn).')),
     cap='COMELEC may rely on official press releases or a certification from the Speaker or the Secretary-General that the seat is vacant (Hagedorn).')
 
 
@@ -559,7 +543,6 @@ fig('08', 'before', '<h3 id="internal-officers">', 'votes', 'The vote ladder, co
         ('Three-fourths', 'of all Members', 75, 'propose amendments or revisions as a constituent assembly (Art. XVII, Sec. 1); whether the Houses vote jointly or separately is open', 'three4')])) + '</div>',
     kind='interactive', when='the facts give a vote count (“elected with 12 votes”, “expelled by 200 of 316”) or ask how many votes something needs.',
     hook='Stakes climb, fractions climb: <em>record</em> (⅕ present) → <em>do business</em> (½) → <em>choose leaders</em> (½ of all) → <em>punish, override, war, convention</em> (⅔ of all) → <em>rewrite the Constitution</em> (¾ of all).<small>In the Senate: 13 · 16 · 18. Watch the denominator: “present”, “each House” and “all the Members” are three different numbers, and Gatmaytan alters them.</small>',
-    wr=write(('L', 'Each House may suspend or expel a Member only with the concurrence of two-thirds of all its Members (Art. VI, Sec. 16(3)): in the Senate, 16 of 24, however many are present.'), ('A', '[Count the votes against the right denominator: present, each House, or all the Members.]')),
     cap='The bar shows the share of votes needed. Test me hides the fractions: read what each rung is for and name its vote before you tap.')
 
 fig('08', 'before', '<h3 id="internal-quorum">', 'internal', 'Will the courts enforce the chamber’s own rules?',
@@ -571,7 +554,6 @@ fig('08', 'before', '<h3 id="internal-quorum">', 'internal', 'Will the courts en
                  fact('The recalled confirmation (Pacete)', 'One CA member files a motion to reconsider a judge’s confirmation; it is never acted on, and the Secretary of Justice treats the confirmation as recalled.', 'n,y', 'A third party’s office was at stake, so the Court enforced the CA’s rules: only a majority of the members present can reopen a confirmation.')]),
     kind='gates', when='members complain that their own chamber broke its rules, or fight over an office the Constitution does not create.',
     hook='Courts stay out of the House’s <em>house rules</em>, unless the <em>Constitution</em> or an <em>outsider’s rights</em> are at stake.',
-    wr=write(('L', 'Each House may determine the rules of its proceedings (Art. VI, Sec. 16(3)); the courts will not enforce purely internal rules unless a constitutional requirement or the rights of third parties are involved (Arroyo v. De Venecia; Pacete).')),
     cap='Only the Senate President and the Speaker are constitutionally elected (majority of all Members). Everything else is for the chamber.')
 
 fig('08', 'after', '<h3 id="internal-quorum">Quorum</h3>\n', 'quorum', 'Quorum calculator: try Avelino',
@@ -580,7 +562,6 @@ fig('08', 'after', '<h3 id="internal-quorum">Quorum</h3>\n', 'quorum', 'Quorum c
               N('Presumed to continue', 'once there, a quorum is presumed to continue unless challenged under the chamber’s procedure; the Journal and the enrolled bill control (Tinio)', 'plain'), m=200)),
     kind='interactive', when='some members are absent, abroad, detained or hospitalized and the facts ask whether the chamber could act.',
     hook='Quorum counts heads <em>within reach</em> (Avelino); electing the leader counts <em>all</em> (Sec. 16(1)).',
-    wr=write(('L', 'A majority of each House constitutes a quorum (Art. VI, Sec. 16(2)), counted among the Members within the chamber’s coercive jurisdiction (Avelino v. Cuenco); but the Senate President must be elected by a majority of all the Senators (Sec. 16(1)).')),
     cap='Tap a senator to cycle: present (filled) → absent in the country (hollow) → abroad (dashed). Senators abroad leave the base; absent ones in the country still count. In Avelino, 12 present out of a base of 23 was a quorum; under the 1987 text, electing the Senate President still needs 13.', notest=True)
 
 fig('08', 'after', '<h3 id="internal-discipline">Discipline of members</h3>\n', 'discipline', 'Is the suspension or expulsion valid?',
@@ -599,7 +580,6 @@ fig('08', 'after', '<h3 id="internal-discipline">Discipline of members</h3>\n', 
         ('Cases', 'Osmeña; Alejandrino', 'Santiago v. Sandiganbayan; De Venecia')])),
     kind='gates + comparison', when='a chamber suspends, expels, censures or otherwise punishes one of its Members.',
     hook='<em>⅔ of ALL</em> · <em>60 days</em> max · no conviction needed · hear him first.<small>A court’s 90-day preventive suspension is not discipline: different power, different cap.</small>',
-    wr=write(('C', 'The [suspension/expulsion] is [valid/void].'), ('L', 'Each House may punish its Members for disorderly behavior and, with the concurrence of two-thirds of all its Members, suspend (for not more than sixty days) or expel a Member (Art. VI, Sec. 16(3)); no conviction is required (Osmeña v. Pendatun).'), ('A', '[The ground, the vote against all the Members, the length, the hearing.]'), ('R', 'Hence, [restate C].')),
     cap='Two different powers, two different limits. The 60-day cap binds only the chamber.')
 
 fig('08', 'after', '<h3 id="internal-journal">Journal, Record and the enrolled bill</h3>\n', 'journal', 'Enrolled bill or Journal: which one wins?',
@@ -611,7 +591,6 @@ fig('08', 'after', '<h3 id="internal-journal">Journal, Record and the enrolled b
                  fact('The missing roll call', 'A petitioner says the yeas and nays on third reading were never taken, though the enrolled bill is duly signed.', 'y,y', 'The yeas and nays on third reading must be entered in the Journal (Art. VI, Sec. 26(2)), so on that point the Journal prevails over the enrolled bill.')]),
     kind='gates', when='someone claims the law as printed is not what Congress passed, or that a required vote was never taken.',
     hook='The signed bill wins, unless the <em>signers take it back</em> (Astorga) or the <em>Constitution requires the fact in the Journal</em> (Morales).',
-    wr=write(('L', 'The enrolled bill, signed by the presiding officers and certified by the secretaries, is conclusive of its due enactment (Arroyo v. De Venecia), except as to matters the Constitution requires to be entered in the Journal (Morales v. Subido), and unless the signatures were withdrawn (Astorga v. Villegas).')),
     cap='The enrolled bill doctrine is court-made, grounded on respect for a coequal branch.')
 
 
@@ -625,7 +604,6 @@ fig('09', 'after', '<h3 id="priv-salary">Salaries</h3>\n', 'salary10', 'A raise 
     + sp(N('No back door', 'a retirement gratuity computed on the raise is compensation: an indirect increase (Ligot v. Mathay)', 'no')),
     kind='flow', when='a law raises legislators’ pay or benefits, or a retiring member wants benefits computed on a new rate.',
     hook='Vote it now; enjoy it only after <em>all</em> who voted for it are gone.',
-    wr=write(('L', 'No increase in the compensation of Senators and Representatives takes effect until after the expiration of the full term of all the Members of both Houses approving it (Art. VI, Sec. 10; PHILCONSA v. Mathay).')),
     cap='The delay is deliberate: it deters legislators from voting themselves raises.')
 
 fig('09', 'after', '<h3 id="priv-arrest">Freedom from arrest</h3>\n', 'arrest', 'Is the Member privileged from arrest?',
@@ -641,7 +619,6 @@ fig('09', 'after', '<h3 id="priv-arrest">Freedom from arrest</h3>\n', 'arrest', 
         ('When', 'during attendance at sessions', 'during attendance; the Batasan surrenders the member within 24 hours after adjournment', 'while Congress is in session; attendance not required')])),
     kind='gates + history', when='a Member is arrested, served a warrant, detained, or asks to attend sessions while detained.',
     hook='Two S’s: <em>Six years or less</em>, and in <em>Session</em>. Both, or no privilege.',
-    wr=write(('C', 'The arrest is [valid/invalid].'), ('L', 'A Member is privileged from arrest only for offenses punishable by not more than six years’ imprisonment, and only while Congress is in session (Art. VI, Sec. 11).'), ('E', 'Even then, a convicted or lawfully detained Member cannot claim a right to attend sessions (People v. Jalosjos).'), ('A', '[The penalty for the offense charged; whether Congress was in session that day.]'), ('R', 'Hence, [restate C].')),
     cap='Two conditions, both required. The 1935 and 1973 texts were different; use the 1987 rule.')
 
 fig('09', 'after', '<h3 id="priv-speech">Speech and debate</h3>\n', 'speech', 'Speech and debate: inside or outside the shield?',
@@ -657,7 +634,6 @@ fig('09', 'after', '<h3 id="priv-speech">Speech and debate</h3>\n', 'speech', 'S
         ('Effect', 'no liability in any other place; the House may still discipline (Pobre)', 'ordinary civil and criminal liability')])),
     kind='gates + comparison', when='a Member is sued, charged or disbarred for something he said.',
     hook='Inside the legislative work = <em>shield</em>; on TV = <em>no shield</em>; and the shield never works against <em>your own chamber</em>.',
-    wr=write(('C', 'The [suit] [may/may not] proceed.'), ('L', 'No Member shall be questioned nor held liable in any other place for any speech or debate in Congress or its committees (Art. VI, Sec. 11); the privilege covers acts in the performance of legislative functions, not press statements (Jimenez v. Cabangbang; Trillanes v. Castillo-Marigomen).'), ('A', '[Where and in what capacity was it said? Who is questioning him now?]'), ('R', 'Hence, [restate C].')),
     cap='Ask whether the statement furthered legislation, not whether a legislator said it.')
 
 fig('09', 'after', '<h3 id="priv-office">Incompatible and forbidden offices</h3>\n', 'office', 'Another office: keep the seat, lose it, or not at all?',
@@ -670,7 +646,6 @@ fig('09', 'after', '<h3 id="priv-office">Incompatible and forbidden offices</h3>
     + sp(N('Do not confuse with Art. IX-B, Sec. 7', 'no elective official is eligible for appointment to any public office during his tenure; resigning after the appointment does not cure it (Flores v. Drilon)', 'sun')),
     kind='gates', when='a Member is appointed, elected or designated to another post.',
     hook='<em>Incompatible</em>: you may choose, but you lose the seat. <em>Forbidden</em>: you may not choose at all.',
-    wr=write(('C', 'He [forfeited his seat / could not be appointed / keeps his seat].'), ('L', 'A Member may not hold any other office or employment in the government, including GOCCs, without forfeiting his seat, nor be appointed to an office created or whose emoluments were increased during his term (Art. VI, Sec. 13).'), ('A', '[Is the post a government office? When was it created or its pay raised?]'), ('R', 'Hence, [restate C].')),
     cap='Incompatible: you may choose, but you lose the seat. Forbidden: you cannot choose at all.')
 
 
@@ -697,7 +672,6 @@ fig('10', 'after', '<h3 id="et-jurisdiction">When does the tribunal take over fr
     ('Assumption (June 30)', 'z-b', N('HRET or SET', 'proclamation, oath and assumption have concurred: the tribunal is the sole judge of election, returns and qualifications. Party-list nominees too (Lico); the group’s registration stays with COMELEC (An Waray).', 'acc'))], start=4),
     kind='interactive', when='a winner’s qualifications are challenged around proclamation time: read every date in the facts.',
     hook='<em>P-O-A</em>: Proclamation, Oath, Assumption. The tribunal gets the “power of attorney” only when all three have happened.',
-    wr=write(('C', '[COMELEC/the HRET] has jurisdiction.'), ('L', 'The HRET is the sole judge of all contests relating to the election, returns and qualifications of Members (Art. VI, Sec. 17); its jurisdiction begins only when there is a valid proclamation, a proper oath, and assumption of office (Reyes v. COMELEC).'), ('A', '[Date of proclamation; oath before the Speaker in open session?; June 30 passed?; any pending motion for reconsideration (Codilla)?]'), ('R', 'Hence, [restate C].')),
     cap='Yellow stages belong to COMELEC, blue to the tribunal. Read the dates in the facts: the 2013 midterm (Muhlach) turned on whether the winner had assumed office.')
 
 fig('10', 'after', '<h3 id="et-ca">Commission on Appointments</h3>\n', 'ca', 'CA seat calculator (Guingona v. Gonzales)',
@@ -707,7 +681,6 @@ fig('10', 'after', '<h3 id="et-ca">Commission on Appointments</h3>\n', 'ca', 'CA
               N('Realignment', 'membership may change when alignments change permanently (Daza), not for temporary alliances', 'plain'), N('Go to the chamber first', 'challengers need standing and must raise it in the chamber (Drilon v. De Venecia; Pimentel v. HRET)', 'plain'), m=150)),
     kind='interactive', when='the facts give party strengths in a chamber and ask who sits in the CA.',
     hook='Senate: <em>halve the senators, then round down</em>. A lone senator is <em>0.5</em>, and 0.5 is no seat.',
-    wr=write(('L', 'The CA is composed by proportional representation of the parties (Art. VI, Sec. 18), which is mandatory and justiciable; fractional shares cannot be rounded up at another party’s expense, and the CA may function with fewer than twelve members from a chamber (Guingona v. Gonzales).')),
     cap='Guingona (1992): LDP 15 senators → 7.5 → 7; NPC 5 → 2.5 → 2; LP 3 → 1.5 → 1; LP-PDP-LABAN 1 → 0.5 → 0. The Senate rounded the LDP up to 8 and gave the lone senator a seat; the Court voided both elections, leaving ten senators, and the CA could work with fewer than 12.', notest=True)
 
 
@@ -720,7 +693,6 @@ fig('11', 'after', '<h3 id="powers-substantive">Substantive limits (Gatmaytan, P
               N('The procedural limits', 'riders; no amendment on third reading (the bicameral conference may still reconcile); one subject, one title', 'no'), N('The money provisions', 'Secs. 24 to 29; uniform and equitable taxation', 'no'), N('The Bill of Rights', 'and the rest of the Constitution', 'no'), m=150)),
     kind='acronym', when='a law says it “shall not be repealed”, may be amended “only by three-fourths”, reaches back in time, or touches the Court’s fees or rules.',
     hook='<em>I SURF</em>: Irrepealable, Supermajority, Unconstitutional, Retroactive, Fiscal autonomy.<small>Gatmaytan’s book lists exactly these five.</small>',
-    wr=write(('C', 'The clause is void.'), ('L', 'Congress cannot pass an irrepealable law or require more than a majority to amend or repeal a statute, because one Congress cannot bind the next.'), ('A', '[Quote the entrenching clause; show it binds future Congresses.]'), ('R', 'Hence, [restate C]; the rest of the law may stand if separable.')),
     cap='The grant of legislative power is plenary: Congress may legislate on anything not forbidden or lodged elsewhere (Torralba). These are the “forbidden” list.')
 
 fig('11', 'after', '<h3 id="powers-veto">Procedural limits: the legislative veto (ABAKADA)</h3>\n', 'oversight', 'After the law passes: how far may Congress follow it?',
@@ -733,7 +705,6 @@ fig('11', 'after', '<h3 id="powers-veto">Procedural limits: the legislative veto
                       fact('Quarterly reports', 'A law requires an agency to send quarterly reports to a congressional committee, which may hold hearings and recommend amendments.', 'n,n', 'Pure scrutiny and investigation in aid of legislation: valid.')])),
     kind='spectrum + gates', when='a law creates an oversight committee, or gives legislators any role after the law is passed.',
     hook='<em>S-I-S</em>: Scrutinize ✓, Investigate ✓, Supervise ✕. After enactment, Congress may only <em>amend</em>.',
-    wr=write(('C', 'Sec. [__] is void insofar as it [lets the committee approve / deputize]; the rest stands.'), ('L', 'After enactment, Congress may only scrutinize and investigate in aid of legislation; a law letting Congress or its committee approve the implementing rules or take part in execution is a legislative veto that violates separation of powers, bicameralism and presentment (ABAKADA).'), ('A', '[Quote the verbs: “review”, “require”, “recommend” are fine; “approve”, “deputize” are not.]'), ('R', 'Hence, [restate C].')),
     cap='The first two survive enactment. Once Congress keeps a say over how the law is carried out, it is a legislative veto and void (ABAKADA); after enactment, Congress may only amend the law.')
 
 fig('11', 'after', '<h3 id="powers-delegation">Delegation of legislative power</h3>\n', 'delegation', 'Is the delegation, and the rule made under it, valid?',
@@ -751,7 +722,6 @@ fig('11', 'after', '<h3 id="powers-delegation">Delegation of legislative power</
                       fact('Bulacan Freeport IRR (2024 Q3)', 'The law tells DTI to issue the IRR within 90 days, in consultation with DOF, NEDA, the province and a representative of the airport project, effective 15 days after publication in a newspaper of general circulation.', 'y,y,y,y,y', 'Valid. Consultation is not subdelegation, as long as DTI alone promulgates; the 90 days is directory; newspaper publication satisfies Tañada, but the IRR must also be filed with ONAR to bind the public.')])),
     kind='mind map + gates', when='a law tells an agency, the President or an LGU to fill in details, set rates, or issue rules.',
     hook=acro(('P', 'people'), ('L', 'local governments'), ('A', 'administrative bodies'), ('T', 'tariff powers'), ('E', 'emergency powers')) + '<em>PLATE</em> may receive power; the law must be <em>complete</em> and set a <em>standard</em>; the rule must <em>ASPiRe</em> (Authorized, within Scope, by Procedure, Reasonable), then be <em>published</em> and <em>filed</em>.',
-    wr=write(('C', 'The delegation and the IRR are [valid/void].'), ('L', 'Congress may delegate the execution of a law but not the power to make it; the law must be complete in itself and fix a sufficient standard. An IRR must be authorized, within the scope of the law, issued under the prescribed procedure and reasonable, and it takes effect only after publication (Tañada v. Tuvera).'), ('A', '[Find the policy and the standard in the law’s own words; then check the rule against them.]'), ('R', 'Hence, [restate C].')),
     cap='The mind map lists who may receive power (PLATE); the gates test any delegation to an administrative body, and the rule made under it.')
 
 fig('11', 'after', '<h4>Publication and effectivity</h4>\n', 'publication', 'No publication, no law: the 15-day clock',
@@ -761,7 +731,6 @@ fig('11', 'after', '<h4>Publication and effectivity</h4>\n', 'publication', 'No 
               N('Need not be published', 'interpretative rules; purely internal rules; letters of instruction to subordinates', 'plain'), m=200)),
     kind='timeline', when='a law or rule says it is “effective immediately”, was never published, or was published only in one newspaper.',
     hook='Publish → wait <em>15</em> → in force. <em>No publication, no law.</em>',
-    wr=write(('L', 'Laws and the rules that implement them take effect only after publication in the Official Gazette or a newspaper of general circulation, fifteen days after unless the law provides otherwise; “unless otherwise provided” refers to the date, not to publication itself (Tañada v. Tuvera).')),
     cap='Tañada began as a citizen’s suit to enforce a public right: the publication of laws.')
 
 fig('11', 'after', '<h3 id="powers-titles">Title and one subject (Art. VI, Sec. 26(1))</h3>\n', 'bill', 'How a bill becomes law', vflow(
@@ -785,7 +754,6 @@ fig('11', 'before', '<aside class="note trap"><strong>2015 midterm (anti-dynasty
                       fact('SK anti-dynasty rule (2015 midterm)', 'The SK Reform Act, whose title concerns the SK’s structure and eligibility, bars relatives of officials from SK office.', 'y,y', 'Germane to eligibility for SK office: not a rider. And since SK office is statutory, adding the qualification is valid.')])),
     kind='picture + gates', when='a law contains a provision that seems unrelated to its title, or its title hides what it does.',
     hook='One bill, one subject, <em>one umbrella</em>: everything must fit under the title.<small>The two purposes (Lidasan): no <em>hodgepodge</em> or log-rolling, and no <em>surprise</em> or fraud on legislators and the public.</small>',
-    wr=write(('C', 'The provision [is / is not] a rider.'), ('L', 'Every bill shall embrace only one subject expressed in its title (Art. VI, Sec. 26(1)); the title need not catalogue every provision, so long as all are germane to its general subject and it does not mislead (Giron; Lidasan).'), ('A', '[Quote the title; show how the provision does or does not serve its subject.]'), ('R', 'Hence, [restate C].')),
     cap='A title also limits how far an enabling law can be read: power to “regulate” is not power to “prohibit” (Cruz v. Paras).')
 
 
@@ -802,7 +770,6 @@ fig('12', 'before', '<h3 id="money-pork">', 'money5', 'The five money rules',
               N('The other limits', 'special appropriations must state their purpose and be backed by funds actually available (25(4)); discretionary funds only for public purposes, with vouchers (25(6)); no public money for any church or religious dignitary, though an incidental benefit is allowed (29(2)); special-purpose taxes form a special fund (29(3))', 'plain'), m=220)),
     kind='checklist', when='any story about the budget: a cut, an increase, a transfer, a fund sweep, a missing GAA, or a payment with no appropriation.',
     hook='Five No’s: <em>no raise</em>, <em>no riders</em>, <em>no transfers</em>, <em>no gap</em>, <em>no money without law</em>.',
-    wr=write(('L', 'No money shall be paid out of the Treasury except in pursuance of an appropriation made by law (Art. VI, Sec. 29(1)); Congress may not increase the appropriations the President recommends for the operation of the Government (Sec. 25(1)).')),
     cap='Most budget questions are one of these five rules applied to a fresh set of facts.')
 
 fig('12', 'after', '<h3 id="money-pork">The pork barrel line: how doctrine changed</h3>\n', 'budget', 'The budget cycle, and where each case sits', hflow(
@@ -814,7 +781,6 @@ fig('12', 'after', '<h3 id="money-pork">The pork barrel line: how doctrine chang
     + sp(tl([('1991', f'{C("guingonacarague", "Guingona v. Carague")}: automatic debt-service appropriations are valid', ''), ('1994', f'{C("philconsaenriquez", "Philconsa v. Enriquez")}: CDF upheld (legislators only recommend); item-veto rules', ''), ('2012', f'{C("lamp", "LAMP")}: PDAF challenge fails for lack of proof', ''), ('2013', f'{C("belgica2013", "Belgica")}: PDAF void; Philconsa and LAMP abandoned on this point', 'key'), ('2014', f'{C("araullo", "Araullo")}: DAP practices void', ''), ('2019', f'{C("belgica2019", "Belgica")}: lump sums valid if one singular purpose', ''), ('2025', f'{C("pimentelhouse2025", "Pimentel v. House")}: the PhilHealth fund sweep voided', '')])),
     kind='flow + timeline', when='legislators have any say after the GAA passes, or a lump sum is challenged as pork.',
     hook='<em>P-L-E-A</em>: Prepare, Legislate, Execute, Account. Legislators belong only in <em>L</em> (Belgica).',
-    wr=write(('L', 'After the GAA is enacted, Congress’s role is limited to oversight; giving legislators a post-enactment role in identifying projects or releasing funds violates separation of powers (Belgica, 2013). A lump sum is valid if it serves one singular purpose that does not negate the item veto (Belgica, 2019).')),
     cap='Locate the challenged act in the cycle first: Congress acts only in the second box, the Executive in the third, COA in the fourth.')
 
 fig('12', 'before', '<h3 id="money-transfer">', 'veto', 'Can the President veto just that part?',
@@ -827,7 +793,6 @@ fig('12', 'before', '<h3 id="money-transfer">', 'veto', 'Can the President veto 
                  fact('One section of a health law', 'The President signs a public health law but “vetoes” one section of it.', 'n', 'Outside appropriation, revenue and tariff bills the veto is all-or-nothing.')]),
     kind='gates', when='the President vetoes a provision, a condition, or a single section rather than a whole bill.',
     hook='Item veto: <em>money bills only</em>; strike a <em>whole item</em> or a <em>rider</em>; a <em>condition</em> falls only with its item.',
-    wr=write(('C', 'The veto is [valid/void].'), ('L', 'The President may veto particular items of an appropriation, revenue or tariff bill (Art. VI, Sec. 27(2)); a provision that relates to no particular appropriation may be vetoed as an item, but a condition on an item can be struck only by vetoing the item itself (Philconsa v. Enriquez).'), ('A', '[Is it a money bill? Is the part an item, a rider, or a condition of an item?]'), ('R', 'Hence, [restate C].')),
     cap='Philconsa also upheld a veto of a provision letting the AFP Chief of Staff augment pension funds from savings: only the five named officers may augment (Sec. 25(5)).')
 
 fig('12', 'after', '<h3 id="money-transfer">Transfers, savings and augmentation</h3>\n', 'augment', 'Is the transfer valid? (Sec. 25(5))',
@@ -842,7 +807,6 @@ fig('12', 'after', '<h3 id="money-transfer">Transfers, savings and augmentation<
                  fact('A blanket decree (Demetria, 1987)', 'A decree lets the President transfer any appropriated fund of the Executive to any program or project in the GAA.', 'n', 'An indiscriminate transfer power is void: transfers only from savings, to augment an existing item, within the branch.')]),
     kind='gates', when='funds are “realigned”, “pooled”, declared “savings”, or moved to another office or project.',
     hook='<em>L</em>awful <em>S</em>avings <em>I</em>nto <em>O</em>wn items: a law authorizes, real savings, an existing item, your own branch.',
-    wr=write(('C', 'The transfer is void.'), ('L', 'No law may authorize transfers of appropriations, but the President, the Senate President, the Speaker, the Chief Justice and the heads of Constitutional Commissions may by law augment any item for their own offices from savings in other items (Art. VI, Sec. 25(5); Araullo).'), ('E', 'Projects already completed in good faith may stand under the operative fact doctrine (Araullo).'), ('A', '[Which officer? Real savings or withdrawn allotments? Which item? Whose budget?]'), ('R', 'Hence, [restate C].')),
     cap='Four gates, each with the case that failed it. Macalintal (2023): a law postponing elections to free election funds for other uses was a disguised transfer.')
 
 fig('12', 'before', '<aside class="note news"><strong>In a news question:</strong> (1) <em>Confidential', 'madera', 'COA disallowed it: who must give the money back? (Madera)',
@@ -853,7 +817,6 @@ fig('12', 'before', '<aside class="note news"><strong>In a news question:</stron
     + sp(N('Net disallowed amount', 'the total disallowed, less what the payees are excused from returning', 'plain')),
     kind='decision + matrix', when='COA disallows allowances or benefits and the question asks who must refund.',
     hook='Officers: <em>good faith saves</em>. Payees: <em>good faith does not</em>, because they have the money.',
-    wr=write(('L', 'Approving and certifying officers who acted in good faith, in the regular performance of their duties and with diligence are not liable for disallowed amounts; those in bad faith or gross negligence are solidarily liable for the net disallowed amount; payees must return what they received, unless it was for services actually rendered or the Court excuses it (Madera v. COA).')),
     cap='In Madera itself, the allowances were void under the Salary Standardization Law, but the officials were excused for good faith.', notest=False)
 
 fig('12', 'after', '<h3 id="money-tax">Taxation</h3>\n', 'tripal', 'Money bills start in the House (Sec. 24)',
@@ -865,7 +828,6 @@ fig('12', 'after', '<h3 id="money-tax">Taxation</h3>\n', 'tripal', 'Money bills 
                       fact('The Senate goes first', 'The Senate passes its own tax bill on third reading before any House tax bill exists, and the House simply concurs.', 'y,n', 'A revenue bill must originate exclusively in the House; the Senate may only propose or concur with amendments.')])),
     kind='acronym + gates', when='the Senate filed, passed or rewrote a tax, tariff, budget, debt, local or private bill.',
     hook='<em>TRIPAL</em> bills start in the House. The <em>bill</em>, not the law, must start there.<small>Why the House: district representatives are closer to local needs; senators, elected at large, bring the national view.</small>',
-    wr=write(('L', 'Appropriation, revenue and tariff bills, bills increasing the public debt, bills of local application and private bills must originate exclusively in the House, but the Senate may propose or concur with amendments (Art. VI, Sec. 24); it is the bill, not the law, that must originate there (Tolentino v. Secretary of Finance).')),
     cap='A presidential certification of urgency dispenses with both the three readings on separate days and the printing three days before (Tolentino).')
 
 fig('12', 'before', '<aside class="note news"><strong>2015 midterm (income tax reform', 'tax', 'Is the property tax-exempt? (Sec. 28(3), Lung Center)',
@@ -879,7 +841,6 @@ fig('12', 'before', '<aside class="note news"><strong>2015 midterm (income tax r
               N('Tariff powers', 'may be delegated to the President within limits Congress sets (Sec. 28(2); Garcia)', 'plain'), m=180)),
     kind='gates', when='someone claims a tax exemption: by proclamation, by charity, or for a building that is partly leased out.',
     hook='The exemption follows the <em>USE</em> (actually, directly, exclusively), <em>portion by portion</em>: not the owner, not the income.<small>And only the Constitution or Congress (majority of all) grants exemptions: never a proclamation (John Hay).</small>',
-    wr=write(('C', 'Only the [portions used for patients] are exempt.'), ('L', 'Charitable institutions, and all lands, buildings and improvements actually, directly and exclusively used for charitable purposes, are exempt from taxation (Art. VI, Sec. 28(3)); the exemption follows the use of the property and is construed strictly against the claimant (Lung Center).'), ('A', '[Go portion by portion: who uses it, for what?]'), ('R', 'Hence, [restate C].')),
     cap='Apply it portion by portion. Only the Constitution or Congress grants exemptions; a proclamation cannot (John Hay).')
 
 
@@ -913,7 +874,6 @@ fig('14', 'after', '<h3 id="legproc-sc30">Congress and the Supreme Court’s app
                  fact('New Family Courts', 'A law creates new Family Courts with exclusive jurisdiction over child-custody cases, appealable to the Court of Appeals.', 'n,n', 'Apportioning lower courts’ jurisdiction is Congress’s to do; nothing is added to the SC.')]),
     kind='gates', when='a statute routes appeals from an agency to the Supreme Court, or tells courts which remedies they may (not) grant.',
     hook='<em>No A&amp;C, no appeal</em>: no new appeal to the SC without its Advice and Concurrence; and the rules of procedure are the Court’s alone.',
-    wr=write(('C', 'Sec. [__] is void.'), ('L', 'No law may increase the appellate jurisdiction of the Supreme Court without its advice and concurrence (Art. VI, Sec. 30; Fabian v. Desierto), and only the Court promulgates rules of procedure (Art. VIII, Sec. 5(5); Carpio-Morales v. CA).'), ('A', '[Show that the provision adds an appeal to the SC, or takes away a court’s remedy, without the Court’s concurrence.]'), ('R', 'Hence, [restate C]; the appeal lies with the Court of Appeals.')),
     oral='The issue is whether Congress may send these appeals straight to the Supreme Court. Article VI, Section 30 says no law may increase the Court’s appellate jurisdiction without its advice and concurrence. In Fabian v. Desierto, Section 27 of the Ombudsman Act did exactly that and was struck down, so the appeals went to the Court of Appeals. Here, there was no concurrence, so the provision is void.',
     cap='Two different limits: Sec. 30 protects the Court’s docket; Art. VIII, Sec. 5(5) protects its rule-making. Carpio-Morales used both.')
 
@@ -930,7 +890,6 @@ fig('14', 'after', '<h3 id="legproc-bills">Passing a bill: readings, urgency, th
                       fact('Reorganization Plan 20-A (Miller v. Mardo)', 'RA 997 says reorganization plans take effect unless Congress disapproves them; Congress did nothing about Plan 20-A.', 'n', 'Congressional silence is not lawmaking: the plan did not become a statute.')])),
     kind='flow + gates', when='a law was passed in a day, by joint resolution, or “unless Congress disapproves”, or someone attacks the bicameral committee’s changes.',
     hook='<em>Bill · 3 readings · separate days · 3 days printed · signed</em>. A certification waives only the <em>separate days</em> and the <em>3 days</em>, never the readings.',
-    wr=write(('C', 'RA [__] was [validly / not validly] enacted.'), ('L', 'Only a bill becomes a law (Ang Nars); it must pass three readings on separate days, with printed copies distributed three days before passage, unless the President certifies its urgency, which waives only those two requirements (Art. VI, Sec. 26(2); Kida v. Senate).'), ('A', '[Walk the facts through each step; say what was certified.]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the law was validly passed. Under Article VI, Section 26(2), a bill needs three readings on separate days and printed copies three days before passage, unless the President certifies it as urgent. In Kida v. Senate, the Court held that the certification waives only the separate days and the three-day printing, not the three readings. Here, [it was certified and had three readings], so the law is valid.',
     cap='The enrolled bill, signed by the Senate President and the Speaker, is conclusive on the Court as to internal procedure (Tolentino); the constitutional steps in Sec. 26(2) remain the floor.')
 
@@ -945,7 +904,6 @@ fig('14', 'after', '<h3 id="legproc-veto">The veto: whole bills, items, and inap
                  fact('Half an item', 'The GAA appropriates ₱10 billion for farm-to-market roads; the President vetoes ₱5 billion of it.', 'y,n', 'An item is indivisible: the President may veto the whole ₱10 billion or none of it.')]),
     kind='gates', when='the President vetoes a “provision”, a condition, a rider, or part of an amount in the budget or a tax bill.',
     hook='<em>ART</em> bills only (Appropriation, Revenue, Tariff). Veto a <em>whole item</em> or an <em>inappropriate provision</em>, never a slice, and never to <em>dictate</em> or <em>repeal</em>.',
-    wr=write(('C', 'The veto of [__] is [valid / void].'), ('L', 'The President may veto particular items in an appropriation, revenue or tariff bill (Art. VI, Sec. 27(2)); an item is an indivisible sum for a stated purpose, and inappropriate provisions may be vetoed as items (Gonzales v. Macaraig), but not part of an item, nor so as to dictate the use of a fiscally autonomous body’s funds (Bengzon v. Drilon).'), ('A', '[Identify the bill, then what exactly was vetoed: an item, a provision, or a slice?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the President may veto that part of the budget. Article VI, Section 27(2) allows item vetoes only in appropriation, revenue or tariff bills, and an item is an indivisible sum for a stated purpose. In Gonzales v. Macaraig, the Court allowed vetoing inappropriate provisions as items; but in Bengzon v. Drilon, it voided a veto of special provisions that dictated how the Judiciary may use its funds. Here, [the vetoed part is or is not an item], so the veto is [valid or void].',
     cap='The money-provisions map has the related rule on riders (Sec. 25(2)); see the midterm figure on the GAA.')
 
@@ -960,7 +918,6 @@ fig('14', 'after', '<h3 id="legproc-qh">The question hour (Sec. 22) is not an in
     ]),
     kind='comparison', when='an official “declines the invitation” or the President orders officials not to attend.',
     hook='<em>22 asks; 21 compels.</em> A requirement of prior consent can work for the question hour, never for a Sec. 21 inquiry (EO 464).',
-    wr=write(('C', 'The order is void insofar as it covers inquiries in aid of legislation.'), ('L', 'Appearance in the question hour (Sec. 22) is discretionary, but appearance in inquiries in aid of legislation (Sec. 21) is compulsory, and the only way out is a valid claim of privilege by the President (Senate v. Ermita).'), ('A', '[Is the hearing a Sec. 21 inquiry? Who claimed privilege, for what information?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether officials may skip the Senate hearing on the President’s order. Senate v. Ermita distinguishes the question hour under Section 22, where department heads appear with the President’s consent, from inquiries in aid of legislation under Section 21, where appearance is compulsory. The only way out of a Section 21 inquiry is a valid, specific claim of executive privilege. Here, [it is a Section 21 inquiry and no specific privilege was claimed], so the officials must appear.',
     cap='The 1987 Constitution removed the mandatory question hour (Gatmaytan), which makes the compulsory power of inquiry all the more important.')
 
@@ -980,7 +937,6 @@ fig('14', 'after', '<h3 id="legproc-inq">Inquiries in aid of legislation: the th
                  fact('Ong v. Senate Tricomm (2025)', 'A witness in the POGO hearings refuses to testify at all, invoking the rights to remain silent, against self-incrimination and to counsel.', 'y,y,y,n,y', 'A witness, not an accused: she must take the stand and may refuse only specific incriminating questions. No custodial rights before Congress.')]),
     kind='gates', when='someone refuses a subpoena, refuses to answer, or is cited in contempt by the Senate, the House or a committee.',
     hook=acro(('A', 'in aid of legislation'), ('P', 'published rules, each Congress'), ('R', 'rights respected'), ('P', 'privilege, validly claimed'), ('P', 'persons beyond compulsion')) + '<em>A-P-R</em> are the three requisites of Sec. 21; the two <em>P</em>s are the only ways out.',
-    wr=write(('C', 'The witness [must testify / may refuse]; the contempt order is [valid / void].'), ('L', 'Congress may conduct inquiries in aid of legislation in accordance with duly published rules, respecting the rights of persons appearing (Art. VI, Sec. 21); only a valid claim of executive privilege, or the President’s and SC Justices’ exemption, excuses a witness (Senate v. Ermita; Neri).'), ('A', '[Run the five gates on the facts: purpose, rules, witness, privilege, rights.]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the witness must answer the committee. Article VI, Section 21 lets Congress conduct inquiries in aid of legislation, under duly published rules, with the witnesses’ rights respected. In Bengzon v. Senate Blue Ribbon, an inquiry into whether specific persons broke the law was not in aid of legislation; in Neri, a valid presidential communications privilege let the witness refuse. Here, [apply the gates], so the witness [must testify or may refuse].',
     cap='The first three gates are the requisites in the text of Sec. 21; the last two are the defenses the Court has recognized. Detention for contempt lasts only until the inquiry ends (Balag).')
 
@@ -990,7 +946,6 @@ fig('14', 'after', '<h3 id="legproc-priv">Executive privilege</h3>\n', 'privileg
     + sub('Diplomatic negotiations (AKBAYAN v. Aquino)') + grid(N('Offers stay privileged', 'even after the treaty’s final text is public', 'acc'), N('Burden shifts', 'once the privilege is shown, citizens or Congress must show sufficient need', 'sun'), m=170),
     kind='checklist', when='an official refuses to answer “by order of the President”, or the executive withholds drafts, offers or conversations.',
     hook='<em>Who, how, what</em>: the President, expressly, for information. Neri’s three: <em>Quintessential power, Proximity, No compelling need shown</em>.',
-    wr=write(('C', 'The privilege [holds / does not hold].'), ('L', 'Executive privilege covers kinds of information, not persons, and must be claimed expressly by the President or the Executive Secretary by order of the President (Senate v. Ermita); presidential communications on a quintessential, non-delegable power, made in operational proximity, are presumptively privileged unless a compelling need is shown (Neri).'), ('A', '[Who claimed it, how specifically, for what? Is the information critical to legislation?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the executive may withhold this information from Congress. Under Senate v. Ermita, privilege covers kinds of information, not classes of persons, and must be claimed expressly by the President or the Executive Secretary by order of the President. In Neri, conversations with the President on the NBN–ZTE deal were presumptively privileged because they concerned a quintessential power and a close advisor, and the Senate did not show a compelling need. Here, [apply], so the privilege [holds or fails].',
     cap='The presumption runs against secrecy in general (Senate v. Ermita), but for presidential communications it runs in favor of privilege (Neri). Know which presumption you are in.')
 
@@ -1006,7 +961,6 @@ fig('14', 'after', '<h3 id="legproc-contempt">Contempt, arrest and detention</h3
                                                     N('Amparo', 'not available: only extralegal killings and enforced disappearances (' + C('agcaoili', 'Agcaoili') + ')', 'no'), m=170),
     kind='timeline', when='a witness has been detained by the Senate or House, and you are asked whether, how long, and what remedy.',
     hook='<em>Explain, vote, detain, release</em>: a chance to explain; a majority of all; detention only until the report or the Congress ends.',
-    wr=write(('C', 'The detention [is valid until __ / must end].'), ('L', 'Each House may punish for contempt in inquiries in aid of legislation, but detention under its inherent power lasts only until the inquiry ends, on the approval or disapproval of the committee report or the end of the Congress (Balag v. Senate), and a witness cited for false testimony must first be given a chance to explain (Ong v. Senate, 2023).'), ('A', '[Where is the inquiry now? Was the witness heard before the citation?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is how long the Senate may detain the witness. In Balag v. Senate, the Court held that detention under the Senate’s inherent contempt power lasts only until the inquiry ends, that is, when the committee report is approved or disapproved, or when the Congress ends. And under Ong v. Senate (2023), a witness cited for lying must first be given a chance to explain. Here, [the report was approved on __], so the detention must end.',
     cap='The Senate is a continuing body for some purposes, but its business, and the inherent-contempt detention tied to it, ends with each Congress (Balag; Neri).')
 
@@ -1032,7 +986,6 @@ fig('15', 'after', '<h3 id="ocong-votes">The votes: who decides, how many, toget
     ]),
     kind='comparison', when='a news card reports a vote in Congress or the Senate: count it before you argue anything else.',
     hook='<em>Separately</em> unless the text says <em>jointly</em>: only martial law pools the votes. <em>1/3 impeaches, 2/3 convicts; 2/3 of the Senate for treaties; 3/4 to amend; a majority of all for amnesty.</em>',
-    wr=write(('C', 'The [act] is [valid / void] for [lack of] the required vote.'), ('L', 'Art. [__] requires [number] of [all the Members], voting [jointly / separately].'), ('A', '[Count against all the seats, not only those present; say which House or both.]'), ('R', 'Hence, [restate C].')),
     oral='The first question is whether the right body voted by the right number. Here, the Constitution requires [two-thirds of all the Members of the Senate] for [concurrence in a treaty]. [Seventeen of twenty-four] meets the [sixteen] required, so the [concurrence] is valid.',
     cap='“Of all the Members” counts every seat. Whether “all the Members of the Senate” counts only senators able to take part was decided by the impeachment court on September 23, 2026 (13–1, yes); see the trial section.')
 
@@ -1045,7 +998,6 @@ fig('15', 'before', '<div class="codal"><span class="art">Art. VII, Sec. 10</spa
                  fact('A June budget bill', 'After adjourning sine die in early June, the leadership wants to pass a supplemental budget before June 30 without a call from the President.', 'y', 'Ordinary legislation needs a session; after sine die, only a special session called by the President.')]),
     kind='gates', when='Congress has adjourned or is in recess, and someone says it can no longer canvass, proclaim, or meet without a call.',
     hook='<em>Sessions end; duties don’t.</em> Sine die closes the session, not the term (noon of June 30), and never a constitutional task half done.',
-    wr=write(('C', 'The Joint Committee may [continue the canvass].'), ('L', 'Adjournment sine die ends the regular session, not the term of Congress; canvassing under Art. VII, Sec. 4 is a non-legislative function that continues until accomplished, and the joint session may reconvene without a call (Pimentel v. Joint Committee).'), ('A', '[Is the canvass done? Has the term ended?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether Congress may keep canvassing after adjourning sine die. Article VII, Section 4 makes Congress the national board of canvassers for President and Vice-President. In Pimentel v. Joint Committee, the Court held that adjournment sine die ends the regular session, not the term, and that canvassing is a non-legislative duty that continues until done, without a call from the President. Here, [the canvass is unfinished], so Congress may reconvene and proclaim.',
     cap='The same idea runs through Art. VII: Congress convenes without a call for a special election (Sec. 10), for a contested inability (Sec. 11) and after a martial law proclamation (Sec. 18).')
 
@@ -1058,25 +1010,29 @@ fig('15', 'after', '<h3 id="ocong-ml">The legislative check on martial law and t
                  fact('A Senate-only revocation', 'The Senate alone votes 13–11 to revoke a proclamation; the House does not act.', 'y,n', 'Revocation is by Congress voting jointly. Once a House resolves to revoke, Congress must convene jointly and vote; the Senate’s vote alone revokes nothing.')]),
     kind='gates', when='Congress responds to a martial law proclamation or a suspension of the writ: separately, jointly, or not at all.',
     hook='<em>Meet jointly only to vote jointly.</em> Support: each House, its own rules. Revoke or extend: one joint vote, a majority of all.',
-    wr=write(('C', 'Congress [was / was not] required to convene jointly.'), ('L', 'Congress, voting jointly by a majority of all its Members, may revoke a proclamation of martial law or suspension of the writ, or extend it on the President’s initiative (Art. VII, Sec. 18); it must convene jointly only to vote on revocation (Padilla v. Congress).'), ('A', '[Did any House move to revoke? Did the President ask for an extension?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether Congress must meet in joint session after a martial law proclamation. Article VII, Section 18 lets Congress, voting jointly by a majority of all its Members, revoke the proclamation, and extend it on the President’s initiative. In Padilla v. Congress, the Court held that the duty to meet jointly arises only to vote on revocation; mere support may be expressed by each House under its own rules. Here, [no House moved to revoke], so no joint session was required.',
     cap='Leonen, J.’s dissent is the best argument the other way: the power to revoke includes the duty to deliberate in one forum. The midterm-style answer gives both.')
 
+fig('15', 'before', '<div class="test"><b>Executive agreements after Saguisag: four rules</b>', 'treatysteps', 'How a treaty is made: who does what',
+    hflow(N('Negotiation', 'the President, as sole organ, or agents with full powers', 'acc'), HE(''), N('Signature', 'authenticates; shows good faith; does not bind', 'acc'), HE(''), N('Ratification', 'by the President: the state accepts', 'acc'), HE(''), N('Senate concurrence', 'two-thirds of all the Members (Art. VII, Sec. 21)', 'acc'), HE(''), N('Exchange of instruments', 'entry into force', 'acc')),
+    kind='flow', when='someone says the Senate “ratifies” a treaty, or wants the President forced to submit or ratify one.',
+    hook='<em>Negotiate, sign, ratify, concur, exchange.</em> The President ratifies; the Senate only concurs (Pimentel).',
+    oral='The President negotiates and ratifies treaties; the Senate only concurs, by two-thirds of all its Members, under Article VII, Section 21. In Pimentel v. Executive Secretary, the Court held that signing does not bind and that the President may refuse to submit a signed treaty to the Senate, or refuse to ratify it after concurrence; mandamus will not lie. Here, [apply].',
+    cap='Signature authenticates; ratification binds. The Court cannot compel the President to transmit or ratify (Pimentel v. Executive Secretary).')
+
 fig('15', 'before', '<div class="test"><b>Executive agreements after Saguisag: four rules</b>', 'treaty', 'Treaty or executive agreement?',
-    hflow(N('Negotiation', 'the President, as sole organ, or agents with full powers', 'acc'), HE(''), N('Signature', 'authenticates; shows good faith; does not bind', 'acc'), HE(''), N('Ratification', 'by the President: the state accepts', 'acc'), HE(''), N('Senate concurrence', 'two-thirds of all the Members (Art. VII, Sec. 21)', 'acc'), HE(''), N('Exchange of instruments', 'entry into force', 'acc'))
-    + sp(gates([G('Does it allow the initial entry of foreign military bases, troops or facilities?', 'Art. XVIII, Sec. 25', 'Treaty required', 'concurred in by the Senate and recognized as a treaty by the other state; a referendum if Congress requires', 'yes', 'acc'),
+    gates([G('Does it allow the initial entry of foreign military bases, troops or facilities?', 'Art. XVIII, Sec. 25', 'Treaty required', 'concurred in by the Senate and recognized as a treaty by the other state; a referendum if Congress requires', 'yes', 'acc'),
                 G('Does it implement an existing treaty or law, within its terms?', 'traceable authority; no new or expanded obligations', 'Executive agreement suffices', C('saguisag', 'Saguisag') + ': EDCA implements the VFA and the MDT', 'yes', 'ok'),
                 G('Does it amend a statute, or create obligations only a treaty can?', 'an executive agreement is inferior to treaties and statutes', 'Needs a treaty (two-thirds of the Senate)', 'it cannot prevail over the law (Saguisag’s guidelines; Carpio, J., dissenting in ' + C('bayanmuna', 'Bayan Muna') + ')', 'yes', 'no')],
                ('Executive agreement: valid without concurrence', 'the form follows the parties’ intent; an exchange of notes will do (' + C('bayanmuna', 'Bayan Muna') + ')', 'ok'),
                facts=[fact('Saguisag v. Ochoa (2016)', 'EDCA (2014) gives US forces access to Agreed Locations, rotational presence and the prepositioning of equipment; the VFA, concurred in by the Senate in 1999, already allows US troops in.', 'n,y', 'Not initial entry; it implements the VFA and the MDT within their terms: a valid executive agreement.'),
                       fact('Bayan Muna v. Romulo (2011)', 'By exchange of notes, the Philippines and the US agree not to surrender each other’s nationals and officials to an international tribunal without consent.', 'n,n,n', 'No bases or troops; RA 9851’s surrender clause is permissive, so no law is amended: a valid executive agreement.'),
                       fact('The Philippines–France SOVFA (2026)', 'The first visiting forces agreement with France lets French troops enter the Philippines for joint activities.', 'y', 'Initial entry of foreign troops: a treaty is required. The Senate concurred 17–0 on October 8, 2026.'),
-                      fact('A tax side letter', 'An exchange of notes under the VFA exempts US contractors from Philippine income tax, which no treaty or law provides.', 'n,n,y', 'It adds an obligation found in no treaty or law and overrides the tax code: it needs Senate concurrence.')])),
-    kind='flow + gates', when='the executive signs an “agreement”, “arrangement” or exchange of notes with another state, especially on troops, extradition or surrender.',
+                      fact('A tax side letter', 'An exchange of notes under the VFA exempts US contractors from Philippine income tax, which no treaty or law provides.', 'n,n,y', 'It adds an obligation found in no treaty or law and overrides the tax code: it needs Senate concurrence.')]),
+    kind='gates', when='the executive signs an “agreement”, “arrangement” or exchange of notes with another state, especially on troops, extradition or surrender.',
     hook='<em>Entry needs a treaty; implementation needs only authority.</em> The Senate <em>concurs</em>; the President <em>ratifies</em> (Pimentel).',
-    wr=write(('C', 'The agreement [needs / does not need] Senate concurrence.'), ('L', 'Treaties require the concurrence of two-thirds of all the Senators (Art. VII, Sec. 21), and foreign bases, troops or facilities may be allowed only under a treaty (Art. XVIII, Sec. 25); but Sec. 25 covers only initial entry, and an executive agreement that implements an existing treaty within its terms is valid without concurrence (Saguisag v. Ochoa; Bayan Muna v. Romulo).'), ('A', '[Initial entry? Implementing what? Any new obligation or conflict with a statute?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the agreement needs Senate concurrence. Article VII, Section 21 requires two-thirds of all the Senators for treaties, and Article XVIII, Section 25 requires a treaty for foreign bases, troops or facilities. But in Saguisag v. Ochoa, the Court held that Section 25 covers only initial entry, so an executive agreement that implements an existing treaty, within its terms, is valid; Bayan Muna v. Romulo adds that the form follows the parties’ intent. Here, [the agreement implements the VFA and adds no new obligation], so no concurrence is needed.',
-    cap='Pimentel v. Executive Secretary: the President may decline to send a signed treaty to the Senate, or decline to ratify after the Senate concurs. The Court cannot compel either.')
+    cap='Only the initial entry of foreign bases, troops or facilities dictates a treaty by subject (Art. XVIII, Sec. 25); everything else turns on the parties’ intent and on staying within existing law.')
 
 fig('15', 'before', '<aside class="note gat"><strong>Gatmaytan (“Variant Technicalities”', 'withdraw', 'May the President withdraw from this treaty alone?',
     gates([G('Was the treaty entered into pursuant to a prior law, or affirmed by a later law that is still in force?', 'the treaty carries Congress’s imprimatur', 'No unilateral withdrawal', 'unless the law is repealed', 'yes', 'no'),
@@ -1088,7 +1044,6 @@ fig('15', 'before', '<aside class="note gat"><strong>Gatmaytan (“Variant Techn
                  fact('A treaty backed by a statute', 'Congress passes a law to implement a treaty and keeps it in force; the President withdraws from the treaty alone.', 'y', 'Guideline (b): no unilateral withdrawal while the law stands.')]),
     kind='gates', when='the President announces an exit from a treaty (the Rome Statute, the VFA, the MDT) without asking the Senate.',
     hook='<em>Two mirrors</em>: no exit alone if a <em>law</em> stands behind the treaty or the <em>Senate</em> conditioned its yes; otherwise <em>bona fide</em> leeway, reviewable.',
-    wr=write(('C', 'The President [may / may not] withdraw without the Senate.'), ('L', 'The President may withdraw from a treaty bona fide deemed contrary to the Constitution or the laws, but not unilaterally where the treaty was entered into pursuant to, or affirmed by, a law, or where the Senate conditioned its concurrence on its concurrence in withdrawal (Pangilinan v. Cayetano).'), ('A', '[What law backs the treaty? What does the Senate resolution say? What ground did the President give?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the President may withdraw from the treaty alone. The Constitution is silent, but Pangilinan v. Cayetano laid down guidelines: the President has leeway to withdraw from a treaty bona fide contrary to the Constitution or a law, but not unilaterally where a law backs the treaty or the Senate conditioned its concurrence on concurring in any withdrawal. Here, [the Senate’s resolution has no such condition and no law backs the treaty], so the President may withdraw, subject to review for grave abuse.',
     cap='The guidelines were laid down “as guide for future cases”; the fallo only dismissed for mootness. Say so in orals, then add Gatmaytan’s critique.')
 
@@ -1101,7 +1056,6 @@ fig('15', 'before', '<aside class="note gat"><strong>Gatmaytan (<em>Government S
     ]),
     kind='comparison', when='the President declares a state of emergency or calamity and wants to take over businesses, spend, or legislate.',
     hook='<em>Congress lends, the President borrows</em>: emergency powers and takeovers need a law; only the Commander-in-Chief powers are the President’s own, and Congress can revoke them.',
-    wr=write(('C', 'The [takeover] is [void] for lack of a law.'), ('L', 'In times of war or other national emergency, Congress may by law authorize the President, for a limited period and subject to restrictions, to exercise powers necessary to carry out a declared national policy (Art. VI, Sec. 23(2)); the takeover of private businesses under Art. XII, Sec. 17 likewise needs a law (David v. Macapagal-Arroyo).'), ('A', '[Is there a law? Is it for a limited period, with restrictions? Has Congress adjourned or withdrawn it?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the President may take over [the power plants] in an emergency. The President alone may declare a national emergency, but the takeover of a private business under Article XII, Section 17 needs a law, as do emergency powers under Article VI, Section 23(2): in David v. Macapagal-Arroyo, the Court held that “the State” means Congress. Here, [there is no law], so the takeover is void.',
     cap='The Commander-in-Chief clause gets its own map in Batch 7 (V.B.2(f)).')
 
@@ -1116,7 +1070,6 @@ fig('15', 'after', '<h3 id="ocong-impeach">Impeachment: who, for what, and how</
     ('Judgment', 'z-b', N('Two-thirds of all the Members of the Senate', 'removal and disqualification only; criminal liability remains (Sec. 3(7); ' + C('recorona', 'Re: Corona') + ')', 'acc'))], start=0),
     kind='interactive', when='a news card describes any step of an impeachment: place it on the line before you argue.',
     hook='<em>10 · 3 · 60 · 10, then 1/3 and 2/3.</em> Session days for the House; “forthwith” for the Senate; one proceeding a year.',
-    wr=write(('C', 'The [step] was [valid / invalid].'), ('L', 'Art. XI, Sec. 3: [state the step, its period and its vote].'), ('A', '[Place the facts on the line; count the session days and the votes.]'), ('R', 'Hence, [restate C].')),
     oral='Impeachment has two halves: the House initiates and the Senate tries. Under Article XI, Section 3, a verified complaint goes into the Order of Business within ten session days and to the Committee within three; one-third of all the Members impeaches, or one-third can file the Articles directly; and conviction needs two-thirds of all the Senators. Francisco holds that the proceeding is initiated on filing and referral, which starts the one-year bar. Here, [place the facts on the steps].',
     cap='The z-b stages are the second mode and the Senate. The first-mode periods are House session days; the Senate has no fixed period (Generillo).')
 
@@ -1131,7 +1084,6 @@ fig('15', 'before', '<div class="tw"><table><thead><tr><th>Point</th>', 'initiat
                  fact('The 2026 Articles', 'A complaint filed February 2, 2026 is set aside under the bar; complaints filed February 9 and 18, after the bar lapsed on February 6, are referred on February 23; the Committee finds probable cause and the House approves the Articles on May 11, 2026, well above one-third.', 'n,n,y?', 'More than a year after the 2025 initiation, and the House followed the steps; the petitions against the Committee’s hearings were dismissed as moot (Torreon).')]),
     kind='gates', when='a new impeachment complaint is filed against an official who faced another one in the past year, or the House sits on complaints.',
     hook='<em>Filed + referred = initiated</em>; two at once = one; sitting on it = initiated anyway (Duterte). <em>One proceeding, one year.</em>',
-    wr=write(('C', 'The complaint [is / is not] barred.'), ('L', 'No impeachment proceeding may be initiated against the same official more than once within one year (Art. XI, Sec. 3(5)); a proceeding is initiated by filing and referral (Francisco; Gutierrez), and a first-mode complaint not included in the Order of Business or referred within the constitutional periods is deemed initiated (Duterte v. House, 2026 Resolution).'), ('A', '[When was the earlier complaint initiated? Count one year from then.]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the new complaint is barred by the one-year rule in Article XI, Section 3(5). Francisco and Gutierrez hold that a proceeding is initiated by filing and referral, and that complaints referred together are one proceeding. Duterte v. House adds that a complaint the House fails to put in the Order of Business or refer within the constitutional periods is deemed initiated anyway. Here, [the earlier complaint was initiated on __, less than a year before], so the new complaint is barred.',
     cap='Gatmaytan’s objection to the third trigger: it lets allies file defective complaints that the House ignores, so the bar runs and protects the official.')
 
@@ -1147,7 +1099,6 @@ fig('15', 'after', '<h3 id="ocong-review">Judicial review of impeachment</h3>\n'
                  fact('“Not betrayal of public trust”', 'A respondent asks the Court to rule that the acts charged do not amount to betrayal of public trust.', 'n', 'What is an impeachable offense is a truly political question left to Congress (Francisco).')]),
     kind='gates', when='anyone runs to the Supreme Court during an impeachment: against the House committee, the plenary, the Senate’s timing, or a ruling of the impeachment court.',
     hook='<em>Limit? Live? Lawful remedy?</em> Then the Court rules: on the limit, never on the removal.',
-    wr=write(('C', 'The Court [may / may not] rule on the petition.'), ('L', 'Impeachment is reviewable where the Constitution imposes limits (Francisco v. House) and is not purely political, so due process applies (Duterte v. House); but the case must be live (Corona v. Senate), and mandamus will not control the Senate’s timing (Generillo v. Senate).'), ('A', '[Which constitutional limit? Is it moot? Which remedy?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether the Court may review this step of the impeachment. Francisco holds that impeachment is reviewable where the Constitution sets limits, like the one-year bar, and Duterte v. House adds that it is not purely political, so due process applies. But the case must be live: Corona’s petition and the 2026 Torreon petition were dismissed as moot, and Generillo holds that mandamus cannot set the Senate’s timetable. Here, [the petition invokes the one-year bar and the Articles are pending], so the Court may rule on it.',
     cap='The September 30, 2026 dismissal of the petitions against the two-thirds ruling fits the same gates: no verdict yet, so no live injury (see the midterm news box).')
 
@@ -1164,7 +1115,6 @@ fig('15', 'after', '<h3 id="ocong-effects">The judgment, its effects, and quo wa
     ]),
     kind='comparison', when='the government tries to remove an impeachable officer outside impeachment, or asks what else follows from a Senate conviction.',
     hook='<em>Title or fitness?</em> A defect before the oath: quo warranto (title). Acts in office: impeachment (fitness). Impeachment takes the <em>office</em>, never the <em>pension</em>.',
-    wr=write(('C', '[Quo warranto / impeachment] is the proper remedy.'), ('L', 'Impeachment is not the exclusive mode of removing an impeachable officer: quo warranto tests title, impeachment tests fitness for acts in office (Republic v. Sereno); the impeachment judgment extends no further than removal and disqualification (Art. XI, Sec. 3(7); Re: Letter of Mrs. Corona).'), ('A', '[When did the defect or act occur: before appointment, or in office?]'), ('R', 'Hence, [restate C].')),
     oral='The issue is whether [the officer] can be removed outside impeachment. Republic v. Sereno holds that impeachment is not exclusive: quo warranto tests title, meaning eligibility at appointment, while impeachment tests fitness for acts in office. And Re: Letter of Mrs. Corona holds that an impeachment judgment goes no further than removal and disqualification. Here, [the defect existed at appointment], so quo warranto lies.',
     cap='Six Justices dissented in Sereno; Carpio, J.: SALN lapses are impeachable and only Congress removes. The Judiciary batch revisits the case with the June 19, 2018 Resolution.')
 
@@ -1184,7 +1134,6 @@ fig('15', 'after', '<h3 id="ocong-2026">VP Sara Duterte, 2024 to 2026: the whole
     ('Nov 2026', 'The defense presents its case (from November 9); a verdict is expected 20 to 25 days after it rests.', '')]),
     kind='timeline', when='a news card names VP Sara Duterte, the impeachment court, or the House Committee on Justice.',
     hook='<em>2025: barred. 2026: impeached again.</em> Bar, forthwith, moot, two-thirds of the able.',
-    wr=write(('C', '[State the answer to the card’s question].'), ('L', '[The rule for that step: Sec. 3(2), (4), (5), (6) or (7), with its case].'), ('A', '[Place the event on the timeline; apply the rule to the dates and votes.]'), ('R', 'Hence, [restate C].')),
     oral='For any news card on the Vice President’s impeachment, place the event on the timeline first. Then pick the rule: initiation and the one-year bar under Francisco, Gutierrez and Duterte v. House; the Senate’s timing under Generillo; mootness once the Articles reach the Senate, as in Torreon; and the two-thirds vote under Article XI, Section 3(6). Here, [the event is __], so the governing rule is [__].',
     cap='Dates from the digests and saved news articles. The verdict had not been rendered as of the latest news item (November 13, 2026).')
 
