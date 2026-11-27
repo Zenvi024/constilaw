@@ -1563,5 +1563,166 @@
   ],
   "vote": "12–3, Panganiban, J. Kapunan, J., dissented, joined by Purisima and Ynares-Santiago, JJ.",
   "ops": "Kapunan, J., dissenting: the case was premature, since the withholding was temporary and no refusal to release was shown. The President, as chief fiscal officer, may withhold temporarily: the power to reduce the IRA in a deficit (Sec. 284) includes the lesser power to hold it back until the fiscal picture is known. “No lien or holdback” is not in the Constitution, and consultation is presumed."
+ },
+ "barrioquinto": {
+  "iss": [
+   {
+    "q": "Must a person first admit committing the offense before invoking the amnesty proclamation?",
+    "a": "NO (later overruled)",
+    "why": "The Commission’s view rested on a wrong idea of amnesty. Pardon is private, granted after conviction, and forgives the punishment; under RPC Art. 36 it does not restore political rights unless it says so, nor remit civil indemnity. Amnesty is a public act of which courts take judicial notice, granted to classes of political offenders, and it obliterates the offense: the person stands as though he committed none. So it applies whether pleaded or not, whenever the evidence of either side shows the act falls within the proclamation. Motive may be inferred from witnesses, not only from the accused. Requiring a confession would defeat the proclamation, since few would risk it. And the right, once shown, cannot be waived: the law regards such persons as patriots, not criminals."
+   },
+   {
+    "q": "Does mandamus lie to compel the Commission to hear and decide the applications?",
+    "a": "YES (implied)",
+    "why": "The Commission returned the cases without deciding whether the petitioners were entitled to amnesty, on the wrong premise that an admission was needed, so it had not done the duty the proclamation and AO No. 11 imposed. It must hold a summary hearing if needed and decide."
+   }
+  ],
+  "vote": "6–2, Feria, J. Perfecto, J., concurring; Tuason, J., dissenting, joined by Pablo, J.",
+  "ops": "Perfecto, J., concurring: only three elements are needed for a hearing (an RPC offense not against chastity or for personal motives; in furtherance of the resistance; within the period); nothing in the proclamation requires an admission. Tuason, J., dissenting: the Commission did hear and decide, and mandamus cannot control its discretion; “amnesty presupposes the commission of a crime,” so it is a “rank inconsistency” to seek forgiveness for an act one denies. The dissent’s view became the law in Llanita, Guillermo and Vera."
+ },
+ "vera63": {
+  "iss": [
+   {
+    "q": "Must a person invoking Amnesty Proclamation No. 8 first admit having committed the crime?",
+    "a": "YES",
+    "why": "Barrioquinto, De Los Santos and Viray were superseded and deemed overruled by People v. Llanita and People v. Guillermo (1950): it is a “rank inconsistency” to seek forgiveness for an act one claims not to have committed; amnesty presupposes a crime; invoking it is a plea of confession and avoidance; and where the proclamation imposes conditions, the accused must prove them. Buyco v. People reiterates it. None of the petitioners admitted the killing, so the Commission could not take cognizance."
+   },
+   {
+    "q": "Do the facts bring the killing within Proclamation No. 8?",
+    "a": "NO",
+    "why": "“At any rate,” the killing was due to rivalry between the Hunters guerrillas and Vera’s guerrillas, not in furtherance of the resistance or against a person aiding the enemy."
+   },
+   {
+    "q": "Did the CA err in applying DOJ Administrative Order No. 144 (1950)?",
+    "a": "NO",
+    "why": "The order, requiring the accused to claim that he committed the acts in furtherance of the resistance, was issued precisely under Llanita and Guillermo."
+   },
+   {
+    "q": "Did the CA err in declining to resolve the factual issues (that the victim aided the enemy)?",
+    "a": "NO",
+    "why": "A ruling would be premature, prejudicial and useless, because the case came from a body without jurisdiction; jurisdiction may be raised at any stage."
+   }
+  ],
+  "vote": "10–0, Barrera, J. No separate opinions."
+ },
+ "cristobal": {
+  "iss": [
+   {
+    "q": "Did the absolute pardon restore Santos’s right to vote despite the Election Code’s disqualification of persons convicted of crimes against property?",
+    "a": "YES",
+    "why": "The pardoning power has only two constitutional limits: it is exercised after conviction, and not in impeachment cases; subject to those, “the pardoning power cannot be restricted or controlled by legislative action.” An absolute pardon blots out the crime and removes all disabilities resulting from the conviction, accessory and resultant alike. The voting ban rests on the conviction, so the pardon reaches it; granted after the sentence was served, it removes all that is left of the conviction’s consequences. Otherwise only Congress could restore the right, an impairment the Constitution did not contemplate."
+   },
+   {
+    "q": "Was the pardon absolute as to Santos’s political rights despite its condition on public office?",
+    "a": "YES",
+    "why": "It is conditional only in limiting him to clerical or manual posts; it is absolute insofar as it restores “full civil and political rights,” including suffrage."
+   }
+  ],
+  "vote": "4–1, Laurel, J. Avanceña, C.J., Imperial and Diaz, JJ., concur; Horrilleno, J., dissents.",
+  "ops": "Horrilleno, J., dissenting: the pardon had no object, since the sentence and its accessories had been served; a pardon “involves forgiveness and not forgetfulness” and does not erase the conviction or the moral stain; and the voting ban is not a penalty but a police measure based on character, which the Legislature alone may fix (suffrage belongs to those “not otherwise disqualified by law”). The office limit made the pardon conditional, not absolute."
+ },
+ "torresgonzales": {
+  "iss": [
+   {
+    "q": "Is a final conviction for a new crime necessary before a conditionally pardoned convict can be rearrested and recommitted for breaching the pardon?",
+    "a": "NO",
+    "why": "Tesoro, Sales and Espuelas settled it: (1) granting a pardon and fixing its conditions are purely executive acts; (2) the breach and its consequences may be determined by the President under Sec. 64(i) of the Revised Administrative Code (no judicial pronouncement needed) or by a court under RPC Art. 159; Art. 159 did not repeal Sec. 64(i); (3) the choice is the President’s prerogative. Here the President chose Sec. 64(i). The issue is only whether the convict broke his undertaking, for purposes of reimposing the remitted sentence; punishing the new crimes still needs final convictions."
+   },
+   {
+    "q": "Was Torres denied due process because he was not heard before his arrest and recommitment?",
+    "a": "NO",
+    "why": "Due process is not “semper et ubique” judicial process. He was tried and convicted of the original offense with full judicial process, and by accepting the pardon he agreed that the Executive would determine whether its condition was broken, a determination conclusive on him (Sales, quoting Fuller v. Alabama; Espuelas)."
+   }
+  ],
+  "vote": "10–2, Feliciano, J. Cruz, J., dissenting, joined by Paras, J. Yap, J., on leave; Narvasa, J., took no part.",
+  "ops": "Cruz, J., dissenting (joined by Paras, J.): mere accusation is not guilt; “it is the conviction that makes him a criminal,” and only a judge convicts. Sec. 64(i) is valid for non-criminal conditions, but letting the President decide whether a crime was committed encroaches on judicial power. A conditional pardon is a contract that binds the State too and must be construed in the grantee’s favor. He would reverse Espuelas and order Torres released."
+ },
+ "monsanto": {
+  "iss": [
+   {
+    "q": "Did the pardon, granted while her appeal was pending, operate as an acquittal so that the usual rules on pardon do not apply?",
+    "a": "NO",
+    "why": "The 1981 amendment to the 1973 Constitution had dropped the final-conviction requirement (the 1987 Constitution restored it), so a pardon pending appeal was possible. Either way, by accepting it she abandoned her appeal and the conviction became final. A pardon is an act of grace exempting one from the punishment for a crime he has committed (U.S. v. Wilson), not a finding of innocence."
+   },
+   {
+    "q": "Is a pardoned officer entitled to reinstatement to her former post without a new appointment?",
+    "a": "NO",
+    "why": "Philippine cases (Cristobal; Pelobello) followed Ex parte Garland’s view that a pardon makes the offender “a new man.” The Court adopted the more realistic modern view: pardon implies guilt and relieves the offender of the punitive consequences of the crime, including disqualifications, “but it relieves him from nothing more.” It removed her disqualification from public employment, so she may apply again, but it does not restore a forfeited office; the appointing power may weigh the facts of the offense, since public office is for the common good."
+   },
+   {
+    "q": "Is she entitled to backpay for the period of her suspension?",
+    "a": "NO",
+    "why": "A pardon looks to the future and is not retrospective; what was suffered under a judicially established conviction is presumed rightly suffered, and the government owes no reparation."
+   },
+   {
+    "q": "Does the pardon exempt her from the civil indemnity imposed by the sentence?",
+    "a": "NO",
+    "why": "RPC Art. 36: a pardon “shall in no case exempt the culprit from the payment of the civil indemnity.” Civil liability ex delicto survives pardon and is extinguished only by the Civil Code modes (payment, remission, compensation and the like)."
+   }
+  ],
+  "vote": "15–0, Fernan, C.J. Nine concurred fully; Melencio-Herrera, Padilla, Feliciano, Gutierrez, Cruz and Sarmiento, JJ., concurred in the result.",
+  "ops": "Padilla, J. (joined by Melencio-Herrera and Sarmiento, JJ.): the pardon extinguished criminal liability, but under RPC Art. 36 it restores the right to hold office or vote only if it says so expressly; “full civil and political rights” is not enough, and Cristobal and Pelobello should be modified. Feliciano, J. (joined by Melencio-Herrera, Gutierrez, Cruz and Sarmiento, JJ.): Arts. 36 and 40–43 require explicitness “in printer’s ink”; they are not an unconstitutional limit on the pardoning power, only a requirement that the President be clear."
+ },
+ "risosvidal": {
+  "iss": [
+   {
+    "q": "Did the COMELEC gravely abuse its discretion in ruling that Estrada’s pardon made him qualified to vote and be voted for?",
+    "a": "NO",
+    "why": "(1) The pardoning power has only constitutional limits: impeachment, no final conviction, and election offenses without the COMELEC’s recommendation; Congress cannot restrict it (Cristobal; Pelobello; Monsanto), and the framers rejected a clause allowing that. (2) RPC Arts. 36 and 41 only clarify that a pardon of the principal penalty does not remit the accessory penalties unless the President says so; here the second sentence, “restored to his civil and political rights,” did. The right to seek elective office is a political right (RA 9225; ICCPR Art. 25(b)). The Monsanto concurrences requiring specific words are not controlling. (3) OEC Sec. 12’s plenary-pardon exception lifts the LGC Sec. 40(a) disqualification. (4) The third whereas clause is a statement of fact, not a condition: a preamble is not operative, the pardon states no condition or consequence of breach, and Arroyo stayed silent when he ran in 2010. (5) No whimsical or arbitrary act was shown."
+   },
+   {
+    "q": "Did the COMELEC err in dismissing the petition because it had already resolved the pardon’s effect in 2010?",
+    "a": "NOT RULED",
+    "why": "The Court reduced all five issues to one question, the effect of the pardon, and decided it on the merits. Brion, J. (res judicata applies) and Leonen, J. (it does not) took opposite views."
+   },
+   {
+    "q": "Should the second placer, Lim, be proclaimed Mayor?",
+    "a": "NO",
+    "why": "Estrada was qualified, so the intervention, which raised the same arguments, was dismissed with the petition."
+   }
+  ],
+  "vote": "11–3, Leonardo-de Castro, J. Mendoza, J., concurring; Brion, J. (on leave, left his vote), concurring. Leonen, J., dissenting, joined by Sereno, C.J., and Carpio, J. Jardeleza, J., took no part.",
+  "ops": "Brion, J.: Lim cannot intervene for the first time in the Court; the pardon’s dispositive part prevails like a fallo; the Board of Pardons’ own definition of an absolute pardon is “restores … civil and political rights”; doubts are resolved for the grantee and the popular will; res judicata applies. Mendoza, J.: a condition must appear on the face of the pardon; the pardon restores rights, not innocence, and Manila’s voters judge his fitness. Leonen, J. (with Sereno, C.J., and Carpio, J.): Arts. 36 and 41 are requirements of form that do not reduce the power; “civil and political rights” is a basket, while the RPC singles out office and suffrage, which were never named; the whereas clause shows the premise of the pardon; Lim should be proclaimed. “By reading an ambiguity in favor of a convicted public officer, impunity is tolerated.”"
+ },
+ "trillanesmedialdea": {
+  "iss": [
+   {
+    "q": "Should the petition be dismissed for forum shopping, defective notarization, or direct resort to the Court?",
+    "a": "NO",
+    "why": "The trial courts were asked for arrest warrants and hold-departure orders, the Court to strike down the proclamation: different issues and reliefs. Notarial defects are minor. Direct resort was justified because the questions (the limits of the power to revoke amnesty and the Bill of Rights) are purely legal and of first impression (GIOS-Samar)."
+   },
+   {
+    "q": "Is the validity of Proclamation No. 572 a political question?",
+    "a": "NO",
+    "why": "Under expanded judicial review, courts examine whether a branch stayed within constitutional limits, and the Bill of Rights is such a limit (Francisco; Diocese of Bacolod). Whether an amnesty was validly granted or is void is a justiciable question."
+   },
+   {
+    "q": "Did Proclamation No. 75 unduly delegate the power to grant amnesty to the DND committee?",
+    "a": "NO",
+    "why": "The proclamation itself granted the amnesty to a class; the committee and the Secretary only checked membership in the class and compliance with the requirements, with no discretion. The Secretary acts as the President’s alter ego (qualified political agency), and the President cannot personally process 277 applications."
+   },
+   {
+    "q": "May the President revoke a grant of amnesty without the concurrence of Congress?",
+    "a": "NO",
+    "why": "Sec. 19 is silent on revocation, but amnesty has always needed both the President’s grant and the legislature’s concurrence (1935, 1973, 1987): it exempts groups from the criminal law for a political end, and concurrence checks one person’s motives. Allowing unilateral revocation would make the concurrence futile and hold revocation like “a sword of Damocles” over grantees."
+   },
+   {
+    "q": "Is Proclamation No. 572 unconstitutional?",
+    "a": "YES",
+    "why": "No warrantless arrest was ordered (“all lawful means” means a court warrant), and it is not a bill of attainder (it only removed a hurdle to trial). But it is an ex post facto measure: it strips a vested protection against prosecution, and the clause binds the Executive too. It violates double jeopardy: a dismissal on the ground of amnesty bars a new prosecution even though the accused moved for it, because amnesty obliterates the offense (Barrioquinto; RPC Art. 89). It violates due process: the DND decision had become final and immutable, and he was given no notice. And it violates equal protection: all 277 grantees’ forms were missing, but only his amnesty was voided (Biraogo)."
+   },
+   {
+    "q": "Did the coup d’état court rightly deny the motion for his arrest, finding that he applied and admitted guilt?",
+    "a": "YES",
+    "why": "The factual findings, affirmed by the CA, bind the Court. Failure to locate a form is not proof that none was filed; the certificate of amnesty issued only after review. On admission (Vera), it is enough to admit the covered acts and that they were criminal; his form acknowledged that his involvement violated the Constitution, criminal laws and the Articles of War. The dismissal order had long become final."
+   },
+   {
+    "q": "Did the rebellion court gravely abuse its discretion in reviving the case and issuing a warrant?",
+    "a": "YES",
+    "why": "It declared its own final dismissal void on a mere motion and after only a summary hearing, denying due process; a final order can be attacked only by a separate action, and res judicata applied."
+   }
+  ],
+  "vote": "15–0, Singh, J. Leonen and Caguioa, JJ., concurring.",
+  "ops": "Leonen, J.: would also void the proclamation as a bill of attainder and for the warrantless-arrest clause. Caguioa, J.: stresses that amnesty is a power shared by two branches, so revocation needs the same consensus as the grant, and that a presidential proclamation cannot do what an ex post facto law cannot."
  }
 }

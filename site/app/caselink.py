@@ -16,7 +16,8 @@ AMBIG = {
     'Guingona': {'10': 'guingonagonzales', '12': 'guingonacarague'},
     'David': {'02': 'davidgma', '04': 'davidset'},
     'Pangilinan': {'09': 'pangilinan2018', '*': 'pangilinan2021'},
-    'Trillanes': {'*': 'trillanespimentel'},
+    'Trillanes': {'17': 'trillanesmedialdea', '*': 'trillanespimentel'},
+    'Torres': {'17': 'torresgonzales', '*': None},   # Torres v. Gonzales, but also Joson v. Torres and people named Torres
     'PHILCONSA': {'02': 'philconsa2016', '09': 'philconsamathay', '12': 'philconsaenriquez'},
     'Philconsa': {'02': 'philconsa2016', '09': 'philconsamathay', '12': 'philconsaenriquez'},
     'Abayon': {'*': 'abayon'},
@@ -54,7 +55,8 @@ EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco'
          'Gutierrez v. House': 'gutierrez', 'Generillo v. Senate': 'generillo', 'Generillo': 'generillo', 'Torreon': 'torreon', 'Republic v. Sereno': 'sereno',
          'Civil Liberties Union': 'clu', 'Cruz v. COA': 'cruzcoa', 'Dela Cruz v. COA': 'cruzcoa', 'National Amnesty Commission v. COA': 'nacoa',
          'NAC v. COA': 'nacoa', 'Manglapus': 'manglapus', 'DENR v. DENR Region 12': 'denr12', 'Biraogo v. PTC': 'biraogo', 'Hutchison': 'hutchison',
-         'Hutchison v. SBMA': 'hutchison', 'North Cotabato': 'northcotabato', 'Pimentel v. Aguirre': 'pimentelaguirre', 'Estrada v. Desierto': 'estradaarroyo'}
+         'Hutchison v. SBMA': 'hutchison', 'North Cotabato': 'northcotabato', 'Pimentel v. Aguirre': 'pimentelaguirre', 'Estrada v. Desierto': 'estradaarroyo',
+         'Trillanes v. Medialdea': 'trillanesmedialdea', 'Trillanes IV v. Medialdea': 'trillanesmedialdea'}
 
 def build_aliases(cases, link_texts):
     al = {}

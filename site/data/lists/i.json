@@ -1,0 +1,173 @@
+[
+ {
+  "id": "i-ap-limits",
+  "t": "appt",
+  "title": "The limits on the pardoning power",
+  "ask": "When may the President not grant a pardon?",
+  "items": [
+   "In cases of impeachment (Art. VII, Sec. 19)",
+   "Before conviction by final judgment: a pardon during appeal is void",
+   "For violations of election laws, rules and regulations without the COMELEC’s favorable recommendation (Art. IX-C, Sec. 5)",
+   "Congress cannot add limits by statute (Cristobal; Risos-Vidal)",
+   "The ConCom rejected, 34–4, a clause letting Congress limit clemency for corrupt-practices offenses"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 19; Art. IX-C, Sec. 5; Risos-Vidal (2015)",
+  "rv": "appt-clemency",
+  "hook": "No impeachment, no appeal pending, no election offense without COMELEC; Congress adds nothing.",
+  "cases": [
+   "risosvidal",
+   "cristobal"
+  ]
+ },
+ {
+  "id": "i-ap-forms",
+  "t": "appt",
+  "title": "The forms of executive clemency",
+  "ask": "Name the forms of clemency in Art. VII, Sec. 19, and say which needs Congress.",
+  "items": [
+   "Reprieve: postpones the execution of a sentence",
+   "Commutation: reduces the sentence to a lighter one",
+   "Pardon: forgives the punishment, absolutely or on conditions",
+   "Remission of fines and forfeitures",
+   "Amnesty: erases the offense for a class of political offenders",
+   "Only amnesty needs the concurrence of a majority of all the Members of Congress"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 19",
+  "rv": "appt-clemency",
+  "hook": "Postpone, reduce, forgive, refund, forget.",
+  "cases": []
+ },
+ {
+  "id": "i-ap-pa",
+  "t": "appt",
+  "title": "Pardon versus amnesty (Barrioquinto)",
+  "ask": "Distinguish pardon from amnesty.",
+  "items": [
+   "Pardon: by the President alone; amnesty: with the concurrence of Congress",
+   "Pardon: a private act that must be pleaded and proved; amnesty: a public act of which courts take judicial notice",
+   "Pardon: after conviction; amnesty: before or after prosecution, sometimes after conviction",
+   "Pardon: to an individual; amnesty: to classes of persons, usually for political offenses",
+   "Pardon looks forward and forgives the punishment; amnesty looks backward and erases the offense",
+   "Pardon restores office and suffrage only if it says so and never remits civil indemnity (RPC Art. 36)"
+  ],
+  "ordered": false,
+  "src": "Barrioquinto v. Fernandez (1949)",
+  "rv": "appt-pardon",
+  "hook": "Pardon forgives; amnesty forgets.",
+  "cases": [
+   "barrioquinto"
+  ]
+ },
+ {
+  "id": "i-ap-effects",
+  "t": "appt",
+  "title": "What an absolute pardon does and does not do",
+  "ask": "What does an absolute pardon do, and what does it not do?",
+  "items": [
+   "Removes the penalty and the disqualifications based on the conviction (Cristobal)",
+   "Restores the right to vote and run if it restores “civil and political rights” (Risos-Vidal)",
+   "Restores eligibility for appointment to the forfeited office (Monsanto)",
+   "Does not restore the forfeited office itself: reappointment needed (Monsanto)",
+   "Gives no backpay: a pardon looks forward (Monsanto)",
+   "Does not remit civil indemnity (RPC Art. 36)",
+   "Does not erase guilt or restore reputation unless grounded on innocence (Monsanto)"
+  ],
+  "ordered": false,
+  "src": "Cristobal (1940); Monsanto (1989); Risos-Vidal (2015)",
+  "rv": "appt-pardon",
+  "hook": "Forgiveness, not forgetfulness: rights yes; office, pay and reputation no.",
+  "cases": [
+   "cristobal",
+   "monsanto",
+   "risosvidal"
+  ]
+ },
+ {
+  "id": "i-ap-risos",
+  "t": "appt",
+  "title": "Why Estrada could run after his pardon (Risos-Vidal)",
+  "ask": "Why did the Court hold that Estrada’s pardon let him run for Mayor of Manila?",
+  "items": [
+   "Only the Constitution limits the pardoning power; Congress cannot",
+   "RPC Arts. 36 and 41 only clarify that accessory penalties stay unless the President remits them",
+   "“Restored to his civil and political rights” expressly remitted them",
+   "The right to seek elective office is a political right",
+   "The Monsanto concurrences requiring specific words are not controlling",
+   "The whereas clause on his promise not to run is not a condition: a preamble is not operative",
+   "The plenary-pardon exception in OEC Sec. 12 lifts the LGC Sec. 40 disqualification"
+  ],
+  "ordered": false,
+  "src": "Risos-Vidal v. COMELEC (2015)",
+  "rv": "appt-pardon",
+  "hook": "Political rights include running; whereas is not a condition.",
+  "cases": [
+   "risosvidal"
+  ]
+ },
+ {
+  "id": "i-ap-torres",
+  "t": "appt",
+  "title": "Breach of a conditional pardon (Torres v. Gonzales)",
+  "ask": "State the three propositions on conditional pardons and their breach.",
+  "items": [
+   "Granting a pardon and fixing its conditions are purely executive acts, not subject to judicial scrutiny",
+   "Breach may be determined by the President under RAC Sec. 64(i), with no conviction needed, or by a court under RPC Art. 159, which needs conviction by final judgment",
+   "The choice between the two is the President’s",
+   "Due process is not always judicial process: the convict had his day in court on the original crime",
+   "Recommitment only revives the remitted part of the old sentence; new crimes still need final convictions"
+  ],
+  "ordered": false,
+  "src": "Torres v. Gonzales (1987)",
+  "rv": "appt-conditional",
+  "hook": "Two roads back: the President’s word or the court’s judgment.",
+  "cases": [
+   "torresgonzales"
+  ]
+ },
+ {
+  "id": "i-ap-claim",
+  "t": "appt",
+  "title": "Claiming an amnesty",
+  "ask": "What must a person show to claim an amnesty?",
+  "items": [
+   "The amnesty was granted with Congress’s concurrence (majority of all the Members)",
+   "He belongs to the class and the acts fall within its period and crimes",
+   "The acts were not excluded (e.g., crimes for personal ends)",
+   "He admits committing the covered acts (Vera: amnesty presupposes a crime)",
+   "He admits that the acts were criminal; he need not admit the specific crime charged (Trillanes)"
+  ],
+  "ordered": false,
+  "src": "Vera v. People (1963); Trillanes v. Medialdea (2024)",
+  "rv": "appt-amnesty",
+  "hook": "Covered, then confess: no admission, no amnesty.",
+  "cases": [
+   "vera63",
+   "trillanesmedialdea",
+   "barrioquinto"
+  ]
+ },
+ {
+  "id": "i-ap-trillanes",
+  "t": "appt",
+  "title": "Why Proclamation No. 572 was void (Trillanes v. Medialdea)",
+  "ask": "Give the grounds on which the Court voided the revocation of Trillanes’s amnesty.",
+  "items": [
+   "Revocation of an amnesty needs the concurrence of Congress, as the grant does",
+   "Due process: the DND grant had become final and immutable, and he was not heard",
+   "Equal protection: all 277 grantees’ forms were missing, but only his amnesty was voided",
+   "Ex post facto: it stripped a vested protection against prosecution; the clause binds the Executive too",
+   "Double jeopardy: a dismissal on the ground of amnesty bars a new prosecution even on the accused’s motion",
+   "Not a bill of attainder, and no warrantless arrest was ordered",
+   "He did apply and did admit guilt, as the courts below found"
+  ],
+  "ordered": false,
+  "src": "Trillanes IV v. Medialdea (2024)",
+  "rv": "appt-amnesty",
+  "hook": "Congress again; then due process, equal protection, ex post facto, double jeopardy.",
+  "cases": [
+   "trillanesmedialdea"
+  ]
+ }
+]

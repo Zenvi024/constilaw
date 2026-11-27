@@ -1,0 +1,125 @@
+[
+ {
+  "id": "barrioquinto",
+  "n": "Barrioquinto v. Fernandez",
+  "y": "1949",
+  "t": "appt",
+  "sub": "V.B.2(e) Executive clemency: amnesty and pardon distinguished",
+  "a": 0,
+  "r": "Pardon: by the President alone, a private act that must be pleaded and proved, after conviction, looking forward (it forgives the punishment). Amnesty: by the President with the concurrence of Congress, a public act courts notice, for classes guilty of political offenses, looking backward (it erases the offense). The accused need not admit the crime to claim amnesty (later abandoned in Vera).",
+  "f": "Jimenez was convicted of murder and sentenced to life imprisonment; Barrioquinto, at large during the trial, was later arrested. Both submitted their cases to the 14th Guerrilla Amnesty Commission under President Roxas’s Proclamation No. 8 (1946), which granted amnesty for crimes committed in furtherance of the resistance against the Japanese. The Commission returned the cases to the court without deciding them, because neither had admitted the killing (Barrioquinto said another man shot the victim).",
+  "h": "Mandamus granted (6–2, Feria, J., January 21, 1949): the Commission must hear and decide the applications, unless the courts have meanwhile finally decided the question. An admission is not a condition precedent; it is enough that the evidence of either side brings the offense within the proclamation. Once shown, the right to amnesty cannot be waived.",
+  "x": "Use for the amnesty-pardon distinction, which is still good law and a favorite exam table. Do not use it for the admission rule: Vera v. People (1963) declared it superseded, so today the accused must admit the act to claim amnesty.",
+  "w": "Its holding that no admission is required was declared “superseded and deemed overruled” in Vera v. People (1963), following People v. Llanita and People v. Guillermo (1950). The decision names the alleged shooter both “Hipolito Tolentino” and “Agapito Hipolito.”",
+  "s": "Amnesty erases the offense; pardon forgives the penalty. (Its no-admission rule was later overruled.)",
+  "sy": [
+   "Barrioquinto v. Fernandez"
+  ]
+ },
+ {
+  "id": "vera63",
+  "n": "Vera v. People",
+  "y": "1963",
+  "t": "appt",
+  "sub": "V.B.2(e) Executive clemency: amnesty presupposes a crime",
+  "a": 1,
+  "r": "Amnesty presupposes the commission of a crime: one who denies the act “cannot have any use for amnesty.” Invoking it is a plea of confession and avoidance; the accused must admit the act and prove the proclamation’s conditions. Barrioquinto’s contrary rule is superseded. A killing born of rivalry between guerrilla units is not “in furtherance of the resistance.”",
+  "f": "Gaudencio Vera and others were charged with kidnapping with murder of Lt. Amadeo Lozañes of the Hunters ROTC guerrillas, killed in February 1945. They invoked Amnesty Proclamation No. 8 before the Eighth Guerrilla Amnesty Commission, but none admitted the killing; Vera denied it on the stand. The Commission found the motive was rivalry between Vera’s guerrillas and the Hunters, and returned the case to the trial court; the CA affirmed.",
+  "h": "CA decision affirmed (10–0, Barrera, J., January 31, 1963). Those who deny the crime cannot claim amnesty; DOJ AO No. 144 (1950), requiring an admission, was issued under Llanita and Guillermo. In any case, a killing due to guerrilla rivalry is outside the proclamation.",
+  "test": "To claim amnesty: (1) admit the act; (2) prove the conditions of the proclamation (here, an RPC offense committed in furtherance of the resistance or against persons aiding the enemy, within the period, not against chastity or for personal motives).",
+  "x": "Use whenever an accused rebel, soldier or official wants amnesty while insisting he did nothing: amnesty presupposes guilt, so he must admit the act. Pair with Trillanes v. Medialdea (2024) on admitting guilt in the application form.",
+  "s": "No admission, no amnesty: amnesty presupposes a crime (Barrioquinto superseded).",
+  "sy": [
+   "Vera v. People"
+  ]
+ },
+ {
+  "id": "cristobal",
+  "n": "Cristobal v. Labrador",
+  "y": "1940",
+  "t": "appt",
+  "sub": "V.B.2(e) Executive clemency: the reach of an absolute pardon",
+  "a": 1,
+  "r": "The pardoning power has only the limits the Constitution sets (after conviction; not in impeachment cases), and Congress cannot restrict it. An absolute pardon blots out the crime and removes all disabilities resulting from the conviction, including a later statutory disqualification from voting, even when granted after the sentence was served.",
+  "f": "Teofilo Santos was convicted of estafa in 1930, served his sentence in 1932, and was later elected municipal president of Malabon. The 1938 Election Code disqualified from voting anyone finally convicted of a crime against property. In 1939 President Quezon pardoned him, restoring “full civil and political rights,” but limiting him to clerical or manual public posts with no money responsibility. Cristobal sought to exclude Santos from the voters’ list.",
+  "h": "The pardon restored Santos’s right to vote; the CFI’s denial of the exclusion petition was sustained (4–1, Laurel, J., December 7, 1940). The disqualification is a consequence of the conviction, which the pardon removes. The pardon was absolute as to civil and political rights and conditional only as to public office.",
+  "x": "Use when a law or official says a pardoned person still cannot vote, run, or hold a post because of the old conviction: Congress cannot limit the pardoning power, and an absolute pardon removes the disabilities of the conviction. Contrast the RPC rule (Art. 36) that a pardon restores the right to hold office or vote only if it says so, and Risos-Vidal (2015), which applied this to Estrada.",
+  "w": "The syllabus cites 71 Phil. 34 (1941); the decision is dated December 7, 1940. The ponencia did not declare the Election Code provision unconstitutional; it held only that the pardon removed its effect on Santos.",
+  "s": "An absolute pardon removes all disabilities of the conviction, even a later voting ban; Congress cannot limit the power.",
+  "sy": [
+   "Cristobal v. Labrador"
+  ]
+ },
+ {
+  "id": "torresgonzales",
+  "n": "Torres v. Gonzales",
+  "y": "1987",
+  "t": "appt",
+  "sub": "V.B.2(e) Executive clemency: breach of a conditional pardon",
+  "a": 0,
+  "r": "Whether a conditional pardon was breached may be determined by the President alone (Revised Administrative Code, Sec. 64(i)); no court conviction for the new crime is needed to recommit the convict to serve the remitted sentence. The President may instead prosecute under RPC Art. 159, which needs a final conviction. Due process is not always judicial: the convict had his day in court on the original crime.",
+  "f": "Wilfredo Torres, convicted of estafa with a maximum sentence expiring in 2000, was conditionally pardoned in 1979 on condition that he “not again violate any of the penal laws.” He was later charged with 20 counts of estafa and convicted of sedition by a trial court (on appeal). On the Board of Pardons and Parole’s recommendation, the President cancelled the pardon in 1986, and he was arrested and recommitted. He sought habeas corpus: none of the charges had become a final conviction.",
+  "h": "Petition dismissed (10–2, Feliciano, J., July 23, 1987), following Tesoro, Sales and Espuelas. The President chose Sec. 64(i), a choice not subject to judicial review, so the lack of a final conviction was immaterial. But he must still be finally convicted before he can be punished for the new crimes.",
+  "test": "The President’s two options on breach: (1) Sec. 64(i), RAC: an executive finding of breach and recommitment to serve the remitted part of the original sentence; no conviction needed; or (2) RPC Art. 159: prosecution for violating the conditional pardon, a distinct felony needing conviction by final judgment.",
+  "x": "Use when a pardoned convict is rearrested for breaking a pardon condition before any new conviction: the President may decide the breach himself. Argue the other side with Cruz, J.’s dissent: “it is the conviction that makes him a criminal.”",
+  "w": "The President later granted Torres an absolute pardon for the sedition conviction (January 28, 1987).",
+  "s": "The President alone may find a conditional pardon breached and recommit the convict; no conviction needed.",
+  "sy": [
+   "Torres v. Gonzales"
+  ]
+ },
+ {
+  "id": "monsanto",
+  "n": "Monsanto v. Factoran",
+  "y": "1989",
+  "t": "appt",
+  "sub": "V.B.2(e) Executive clemency: what a pardon does not do",
+  "a": 1,
+  "r": "“Pardon implies guilt. It does not erase the fact of the commission of the crime and the conviction thereof … It involves forgiveness and not forgetfulness.” An absolute pardon removes the penalties and disqualifications and restores eligibility for the forfeited office, but not the office itself: the pardoned officer must be reappointed. No backpay; civil liability survives.",
+  "f": "Salvacion Monsanto, assistant city treasurer of Calbayog, was convicted by the Sandiganbayan in 1983 of estafa through falsification. While her motion for reconsideration was pending in the Supreme Court, President Marcos gave her an absolute pardon (December 1984), which she accepted. She asked to be reinstated as of her 1982 suspension, with backpay, and to be excused from her share of the ₱4,892.50 indemnity. The Office of the President held she needed a new appointment and remained civilly liable.",
+  "h": "OP resolution affirmed (15–0, Fernan, C.J., February 9, 1989; six Justices concurred in the result). Accepting the pardon abandoned the appeal, so the conviction became final; the pardon is not an acquittal. It restored her eligibility for appointment, not the office; no backpay, since a pardon looks forward; the civil indemnity stays.",
+  "test": "Effects of an absolute pardon: removes the penalties and the disqualifications based on the finding of guilt; restores eligibility for appointment. Does not: erase guilt or restore reputation (unless grounded on innocence), restore the forfeited office, give backpay, or remit civil liability (RPC Art. 36).",
+  "x": "Use when a pardoned official wants the old post back, back salaries, or a clean slate: the pardon forgives, it does not forget. The appointing power may weigh the offense in deciding whether to reappoint. Add the 1987 rule: pardon only after conviction by final judgment.",
+  "w": "Padilla and Feliciano, JJ. (with Melencio-Herrera, Gutierrez, Cruz and Sarmiento, JJ.) concurred in the result on a narrower ground: under RPC Art. 36, the pardon did not restore the right to hold office because it did not say so expressly. That reading, not the ponencia’s, is the one Risos-Vidal (2015) had to answer.",
+  "s": "Pardon forgives, it does not forget: eligibility for reappointment, but no automatic reinstatement or backpay.",
+  "sy": [
+   "Monsanto v. Factoran"
+  ]
+ },
+ {
+  "id": "risosvidal",
+  "n": "Risos-Vidal v. COMELEC",
+  "y": "2015",
+  "t": "appt",
+  "sub": "V.B.2(e) Executive clemency: Estrada’s pardon and the right to run",
+  "a": 1,
+  "r": "The President may not pardon only (1) in impeachment cases, (2) before final conviction, and (3) for election-law violations without the COMELEC’s favorable recommendation; Congress cannot add limits. RPC Arts. 36 and 41 are harmonized: “restored to his civil and political rights” expressly remits the accessory disqualifications, including the right to run. A whereas clause does not make a pardon conditional.",
+  "f": "Former President Estrada was convicted of plunder in 2007 (reclusion perpetua with perpetual absolute disqualification). President Arroyo pardoned him: its third whereas clause noted that he had “publicly committed to no longer seek any elective position,” and its operative part said, “He is hereby restored to his civil and political rights.” He ran for President in 2010 and for Mayor of Manila in 2013. Atty. Risos-Vidal sought his disqualification; the COMELEC dismissed it; Estrada won, and Mayor Lim, the second placer, intervened.",
+  "h": "Petition and intervention dismissed; the COMELEC affirmed (11–3, Leonardo-de Castro, J., January 21, 2015). The pardon was absolute and restored all of Estrada’s civil and political rights, including the right to seek elective office; the plenary-pardon exception in OEC Sec. 12 removed his LGC Sec. 40 disqualification.",
+  "test": "Constitutional limits on the pardoning power (Art. VII, Sec. 19; Art. IX-C, Sec. 5): not in impeachment cases; only after conviction by final judgment; not for election offenses without the COMELEC’s favorable recommendation. The ConCom rejected (34–4) a clause letting Congress limit clemency for corrupt-practices offenses.",
+  "x": "Use when a pardoned official runs for office or a law tries to limit pardons (for plunder, for corruption): only the Constitution limits the power. For the opposing view, Leonen, J.’s dissent: Arts. 36 and 41 are only a requirement of form, the pardon was silent on office and suffrage, and the whereas clause shows the promise not to run.",
+  "w": "The ponencia left unresolved whether the COMELEC’s 2010 rulings barred the 2013 petition (Brion, J., said res judicata applies; Leonen, J., said no) and whether the second placer could be proclaimed. Note the tension with Monsanto’s concurrences, which the Court called “not controlling.”",
+  "s": "Estrada’s pardon restored his right to run: “civil and political rights” is express enough; a whereas clause is no condition.",
+  "sy": [
+   "Risos-Vidal"
+  ]
+ },
+ {
+  "id": "trillanesmedialdea",
+  "n": "Trillanes IV v. Medialdea",
+  "y": "2024",
+  "t": "appt",
+  "sub": "V.B.2(e) Executive clemency: revoking an amnesty",
+  "a": 1,
+  "r": "An amnesty, granted by the President with Congress’s concurrence, cannot be revoked by the President alone: revocation needs Congress’s concurrence too. Proclamation No. 572, voiding Trillanes’s amnesty seven years later, was void: it violated due process (a final, immutable grant), equal protection (one of 277 grantees singled out), the ex post facto clause, and double jeopardy.",
+  "f": "Sen. Trillanes led the 2003 Oakwood Mutiny and the 2007 Manila Peninsula siege. President Aquino’s Proclamation No. 75 (2010), concurred in by Congress, granted amnesty to those involved; the DND committee approved Trillanes’s application in January 2011, and both his coup d’état and rebellion cases were dismissed. In 2018, President Duterte’s Proclamation No. 572 declared his amnesty void ab initio, saying he filed no application and never admitted guilt, and ordered his rearrest and prosecution.",
+  "h": "Proclamation No. 572 declared void (15–0, Singh, J., April 3, 2024); the People’s petitions in both criminal cases denied. Proclamation No. 75 validly left the processing of applications to the DND as alter ego. Trillanes did apply and did admit guilt, as both trial-court and CA findings showed. The arrest clause was read as requiring a court warrant, and the proclamation was not a bill of attainder.",
+  "test": "Admission of guilt for amnesty: it is enough that the applicant admits (a) committing the acts covered by the amnesty and (b) that those acts are criminal; he need not admit the specific crime charged.",
+  "x": "Use when a President tries to undo a predecessor’s amnesty, pardon or clemency grant, or targets one beneficiary: amnesty is a shared power, so revocation needs Congress; and the Bill of Rights (due process, equal protection, double jeopardy, ex post facto) binds the President. Pair with Biraogo on singling out.",
+  "w": "The rule that revocation needs Congress’s concurrence is stated in the body; the fallo only declares Proclamation No. 572 void. The decision dates the grant January 21, 2011 in one place and January 31, 2011 in another.",
+  "s": "Duterte could not revoke Trillanes’s amnesty alone: revocation needs Congress; Proc. 572 void on four Bill of Rights grounds.",
+  "sy": [
+   "Trillanes IV v. Hon. Medialdea"
+  ]
+ }
+]

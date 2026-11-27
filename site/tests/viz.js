@@ -93,6 +93,13 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     await p.click('#fig-lguorder .gate.cur .yn [data-a="n"]'); await p.click('#fig-lguorder .gate.cur .yn [data-a="y"]');
     const ira = await txt('#fig-lguorder .walkout .vres'); check(tag, 'IRA walk: holdback void', /Sec\. 284/.test(ira), ira);
     await p.click('#fig-lguorder .walkout [data-w="map"]');
+    // finals V.B.2(e): clemency diagrams carry orals lines; the Trillanes walk ends at "revocation void"
+    const ap = await p.evaluate(() => { const f = [...document.querySelectorAll('#appt figure.viz')]; return {n: f.length, oral: f.filter(x => x.querySelector('.vor')).length}; });
+    check(tag, 'V.B.2(e) diagrams carry orals lines', ap.n >= 4 && ap.oral === ap.n, ap);
+    await go('fig-amnestygate'); await p.click('#fig-amnestygate .walkbar .vchip:has-text("Trillanes")');
+    for (let i = 0; i < 4; i++) await p.click('#fig-amnestygate .gate.cur .yn [data-a="y"]');
+    const tri = await txt('#fig-amnestygate .walkout .vres'); check(tag, 'Trillanes walk: revocation void', /Revocation void/.test(tri), tri);
+    await p.click('#fig-amnestygate .walkout [data-w="map"]');
     // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
     const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
     check(tag, 'no style leaks outside the diagrams', leak === 0, leak);

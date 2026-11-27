@@ -14,10 +14,10 @@ import re
 FIGS = {}    # file prefix -> [(mode, anchor, html)]
 WALL = []    # (prefix, figure id, title, hook html) for the hook wall
 SEC = {'00': 'method', '01': 'interp', '02': 'jr', '03': 'terr', '04': 'cit', '05': 'suff', '06': 'gov', '07': 'comp',
-       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '90': 'news'}
+       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '90': 'news'}
 SHORT = {'00': 'Exam method', '01': 'Interpretation', '02': 'Judicial review', '03': 'Territory', '04': 'Citizenship', '05': 'Suffrage',
          '06': 'Government', '07': 'Composition', '08': 'Internal', '09': 'Privileges', '10': 'Tribunals and CA', '11': 'Powers',
-         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '90': 'News'}
+         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '90': 'News'}
 
 
 # ---------- small builders ----------
@@ -1267,6 +1267,72 @@ fig('16', 'after', '<h3 id="pres-lgu">General supervision over local governments
     hook='<em>Check, don’t replace; advise, don’t hold back.</em> The IRA goes out automatically.',
     oral='The issue is whether the President may [withhold part of the LGUs’ allotment]. Article X, Section 4 gives the President only general supervision over local governments, and in Pimentel v. Aguirre the Court held that supervision lets him see that the rules are followed but not replace them; the LGUs’ share is released automatically and may not be held back, even temporarily, unless the conditions of Section 284 of the Local Government Code are met. Here, [no deficit was declared and the leagues were not consulted], so the withholding is void.',
     cap='The same general supervision applies to autonomous regions (Art. X, Sec. 16).')
+
+
+# =====================================================================
+# 17 · appointment and clemency (finals; clemency first, Batch 6a)
+# =====================================================================
+fig('17', 'after', '<h3 id="appt-clemency">The clemency power and its limits</h3>\n', 'pardonvalid', 'Is this pardon valid, and what does it restore?',
+    gates([G('Is it an impeachment case?', 'the President cannot undo a Senate judgment of removal and disqualification', 'Void', 'Art. VII, Sec. 19: “except in cases of impeachment”', 'yes', 'no'),
+           G('Is there a conviction by final judgment?', 'no pending appeal; a pardon during appeal is void (People v. Casido); amnesty is the exception', 'Void', 'the 1987 Constitution restored the final-judgment rule that the 1981 amendment had dropped (' + C('monsanto', 'Monsanto') + ')', 'no', 'no'),
+           G('Is it for an election offense, without the COMELEC’s favorable recommendation?', 'Art. IX-C, Sec. 5 covers pardon, amnesty, parole and suspension of sentence', 'Void', 'the third constitutional limit (' + C('risosvidal', 'Risos-Vidal') + ')', 'yes', 'no'),
+           G('Does it restore civil and political rights, or expressly the rights to vote and hold office?', 'RPC Arts. 36 and 41, harmonized with the Constitution', 'Valid, but the accessory disqualifications stay', 'pardoning the principal penalty alone does not remit them', 'no', 'sun')],
+          ('Valid: the right to vote and run is restored', 'but not the forfeited office, backpay, civil liability or reputation (' + C('monsanto', 'Monsanto') + '); Congress cannot add limits (' + C('cristobal', 'Cristobal') + ')', 'ok'),
+          facts=[fact('Risos-Vidal v. COMELEC (2015)', 'Estrada, finally convicted of plunder, is pardoned: “He is hereby restored to his civil and political rights.” A whereas clause notes his promise not to run again; he runs for Mayor of Manila.', 'n,y,n,y', 'Within the limits, and the rights are restored expressly enough; the whereas clause is not a condition. He may run.'),
+                 fact('A pardon pending appeal', 'While a convicted official’s appeal is pending, the President pardons him, and he is released.', 'n,n', 'No final judgment: the pardon is void, and those who released him may be administratively liable.'),
+                 fact('An election offender', 'A mayor convicted of vote-buying is pardoned without any COMELEC recommendation.', 'n,y,y', 'Art. IX-C, Sec. 5 requires the COMELEC’s favorable recommendation: void.'),
+                 fact('A removed Chief Justice', 'After the Senate convicts and removes an impeached official, the President “pardons” him so he may hold office again.', 'y', 'The President cannot pardon in cases of impeachment.'),
+                 fact('A bare pardon', 'A convict serving reclusion perpetua is pardoned “of the penalty of reclusion perpetua,” with nothing on his rights; he later runs for councilor.', 'n,y,n,n', 'The perpetual absolute disqualification is an accessory penalty not remitted: he still cannot run.')]),
+    kind='gates', when='a pardoned or about-to-be-pardoned person wants release, the right to vote or run, or an old office back.',
+    hook='<em>No impeachment, no appeal pending, no election offense without COMELEC.</em> Then say the rights, or the disqualification stays.',
+    oral='The issue is whether [the pardon] is valid and restores [the right to run]. Article VII, Section 19 allows pardons after conviction by final judgment, except in impeachment cases, and Article IX-C, Section 5 bars pardons for election offenses without the COMELEC’s favorable recommendation; in Risos-Vidal v. COMELEC the Court held that Congress cannot add limits, and that a pardon restoring “civil and political rights” restores the right to seek office. Here, [the conviction is final and the pardon restores his political rights], so he may run.',
+    cap='The President may also commute, reprieve, and remit fines and forfeitures under the same limits.')
+
+fig('17', 'after', '<h3 id="appt-pardon">Pardon: what it does and what it does not</h3>\n', 'clemkinds', 'Pardon or amnesty: side by side',
+    cmp(['Pardon', 'Amnesty'], [
+        ('Who', 'the President alone', 'the President, with the concurrence of a majority of all the Members of Congress'),
+        ('When', 'after conviction by final judgment', 'before charges, during trial, or after conviction'),
+        ('For whom', 'an individual, for any offense (save the limits)', 'classes of persons, usually for political offenses'),
+        ('Nature', 'a private act: pleaded and proved; must be accepted', 'a public act: courts take judicial notice'),
+        ('Looks', 'forward: forgives the punishment', 'backward: erases the offense (' + C('barrioquinto', 'Barrioquinto') + ')'),
+        ('Office and suffrage', 'restored only if the pardon restores them (RPC Art. 36; ' + C('risosvidal', 'Risos-Vidal') + ')', 'restored with the offense erased'),
+        ('Civil liability', 'never remitted (Art. 36)', 'liability to private persons may survive'),
+        ('Admission', 'not required (granted after conviction)', 'required: admit the acts and that they were criminal (' + C('vera63', 'Vera') + '; ' + C('trillanesmedialdea', 'Trillanes') + ')'),
+        ('Undoing it', 'a conditional pardon: recommitment on breach (' + C('torresgonzales', 'Torres') + ')', 'revocation needs Congress too (' + C('trillanesmedialdea', 'Trillanes') + ')'),
+    ]),
+    kind='comparison', when='a news card mixes up pardon and amnesty, or asks what a grant of clemency does to office, votes and money.',
+    hook='<em>Pardon forgives; amnesty forgets.</em> One person, the President alone, after final judgment; or a class, with Congress, any time.',
+    oral='The issue is whether [the grant] is a pardon or an amnesty. Under Article VII, Section 19, a pardon is granted by the President alone after conviction by final judgment, while an amnesty needs the concurrence of a majority of all the Members of Congress; in Barrioquinto v. Fernandez the Court explained that a pardon looks forward and forgives the punishment, while an amnesty looks backward and erases the offense. Here, [the grant covers a class of rebels and was concurred in by Congress], so it is an amnesty.',
+    cap='Monsanto: pardon “involves forgiveness and not forgetfulness”; it does not restore the forfeited office, backpay, or reputation.')
+
+fig('17', 'after', '<h3 id="appt-conditional">Conditional pardon and its breach</h3>\n', 'condpardon', 'A condition is broken: can the convict be sent back?',
+    gates([G('Did the convict accept the conditional pardon?', 'a pardon is a deed; delivery is not complete without acceptance', 'No pardon in force', 'he serves his sentence as before', 'no', 'sun'),
+           G('Has the President found that a condition was broken?', 'his judgment, under RAC Sec. 64(i); a court conviction is not needed', 'The pardon stands', 'the convict stays free', 'no', 'ok'),
+           G('Did the President proceed under RAC Sec. 64(i)?', 'the choice of road is the President’s and is not reviewable', 'Recommitment', 'to serve the remitted part of the original sentence; new crimes still need final convictions (' + C('torresgonzales', 'Torres') + ')', 'yes', 'acc')],
+          ('Art. 159 prosecution', 'violating a conditional pardon is a crime; charge, trial and conviction by final judgment first', 'sun'),
+          facts=[fact('Torres v. Gonzales (1987)', 'A convict pardoned on condition that he “not again violate any of the penal laws” is charged with 20 counts of estafa and convicted of sedition by a trial court (on appeal). The President cancels the pardon and he is recommitted.', 'y,y,y', 'Sec. 64(i): no final conviction needed; due process was had at the original trial.'),
+                 fact('Charges dropped', 'A pardoned convict’s new case is provisionally dismissed for want of a witness; the Board still recommends, and the President orders, his recommitment.', 'y,y,y', 'As in Espuelas: the President’s finding of breach controls; the dismissal does not bind him.'),
+                 fact('The court route', 'Prosecutors file an information for violation of a conditional pardon under RPC Art. 159.', 'y,y,n', 'The judicial road: he cannot suffer the Art. 159 penalty until convicted by final judgment.'),
+                 fact('An unaccepted grant', 'A prisoner refuses a pardon conditioned on leaving the country.', 'n', 'A conditional pardon binds only if accepted; he stays in prison under his sentence.')]),
+    kind='gates', when='a pardoned or paroled person is rearrested for breaking a condition, before any new conviction.',
+    hook='<em>Two roads back to prison</em>: the President’s word (Sec. 64(i), no conviction needed) or the court’s judgment (Art. 159).',
+    oral='The issue is whether [the convict] may be recommitted without a new conviction. In Torres v. Gonzales, the Court held that when a conditional pardon is breached, the President may proceed under Section 64(i) of the Revised Administrative Code and recommit the convict on his own finding, without any judicial conviction, because due process is not always judicial process and the convict had his day in court on the original crime; only a prosecution under Article 159 needs a final conviction. Here, [the President cancelled the pardon under Section 64(i)], so the recommitment is valid.',
+    cap='Cruz, J., dissenting in Torres: “it is the conviction that makes him a criminal.” Use it for the other side.')
+
+fig('17', 'after', '<h3 id="appt-amnesty">Amnesty: claiming it and revoking it</h3>\n', 'amnestygate', 'Can this person claim the amnesty, and can it be taken back?',
+    gates([G('Did Congress concur, by a majority of all its Members?', 'Art. VII, Sec. 19, par. 2; the proclamation is the operative grant', 'No amnesty', 'the President alone cannot grant it', 'no', 'no'),
+           G('Is the act within the proclamation’s class, period and crimes?', 'not excluded crimes or acts for personal ends; a guerrilla rivalry killing is outside (' + C('vera63', 'Vera') + ')', 'Not covered', 'the case goes on in the regular courts', 'no', 'no'),
+           G('Did the applicant admit the covered acts and that they were criminal?', 'amnesty presupposes a crime; a specific crime need not be admitted (' + C('trillanesmedialdea', 'Trillanes') + ')', 'No amnesty', 'one who denies the act “cannot have any use for amnesty” (' + C('vera63', 'Vera') + ')', 'no', 'no'),
+           G('Is a later President revoking it without Congress’s concurrence?', 'and is it final, with the case dismissed on that ground?', 'Revocation void; the amnesty stands', 'needs Congress; and due process, equal protection, ex post facto, double jeopardy (' + C('trillanesmedialdea', 'Trillanes') + ')', 'yes', 'sun')],
+          ('Amnesty stands', 'the offense is erased (RPC Art. 89); a dismissal on that ground bars a new prosecution', 'ok'),
+          facts=[fact('Trillanes v. Medialdea (2024)', 'Under a 2010 proclamation concurred in by Congress, a senator who led two mutinies files an application admitting his involvement violated the law; his cases are dismissed. In 2018, a new President voids his amnesty alone.', 'y,y,y,y', 'Revocation without Congress is void, and the proclamation violated four Bill of Rights guarantees.'),
+                 fact('Vera v. People (1963)', 'Guerrillas accused of killing a rival guerrilla officer invoke the war amnesty but deny the killing; the motive was rivalry between units.', 'y,n', 'Not in furtherance of the resistance; and having denied the act, they could not claim amnesty anyway.'),
+                 fact('Barrioquinto v. Fernandez (1949)', 'Accused guerrillas say another man fired the shot but ask for amnesty; the Commission refuses because they admitted nothing.', 'y,y?,n', 'The 1949 Court said no admission was needed; under Vera, today, the claim fails.'),
+                 fact('A peace-deal amnesty', 'Congress concurs in an amnesty for rebels who return to the fold; a rebel admits his acts and that they were crimes, and no one tries to revoke it.', 'y,y,y,n', 'He may claim it; his criminal liability is extinguished.')]),
+    kind='gates', when='a President grants, denies or revokes amnesty for rebels, mutineers or political offenders.',
+    hook='<em>Congress in, admit it, and Congress again to undo it.</em>',
+    oral='The issue is whether the President may revoke [the amnesty]. Article VII, Section 19 lets the President grant amnesty only with the concurrence of a majority of all the Members of Congress, and in Trillanes IV v. Medialdea the Court held that revocation likewise needs that concurrence, and struck down a proclamation that voided one grantee’s amnesty for violating due process, equal protection, the ban on ex post facto laws and double jeopardy. Here, [the President acted alone, years after the grant became final], so the revocation is void.',
+    cap='Vera answers who may claim; Trillanes answers how much admission is enough and who may take it back.')
 
 
 # =====================================================================
