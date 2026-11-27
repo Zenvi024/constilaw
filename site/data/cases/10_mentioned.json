@@ -17,14 +17,19 @@
   "id": "pangilinan2021",
   "n": "Pangilinan v. Cayetano",
   "y": "2021",
-  "t": "jr",
-  "sub": "III. Requisites: standing and mootness",
-  "a": 0,
-  "ref": 1,
-  "r": "Petitions against the Philippines’ withdrawal from the Rome Statute were dismissed: the withdrawal had already taken effect after the ICC received the notice, and senator-petitioners lacked standing because the Senate itself had not acted to assert a prerogative. The Court said the President’s power to withdraw from treaties is not unlimited, but did not void this withdrawal.",
-  "x": "Use with Gatmaytan’s critique when a case turns on legislator standing or mootness.",
-  "g": "Gatmaytan (‘Variant Technicalities’): the Court invented new technicalities, tying a legislator’s standing to an institutional act of the Senate and treating the completed withdrawal as a supervening event; the mootness exceptions could have applied.",
-  "s": "ICC withdrawal: moot; senators lacked standing absent a Senate act."
+  "t": "ocong",
+  "sub": "V.A.9(f) Concurrence in and withdrawal from treaties (also III. Standing and mootness)",
+  "a": 1,
+  "r": "The President, as primary architect of foreign policy, has leeway to withdraw from treaties bona fide deemed contrary to the Constitution or the laws, but not absolutely: the President cannot withdraw unilaterally (a) from a treaty entered into pursuant to legislative intent in a prior law, or affirmed by a later law, unless that law is repealed; or (b) where the Senate conditioned its concurrence on its concurrence in withdrawal. A statute prevails over a treaty in case of conflict; Lantion's statement that a treaty may repeal a statute is obiter. These guidelines were laid down for future cases: the petitions were dismissed as moot because the withdrawal had already taken effect, and the senators' suit was premature because the Senate as a body had not asserted its prerogative.",
+  "x": "Use for any question on leaving a treaty (Rome Statute, VFA, MDT), on legislator standing, and on mootness; pair with Gatmaytan's critique.",
+  "g": "Gatmaytan ('Variant Technicalities', lecture, Aug. 2024): the Court invented new technicalities, tying a legislator's standing to an institutional act of the Senate, which lets a chamber controlled by the President's allies block suits by sitting on a resolution; it demanded direct injury even though transcendental importance dispenses with standing; and an unconstitutional withdrawal cannot moot the case (like a disqualified candidate who wins), while the mootness exceptions applied anyway. The case is 'a win' for President Duterte: the duty to cooperate with the ICC comes from Art. 127 itself, not from the Court. He also lists it among the Duterte-era decisions that weakened checks on the President (95 Phil. L.J. 529 (2022)).",
+  "s": "ICC withdrawal: moot; guidelines on when the President may not withdraw from a treaty alone.",
+  "also": [
+   "jr"
+  ],
+  "f": "The Senate concurred in the Rome Statute in 2011 (Resolution No. 546, 17–1), without a clause requiring its concurrence for withdrawal. In March 2018, while the ICC Prosecutor was examining the drug war, the Philippines announced its withdrawal and deposited a note verbale with the UN Secretary-General, received March 17, 2018. Six senators, the PCICC and the IBP sought certiorari and mandamus to void the withdrawal for lack of Senate concurrence.",
+  "h": "Petitions dismissed as moot (Leonen, J.; 15–0). The withdrawal followed Art. 127 of the Rome Statute and took effect on March 17, 2019; it breached no international obligation, and the ICC keeps jurisdiction over acts committed while the Philippines was a party. RA 9851 still protects against the same crimes. Senate Resolution No. 289 (concurrence needed for withdrawal) was never adopted and has no effect.",
+  "test": "Withdrawal guidelines: (1) leeway when the treaty is bona fide contrary to the Constitution or law, reviewable for grave abuse; (2) no unilateral withdrawal from a treaty backed by a prior or later law; (3) none where the Senate's concurrence required its concurrence in withdrawal."
  },
  {
   "id": "ericta",

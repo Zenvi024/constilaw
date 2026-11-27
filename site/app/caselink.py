@@ -1,6 +1,6 @@
 """Link every case mention in the rule maps to its case card (build-time).
 
-Text inside existing links, headings (h2/h3), codal boxes and buttons is left alone.
+Text inside existing links, headings (h2/h3), codal boxes, buttons and data-nolink spans is left alone.
 Ambiguous short names are resolved by an explicit year after the name, then by
 which rule map the mention sits in; mentions that are really people (‘President
 Marcos’, ‘Atty. Macalintal’) are never linked.
@@ -27,6 +27,9 @@ AMBIG = {
     'Laurel': {'06': 'laureldesierto'},
     'Arroyo': {'08': 'arroyodevenecia'},
     'Poe': {'*': 'poe2016'},
+    'Duterte': {'*': None},   # usually the person; link the cases by full name
+    'Corona': {'*': None},    # two Corona cases and the person
+    'Sereno': {'15': 'sereno'},  # elsewhere it is the Chief Justice (e.g., 'Sereno, C.J., dissented')
 }
 # names that are also people: link only as a citation, i.e. right after '(' or '; ' and before ')' ';' or ','
 CITE_ONLY = {'Marcos': {'05': 'marcos95', '07': 'marcos95'}, 'Aquino': {'05': 'aquino95', '07': 'aquino95'}, 'Garcia': {'12': 'garciaexecsec'}}
@@ -42,7 +45,10 @@ EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco'
          'Belgica (2013)': 'belgica2013', 'Macalintal 2003': 'macalintal2003', 'Macalintal (2003)': 'macalintal2003', 'Macalintal 2023': 'macalintal2023',
          'Macalintal (2023)': 'macalintal2023', 'PHILCONSA 2016': 'philconsa2016', 'Pimentel v. House': 'pimentelhouse2025', 'Lacson': 'lacsonperez',
          'Kabataan': 'kabataan2015', 'Osmeña': 'osmena', 'Chua': 'chua2016',
-         'Ong v. Senate (2023)': 'ong2023', 'Ong v. Senate, 2023': 'ong2023', 'Ong (2023)': 'ong2023', 'Ong 2023': 'ong2023', 'Ong v. Senate Tricomm': 'ong2025'}
+         'Ong v. Senate (2023)': 'ong2023', 'Ong v. Senate, 2023': 'ong2023', 'Ong (2023)': 'ong2023', 'Ong 2023': 'ong2023', 'Ong v. Senate Tricomm': 'ong2025',
+         'Pimentel v. Congress': 'pimentelcongress', 'Pimentel v. Joint Committee': 'pimentelcongress', 'Pimentel v. Executive Secretary': 'pimentelexec',
+         'Duterte v. House': 'duterte2025', 'Corona v. Senate': 'coronasenate', 'Re: Corona': 'recorona', 'Re: Letter of Mrs. Corona': 'recorona',
+         'Gutierrez v. House': 'gutierrez', 'Generillo v. Senate': 'generillo', 'Generillo': 'generillo', 'Torreon': 'torreon', 'Republic v. Sereno': 'sereno'}
 
 def build_aliases(cases, link_texts):
     al = {}
@@ -82,7 +88,7 @@ def link_file(src, prefix, aliases, cases, report):
                 elif tag not in ('br', 'img', 'hr', 'input', 'wbr') and not m.group(4):
                     stack.append((tag, attrs))
             out.append(part); continue
-        if not part or any(t in SKIP_TAGS or 'codal' in a for t, a in stack):
+        if not part or any(t in SKIP_TAGS or 'codal' in a or 'data-nolink' in a for t, a in stack):  # data-nolink: a person, not the case
             out.append(part); continue
         def sub(m):
             name = html.unescape(m.group(1)); cid = aliases.get(name)

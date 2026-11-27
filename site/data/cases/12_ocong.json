@@ -1,0 +1,218 @@
+[
+ {
+  "id": "pimentelcongress",
+  "n": "Pimentel v. Joint Committee of Congress",
+  "y": "2004",
+  "t": "ocong",
+  "sub": "V.A.9(a) Congress as board of canvassers for the presidential election",
+  "a": 0,
+  "r": "Adjournment sine die ends the regular session, not the term of Congress, which runs until noon of June 30 (Art. VI, Secs. 4 and 7); Art. VI, Sec. 15 concerns regular sessions and the 30-day recess, not the term. Canvassing the votes for President and Vice-President under Art. VII, Sec. 4 is a non-legislative function that continues until it is done: the joint public session cannot adjourn sine die before it canvasses and proclaims, a board of canvassers is not functus officio until its work is complete, and it may reconvene without a call from the President.",
+  "f": "In 2004, Congress in joint public session referred the authentication and preliminary canvass of the certificates of canvass for President and Vice-President to a Joint Committee. On June 11, 2004, both Houses of the Twelfth Congress adjourned their last regular session sine die while the canvass was still going on. A senator sought prohibition, arguing that Congress had 'passed out of legal existence' and the Joint Committee could no longer act.",
+  "h": "Petition dismissed in an unsigned Resolution (the petition had 'absolutely no basis under the Constitution'). The Court took jurisdiction given the importance of the issue. The Senate's own rules (Sec. 42, Rule XIV) provide for joint sessions to canvass during any recess, and the 1992 and 1998 canvasses were finished after adjournment sine die.",
+  "test": "Legislative functions may end on final adjournment; non-legislative functions, such as being the National Board of Canvassers, continue until accomplished.",
+  "x": "Use when someone argues that Congress cannot canvass, proclaim or finish a constitutional task because it has adjourned, or that it needs a special session call to do so.",
+  "w": "The Resolution cites 'Section 4 of Article VIII' and 'Section 7 of the same Article' for the terms of Senators and Representatives; the provisions are Art. VI, Secs. 4 and 7. No vote count or ponente is stated (Vitug, J., on official leave; Ynares-Santiago and Austria-Martinez, JJ., on leave).",
+  "s": "Adjournment sine die does not end the canvass: non-legislative duties continue until done.",
+  "sy": [
+   "Pimentel v. Congress"
+  ]
+ },
+ {
+  "id": "padilla",
+  "n": "Padilla v. Congress",
+  "y": "2017",
+  "t": "ocong",
+  "sub": "V.A.9(d) Legislative veto or extension of martial law and the suspension of the writ",
+  "a": 1,
+  "r": "Congress is not constitutionally required to convene in joint session after the President proclaims martial law or suspends the privilege of the writ, except to vote jointly to revoke the proclamation or suspension: 'voting jointly' in Art. VII, Sec. 18 attaches only to revocation (and extension 'in the same manner'). If either House, or both, resolves to revoke, Congress must convene jointly to vote. The Constitution does not say how Congress expresses concurrence or support, so each House may do so under its own rules (Art. VI, Sec. 16(3)). Mandamus does not lie absent a clear ministerial duty.",
+  "f": "Proclamation No. 216 (May 23, 2017) placed all of Mindanao under martial law and suspended the privilege of the writ of habeas corpus. The President reported to Congress within 48 hours. After closed-door briefings, the Senate adopted a resolution not to revoke 'at this time' (17–5) and voted down a resolution to convene in joint session (9–12); the House adopted a resolution of full support by voice vote. Citizens and Sen. De Lima sought mandamus and certiorari to compel a joint session.",
+  "h": "Petitions dismissed (Leonardo-de Castro, J.; 13–2 on the doctrine, all fifteen voting to dismiss). The Court had jurisdiction and the requisites of judicial review were met; the case, though arguably moot after the July 22, 2017 joint session that extended martial law to December 31, 2017, was decided to guide the bench and bar. No right to information was violated. Leonen, J., joined by Caguioa, J., concurred in the result only because the petitions were moot, and dissented from the doctrine.",
+  "test": "Joint session: required only to vote jointly on revocation (or extension, on the President's initiative). Support or concurrence: each House under its own rules. Mandamus: only for a clear ministerial duty.",
+  "x": "Use when Congress meets separately on a martial law proclamation, when one House alone tries to revoke, or when petitioners ask the Court to compel a joint session.",
+  "g": "Gatmaytan, 'The Philippines' Authoritarian Constitution', 95 Phil. L.J. 529 (2022): he lists Padilla with the other martial law cases in which the Court sided with the Duterte administration, 'erasing virtually every constitutional safeguard in the 1987 Constitution' on martial law.",
+  "w": "Two different digests of this case are in Zen's files; both are in the Digests tab. The case also appears under the Commander-in-Chief clause (V.B.2(f)), with the same card.",
+  "s": "No automatic joint session on martial law: Congress votes jointly only to revoke or extend.",
+  "sy": [
+   "Padilla v. Congress"
+  ]
+ },
+ {
+  "id": "pimentelexec",
+  "n": "Pimentel v. Executive Secretary",
+  "y": "2005",
+  "t": "ocong",
+  "sub": "V.A.9(f) Concurrence in treaties: ratification",
+  "a": 0,
+  "r": "The power to ratify a treaty belongs to the President, subject to the concurrence of at least two-thirds of all the Members of the Senate (Art. VII, Sec. 21); the Senate only gives or withholds its consent to the ratification. Signing and ratification are separate steps: a signature authenticates the text, ratification is the state's acceptance. The President may refuse to submit a signed treaty to the Senate or, after the Senate concurs, refuse to ratify it; the Court cannot compel either by mandamus. A Senator has standing to protect the Senate's power to concur.",
+  "f": "The Philippines signed the Rome Statute of the International Criminal Court through its UN Mission on December 28, 2000. Senators, a Representative, human rights groups, two children and law students sought mandamus to compel the Executive Secretary and the DFA to transmit the signed Statute to the Senate for concurrence, arguing that ratification is the Senate's function and that signing created a duty to ratify.",
+  "h": "Petition dismissed (Puno, J.; unanimous, three Justices on leave). Only Sen. Pimentel had standing; the others showed no direct injury. There is no ministerial duty to transmit a signed treaty to the Senate, and no legal or moral duty to ratify it.",
+  "test": "Treaty-making steps: negotiation, signature, ratification by the President, Senate concurrence (two-thirds of all its Members), exchange of instruments. The Senate concurs; it does not ratify.",
+  "x": "Use when someone says the Senate 'ratifies' treaties, or wants the Court to force the President to submit or ratify a signed treaty.",
+  "s": "The President ratifies; the Senate only concurs; no mandamus to transmit a signed treaty.",
+  "sy": [
+   "Pimentel v. Executive Secretary"
+  ]
+ },
+ {
+  "id": "bayanmuna",
+  "n": "Bayan Muna v. Romulo",
+  "y": "2011",
+  "t": "ocong",
+  "sub": "V.A.9(f) Concurrence in treaties: executive agreements",
+  "a": 1,
+  "r": "International agreements are either treaties, which need Senate concurrence, or executive agreements, which do not. An exchange of notes is a recognized form of executive agreement. The Eastern Sea Trading list of subjects for executive agreements is 'not cast in stone': the form depends on the parties' intent, and the Constitution itself requires a treaty only for foreign military bases, troops or facilities (Art. XVIII, Sec. 25). The RP–US Non-Surrender Agreement neither defeats the Rome Statute (the ICC is complementary and the Philippines was then only a signatory) nor amends RA 9851, whose Sec. 17 surrender clause is permissive ('may').",
+  "f": "Through an exchange of notes in May 2003, the Philippines and the United States agreed not to surrender each other's 'persons' (current or former officials, employees, military personnel and nationals) to any international tribunal, except one established by the UN Security Council, without the other's consent. The agreement was not submitted to the Senate. Bayan Muna sought to void it for lack of Senate concurrence.",
+  "h": "Petition dismissed (Velasco, Jr., J.; 12–2). Bayan Muna had standing (transcendental importance). The agreement is a valid executive agreement; it does not abdicate sovereignty and is not immoral or contrary to international law; there was no grave abuse. Carpio, J., joined by Carpio Morales, J., dissented: an executive agreement cannot amend RA 9851, so it is unenforceable until the Senate concurs.",
+  "test": "Form follows the parties' intent; an executive agreement must not amend a law or create obligations that need a treaty.",
+  "x": "Use when the executive enters an international agreement by exchange of notes or as an 'executive agreement' and someone insists it needs two-thirds of the Senate.",
+  "s": "RP–US Non-Surrender Agreement: a valid executive agreement; no Senate concurrence needed.",
+  "sy": [
+   "Bayan Muna v. Romulo"
+  ]
+ },
+ {
+  "id": "saguisag",
+  "n": "Saguisag v. Ochoa",
+  "y": "2016",
+  "t": "ocong",
+  "sub": "V.A.9(f) Concurrence in treaties: foreign military bases, troops and facilities",
+  "a": 1,
+  "r": "Art. XVIII, Sec. 25 ('shall not be allowed in the Philippines except under a treaty') restricts only the initial entry of foreign military bases, troops or facilities; once entry is allowed by treaty, later acts are subject only to the rest of the Constitution and the laws. The President may use an executive agreement in this field if it is not the principal agreement that first allows entry, stays within the treaty or law it implements (no new or expanded obligations), and is consistent with the Constitution and the laws. EDCA implements the VFA and the MDT; its Agreed Locations are not bases, because the Philippines keeps ownership, sovereignty, jurisdiction and access.",
+  "f": "The Enhanced Defense Cooperation Agreement with the United States (signed April 28, 2014) gave US forces and contractors access to 'Agreed Locations', rotational presence and the prepositioning of equipment. The President treated it as an executive agreement and did not submit it to the Senate; the Senate later passed a resolution (15–1–2) that it needed concurrence. Petitioners sought to void it.",
+  "h": "Petitions dismissed (Sereno, C.J.; 10–4) on January 12, 2016; motion for reconsideration denied on July 26, 2016. Standing was relaxed for transcendental importance. EDCA is consistent with the Constitution, the MDT, the VFA and the laws. Dissents: Leonardo-de Castro, Brion, Perlas-Bernabe and Leonen, JJ. (EDCA goes beyond the VFA and needs a treaty).",
+  "test": "Initial entry of foreign bases, troops or facilities: a treaty concurred in by the Senate (and recognized as a treaty by the other state). Implementing agreements: an executive agreement may do, if traceable to the treaty, within its terms, and consistent with the Constitution and laws.",
+  "x": "Use for any new defense or visiting-forces arrangement: ask whether it allows initial entry (treaty) or implements an existing treaty (executive agreement may do).",
+  "w": "In the MR Resolution, the vote line lists Jardeleza, J., both as concurring and as taking no part.",
+  "s": "EDCA valid as an executive agreement implementing the VFA and MDT; Sec. 25 governs only initial entry.",
+  "sy": [
+   "Saguisag v. Ochoa"
+  ]
+ },
+ {
+  "id": "gutierrez",
+  "n": "Gutierrez v. House of Representatives Committee on Justice",
+  "y": "2011",
+  "t": "ocong",
+  "sub": "V.A.9(k) Impeachment: initiation and the one-year bar",
+  "a": 1,
+  "r": "Francisco stands: an impeachment proceeding is initiated by the filing of the complaint and its referral to the Committee on Justice. Two complaints referred at the same time initiate only one proceeding, so there is no violation of the one-year bar, which concerns time, not the number of complaints. 'Promulgate' in Art. XI, Sec. 3(8) does not mean 'publish'; Congress decides how to make its impeachment rules known. The Committee's sufficiency findings did not violate due process: the respondent's participation begins with the answer, after the complaint is found sufficient.",
+  "f": "Two impeachment complaints against Ombudsman Merceditas Gutierrez were filed in July and August 2010 (the first before the 15th Congress opened). On August 11, 2010, the House in plenary referred both to the Committee on Justice at the same time. The Committee found both sufficient in form and substance before the House's impeachment rules were published. Gutierrez sought certiorari and prohibition.",
+  "h": "Petition dismissed and the status quo ante order lifted (Carpio Morales, J.). Certiorari and prohibition were proper remedies and the petition was ripe. Brion, J., joined by four Justices, dissented: 'promulgate' means publish, and Francisco should be revisited; Del Castillo and Perez, JJ., would have let the first complaint proceed and barred the second.",
+  "test": "Initiation = filing + referral. One proceeding per official per year; simultaneous referral is one proceeding. The House in plenary decides referral, not the Secretary General or the Speaker alone.",
+  "x": "Use when several impeachment complaints are filed close together, or when someone says the bar runs from the mere filing of the first complaint.",
+  "w": "The printout gives no tally: at least 6 voted to dismiss, 5 to grant, 2 to grant in part; Nachura, J.'s separate opinion is not in the file; Velasco, Jr., J., took no part.",
+  "s": "Two complaints referred together = one proceeding; the one-year bar is about time; 'promulgate' is not 'publish'.",
+  "sy": [
+   "Gutierrez v. The House"
+  ]
+ },
+ {
+  "id": "coronasenate",
+  "n": "Corona v. Senate",
+  "y": "2012",
+  "t": "ocong",
+  "sub": "V.A.9(k) Impeachment: judicial review of the Senate trial; mootness",
+  "a": 0,
+  "r": "A case is moot when it ceases to present a justiciable controversy, so that a ruling would have no practical use or value. Chief Justice Corona's petition against the impeachment complaint and the impeachment court's rulings was mooted by 'supervening events and his own acts': his conviction, his acceptance of the verdict, and his leaving office. The Court restated that acts of any branch, even those entrusted to the political departments, are reviewable for grave abuse, but did not rule on how far certiorari reaches a Senate impeachment trial.",
+  "f": "On December 12, 2011, 188 Representatives signed an impeachment complaint against CJ Corona, which went straight to the Senate. The impeachment court allowed evidence on parts of Article II (SALN) and issued subpoenas for his bank accounts. Corona sought certiorari and prohibition to void the complaint and the rulings, alleging lack of due process and bias of senator-judges. While the case was pending, he was convicted, accepted the verdict and vacated his office.",
+  "h": "Petition dismissed as moot (Villarama, Jr., J.; 11–0). The motion to inhibit Justices Carpio and Sereno had earlier been denied (February 9, 2012).",
+  "x": "Use for mootness in impeachment: once the trial ends and the respondent accepts the verdict, challenges to the trial's incidents die.",
+  "g": "Gatmaytan (Government Structure, ch. 4) uses the dismissal of the cases against Corona's impeachment as an example of mootness.",
+  "s": "Corona's challenge to his impeachment trial: moot after conviction and his acceptance of the verdict.",
+  "sy": [
+   "Chief Justice Corona v. Senate"
+  ]
+ },
+ {
+  "id": "sereno",
+  "n": "Republic v. Sereno",
+  "y": "2018",
+  "t": "ocong",
+  "sub": "V.A.9(k) Impeachment and quo warranto",
+  "a": 1,
+  "r": "Impeachment is not the exclusive way to remove an impeachable officer: 'may be removed' in Art. XI, Sec. 2 is permissive. Quo warranto tests title, that is, eligibility at the time of appointment or election; impeachment tests fitness for acts in office. Acts or omissions before or at appointment that bear on qualifications may be raised in quo warranto; acts during incumbency by a validly appointed officer go to impeachment. Prescription does not run against the State. Failure to file SALNs negates 'proven integrity' (Art. VIII, Sec. 7(3)); an ineligible appointee is a de facto officer removable by quo warranto.",
+  "f": "Maria Lourdes Sereno, a UP law professor from 1986 to 2006, could not show that she had filed many of her SALNs, and gave the JBC only three of the ten SALNs it required of Chief Justice applicants in 2012. She was appointed Chief Justice. In 2018, while an impeachment complaint against her was pending in the House, the Solicitor General filed a quo warranto petition in the Supreme Court.",
+  "h": "Petition granted (Tijam, J.; 8–6). Sereno was ousted as unlawfully holding the office of Chief Justice, the position declared vacant, and the JBC directed to start the nomination process; she was also ordered to show cause for violating the sub judice rule. Dissents: Carpio (only Congress removes; refer the findings), Leonen ('legal abomination'; prescribed), Caguioa (impeachment exclusive), Velasco, Jr. (nullify the JBC nomination first), Perlas-Bernabe and Del Castillo, JJ.",
+  "test": "Quo warranto (title, judicial, the State through the OSG, eligibility at appointment) versus impeachment (fitness, political, the House and Senate, acts in office).",
+  "x": "Use when the government tries to remove an impeachable officer outside impeachment, or when the defect is in the officer's qualifications at appointment.",
+  "g": "Gatmaytan, 'The Philippines' Authoritarian Constitution', 95 Phil. L.J. 529 (2022): he lists the 8–6 ouster among the Duterte-era decisions that weakened checks on the President, quoting the view that the removal 'through a highly dubious legal maneuver' effectively cowed the courts.",
+  "w": "The case also appears under the Judiciary (V.C), with the June 19, 2018 Resolution denying reconsideration; that later batch adds the Resolution to this card.",
+  "s": "Quo warranto lies against an impeachable officer whose title is defective: Sereno ousted (8–6).",
+  "sy": [
+   "Republic v. Sereno"
+  ]
+ },
+ {
+  "id": "recorona",
+  "n": "Re: Letter of Mrs. Corona",
+  "y": "2021",
+  "t": "ocong",
+  "sub": "V.A.9(k) Impeachment: effects of the judgment",
+  "a": 0,
+  "r": "Judgment in impeachment 'shall not extend further than removal from office and disqualification to hold any office' (Art. XI, Sec. 3(7)). Impeachment is political, not civil, criminal or administrative; no legal liability attaches by the judgment alone, so it does not forfeit retirement benefits. An impeached officer whose civil, criminal or administrative liability was never judicially established may be considered involuntarily retired, with benefits; a later judgment of liability operates as a resolutory condition. The surviving spouse gets survivorship benefits if the Justice was eligible to retire optionally at death (RA 9946, Sec. 3).",
+  "f": "Chief Justice Renato Corona was convicted by the Senate on May 29, 2012 on Article II (failure to disclose his SALN), by 20 votes, and removed. Criminal, tax and forfeiture cases filed against him were dismissed when he died in 2016. In 2020 his widow asked the Court for his retirement benefits and her survivorship pension; the Office of the Chief Attorney recommended denial.",
+  "h": "Request granted (Hernando, J.; unanimous). Corona was declared entitled to retirement benefits under RA 9946 (a five-year lump sum of his salary and allowances at removal), and his widow to survivorship benefits after the five-year period, all released to her.",
+  "test": "Impeachment judgment = removal + disqualification only. Forfeiture needs a separate judgment (administrative dismissal or a criminal penalty).",
+  "x": "Use when asked what else follows from a conviction by the Senate: benefits, criminal liability, or a second penalty.",
+  "w": "Body and fallo differ: the body reckons survivorship from Corona's death; the fallo reckons it from the end of the five-year lump-sum period.",
+  "s": "Removal by impeachment does not forfeit retirement benefits; Corona deemed involuntarily retired.",
+  "sy": [
+   "Re: Letter of Mrs"
+  ]
+ },
+ {
+  "id": "duterte2025",
+  "n": "Duterte v. House of Representatives",
+  "y": "2025",
+  "t": "ocong",
+  "sub": "V.A.9(k) Impeachment: initiation, the one-year bar and due process",
+  "a": 1,
+  "r": "Impeachment is a sui generis legal, political and constitutional process, not purely political, so the Bill of Rights, including due process, applies and constitutional issues may be reviewed in proper cases; the Court does not decide when, who or whether to remove. The Art. XI, Sec. 3(2) periods are mandatory and ministerial; a session day is a calendar day with a plenary session (Resolution). A first-mode complaint is deemed initiated when referred, when properly verified and endorsed but not included in the Order of Business or referred within the periods, or when left unacted on at adjournment sine die. A second-mode complaint (one-third of all Members) is initiated on valid endorsement, but is barred if pending first-mode complaints violated the periods. The Articles of Impeachment against VP Sara Duterte (February 5, 2025) were barred by the one-year rule and void; the Senate never acquired jurisdiction.",
+  "f": "Three citizens' impeachment complaints against VP Sara Duterte, each endorsed by Representatives, were filed in December 2024 but never referred to the Committee on Justice. On February 5, 2025, after a caucus, 215 of 306 Representatives signed a fourth complaint, which went to the Senate the same day; the first three were archived. The VP was not given the draft or the evidence. She and a group of lawyers (Torreon et al.) sought certiorari and prohibition.",
+  "h": "Petitions partially granted (Leonen, J.; July 25, 2025; 13–0). The first three complaints were effectively dismissed; the Articles were barred by Art. XI, Sec. 3(5) and void ab initio; no impeachment proceeding could start against the VP before February 6, 2026. The House's motion for reconsideration was denied with finality on January 28, 2026 (13–0); the Resolution changed the reasons (calendar session days; the first complaint's lapse, not the second mode, triggers the bar; no priority between modes) and relaxed due process: evidence must be available to all Members, and the full hearing is at the Senate trial.",
+  "test": "First mode: initiated on referral, on lapse of the 10-session-day (Order of Business) or 3-session-day (referral) period, or if unacted on at sine die. Second mode: initiated on valid endorsement by one-third. Bar: one year from initiation. Due process (Resolution): draft Articles with evidence available to all Members at plenary; charges for acts in office during the current term; full hearing at the Senate.",
+  "x": "Use for any question on when an impeachment is initiated, whether the House may sit on complaints, the one-year bar, or due process before transmittal to the Senate.",
+  "g": "Gatmaytan (videos, Sept. 2025) disagrees: deeming never-initiated complaints 'dismissed' is inherently contradictory and quietly abandons Francisco and Gutierrez; it lets allies file defective complaints to trigger the bar and shield the official; the due-process requirements have no constitutional anchor, since the respondent is heard at the Senate trial; a new rule should have applied only to future cases, though applying it before any trial began is defensible. He agrees the Court may review impeachment where the Constitution sets limits. He was among the movants (with 1Sambayan and Monsod) seeking to intervene on reconsideration; their motions were merely noted.",
+  "w": "The Decision and the Resolution give different reasons (session days, why the fourth complaint is barred, priority of modes, due process); the fallo stands. The Resolution's body calls Inting, J.'s opinion 'concurring and dissenting'; the vote line calls it concurring.",
+  "s": "Articles against VP Sara Duterte (2025) barred by the one-year rule and void; impeachment not purely political.",
+  "sy": [
+   "Duterte v. House of Representatives"
+  ]
+ },
+ {
+  "id": "generillo",
+  "n": "Generillo v. Senate",
+  "y": "2026",
+  "t": "ocong",
+  "sub": "V.A.9(k) Impeachment: 'trial by the Senate shall forthwith proceed'",
+  "a": 0,
+  "r": "'Forthwith' in Art. XI, Sec. 3(4) means within a reasonable time, longer or shorter according to the circumstances of each case, and the Senate's duty to try includes preparatory acts. Unlike Sec. 3(2), which fixes periods for the House, Sec. 3(4) fixes none, so the Senate determines when the actual trial begins, but it must not unduly delay. The Senate, as part of a coordinate branch, cannot be compelled by mandamus to act within an expected time, save for clearly established grave abuse of discretion.",
+  "f": "The House delivered the Articles of Impeachment against VP Sara Duterte to the Senate at 4:47 PM on February 5, 2025, its last session day before recess. The Senate President said the Senate would not convene as an impeachment court during recess. A lawyer sought mandamus on February 13 to compel the Senate to try her 'forthwith'. The Senate prepared rules, budget and logistics and convened as an impeachment court on June 10, 2025, 126 days after receipt; the Articles were later voided in Duterte v. House.",
+  "h": "Petition dismissed (Zalameda, J.; April 22, 2026; 14–0). Mandamus was improper (treated as certiorari pro hac vice); petitioner had standing; the issue was justiciable; the petition was moot because the Articles were void. 'Even on the merits', the Senate committed no grave abuse. Leonen, SAJ, concurred in the dismissal for mootness but would hold that 'forthwith' means an immediate duty to convene; Singh, J., treated the merits as obiter.",
+  "test": "Forthwith = within a reasonable time under the circumstances; 'trial' includes preparations; no fixed period for the Senate; no undue delay.",
+  "x": "Use when the Senate delays convening as an impeachment court, or someone asks the Court to order the trial to start.",
+  "g": "Gatmaytan (video, May 2026): 'not good news'. The ruling gives the Senate a lot of discretion; any delay can now be justified as a 'reasonable time'.",
+  "w": "The fallo dismisses the 'Petition for Mandamus', though the body treated it as certiorari, and makes no declaration on 'forthwith'; the merits ruling came after the Court found the case moot, and Singh, J., calls it obiter. News reports gave the vote as 14-0-1.",
+  "s": "'Forthwith' means within a reasonable time; no mandamus to make the Senate start an impeachment trial.",
+  "sy": [
+   "Generillo, Jr. v. Senate"
+  ]
+ },
+ {
+  "id": "torreon",
+  "n": "Torreon v. House of Representatives Committee on Justice",
+  "y": "2026",
+  "t": "ocong",
+  "sub": "V.A.9(k) Impeachment: judicial review of the House committee's threshold review",
+  "a": 0,
+  "r": "The petition argued that the House Committee on Justice's threshold review (form, substance, grounds) is a mandatory gatekeeping function: a defective complaint must be dismissed, not cured by subpoenas; that the same Committee could not dismiss the complaints against the President for lack of ultimate facts and then pass weaker complaints against the Vice President (due process and equal protection); and that charges must concern acts in relation to the office during the current term (Duterte v. House). The Supreme Court dismissed the consolidated petitions as moot on August 5, 2026, because the House had already approved the Articles and transmitted them to the Senate.",
+  "f": "After the one-year bar lapsed on February 6, 2026, four impeachment complaints were filed against VP Sara Duterte and referred to the Committee on Justice. The Committee found the third (Saballa) and fourth (Cabrera) complaints sufficient in form, substance and grounds, and on March 25, 2026 issued subpoenas for her SALNs and other records. Davao-based lawyers led by Atty. Israelito Torreon filed certiorari and prohibition on March 27, 2026; the VP filed her own petition (G.R. No. E-05667), consolidated with theirs.",
+  "h": "Dismissed as moot (August 5, 2026). The House impeached the VP on May 11, 2026 and transmitted the Articles to the Senate on May 14; once the accusatory phase was over, the challenges to the Committee's steps no longer presented a live controversy.",
+  "x": "Use for the line between the House's accusatory phase and the Senate's trial: challenges to committee steps become moot once the Articles reach the Senate; objections then go to the impeachment court.",
+  "w": "Zen's file has the petition only (dated March 27, 2026). The ruling comes from the news index (item 23); the Court's August 5, 2026 resolution is not in the files (see MISSING.md). The petition's arguments are contentions, not holdings.",
+  "s": "Petition against the House committee's 2026 impeachment hearings: dismissed as moot after transmittal.",
+  "sy": [
+   "Torreon, et al. v. House"
+  ]
+ }
+]

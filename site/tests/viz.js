@@ -79,6 +79,13 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     await p.click('#gRes .gres >> nth=0'); await p.waitForTimeout(400);
     const ripeVis = await p.evaluate(() => { const r = document.getElementById('fig-ripe').getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; });
     check(tag, 'search a hook', nres > 0 && ripeVis, {nres, ripeVis});
+    // finals V.A.9: every diagram has a "Say it in orals" box; the one-year-bar walk lands where the Court did
+    const oc = await p.evaluate(() => { const f = [...document.querySelectorAll('#ocong figure.viz')]; return {n: f.length, oral: f.filter(x => x.querySelector('.vor')).length}; });
+    check(tag, 'V.A.9 diagrams carry orals lines', oc.n >= 10 && oc.oral === oc.n, oc);
+    await go('fig-initiate'); await p.click('#fig-initiate .walkbar .vchip:has-text("Gutierrez")');
+    await p.click('#fig-initiate .gate.cur .yn [data-a="y"]');
+    const gut = await txt('#fig-initiate .walkout .vres'); check(tag, 'Gutierrez walk: one proceeding', /One proceeding/.test(gut), gut);
+    await p.click('#fig-initiate .walkout [data-w="map"]');
     // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
     const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
     check(tag, 'no style leaks outside the diagrams', leak === 0, leak);

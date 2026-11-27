@@ -552,7 +552,7 @@
   "c": "ok"
  },
  "pangilinan2021": {
-  "k": "ICC withdrawal",
+  "k": "Withdrawal guidelines, moot",
   "c": "sun"
  },
  "pasi": {
@@ -829,6 +829,54 @@
  },
  "agcaoili": {
   "k": "Prohibition needs abuse",
+  "c": "sun"
+ },
+ "bayanmuna": {
+  "k": "Exchange of notes",
+  "c": "ok"
+ },
+ "coronasenate": {
+  "k": "Moot by conviction",
+  "c": "sun"
+ },
+ "duterte2025": {
+  "k": "Articles barred, void",
+  "c": "no"
+ },
+ "generillo": {
+  "k": "Forthwith, reasonably",
+  "c": "ok"
+ },
+ "gutierrez": {
+  "k": "Simultaneous referral",
+  "c": "ok"
+ },
+ "padilla": {
+  "k": "Joint vote only",
+  "c": "ok"
+ },
+ "pimentelcongress": {
+  "k": "Canvass outlives adjournment",
+  "c": "ok"
+ },
+ "pimentelexec": {
+  "k": "President ratifies",
+  "c": "acc"
+ },
+ "recorona": {
+  "k": "Removed, still retired",
+  "c": "sun"
+ },
+ "saguisag": {
+  "k": "EDCA implements VFA",
+  "c": "ok"
+ },
+ "sereno": {
+  "k": "Quo warranto ouster",
+  "c": "no"
+ },
+ "torreon": {
+  "k": "Moot after transmittal",
   "c": "sun"
  }
 }

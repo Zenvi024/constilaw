@@ -84,14 +84,21 @@
   "n": "Francisco v. House of Representatives",
   "y": "2003",
   "t": "basics",
-  "sub": "II. Interpreting the Constitution",
+  "sub": "II. Interpreting the Constitution (also V.A.9(k) Impeachment: initiation and the one-year bar)",
   "a": 1,
   "r": "Judicial review extends to impeachment proceedings where the Constitution sets limits. ‘Initiate’ in Art. XI, Sec. 3(5) means the filing of the complaint and its referral to the Committee on Justice; a second complaint within one year is barred.",
   "f": "A first impeachment complaint against CJ Davide was dismissed; a day later, over one-third of House members filed a second complaint within the same year.",
-  "h": "The second complaint was barred by the one-year rule; the House rules defining ‘initiation’ differently were unconstitutional.",
-  "x": "Use for the three modes of interpretation (verba legis, ratio legis, ut magis valeat), for truly political versus justiciable questions, and for the one-year bar.",
+  "h": "The second complaint was barred by the one-year rule; the House rules defining ‘initiation’ differently were unconstitutional. (Carpio-Morales, J.; 11–3, computed from the opinions; Davide, C.J., took no part.)",
+  "x": "Use for the three modes of interpretation (verba legis, ratio legis, ut magis valeat), for truly political versus justiciable questions, and for the one-year bar. In impeachment questions, it is the starting point for initiation (filing plus referral), the one-year bar, and the limits on the House’s rule-making power (Art. XI, Sec. 3(8)).",
   "test": "Political question if the Constitution commits the matter fully to a political branch with no limits; justiciable if the Constitution imposes limits (e.g., the one-year bar), which the Court must enforce.",
-  "s": "Impeachment is reviewable where the Constitution sets limits; ‘initiate’ = filing plus referral; one-year bar."
+  "s": "Impeachment is reviewable where the Constitution sets limits; ‘initiate’ = filing plus referral; one-year bar.",
+  "also": [
+   "ocong"
+  ],
+  "w": "The printout states no tally; 11–3 is computed from the separate opinions (Puno and Ynares-Santiago, concurring and dissenting, and Bellosillo, labeled concurring, voted to dismiss). Duterte v. House (2025) adds more triggers for initiation; see that card.",
+  "sy": [
+   "Francisco v. The House"
+  ]
  },
  {
   "id": "jdf",
