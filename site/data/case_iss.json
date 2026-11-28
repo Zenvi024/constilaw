@@ -3267,5 +3267,317 @@
   ],
   "vote": "9–0, Fernando, C.J. (March 17, 1981). Petition granted; bail orders void.",
   "ops": "None."
+ },
+ "rodriguez": {
+  "iss": [
+   {
+    "q": "May a temporary protection order still be granted after the writs have issued?",
+    "a": "NO",
+    "why": "Interim reliefs are available only on filing or before final judgment (Sec. 14, Rule on the Writ of Amparo); they assist the court before it decides. Protection is already part of the privilege granted."
+   },
+   {
+    "q": "Should former President Arroyo be dropped because of presidential immunity?",
+    "a": "NO",
+    "why": "Immunity lasts only during tenure (Estrada v. Desierto); a non-sitting President cannot invoke it, even for acts during her term. Amparo determines responsibility and accountability, not liability."
+   },
+   {
+    "q": "May command responsibility be used in amparo and habeas data?",
+    "a": "YES, in a limited way",
+    "why": "Only to identify the superior accountable and duty-bound to act, not to impose criminal or administrative liability (Rubrico). The President, as Commander-in-Chief, may be held responsible or accountable if the elements (superior-subordinate relation, knowledge, failure to prevent or punish) are shown."
+   },
+   {
+    "q": "Was Arroyo shown to be responsible or accountable?",
+    "a": "NO",
+    "why": "The reports relied on were not attached; nothing showed she knew of or failed to act on the abduction. Responsibility is not imputed automatically."
+   },
+   {
+    "q": "Were Rodriguez’s rights violated by the military and police respondents?",
+    "a": "YES (the chiefs and officers involved)",
+    "why": "His detailed account, the driver’s testimony and the medical findings established the abduction, detention and torture by substantial evidence; the filming of his home was a continuing threat. The failure to conduct a fair and effective investigation violated his right to security by omission."
+   }
+  ],
+  "vote": "Sereno, J., November 15, 2011. G.R. No. 191805 granted; G.R. No. 193160 denied."
+ },
+ "deduro": {
+  "iss": [
+   {
+    "q": "Is red-tagging a threat to life, liberty and security under the Rule on the Writ of Amparo?",
+    "a": "YES",
+    "why": "Red-tagging, vilification, labelling and guilt by association are threats that may justify the writ; the right to security is freedom from threat (Manalo). UN reports link tagging to surveillance, threats and killings, often as a precursor to abduction or extrajudicial killing."
+   },
+   {
+    "q": "Did the RTC err in dismissing the petition outright, without a return or hearing?",
+    "a": "YES",
+    "why": "Issuing the writ needs only a prima facie case on the face of the petition, read in its totality from the petitioner’s view; the slides, photographs and the killings of others tagged with him sufficed. Granting the privilege needs substantial evidence after the return and summary hearing (De Lima v. Gatdula); outright dismissal denied both sides due process."
+   },
+   {
+    "q": "Is Deduro entitled to all the reliefs he asked for?",
+    "a": "NOT RULED",
+    "why": "The Court only issued the writ; the RTC, as trier of facts, will decide the privilege and the production order after a summary hearing. Deduro was told to implead the groups behind the posters."
+   }
+  ],
+  "vote": "Zalameda, J., July 4, 2023. Petition partly granted; writ issued; case returned to the RTC."
+ },
+ "bautistasalucon": {
+  "iss": [
+   {
+    "q": "Did the CA err in admitting hearsay and circumstantial evidence?",
+    "a": "NO",
+    "why": "Amparo uses the totality-of-evidence standard (Razon v. Tagitis): evidence otherwise inadmissible may be considered if relevant and consistent with admissible evidence. The State often monopolizes the evidence; but admissibility is still case-to-case."
+   },
+   {
+    "q": "Was there substantial evidence of a threat to justify amparo?",
+    "a": "YES",
+    "why": "The threats were real and probable: the background check on her as a “red lawyer,” the surveillance, the questions about her routine, and the killing of her paralegal right after he warned her. Courts need not wait for the irreversible."
+   },
+   {
+    "q": "Was habeas data proper though no one proved the petitioners held her data?",
+    "a": "YES",
+    "why": "The surveillance and background-check order aimed to gather information on her movements and cases; ordering its disclosure and destruction protects her privacy and security."
+   },
+   {
+    "q": "Was the order to investigate with extraordinary diligence valid?",
+    "a": "YES",
+    "why": "Public officials must prove extraordinary diligence (Sec. 17), not rely on the presumption of regularity; merely ordering subordinates to check and accepting their denials is not enough."
+   }
+  ],
+  "vote": "12–0, Bersamin, J., January 23, 2018. Petition denied; case remanded to the CA to monitor compliance."
+ },
+ "waterforall": {
+  "iss": [
+   {
+    "q": "Were the elements of the writ of kalikasan shown?",
+    "a": "NO",
+    "why": "The petitioner must prove a violation of the right to a balanced and healthful ecology, an unlawful act or omission, and damage prejudicing life, health or property in two or more cities or provinces (Rule 7, RPEC). It offered bare allegations: no proof of the system’s operation, its defects, the lack of permits, or any damage and its magnitude."
+   },
+   {
+    "q": "Does the precautionary principle excuse the lack of proof?",
+    "a": "NO",
+    "why": "It applies only when the causal link between an activity and environmental damage cannot be shown with full scientific certainty (West Tower); it does not cover a total absence of evidence."
+   },
+   {
+    "q": "Was the writ of kalikasan the proper remedy?",
+    "a": "NO",
+    "why": "The permit and compliance questions belonged first to the DENR (exhaustion and primary jurisdiction); the writ is not a substitute for other legal, administrative or political remedies."
+   },
+   {
+    "q": "Do MMDA v. Concerned Residents and the CA’s earlier sewage case apply?",
+    "a": "NO",
+    "why": "Neither dealt with the validity of the combined system or the damage it causes."
+   }
+  ],
+  "vote": "14–0, Hernando, J., March 28, 2023. Petition denied."
+ },
+ "caram": {
+  "iss": [
+   {
+    "q": "Is amparo the proper remedy to recover parental authority and custody of a child?",
+    "a": "NO",
+    "why": "The writ covers only extrajudicial killings and enforced disappearances or threats of them (Manalo; Lozada). Caram was not looking for a missing child; she was contesting custody of a ward of the State. The remedy is a custody case or habeas corpus."
+   },
+   {
+    "q": "Was the child a victim of enforced disappearance?",
+    "a": "NO",
+    "why": "The DSWD never concealed his whereabouts: Caram knew he was with the prospective adopters, and he was produced in court. The third and fourth elements (refusal to disclose whereabouts, intent to remove from the protection of the law) were missing (Navia v. Pardico)."
+   },
+   {
+    "q": "Is RA 9523 (DSWD certification for adoption) unconstitutional?",
+    "a": "NO (not belabored)",
+    "why": "Congress may enact and change laws; the Rule on Adoption only enforces adoption statutes in court, so there is no conflict with the Court’s rule-making power."
+   }
+  ],
+  "vote": "Villarama, Jr., J., August 5, 2014. Petition denied; dismissal affirmed without prejudice to other remedies."
+ },
+ "pimentelleb": {
+  "iss": [
+   {
+    "q": "May Rule 65 be used against a law, and are the requisites of judicial review met?",
+    "a": "YES",
+    "why": "Under the expanded judicial power, certiorari and prohibition lie against any branch for grave abuse. Students and a law school had direct injury, and the issues were of transcendental importance; only the provisions actually applied were ruled on."
+   },
+   {
+    "q": "Does the Supreme Court have jurisdiction over legal education?",
+    "a": "NO",
+    "why": "Legal education has always been regulated by the political branches. The rule-making power over admission to the practice of law cannot be enlarged to cover the study of law; the Court exercises judicial power only (Sec. 12; Meralco). Placing the LEB under the Court would be improper judicial activism."
+   },
+   {
+    "q": "Do the LEB’s powers encroach on the Court’s rule-making power?",
+    "a": "PARTLY",
+    "why": "Void: Sec. 3(a)(2) (training of members of the legal profession), Sec. 7(g) (internship as a requirement for the bar) and Secs. 2 (par. 2) and 7(h) (mandatory CLE for lawyers), since who takes the bar and how lawyers are trained are the Court’s. Valid: Sec. 7(e), minimum standards for admission to law school."
+   },
+   {
+    "q": "Is regulation of legal education a valid police power?",
+    "a": "YES, if reasonable",
+    "why": "The State’s supervision of schools is oversight, not control (Art. XIV, Sec. 4(1)); academic freedom covers who may teach, what, how, and who may be admitted."
+   },
+   {
+    "q": "Do the PhiLSAT and other LEB issuances violate academic freedom?",
+    "a": "PARTLY",
+    "why": "The PhiLSAT as a pass-or-fail requirement for admission to any law school is a “totalitarian” scheme that lets the LEB pre-select students; also void are rules dictating foreign graduates’ admission, faculty LL.M. quotas and loads, and the apprenticeship and legal aid programs. An aptitude test as a minimum standard is not itself invalid."
+   }
+  ],
+  "vote": "J. Reyes, Jr., J., September 10, 2019. Partly granted (8 concurring; 5 concurring and dissenting).",
+  "ops": "Leonen, J. (with Bersamin, C.J.): any State admission test violates academic freedom; would void all of RA 7662. Gesmundo, J.: the PhiLSAT should be set aside; testing belongs to the law schools."
+ },
+ "zaldivar": {
+  "iss": [
+   {
+    "q": "Must the Court inhibit, or refer the case to the IBP?",
+    "a": "NO",
+    "why": "Disciplinary proceedings are sui generis, an investigation with no plaintiff or prosecutor; the Court acts as an entity. Power to exclude lawyers is incident to the exclusive power to admit them; referral under Rule 139-B is not mandatory, especially for acts done before the Court. He admitted the statements; only questions of law remained."
+   },
+   {
+    "q": "Are Gonzalez’s statements contempt and professional misconduct?",
+    "a": "YES",
+    "why": "Saying the Justices decided out of vengeance and under pressure, and that the rich get favorable action, were baseless and degraded the administration of justice. Free speech does not cover criticism that is not bona fide or that goes beyond decency; the disciplinary power is broader than contempt."
+   }
+  ],
+  "vote": "Per curiam, October 7, 1988 (resolution). Gonzalez suspended from the practice of law indefinitely."
+ },
+ "aguirrerana": {
+  "iss": [
+   {
+    "q": "Did Rana engage in the unauthorized practice of law, warranting denial of admission?",
+    "a": "YES",
+    "why": "Before his oath he appeared as counsel and signed pleadings before a board of canvassers; practice includes any activity requiring legal knowledge and skill (Cayetano v. Monsod; PLA v. Agrava). Passing the bar is not enough: one becomes a lawyer on taking the oath and signing the Roll. Practicing without a license shows a lack of moral fitness."
+   },
+   {
+    "q": "Did he act as counsel while still the municipal council’s secretary?",
+    "a": "NO",
+    "why": "He had resigned, effective upon acceptance, before the acts complained of."
+   }
+  ],
+  "vote": "Carpio, J., June 10, 2003 (Bar Matter No. 1036). Admission denied."
+ },
+ "garrido": {
+  "iss": [
+   {
+    "q": "Do prescription or the complainant’s desistance bar the case?",
+    "a": "NO",
+    "why": "Rules on prescription, desistance and the like do not apply to disbarment, which concerns fitness for the bar and the public interest; the complainant is only a witness."
+   },
+   {
+    "q": "May acts done before admission ground disbarment?",
+    "a": "YES",
+    "why": "Good moral character is a condition precedent and a continuing requirement; admission gives only a rebuttable presumption of it. The Court’s disciplinary power is incident to its power to admit (Art. VIII, Sec. 5(5); Rule 138, Sec. 27)."
+   },
+   {
+    "q": "Is Garrido grossly immoral?",
+    "a": "YES",
+    "why": "Contracting marriages while earlier ones subsisted, and deceiving his wives, is reprehensible to a high degree."
+   },
+   {
+    "q": "Is Valencia also liable?",
+    "a": "YES",
+    "why": "She married him knowing he was married and lived with him openly; that is grossly immoral, whatever the date of her admission."
+   }
+  ],
+  "vote": "Per curiam, February 4, 2010. Both respondents disbarred."
+ },
+ "inreong": {
+  "iss": [
+   {
+    "q": "May hearsay be admitted in an administrative proceeding against a judge?",
+    "a": "YES",
+    "why": "Administrative cases need only substantial evidence; the witnesses’ accounts, read with Ong’s own admissions, may be considered."
+   },
+   {
+    "q": "Was bribery proven?",
+    "a": "NO",
+    "why": "The evidence did not sustain a charge of bribery or corruption in the Kevlar case; but his association with Napoles after the decision was credibly shown."
+   },
+   {
+    "q": "Is Ong guilty of gross misconduct, dishonesty and impropriety?",
+    "a": "YES",
+    "why": "He met and dealt with a litigant whose case he had decided, accepted favors, and was untruthful about it (Canons 2, 3 and 4, New Code of Judicial Conduct). Judges must avoid even the appearance of impropriety."
+   }
+  ],
+  "vote": "Per curiam, September 23, 2014. Dismissed, with forfeiture of retirement benefits.",
+  "ops": "Some Justices (Perez, Reyes, JJ., among others) would have found only simple misconduct and imposed a lighter penalty."
+ },
+ "zoleta": {
+  "iss": [
+   {
+    "q": "Is the Sandiganbayan decision void because Justice Ong was allegedly not natural-born?",
+    "a": "NO",
+    "why": "Kilosbayan v. Ermita did not rule that Ong was not natural-born; it barred him from the Supreme Court until he proved his status. A final RTC decision later declared him natural-born. In any case he was a de facto officer, whose acts are valid as to the public."
+   },
+   {
+    "q": "Should the Court re-weigh the evidence on a Rule 45 appeal?",
+    "a": "NO",
+    "why": "Only questions of law are reviewed; the Sandiganbayan’s findings stand unless arbitrary. The elements of malversation through falsification were proven, with conspiracy."
+   }
+  ],
+  "vote": "Brion, J., Second Division, July 29, 2015. Petition denied; penalty increased."
+ },
+ "edillon": {
+  "iss": [
+   {
+    "q": "Are the bar integration rules unconstitutional?",
+    "a": "NO",
+    "why": "The Court had already upheld integration in 1973. An integrated bar is a State-organized bar every lawyer must belong to; integration is a valid exercise of police power and of the Court’s power over the practice of law, which is a privilege clothed with public interest."
+   },
+   {
+    "q": "Does compulsory membership violate freedom of association?",
+    "a": "NO",
+    "why": "Lawyers are already members of the bar on admission; the IBP only organizes them. The only compulsion is payment of dues, and even compelled association would be justified by police power."
+   },
+   {
+    "q": "Are the dues void?",
+    "a": "NO",
+    "why": "They are a reasonable regulatory fee to fund integration."
+   },
+   {
+    "q": "Is removal from the Roll for non-payment a deprivation of property without due process?",
+    "a": "NO",
+    "why": "The practice of law is a privilege subject to regulation; the penalty is avoidable by paying, and is not arbitrary."
+   }
+  ],
+  "vote": "12–0, Castro, C.J., August 3, 1978. Name stricken from the Roll of Attorneys."
+ },
+ "ibpelections": {
+  "iss": [
+   {
+    "q": "May the Court suspend the oath of elected IBP officers and inquire into the elections?",
+    "a": "YES",
+    "why": "It exercises its supervision over the Integrated Bar, which is strictly non-political; it may also amend the By-Laws (Sec. 77). It acted on widespread reports, through a five-Justice committee that heard 49 witnesses; the inquiry concerned campaign conduct, not the vote count."
+   },
+   {
+    "q": "Were acts prohibited by Sec. 14 of the By-Laws committed?",
+    "a": "YES",
+    "why": "Early campaigning, slates, free plane tickets and a government plane, five-star hotel headquarters, a labor official campaigning, leaflets and inducements to delegates turned the election into a “political circus.”"
+   },
+   {
+    "q": "Did the lawyers involved also violate their ethics?",
+    "a": "YES",
+    "why": "Rule 1.02, Canon 1, Code of Professional Responsibility: lawyers must promote respect for law and not lessen confidence in the legal system."
+   }
+  ],
+  "vote": "12–0, per curiam, October 6, 1989 (resolution). Elections annulled; new elections ordered; By-Laws amended."
+ },
+ "divina": {
+  "iss": [
+   {
+    "q": "May the Court regulate the IBP and its elections?",
+    "a": "YES, prudently",
+    "why": "The IBP is a sui generis public institution; the Court’s power over the integrated bar (Art. VIII, Sec. 5(5)) implies supervision of all its activities, elections included, as in the 1989 IBP elections case."
+   },
+   {
+    "q": "Did Divina violate Sec. 14 of the IBP By-Laws?",
+    "a": "NO",
+    "why": "There was no concrete proof he would run (an “open secret” is hearsay), and the trips and gifts came months before the election, before the electors were chosen. Unlike in 1989, no candidacy was shown."
+   },
+   {
+    "q": "Is he still liable for simple misconduct under the CPRA?",
+    "a": "YES",
+    "why": "Canon II requires propriety and the appearance of propriety; extravagant trips and gifts to IBP officers were excessive largesse, a transgression without corruption or flagrant intent."
+   },
+   {
+    "q": "Are the recipients also liable?",
+    "a": "YES",
+    "why": "The officers who accepted, and the others who received exorbitant gifts, risked being beholden to the giver."
+   }
+  ],
+  "vote": "12–3, Gaerlan, J., July 30, 2024. Divina and six recipients fined ₱100,000 each."
  }
 }

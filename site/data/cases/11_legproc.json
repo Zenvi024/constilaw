@@ -292,11 +292,14 @@
   "r": "The Court may enjoin a legislative inquiry, but only on a showing of grave abuse or unconstitutionality. Habeas corpus already with the CA stays there. Amparo covers only extralegal killings and enforced disappearances. Congress cannot compel or cite in contempt CA Justices over their adjudication: judicial privilege, and discipline belongs to the SC.",
   "f": "A House committee investigating Ilocos Norte's use of tobacco excise funds for vehicles cited six provincial employees (the 'Ilocos 6') in contempt and detained them. The CA issued a writ of habeas corpus; the House then threatened the CA Justices with contempt. The detainees and Governor Imee Marcos filed an omnibus petition in the SC.",
   "h": "The omnibus petition was dismissed (Tijam, J.); the release of the detainees mooted the habeas corpus prayer, which the Court decided under the exceptions to mootness.",
-  "x": "Use when witnesses detained by Congress look for a remedy, or Congress threatens judges who intervene.",
+  "x": "Use when witnesses detained by Congress look for a remedy, or Congress threatens judges who intervene. Under the writs (V.C.2(p)(5), issues 1–3): amparo covers only extralegal killings and enforced disappearances or threats of them, not detention for legislative contempt; and the court that first takes a habeas corpus case keeps it, even against the Supreme Court.",
   "w": "The syllabus lists this case twice: the fourth issue here, issues one to three under the rules on constitutional rights (V.C.2(p)(5)).",
   "s": "Ilocos 6: prohibition against an inquiry needs grave abuse; amparo unavailable; Congress cannot cite CA Justices.",
   "sy": [
    "Agcaoili, Jr. v. Farinas"
+  ],
+  "also": [
+   "scadmin"
   ]
  }
 ]

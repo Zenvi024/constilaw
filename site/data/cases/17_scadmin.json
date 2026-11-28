@@ -169,5 +169,271 @@
   "sy": [
    "People v. Sola"
   ]
+ },
+ {
+  "id": "rodriguez",
+  "n": "Rodriguez v. Macapagal-Arroyo (In re Writ of Amparo and Habeas Data for Noriel H. Rodriguez)",
+  "y": "2011",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(5) Rules on constitutional rights",
+  "a": 1,
+  "r": "Amparo is summary: it needs substantial evidence and determines responsibility and accountability, not criminal, civil or administrative liability. Command responsibility may be used in amparo only to identify who is accountable and duty-bound to act. A former President may be impleaded: presidential immunity lasts only during tenure.",
+  "f": "Peasant organizer Noriel Rodriguez was abducted in Cagayan, held for 11 days in an army camp, beaten, electrocuted and forced to sign “surrenderee” papers; soldiers later escorted him home and filmed his house. He sought amparo and habeas data against President Arroyo and military and police officials.",
+  "h": "G.R. No. 191805 granted, G.R. No. 193160 denied (Sereno, J., November 15, 2011). The military and police officials were responsible or accountable; Arroyo, no longer President, was not immune, but there was no substantial evidence of her responsibility; no temporary protection order after the writs had issued.",
+  "test": "Responsibility (participation by act or omission) and accountability (knowledge, failure to disclose or investigate) (Razon v. Tagitis); command responsibility only to find who must act; immunity is co-extensive with tenure.",
+  "x": "Use when an activist is abducted, tortured or watched by soldiers, and to decide whom to implead (a former President, commanders) in an amparo petition.",
+  "g": "",
+  "w": "",
+  "s": "Abducted organizer gets amparo; a former President is not immune, but must be shown responsible.",
+  "sy": [
+   "In the Matter of the Petition for the Writ of Amparo and Habeas Data in favor of Noriel H. Rodriguez"
+  ]
+ },
+ {
+  "id": "deduro",
+  "n": "Deduro v. Vinoya",
+  "y": "2023",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(5) Rules on constitutional rights",
+  "a": 1,
+  "r": "Red-tagging, vilification, labelling and guilt by association are threats to life, liberty and security that may justify the writ of amparo. Issuing the writ needs only a prima facie showing on the face of the petition, read as a whole; granting the privilege needs substantial evidence after the return and a summary hearing.",
+  "f": "Iloilo activist and former party-list representative Siegfred Deduro was named in army slides at a provincial peace-and-order meeting as part of the CPP-NPA hierarchy; posters called him a terrorist, and other activists tagged with him were shot dead. The RTC dismissed his amparo petition outright, without requiring a return.",
+  "h": "Petition partly granted; writ issued (Zalameda, J., July 4, 2023). The RTC erred in dismissing outright; it was to require a return, hold a summary hearing and decide whether to grant the privilege, after Deduro impleaded the groups behind the posters.",
+  "test": "Two stages: issuance of the writ (prima facie, Sec. 6) → grant of the privilege (substantial evidence, Sec. 18).",
+  "x": "Use when an activist, journalist, lawyer or judge is red-tagged and fears for their life.",
+  "g": "",
+  "w": "",
+  "s": "Red-tagging is a threat to life, liberty and security: the writ of amparo may issue.",
+  "sy": [
+   "Deduro v. Vinoya"
+  ]
+ },
+ {
+  "id": "bautistasalucon",
+  "n": "Bautista v. Dannug-Salucon",
+  "y": "2018",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(5) Rules on constitutional rights",
+  "a": 1,
+  "r": "In amparo, the totality of the evidence, including hearsay and circumstantial evidence consistent with admissible evidence, may establish a threat by substantial evidence; courts need not wait for a killing. Respondent officials must prove extraordinary diligence: mere orders to subordinates and reliance on their reports are not enough. Habeas data may order surveillance data handed over and destroyed.",
+  "f": "Atty. Salucon, a human rights lawyer for political detainees, was warned by her paralegal that she was under military surveillance; he was shot dead that evening. Police ordered a background check on whether she was a “red lawyer,” and military-looking men asked about her routine. The CA granted amparo and habeas data against the AFP and PNP chiefs.",
+  "h": "Petition denied; remanded to the CA to monitor compliance (12–0, Bersamin, J., January 23, 2018). The threats were real and probable; the habeas data order to disclose and destroy her data was proper; and the officials had to investigate with extraordinary diligence.",
+  "test": "Totality of evidence (Razon v. Tagitis); substantial evidence; extraordinary diligence for public officials (Sec. 17, Rule on the Writ of Amparo).",
+  "x": "Use when a lawyer, activist or journalist is surveilled and the evidence is mostly hearsay or circumstantial.",
+  "g": "",
+  "w": "",
+  "s": "A lawyer under surveillance gets amparo and habeas data; hearsay may count in the totality.",
+  "sy": [
+   "Bautista v. Dannug-Salucon"
+  ]
+ },
+ {
+  "id": "waterforall",
+  "n": "Water for All Refund Movement, Inc. v. Manila Waterworks and Sewerage System",
+  "y": "2023",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(5) Rules on constitutional rights",
+  "a": 1,
+  "r": "The writ of kalikasan requires proof of (1) an actual or threatened violation of the right to a balanced and healthful ecology, (2) by an unlawful act or omission, (3) causing damage prejudicing life, health or property in two or more cities or provinces; the magnitude of the damage is indispensable. The precautionary principle helps only when the causal link is uncertain, not when there is no evidence at all.",
+  "f": "A consumer group sought a writ of kalikasan against the MWSS and its concessionaires for adopting a combined drainage-sewerage system that, it said, would spill untreated sewage in heavy rain, and for charging all consumers an environmental fee. It offered allegations and old data, and did not implead the DENR.",
+  "h": "Petition denied (14–0, Hernando, J., March 28, 2023). None of the elements was proven: no evidence of the system’s operation, of any unlawful act, or of damage and its magnitude. The precautionary principle could not replace proof, and the group should have gone first to the DENR.",
+  "test": "Kalikasan: violation + unlawful act or omission + damage in two or more cities or provinces; precautionary principle only for uncertain causal links.",
+  "x": "Use when an environmental group seeks a writ of kalikasan against a project (reclamation, sewerage, mining) on allegations alone.",
+  "g": "",
+  "w": "",
+  "s": "No writ of kalikasan on bare allegations: prove the violation, the unlawful act and damage of great magnitude.",
+  "sy": [
+   "Water for All Refund Movement"
+  ]
+ },
+ {
+  "id": "caram",
+  "n": "Caram v. Segui",
+  "y": "2014",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(5) Rules on constitutional rights",
+  "a": 1,
+  "r": "The writ of amparo covers only extrajudicial killings and enforced disappearances, or threats of them. It is not a remedy to recover parental authority or custody of a child; there is no enforced disappearance where the State never concealed the child’s whereabouts.",
+  "f": "Christina Caram gave up her newborn son to the DSWD, which declared him legally available for adoption and placed him with prospective adopters. When she changed her mind, she filed for amparo, calling the adoption process an “enforced disappearance.” The DSWD produced the child in court.",
+  "h": "Petition denied; the RTC’s dismissal affirmed (Villarama, Jr., J., August 5, 2014), without prejudice to a custody case or habeas corpus. The DSWD never hid the child, so two elements of enforced disappearance (refusal to disclose whereabouts, intent to remove from the protection of the law) were missing.",
+  "test": "Enforced disappearance (Navia v. Pardico, from RA 9851): deprivation of liberty + by or with the State’s acquiescence + refusal to acknowledge or disclose whereabouts + intent to remove from the protection of the law for a prolonged period.",
+  "x": "Use when someone tries to use amparo for a custody, property or employment dispute.",
+  "g": "",
+  "w": "",
+  "s": "Amparo is not for custody disputes: the DSWD never hid the child.",
+  "sy": [
+   "Infant Caram v. Segui"
+  ]
+ },
+ {
+  "id": "pimentelleb",
+  "n": "Pimentel v. Legal Education Board",
+  "y": "2019",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(6) Pleading, practice and procedure",
+  "a": 1,
+  "r": "The Court’s rule-making power over admission to the practice of law (Art. VIII, Sec. 5(5)) does not extend to the study of law: legal education is an executive function, subject to the State’s reasonable supervision. But LEB powers that reach bar admission, the training of lawyers and continuing legal education are void; and an exclusionary admission test like the PhiLSAT violates academic freedom.",
+  "f": "Lawyers, a law school and students challenged RA 7662, which created the Legal Education Board, and the PhiLSAT, which barred anyone who failed it from admission to any law school.",
+  "h": "Partly granted (J. Reyes, Jr., J., September 10, 2019; 8 concurring, 5 concurring and dissenting). RA 7662 stands; Secs. 2 (par. 2), 3(a)(2), 7(g) and 7(h) (lawyers’ training, internship as a bar requirement, mandatory CLE) are void; the PhiLSAT as a pass-or-fail admission requirement and several other LEB issuances are void for violating academic freedom.",
+  "test": "Rule-making (Sec. 5(5)) = admission to and practice of law, not legal education; State supervision of schools = oversight, not control (Art. XIV, Sec. 4(1)).",
+  "x": "Use when Congress or an agency regulates law schools, bar admission requirements, or lawyers’ continuing education.",
+  "g": "",
+  "w": "",
+  "s": "Legal education is for the executive; the bar and lawyers are for the Court; the PhiLSAT as a gatekeeper falls.",
+  "sy": [
+   "Pimentel v. Legal Education Board"
+  ]
+ },
+ {
+  "id": "zaldivar",
+  "n": "Zaldivar v. Sandiganbayan (In re Raul M. Gonzalez)",
+  "y": "1988",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(7) Admission to the practice of law",
+  "a": 1,
+  "r": "The Court’s power to discipline lawyers flows from its power to regulate admission to and practice of law, and is broader than contempt. A lawyer’s freedom of speech is not absolute: criticism of courts must be bona fide and within the bounds of decency; statements that the Justices decided out of vengeance or pressure degrade the administration of justice.",
+  "f": "After the Court nullified his informations against Governor Zaldivar, Special Prosecutor Raul Gonzalez told the press that a “leading member” of the Court had pressured him, that the decision was a reprisal for his stand that Justices have no immunity, and that the rich get favorable action from the Court.",
+  "h": "Gonzalez suspended from the practice of law indefinitely (per curiam, October 7, 1988, resolution). The Court need not inhibit or refer the case to the IBP; disciplinary proceedings are sui generis; his statements were baseless and constituted both contempt and professional misconduct.",
+  "test": "Discipline of lawyers: sui generis; criticism allowed if respectful and in good faith; baseless attacks on the Court’s integrity are misconduct.",
+  "x": "Use when a lawyer or prosecutor publicly attacks the Court or its Justices, and pleads free speech.",
+  "g": "",
+  "w": "The syllabus lists the case as “Zaldivar v. Gonzales”; it is Zaldivar v. Sandiganbayan (1988).",
+  "s": "A prosecutor who said the Court acted from vengeance was suspended indefinitely.",
+  "sy": [
+   "Zaldivar v. Gonzales"
+  ]
+ },
+ {
+  "id": "aguirrerana",
+  "n": "Aguirre v. Rana",
+  "y": "2003",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(7) Admission to the practice of law",
+  "a": 1,
+  "r": "The practice of law is a privilege, not a right; passing the bar is not the only qualification, since one becomes a lawyer only after taking the oath and signing the Roll of Attorneys. Practice includes any activity, in or out of court, that requires legal knowledge and skill; a bar passer who practices before signing the Roll may be denied admission.",
+  "f": "Edwin Rana passed the 2000 bar exams. Before taking his oath, he appeared as counsel for candidates before a municipal board of canvassers and signed pleadings as counsel. A losing candidate’s daughter asked the Court to deny his admission.",
+  "h": "Admission denied (Carpio, J., June 10, 2003). He had been allowed to take the oath but not to sign the Roll; appearing and filing pleadings before the board was practice of law, and practicing without being a lawyer shows a lack of moral fitness. The other charges failed.",
+  "test": "Practice of law: any activity requiring legal knowledge and skill (Cayetano v. Monsod); lawyer = bar exam + oath + signing the Roll.",
+  "x": "Use when a bar passer, a law graduate or a non-lawyer appears or signs as counsel.",
+  "g": "",
+  "w": "",
+  "s": "A bar passer who acted as counsel before signing the Roll was denied admission.",
+  "sy": [
+   "Aguirre v. Rana"
+  ]
+ },
+ {
+  "id": "garrido",
+  "n": "Garrido v. Garrido",
+  "y": "2010",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(7) Admission to the practice of law",
+  "a": 1,
+  "r": "Good moral character is a condition precedent to admission and a continuing requirement; admission creates only a rebuttable presumption of it, so acts done before admission may ground disbarment. Prescription and desistance do not apply to disbarment, which concerns the public interest. Disbarment needs grossly immoral conduct.",
+  "f": "Atty. Angel Garrido married three times, twice while an earlier marriage subsisted, all before he passed the bar; his third wife, Atty. Romana Valencia, married him knowing he was married. His second wife filed a disbarment case against both.",
+  "h": "Both disbarred (per curiam, February 4, 2010). Pre-bar conduct counts; the case had not prescribed and the complainant’s desistance did not end it; the multiple marriages and Valencia’s participation were grossly immoral.",
+  "test": "Gross immorality: so corrupt as to be criminal, reprehensible to a high degree, or shocking to decency; good moral character is continuing.",
+  "x": "Use when a lawyer’s private life (bigamy, concubinage) or pre-admission conduct is the basis for discipline.",
+  "g": "",
+  "w": "",
+  "s": "Three marriages before the bar still cost two lawyers their licenses.",
+  "sy": [
+   "Garrido v. Garrido"
+  ]
+ },
+ {
+  "id": "inreong",
+  "n": "In re: Allegations against Sandiganbayan Associate Justice Gregory S. Ong",
+  "y": "2014",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(7) Admission to the practice of law",
+  "a": 1,
+  "r": "Substantial evidence suffices in administrative cases against judges. A Justice who socializes and deals with a litigant whose case he decided, takes favors from her, and lies about it is guilty of gross misconduct, dishonesty and impropriety under the New Code of Judicial Conduct; judges must avoid even the appearance of impropriety.",
+  "f": "In the 2013 Senate hearings on the pork barrel scam, witnesses linked Sandiganbayan Justice Gregory Ong to Janet Lim-Napoles, whose Kevlar helmet case he had helped decide; a photo showed him with her at a party. He admitted visiting her office, saying it was about the Black Nazarene’s robe.",
+  "h": "Ong found guilty of gross misconduct, dishonesty and impropriety and dismissed from the service, with forfeiture of retirement benefits (per curiam, September 23, 2014). Bribery was not proven, but his dealings with Napoles after the decision and his untruthful testimony were.",
+  "test": "New Code of Judicial Conduct: integrity (Canon 2), propriety (Canon 4); substantial evidence in administrative cases.",
+  "x": "Use when a judge or Justice is linked to a litigant (parties, favors, meetings), even without proof of bribery.",
+  "g": "",
+  "w": "Separate opinions disagreed on the penalty: some Justices would have found only simple misconduct.",
+  "s": "The Sandiganbayan Justice linked to Napoles was dismissed.",
+  "sy": [
+   "In Re: Ong"
+  ]
+ },
+ {
+  "id": "zoleta",
+  "n": "Zoleta v. Sandiganbayan",
+  "y": "2015",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(7) Admission to the practice of law",
+  "a": 1,
+  "r": "A de facto officer, one who holds and exercises an office under color of an appointment, even if defective, performs acts as valid as a de jure officer’s as to the public and third persons. Kilosbayan v. Ermita did not rule that Justice Ong was not natural-born; it only barred him from the Supreme Court until he proved his status in court.",
+  "f": "Convicted by the Sandiganbayan of malversation through falsification, Zoleta argued that the decision was void because Justice Gregory Ong, who concurred, was not a natural-born citizen and so was not qualified to sit.",
+  "h": "Petition denied; the penalty increased (Brion, J., Second Division, July 29, 2015). Ong’s natural-born status had since been settled by a final RTC decision; and in any case he was a de facto officer, so the decision was valid. The conviction stood on the facts.",
+  "test": "De facto officer: color of title + actual possession and open exercise of the office + public acquiescence → acts valid as to the public.",
+  "x": "Use when a party attacks a decision because a judge’s appointment or qualification was defective.",
+  "g": "",
+  "w": "",
+  "s": "A judge’s doubtful citizenship does not void his decisions: he is at least a de facto officer.",
+  "sy": [
+   "Zoleta v. Sandiganbayan"
+  ]
+ },
+ {
+  "id": "edillon",
+  "n": "In re: Edillon",
+  "y": "1978",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(8) Integration of the bar",
+  "a": 1,
+  "r": "Integration of the bar is a valid exercise of police power and of the Court’s constitutional power over the practice of law. Compulsory membership and dues do not violate freedom of association, since a lawyer is already a member of the bar and is compelled only to pay; the practice of law is a privilege, not a property right, so removal from the Roll for non-payment is not a deprivation without due process.",
+  "f": "Atty. Marcial Edillon refused to pay his IBP dues and questioned the rules making membership compulsory and allowing removal from the Roll of Attorneys for non-payment. The IBP recommended his removal.",
+  "h": "Edillon’s name ordered stricken from the Roll of Attorneys (Castro, C.J., August 3, 1978; 12–0). The integration rules are constitutional; the dues are a regulatory fee.",
+  "test": "Integrated bar: compulsory membership and reasonable dues valid (police power; the Court’s power over the practice of law).",
+  "x": "Use when a lawyer refuses IBP dues or membership, or attacks the integrated bar as compelled association.",
+  "g": "",
+  "w": "",
+  "s": "Refusing IBP dues cost a lawyer his place on the Roll: integration is valid.",
+  "sy": [
+   "In re: Edillon"
+  ]
+ },
+ {
+  "id": "ibpelections",
+  "n": "In re: Inquiry into the 1989 Elections of the Integrated Bar of the Philippines",
+  "y": "1989",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(8) Integration of the bar",
+  "a": 1,
+  "r": "Under its supervision of the Integrated Bar, the Court may suspend the oath of elected IBP officers, investigate IBP elections, annul them and amend the IBP By-Laws. The IBP is strictly non-political: campaigning, slates, free transport and lavish hospitality prohibited by its By-Laws are grounds for disqualification and violate the lawyers’ ethics.",
+  "f": "After the June 1989 IBP national elections, the media reported vote-buying, government helicopters and planes, government officials campaigning, and delegates wined and dined in luxury hotels. The Court suspended the oath-taking of the winners and had five Justices investigate.",
+  "h": "Elections annulled (per curiam, October 6, 1989, resolution; 12–0). The candidates and their supporters committed the acts banned by Sec. 14 of the By-Laws, turning the election into a “political circus”; new elections were ordered and the By-Laws amended.",
+  "test": "Supervision of the IBP: suspend, investigate, annul, amend; IBP elections strictly non-political.",
+  "x": "Use when an IBP or bar election is marred by campaigning, gifts or political interference.",
+  "g": "",
+  "w": "",
+  "s": "The Court annulled the 1989 IBP elections for vote-buying and political campaigning.",
+  "sy": [
+   "In re: IBP Elections"
+  ]
+ },
+ {
+  "id": "divina",
+  "n": "Re: Illegal Campaign and Activities in IBP-Central Luzon Allegedly Perpetrated by Atty. Nilo Divina",
+  "y": "2024",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(8) Integration of the bar",
+  "a": 1,
+  "r": "The Court’s power over the integrated bar (Art. VIII, Sec. 5(5)) includes supervision of all IBP activities, elections included, exercised prudently. A By-Laws campaign violation needs a link to an election (a candidacy, electors already chosen). But lavish gifts and trips for IBP officers are simple misconduct under the CPRA, for the giver and the recipients.",
+  "f": "An anonymous letter said Atty. Nilo Divina, a law dean, was buying support to become IBP-Central Luzon governor and later IBP president, by sponsoring trips to Balesin and Bali and giving cash and gift certificates to chapter officers. The Court froze the region’s elections.",
+  "h": "Divina and six recipients fined ₱100,000 each for simple misconduct (12–3, Gaerlan, J., July 30, 2024). No By-Laws violation: no proof of candidacy, and the electors had not yet been chosen; but the excessive largesse violated the CPRA’s propriety rules.",
+  "test": "IBP: a sui generis public institution under the Court’s supervision; propriety and the appearance of propriety (CPRA, Canon II).",
+  "x": "Use when lawyers’ gifts or junkets to bar officers are questioned, or the Court steps into IBP elections.",
+  "g": "",
+  "w": "",
+  "s": "Junkets for IBP officers: no election offense, but simple misconduct for giver and takers.",
+  "sy": [
+   "Re: Nilo Divina"
+  ]
  }
 ]

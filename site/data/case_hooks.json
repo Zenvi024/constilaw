@@ -1230,5 +1230,61 @@
  "sola": {
   "k": "Witnesses’ fear counts",
   "c": "ok"
+ },
+ "rodriguez": {
+  "k": "Tenure-only immunity",
+  "c": "ok"
+ },
+ "deduro": {
+  "k": "Red-tagging threatens",
+  "c": "ok"
+ },
+ "bautistasalucon": {
+  "k": "Totality of evidence",
+  "c": "ok"
+ },
+ "waterforall": {
+  "k": "Prove the damage",
+  "c": "no"
+ },
+ "caram": {
+  "k": "Not for custody",
+  "c": "no"
+ },
+ "pimentelleb": {
+  "k": "PhiLSAT gate falls",
+  "c": "no"
+ },
+ "zaldivar": {
+  "k": "Criticize, don’t malign",
+  "c": "no"
+ },
+ "aguirrerana": {
+  "k": "Oath and Roll",
+  "c": "no"
+ },
+ "garrido": {
+  "k": "Pre-bar acts count",
+  "c": "no"
+ },
+ "inreong": {
+  "k": "Napoles link dismissed",
+  "c": "no"
+ },
+ "zoleta": {
+  "k": "De facto valid",
+  "c": "ok"
+ },
+ "edillon": {
+  "k": "Dues are compulsory",
+  "c": "ok"
+ },
+ "ibpelections": {
+  "k": "IBP non-political",
+  "c": "no"
+ },
+ "divina": {
+  "k": "Junkets are misconduct",
+  "c": "no"
  }
 }
