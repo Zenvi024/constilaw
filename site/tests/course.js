@@ -43,6 +43,10 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     await p.evaluate(() => setTab('rules')); await p.waitForTimeout(200);
     const ui = await p.evaluate(() => { const t = document.querySelector('.tabs'); return {rq: Math.round(document.getElementById('rq').getBoundingClientRect().height), tabs: t.scrollWidth - t.clientWidth}; });
     check(tag, 'rule-map search box is one line high; tabs fit', ui.rq < 60 && ui.tabs <= 1, ui);
+    if (vp.width <= 700){
+      const fz = await p.evaluate(() => { const bad = []; for (const t of ['rules', 'cases', 'lists', 'digests', 'fish', 'exams', 'spot', 'write', 'today']){ setTab(t); document.querySelectorAll('input,select,textarea').forEach(e => { if (e.offsetParent && !['checkbox', 'radio'].includes(e.type) && parseFloat(getComputedStyle(e).fontSize) < 16) bad.push(t + ':' + (e.id || e.className)); }); } setTab('rules'); return {bad, ta: getComputedStyle(document.documentElement).touchAction, ox: getComputedStyle(document.body).overflowX}; });
+      check(tag, 'phones: no text field under 16 px (iPhone zoom); the page pans up and down only', !fz.bad.length && /pan-y/.test(fz.ta) && fz.ox === 'clip', fz);
+    }
     await p.evaluate(() => window.scrollTo(0, 5000)); await p.waitForTimeout(300);
     const tt = await p.evaluate(() => !document.getElementById('toTop').hidden);
     await p.click('#toTop'); await p.waitForTimeout(200);

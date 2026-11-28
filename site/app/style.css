@@ -1174,6 +1174,16 @@ body.focus .tttop{display:none}
 /* while a card is out, the fishbowl setup folds to one line */
 .fwsetup.fwmin>p,.fwsetup.fwmin>.row{display:none}
 .fwsetup.fwmin{gap:10px}
+
+/* ================= phones: the page scrolls up and down only (Nov. 28) ================= */
+/* no automatic text enlarging; nothing can widen the page; sideways swipes stay inside the strips that scroll */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{overflow-x:clip;overscroll-behavior-x:none;max-width:100%}
+html{touch-action:pan-y pinch-zoom}
+.rv,.modal,.fwstage,.fdread{overflow-wrap:break-word}
+.tabs,.psub,.legend,.tw,.vcmp,.mtoc,.fdjump,.scale{touch-action:pan-x pan-y pinch-zoom;overscroll-behavior-x:contain}
+/* iPhones zoom in on any text box under 16 px when it is tapped, and the page then slides around: keep every field at 16 px */
+@media (hover:none),(max-width:700px){input,select,textarea,.gsearch input{font-size:16px}}
 /* ================= rule maps: reading mode ================= */
 body.rvread .rwrap{grid-template-columns:minmax(0,1fr)}
 body.rvread .rside{display:none}
