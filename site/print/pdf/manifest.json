@@ -1,170 +1,170 @@
 {
  "maps-all": {
   "folio": {
-   "file": "consti1-maps-all-folio.pdf",
-   "pages": 157,
-   "bytes": 5822058
+   "file": "DG-Constitutional-Law-1-Finals-Reviewer-folio.pdf",
+   "pages": 148,
+   "bytes": 6230816
   },
   "a4": {
-   "file": "consti1-maps-all-a4.pdf",
-   "pages": 180,
-   "bytes": 5784961
+   "file": "DG-Constitutional-Law-1-Finals-Reviewer-a4.pdf",
+   "pages": 169,
+   "bytes": 6179443
   }
  },
  "maps-start-here": {
   "folio": {
    "file": "consti1-maps-start-here-folio.pdf",
    "pages": 12,
-   "bytes": 1205546
+   "bytes": 1205757
   },
   "a4": {
    "file": "consti1-maps-start-here-a4.pdf",
    "pages": 14,
-   "bytes": 1207123
+   "bytes": 1207347
   }
  },
  "maps-the-constitution": {
   "folio": {
    "file": "consti1-maps-the-constitution-folio.pdf",
    "pages": 6,
-   "bytes": 914732
+   "bytes": 915034
   },
   "a4": {
    "file": "consti1-maps-the-constitution-a4.pdf",
    "pages": 6,
-   "bytes": 911923
+   "bytes": 912227
   }
  },
  "maps-judicial-review": {
   "folio": {
    "file": "consti1-maps-judicial-review-folio.pdf",
    "pages": 7,
-   "bytes": 1003232
+   "bytes": 1003059
   },
   "a4": {
    "file": "consti1-maps-judicial-review-a4.pdf",
    "pages": 8,
-   "bytes": 1001748
+   "bytes": 1001578
   }
  },
  "maps-territory-people-and-government": {
   "folio": {
    "file": "consti1-maps-territory-people-and-government-folio.pdf",
    "pages": 7,
-   "bytes": 921691
+   "bytes": 921883
   },
   "a4": {
    "file": "consti1-maps-territory-people-and-government-a4.pdf",
    "pages": 8,
-   "bytes": 919104
+   "bytes": 919305
   }
  },
  "maps-the-legislative-department": {
   "folio": {
    "file": "consti1-maps-the-legislative-department-folio.pdf",
    "pages": 50,
-   "bytes": 2646303
+   "bytes": 2646603
   },
   "a4": {
    "file": "consti1-maps-the-legislative-department-a4.pdf",
    "pages": 60,
-   "bytes": 2624850
+   "bytes": 2625184
   }
  },
  "maps-the-executive-department": {
   "folio": {
    "file": "consti1-maps-the-executive-department-folio.pdf",
    "pages": 36,
-   "bytes": 1977994
+   "bytes": 1978232
   },
   "a4": {
    "file": "consti1-maps-the-executive-department-a4.pdf",
    "pages": 41,
-   "bytes": 1973036
+   "bytes": 1973285
   }
  },
  "maps-the-judicial-department": {
   "folio": {
    "file": "consti1-maps-the-judicial-department-folio.pdf",
    "pages": 29,
-   "bytes": 1619415
+   "bytes": 1619889
   },
   "a4": {
    "file": "consti1-maps-the-judicial-department-a4.pdf",
    "pages": 32,
-   "bytes": 1626584
+   "bytes": 1627077
   }
  },
  "maps-constitutional-commissions": {
   "folio": {
    "file": "consti1-maps-constitutional-commissions-folio.pdf",
    "pages": 8,
-   "bytes": 906286
+   "bytes": 906594
   },
   "a4": {
    "file": "consti1-maps-constitutional-commissions-a4.pdf",
    "pages": 9,
-   "bytes": 907626
+   "bytes": 907933
   }
  },
  "maps-current-events": {
   "folio": {
    "file": "consti1-maps-current-events-folio.pdf",
    "pages": 2,
-   "bytes": 395199
+   "bytes": 395209
   },
   "a4": {
    "file": "consti1-maps-current-events-a4.pdf",
    "pages": 2,
-   "bytes": 390141
+   "bytes": 390151
   }
  },
  "cases": {
   "folio": {
    "file": "consti1-cases-folio.pdf",
    "pages": 42,
-   "bytes": 736563
+   "bytes": 737537
   },
   "a4": {
    "file": "consti1-cases-a4.pdf",
    "pages": 52,
-   "bytes": 747755
+   "bytes": 748825
   }
  },
  "lists": {
   "folio": {
    "file": "consti1-lists-folio.pdf",
    "pages": 41,
-   "bytes": 1041455
+   "bytes": 1041950
   },
   "a4": {
    "file": "consti1-lists-a4.pdf",
    "pages": 47,
-   "bytes": 1046523
+   "bytes": 1047078
   }
  },
  "hooks": {
   "folio": {
    "file": "consti1-hooks-folio.pdf",
    "pages": 5,
-   "bytes": 346273
+   "bytes": 346560
   },
   "a4": {
    "file": "consti1-hooks-a4.pdf",
    "pages": 6,
-   "bytes": 349023
+   "bytes": 349307
   }
  },
  "exams": {
   "folio": {
    "file": "consti1-exams-folio.pdf",
    "pages": 26,
-   "bytes": 760429
+   "bytes": 760539
   },
   "a4": {
    "file": "consti1-exams-a4.pdf",
    "pages": 29,
-   "bytes": 749540
+   "bytes": 749652
   }
  }
 }
