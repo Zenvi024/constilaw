@@ -1,5 +1,168 @@
 [
  {
+  "id": "i-ap-a-groups",
+  "t": "appt",
+  "title": "The four groups of presidential appointees (Sec. 16; Mison)",
+  "ask": "Name the four groups of presidential appointees and say which needs the Commission on Appointments.",
+  "items": [
+   "Group 1 (CA consent): heads of executive departments; ambassadors, other public ministers and consuls; AFP officers from colonel or naval captain; officers whose appointments the Constitution vests in the President",
+   "Group 2: all other officers whose appointments are not otherwise provided for by law",
+   "Group 3: those the President may be authorized by law to appoint",
+   "Group 4: officers lower in rank whose appointment Congress vests in the President alone",
+   "Only group 1 needs CA consent; Congress cannot add to it (Calderon; Manalo)"
+  ],
+  "ordered": true,
+  "src": "Art. VII, Sec. 16; Sarmiento III v. Mison (1987)",
+  "rv": "appt-power",
+  "hook": "Four groups, one door to the CA.",
+  "cases": [
+   "mison",
+   "calderon",
+   "manalo",
+   "soriano"
+  ]
+ },
+ {
+  "id": "i-ap-a-noca",
+  "t": "appt",
+  "title": "Appointments that need no CA confirmation",
+  "ask": "Give examples of presidential appointments that need no CA confirmation, with the authority.",
+  "items": [
+   "Bureau heads, such as the Commissioner of Customs (Mison)",
+   "NLRC Chairman and Commissioners (Calderon)",
+   "Senior PNP officers (Manalo)",
+   "Coast Guard officers from captain up, after the transfer to the DOTC (Soriano)",
+   "Justices and judges from a JBC list (Art. VIII, Sec. 9)",
+   "The Ombudsman and Deputies from a JBC list (Art. XI, Sec. 9)",
+   "The VP as a Cabinet member (Art. VII, Sec. 3)",
+   "Acting secretaries, for up to a year (Pimentel v. Ermita)"
+  ],
+  "ordered": false,
+  "src": "Mison; Calderon; Manalo; Soriano; Pimentel v. Ermita",
+  "rv": "appt-power",
+  "hook": "Not group 1, not confirmed.",
+  "cases": [
+   "mison",
+   "calderon",
+   "manalo",
+   "soriano",
+   "pimentelermita"
+  ]
+ },
+ {
+  "id": "i-ap-a-kinds",
+  "t": "appt",
+  "title": "Regular, ad interim and acting appointments",
+  "ask": "Distinguish regular, ad interim and acting appointments.",
+  "items": [
+   "Regular: made while Congress is in session; effective after CA consent",
+   "Ad interim: made during a recess; effective at once; permanent (Matibag)",
+   "Ad interim ends only on CA disapproval or the next adjournment; a by-passed one may be renewed, a disapproved one may not",
+   "Acting: temporary, at pleasure; may be made even while Congress is in session; at most one year (Pimentel v. Ermita; Administrative Code, Book III, Sec. 17)",
+   "Acting appointments are barred for constitutional commissioners and for offices repugnant to them (Urro; Brillantes v. Yorac)",
+   "A by-passed ad interim appointment is not a prior term, so renewal is not reappointment (Matibag)"
+  ],
+  "ordered": false,
+  "src": "Matibag (2002); Pimentel v. Ermita (2005); General v. Urro (2011)",
+  "rv": "appt-kinds",
+  "hook": "Ad interim is permanent; acting is temporary.",
+  "cases": [
+   "matibag",
+   "pimentelermita",
+   "urro"
+  ]
+ },
+ {
+  "id": "i-ap-a-elements",
+  "t": "appt",
+  "title": "The four elements of a valid appointment (Velicaria-Garafil)",
+  "ask": "State the elements that must concur for a valid appointment.",
+  "items": [
+   "Authority to appoint and evidence of its exercise",
+   "Transmittal of the appointment paper and evidence of the transmittal (release through the Malacañang Records Office)",
+   "A vacant position at the time of appointment",
+   "Receipt of the appointment paper and acceptance (oath or assumption) by an appointee with all the qualifications and none of the disqualifications"
+  ],
+  "ordered": true,
+  "src": "Velicaria-Garafil v. Office of the President (2015)",
+  "rv": "appt-midnight",
+  "hook": "Sign, send, vacancy, accept.",
+  "cases": [
+   "garafil"
+  ]
+ },
+ {
+  "id": "i-ap-a-ban",
+  "t": "appt",
+  "title": "The election ban on appointments (Sec. 15)",
+  "ask": "State the rules on the ban on midnight appointments.",
+  "items": [
+   "From two months before the next presidential election to the end of the term",
+   "Binds only the President or Acting President (De Rama)",
+   "Exception: temporary appointments to executive positions when continued vacancies would prejudice public service or endanger public safety",
+   "Does not apply to the Judiciary; Valenzuela reversed (De Castro)",
+   "The whole process, including acceptance, must be complete before the ban (Velicaria-Garafil)",
+   "Inside the period, the appointment is void whatever the merit or motive",
+   "An Acting President’s appointments may be revoked by the elected President within 90 days (Sec. 14)"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Secs. 14–15; De Castro; De Rama; Velicaria-Garafil",
+  "rv": "appt-midnight",
+  "hook": "President only, judges excepted, all four steps before the cut-off.",
+  "cases": [
+   "garafil",
+   "decastrojbc",
+   "derama"
+  ]
+ },
+ {
+  "id": "i-ap-a-terms",
+  "t": "appt",
+  "title": "Terms in the constitutional commissions (Funa v. Villar; Gaminde)",
+  "ask": "State the rules on the terms of members of the constitutional commissions.",
+  "items": [
+   "Seven-year terms without reappointment; first appointees 7, 5 and 3 years",
+   "Terms run in a cycle from February 2, 1987; a late appointment loses the gap (Gaminde)",
+   "A vacancy from expiration of a term: a full seven years, never shorter (no split terms)",
+   "A vacancy from death, resignation, disability or impeachment: only the unexpired portion",
+   "No one may serve more than seven years in all",
+   "A Commissioner who resigns may be promoted to Chairman only into a seat vacated by death, resignation, disability or impeachment, within the seven-year total",
+   "No temporary or acting appointment or designation"
+  ],
+  "ordered": false,
+  "src": "Art. IX-B to D, Sec. 1(2); Gaminde (2000); Funa v. Villar (2012)",
+  "rv": "appt-terms",
+  "hook": "February 2 clock; seven in all; no split terms.",
+  "cases": [
+   "funavillar",
+   "gaminde",
+   "matibag"
+  ]
+ },
+ {
+  "id": "i-ap-a-remove",
+  "t": "appt",
+  "title": "Limits on the power to remove",
+  "ask": "When can the President not remove a presidential appointee at will?",
+  "items": [
+   "Impeachable officers: only by impeachment (Art. XI, Sec. 2)",
+   "Officers of an independent constitutional office: a Deputy Ombudsman (Gonzales III, 2014)",
+   "Officers with security of tenure: only for cause provided by law, with due process (Larin; Art. IX-B, Sec. 2(3))",
+   "Betrayal of public trust needs bad faith and gravity comparable to the impeachment grounds (Gonzales III, 2012)",
+   "A reorganization that abolishes posts must be in good faith; badges of bad faith void it (Larin; RA 6656, Sec. 2)",
+   "Acting appointees serve at pleasure: their separation is expiration, not removal (Urro)"
+  ],
+  "ordered": false,
+  "src": "Larin (1997); Gonzales III (2012, 2014); General v. Urro (2011)",
+  "rv": "appt-removal",
+  "hook": "Appoint, then remove, unless impeachable, independent, or tenured.",
+  "cases": [
+   "larin",
+   "gonzalesiii",
+   "urro"
+  ]
+ },
+ {
   "id": "i-ap-limits",
   "t": "appt",
   "title": "The limits on the pardoning power",

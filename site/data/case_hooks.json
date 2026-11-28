@@ -978,5 +978,73 @@
  "trillanesmedialdea": {
   "k": "No solo revocation",
   "c": "no"
+ },
+ "mison": {
+  "k": "Four groups",
+  "c": "acc"
+ },
+ "calderon": {
+  "k": "No legislative add-ons",
+  "c": "no"
+ },
+ "manalo": {
+  "k": "Police, not military",
+  "c": "ok"
+ },
+ "soriano": {
+  "k": "Coast Guard civilian",
+  "c": "ok"
+ },
+ "pimentelermita": {
+  "k": "Acting secretaries allowed",
+  "c": "ok"
+ },
+ "urro": {
+  "k": "Acting means temporary",
+  "c": "sun"
+ },
+ "derama": {
+  "k": "President only",
+  "c": "ok"
+ },
+ "decastrojbc": {
+  "k": "Ban spares judiciary",
+  "c": "sun"
+ },
+ "garafil": {
+  "k": "Accepted during ban",
+  "c": "no"
+ },
+ "matibag": {
+  "k": "Ad interim permanent",
+  "c": "ok"
+ },
+ "larin": {
+  "k": "Removal needs cause",
+  "c": "no"
+ },
+ "funavillar": {
+  "k": "No split terms",
+  "c": "no"
+ },
+ "funaagra": {
+  "k": "Two acting hats",
+  "c": "no"
+ },
+ "funacsc": {
+  "k": "Commissioner on boards",
+  "c": "no"
+ },
+ "gaminde": {
+  "k": "February 2 clock",
+  "c": "sun"
+ },
+ "ifurung": {
+  "k": "Full seven years",
+  "c": "ok"
+ },
+ "gonzalesiii": {
+  "k": "Ombudsman’s deputies protected",
+  "c": "no"
  }
 }

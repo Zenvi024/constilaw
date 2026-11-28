@@ -100,6 +100,13 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     for (let i = 0; i < 4; i++) await p.click('#fig-amnestygate .gate.cur .yn [data-a="y"]');
     const tri = await txt('#fig-amnestygate .walkout .vres'); check(tag, 'Trillanes walk: revocation void', /Revocation void/.test(tri), tri);
     await p.click('#fig-amnestygate .walkout [data-w="map"]');
+    // finals V.B.2(d): appointment diagrams carry orals lines; the Garafil walk ends at "void midnight appointment"
+    const apd = await p.evaluate(() => ['apptca', 'apptkinds', 'midnight', 'terms', 'removal'].map(id => !!document.querySelector('#fig-' + id + ' .vor')));
+    check(tag, 'V.B.2(d) diagrams carry orals lines', apd.every(Boolean), apd);
+    await go('fig-midnight'); await p.click('#fig-midnight .walkbar .vchip:has-text("Velicaria-Garafil")');
+    for (const a of ['y', 'n', 'n', 'n']) await p.click(`#fig-midnight .gate.cur .yn [data-a="${a}"]`);
+    const mid = await txt('#fig-midnight .walkout .vres'); check(tag, 'Garafil walk: void midnight appointment', /Void midnight appointment/.test(mid), mid);
+    await p.click('#fig-midnight .walkout [data-w="map"]');
     // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
     const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
     check(tag, 'no style leaks outside the diagrams', leak === 0, leak);

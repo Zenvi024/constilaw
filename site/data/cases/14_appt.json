@@ -1,5 +1,310 @@
 [
  {
+  "id": "mison",
+  "n": "Sarmiento III v. Mison",
+  "y": "1987",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: the four groups, and who needs CA confirmation",
+  "a": 1,
+  "r": "Art. VII, Sec. 16 names four groups of presidential appointees, and only the first needs the Commission on Appointments’ consent: heads of executive departments, ambassadors, other public ministers and consuls, officers of the armed forces from colonel or naval captain, and officers whose appointments the Constitution vests in the President. Bureau heads, like the Commissioner of Customs, need no confirmation.",
+  "f": "President Aquino appointed Salvador Mison Commissioner of the Bureau of Customs without submitting his nomination to the Commission on Appointments. Two law professors, as taxpayers, sought to stop him from acting and to stop the Budget Secretary from paying his salary. The CA intervened, and Sen. Neptali Gonzales argued as amicus curiae that the second sentence of Sec. 16 also requires confirmation.",
+  "h": "Petition and intervention dismissed (9–2, Padilla, J., December 17, 1987). The framers struck a “middle ground” between the 1935 Constitution (nearly every appointment confirmed, with horse-trading) and the 1973 Constitution (no check): they deleted “and bureaus” and put officers in the second sentence outside confirmation. “Alone” in the third sentence is a lapse in drafting.",
+  "test": "The four groups (Sec. 16): (1) heads of executive departments, ambassadors, other public ministers and consuls, AFP officers from colonel or naval captain, and officers whose appointments are vested in the President by the Constitution: nomination and CA consent; (2) all other officers whose appointments are not otherwise provided for by law; (3) those the President may be authorized by law to appoint; (4) lower-ranked officers whose appointment Congress vests in the President alone: (2)–(4) without CA consent.",
+  "x": "Use first on any appointment news card: place the officer in one of the four groups. Only group one goes to the CA. Then check who else the Constitution names (JBC nominees for judges and the Ombudsman need no CA).",
+  "s": "Only the first sentence of Sec. 16 needs CA confirmation; the Customs Commissioner, a bureau head, does not.",
+  "sy": [
+   "Sarmiento v. Mison"
+  ]
+ },
+ {
+  "id": "calderon",
+  "n": "Calderon v. Carale",
+  "y": "1992",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: Congress cannot add to the CA’s list",
+  "a": 0,
+  "r": "Congress cannot, by law, require CA confirmation of appointees outside the first sentence of Sec. 16: that would amend the Constitution by legislation. The NLRC Chairman and Commissioners belong to the third group (officers the President is authorized by law to appoint), so the Labor Code’s confirmation requirement is void. The remedy for those unhappy with Sec. 16 is constitutional amendment.",
+  "f": "RA 6715 (1989) amended the Labor Code to provide that the NLRC Chairman and Commissioners “shall all be appointed by the President, subject to confirmation by the Commission on Appointments.” President Aquino gave them permanent appointments without submitting them to the CA. Calderon sought prohibition, arguing that Congress may add to the list of officers needing confirmation.",
+  "h": "Petition dismissed; Art. 215 of the Labor Code, as amended, declared unconstitutional insofar as it requires CA confirmation (12–1, Padilla, J., April 23, 1992). Mison, Bautista v. Salonga and Quintos-Deles interpreted Sec. 16 consistently, and Congress cannot impose its own reading by statute.",
+  "x": "Use when a law tries to subject an officer the Constitution does not list (a regulator, a commission chair, a bureau head) to CA confirmation: it is void. Contrast Quintos-Deles (sectoral representatives: the Constitution vests their appointment in the President, so the CA confirms).",
+  "s": "A law requiring CA confirmation of NLRC commissioners is void: Congress cannot expand Sec. 16.",
+  "sy": [
+   "Calderon v. Carale"
+  ]
+ },
+ {
+  "id": "manalo",
+  "n": "Manalo v. Sistoza",
+  "y": "1999",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: PNP officers need no CA confirmation",
+  "a": 0,
+  "r": "Only the first group in Sec. 16 needs CA confirmation, and Congress cannot add to it (Tarrosa v. Singson), so the provisions of RA 6975 requiring confirmation of senior PNP officers are void (and severable). The PNP is not the armed forces: the Constitution establishes one police force, “national in scope and civilian in character,” separate from the AFP, so police directors are not “officers of the armed forces.”",
+  "f": "RA 6975 (1990) required CA confirmation for the PNP Chief and for officers from Senior Superintendent up. In 1992 President Aquino promoted 15 police officers to Director and Chief Superintendent with permanent appointments that were never submitted to the CA; they assumed office and were paid. Manalo, as a taxpayer, sought prohibition.",
+  "h": "Petition dismissed (13–0, Purisima, J., August 11, 1999). Secs. 26 and 31 of RA 6975 are unconstitutional insofar as they require CA confirmation; the rest of the law stands. The PNP officers are not in the first group, and the DBM validly paid their salaries.",
+  "x": "Use when a law or a senator insists that police generals, Coast Guard admirals or other non-military officers go through the CA: only AFP officers from colonel or naval captain, and the rest of the first group, need confirmation. Pair with Soriano v. Lista (Coast Guard).",
+  "w": "The body declares Secs. 26 and 31 void insofar as they require confirmation; the fallo only dismisses the petition. Sec. 26 (the PNP Chief) was struck though no Chief’s appointment was at issue.",
+  "s": "Police generals need no CA confirmation: the PNP is civilian, not the armed forces; Congress cannot add to Sec. 16.",
+  "sy": [
+   "Manalo v. Sistoza"
+  ]
+ },
+ {
+  "id": "soriano",
+  "n": "Soriano III v. Lista",
+  "y": "2003",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: Coast Guard officers need no CA confirmation",
+  "a": 0,
+  "r": "The clause “officers of the armed forces from the rank of colonel or naval captain” in Sec. 16 covers military officers alone, and the list is exclusive. The Philippine Coast Guard, moved from the Navy to the Office of the President and then the DOTC, is no longer part of the AFP, so its admirals and captains are promoted without CA confirmation.",
+  "f": "President Arroyo promoted eight Philippine Coast Guard officers to Vice Admiral, Rear Admiral, Commodore and Naval Captain with permanent appointments not submitted to the CA. The Coast Guard had been a unit of the Philippine Navy, then an AFP subordinate unit, until EO 475 (1998) transferred it to the Office of the President and then to the DOTC. Soriano, as an IBP member and taxpayer, sought prohibition.",
+  "h": "Petition dismissed (5–0, Corona, J., Third Division, March 24, 2003). Soriano had no standing (no direct injury, and not a taxpayer’s suit since no taxing power was involved). In any case, the promotions need no confirmation; the officers’ assumption of office and the DBM’s payments are valid.",
+  "x": "Use with Manalo: rank titles do not decide confirmation; the officer must be in the armed forces. Also a standing example: an IBP member or taxpayer with no direct injury and no tax-and-spend issue lacks standing.",
+  "s": "Coast Guard admirals need no CA confirmation: the PCG is no longer part of the AFP.",
+  "sy": [
+   "Soriano v. Lista"
+  ]
+ },
+ {
+  "id": "pimentelermita",
+  "n": "Pimentel v. Ermita",
+  "y": "2005",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: acting secretaries while Congress is in session",
+  "a": 1,
+  "r": "The President may appoint acting department secretaries without CA consent even while Congress is in session: a secretary is the President’s alter ego, so the temporary one must be a person of the President’s choice, not automatically the undersecretary. The Administrative Code allows designating any competent person for up to one year. Ad interim appointments come only during a recess and go to the CA; acting appointments do not.",
+  "f": "While Congress was in session in August 2004, President Arroyo appointed eight acting department secretaries (Agriculture, Foreign Affairs, Justice, Education, National Defense, Agrarian Reform, Tourism, Environment) without CA consent. Nine senators sued. After Congress adjourned on September 22, 2004, the President gave them ad interim appointments the next day.",
+  "h": "Petition dismissed (15–0, Carpio, J., October 13, 2005). Not moot (capable of repetition yet evading review). Only the senators who sat on the CA had standing, since the CA is independent of Congress. The acting appointments were valid, and there was no abuse: ad interim appointments followed immediately.",
+  "test": "Acting versus ad interim: an ad interim appointment is made during a recess of Congress, is permanent, takes effect at once, and is submitted to the CA; an acting appointment may be made whenever there is a vacancy, is temporary, needs no CA, and may not exceed one year (Administrative Code, Book III, Sec. 17).",
+  "x": "Use when the President names an “acting” Cabinet member, or keeps one acting for long, to avoid the CA: valid while temporary and within one year; an abuse if used to circumvent confirmation. Congress may prescribe qualifications but cannot name the alter ego.",
+  "s": "Acting secretaries may be appointed while Congress is in session, without the CA, for up to a year.",
+  "sy": [
+   "Pimentel v. Ermita"
+  ]
+ },
+ {
+  "id": "urro",
+  "n": "General v. Urro",
+  "y": "2011",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: acting appointments, and the lis mota of a midnight-appointment claim",
+  "a": 0,
+  "r": "The power to appoint includes the power to make acting appointments, unless the Constitution or a law specifically forbids it or the office is repugnant to it (as COMELEC is: Nacionalista Party v. Bautista); staggered terms are no bar. An acting appointee serves at pleasure, for at most a year, and has no clear right to the office, so he cannot bring quo warranto. The midnight-appointment question was not reached.",
+  "f": "President Arroyo appointed Luis Mario General acting NAPOLCOM Commissioner in July 2008. In March 2010, near the start of the election ban, she appointed Alejandro Urro in his place, and two others as permanent Commissioners (papers dated March 5 and 8; released and sworn after the ban began). General sued for quo warranto and certiorari, calling them midnight appointments; President Aquino’s EO 2 later revoked midnight appointments.",
+  "h": "Petition dismissed (15–0, Brion, J., March 29, 2011). The constitutional question was not the lis mota: General’s appointment was acting and had expired ipso facto on July 21, 2009, so he had no cause of action. He was also estopped from claiming it was permanent after serving under it without protest.",
+  "test": "An acting appointment is valid unless (1) the Constitution or a law specifically prohibits it, or (2) a temporary appointment is repugnant to the nature of the office. It lasts at the appointing authority’s pleasure and no more than one year (Administrative Code, Book III, Sec. 17); its end is expiration, not removal.",
+  "x": "Use when an acting official replaced by a new appointee claims the office or a fixed term: no security of tenure, so no quo warranto. Also for the lis mota rule: the Court will not decide whether an appointment is a midnight appointment if the case can be resolved otherwise.",
+  "w": "The syllabus lists the case as “General v. Urra”; the respondent is Alejandro S. Urro. The Court did not rule on the midnight-appointment ban or on EO 2.",
+  "s": "An acting NAPOLCOM commissioner has no right to the office, so no quo warranto; midnight issue not reached.",
+  "sy": [
+   "General v. Urra"
+  ]
+ },
+ {
+  "id": "derama",
+  "n": "De Rama v. Court of Appeals",
+  "y": "2001",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: the midnight-appointment ban binds only the President",
+  "a": 0,
+  "r": "The ban on appointments two months before the presidential election and until the end of the term (Art. VII, Sec. 15) applies only to the President or Acting President; no law bars local elective officials from appointing in their last days. A completed appointment, once accepted and assumed, gives the appointee a legal right that the new appointing authority cannot revoke; only the CSC may recall it, on grounds in its rules.",
+  "f": "Mayor Ma. Evelyn Abeja of Pagbilao, Quezon, who lost her 1995 re-election bid, appointed 14 municipal employees between June 1 and 27, 1995. On June 30, as his first official act and without notice or hearing, her successor, Mayor Conrado de Rama, recalled all 14 as “midnight appointments.” The CSC refused to recall them and the CA affirmed; De Rama later raised fraud and irregularities for the first time.",
+  "h": "Petition denied; the CA and CSC affirmed (9–6, Ynares-Santiago, J., February 28, 2001). Sec. 15 binds only the President; the appointments were completed, attested by the CSC, and assumed before De Rama took office; his belated claims of fraud could not be raised for the first time on appeal or by supplemental pleading.",
+  "x": "Use when a new mayor or governor revokes the outgoing official’s last-minute appointments: Sec. 15 does not apply to local officials, and a completed appointment cannot be revoked without cause and hearing. For the other side, Mendoza, J.’s dissent (Aytona: midnight appointments offend good faith even without a specific provision).",
+  "s": "The midnight-appointment ban covers only the President; a new mayor cannot recall a predecessor’s completed appointments.",
+  "sy": [
+   "De Rama v. Court of Appeals"
+  ]
+ },
+ {
+  "id": "decastrojbc",
+  "n": "De Castro v. JBC",
+  "y": "2010",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: the election ban and judicial appointments",
+  "a": 1,
+  "r": "The ban on appointments two months before the presidential election until the end of the term (Art. VII, Sec. 15) does not apply to the Supreme Court or the rest of the Judiciary; Valenzuela (1998) is reversed. Art. VIII, Sec. 4(1)’s 90-day period is a mandate to the President, and the JBC’s prior, deliberate screening removes the evils Sec. 15 targets. Only the President appoints the Chief Justice.",
+  "f": "Chief Justice Puno was to retire on May 17, 2010, seven days after the presidential election, inside the period of the election ban. In re Valenzuela (1998) had applied the ban to judicial appointments. The JBC began the nomination process but left open to whom it would submit its list. Petitions asked the Court to compel or bar submission to President Arroyo; one argued that the Court itself appoints the Chief Justice.",
+  "h": "The Court held that the incumbent President may appoint Puno’s successor and directed the JBC to resume its proceedings, prepare its shortlist, and submit it to the incumbent President by May 17, 2010 (Bersamin, J., March 17, 2010). The mandamus petitions were premature; the prohibition petitions failed. Carpio Morales, J., dissented.",
+  "test": "The JBC’s duty to submit a list before the vacancy (so as not to shorten the President’s 90 days) is ministerial; its choice of nominees is discretionary. Mandamus lies only for an unexplained delay in submitting.",
+  "x": "Use when a President near the end of a term appoints a judge or Justice during the election ban: the ban covers executive appointments only (De Castro). For the opposing view, Carpio Morales, J.: the ban makes no distinction, and the 90 days are suspended during it. Then Sec. 15’s exception: temporary executive appointments needed for public service or safety.",
+  "w": "No clean vote count appears: Puno, C.J., Carpio and Corona, JJ., took no part; Brion, J. (joined in the result by Peralta, Del Castillo and Mendoza, JJ.) agreed on the Supreme Court but would keep Valenzuela for lower-court judges; Nachura and Abad, JJ.’s opinions are not in the files. The later resolution on reconsideration is not covered here.",
+  "s": "The election ban does not stop the outgoing President from appointing the Chief Justice; Valenzuela reversed.",
+  "sy": [
+   "De Castro v. JBC"
+  ]
+ },
+ {
+  "id": "garafil",
+  "n": "Velicaria-Garafil v. Office of the President",
+  "y": "2015",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: midnight appointments and appointment as a process",
+  "a": 1,
+  "r": "An appointment is a process; it is valid only if four elements concur: (1) authority to appoint and evidence of its exercise; (2) transmittal of the appointment paper, with evidence; (3) a vacant position; (4) receipt and acceptance by a qualified appointee. An appointment accepted during the Sec. 15 ban is a void midnight appointment, whatever the appointee’s merit or the President’s motive. EO 2 is valid.",
+  "f": "Before the May 2010 election, President Arroyo signed more than 800 appointments in March 2010 alone; the ban began on March 11. The petitioners’ papers were dated March 1 to 5, 2010, but reached the Malacañang Records Office only in May (one was released on March 12), and they took their oaths between March 15 and April 13. President Aquino’s EO 2 (July 30, 2010) revoked appointments accepted, sworn to or assumed on or after March 11, and those to offices vacant only after that date.",
+  "h": "Three petitions denied and one dismissed (wrong remedy, late); the appointments declared void and EO 2 valid and constitutional (8–6, Carpio, J., June 16, 2015). Sec. 15 turned Aytona’s “stratagem to beat the deadline” into a fixed period: appointments within it are automatically void, save temporary executive appointments needed for public service or safety.",
+  "test": "The four elements of a valid appointment (all must concur, before, just before or during the ban): authority and its exercise; transmittal (release through the Malacañang Records Office is the unequivocal proof; direct delivery must be proved by the appointee); a vacancy; receipt and acceptance (oath or assumption) by a qualified appointee.",
+  "x": "Use for any last-minute appointment by an outgoing President, or a new President’s order revoking them: count the elements and check the dates of transmittal and acceptance against the start of the ban. For the other side, Brion, J.: Sec. 15 bars only the President’s act of issuing; acceptance may follow.",
+  "w": "The vote (8–6) comes from Brion, J.’s opinion; the original draft, his, was rejected. The ponencia’s facts and its table differ on whether there were transmittal letters for two of the petitioners.",
+  "s": "A midnight appointment accepted during the ban is void: appointment is a four-step process; EO 2 valid.",
+  "sy": [
+   "Velicaria-Garafil"
+  ]
+ },
+ {
+  "id": "matibag",
+  "n": "Matibag v. Benipayo",
+  "y": "2002",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: ad interim appointments are permanent",
+  "a": 1,
+  "r": "An ad interim appointment is permanent: it takes effect at once and cannot be withdrawn once the appointee qualifies; it ends only on the CA’s disapproval or the next adjournment of Congress. So it is not the temporary or acting appointment barred for COMELEC members. A by-passed ad interim appointment may be renewed, because “a reappointment presupposes a previous confirmed appointment”; a disapproved one may not.",
+  "f": "Gaminde v. COA left three COMELEC seats, including the Chair, vacant less than four months before the May 2001 election, while Congress was in recess. President Arroyo appointed Benipayo (Chairman), Borra and Tuason ad interim for seven-year terms ending February 2, 2008, and renewed the appointments three times when the CA did not act. Benipayo reassigned Matibag, the acting director of the COMELEC’s education department; she challenged his appointment.",
+  "h": "Petition dismissed (11–0, Carpio, J., April 2, 2002). Matibag had standing and the constitutional issue was the lis mota, since her reassignment depended on Benipayo’s title. The ad interim appointments and their renewals were valid; Benipayo, as de jure Chairman, could reassign her, and as an acting director without CES eligibility she had no security of tenure.",
+  "test": "The two ways an ad interim appointment ends (Art. VII, Sec. 16): disapproval by the CA, or the next adjournment of Congress without action (a by-pass). Disapproved: final, cannot be renewed. By-passed: may be renewed, within the same fixed term.",
+  "x": "Use when the President fills a constitutional commission or Cabinet post during a recess, or keeps renewing by-passed appointments: ad interim appointments are permanent and valid, but renewals cannot stretch the fixed term. Contrast acting designations to the commissions (Brillantes v. Yorac: void).",
+  "w": "The decision cites Gaminde both as “v. Commission on Appointments” and “v. Commission on Audit.” Cinco, a respondent, was killed in an ambush while the case was pending.",
+  "s": "Ad interim appointments are permanent; renewing by-passed ones is not reappointment.",
+  "sy": [
+   "Matibag v. Benipayo"
+  ]
+ },
+ {
+  "id": "larin",
+  "n": "Larin v. Executive Secretary",
+  "y": "1997",
+  "t": "appt",
+  "also": [
+   "pres"
+  ],
+  "sub": "V.B.2(d) Appointment: the power to remove, and reorganization in good faith",
+  "a": 1,
+  "r": "The power to remove is inherent in the power to appoint, so a presidential appointee is under the President’s disciplining authority; but a career executive officer has security of tenure and may be removed only for cause and with due process. The President may reorganize under statutes (the GAA, PD 1416 as amended, the Administrative Code), but only in good faith; badges of bad faith (RA 6656, Sec. 2) void it.",
+  "f": "Larin, a BIR Assistant Commissioner (a Career Executive Service post) appointed by President Aquino, was convicted by the Sandiganbayan in 1992 over a tax credit to Tanduay. On that basis, the Office of the President investigated him, and in December 1993 dismissed him for grave misconduct. Meanwhile, President Ramos’s EO 132 reorganized the BIR, abolished Larin’s service, and named ten Assistant Commissioners without him. In 1996, while his petition was pending, the Supreme Court acquitted him.",
+  "h": "Petition granted; Larin reinstated with full backwages (13–0, Torres, J., October 16, 1997). The investigation met due process, but the acquittal, on findings that his acts were lawful and regular, removed the only basis of the administrative case. The President could reorganize the BIR, but EO 132 showed badges of bad faith, and Larin, a permanent officer, should have been preferred over an outsider.",
+  "test": "Badges of bad faith in a reorganization (RA 6656, Sec. 2): (a) a significant increase in positions; (b) an office abolished and another created to do substantially the same work; (c) incumbents replaced by the less qualified; (d) reclassified offices doing substantially the same work; (e) violation of the order of separation.",
+  "x": "Use when the President removes a presidential appointee, or “reorganizes” an office to get rid of its people: removal power comes with the power to appoint, but career officers keep security of tenure; reorganization must be in good faith. Pair with Banda and Biraogo (where PD 1416 was later called functus officio).",
+  "w": "Biraogo (2010) later held PD 1416 functus officio, so do not rely on that part of Larin’s reasoning. The fallo only orders reinstatement; it does not expressly void EO 132.",
+  "s": "Removal power comes with appointment, but a career officer is removable only for cause; reorganization must be in good faith.",
+  "sy": [
+   "Larin v. Executive Secretary"
+  ]
+ },
+ {
+  "id": "funavillar",
+  "n": "Funa v. Villar",
+  "y": "2012",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: promoting a Commissioner to Chairman (COA)",
+  "a": 1,
+  "r": "A promotion from Commissioner to Chairman is not a barred “reappointment” (a second appointment to the same office), but no one may serve in a commission for more than seven years in all, and the President cannot split terms: a vacancy from expiration of a term needs a full seven-year appointment; other vacancies, only the unexpired portion. Villar’s promotion to the chairmanship vacated by expiration was void. Matibag’s fourth situation is abandoned.",
+  "f": "Reynaldo Villar became COA Commissioner in 2004 for a term ending February 2, 2011. When Chairman Carague’s term expired on February 2, 2008, President Arroyo appointed Villar Chairman, his papers saying only until February 2, 2011; Villar claimed a fresh seven-year term to 2015. Funa sued as taxpayer and citizen. Villar stepped down in 2011 when President Aquino appointed a new Chairman.",
+  "h": "Petition partly granted; Villar’s appointment as Chairman declared unconstitutional (12–3, Velasco, J., April 24, 2012). Moot, but decided under the exceptions; standing granted as a matter of transcendental importance; certiorari proper. A full term would exceed seven years in all; a shorter term violates the fixed term; so no valid appointment was possible.",
+  "test": "Rules on Art. IX-D, Sec. 1(2) (restated): (1) after the first set, appointments are for a fixed seven years; a shorter term is void; (2) a vacancy from death, resignation, disability or impeachment is filled only for the unexpired portion; (3) those who served a full term cannot be reappointed to any position; (4) a Commissioner who resigns may be appointed Chairman for the unexpired portion of a chairmanship vacated by death, resignation, disability or impeachment, if the total stays within seven years; (5) no temporary or acting appointment.",
+  "x": "Use when a commissioner is promoted to chair a constitutional commission, or a President gives someone a term shorter or longer than the Constitution fixes. Check the cause of the vacancy and the seven-year total. Also see Batch 10 (Constitutional Commissions).",
+  "w": "Carpio, J. (with Abad and Sereno, JJ.) agreed the appointment was void but would bar promotions altogether as “reappointment of any kind”; Mendoza, J. (with Brion and Reyes, JJ.) would have upheld it up to the end of Villar’s Commissioner term.",
+  "s": "COA Commissioner Villar’s promotion to Chairman was void: no split terms, seven years in all.",
+  "sy": [
+   "Funa v. Commission on Audit Chair"
+  ]
+ },
+ {
+  "id": "funaagra",
+  "n": "Funa v. Agra",
+  "y": "2013",
+  "t": "appt",
+  "also": [
+   "pres"
+  ],
+  "sub": "V.B.2(d) Appointment: concurrent acting designations and Sec. 13",
+  "a": 0,
+  "r": "Art. VII, Sec. 13 bars Cabinet members, their deputies and assistants from holding any other office, whether by permanent appointment or temporary designation: “to hold an office” means to occupy and discharge it. Agra’s designation as Acting Secretary of Justice while Acting Solicitor General was void; neither post is ex officio to the other. He was a de facto officer, so his acts stand.",
+  "f": "In early 2010, President Arroyo had Alberto Agra serve at the same time as Acting Secretary of Justice and Acting Solicitor General (the parties disputed which designation came first). Funa, as taxpayer, citizen and lawyer, challenged the concurrent designations. A new Solicitor General assumed office in August 2010.",
+  "h": "Petition granted; Agra’s designation as Acting Secretary of Justice, in a concurrent capacity with his post as Acting Solicitor General, annulled; Agra declared a de facto officer during his tenure (15–0, Bersamin, J., February 19, 2013). Not moot under the exceptions. Even if the Solicitor General were outside Sec. 13, the two offices are incompatible under Art. IX-B, Sec. 7(2).",
+  "x": "Use when the President makes a Cabinet member or undersecretary an “acting” or “OIC” head of another office: Sec. 13 covers temporary designations too (Funa v. Ermita). Then the ex officio test from Civil Liberties Union, and the de facto officer doctrine for the acts done meanwhile.",
+  "w": "The parties gave conflicting dates for the two designations; the Court found it enough that Agra admitted holding both concurrently. The fallo voids only the designation as Acting Secretary of Justice.",
+  "s": "A Justice Secretary may not also be acting Solicitor General: Sec. 13 covers acting designations; de facto acts stand.",
+  "sy": [
+   "Funa v. Agra"
+  ]
+ },
+ {
+  "id": "funacsc",
+  "n": "Funa v. Civil Service Commission",
+  "y": "2014",
+  "t": "appt",
+  "also": [
+   "pres"
+  ],
+  "sub": "V.B.2(d) Appointment: ex officio board seats for a constitutional commissioner",
+  "a": 0,
+  "r": "Members of the constitutional commissions are not Cabinet officials, so Art. IX-B, Sec. 7(2) (not Art. VII, Sec. 13) governs them, read with Art. IX-A, Sec. 2. An ex officio post is valid only if derived from the primary functions of the office and unpaid. The CSC Chairman’s seats on the GSIS, PhilHealth, ECC and Pag-IBIG boards were void: they went beyond personnel functions, paid per diems, and put him under bodies the President controls.",
+  "f": "President Arroyo appointed Francisco Duque III CSC Chairman in January 2010 and, by EO 864 (February 2010), made him an ex officio member of the boards of the GSIS, PhilHealth, the Employees’ Compensation Commission and the HDMF, citing the Administrative Code provision that the CSC Chairman sits on boards affecting government employees’ welfare. Funa sued. RA 10149 (2011) later changed GOCC board rules.",
+  "h": "Petition partly granted (13–0, Bersamin, J., November 25, 2014). The Administrative Code provision (Book V, Title I-A, Ch. 3, Sec. 14) is constitutional, but EO 864 and Duque’s designations are void for violating Art. IX-A, Secs. 1 and 2; Duque was a de facto officer, so his acts on the boards stand.",
+  "test": "Valid ex officio post for a constitutional commissioner: (1) allowed by law; (2) derived from the primary functions of the principal office; (3) no additional compensation (per diems included); (4) not a seat on a body under the President’s control, which would impair the commission’s independence.",
+  "x": "Use when a constitutional commissioner, or any official outside Sec. 13, is given board seats: check the primary-functions link, the pay, and independence. Contrast Civil Liberties Union (Cabinet: stricter Sec. 13) and Funa v. Agra.",
+  "s": "CSC Chairman cannot sit on GSIS, PhilHealth and Pag-IBIG boards: beyond his functions, paid, and under presidential control.",
+  "sy": [
+   "Funa v. Civil Service Commission"
+  ]
+ },
+ {
+  "id": "gaminde",
+  "n": "Gaminde v. COA",
+  "y": "2000",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: fixed terms of commissioners and the rotational plan",
+  "a": 0,
+  "r": "The terms of the first appointees to the constitutional commissions start on a common date, February 2, 1987 (the ratification), whatever their dates of appointment; a belated appointment is counted against the appointee, and a vacancy is filled only for the unexpired balance. A term (the period one may hold office by right) differs from tenure (the time actually served). Gaminde’s term ended February 2, 1999, as her appointment said, but she may keep her pay as a de facto officer in good faith.",
+  "f": "President Ramos appointed Thelma Gaminde CSC Commissioner in 1993 “for a term expiring February 2, 1999,” succeeding the first holder of the five-year seat. In 1998 the Chief Presidential Legal Counsel advised her that her term would end on February 2, 2000, and she stayed on. The COA disallowed her salary and her staff’s from February 2, 1999.",
+  "h": "Term held to have expired on February 2, 1999; but she served in good faith as a de facto officer until February 2, 2000, so the disallowance of her and her staff’s pay was reversed (Pardo, J., December 13, 2000; 11–2 on the term, unanimous on the pay).",
+  "test": "The rotational plan (Republic v. Imperial): (1) the first terms (7, 5 and 3 years) start on a common date; (2) any vacancy is filled only for the unexpired balance. Under the 1987 Constitution, the common date is February 2, 1987, so terms expire every two years in a regular cycle.",
+  "x": "Use when someone claims a commissioner’s term runs from the date of appointment or of assuming office: terms run from the fixed cycle, and late appointments eat into the term. Pair with Funa v. Villar (no split terms) and Matibag (the 2001 COMELEC vacancies Gaminde caused). Also in Batch 10.",
+  "w": "De Leon, J. (joined by Mendoza, J.) would count the first terms from February 2, 1988, so Gaminde’s term would end February 2, 2000. The Presidential Legal Counsel’s letter was “in error.”",
+  "s": "Commissioners’ terms run from February 2, 1987 in a fixed cycle; Gaminde’s ended in 1999, but her pay stands.",
+  "sy": [
+   "Gaminde v. Commission on Audit"
+  ]
+ },
+ {
+  "id": "ifurung",
+  "n": "Ifurung v. Carpio Morales",
+  "y": "2018",
+  "t": "appt",
+  "sub": "V.B.2(d) Appointment: the Ombudsman’s full seven-year term",
+  "a": 0,
+  "r": "Every Ombudsman and Deputy, whether succeeding on expiration or on death, resignation, removal or disability, is appointed for a full seven-year term from appointment (RA 6770, Sec. 8(3), consistent with Art. XI, Sec. 11). The Office of the Ombudsman is not a constitutional commission: Art. XI, Sec. 10 equates them only in rank and salary, so the rotational plan and Gaminde’s February 2, 1987 clock do not apply.",
+  "f": "Ombudsman Conchita Carpio Morales was appointed in July 2011 after her predecessor resigned. Ifurung, a lawyer, argued that Ombudsman terms run in fixed cycles from February 2, 1987 (as in Gaminde), so Morales only finished the term that ended February 1, 2015, and she and her Deputies were de facto officers since. He asked the Court to strike down RA 6770, Sec. 8(3) and declare their posts vacant.",
+  "h": "Petition dismissed (14–0, Martires, J., April 24, 2018). Certiorari was the proper remedy (an attack on a law, not a collateral attack on title), and direct resort was allowed; but Sec. 8(3) is constitutional, and the Ombudsman and Deputies serve full seven-year terms from appointment.",
+  "x": "Use when someone argues that a replacement Ombudsman or Deputy serves only the rest of a predecessor’s term: no, a full seven years. Contrast the constitutional commissions (Gaminde; Funa v. Villar: unexpired portion only).",
+  "s": "A successor Ombudsman serves a full seven years from appointment; the commissions’ rotational plan does not apply.",
+  "sy": [
+   "Ifurung v. Carpio Morales"
+  ]
+ },
+ {
+  "id": "gonzalesiii",
+  "n": "Gonzales III v. Office of the President",
+  "y": "2014",
+  "t": "appt",
+  "also": [
+   "pres"
+  ],
+  "sub": "V.B.2(d) Appointment: the power to remove, and the Ombudsman’s independence (2012 Decision; 2014 Resolution)",
+  "a": 1,
+  "r": "The power to appoint generally carries the power to remove, but not where the Constitution protects an office’s independence. On reconsideration (2014), the Court held RA 6770, Sec. 8(2) unconstitutional insofar as it lets the President discipline and remove a Deputy Ombudsman: the Ombudsman’s independence is “similar in degree and kind” to the constitutional commissions’. By a separate 8–7 vote, it stays valid for the Special Prosecutor.",
+  "f": "After the August 2010 Quirino Grandstand hostage-taking by a dismissed policeman, a review committee blamed Deputy Ombudsman Emilio Gonzales III for letting the policeman’s motion for reconsideration languish. The Office of the President charged and dismissed him in March 2011 for gross neglect and grave misconduct amounting to betrayal of public trust. Separately, the OP began proceedings against Special Prosecutor Wendell Barreras-Sulit over the plea bargain with Maj. Gen. Carlos Garcia.",
+  "h": "2012 Decision (Perlas-Bernabe, J.): the challenge to Sec. 8(2) failed for want of a majority (equally divided), but Gonzales’s dismissal was reversed: his acts were not betrayal of public trust. 2014 Resolution (Brion, J.): on the OP’s motion, Sec. 8(2) declared unconstitutional as to Deputy Ombudsmen (8–7), valid as to the Special Prosecutor (8–7); the Ombudsman may still investigate Gonzales.",
+  "test": "Betrayal of public trust as a ground for removal: acts that “may be less than criminal but must be attended by bad faith and of such gravity and seriousness as the other grounds for impeachment”; plain errors of judgment and isolated negligence do not qualify.",
+  "x": "Use when the President, or the Office of the President, moves to discipline or remove an official of an independent constitutional office (a Deputy Ombudsman; commissioners): the power to remove does not follow the power to appoint there. The 2026 Carandang ruling applied this (the OP had no disciplinary power over a deputy ombudsman). Contrast Larin (career officers: removable for cause).",
+  "w": "Both rulings are close: the 2012 challenge failed only because the Court was equally divided; the 2014 rulings on the Deputies and on the Special Prosecutor were each 8–7, and the prevailing view on the Special Prosecutor is in Leonen, J.’s opinion, not the ponencia’s Part D.",
+  "s": "The President cannot remove a Deputy Ombudsman (Sec. 8(2) void as to Deputies, valid as to the Special Prosecutor).",
+  "sy": [
+   "Gonzales III v. Office of the President"
+  ]
+ },
+ {
   "id": "barrioquinto",
   "n": "Barrioquinto v. Fernandez",
   "y": "1949",

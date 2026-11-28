@@ -1724,5 +1724,393 @@
   ],
   "vote": "15–0, Singh, J. Leonen and Caguioa, JJ., concurring.",
   "ops": "Leonen, J.: would also void the proclamation as a bill of attainder and for the warrantless-arrest clause. Caguioa, J.: stresses that amnesty is a power shared by two branches, so revocation needs the same consensus as the grant, and that a presidential proclamation cannot do what an ex post facto law cannot."
+ },
+ "mison": {
+  "iss": [
+   {
+    "q": "Is prohibition the proper remedy, and do the petitioners have standing?",
+    "a": "NOT RULED",
+    "why": "Given the public interest and the need for stability in the public service, early in the life of the 1987 Constitution, the Court set these procedural questions aside and decided the case, and let the CA intervene."
+   },
+   {
+    "q": "Does the appointment of the Commissioner of Customs need confirmation by the Commission on Appointments?",
+    "a": "NO",
+    "why": "Only the first sentence of Sec. 16 speaks of nomination and CA consent; the second speaks only of appointment, and the records show why. The 1935 Constitution required confirmation of nearly everyone, which bred horse-trading; the 1973 Constitution required none. The framers chose a middle ground: they deleted “and bureaus” (Foz: bureau directors are “quite low” and confirmation would expose them to political influence) and made the second-sentence officers appointable without confirmation. “Also” means “in addition,” and limits on the appointing power are construed strictly. “Alone” is a carry-over from 1935 and redundant. The Customs Commissioner is a bureau head whom the law authorizes the President to appoint."
+   }
+  ],
+  "vote": "9–2, Padilla, J. Cruz, J., dissented, joined by Gutierrez, Jr., J.",
+  "ops": "Cruz, J.: the second sentence continues the first and also requires confirmation; otherwise absurdities follow (a consul needs confirmation but the Central Bank Governor does not), “like checking the bridesmaids but forgetting the bride”; confirmation is the rule restored to check an appointing power Marcos abused. Gutierrez, Jr., J.: read all the appointment provisions together; only where the Constitution expressly dispenses with confirmation (judges, the Ombudsman, the VP in the Cabinet, lower officers by law) is it not required."
+ },
+ "calderon": {
+  "iss": [
+   {
+    "q": "May Congress, by law, require CA confirmation of presidential appointees beyond those in the first sentence of Sec. 16?",
+    "a": "NO",
+    "why": "The NLRC Chairman and Commissioners fall in the third group, officers the President is authorized by law to appoint. Requiring their confirmation (1) amends the first sentence by adding appointments that need consent and (2) amends the second by imposing consent on appointments entrusted to the President alone. The Court’s interpretation in Mison and Bautista is part of the law (Civil Code Art. 8), and the legislature cannot bind courts with its own reading (Endencia v. David). The framers deliberately left the 1935 system; the remedy is constitutional, not legislative."
+   }
+  ],
+  "vote": "12–1, Padilla, J. Cruz, J., dissenting; Bellosillo, J., took no part.",
+  "ops": "Cruz, J., dissenting, on the strength of his Mison dissent: the Court should re-examine Mison instead of persisting in error out of adherence to precedent."
+ },
+ "manalo": {
+  "iss": [
+   {
+    "q": "Do the promotions of PNP officers to Chief Superintendent and Director need CA confirmation under Sec. 16 and RA 6975?",
+    "a": "NO",
+    "why": "The issue is not new: Mison, Bautista, Quintos-Deles and Calderon hold that only the first group needs confirmation, and Tarrosa v. Singson that Congress cannot expand the CA’s power. So Secs. 26 and 31 of RA 6975 are unconstitutional insofar as they require confirmation; being severable, the rest of the law stands. The presumption of constitutionality does not stop the Court from striking down a statute that transgresses the Constitution."
+   },
+   {
+    "q": "Is the PNP akin to the AFP, so that police officers of a rank equal to colonel need confirmation?",
+    "a": "NO",
+    "why": "The Constitution distinguishes the armed forces (Art. XVI, Sec. 4) from “one police force, which shall be national in scope and civilian in character” (Sec. 6); RA 6975 itself says no element of the police shall be military. Police ranks are not military ranks."
+   },
+   {
+    "q": "Did the Budget Secretary gravely abuse his discretion in paying the officers?",
+    "a": "NO",
+    "why": "The appointments were valid, so the disbursements were too."
+   }
+  ],
+  "vote": "13–0, Purisima, J. Puno, J., took no part. No separate opinions."
+ },
+ "soriano": {
+  "iss": [
+   {
+    "q": "Does the petitioner have standing?",
+    "a": "NO",
+    "why": "A citizen raising a constitutional question must show actual or threatened injury, fairly traceable to the act and redressable by a favorable ruling (TELEBAP; Bayan v. Zamora). Soriano showed none, and his suit was not a taxpayer’s suit because it did not involve Congress’s taxing power."
+   },
+   {
+    "q": "Assuming standing, do the promotions of Coast Guard officers from naval captain up need CA confirmation?",
+    "a": "NO",
+    "why": "The clause on “officers of the armed forces from the rank of colonel or naval captain” refers to military officers alone, and the enumeration is exclusive (Mison; Calderon; Manalo). The Coast Guard is now under the DOTC and no longer part of the Navy or the AFP."
+   }
+  ],
+  "vote": "5–0, Corona, J. (Third Division). No separate opinions."
+ },
+ "pimentelermita": {
+  "iss": [
+   {
+    "q": "Did the later ad interim appointments make the petition moot?",
+    "a": "NO",
+    "why": "The question whether acting secretaries may be appointed while Congress is in session will arise with every such appointment: capable of repetition yet evading review."
+   },
+   {
+    "q": "Do the senators have standing?",
+    "a": "ONLY CA MEMBERS",
+    "why": "The CA is a constitutional body independent of Congress that exercises executive, not legislative, power when it consents (Cunanan v. Tan). So the acting appointments impaired no power of Congress; only the senators who sat on the CA (Enrile, Lacson, Angara, Ejercito-Estrada, Osmeña) had standing to protect its prerogatives."
+   },
+   {
+    "q": "May the President appoint acting secretaries without CA consent while Congress is in session?",
+    "a": "YES",
+    "why": "The appointing power is executive, and Congress may only prescribe qualifications; it cannot name the appointee or force the President to make the undersecretary the acting secretary. An acting appointment is a temporary stop-gap, and a secretary is the President’s alter ego, so the temporary one must enjoy the President’s confidence. The Administrative Code (Book III, Sec. 17) allows designating “any other competent person” for at most one year; “law” includes the Constitution. The one-year limit guards against using acting appointments to circumvent confirmation, and here ad interim appointments followed at once."
+   }
+  ],
+  "vote": "15–0, Carpio, J. No separate opinions."
+ },
+ "urro": {
+  "iss": [
+   {
+    "q": "Should the Court resolve whether the respondents’ appointments violated the ban on midnight appointments?",
+    "a": "NO (not the lis mota)",
+    "why": "The Court will not pass on a constitutional question if the case can be disposed of on another ground. The decisive question was whether General had a cause of action for quo warranto against Urro."
+   },
+   {
+    "q": "Was General’s appointment acting, and does the law bar acting appointments to the NAPOLCOM?",
+    "a": "ACTING; NOT BARRED",
+    "why": "The power to appoint includes temporary appointments unless specifically prohibited or the office is repugnant to it (Nacionalista Party v. Bautista: COMELEC). Staggered terms aim at continuity, not at barring acting appointments (Binamira v. Garrucho), and RA 8551 dropped them anyway; “unexpired term only” only prevents serving beyond the predecessor’s term. An acting appointee serves at pleasure, for at most one year; General’s appointment expired on July 21, 2009, and having served without protest, he was estopped from calling it permanent."
+   },
+   {
+    "q": "Does General have a cause of action for quo warranto against Urro?",
+    "a": "NO",
+    "why": "A private quo warranto petitioner must show a clear right to the office (Rule 66, Secs. 5–6; Acosta v. Flor). An expired acting appointment, temporary and revocable at any time, gives none; the respondents’ titles can be tested in a proper case."
+   }
+  ],
+  "vote": "15–0, Brion, J. No separate opinions."
+ },
+ "derama": {
+  "iss": [
+   {
+    "q": "Are the outgoing mayor’s appointments void “midnight appointments” under Art. VII, Sec. 15?",
+    "a": "NO",
+    "why": "Sec. 15 prohibits appointments by the President or Acting President two months before the next presidential election; “there is no law that prohibits local elective officials from making appointments during the last days of his or her tenure.” De Rama’s only reason was his belief that they were midnight appointments."
+   },
+   {
+    "q": "May the petitioner rely on alleged fraud and irregularities raised only in a supplemental pleading and on appeal?",
+    "a": "NO",
+    "why": "They were contemporaneous with the appointments and should have been raised before the CSC; a supplemental pleading covers later events and its admission is discretionary; issues cannot be raised for the first time on appeal."
+   },
+   {
+    "q": "Could the new mayor unilaterally recall the appointments?",
+    "a": "NO",
+    "why": "The appointees were screened by the selection board, qualified, attested by the CSC, and had assumed office, so they acquired a legal right that cannot be taken away except for cause, with notice and hearing (Aquino v. CSC; Mauna v. CSC). An accepted appointment cannot be withdrawn by the appointing authority; only the CSC may recall it, on grounds in its rules, and none was seasonably shown."
+   }
+  ],
+  "vote": "9–6, Ynares-Santiago, J. Bellosillo, Puno and Vitug, JJ., concurred with notes. Mendoza, J., dissented, joined by Davide, C.J., Melo, Panganiban, Gonzaga-Reyes and De Leon, JJ.",
+  "ops": "Mendoza, J. (with five others): Sec. 15 applies a broader principle: an official who has lost an election is a caretaker who should not fill posts without urgent need; public office is a public trust, and Aytona v. Castillo struck down 350 last-hour appointments without any specific provision. The 14 appointments, made in 27 days after the loss, with perfunctory screening, were void."
+ },
+ "decastrojbc": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing, and is there an actual, ripe controversy?",
+    "a": "YES",
+    "why": "Standing is waived for issues of transcendental importance, affecting the appointment of the Chief Justice and of judges amid many vacancies. The controversy is ripe: the JBC had begun the process and was undecided on whom to submit to; a reasonable certainty of the threatened constitutional injury suffices."
+   },
+   {
+    "q": "Does the Sec. 15 election ban apply to appointments to the Supreme Court and the rest of the Judiciary?",
+    "a": "NO (Valenzuela reversed)",
+    "why": "(1) The framers arranged the appointment rules by department; had they meant Sec. 15 to reach the Court, they would have said so in Art. VIII, Sec. 4(1), whose 90-day period is an imperative mandate to the President. (2) Sec. 15 targets Aytona-type midnight appointments and vote-buying; the JBC’s unhurried screening eliminates those evils. (3) Justice Regalado, a framer, confirmed the ban was not meant for the Court of Appeals. (4) Secs. 14 and 16 concern only executive appointments, so Sec. 15 between them does too. (5) Judicial independence. (6) The ban lasts 109 to 115 days, longer than 90, so applying it would make compliance impossible."
+   },
+   {
+    "q": "Does the law on an Acting Chief Justice (Judiciary Act of 1948, Sec. 12) remove the need to appoint?",
+    "a": "NO",
+    "why": "The Chief Justice is appointed as such, never in an acting capacity; the Chief Justice heads the Judiciary and chairs the PET, and Chief Justices have historically been appointed the same or the next day."
+   },
+   {
+    "q": "Does mandamus lie to compel the JBC to submit its list to the incumbent President?",
+    "a": "NO (premature)",
+    "why": "The JBC must submit its list before the vacancy so as not to shorten the President’s 90 days; that duty is ministerial, but it still had until May 17, 2010, and its choice of nominees is discretionary."
+   },
+   {
+    "q": "Does prohibition lie against the JBC (because the Court appoints the Chief Justice, or because of the JBC’s composition)?",
+    "a": "NO",
+    "why": "Only the President appoints the Chief Justice, a “Member” of the Court. The challenge to the JBC’s composition was made by petitioners who were not nominees and so lacked standing on it."
+   }
+  ],
+  "vote": "Bersamin, J., with Leonardo-de Castro, Perez, Villarama and Abad, JJ.; Brion, J. (with Peralta, Del Castillo and Mendoza, JJ., in the result) concurring and dissenting; Nachura, J. (joined by Velasco, J.), separate opinion; Carpio Morales, J., dissenting. Puno, C.J., Carpio and Corona, JJ., took no part.",
+  "ops": "Carpio Morales, J., dissenting: the arrangement of articles is the weakest aid; the ban makes no distinction and its sole exception is exclusive; the framers kept it knowing of the JBC (Davide: a President could perpetuate himself through appointments to the Judiciary); the 90 days are suspended during the ban; the Court can work without an appointed Chief Justice. Brion, J.: the President may appoint the Chief Justice and Justices during the ban, a narrow exception, but Valenzuela should stand for lower-court judges given the hundreds of vacancies and local influence."
+ },
+ "garafil": {
+  "iss": [
+   {
+    "q": "Should the petition of Villanueva and Rosquita be dismissed outright?",
+    "a": "YES",
+    "why": "They filed a Rule 65 petition when a Rule 45 appeal was available, filed it late even as an appeal, and gave no reason for not seeking reconsideration."
+   },
+   {
+    "q": "Are the petitioners’ appointments midnight appointments that violate Art. VII, Sec. 15?",
+    "a": "YES",
+    "why": "Both the ponencia and the dissent agreed that none showed the papers were issued and released before the ban. The dates the Records Office received them, the only reliable evidence of transmittal, fell within the ban, and all took their oaths during it."
+   },
+   {
+    "q": "Is EO 2, which treats appointments accepted on or after March 11, 2010 and appointments to offices vacant only after that date as midnight appointments, constitutional?",
+    "a": "YES",
+    "why": "Appointment is a process ending in acceptance (Lacson v. Romero; Javier v. Reyes). Sec. 15 gave Aytona’s “stratagem to beat the deadline” a fixed, objective period, so appointments within it are automatically prohibited whatever the motive. Dropping acceptance would produce absurdities (an office deemed filled by someone who refuses it; incumbents removed by being appointed elsewhere) and invite antedating: it is easy to antedate papers, hard to simulate the whole process. Release through the Records Office proves transmittal; an office vacant only after the ban cannot be filled before it."
+   }
+  ],
+  "vote": "8–6, Carpio, J., with Sereno, C.J., Velasco, Del Castillo, Villarama, Reyes, Perlas-Bernabe and Leonen (on leave, left his vote), JJ. Brion, J., concurring and dissenting, joined by Leonardo-de Castro, Bersamin, Mendoza, Peralta and Perez, JJ. Jardeleza, J., took no part.",
+  "ops": "Brion, J. (with five others): the President may interpret the Constitution, subject to review; by fixing a period, Sec. 15 removed any inquiry into bad faith, so the CA erred in deferring to the OP. But Sec. 15 uses “appointment” in the narrow sense, the President’s act of issuance; acceptance may follow, and the clause in EO 2 covering appointments dated before the ban but accepted during it is unconstitutional. Failure to course papers through the Records Office is not fatal. Still, none of these petitioners proved issuance before the ban, so their appointments fail."
+ },
+ "matibag": {
+  "iss": [
+   {
+    "q": "Does the petition satisfy the requisites of judicial review?",
+    "a": "YES",
+    "why": "Matibag’s reassignment rested on Benipayo’s authority as Chairman, so she had a personal stake in his title, and that constitutional question was the lis mota. The earliest opportunity means the first pleading before a competent court, not the date of filing. The issue was also of paramount public importance for the 2001 elections."
+   },
+   {
+    "q": "Are ad interim appointments to the COMELEC the temporary or acting appointments that Art. IX-C, Sec. 1(2) prohibits?",
+    "a": "NO",
+    "why": "An ad interim appointment is permanent: it takes effect at once and cannot be withdrawn after the appointee qualifies; it ends only on disapproval or adjournment, resolutory conditions the Constitution itself sets. “Ad interim” describes the manner (made during recess), not the nature (PLM v. IAC). What Art. IX-C bars is the acting designation revocable at will (Brillantes v. Yorac; Nacionalista Party v. Bautista). Requiring confirmation before assumption would nullify the ad interim power, which here kept the COMELEC working through the 2001 elections; a confirmed majority remained."
+   },
+   {
+    "q": "Does renewing by-passed ad interim appointments violate the ban on reappointment?",
+    "a": "NO",
+    "why": "A disapproval is final and cannot be renewed; a by-pass is no decision, so the President may renew (CA Rules, Sec. 17; Guevara v. Inocentes: the CA acts “only by action, never by omission”). The ban covers anyone confirmed for any term, but a lapsed ad interim appointment is not a term; “a reappointment presupposes a previous confirmed appointment.” The renewals kept the same term ending February 2, 2008, so no one serves beyond seven years."
+   },
+   {
+    "q": "Was Matibag’s reassignment by the Chairman illegal?",
+    "a": "NO",
+    "why": "Benipayo was the de jure Chairman, and the Administrative Code lets the Chairman assign and transfer personnel. Matibag held only an acting appointment, lacking CES eligibility, so she had no security of tenure (Cuevas v. Bacal). COMELEC Resolution No. 3300 was the prior approval for election-period transfers; its notice requirement covers only field personnel."
+   },
+   {
+    "q": "Did the finance officer exceed his authority in paying the appointees’ salaries?",
+    "a": "NO",
+    "why": "The appointments were valid, so the payments were too."
+   }
+  ],
+  "vote": "11–0, Carpio, J. Puno and Vitug, JJ., on official leave. No separate opinions."
+ },
+ "larin": {
+  "iss": [
+   {
+    "q": "Does the President have power to discipline and remove a presidential appointee in the Career Executive Service?",
+    "a": "YES, FOR CAUSE ONLY",
+    "why": "The power to remove is inherent in the power to appoint (Art. VII, Sec. 16), so Larin, appointed by the President, was under the President’s disciplining authority. But the power is not absolute: a career service officer has security of tenure and may be removed only for a cause provided by law and with due process."
+   },
+   {
+    "q": "Was the investigation consistent with due process?",
+    "a": "YES",
+    "why": "Due process in administrative cases is a reasonable opportunity to be heard. Larin was asked to explain and submitted a position paper with supporting documents."
+   },
+   {
+    "q": "Was Larin dismissed for a valid cause, given his acquittal?",
+    "a": "NO",
+    "why": "Administrative and criminal cases are generally independent. But the administrative charge rested entirely on the conviction, and the Court acquitted him on a categorical finding that the same acts were lawful and regular; with that basis gone, the administrative case must fall."
+   },
+   {
+    "q": "May the President reorganize the BIR by executive order?",
+    "a": "YES",
+    "why": "The GAA (RA 7645, Sec. 62) allows organizational changes “directed by the President”; the Administrative Code’s residual powers carry PD 1416 as amended by PD 1772, still operative; the Constitution itself contemplates reorganizations. EO 127 (1987) was stale. The claim that the GAA provisions are riders fails against the presumption of constitutionality."
+   },
+   {
+    "q": "Was the BIR reorganization tainted with bad faith?",
+    "a": "YES",
+    "why": "A reorganization is valid only in good faith (Dario v. Mison). EO 132 abolished offices and created another to absorb the same functions, and multiplied positions: badges of bad faith under RA 6656, Sec. 2. And permanent officers like Larin must be preferred for comparable new positions before outsiders are taken in (Sec. 4)."
+   }
+  ],
+  "vote": "13–0, Torres, Jr., J. Regalado, J., on leave. No separate opinions."
+ },
+ "funavillar": {
+  "iss": [
+   {
+    "q": "Should the Court resolve the petition although Villar had stepped down?",
+    "a": "YES",
+    "why": "It was moot, but all four exceptions applied (David v. Macapagal-Arroyo): a grave constitutional issue, paramount public interest, the need for controlling principles, and capability of repetition."
+   },
+   {
+    "q": "Does Funa, as taxpayer and citizen, have standing?",
+    "a": "YES",
+    "why": "The case is of transcendental importance, so the Court relaxed the direct-injury requirement."
+   },
+   {
+    "q": "Is certiorari a proper remedy, rather than declaratory relief or quo warranto?",
+    "a": "YES",
+    "why": "Certiorari lies to inquire whether an appointment infringed the Constitution or was made with grave abuse of discretion."
+   },
+   {
+    "q": "Is Villar’s appointment as COA Chairman, after four years as Commissioner, valid?",
+    "a": "NO",
+    "why": "(1) A promotion is not a barred reappointment, which means a second appointment to the same office; the framers (Aquino, Monsod, Foz) contemplated “upgrading” within a seven-year total; Matibag’s fourth situation was obiter and is abandoned. (2) But no one may serve more than seven years in all, so a fresh term to 2015 was impossible. (3) Carague’s seat fell vacant by expiration, which requires a full seven-year appointment; the President cannot split terms by giving a shorter one. So Villar could not be validly appointed under any term."
+   }
+  ],
+  "vote": "12–3 on unconstitutionality, Velasco, J. Carpio, J. (with Abad and Sereno, JJ.) concurring and dissenting; Mendoza, J. (with Brion and Reyes, JJ.) concurring and dissenting, would uphold the appointment.",
+  "ops": "Carpio, J.: the Constitution bans reappointment of any kind, promotions included; both the acting and permanent chairmanships were void. Mendoza, J.: a promotion is allowed even to a seat vacated by expiration, as long as the total service stays within seven years (as with COMELEC’s Garcia in 1959); Villar could serve until his Commissioner term ended."
+ },
+ "funaagra": {
+  "iss": [
+   {
+    "q": "Are the requisites of judicial review, including standing, present?",
+    "a": "YES",
+    "why": "They were not in issue; Funa sued as taxpayer, citizen and lawyer on a question of constitutional importance."
+   },
+   {
+    "q": "Did the appointment of a new Solicitor General make the case moot?",
+    "a": "NO",
+    "why": "The case falls under the exceptions: a grave constitutional question, capable of repetition, needing a controlling rule."
+   },
+   {
+    "q": "Did Agra’s concurrent designations violate Art. VII, Sec. 13?",
+    "a": "YES",
+    "why": "As Acting Secretary of Justice he was covered by Sec. 13, whose only exceptions are the Constitution’s own and ex officio posts (Civil Liberties Union). The acting nature of a designation does not matter: “to hold an office” is to occupy and discharge it, and a contrary reading would open the floodgates to circumvention (Funa v. Ermita). The Solicitor General’s functions are neither derived from nor required by the DOJ’s; the OSG is independent and autonomous. And even if the Acting Solicitor General were outside Sec. 13, the two offices are incompatible under Art. IX-B, Sec. 7(2)."
+   },
+   {
+    "q": "Do Agra’s official acts as Acting Secretary of Justice remain valid?",
+    "a": "YES",
+    "why": "He was not a de jure officer, but he held the office under color of a known appointment, so he was a de facto officer whose acts bind the public and third persons."
+   }
+  ],
+  "vote": "15–0, Bersamin, J. No separate opinions."
+ },
+ "funacsc": {
+  "iss": [
+   {
+    "q": "Does Funa have standing?",
+    "a": "YES",
+    "why": "As in his earlier public-law cases, the Court recognized his standing as taxpayer, citizen and lawyer."
+   },
+   {
+    "q": "Did RA 10149 make the case moot?",
+    "a": "NO",
+    "why": "The designation could have ended or become invalid under the new law, but the case falls under the exceptions to mootness."
+   },
+   {
+    "q": "Is the CSC Chairman’s ex officio designation to the four boards valid?",
+    "a": "NO",
+    "why": "Commissioners fall under the general rule (Art. IX-B, Sec. 7(2)), read with Art. IX-A, Sec. 2, which bars them from other office during tenure. (1) The Administrative Code provision is valid: matters affecting government employees’ careers and welfare are primary CSC functions. (2) But these boards also exercise corporate powers unrelated to personnel, and the designation carried per diems, so it was not a true ex officio post. (3) The CSC Chairman cannot sit on bodies under the President’s control without impairing the commission’s independence (Art. IX-A, Sec. 1)."
+   },
+   {
+    "q": "Do Duque’s acts as a board member remain valid?",
+    "a": "YES",
+    "why": "He was not a de jure officer but a de facto officer during his tenure."
+   }
+  ],
+  "vote": "13–0, Bersamin, J. Brion, J., on leave; Perlas-Bernabe, J., on official leave. No separate opinions."
+ },
+ "gaminde": {
+  "iss": [
+   {
+    "q": "Did Gaminde’s term as CSC Commissioner expire on February 2, 1999, as her appointment stated?",
+    "a": "YES",
+    "why": "The rotational plan needs the first terms to start on a common date and vacancies to be filled only for the unexpired balance (Republic v. Imperial); under the 1987 Constitution that date is February 2, 1987. The transitory provision (Art. XVIII, Sec. 15) governs the tenure of incumbents, not the terms in Art. IX. So the five-year seat’s first term ran to 1992 and the second to February 2, 1999; she was bound by the term in the appointment she accepted, and the legal counsel’s contrary letter was wrong."
+   },
+   {
+    "q": "Did the COA err in disallowing her and her staff’s salaries from February 2, 1999 to February 2, 2000?",
+    "a": "YES",
+    "why": "She stayed on in good faith as a de facto officer and actually served, so she and her co-terminous staff are entitled to pay for that period."
+   }
+  ],
+  "vote": "Pardo, J. Eleven Justices on the term (Puno, J., in the result); De Leon, J., concurring and dissenting, joined by Mendoza, J. Bellosillo, J., took no part. All agreed the pay should not be disallowed.",
+  "ops": "De Leon, J. (with Mendoza, J.): the first appointees’ terms began on February 2, 1988, so Gaminde’s term ended on February 2, 2000; he agreed the pay could not be disallowed."
+ },
+ "ifurung": {
+  "iss": [
+   {
+    "q": "Is RA 6770, Sec. 8(3), giving a successor Ombudsman a full term, unconstitutional?",
+    "a": "NO",
+    "why": "The law is presumed valid and the petitioner did not show a clear breach. The Office of the Ombudsman is not a collegial constitutional commission; Art. XI, Sec. 10 equates the Ombudsman and Deputies with the commissions only in rank and salary. The 7-5-3 rotational plan is unique to the commissions, so Gaminde does not apply. The Constitution nowhere limits a successor to the unexpired term, so every appointee, for an expired or unexpired term, serves a full seven years from appointment."
+   },
+   {
+    "q": "Is certiorari the proper remedy, rather than quo warranto?",
+    "a": "YES",
+    "why": "The petition primarily attacks the constitutionality of a law; the officers’ de facto status was sought only as a consequence, so it is not a collateral attack on title (unlike Topacio v. Ong)."
+   },
+   {
+    "q": "May the petitioner come directly to the Supreme Court?",
+    "a": "YES",
+    "why": "Under its expanded power of review, given the constitutional question raised, the Court took cognizance despite the hierarchy of courts."
+   }
+  ],
+  "vote": "14–0, Martires, J. Sereno, C.J., on leave. No separate opinions."
+ },
+ "gonzalesiii": {
+  "iss": [
+   {
+    "q": "(2012) Does the Office of the President have disciplinary power over a Deputy Ombudsman and the Special Prosecutor under RA 6770, Sec. 8(2)?",
+    "a": "YES (no majority to invalidate)",
+    "why": "Officers the President appoints are generally removable by him, unless the Constitution vests removal elsewhere; the President appoints the Deputies (Art. XI, Sec. 9), so Sec. 8(2) only made express an implied power, shared concurrently with the Ombudsman, limited to the impeachment grounds and subject to due process. The constitutional challenge failed because the Court was equally divided."
+   },
+   {
+    "q": "(2012) Was Gonzales denied due process when the OP decided without his attendance?",
+    "a": "NO",
+    "why": "He was given notice and the chance to answer; he chose not to attend the clarificatory conference."
+   },
+   {
+    "q": "(2012) Did the OP gravely abuse its discretion in dismissing Gonzales for betrayal of public trust?",
+    "a": "YES",
+    "why": "Betrayal of public trust must involve bad faith and gravity comparable to the other impeachment grounds. Gonzales acted on the draft within nine days; the delay lay largely in the Ombudsman’s office. He was reinstated with backwages, without prejudice to the Ombudsman’s investigation."
+   },
+   {
+    "q": "(2012) Are the proceedings against the Special Prosecutor premature while the plea bargain is pending in the Sandiganbayan?",
+    "a": "NO",
+    "why": "The administrative case concerns her conduct, independent of the criminal case’s outcome."
+   },
+   {
+    "q": "(2014) Is Sec. 8(2) unconstitutional insofar as it lets the President discipline and remove a Deputy Ombudsman?",
+    "a": "YES (8–7)",
+    "why": "The question is justiciable. The Ombudsman’s independence is similar in degree and kind to the constitutional commissions’ (Brillantes v. Yorac; Macalintal), and the framers made it independent of the Executive precisely because many culprits are in the executive branch. Letting the President discipline Deputies, while the President’s own officials are subject to the Ombudsman, endangers that independence. Congress’s power to provide for the removal of non-impeachable officers is not carte blanche."
+   },
+   {
+    "q": "(2014) Is Sec. 8(2) unconstitutional as to the Special Prosecutor?",
+    "a": "NO (8–7)",
+    "why": "By a separate vote, the Office of the Special Prosecutor is not constitutionally within the Office of the Ombudsman and does not share its independence (the prevailing view in Leonen, J.’s opinion)."
+   },
+   {
+    "q": "(2014) Even assuming OP authority, was Gonzales’s dismissal correct?",
+    "a": "NO",
+    "why": "Alternatively, the OP’s finding of betrayal of public trust was patently erroneous; but the ruling on Sec. 8(2) made further ruling on the dismissal unnecessary."
+   }
+  ],
+  "vote": "2012: Perlas-Bernabe, J.; Carpio, J., concurring; Brion, J. (with Velasco, Leonardo-de Castro and Perez, JJ.) and Abad, J. (joined by Bersamin, J.) dissenting. 2014: Brion, J., 8–7 on the Deputies; Perlas-Bernabe, J. (with Sereno, C.J., Carpio, Peralta, Del Castillo, Villarama and Reyes, JJ.) and Leonen, J., concurring and dissenting.",
+  "ops": "2012: Carpio, J.: independence does not mean exclusive disciplinary authority; Sec. 8(2) is valid. Brion, J., and Abad, J.: Sec. 8(2) is unconstitutional; the OP proceedings should be voided. 2014: Perlas-Bernabe, J.: would uphold Sec. 8(2) entirely. Leonen, J.: Sec. 8(2) fails as to the Deputies but stands as to the Special Prosecutor, and there was substantial evidence against Gonzales, whom the Ombudsman may still discipline."
  }
 }
