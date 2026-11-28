@@ -14,8 +14,9 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     const p = await ctx.newPage(); const tag = vp.width + (vp.dark ? ' dark' : ' light');
     const errs = []; p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
     // a viewer who chose midterm topics before the finals
-    await p.addInitScript(() => { if (!localStorage.getItem('t_seeded')){ localStorage.setItem('c1_dtop', JSON.stringify(['jr', 'org'])); localStorage.setItem('t_seeded', '1'); } });
-    await p.goto('file://' + file + '#rules'); await p.waitForTimeout(500);
+    await p.goto('file://' + file + '#rules'); await p.waitForTimeout(300);
+    await p.evaluate(() => { localStorage.setItem('c1_dtop', JSON.stringify(['jr', 'org'])); localStorage.removeItem('c1_dtop_v'); });
+    await p.reload(); await p.waitForTimeout(500);
     const orals = await p.evaluate(() => { const miss = []; document.querySelectorAll('section.rv').forEach(s => { if (['method', 'terr', 'cit', 'news'].includes(s.id)) return; s.querySelectorAll('figure.viz').forEach(f => { if (!f.querySelector('.vor p')) miss.push(s.id + ':' + f.id); }); }); return {miss, n: document.querySelectorAll('figure .vor p').length}; });
     check(tag, 'every diagram has an orals line', !orals.miss.length && orals.n >= 120, orals);
     const radar = await p.evaluate(() => { const r = document.querySelector('#fig-radar'); const g = [...r.querySelectorAll('.grp')].map(x => x.querySelector('.vsub, h4, b, div').textContent); const links = [...r.querySelectorAll('a.xref')]; return {groups: r.querySelectorAll('.grp').length, rows: r.querySelectorAll('.rrow').length, bad: links.filter(a => !document.getElementById(a.dataset.h)).map(a => a.dataset.h), imp: !!r.textContent.match(/one-year bar/)}; });

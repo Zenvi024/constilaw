@@ -2,73 +2,73 @@
  "maps-all": {
   "folio": {
    "file": "DG-Constitutional-Law-1-Finals-Reviewer-folio.pdf",
-   "pages": 185,
-   "bytes": 6804015
+   "pages": 190,
+   "bytes": 7073192
   },
   "a4": {
    "file": "DG-Constitutional-Law-1-Finals-Reviewer-a4.pdf",
-   "pages": 215,
-   "bytes": 6885712
+   "pages": 220,
+   "bytes": 7179489
   }
  },
  "maps-start-here": {
   "folio": {
    "file": "consti1-maps-start-here-folio.pdf",
-   "pages": 14,
-   "bytes": 1186358
+   "pages": 21,
+   "bytes": 1348033
   },
   "a4": {
    "file": "consti1-maps-start-here-a4.pdf",
-   "pages": 16,
-   "bytes": 1205238
+   "pages": 24,
+   "bytes": 1353538
   }
  },
  "maps-the-constitution": {
   "folio": {
    "file": "consti1-maps-the-constitution-folio.pdf",
-   "pages": 6,
-   "bytes": 880050
+   "pages": 7,
+   "bytes": 1007002
   },
   "a4": {
    "file": "consti1-maps-the-constitution-a4.pdf",
-   "pages": 7,
-   "bytes": 884015
+   "pages": 8,
+   "bytes": 1009952
   }
  },
  "maps-judicial-review": {
   "folio": {
    "file": "consti1-maps-judicial-review-folio.pdf",
-   "pages": 7,
-   "bytes": 877858
+   "pages": 8,
+   "bytes": 985202
   },
   "a4": {
    "file": "consti1-maps-judicial-review-a4.pdf",
-   "pages": 9,
-   "bytes": 881251
+   "pages": 10,
+   "bytes": 990897
   }
  },
  "maps-territory-people-and-government": {
   "folio": {
    "file": "consti1-maps-territory-people-and-government-folio.pdf",
-   "pages": 8,
-   "bytes": 935011
+   "pages": 9,
+   "bytes": 1052371
   },
   "a4": {
    "file": "consti1-maps-territory-people-and-government-a4.pdf",
-   "pages": 9,
-   "bytes": 937248
+   "pages": 10,
+   "bytes": 1055545
   }
  },
  "maps-the-legislative-department": {
   "folio": {
    "file": "consti1-maps-the-legislative-department-folio.pdf",
-   "pages": 56,
-   "bytes": 2599611
+   "pages": 58,
+   "bytes": 2791210
   },
   "a4": {
    "file": "consti1-maps-the-legislative-department-a4.pdf",
-   "pages": 65,
-   "bytes": 2651004
+   "pages": 67,
+   "bytes": 2848974
   }
  },
  "maps-the-executive-department": {
@@ -165,6 +165,30 @@
    "file": "consti1-exams-a4.pdf",
    "pages": 37,
    "bytes": 785476
+  }
+ },
+ "fishbowl": {
+  "folio": {
+   "file": "consti1-fishbowl-folio.pdf",
+   "pages": 16,
+   "bytes": 527002
+  },
+  "a4": {
+   "file": "consti1-fishbowl-a4.pdf",
+   "pages": 17,
+   "bytes": 528175
+  }
+ },
+ "orals": {
+  "folio": {
+   "file": "consti1-orals-folio.pdf",
+   "pages": 15,
+   "bytes": 443797
+  },
+  "a4": {
+   "file": "consti1-orals-a4.pdf",
+   "pages": 17,
+   "bytes": 443117
   }
  }
 }
