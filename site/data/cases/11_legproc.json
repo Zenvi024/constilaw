@@ -61,10 +61,13 @@
   "f": "RA 1797 provided automatic readjustment of retired justices' pensions; PD 644 repealed it. Congress re-enacted it and President Aquino vetoed the bill. In the 1992 GAA, Congress included special provisions for the adjusted pensions; the President vetoed them.",
   "h": "Petition granted (14–0). The veto was set aside as illegal and unconstitutional; the vetoed provisions of the 1992 Appropriations Act were declared valid and subsisting, and respondents were ordered to release the funds automatically and regularly.",
   "test": "Item = an indivisible sum of money dedicated to a stated purpose; a provision is not an item unless it is an inappropriate provision (Gonzales v. Macaraig).",
-  "x": "Use when the President vetoes a condition or a part of an appropriation for the Judiciary or another constitutionally autonomous body, or uses the veto to undo an existing law.",
+  "x": "Use when the President vetoes a condition or a part of an appropriation for the Judiciary or another constitutionally autonomous body, or uses the veto to undo an existing law. Under the Judiciary (fiscal autonomy): “full flexibility to allocate and utilize” resources; pair with Re: COA Opinion (2012) and RA 12233.",
   "s": "Veto of special provisions on retired justices' pensions void: not items; violates fiscal autonomy.",
   "sy": [
    "Bengzon v. Drilon"
+  ],
+  "also": [
+   "court"
   ]
  },
  {

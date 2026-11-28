@@ -1,0 +1,370 @@
+[
+ {
+  "id": "k-sc-division",
+  "t": "court",
+  "title": "What only the en banc may do",
+  "ask": "Name what a Division of the Supreme Court cannot decide.",
+  "items": [
+   "Cases on the constitutionality of a treaty, international or executive agreement, or law (Sec. 4(2))",
+   "Other cases the Rules of Court require to be heard en banc",
+   "Modifying or reversing a doctrine laid down en banc or in division (Sec. 4(3))",
+   "Dismissing a lower-court judge (Sec. 11)",
+   "A Division case that fails to get a majority of those who voted, and at least three"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Secs. 4 and 11; Gacott",
+  "rv": "court-power",
+  "hook": "Law, doctrine, dismissal, three votes.",
+  "cases": [
+   "gacott"
+  ]
+ },
+ {
+  "id": "k-sc-quals",
+  "t": "court",
+  "title": "Qualifications of a Member of the Supreme Court",
+  "ask": "List the qualifications of a Member of the Supreme Court and how one is appointed.",
+  "items": [
+   "Natural-born citizen of the Philippines",
+   "At least forty years old",
+   "Fifteen years or more as a judge of a lower court or in law practice in the Philippines",
+   "Proven competence, integrity, probity and independence",
+   "Appointed by the President from a JBC list of at least three nominees",
+   "No CA confirmation; the vacancy filled within 90 days of its occurrence"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Secs. 4(1), 7 and 9; Kilosbayan; Sereno",
+  "rv": "court-appt",
+  "hook": "Born, forty-fifteen, integrity, list.",
+  "cases": [
+   "kilosbayanermita",
+   "sereno"
+  ]
+ },
+ {
+  "id": "k-sc-kilosbayan",
+  "t": "court",
+  "title": "What Kilosbayan v. Ermita held",
+  "ask": "State the holdings of Kilosbayan Foundation v. Ermita (2007).",
+  "items": [
+   "A Member of the Court must be natural-born",
+   "One who became Filipino through a parent’s naturalization as a minor is naturalized",
+   "BI and DOJ papers cannot amend a final naturalization ruling",
+   "A change in the civil register needs a Rule 108 court order",
+   "The appointee is enjoined until he proves natural-born status in an adversarial proceeding"
+  ],
+  "ordered": false,
+  "src": "Kilosbayan Foundation v. Ermita (2007)",
+  "rv": "court-appt",
+  "cases": [
+   "kilosbayanermita"
+  ]
+ },
+ {
+  "id": "k-sc-nonjud",
+  "t": "court",
+  "title": "No non-judicial work: the cases",
+  "ask": "Give the rule against non-judicial work for judges and the three cases on it.",
+  "items": [
+   "Sec. 12: no designation to any agency performing quasi-judicial or administrative functions",
+   "Meralco (1932): the Justices cannot be a board of arbitrators",
+   "Garcia v. Macaraig (1971): stop detailing judges to the DOJ; no executive may review a judge’s acts",
+   "Macalintal v. PET (2011): the PET is judicial work, so Sec. 12 is not violated"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 12",
+  "rv": "court-nonjud",
+  "hook": "Judges judge.",
+  "cases": [
+   "meralco32",
+   "garciamacaraig",
+   "macalintalpet"
+  ]
+ },
+ {
+  "id": "k-sc-independence",
+  "t": "court",
+  "title": "Guarantees of judicial independence in Article VIII",
+  "ask": "List the guarantees of judicial independence in Article VIII.",
+  "items": [
+   "Jurisdiction in Sec. 5 cannot be taken away by Congress (Sec. 2)",
+   "No reorganization that undermines security of tenure (Sec. 2)",
+   "Fiscal autonomy and automatic release (Sec. 3)",
+   "Appointment from JBC lists, without CA confirmation (Secs. 8–9)",
+   "Salary not decreased during continuance in office (Sec. 10)",
+   "Tenure during good behavior until 70 (Sec. 11)",
+   "Discipline of lower-court judges by the Supreme Court, not the executive (Sec. 11)",
+   "Exclusive rule-making power (Sec. 5(5))",
+   "Removal of Justices only by impeachment (Art. XI, Sec. 2)"
+  ],
+  "ordered": false,
+  "src": "Art. VIII; Art. XI, Sec. 2",
+  "rv": "court-salary",
+  "cases": [
+   "nitafan",
+   "ingonzalez",
+   "bengzondrilon"
+  ]
+ },
+ {
+  "id": "k-sc-removal",
+  "t": "court",
+  "title": "Removal: In re Gonzalez and Sereno",
+  "ask": "What may and may not be filed against a sitting Justice?",
+  "items": [
+   "Impeachment: the constitutional route",
+   "Quo warranto by the State on eligibility at appointment: allowed (Sereno)",
+   "Disbarment during incumbency: not allowed (In re Gonzalez)",
+   "A criminal charge carrying removal: not allowed during incumbency",
+   "Not an immunity: impeach first, then prosecute",
+   "The prosecutor dismisses such charges motu proprio"
+  ],
+  "ordered": false,
+  "src": "Art. XI, Sec. 2; In re Gonzalez (1988); Republic v. Sereno (2018)",
+  "rv": "court-removal",
+  "hook": "Impeach first, unless the title was never there.",
+  "cases": [
+   "ingonzalez",
+   "sereno"
+  ]
+ },
+ {
+  "id": "k-sc-sereno-res",
+  "t": "court",
+  "title": "The June 19, 2018 Sereno Resolution",
+  "ask": "What did the Court hold in denying reconsideration in Republic v. Sereno?",
+  "items": [
+   "Denied with finality, 8–6",
+   "Mere imputation of bias is no ground for inhibition",
+   "The six Justices’ House testimony did not disqualify them",
+   "Quo warranto by the State at its own instance is imprescriptible",
+   "Entry of judgment immediately",
+   "The JBC’s 90 days to fill the vacancy run from the Resolution"
+  ],
+  "ordered": false,
+  "src": "Republic v. Sereno, Resolution of June 19, 2018",
+  "rv": "court-removal",
+  "cases": [
+   "sereno"
+  ]
+ },
+ {
+  "id": "k-sc-fiscal",
+  "t": "court",
+  "title": "Fiscal autonomy: what it bars",
+  "ask": "What does the Judiciary’s fiscal autonomy forbid, and what does it allow?",
+  "items": [
+   "No reduction below the previous year’s appropriation",
+   "No withholding or conditioning of release (Bengzon v. Drilon)",
+   "No outside body dictating how the Court uses or disposes of its resources (Re: COA Opinion)",
+   "No statutory exemption from court fees (Re: PHCCI)",
+   "Allowed: COA post-audit"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 3; RA 12233",
+  "rv": "court-fiscal",
+  "hook": "No cut, no hold, no outside hand.",
+  "cases": [
+   "bengzondrilon",
+   "recoa2012",
+   "phcci"
+  ]
+ },
+ {
+  "id": "k-sc-ra12233",
+  "t": "court",
+  "title": "RA 12233 (2025), the Judiciary Fiscal Autonomy Act",
+  "ask": "List the main provisions of RA 12233.",
+  "items": [
+   "The Court’s original budget proposal is attached to the NEP",
+   "The Chief Justice may augment Judiciary items from Judiciary savings",
+   "Allotments modified by en banc resolution",
+   "DBM releases one-twelfth monthly, without request or conditions",
+   "Quarterly reports to the President and Congress",
+   "COA post-audit of all Judiciary funds",
+   "A Judiciary Trust Fund replaces the JDF, administered by the Chief Justice",
+   "The Court sets legal fees, creates offices and positions, and takes title to its properties"
+  ],
+  "ordered": false,
+  "src": "RA 12233 (approved August 14, 2025)",
+  "rv": "court-fiscal",
+  "cases": [
+   "recoa2012"
+  ]
+ },
+ {
+  "id": "k-sc-juris",
+  "t": "court",
+  "title": "Jurisdiction: limits on Congress and on the courts",
+  "ask": "State the limits on Congress’s power over jurisdiction and the two jurisdiction cases.",
+  "items": [
+   "Congress may define, prescribe and apportion jurisdiction (Sec. 2)",
+   "But not take away the Sec. 5 cases",
+   "No increase of the SC’s appellate jurisdiction without its advice and concurrence (Art. VI, Sec. 30; Fabian)",
+   "Felipe v. Leuterio: no judicial power to reverse a contest’s judges; error is not a legal wrong",
+   "Almora v. Dela Rosa: in cases on the “application or operation” of regulations, the Court may order the government’s reports"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Secs. 2 and 5; Art. VI, Sec. 30",
+  "rv": "court-juris",
+  "cases": [
+   "felipe",
+   "almora",
+   "fabian"
+  ]
+ },
+ {
+  "id": "k-sc-cert",
+  "t": "court",
+  "title": "The Sec. 13 certification",
+  "ask": "State the rules on the certification of consultation.",
+  "items": [
+   "Conclusions are reached in consultation before the case is assigned for writing",
+   "The Chief Justice certifies it; the copy goes to the record and the parties",
+   "Members who took no part, dissented or abstained state why",
+   "A missing certification does not void the decision (Consing)",
+   "Not needed in administrative cases or per curiam decisions (Prudential)",
+   "Minute resolutions need no signatures or certification",
+   "Lower collegiate courts observe the same rules"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 13; LME 4.0, ch. 7",
+  "rv": "court-delib",
+  "cases": [
+   "consing",
+   "prudential"
+  ]
+ },
+ {
+  "id": "k-sc-privilege",
+  "t": "court",
+  "title": "Judicial privilege (In re Production, 2012)",
+  "ask": "What does the judicial privilege cover, and what does it not?",
+  "items": [
+   "Covered: the Court’s deliberations",
+   "Covered: predecisional records (raffle results, agenda, internal memos, drafts)",
+   "Not covered: external matters, such as bribery",
+   "Public records: produced as certified copies",
+   "The privilege belongs to the Court; no single Justice may waive it"
+  ],
+  "ordered": false,
+  "src": "In re Production of Court Records (2012)",
+  "rv": "court-delib",
+  "hook": "Public, yes; outside, yes; inside, never.",
+  "cases": [
+   "inreproduction"
+  ]
+ },
+ {
+  "id": "k-sc-votes",
+  "t": "court",
+  "title": "Votes in the Supreme Court",
+  "ask": "How many votes does the Court need, en banc and in a Division, and what does a tie do?",
+  "items": [
+   "En banc: a majority of the Members who actually took part and voted",
+   "Division: that majority and at least three",
+   "Division short of votes: the case goes to the en banc",
+   "En banc tie in an original action: petition dismissed (Rule 56, Sec. 7)",
+   "En banc tie on appeal: the judgment below stands",
+   "A tie lays down no doctrine (Cruz v. DENR)"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 4; Cruz v. DENR (2000)",
+  "rv": "court-voting",
+  "hook": "Count those who voted; a tie decides nothing.",
+  "cases": [
+   "cruzdenr",
+   "gacott"
+  ]
+ },
+ {
+  "id": "k-sc-sec14",
+  "t": "court",
+  "title": "Sec. 14: what passes and what fails",
+  "ask": "Give the cases on what satisfies and what violates Art. VIII, Sec. 14.",
+  "items": [
+   "Fails: testimony plus “credible” (Bugarin)",
+   "Fails: a labor tribunal with no findings (Miguel)",
+   "Fails: a one-page “no cogent reason” affirmance (Yao)",
+   "Passes: facts adopted from a party’s brief (Hernandez)",
+   "Outside it: a minute resolution refusing due course, with a legal basis (Nuñal)",
+   "Denials of reconsideration need only a legal basis (Martinez; Tichangco)"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 14; LME 4.0, ch. 7",
+  "rv": "court-decisions",
+  "hook": "Decisions: facts and law. Denials: a legal basis.",
+  "cases": [
+   "bugarin",
+   "miguel",
+   "yao",
+   "hernandez",
+   "nunal",
+   "martinez",
+   "tichangco"
+  ]
+ },
+ {
+  "id": "k-sc-permskul",
+  "t": "court",
+  "title": "Memorandum decisions (Yao; Permskul)",
+  "ask": "When is a memorandum decision valid?",
+  "items": [
+   "It annexes the lower court’s findings of fact and conclusions of law",
+   "The annex is made an indispensable part of the decision",
+   "The decision adopted itself complies with Sec. 14",
+   "Only in simple cases: facts accepted, no doctrinal complication",
+   "Used sparingly, “lest it become an addictive excuse for judicial sloth”"
+  ],
+  "ordered": false,
+  "src": "BP 129, Sec. 40; Francisco v. Permskul (1989); Yao v. CA (2000)",
+  "rv": "court-decisions",
+  "cases": [
+   "yao"
+  ]
+ },
+ {
+  "id": "k-sc-periods",
+  "t": "court",
+  "title": "Periods for deciding cases",
+  "ask": "Give the periods for deciding cases, from submission.",
+  "items": [
+   "Supreme Court: 24 months",
+   "Lower collegiate courts (the Court of Appeals): 12 months",
+   "Sandiganbayan: 3 months (PD 1606; Re: Delays), reconsideration in 30 days",
+   "Trial courts: 3 months (90 days), for cases, motions and incidents (Fuentes)",
+   "Submitted: on the last required pleading, brief or memorandum",
+   "After lapse: certification of the reason, and the court must still decide"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Sec. 15; Re: Delays (2001); OCA v. Fuentes III (2013)",
+  "rv": "court-periods",
+  "hook": "From submission: 24, 12, 3.",
+  "cases": [
+   "delayssb",
+   "fuentes"
+  ]
+ },
+ {
+  "id": "k-sc-pet",
+  "t": "court",
+  "title": "The PET (Macalintal v. PET, 2011)",
+  "ask": "State the holdings of Macalintal v. PET.",
+  "items": [
+   "The PET is constitutional (Art. VII, Sec. 4, last par.)",
+   "The grant of “sole judge” power implies the means to exercise it",
+   "The Constitution “constitutionalized what was statutory” (the 1957 PET)",
+   "It exercises judicial power, “independent, but not separate” from the Court",
+   "So its Justices do not violate Sec. 12",
+   "Biraogo does not apply"
+  ],
+  "ordered": false,
+  "src": "Macalintal v. PET (2011); Marcos, Jr. v. Robredo (2021)",
+  "rv": "court-pet",
+  "hook": "Fifteen for the top two.",
+  "cases": [
+   "macalintalpet",
+   "robredo"
+  ]
+ }
+]

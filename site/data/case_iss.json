@@ -1040,10 +1040,20 @@
     "q": "Did Sereno violate the sub judice rule?",
     "a": "YES (show cause)",
     "why": "Her public statements attacking the Justices' impartiality while the case was pending were ordered explained."
+   },
+   {
+    "q": "On reconsideration (June 19, 2018): should the six Justices who testified before the House Committee on Justice have inhibited?",
+    "a": "NO",
+    "why": "Mere imputation of bias is not enough; the grounds rested on speculation and on distortions of what the Justices said as resource persons. A Justice’s right to inhibit is weighed against the duty to decide without fear of repression."
+   },
+   {
+    "q": "On reconsideration: did the Court lose jurisdiction or err on prescription and the other grounds?",
+    "a": "NO",
+    "why": "The Court restated that quo warranto is not an invention of the Court and lies against an ineligible impeachable officer, and that the action is imprescriptible when brought by the State at its own instance. The motion was denied with finality, entry of judgment ordered, and the JBC told to fill the vacancy within 90 days from the Resolution."
    }
   ],
-  "vote": "Tijam, J. (ponente), May 11, 2018; 8–6. Petition granted; Sereno ousted.",
-  "ops": "Carpio, J.: SALN lapses are impeachable, only Congress removes. Leonen, J.: a 'legal abomination'; prescribed. Caguioa, J.: impeachment is exclusive. Velasco, Jr., J.: nullify the JBC nomination first. Perlas-Bernabe and Del Castillo, JJ., also voted to dismiss."
+  "vote": "Tijam, J. (ponente), May 11, 2018; 8–6. Petition granted; Sereno ousted. Resolution of June 19, 2018 (Tijam, J.): motion for reconsideration denied with finality, 8–6.",
+  "ops": "Carpio, J.: SALN lapses are impeachable, only Congress removes. Leonen, J.: a 'legal abomination'; prescribed. Caguioa, J.: impeachment is exclusive. Velasco, Jr., J.: nullify the JBC nomination first. Perlas-Bernabe and Del Castillo, JJ., also voted to dismiss. On the Resolution: Carpio, Velasco, Jr., Del Castillo, Leonen and Caguioa, JJ., maintained their dissents; Perlas-Bernabe, J., maintained her separate opinion; Leonardo-de Castro, Peralta and Jardeleza, JJ., wrote concurring or separate opinions."
  },
  "recorona": {
   "iss": [
@@ -2599,5 +2609,492 @@
   ],
   "vote": "15–0 to dismiss. Leonen, J., with Perlas-Bernabe, Gesmundo, Hernando, Carandang and Lazaro-Javier, JJ.; Caguioa, J., concurring separately. In the result: Peralta, C.J.; M.V. Lopez, J. (joined by Inting, Delos Santos, Rosario and J.Y. Lopez, JJ.); Gaerlan, J. (joined by Zalameda, J.).",
   "ops": "M.V. Lopez, J.: reasonable recovery should be measured by the share of protested precincts revised in the pilots; even so, Marcos failed. Gaerlan, J.: pushing the third cause of action would need new rules, best made through the PET’s rule-making power."
+ },
+ "gacott": {
+  "iss": [
+   {
+    "q": "Should the Court reconsider the finding of gross ignorance and the penalties?",
+    "a": "NO",
+    "why": "His arguments were rehashed and already refuted, and the penalties were milder than in similar cases. Spreading the decision on his record is official procedure. Blaming the fiscal for not citing the decree fails: courts must take judicial notice of all laws, so an avoidable error is gross ignorance, not a mere error of judgment."
+   },
+   {
+    "q": "Was it irregular to keep the case with Justice Bidin after he moved from the Third to the Second Division, without notice?",
+    "a": "NO",
+    "why": "The case was validly raffled to him, and under the internal rules a case stays with its ponente when he changes divisions. No rule requires notice of such a transfer, which would reveal the ponente."
+   },
+   {
+    "q": "Must every disciplinary case against a lower-court judge be decided by the Court en banc?",
+    "a": "NO",
+    "why": "Sec. 11 has two clauses: the first grants the power to the en banc and lets it set the procedure; the second requires the full Court only for dismissal. Regalado, J., who sat on the Commission’s judiciary committee, recalled that “en banc” was not meant to change the rule. Requiring the full Court for every reprimand would clog the docket and defeat the divisions of Sec. 4(1). A Division’s decision is the Court’s decision (Sec. 4(3); Circular No. 2-89)."
+   }
+  ],
+  "vote": "14–0 (Regalado, J.; Narvasa, C.J., and 12 Justices concurred).",
+  "ops": "None."
+ },
+ "kilosbayanermita": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing?",
+    "a": "YES",
+    "why": "As people’s organizations and taxpayers raising a question of utmost constitutional importance, the citizenship of an appointee to the Supreme Court (citing Francisco and Tatad)."
+   },
+   {
+    "q": "Must the President be impleaded?",
+    "a": "NO",
+    "why": "The Executive Secretary is her alter ego and spoke for her. The suit does not stop the President from appointing; it targets the release of the appointment and Ong’s acceptance."
+   },
+   {
+    "q": "Is the Court, not the JBC, the proper forum?",
+    "a": "YES",
+    "why": "Compliance with a constitutional mandate is of primordial importance, and the Court decides conflicting constitutional claims (Angara). The JBC has only initial competence over qualifications, which does not oust the Court."
+   },
+   {
+    "q": "Is Ong natural-born and so qualified under Sec. 7(1)?",
+    "a": "NO (on the record)",
+    "why": "The Court took judicial notice of his 1979 bar petition, in which he swore he was Filipino because his father was naturalized in 1964. BI and DOJ recognition cannot amend that final decision; a change of citizenship in the civil register is substantial and needs an adversarial Rule 108 proceeding, not RA 9048. His claim through his mother’s ancestry raises facts he must prove in court. Until then, accepting the post would violate the Constitution, so he was enjoined; the appointment was not annulled."
+   }
+  ],
+  "vote": "13–0 (Azcuna, J.; Sandoval-Gutierrez, J., on leave).",
+  "ops": "None."
+ },
+ "meralco32": {
+  "iss": [
+   {
+    "q": "Is a statutory arbitration with a final award binding a utility not party to the franchise valid?",
+    "a": "NO",
+    "why": "Courts favor arbitration unless it absolutely closes their doors. Parties may agree to arbitrate, but a franchise, a mere contract, cannot bind non-signatories to a final award; read literally, it leaves a public utility without any judicial determination of its dispute."
+   },
+   {
+    "q": "May the members of the Supreme Court sit as a board of arbitrators under Sec. 11 of Act No. 1446?",
+    "a": "NO",
+    "why": "The Court faced a dilemma: as arbitrators the members would exercise either judicial power, apparently outside the Court’s jurisdiction and subject to review by the Court itself, or administrative power they cannot lawfully assume. The Court is one of three departments and exercises judicial power only; as guardian against usurpation by the others, it must keep strictly to its own sphere. Its jurisdiction is that of the Court acting as a court, not of its members as a board (citing Gordon v. United States)."
+   }
+  ],
+  "vote": "11–0 (Malcolm, J.).",
+  "ops": "None."
+ },
+ "garciamacaraig": {
+  "iss": [
+   {
+    "q": "Are further proceedings needed?",
+    "a": "NO",
+    "why": "The material facts were more or less undisputed from the complaint and the answer."
+   },
+   {
+    "q": "Was it dishonest to collect a judge’s salary without performing judicial functions?",
+    "a": "NO",
+    "why": "After his oath and assumption, he had a “perfect right” to the salary, especially when the offices bound to furnish his court failed to do so through no fault of his. He pressed officials for action and helped the DOJ in his spare time, which was to his credit."
+   },
+   {
+    "q": "Is he liable for filing no reports and for incompetence?",
+    "a": "NO",
+    "why": "The Judiciary Act provisions and DOJ Circular No. 10 contemplate judges actually holding trials and deciding cases. He simply made himself available while the court could not open."
+   },
+   {
+    "q": "May judges be detailed to, or assist, the Department of Justice?",
+    "a": "NO (practice disfavored)",
+    "why": "The Court does not look with favor at the long-standing practice, even if it concerns only the Secretary’s administrative authority over the courts. The line between what a judge may and may not do with the other departments must be “kept clear and jealously observed,” lest the separation of powers be eroded. No judge, even of the lowest court, should place himself where his actions may be reviewed, approved or reversed by anyone other than the Court of Appeals or the Supreme Court. No liability was imposed on him."
+   }
+  ],
+  "vote": "7–0 (Barredo, J.; Castro and Teehankee, JJ., took no part).",
+  "ops": "None."
+ },
+ "ingonzalez": {
+  "iss": [
+   {
+    "q": "May a sitting Justice be charged with disbarment?",
+    "a": "NO",
+    "why": "Members of the Court must be lawyers (Art. VIII, Sec. 7(1)) and are removable only by impeachment (Art. XI, Sec. 2). Disbarring a Justice would remove him by another route, circumventing impeachment. The rule covers the Ombudsman and his deputies, and members of the COMELEC and COA who must be lawyers. It protects judicial independence from charges by losing litigants and others."
+   },
+   {
+    "q": "May a sitting Justice be charged criminally during incumbency?",
+    "a": "NO, if the penalty is removal",
+    "why": "Following Lecaroz v. Sandiganbayan, an impeachable officer may not be charged, while in office, with an offense carrying removal or a penalty whose service amounts to removal. The impeachment judgment is limited to removal and disqualification, and the convicted officer then faces prosecution (Art. XI, Sec. 3(7))."
+   },
+   {
+    "q": "Is the rule an immunity from liability?",
+    "a": "NO",
+    "why": "It is a procedural requirement. The officer is not immune for crimes or ethical violations; he must first be removed by impeachment and then answers in the proper proceedings."
+   },
+   {
+    "q": "May the Tanodbayan or a fiscal entertain charges against a Member of the Court?",
+    "a": "NO",
+    "why": "A prosecutor should forthwith and motu proprio dismiss such charges; one with a legitimate grievance should file an impeachment complaint."
+   }
+  ],
+  "vote": "13–0 per curiam (Fernan, J., took no part; Gutierrez, Jr., J., absent).",
+  "ops": "None."
+ },
+ "recoa2012": {
+  "iss": [
+   {
+    "q": "Can COA audit the Supreme Court?",
+    "a": "YES, but",
+    "why": "Art. IX-D, Sec. 2(1) lets COA audit government funds and property, on a post-audit basis for bodies with fiscal autonomy. That power must be read with the Court’s fiscal autonomy, the provisions on judicial independence, and the Court’s rulings on them."
+   },
+   {
+    "q": "Is the in-house CFAG appraisal, not COA’s memorandum formula, valid?",
+    "a": "YES",
+    "why": "Judicial independence is decisional and institutional; its safeguards include Secs. 2, 3, 6, 10 and 11 of Art. VIII. Fiscal autonomy means “full flexibility to allocate and utilize” resources and freedom from outside control (Bengzon v. Drilon). The sale of property to retiring Justices is a retirement privilege under the Court’s administrative supervision, so the Chief Justice and the en banc decide its terms, including the formula. Under the Government Accounting and Auditing Manual, heads of offices have full and sole authority to dispose of property. COA’s substitution of its own policy would encroach on the Court’s autonomy."
+   }
+  ],
+  "vote": "13–0 per curiam (Mendoza, J., on leave).",
+  "ops": "None."
+ },
+ "phcci": {
+  "iss": [
+   {
+    "q": "Did the exemption ever cover the sheriff’s actual travel expenses?",
+    "a": "NO",
+    "why": "“All court fees” means the legal fees under Rule 141 imposed as an incident of filing an action. A 2009 resolution already held that the sheriff’s actual travel expenses under Sec. 10 are neither court fees nor payable to the government."
+   },
+   {
+    "q": "Can cooperatives still invoke RA 6938, as amended by RA 9520, for exemption from legal fees?",
+    "a": "NO",
+    "why": "In the GSIS resolution (2010), citing Echegaray, the Court held that the 1987 Constitution took away Congress’s power to repeal, alter or supplement the rules on pleading, practice and procedure; legal fees are a vital part of those rules. Fiscal autonomy also includes the power to levy and collect fees, which fund the JDF and SAJF, both meant to guarantee judicial independence; any exemption reduces them and is constitutionally infirm. Later rulings applied this to a cooperative and to NPC. The fallo does not expressly void Art. 61(6)."
+   }
+  ],
+  "vote": "14–0 (Perez, J.; Del Castillo, J., on leave).",
+  "ops": "None."
+ },
+ "felipe": {
+  "iss": [
+   {
+    "q": "Did the judge’s adding error change his vote so that Imperial won?",
+    "a": "NO",
+    "why": "His vote during and right after the contest ranked another contestant third and Imperial fourth; his calculations were not material. He had even raised the other contestant’s score to give her the edge."
+   },
+   {
+    "q": "May courts reverse the award of the board of judges of an oratorical contest?",
+    "a": "NO",
+    "why": "For over 30 years, no one went to court over such awards; the board’s decision has been final by tradition and sportsmanship. A contestant has a privilege to compete, which becomes a demandable right only when proclaimed winner. The CFI assumed a wrong when there was at most an error; a wrong is the violation of a right, and Imperial had none. Any loss is damnum absque injuria. If fraud or malice were proven, the action would lie against the judge responsible. The ruling does not cover activities the government regulates through the Games and Amusements Board."
+   }
+  ],
+  "vote": "8–0 (Bengzon, J.; Feria, J., concurred in the result).",
+  "ops": "None written."
+ },
+ "almora": {
+  "iss": [
+   {
+    "q": "Did the Court venture into “unwarranted factual inquiries”?",
+    "a": "NO",
+    "why": "Under Sec. 4(2), the Court en banc hears cases on the constitutionality, application or operation of regulations such as the circulars. Review begins with the police reports, but only to see whether they exist, were prepared as required and facially show compliance, not whether they are true: the Court is not a trier of facts. Its rule-making power over constitutional rights and the people’s right to information support the order. Relevance is for the Court to decide (Rule 128, Sec. 4), and David v. Arroyo itself struck down acts done under a valid proclamation."
+   },
+   {
+    "q": "Are the documents covered by national security or state secrets?",
+    "a": "NO",
+    "why": "They concern routine police operations against illegal drugs; nothing shows that releasing them to the Court would prejudice sovereignty or foreign relations. It would be “simply ridiculous” that the Court could not read them while deciding the right to life of thousands."
+   },
+   {
+    "q": "Did the OSG prove “legitimate operations,” or may it rely on the presumption of regularity?",
+    "a": "NO",
+    "why": "Bare allegations are not proof. The presumption does not apply because deaths are not supposed to happen in police operations, and it cannot override constitutional rights. If the OSG keeps refusing, the Court will presume the records adverse (Rule 131, Sec. 3(e))."
+   },
+   {
+    "q": "Does the Amparo Rule bar the order?",
+    "a": "NOT RULED",
+    "why": "The point was not separately discussed; the order rests on the Court’s Art. VIII powers and Art. III, Sec. 7."
+   }
+  ],
+  "vote": "Unsigned en banc resolution (Sereno, C.J., on leave; Perlas-Bernabe and Reyes, Jr., JJ., on wellness leave).",
+  "ops": "None noted."
+ },
+ "prudential": {
+  "iss": [
+   {
+    "q": "Must the Chief Justice and Justice Padilla inhibit?",
+    "a": "NO",
+    "why": "A motion to disqualify a Justice cannot be entertained after he has given his opinion on the merits; a litigant may not speculate on the result and object afterwards. The disbarment was a collective judgment, and Padilla’s former client was not a party."
+   },
+   {
+    "q": "Did the decision need a Sec. 13 certification?",
+    "a": "NO",
+    "why": "The requirement refers to decisions in judicial, not administrative, cases; administrative matters are necessarily deliberated by the collegiate Court. Even if required, the signatures of the Members who took part attest to it, and a per curiam decision has no ponente."
+   },
+   {
+    "q": "Did the minute resolution denying reconsideration violate Sec. 14?",
+    "a": "NO",
+    "why": "The requirement does not apply to an administrative case; in any event “lack of merit” is a statement of the legal basis."
+   }
+  ],
+  "vote": "Per curiam (vote not stated).",
+  "ops": "None noted."
+ },
+ "consing": {
+  "iss": [
+   {
+    "q": "Is the CA decision void for lacking the Sec. 13 consultation certification?",
+    "a": "NO",
+    "why": "The first sentence of Sec. 13 restates the Court’s decision-making process since 1935; the 1973 Constitution extended it to lower collegiate courts, and the 1987 framers added the certification to ensure that decisions are made by the court as a body. Its absence does not mean the case was not reached in consultation; it shows only non-compliance and a basis to hold the responsible official accountable."
+   },
+   {
+    "q": "Did the portions under the “voluntary right of way” become subdivision roads the Consings could not sell?",
+    "a": "YES",
+    "why": "The plan shows the right of way as the only access to the subdivision; the Consings admitted it was a road not included in the sale, yet the titles and contract included it."
+   },
+   {
+    "q": "Is Santos entitled to a reduction of the price?",
+    "a": "YES",
+    "why": "Charging her for the road shifted to her the burden of providing access, which is unjust."
+   },
+   {
+    "q": "Did the CA err in its computation?",
+    "a": "NO",
+    "why": "The price covered the house and lots as one property; splitting it in half was fair."
+   },
+   {
+    "q": "Is there basis for attorney’s fees?",
+    "a": "YES",
+    "why": "The Consings acted in evident bad faith in constituting a so-called right of way over lots they sold."
+   }
+  ],
+  "vote": "Vote not stated (Cortes, J.).",
+  "ops": "None noted."
+ },
+ "inreproduction": {
+  "iss": [
+   {
+    "q": "Are the Court’s deliberations and related records privileged against the impeachment court?",
+    "a": "YES",
+    "why": "Co-equal branches are exempt from each other’s compulsory processes as a matter of separation of powers and comity. The right to information is subject to limits provided by law; the Internal Rules keep raffle results, agenda actions and deliberations confidential. Predecisional and deliberative records are protected by the deliberative process privilege (Chavez v. PEA: deliberations of the Court or Congress cannot be pried open by a co-equal branch). Unauthorized disclosure is a crime the impeachment court cannot immunize. Justices cannot be compelled on internal matters but can be on external ones like bribery; the privilege extends to staff and belongs to the Court, not to any individual."
+   },
+   {
+    "q": "May the prosecutors examine the four rollos?",
+    "a": "NO",
+    "why": "The rollos, pending or closed, contain privileged and confidential material; only certified copies of released issuances and pleadings may be given."
+   },
+   {
+    "q": "Must the Clerk of Court produce the subpoenaed documents and testify?",
+    "a": "PUBLIC RECORDS ONLY",
+    "why": "She may give certified copies of public records (petitions, released resolutions, the TRO, the bond receipt), which need no witness to authenticate; raffle records, logbooks and internal papers in pending cases stay confidential, and the Court would not waive the privilege for her testimony."
+   }
+  ],
+  "vote": "Per curiam (Carpio, J., concurred with reservations; Sereno, J., concurred and dissented).",
+  "ops": "Carpio, J.: the privilege covers only adjudicatory functions and yields to the express duty to explain a dissent (Sec. 13). Sereno, J.: the privilege is qualified and yields to impeachment; logbooks and administrative records are not deliberative; she would partly grant the request."
+ },
+ "miguel": {
+  "iss": [
+   {
+    "q": "Did the labor arbiter and the NLRC commit grave abuse of discretion?",
+    "a": "YES",
+    "why": "They held JCT and Cuevas liable without determining whether an employer-employee relationship existed or why Cuevas was solidarily liable, and computed the award from 1978 though JCT’s agreement began in 1989. The facts and law must be clearly and distinctly stated; parties must know how the case was decided so the loser can point out errors on review (Saballa). Failing to do so evades a constitutional duty. The case must be remanded to make the findings; remand, not dismissal, also favors the workers."
+   },
+   {
+    "q": "Should the CA have denied the petition for failure to post the appeal bond and to move for reconsideration?",
+    "a": "NO",
+    "why": "The arbiter’s decision was a patent nullity, and the motion to reduce the ₱37.5 million bond was pending until 1996, so the bond rule was liberally applied. A motion for reconsideration is excused when the decision is a patent nullity. Individuals who did not sign the complaint must be dropped."
+   }
+  ],
+  "vote": "Vote not stated (Panganiban, J.).",
+  "ops": "None."
+ },
+ "nunal": {
+  "iss": [
+   {
+    "q": "Did the May 11, 1988 minute resolution violate Sec. 14, Art. VIII?",
+    "a": "NO",
+    "why": "It was not a “decision.” The requirement of facts and law applies only to cases submitted for decision, that is, given due course and briefed, not to an order refusing due course to a certiorari petition (Tayamura; Que v. People). The resolution also stated its legal basis. Certiorari is a prerogative writ, never demandable as of right."
+   },
+   {
+    "q": "Is the municipality bound by the compromise its officials signed?",
+    "a": "YES",
+    "why": "The mayor, treasurer and provincial fiscal signed in their official capacity; the municipality is deemed impleaded and had its day in court."
+   },
+   {
+    "q": "Did COA gravely abuse its discretion in disallowing the back salaries, leave and bonuses?",
+    "a": "YES",
+    "why": "They were paid under a binding, court-approved compromise."
+   },
+   {
+    "q": "Did COA gravely abuse its discretion in denying separation pay?",
+    "a": "NO",
+    "why": "His separation was due to his dismissal, not the abolition of the post, and he had already received retirement benefits; double gratuity is not allowed."
+   }
+  ],
+  "vote": "Vote not stated (Melencio-Herrera, J.).",
+  "ops": "None."
+ },
+ "bugarin": {
+  "iss": [
+   {
+    "q": "Did the trial court err in not stating the facts and the law on which its decision was based?",
+    "a": "YES",
+    "why": "It did not evaluate the evidence or discuss the legal questions, did not explain why it believed the complainant, why licking her genitals was attempted rape, or why it convicted on fewer counts than charged without acquitting on the rest; it even mismatched the counts and penalties. Sec. 14 (and Rule 120, Sec. 2) informs the parties of the reasons so they can appeal, and assures them the judge reasoned; it is a safeguard against ipse dixit."
+   },
+   {
+    "q": "Is the accused guilty of rape?",
+    "a": "YES (four counts)",
+    "why": "Inability to recall exact dates is minor in a child witness; delay was explained by fear of a father; his moral ascendancy substitutes for force; a medical examination is not indispensable. He was acquitted of the count whose date did not match, and the attempted rape became acts of lasciviousness."
+   }
+  ],
+  "vote": "Vote not stated (Mendoza, J.).",
+  "ops": "None."
+ },
+ "hernandez": {
+  "iss": [
+   {
+    "q": "Was it reversible error to convict him of nine offenses in a single judgment?",
+    "a": "NO",
+    "why": "Unlike US v. Tanjuatco, the court rendered judgment on each of the nine informations; joint trial was without objection and allowed for a series of similar offenses."
+   },
+   {
+    "q": "Did the CA fail to make complete findings on the last two errors?",
+    "a": "NO",
+    "why": "They were necessary consequences of the earlier errors."
+   },
+   {
+    "q": "Did the CA violate Sec. 14 by quoting the Solicitor General’s facts?",
+    "a": "NO",
+    "why": "The Constitution requires only that the decision state the facts on which it is based; nothing forbids adopting the narration in the briefs, which exist to aid the court. The CA also made findings while discussing the errors."
+   },
+   {
+    "q": "Did the CA deny reconsideration without legal basis?",
+    "a": "NO",
+    "why": "It found no cogent reason to reverse; that is the basis."
+   },
+   {
+    "q": "Was the conviction unsupported by evidence; were the civil indemnity and the checks properly admitted; was the bank liable?",
+    "a": "NO",
+    "why": "One credible witness suffices; ownership is not an element of estafa; he who alleges forgery must prove it; the bank-negligence case he cited did not apply."
+   }
+  ],
+  "vote": "Vote not stated (Quiason, J., First Division).",
+  "ops": "None."
+ },
+ "yao": {
+  "iss": [
+   {
+    "q": "Should Yao’s appeal be dismissed for using the wrong mode of appeal?",
+    "a": "YES, but the Court reached the merits",
+    "why": "He filed a notice of appeal instead of a petition for review, on the last day; the right to appeal is statutory and the period is jurisdictional. But the Court ruled on the decision’s validity because it would grant him relief."
+   },
+   {
+    "q": "Did the RTC decision comply with Sec. 14, Art. VIII?",
+    "a": "NO",
+    "why": "Memorandum decisions are allowed under BP 129, Sec. 40, but only under the Permskul conditions. The RTC merely quoted the MeTC’s dispositive portion and said it found no cogent reason to disturb it, without even summarizing the facts. It was “starkly hollow, otiosely written, vacuous in its content.” Faithful compliance with Sec. 14 is part of due process."
+   },
+   {
+    "q": "Was Yao denied due process?",
+    "a": "YES",
+    "why": "Courts should give every litigant the amplest opportunity for a just disposition; the hollow decision denied him his day in court."
+   }
+  ],
+  "vote": "Vote not stated (Davide, Jr., C.J.).",
+  "ops": "None."
+ },
+ "tichangco": {
+  "iss": [
+   {
+    "q": "Was certiorari under Rule 65 the proper remedy?",
+    "a": "NO",
+    "why": "Certiorari is “not a general utility tool in the legal workshop”; it corrects jurisdictional errors and is no substitute for an available appeal. It was treated as a Rule 45 petition."
+   },
+   {
+    "q": "Are OCT Nos. 820 and 7477 valid?",
+    "a": "YES",
+    "why": "A Torrens title becomes incontrovertible after the period to question the decree; the original certificate is presumed valid, an earlier survey existed, and OCT 7477 was upheld in a 1955 case with the government. The residents also lacked standing: only the government may sue to revert public land."
+   },
+   {
+    "q": "Was the CA decision void for not mentioning the 1906 survey?",
+    "a": "NO",
+    "why": "The CA reviewed and assessed the factual antecedents before applying the law. Not specifying a party’s contentions and the reasons for rejecting them does not violate the Constitution; denying a motion after deliberation, stating that the questions are factual or already passed upon, suffices."
+   }
+  ],
+  "vote": "Vote not stated (Panganiban, J.).",
+  "ops": "None."
+ },
+ "martinez": {
+  "iss": [
+   {
+    "q": "Were the Veneracions buyers and registrants in good faith, and so owners under Art. 1544?",
+    "a": "NO",
+    "why": "Good faith must attend both acquisition and registration. The first contract was an equitable mortgage. Before the real sale, they knew of Fr. Martinez’s possession and house yet relied on the seller, not even the owner, instead of asking him. The CA also erred: a sale of realty need only be in writing, not notarized."
+   },
+   {
+    "q": "Is payment of the appellate docket fee within the period unnecessary to perfect an appeal from the MTC to the RTC?",
+    "a": "YES",
+    "why": "Under the 1983 Interim Rules, the fee is required but not a prerequisite to perfection; dismissal for non-payment is discretionary."
+   },
+   {
+    "q": "Did the CA resolution denying reconsideration violate Sec. 14, Art. VIII?",
+    "a": "NO",
+    "why": "The CA said the motion posed nothing new and that its points had been considered and passed upon (Borromeo v. CA). That statement is the legal basis required."
+   }
+  ],
+  "vote": "4–0 (Mendoza, J.; Quisumbing, J., on leave).",
+  "ops": "None."
+ },
+ "delayssb": {
+  "iss": [
+   {
+    "q": "What is the period for the Sandiganbayan to decide?",
+    "a": "THREE MONTHS",
+    "why": "“Lower collegiate courts” in Sec. 15(1) refers to regular courts of that level, only the CA. The SB is a special court of the same level but with trial functions. PD 1606, Sec. 6 (unchanged by later amendments) and its own rules give three months from submission, without distinguishing original from appellate cases; the OCA’s split was rejected. A court cannot suspend its own rules or exempt a case. Motions for reconsideration and new trial: 30 days."
+   },
+   {
+    "q": "Were cases undecided beyond the period?",
+    "a": "YES",
+    "why": "Some for over ten years. The reorganization, new justices and relocation were no excuse; one consolidated case is one case, not half the docket; unloading submitted cases to other divisions added to the backlog. “Justice delayed is justice denied.”"
+   },
+   {
+    "q": "Does Administrative Circular No. 10-94 (semestral docket inventory) apply to the SB?",
+    "a": "YES",
+    "why": "Given its purpose, to both original and appellate cases."
+   },
+   {
+    "q": "Is the Presiding Justice administratively liable?",
+    "a": "YES",
+    "why": "Gross neglect and inefficiency: he is deemed ponente of unassigned cases; he had been warned before (Canson v. Garchitorena) and decided no case himself in a year."
+   }
+  ],
+  "vote": "13–1 on the period (Pardo, J.).",
+  "ops": "De Leon, J., dissented on the period: the SB is a collegiate court with appellate jurisdiction at the CA’s level, so the Constitution’s 12 months governs over PD 1606."
+ },
+ "fuentes": {
+  "iss": [
+   {
+    "q": "Is the judge liable for gross inefficiency for 70 late cases and 27 unresolved incidents?",
+    "a": "YES",
+    "why": "The Constitution requires trial judges to decide within 90 days from submission, and the New Code of Judicial Conduct requires reasonable promptness; the duty covers motions and incidents. A judge cannot choose his deadline; without an extension, even one late case is gross inefficiency (OCA v. Javellana). He sought extension only after the audit."
+   },
+   {
+    "q": "Do travel, health and family reasons excuse the delay?",
+    "a": "NO",
+    "why": "He himself conceded no valid justification. The Court is sympathetic only to seasonably filed requests for extension."
+   },
+   {
+    "q": "What is the proper penalty?",
+    "a": "₱40,000 FINE",
+    "why": "Undue delay is punished by suspension without pay or a fine (Rule 140, Sec. 9(1)), depending on the number of cases, aggravating or mitigating circumstances, damage to parties, and the judge’s health and age. The separate complaint was absorbed to avoid penalizing him twice for the same omission."
+   }
+  ],
+  "vote": "5–0 (Perez, J., Second Division).",
+  "ops": "None."
+ },
+ "macalintalpet": {
+  "iss": [
+   {
+    "q": "Does the petitioner have standing, and is he estopped?",
+    "a": "NOT RE-RULED",
+    "why": "Except for the Biraogo argument, the motion raised nothing new, so the 2010 Decision stood."
+   },
+   {
+    "q": "Is the PET unconstitutional because Art. VII, Sec. 4 does not expressly create it?",
+    "a": "NO",
+    "why": "The last paragraph grants the Court en banc the power to be the sole judge of the contests and to promulgate its rules, with no limitation on the method; the PET is a derivative of that grant. The framers (Davide, Regalado, Concepcion, Bernas) meant to constitutionalize the statutory PET of Roxas v. Lopez. By necessary implication, a grant of jurisdiction includes the means to exercise it; a power without means is a nullity (McCulloch)."
+   },
+   {
+    "q": "Is the PET a quasi-judicial body, so that the Justices in it violate Art. VIII, Sec. 12?",
+    "a": "NO",
+    "why": "Election contests are essentially judicial. The PET’s power derives from the Court’s judicial power; there is a “thin, but distinct line” between them, and the PET is independent but not separate from the Court. Sec. 4 of Art. VII itself authorizes it, just as Art. VI, Sec. 17 places Justices in the SET and HRET."
+   },
+   {
+    "q": "Does Biraogo v. PTC require a law to create the PET?",
+    "a": "NO",
+    "why": "An “unmitigated quantum leap”: Biraogo found the Truth Commission justified under Sec. 17 of Art. VII, a differently worded provision on executive power, and the PET’s basis was expressly discussed by the framers."
+   }
+  ],
+  "vote": "15–0 (Nachura, J.).",
+  "ops": "None."
  }
 }

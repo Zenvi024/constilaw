@@ -1106,5 +1106,93 @@
  "robredo": {
   "k": "Pilot provinces",
   "c": "ok"
+ },
+ "gacott": {
+  "k": "Division may discipline",
+  "c": "sun"
+ },
+ "kilosbayanermita": {
+  "k": "Natural-born only",
+  "c": "no"
+ },
+ "meralco32": {
+  "k": "Judges, not arbitrators",
+  "c": "no"
+ },
+ "garciamacaraig": {
+  "k": "No DOJ detail",
+  "c": "acc"
+ },
+ "ingonzalez": {
+  "k": "Impeach first",
+  "c": "acc"
+ },
+ "recoa2012": {
+  "k": "Court sets formula",
+  "c": "acc"
+ },
+ "phcci": {
+  "k": "No fee exemptions",
+  "c": "no"
+ },
+ "felipe": {
+  "k": "No right violated",
+  "c": "sun"
+ },
+ "almora": {
+  "k": "Produce the reports",
+  "c": "acc"
+ },
+ "prudential": {
+  "k": "No certification needed",
+  "c": "sun"
+ },
+ "consing": {
+  "k": "Certification merely directory",
+  "c": "sun"
+ },
+ "inreproduction": {
+  "k": "Deliberations privileged",
+  "c": "acc"
+ },
+ "miguel": {
+  "k": "State the facts",
+  "c": "no"
+ },
+ "nunal": {
+  "k": "Minute reso OK",
+  "c": "sun"
+ },
+ "bugarin": {
+  "k": "No ipse dixit",
+  "c": "no"
+ },
+ "hernandez": {
+  "k": "Adopted facts OK",
+  "c": "ok"
+ },
+ "yao": {
+  "k": "Hollow affirmance void",
+  "c": "no"
+ },
+ "tichangco": {
+  "k": "Basis stated suffices",
+  "c": "ok"
+ },
+ "martinez": {
+  "k": "“Nothing new” suffices",
+  "c": "ok"
+ },
+ "delayssb": {
+  "k": "SB: three months",
+  "c": "sun"
+ },
+ "fuentes": {
+  "k": "Ninety days, firm",
+  "c": "no"
+ },
+ "macalintalpet": {
+  "k": "PET stands",
+  "c": "ok"
  }
 }

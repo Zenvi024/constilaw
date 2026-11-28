@@ -135,14 +135,18 @@
   "a": 1,
   "r": "Impeachment is not the exclusive mode of removing an impeachable officer. Quo warranto tests title (eligibility at appointment) and is judicial; impeachment tests fitness for acts in office. Prescription does not run against the State. Failure to file SALNs negates the 'proven integrity' required of members of the Judiciary.",
   "f": "Maria Lourdes Sereno, a UP law professor from 1986 to 2006, could not show that she had filed many of her SALNs, and gave the JBC only three of the ten SALNs it required of Chief Justice applicants in 2012. She was appointed Chief Justice. In 2018, while an impeachment complaint against her was pending in the House, the Solicitor General filed a quo warranto petition in the Supreme Court.",
-  "h": "Petition granted (Tijam, J.; 8–6). Sereno was ousted as unlawfully holding the office of Chief Justice, the position declared vacant, and the JBC directed to start the nomination process; she was also ordered to show cause for violating the sub judice rule. Dissents: Carpio (only Congress removes; refer the findings), Leonen ('legal abomination'; prescribed), Caguioa (impeachment exclusive), Velasco, Jr. (nullify the JBC nomination first), Perlas-Bernabe and Del Castillo, JJ.",
+  "h": "Petition granted (Tijam, J.; 8–6). Sereno was ousted as unlawfully holding the office of Chief Justice, the position declared vacant, and the JBC directed to start the nomination process; she was also ordered to show cause for violating the sub judice rule. Dissents: Carpio (only Congress removes; refer the findings), Leonen ('legal abomination'; prescribed), Caguioa (impeachment exclusive), Velasco, Jr. (nullify the JBC nomination first), Perlas-Bernabe and Del Castillo, JJ. On June 19, 2018, the Court (8–6) denied her Ad Cautelam Motion for Reconsideration with finality: no bias warranted inhibition, quo warranto by the State is imprescriptible, and the 90 days to fill the vacancy run from that Resolution.",
   "test": "Quo warranto (title, judicial, the State through the OSG, eligibility at appointment) versus impeachment (fitness, political, the House and Senate, acts in office).",
-  "x": "Use when the government tries to remove an impeachable officer outside impeachment, or when the defect is in the officer's qualifications at appointment.",
+  "x": "Use when the government tries to remove an impeachable officer outside impeachment, or when the defect is in the officer's qualifications at appointment. Under the Judiciary (removal): contrast In re Gonzalez (no disbarment or removal-carrying charge during incumbency) with quo warranto on eligibility at appointment.",
   "g": "Gatmaytan, 'The Philippines' Authoritarian Constitution', 95 Phil. L.J. 529 (2022): he lists the 8–6 ouster among the Duterte-era decisions that weakened checks on the President, quoting the view that the removal 'through a highly dubious legal maneuver' effectively cowed the courts.",
-  "w": "The case also appears under the Judiciary (V.C), with the June 19, 2018 Resolution denying reconsideration; that later batch adds the Resolution to this card.",
+  "w": "The digests and the decision differ in places on the separate opinions; the card follows the decision and the June 19, 2018 Resolution.",
   "s": "Quo warranto lies against an impeachable officer whose title is defective: Sereno ousted (8–6).",
   "sy": [
-   "Republic v. Sereno"
+   "Republic v. Sereno",
+   "Republic of the Philippines v. Sereno"
+  ],
+  "also": [
+   "court"
   ]
  },
  {

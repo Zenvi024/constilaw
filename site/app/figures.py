@@ -14,10 +14,10 @@ import re
 FIGS = {}    # file prefix -> [(mode, anchor, html)]
 WALL = []    # (prefix, figure id, title, hook html) for the hook wall
 SEC = {'00': 'method', '01': 'interp', '02': 'jr', '03': 'terr', '04': 'cit', '05': 'suff', '06': 'gov', '07': 'comp',
-       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '18': 'cinc', '90': 'news'}
+       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '18': 'cinc', '19': 'court', '90': 'news'}
 SHORT = {'00': 'Exam method', '01': 'Interpretation', '02': 'Judicial review', '03': 'Territory', '04': 'Citizenship', '05': 'Suffrage',
          '06': 'Government', '07': 'Composition', '08': 'Internal', '09': 'Privileges', '10': 'Tribunals and CA', '11': 'Powers',
-         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '18': 'Commander-in-Chief', '90': 'News'}
+         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '18': 'Commander-in-Chief', '19': 'The Supreme Court', '90': 'News'}
 
 
 # ---------- small builders ----------
@@ -1574,7 +1574,149 @@ fig('18', 'after', '<h3 id="cinc-vp">The Vice-President</h3>\n', 'vpprotest', 'W
     kind='gates', when='a losing presidential or vice-presidential candidate files an election protest.',
     hook='<em>Specific, three pilots, then Abayon</em>.',
     oral='The issue is whether [the protest] may prosper. Under the last paragraph of Article VII, Section 4, the Supreme Court en banc is the sole judge of contests over the election of the President and Vice-President; in Marcos, Jr. v. Robredo the Tribunal held that a protest must specify the irregularities and that if revision of the pilot provinces, at most three, shows no reasonable recovery, the protest is dismissed. Here, [the winner’s lead grew after revision], so the protest must be dismissed.',
-    cap='The PET itself is covered with the judiciary (Batch 8).')
+    cap='The PET itself is on the ' + X('court-pet', 'Supreme Court map') + ' (Macalintal v. PET).')
+
+# =====================================================================
+# 19 · the Supreme Court (V.C.1–2(o))
+# =====================================================================
+fig('19', 'after', '<h3 id="court-power">Judicial power, composition and modes of sitting</h3>\n', 'scdivision', 'Can a Division decide this?',
+    gates([G('Is the constitutionality of a treaty, international or executive agreement, or law in question?', 'Sec. 4(2): these are heard en banc; so are other cases the Rules of Court send there', 'En banc', 'decided by a majority of those who took part and voted', 'yes', 'sun'),
+           G('Would the ruling modify or reverse a doctrine laid down by the Court?', 'whether the doctrine came from the en banc or a Division (Sec. 4(3), proviso)', 'En banc', 'only the Court en banc may modify or reverse a doctrine', 'yes', 'sun'),
+           G('Is it the dismissal of a lower-court judge, or another matter the en banc keeps for itself?', 'Sec. 11; under Bar Matter No. 209, also suspension over one year or a fine over ₱10,000 (' + C('gacott', 'Gacott') + ')', 'En banc', 'only the full Court may dismiss a judge', 'yes', 'sun'),
+           G('Did a majority of the Division’s Members who took part and voted, and at least three, concur?', 'the base is those who actually deliberated and voted, not the full Division', 'Goes to the en banc', '“When the required number is not obtained, the case shall be decided en banc”', 'no', 'sun')],
+          ('The Division decides', 'and its decision is the decision of the Supreme Court (' + C('gacott', 'Gacott') + ')', 'ok'),
+          facts=[fact('People v. Gacott, Jr. (1995)', 'The Second Division reprimands a judge and fines him ₱10,000 for gross ignorance of the law; he says only the en banc may discipline judges.', 'n,n,n,y', 'Valid: only dismissal (and the heavier penalties the en banc keeps) needs the full Court.'),
+                 fact('A law attacked', 'A petition assigned to a Division asks the Court to strike down a 2025 statute as unconstitutional.', 'y', 'It must be heard and decided en banc.'),
+                 fact('Two of five', 'In a five-member Division, two Justices inhibit; the other three split 2–1 to grant.', 'n,n,n,n', 'A majority of those who voted, but not three: the case goes to the en banc.'),
+                 fact('Overruling a precedent', 'A Division, 5–0, wants to abandon a doctrine laid down by another Division ten years ago.', 'n,y', 'Only the en banc may modify or reverse it.')]),
+    kind='gates', when='a question is whether a Division of the Supreme Court could validly decide a case, or who must decide it.',
+    hook='<em>Law, doctrine, dismissal, three votes</em>: otherwise the Division is the Court.',
+    oral='The issue is whether [the Division] could validly decide [the case]. Under Article VIII, Section 4, the Court may sit in divisions, but cases on the constitutionality of a treaty or law, and the modification of a doctrine, are for the en banc, and under Section 11 only the en banc may dismiss a judge; in People v. Gacott the Court held that a Division may impose lesser discipline and that its decision is the decision of the Supreme Court. Here, [the Division only reprimanded and fined the judge], so its ruling is valid.',
+    cap='A Division of 3, 5 or 7 decides by a majority of those who took part and voted, and never with fewer than three concurring.')
+
+fig('19', 'after', '<h3 id="court-appt">Appointments and qualifications</h3>\n', 'scappt', 'Can this person be appointed to the Supreme Court?',
+    gates([G('Is the appointee a natural-born citizen?', 'one who became Filipino through a parent’s naturalization is naturalized, until proved otherwise in court (' + C('kilosbayanermita', 'Kilosbayan') + ')', 'Cannot be appointed', 'the Court may enjoin the appointee from taking office', 'no', 'no'),
+           G('Is the appointee at least 40, and for 15 years or more a judge or in law practice in the Philippines?', 'Sec. 7(1)', 'Cannot be appointed', 'the qualification is constitutional', 'no', 'no'),
+           G('Is the appointee of proven competence, integrity, probity and independence?', 'Sec. 7(3); filing SALNs is evidence of integrity (' + C('sereno', 'Sereno') + ')', 'Ineligible', 'the State may oust the appointee by quo warranto; the JBC and the appointment do not cure it', 'no', 'no'),
+           G('Was the appointee on a JBC list of at least three nominees for that vacancy?', 'Sec. 9', 'Void appointment', 'the President chooses only from the list', 'no', 'no')],
+          ('Valid', 'no CA confirmation; the vacancy is filled within 90 days of its occurrence (Sec. 4(1)); the election ban does not apply (' + C('decastrojbc', 'De Castro v. JBC') + ')', 'ok'),
+          facts=[fact('Kilosbayan v. Ermita (2007)', 'The appointee’s own bar petition says he became Filipino when his father was naturalized while he was a minor; BI and DOJ papers now call him natural-born.', 'n', 'Naturalized on the Court’s records: enjoined until he proves otherwise in court.'),
+                 fact('Republic v. Sereno (2018)', 'A Chief Justice appointed in 2012 never filed many of her SALNs as a professor and gave the JBC only three of the ten it required.', 'y,y,n', 'No proven integrity: ousted by quo warranto, 8–6.'),
+                 fact('The 2026 Chief Justice', 'A sitting Associate Justice is appointed Chief Justice from the JBC’s list of five nominees, a day before the incumbent retires at 70.', 'y,y,y,y', 'Qualified and from the list; whether an appointment may precede the vacancy is the one question to raise (Velicaria-Garafil).'),
+                 fact('Off the list', 'The President appoints a respected law dean the JBC did not nominate, saying the list was too short.', 'y,y,y,n', 'Void: the President may choose only from the JBC’s nominees.')]),
+    kind='gates', when='a nominee or appointee to the Court is questioned: citizenship, age, experience, integrity, or the JBC list.',
+    hook='<em>Born, forty-fifteen, integrity, list</em>.',
+    oral='The issue is whether [the appointee] may sit in the Supreme Court. Under Article VIII, Sections 7 and 9, a Member must be natural-born, at least forty, with fifteen years as a judge or lawyer, of proven integrity, and appointed from a JBC list of at least three; in Kilosbayan v. Ermita the Court enjoined an appointee whose own records showed he was naturalized, and in Republic v. Sereno it held that lack of proven integrity is an ineligibility that quo warranto may correct. Here, [the appointee became a citizen through his father’s naturalization], so he cannot take office until he proves natural-born status in court.',
+    cap='For lower courts the President has 90 days from the JBC’s list (Sec. 9); for the Supreme Court, 90 days from the vacancy (Sec. 4(1)).')
+
+fig('19', 'after', '<h3 id="court-nonjud">No non-judicial work for judges</h3>\n', 'scnonjud', 'Can a judge or Justice take this assignment?',
+    gates([G('Is it a post in an agency or body performing quasi-judicial or administrative functions?', 'a board of arbitrators, a department, a commission, a detail to the DOJ (Sec. 12)', 'Not allowed', 'the Justices cannot take on non-judicial power (' + C('meralco32', 'Meralco') + '; ' + C('garciamacaraig', 'Garcia v. Macaraig') + ')', 'yes', 'no'),
+           G('Could anyone other than the higher courts review or reverse what the judge does there?', 'a judge must never be where an executive official reviews his acts (' + C('garciamacaraig', 'Garcia') + ')', 'Not allowed', 'it erodes the separation of powers', 'yes', 'no')],
+          ('Allowed', 'it is judicial work; the PET exercises judicial power, “independent, but not separate” from the Court (' + C('macalintalpet', 'Macalintal v. PET') + ')', 'ok'),
+          facts=[fact('Meralco v. Pasay Transportation (1932)', 'A statute makes the Justices a board of arbitrators to fix, with a final award, what one utility pays another for using its bridge.', 'y', 'The Justices declined: a non-judicial role they cannot take.'),
+                 fact('Garcia v. Macaraig (1971)', 'A new judge whose court cannot yet function is assigned to help the Department of Justice.', 'y', 'The Court condemned the practice, though it cleared the judge of dishonesty.'),
+                 fact('Macalintal v. PET (2011)', 'The Justices sit as the Presidential Electoral Tribunal to hear a protest against the President’s election.', 'n,n', 'Judicial power: valid.'),
+                 fact('A truth commission', 'The President names a sitting RTC judge to chair a fact-finding commission on flood-control corruption.', 'y', 'An administrative body: Sec. 12 bars the designation.')]),
+    kind='gates', when='a law or the President assigns a judge or Justice to a board, commission, department or task force.',
+    hook='<em>Judges judge</em>: no agency, no executive reviewer.',
+    oral='The issue is whether [the judge] may be designated to [the commission]. Under Article VIII, Section 12, Members of the Supreme Court and of other courts shall not be designated to any agency performing quasi-judicial or administrative functions; in Meralco v. Pasay Transportation the Justices refused to act as arbitrators, and in Garcia v. Macaraig the Court condemned detailing judges to the DOJ, because no judge should be where anyone but the higher courts may review his acts. Here, [the commission is an executive fact-finding body], so the designation is void.',
+    cap='The PET is the Court itself under another name, so Sec. 12 does not reach it (Macalintal v. PET).')
+
+fig('19', 'after', '<h3 id="court-removal">Removal</h3>\n', 'scremove', 'Can this proceeding go on against a sitting Justice?',
+    gates([G('Is it an impeachment?', 'Art. XI, Secs. 2–3: the House impeaches, the Senate tries', 'The proper route', 'removal for the six grounds (see the other-powers map)', 'yes', 'ok'),
+           G('Is it quo warranto by the State on the Justice’s eligibility at appointment?', 'title, not fitness: citizenship, age, experience, proven integrity (' + C('sereno', 'Sereno') + ')', 'May proceed', 'filed by the OSG; imprescriptible when the State sues at its own instance', 'yes', 'sun'),
+           G('Is it a disbarment case, or a criminal charge whose penalty is removal (or amounts to it)?', 'the officer must be a lawyer and is removable only by impeachment (' + C('ingonzalez', 'In re Gonzalez') + ')', 'Must be dismissed', 'impeach first; the prosecutor dismisses motu proprio', 'yes', 'no')],
+          ('May go on', 'it does not remove the Justice: In re Gonzalez is not an immunity', 'ok'),
+          facts=[fact('In re Gonzalez (1988)', 'The Tanodbayan forwards to a Justice an anonymous complaint repeating a dismissed disbarment case and asks him to answer.', 'n,n,y', 'Charges that would remove a sitting Justice must be dismissed: impeach first.'),
+                 fact('Republic v. Sereno (2018)', 'While the House weighs an impeachment complaint, the Solicitor General asks the Court to oust the Chief Justice for lacking proven integrity when appointed.', 'n,y', 'Quo warranto may proceed alongside impeachment; she was ousted, 8–6.'),
+                 fact('Corona (2012)', 'The House impeaches the Chief Justice for betrayal of public trust over his SALN.', 'y', 'The constitutional route; the Senate tries him.'),
+                 fact('A damages suit', 'A motorist sues a sitting Justice for damages over a car accident.', 'n,n,n', 'Nothing in it removes him: the case may go on.')]),
+    kind='gates', when='someone files a complaint, a criminal case, a disbarment case or a quo warranto petition against a sitting Justice or another impeachable officer.',
+    hook='<em>Impeach first, unless the title was never there</em>.',
+    oral='The issue is whether [the complaint] against [a sitting Justice] may proceed. Under Article XI, Section 2, Members of the Supreme Court are removable by impeachment; in In re Gonzalez the Court held that a sitting Justice cannot be disbarred or charged with an offense carrying removal, because that would circumvent impeachment, while in Republic v. Sereno it held that quo warranto may test eligibility at appointment. Here, [the charge is a disbarment complaint over acts in office], so it must be dismissed and the complainant must go to the House.',
+    cap='The In re Gonzalez rule also covers other impeachable officers who must be lawyers: the Ombudsman, and the COMELEC and COA members who must be lawyers.')
+
+fig('19', 'after', '<h3 id="court-fiscal">Fiscal autonomy</h3>\n', 'scfiscal', 'Does this respect the Judiciary’s fiscal autonomy?',
+    gates([G('Does it cut the Judiciary’s appropriation below the previous year’s?', 'Sec. 3: a floor set by the Constitution', 'Void', 'Congress may not reduce it below last year’s', 'yes', 'no'),
+           G('Does it withhold, delay or condition the release of approved funds?', 'vetoed conditions, work and financial plans, “upon request” (' + C('bengzondrilon', 'Bengzon v. Drilon') + '; RA 12233, Sec. 4(c))', 'Void', 'release is automatic and regular', 'yes', 'no'),
+           G('Does an outside body dictate how the Court uses, charges for or disposes of its own resources?', 'COA’s formula for the Court’s property; a statutory exemption from court fees (' + C('recoa2012', 'Re: COA Opinion') + '; ' + C('phcci', 'Re: PHCCI') + ')', 'Void', 'full flexibility to allocate and use its resources is the Court’s', 'yes', 'no')],
+          ('Valid', 'e.g., COA’s post-audit of all Judiciary funds (RA 12233, Secs. 4(d) and 5); quarterly reports to the President and Congress', 'ok'),
+          facts=[fact('Bengzon v. Drilon (1992)', 'The President vetoes GAA special provisions funding the adjusted pensions of retired Justices.', 'n,y', 'Void: not items, and an impairment of fiscal autonomy.'),
+                 fact('Re: COA Opinion (2012)', 'COA disallows the Court’s formula for selling used vehicles to retiring Justices and imposes its own appraisal.', 'n,n,y', 'COA may post-audit, but cannot dictate the formula.'),
+                 fact('Re: PHCCI (2012)', 'A cooperative invokes the Cooperative Code to avoid paying filing and sheriff’s fees.', 'n,n,y', 'Legal fees are procedural rules, the Court’s alone; the exemption also drains its funds.'),
+                 fact('A post-audit', 'After the year ends, COA audits how the Judiciary Trust Fund was spent and issues observations.', 'n,n,n', 'Valid: RA 12233 keeps COA’s post-audit.'),
+                 fact('Release on request', 'The DBM releases the Judiciary’s monthly allotment only after the Court submits work and financial plans.', 'n,y', 'Void: RA 12233 bars the condition; release is automatic.')]),
+    kind='gates', when='the Judiciary’s budget is cut, held back, vetoed or audited, or a law exempts someone from court fees.',
+    hook='<em>No cut, no hold, no outside hand</em>; audit only after.',
+    oral='The issue is whether [the act] violates the Judiciary’s fiscal autonomy. Under Article VIII, Section 3, the Judiciary’s appropriations may not be reduced below the previous year’s and must be automatically and regularly released; in Bengzon v. Drilon the Court read fiscal autonomy as full flexibility to allocate and use its resources, and in Re: COA Opinion it held that COA may post-audit but not dictate how the Court disposes of its property. RA 12233 now requires monthly release without conditions. Here, [COA imposed its own formula], so the disallowance is void.',
+    cap='RA 12233 (2025) replaces the JDF with a Judiciary Trust Fund administered by the Chief Justice.')
+
+fig('19', 'after', '<h3 id="court-delib">Deliberations</h3>\n', 'scpriv', 'Can Congress or a party compel this from the Court?',
+    gates([G('Is it a public record of the Court (a decision, a resolution, a filed pleading)?', 'produced as certified copies through the Clerk of Court', 'Produce it', 'certified copies, under the Court’s rules', 'yes', 'ok'),
+           G('Is it about an external matter, outside the Court’s adjudication (a bribe offered, a crime)?', 'not about how the case was deliberated', 'May be compelled', 'Justices and staff may testify on external matters', 'yes', 'sun'),
+           G('Is it about the Court’s deliberations or predecisional records (raffle, agenda, internal memos, drafts, votes)?', 'judicial privilege, from the separation of powers and comity (' + C('inreproduction', 'In re Production of Court Records') + ')', 'Privileged', 'it belongs to the Court; no single Justice may waive it', 'yes', 'no')],
+          ('Ask the Court en banc', 'it decides access under its own rules and the limits of the right to information', 'sun'),
+          facts=[fact('In re Production (2012)', 'Impeachment prosecutors subpoena the rollos, the agenda and Justices’ testimony on how the Court issued a TRO in the Arroyo travel case.', 'n,n,y', 'Deliberative matters: privileged.'),
+                 fact('A certified decision', 'The prosecutors ask for a certified true copy of the TRO resolution itself.', 'y', 'A public record: the Clerk may issue it.'),
+                 fact('A bribe', 'A Senate committee asks a court employee about money a litigant handed her to influence a raffle.', 'n,y', 'An external matter: she may be compelled to testify.')]),
+    kind='gates', when='Congress, an impeachment court or a litigant wants the Court’s records, drafts or votes, or wants Justices and staff to testify.',
+    hook='<em>Public, yes; outside, yes; inside, never</em>.',
+    oral='The issue is whether [the impeachment court] may compel [the Justices’ testimony on their deliberations]. Under Article VIII, Section 13, the Court’s conclusions are reached in consultation, and in In re Production of Court Records the Court held that its deliberations and predecisional records are covered by judicial privilege, which belongs to the Court and cannot be waived by one Justice; only external matters such as bribery may be inquired into. Here, [the subpoena asks how the Justices voted on the TRO], so it cannot be enforced.',
+    cap='The certification of consultation itself (Sec. 13) is a separate matter: its absence does not void a decision (Consing).')
+
+fig('19', 'after', '<h3 id="court-voting">Voting</h3>\n', 'scvotes', 'How many votes, and what if it ties?',
+    cmp(['En banc', 'Division', 'Tie in the en banc'], [
+        ('Cases', 'a treaty, agreement or law attacked as unconstitutional; other cases the Rules send en banc; dismissal of judges; modifying a doctrine', 'all others the Court assigns', 'any en banc case'),
+        ('Votes needed', 'a majority of the Members who actually took part in the deliberations and voted', 'that majority and at least three', '—'),
+        ('If not reached', '—', 'the case goes to the en banc (Sec. 4(3))', 'original action dismissed; on appeal, the judgment below stands (Rule 56, Sec. 7)'),
+        ('Case', C('gacott', 'Gacott') + ' (a Division’s decision is the Court’s)', C('gacott', 'Gacott'), C('cruzdenr', 'Cruz v. DENR') + ': IPRA stands, 7–7, undecided'),
+    ]),
+    kind='comparison', when='a news card reports a split vote, an inhibition, or a tie, and you must say whether the Court decided anything.',
+    hook='<em>Count those who voted</em>; a tie decides nothing.',
+    oral='The issue is the effect of [the 7–7 vote on the petition]. Under Article VIII, Section 4(2), en banc cases are decided by a majority of the Members who actually took part and voted; in Cruz v. Secretary of Environment and Natural Resources the Court, tied 7–7 after redeliberation, dismissed the petition under Rule 56, so IPRA stood without a ruling on its validity. Here, [the Court tied], so [the law] stands, but no doctrine was laid down.',
+    cap='Members who inhibit or do not vote are left out of the count; those who took no part must say why (Sec. 13).')
+
+fig('19', 'after', '<h3 id="court-mr">Petition for review and motion for reconsideration</h3>\n', 'scdecision', 'Does this decision or resolution satisfy Sec. 14?',
+    gates([G('Is it a decision on the merits of a case submitted for decision, by a court or a quasi-judicial body?', 'labor arbiters and the NLRC too (' + C('miguel', 'Miguel') + '); not minute resolutions refusing due course or denying reconsideration', 'Needs only a legal basis', '“lack of merit,” “factual issues,” “nothing new” (' + C('nunal', 'Nuñal') + '; ' + C('martinez', 'Martinez') + '; ' + C('tichangco', 'Tichangco') + ')', 'no', 'sun'),
+           G('Does it state the facts (its own findings, or adopted from a brief) and the law?', 'evidentiary facts, not conclusions; adoption is allowed (' + C('hernandez', 'Hernandez') + ')', 'Void', 'no facts, no law: a decision in name only (' + C('bugarin', 'Bugarin') + '; ' + C('miguel', 'Miguel') + ')', 'no', 'no'),
+           G('If it adopts the lower court’s decision by reference: are the Permskul conditions met?', 'the findings annexed and made part of it; the adopted decision complies; a simple case (' + C('yao', 'Yao') + ')', 'Void', 'remand for a proper decision', 'no', 'no')],
+          ('Valid', 'brevity is allowed; substance is not optional', 'ok'),
+          facts=[fact('People v. Bugarin (1997)', 'A rape conviction summarizes the testimony and says only that the complainant is credible.', 'y,n', 'No reasons: the Court reviewed the whole record itself.'),
+                 fact('Miguel v. JCT (2005)', 'A labor arbiter holds two respondents liable without finding who employed the workers.', 'y,n', 'Void: quasi-judicial decisions must state the facts too.'),
+                 fact('Nuñal v. COA (1989)', 'The Court refuses due course to a certiorari petition by minute resolution, stating its legal basis.', 'n', 'Sec. 14’s “facts and law” does not apply; a legal basis suffices.'),
+                 fact('Martinez v. CA (2001)', 'The CA denies reconsideration in one paragraph: nothing new, already passed upon.', 'n', 'A legal basis: valid.'),
+                 fact('Hernandez v. CA (1993)', 'The CA adopts the Solicitor General’s narration of facts and then rules on each assigned error.', 'y,y,y', 'Valid: adoption is not abdication.'),
+                 fact('Yao v. CA (2000)', 'An RTC affirms the MTC in one page: “no cogent reason to disturb,” with nothing annexed.', 'y,y?,n', 'Not even a valid memorandum decision: nullified and remanded.')]),
+    kind='gates', when='a party attacks a decision, resolution or denial as unexplained, too short, or merely adopting someone else’s findings.',
+    hook='<em>Decisions: facts and law. Denials: a legal basis</em>.',
+    oral='The issue is whether [the decision] complies with Article VIII, Section 14. A decision must state clearly and distinctly the facts and the law on which it is based, while a denial of a petition for review or reconsideration needs only a legal basis; in People v. Bugarin the Court held that a decision that merely calls a witness credible fails, and in Yao v. Court of Appeals that a memorandum decision is valid only if it annexes the findings it adopts and is used in simple cases. Here, [the RTC affirmed in one page with no findings], so the decision is void and must be remanded.',
+    cap='This diagram covers both paragraphs of Sec. 14: requirements as to decisions (V.C.2(l)) and petitions for review and motions for reconsideration (V.C.2(m)).')
+
+fig('19', 'after', '<h3 id="court-periods">Periods for deciding cases</h3>\n', 'scdelay', 'Is the judge liable for delay?',
+    gates([G('Did the period lapse without a decision or resolution?', '24 months for the SC; 12 for the CA; 3 for the Sandiganbayan (PD 1606) and trial courts (90 days), counted from submission', 'No delay', 'the case was decided on time', 'no', 'ok'),
+           G('Did the judge ask for an extension before the period lapsed, and did the Court grant it?', 'a judge cannot set his own deadline (' + C('fuentes', 'Fuentes') + ')', 'Not liable', 'decided within the extended period', 'yes', 'ok')],
+          ('Gross inefficiency', 'even one late case; illness, travel or docket are no excuse after the fact; the court must still decide (Sec. 15(4)) (' + C('delayssb', 'Re: Delays in the Sandiganbayan') + '; ' + C('fuentes', 'Fuentes') + ')', 'no'),
+          facts=[fact('OCA v. Fuentes III (2013)', 'A trial judge sets his own deadlines and decides several cases months after the 90 days, without asking for an extension.', 'y,n', 'Gross inefficiency: fined ₱40,000.'),
+                 fact('Re: Delays (2001)', 'Sandiganbayan cases wait years after submission; the Presiding Justice says the 12-month period for collegiate courts applies.', 'y,n', 'Three months apply; he was fined and relieved as division chair.'),
+                 fact('An extension granted', 'A judge with a complex case asks the Court for 60 more days before the 90 lapse, gets them, and decides on day 140.', 'y,y', 'Not liable.'),
+                 fact('Day 85', 'A trial judge decides a case 85 days after the last memorandum is filed.', 'n', 'On time.')]),
+    kind='gates', when='a news card reports a long-pending case, a backlog, or a complaint against a judge for delay.',
+    hook='<em>From submission: 24, 12, 3</em>; extend before, not after.',
+    oral='The issue is whether [the judge] is liable for delay. Under Article VIII, Section 15, cases must be decided within twenty-four months in the Supreme Court, twelve in lower collegiate courts and three in other lower courts, from submission; in OCA v. Fuentes the Court held that a trial judge who fails to decide within 90 days without an extension granted by the Court is guilty of gross inefficiency, and Re: Delays in the Sandiganbayan applied three months to the Sandiganbayan. Here, [the judge decided months late without asking for more time], so he is liable.',
+    cap='Expiration does not divest the court of jurisdiction: it must still decide, “without further delay” (Sec. 15(4)).')
+
+fig('19', 'after', '<h3 id="court-pet">The Presidential Electoral Tribunal</h3>\n', 'sctribunals', 'Who judges this election dispute?',
+    cmp(['President or VP', 'Senator', 'Representative'], [
+        ('The tribunal', 'the Supreme Court en banc, as the PET (Art. VII, Sec. 4)', 'the Senate Electoral Tribunal (Art. VI, Sec. 17)', 'the House Electoral Tribunal (Art. VI, Sec. 17)'),
+        ('Members', 'all fifteen Justices', '3 Justices + 6 Senators', '3 Justices + 6 Representatives'),
+        ('Jurisdiction', '“all contests relating to the election, returns, and qualifications”', 'the same, for Senators', 'the same, for Representatives'),
+        ('Nature', 'judicial power, “independent, but not separate” from the Court (' + C('macalintalpet', 'Macalintal v. PET') + ')', 'an independent constitutional body', 'an independent constitutional body'),
+        ('Case', C('robredo', 'Marcos, Jr. v. Robredo') + ' (pilot provinces; no special elections)', '—', '—'),
+    ]),
+    kind='comparison', when='a losing candidate contests an election and you must name the tribunal, its make-up and the nature of its power.',
+    hook='<em>Fifteen for the top two</em>; nine for the rest.',
+    oral='The issue is whether [the PET] may validly hear [the protest]. Under the last paragraph of Article VII, Section 4, the Supreme Court en banc is the sole judge of contests over the election, returns and qualifications of the President and Vice-President; in Macalintal v. PET the Court held that the Tribunal is constitutional and exercises judicial power, independent but not separate from the Court, so its Justices are not designated to a quasi-judicial agency. Here, [the protest was filed after proclamation], so the PET has jurisdiction.',
+    cap='Before proclamation, disputes go to the COMELEC and Congress as canvassers; the PET takes contests after proclamation. The electoral tribunals are on the ' + X('et', 'electoral tribunals map') + '.')
 
 # =====================================================================
 # 00 · the hook wall (built last, from every hook above)

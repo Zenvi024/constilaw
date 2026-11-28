@@ -1,0 +1,420 @@
+[
+ {
+  "id": "gacott",
+  "n": "People v. Gacott, Jr.",
+  "y": "1995",
+  "t": "court",
+  "sub": "V.C.2(b) Modes of sitting",
+  "a": 1,
+  "r": "A Division may discipline a lower-court judge: Art. VIII, Sec. 11 requires the full Court only to dismiss a judge, and the Court en banc may set the procedure for the rest. A Division’s decision, by a majority of those who took part and voted (at least three), is the decision of the Supreme Court.",
+  "f": "Judge Gacott quashed an information for violating the Anti-Dummy Law, unaware that martial-law decrees had abolished the Anti-Dummy Board. The Second Division annulled his order and reprimanded and fined him ₱10,000 for gross ignorance of the law. He moved for reconsideration, arguing that only the Court en banc may discipline judges.",
+  "h": "Motions denied (14–0, Regalado, J., July 13, 1995). Only dismissal must be decided en banc; under Bar Matter No. 209 the en banc takes dismissal, suspension over one year or a fine over ₱10,000, so a reprimand and a ₱10,000 fine were within the Division’s power. Keeping the case with its original ponente after he moved divisions was regular.",
+  "test": "En banc for: dismissal of a judge (Sec. 11); under the Court’s rules, suspension over one year or a fine over ₱10,000. A Division decides with a majority of those who took part and voted, never fewer than three (Sec. 4(3)).",
+  "x": "Use when someone attacks a Division’s ruling as not “the Supreme Court,” or says only the en banc may discipline a judge. Pair with Sec. 4(3) (Division votes) and Sec. 11 (dismissal en banc).",
+  "g": "",
+  "w": "",
+  "s": "A Division may reprimand and fine a judge; only dismissal needs the full Court.",
+  "sy": [
+   "People v. Gacott"
+  ]
+ },
+ {
+  "id": "kilosbayanermita",
+  "n": "Kilosbayan Foundation v. Ermita",
+  "y": "2007",
+  "t": "court",
+  "sub": "V.C.2(c) Appointments and qualifications",
+  "a": 1,
+  "r": "A Member of the Supreme Court must be natural-born (Art. VIII, Sec. 7(1)). One who became Filipino through his father’s naturalization as a minor is naturalized; until he proves otherwise in an adversarial court proceeding, he may be enjoined from accepting the appointment. The Court, not only the JBC, may rule on an appointee’s qualifications.",
+  "f": "The Executive Secretary announced the appointment of Sandiganbayan Justice Gregory Ong to the Supreme Court, then said it was “held in abeyance” over his citizenship. His birth certificate said he was Chinese, and his father was naturalized when he was 11. Ong claimed natural-born status through his mother, citing a BI certificate and a DOJ opinion. Two foundations sued to annul the appointment.",
+  "h": "Petition granted as an injunction (13–0, Azcuna, J., July 3, 2007). On the Court’s own records (his 1979 bar petition), Ong was naturalized. BI and DOJ papers cannot amend a final naturalization ruling; a change of citizenship in the civil register needs a Rule 108 court order. Ong was enjoined from accepting the post until he proves natural-born status in court.",
+  "test": "Sec. 7(1): natural-born citizen, at least 40 years old, and 15 years or more as a judge of a lower court or in the practice of law; Sec. 7(3): proven competence, integrity, probity and independence.",
+  "x": "Use when an appointee’s citizenship or other constitutional qualification is questioned: the Court will look at the record and can enjoin the appointee. Ties to the citizenship rules (excluded from coverage) only as background.",
+  "g": "",
+  "w": "",
+  "s": "A Justice must be natural-born; Ong’s own bar records said he was naturalized, so he was enjoined.",
+  "sy": [
+   "Kilosbayan v. Ermita"
+  ]
+ },
+ {
+  "id": "meralco32",
+  "n": "Manila Electric Co. v. Pasay Transportation Co.",
+  "y": "1932",
+  "t": "court",
+  "sub": "V.C.2(d) No non-judicial work for judges",
+  "a": 1,
+  "r": "The Supreme Court and its members cannot be required to exercise any power or perform any duty not connected with administering judicial functions. The Court as an entity is not its members: a law making the Justices a board of arbitrators with a final award gives them a non-judicial role they cannot lawfully take.",
+  "f": "Act No. 1446, a franchise, provided that when another utility was allowed to use the grantee’s lines or tracks, the members of the Supreme Court, sitting as a board of arbitrators, would fix the terms and compensation, and their majority decision would be final. Meralco asked the Justices to fix what transport companies should pay for using its Pasig bridge.",
+  "h": "The Justices declined to act (11–0, Malcolm, J., November 25, 1932). Acting as arbitrators, they would exercise either judicial power outside the Court’s jurisdiction, which they would then review, or administrative power, which they cannot take on. A board of arbitrators is not a court, and a final award against a utility not party to the franchise shuts it out of the courts.",
+  "test": "",
+  "x": "Use when a law or order gives Justices or judges an administrative, arbitral or quasi-judicial task (a board, commission or panel). Pair with Art. VIII, Sec. 12 and Garcia v. Macaraig.",
+  "g": "",
+  "w": "",
+  "s": "Justices cannot sit as a board of arbitrators: the Court does judicial work only.",
+  "sy": [
+   "Meralco v. Pasay"
+  ]
+ },
+ {
+  "id": "garciamacaraig",
+  "n": "Garcia v. Macaraig, Jr.",
+  "y": "1971",
+  "t": "court",
+  "sub": "V.C.2(d) No non-judicial work for judges",
+  "a": 0,
+  "r": "Judges should not be detailed to, or assist, the Department of Justice: no judge should be where anyone other than the higher courts may review or reverse his actions. A judge who has assumed office may draw his salary while, through no fault of his, his court cannot function.",
+  "f": "Judge Macaraig took his oath for a newly created Laguna CFI branch, but the province had no courtroom or facilities for months. At the Secretary of Justice’s request he gave up a planned leave and helped the DOJ in the meantime. He filed no monthly reports yet drew his salary. A complainant charged him with dishonesty and violating the Judiciary Act.",
+  "h": "Complaint dismissed (7–0, Barredo, J., May 31, 1971). No dishonesty: after assuming office he had a “perfect right” to his salary, and the reporting rules assume a judge already holding trials. But the Court said it “feels very strongly” that the long practice of detailing judges to the DOJ should stop, to keep the separation of powers from eroding.",
+  "test": "",
+  "x": "Use when a judge is assigned or lent to an executive office, or asked to help it. The condemnation is in the body, not the fallo. Pair with Meralco (1932) and Art. VIII, Sec. 12.",
+  "g": "",
+  "w": "",
+  "s": "Judge cleared, but the Court condemned detailing judges to the DOJ.",
+  "sy": [
+   "Garcia v. Macaraig"
+  ]
+ },
+ {
+  "id": "ingonzalez",
+  "n": "In re Gonzalez",
+  "y": "1988",
+  "t": "court",
+  "sub": "V.C.2(g) Removal",
+  "a": 1,
+  "r": "A Member of the Supreme Court, who must be a lawyer and is removable only by impeachment, cannot be charged during incumbency with disbarment, or criminally with an offense carrying removal. This is not immunity but a procedural rule: impeach first, then prosecute. A prosecutor must dismiss such charges motu proprio.",
+  "f": "After the Court dismissed Miguel Cuenco’s disbarment complaint against Justice Fernan, Tanodbayan Raul Gonzalez forwarded to Fernan an anonymous letter from “concerned employees” about the same charges, with Cuenco’s telegram, and asked him to comment within ten days. Fernan referred the indorsement to the Court en banc.",
+  "h": "Rule laid down; resolution served on Gonzalez and Cuenco (13–0, per curiam, April 15, 1988). A sitting Justice cannot be disbarred, nor charged with an offense whose penalty is removal, because that would circumvent impeachment. The same holds for other impeachable officers who must be lawyers. Once removed by impeachment, the officer answers criminally or administratively.",
+  "test": "During incumbency, no (1) disbarment, nor (2) criminal charge carrying removal or a penalty whose service amounts to removal, against an impeachable officer required to be a lawyer; remedy: impeachment.",
+  "x": "Use when a prosecutor, the Ombudsman, a bar complaint or a court moves against a sitting impeachable officer. Contrast Republic v. Sereno (quo warranto on eligibility).",
+  "g": "",
+  "w": "",
+  "s": "Impeach first: no disbarment or removal-carrying charge against a sitting Justice.",
+  "sy": [
+   "In Re Gonzalez"
+  ]
+ },
+ {
+  "id": "recoa2012",
+  "n": "Re: COA Opinion on the Computation of the Appraised Value of Properties Purchased by Retired Justices",
+  "y": "2012",
+  "t": "court",
+  "sub": "V.C.2(h) Fiscal autonomy",
+  "a": 1,
+  "r": "Fiscal autonomy is more than the automatic release of appropriations: the Judiciary may use and dispose of its funds and properties free from outside control. COA may post-audit the Court but cannot impose its own formula for selling property to retiring Justices; the Chief Justice, with the en banc, decides.",
+  "f": "By tradition, retired Justices may buy the cars and equipment they used. The Court’s Property Division appraised five retired Justices’ vehicles under the CFAG formula. COA’s legal office said a COA memorandum’s formula should have been used and found ₱221,021.50 underpaid. The Court’s administrative office asked the Court to rule on the proper formula.",
+  "h": "In-house computation upheld (13–0, per curiam, July 31, 2012). COA’s audit power over bodies with fiscal autonomy is post-audit and must be read with judicial independence. The sale is a retirement privilege the Court grants; choosing the appraisal formula is part of its discretion, and the head of office has sole authority to dispose of property.",
+  "test": "",
+  "x": "Use when COA, the DBM or Congress tries to control how the Judiciary spends, allocates or disposes of its resources. Pair with Bengzon v. Drilon and RA 12233.",
+  "g": "",
+  "w": "",
+  "s": "COA may post-audit the Court but cannot dictate how it disposes of its property.",
+  "sy": [
+   "Re: COA Opinion on Computation"
+  ]
+ },
+ {
+  "id": "phcci",
+  "n": "Re: Perpetual Help Community Cooperative (Exemption of Cooperatives from Court Fees)",
+  "y": "2012",
+  "t": "court",
+  "sub": "V.C.2(h) Fiscal autonomy",
+  "a": 0,
+  "r": "Legal fees are part of the rules on pleading, practice and procedure, which only the Court may promulgate; Congress cannot exempt anyone from them. An exemption also cuts the Judiciary’s funds (the JDF and SAJF) and so impairs its fiscal autonomy. Cooperatives can no longer invoke their statutory exemption from court fees.",
+  "f": "The Cooperative Code (RA 9520, Art. 61(6)) exempts cooperatives from all court and sheriff’s fees in actions to collect obligations owed to them. A cooperative in Dumaguete was still assessed fees in its many collection suits, mostly small claims. The executive judge referred the matter to the Court, and the cooperative asked the Court to implement the exemption.",
+  "h": "Petition denied (14–0, Perez, J., March 13, 2012). Following the 2010 GSIS ruling, payment of legal fees is a vital part of the Court’s procedural rules, now its exclusive domain; and exemptions reduce the funds that secure judicial independence. Even before, the exemption never covered the sheriff’s actual travel expenses.",
+  "test": "",
+  "x": "Use when a law grants a sector (GOCCs, LGUs, cooperatives) exemption from court or legal fees. Pair with the GSIS ruling and RA 12233, Secs. 5–6.",
+  "g": "",
+  "w": "",
+  "s": "Congress cannot exempt cooperatives from court fees: rule-making plus fiscal autonomy.",
+  "sy": [
+   "Re: In the Matter of Clarification of Exemption"
+  ]
+ },
+ {
+  "id": "felipe",
+  "n": "Felipe v. Leuterio",
+  "y": "1952",
+  "t": "court",
+  "sub": "V.C.2(i) Jurisdiction",
+  "a": 0,
+  "r": "The judiciary has no power to reverse the award of the judges of an oratorical contest, nor of literary, beauty or similar contests (except activities the government regulates). A contestant has only the privilege to compete, not a right to the prize until proclaimed winner; an error by a judge is not a legal wrong.",
+  "f": "At an intercollegiate oratorical contest, Nosce and Imperial tied, and the chairman broke the tie for Nosce. Days later Imperial claimed that a judge had added her scores wrongly and that she should have won. The judge said he had erred in adding but would not change his ranking. The board refused to change the result, and a CFI judge declared Imperial the winner over the objection of four judges.",
+  "h": "CFI order set aside (8–0, Bengzon, J., May 30, 1952). What counts is the judge’s vote, not his arithmetic. Courts may not reverse the award: there is no right to the prize before proclamation, “error and wrong do not mean the same thing,” and any loss is damnum absque injuria. Fraud or malice would be a different case, against the erring judge.",
+  "test": "",
+  "x": "Use when someone asks a court to overturn the result of a private competition or a non-legal judgment: there must be a right violated before a court can act. Contrast regulated activities (the Games and Amusements Board).",
+  "g": "",
+  "w": "",
+  "s": "Courts will not reverse the judges of an oratorical contest: no right, no wrong.",
+  "sy": [
+   "Felipe v. Leuterio"
+  ]
+ },
+ {
+  "id": "almora",
+  "n": "Almora v. Dela Rosa",
+  "y": "2018",
+  "t": "court",
+  "sub": "V.C.2(i) Jurisdiction",
+  "a": 1,
+  "r": "In a case on the constitutionality, application or operation of regulations (Art. VIII, Sec. 4(2)), the Court may order the government to produce reports on how they were carried out, to check their existence and facial compliance, not their truth. Routine police operations are not state secrets; deaths in them get no presumption of regularity.",
+  "f": "Petitioners challenged the PNP’s anti-drug campaign (CMC 16-2016, “Double Barrel”/Tokhang) and a DILG memorandum circular; relatives had been killed in police “buy-busts.” At oral argument, the Solicitor General said 3,806 people had died in legitimate operations. The Court ordered the OSG to submit operation and investigation reports; the OSG moved for reconsideration, calling it an “unwarranted factual inquiry.”",
+  "h": "Motion for reconsideration denied; reports to be submitted in 15 days (April 3, 2018, en banc resolution). The Court may examine how the circulars were applied; relevance is for the Court to decide; national security does not cover routine drug operations; and continued refusal will be presumed to suppress adverse evidence.",
+  "test": "",
+  "x": "Use when the government refuses to give the Court records on how a policy was carried out, invoking national security or the presumption of regularity. Pair with the right to information (Art. III, Sec. 7) and David (acts under a valid issuance can still be void).",
+  "g": "",
+  "w": "",
+  "s": "The Court may order the drug-war police reports: “application or operation” of regulations.",
+  "sy": [
+   "Almora v. Dela Rosa"
+  ]
+ },
+ {
+  "id": "prudential",
+  "n": "Prudential Bank v. Castro",
+  "y": "1988",
+  "t": "court",
+  "sub": "V.C.2(j) Deliberations",
+  "a": 0,
+  "r": "The certification under Art. VIII, Sec. 13 applies to decisions in judicial cases, not administrative matters like disbarment, where deliberation is inherent in the collegiate Court; a per curiam decision has no ponente anyway. A party cannot seek a Justice’s inhibition after the Justice has voted on the merits.",
+  "f": "Atty. Grecia, disbarred in 1987 for conniving with a judge to defraud banks, filed a “Petition for Redress and Exoneration and for Voluntary Inhibition” after his motion for reconsideration was denied. He asked Chief Justice Teehankee and Justice Padilla to inhibit, and attacked the decision for lacking a Sec. 13 certification and the minute resolution for stating no legal basis.",
+  "h": "Petition expunged as a second motion for reconsideration filed without leave; its defamatory annex struck out (per curiam, A.C. No. 2756). No ground to inhibit; the certification and Sec. 14 do not apply to administrative cases; and even if they did, the Justices’ signatures attest to the consultation and “lack of merit” is a legal basis.",
+  "test": "",
+  "x": "Use when a party attacks a disciplinary ruling for lacking the Sec. 13 certification, or seeks a Justice’s inhibition after losing. Pair with Consing (no certification does not void a decision).",
+  "g": "",
+  "w": "",
+  "s": "No Sec. 13 certification needed in an administrative case; no inhibition after voting.",
+  "sy": [
+   "Prudential Bank v. Castro"
+  ]
+ },
+ {
+  "id": "consing",
+  "n": "Consing v. Court of Appeals",
+  "y": "1989",
+  "t": "court",
+  "sub": "V.C.2(j) Deliberations",
+  "a": 0,
+  "r": "Art. VIII, Sec. 13 requires collegiate courts to reach their conclusions in consultation before assigning a member to write, with a certification to that effect. A missing certification does not void the decision: regularity is presumed, and the omission only exposes the responsible official to accountability.",
+  "f": "The Consings sold Santos a house and two lots, part of which was a “voluntary right of way” that served as the subdivision road. Santos withheld payment and won a reduction of the price; the CA affirmed. Before the Supreme Court, the Consings argued mainly that the CA decision was void because it carried no Sec. 13 consultation certification.",
+  "h": "CA decision affirmed (Cortes, J., G.R. No. 78272). The absence of the certification does not mean the case was not decided in consultation and does not invalidate the decision. On the merits, the right of way was a subdivision road the Consings could not sell, so Santos was entitled to a proportionate reduction and attorney’s fees.",
+  "test": "",
+  "x": "Use when a party attacks a collegiate court’s decision for lacking the Sec. 13 certification. Pair with Prudential Bank (not required in administrative cases).",
+  "g": "",
+  "w": "",
+  "s": "No certification does not void a decision; it only shows non-compliance.",
+  "sy": [
+   "Consing v. Court of Appeals"
+  ]
+ },
+ {
+  "id": "inreproduction",
+  "n": "In re: Production of Court Records and Documents (Corona Impeachment)",
+  "y": "2012",
+  "t": "court",
+  "sub": "V.C.2(j) Deliberations",
+  "a": 1,
+  "r": "The Court’s deliberations and its predecisional, deliberative records (raffle results, agenda, internal memoranda, drafts) are covered by judicial privilege and cannot be subpoenaed. Justices and staff cannot be compelled to testify on internal adjudicative matters, only on external ones such as bribery. The privilege belongs to the Court; no single Justice may waive it.",
+  "f": "During Chief Justice Corona’s impeachment trial, the House prosecutors asked to examine the rollos of four cases, and the Senate, as impeachment court, subpoenaed the Clerk of Court to produce records and testify, including the raffle logbook, TRO records and minutes in the Arroyo travel cases. The Clerk referred the subpoenas to the Court.",
+  "h": "Request to examine the rollos denied; the Clerk may produce only certified copies of public records (February 14, 2012, per curiam). Separation of powers, comity and the deliberative process privilege protect the Court’s internal deliberations; the right to information is subject to limits set by law and the Court’s rules.",
+  "test": "Privileged if predecisional (before the decision) and deliberative (part of the give-and-take that produced it); internal adjudicative matters are protected, external matters (bribery) are not; only the Court may waive.",
+  "x": "Use when Congress, a prosecutor or an impeachment court seeks the Court’s internal records or a Justice’s testimony. Pair with Senate v. Ermita and Neri (executive privilege) and Chavez v. PEA.",
+  "g": "",
+  "w": "",
+  "s": "Judicial privilege: the Court’s deliberations and internal records cannot be subpoenaed.",
+  "sy": [
+   "In Re: Production of Court Records"
+  ]
+ },
+ {
+  "id": "miguel",
+  "n": "Miguel v. JCT Group, Inc.",
+  "y": "2005",
+  "t": "court",
+  "sub": "V.C.2(l) Requirements as to decisions",
+  "a": 0,
+  "r": "Quasi-judicial decisions, like a labor arbiter’s and the NLRC’s, must state clearly and distinctly the facts and the law on which they rest; deciding without findings of fact is grave abuse of discretion. A decision that is a patent nullity for that reason may be remanded, and the appeal-bond and reconsideration rules relaxed.",
+  "f": "Garment workers sued for illegal dismissal against several companies, including JCT, which had a management agreement with their sequestered employer, and its officer Cuevas. The labor arbiter, without resolving JCT’s motion to dismiss for lack of an employer-employee relationship, held all of them solidarily liable for ₱37.5 million; the NLRC affirmed. The CA found no factual basis and remanded.",
+  "h": "Petition denied; CA affirmed (Panganiban, J., March 16, 2005). The arbiter and NLRC never found who employed the workers or why JCT and Cuevas were liable, an evasion of their constitutional duty. The case goes back to determine the employer-employee relationship; the bond and reconsideration requirements were excused because the decision was a patent nullity.",
+  "test": "",
+  "x": "Use when a quasi-judicial body (NLRC, an agency) rules without saying what facts it found or why. Pair with Sec. 14 and Yao (due process).",
+  "g": "",
+  "w": "",
+  "s": "Labor tribunals must also state the facts: no findings, no valid decision.",
+  "sy": [
+   "Miguel v. JCT Group"
+  ]
+ },
+ {
+  "id": "nunal",
+  "n": "Nuñal v. Commission on Audit",
+  "y": "1989",
+  "t": "court",
+  "sub": "V.C.2(l) Requirements as to decisions",
+  "a": 0,
+  "r": "Sec. 14’s demand for facts and law applies to decisions on the merits in cases “submitted for decision,” not to a minute resolution refusing due course to a certiorari petition; that only needs to state its legal basis.",
+  "f": "Nuñal, a dismissed municipal administrator, got back salaries and benefits under a court-approved compromise with Isabela, Basilan officials, and later claimed separation pay when his post was abolished. COA denied the claim and disallowed the payments. The Court dismissed his certiorari petition by minute resolution, saying COA did not gravely abuse its discretion since the municipality was not impleaded. He moved for reconsideration, citing Sec. 14.",
+  "h": "Resolution partly reconsidered (Melencio-Herrera, J., January 24, 1989). The minute resolution did not violate Sec. 14: it was not a decision on a case submitted for decision, and it stated its legal basis. On reconsideration, the compromise bound the municipality, so COA erred in disallowing the back pay; but separation pay was properly denied.",
+  "test": "",
+  "x": "Use when a party attacks a minute resolution or a denial of due course as lacking facts and law. Pair with Martinez and Tichangco (denials of reconsideration).",
+  "g": "",
+  "w": "",
+  "s": "A minute resolution refusing due course needs only a legal basis, not full findings.",
+  "sy": [
+   "Nunal v. COA"
+  ]
+ },
+ {
+  "id": "bugarin",
+  "n": "People v. Bugarin",
+  "y": "1997",
+  "t": "court",
+  "sub": "V.C.2(l) Requirements as to decisions",
+  "a": 0,
+  "r": "Sec. 14 requires every decision to state clearly and distinctly the facts and the law, so the parties know why they won or lost and can point out errors on appeal, and so the judge decides by reasoning, not ipse dixit. A decision that only summarizes testimony and declares the complainant credible fails it.",
+  "f": "A father was charged with six counts of raping his daughter. In a two-page decision, the trial court summarized the testimonies and ruled: “The issue is simple. Is the private complainant credible…? The answer … is an undoubtful and a definite yes.” It convicted him of “three” rapes but sentenced him for four, plus an attempted rape, without explaining the counts.",
+  "h": "Trial court decision set aside; the Court reviewed the whole record (Mendoza, J.). The decision “disrespects the judicial function”: no evaluation of evidence, no reasons. Instead of remanding a long-pending case, the Court convicted him of four rapes, acquitted him of one, and found acts of lasciviousness instead of attempted rape.",
+  "test": "",
+  "x": "Use when a trial court decides without analyzing the evidence or explaining its conclusions. Normally the remedy is remand; the Court may decide itself when the case has long been pending.",
+  "g": "",
+  "w": "",
+  "s": "A decision that just says “credible” is no decision: state the facts and the law.",
+  "sy": [
+   "People v. Bugarin"
+  ]
+ },
+ {
+  "id": "hernandez",
+  "n": "Hernandez v. Court of Appeals",
+  "y": "1993",
+  "t": "court",
+  "sub": "V.C.2(l) Requirements as to decisions",
+  "a": 0,
+  "r": "Sec. 14 requires only that a decision state the facts on which it rests; it does not forbid a court from adopting the narration of facts in a party’s brief instead of rewriting it. A denial of reconsideration because there is no cogent reason to reverse states a legal basis.",
+  "f": "Hernandez bought jewelry from his aunt and paid with checks that bounced or were drawn on closed accounts. He was convicted of nine counts of estafa and BP 22 violations in one joint decision. The CA affirmed eight, quoting the Solicitor General’s statement of facts, and denied reconsideration for lack of cogent reason. He claimed both violated the Constitution.",
+  "h": "Petition denied; CA affirmed (Quiason, J., First Division). Adopting the Solicitor General’s narration shows the CA found those facts supported by evidence, and it made its own findings in discussing the errors. A single decision on nine informations, each separately adjudged after a joint trial he did not oppose, is valid.",
+  "test": "",
+  "x": "Use when a decision is attacked because the court copied the facts from a party’s brief, or denied reconsideration in a sentence. Pair with Martinez and Tichangco.",
+  "g": "",
+  "w": "",
+  "s": "A court may adopt the facts from a brief; Sec. 14 is still met.",
+  "sy": [
+   "Hernandez v. Court of Appeals"
+  ]
+ },
+ {
+  "id": "yao",
+  "n": "Yao v. Court of Appeals",
+  "y": "2000",
+  "t": "court",
+  "sub": "V.C.2(l) Requirements as to decisions",
+  "a": 1,
+  "r": "A memorandum decision is valid only if it (1) annexes the lower court’s findings and makes them part of it, (2) adopts a decision that itself complies with Sec. 14, and (3) is used only in simple cases (Francisco v. Permskul). A bare “no cogent reason to disturb” affirmance is void.",
+  "f": "Yao, president of a firm caught selling counterfeit GE lamp starters, was convicted of unfair competition by the MeTC. On appeal, the RTC, without waiting for the prosecution’s memorandum, issued a one-page decision quoting the MeTC’s dispositive portion and finding “no cogent reason to disturb” it. Yao then used the wrong mode of appeal to the CA, which declared the RTC decision final.",
+  "h": "Petition granted (Davide, C.J., October 24, 2000). Though Yao used the wrong remedy, the RTC decision was “starkly hollow” and could not even pass as a memorandum decision; it violated Sec. 14 and due process. The RTC decision was nullified and the case remanded for a decision that complies with Sec. 14.",
+  "test": "Valid memorandum decision: (1) the adopted findings are annexed and made an indispensable part; (2) the adopted decision itself complies with Sec. 14; (3) only for simple cases where the appeal is plainly groundless.",
+  "x": "Use when an appellate court affirms by reference or in a sentence. Lists the three memorandum-decision conditions.",
+  "g": "",
+  "w": "",
+  "s": "One-page “no cogent reason” affirmance is void; memorandum decisions need the Permskul conditions.",
+  "sy": [
+   "Yao v. Court of Appeals"
+  ]
+ },
+ {
+  "id": "tichangco",
+  "n": "Tichangco v. Enriquez",
+  "y": "2004",
+  "t": "court",
+  "sub": "V.C.2(m) Petition for review and motion for reconsideration",
+  "a": 0,
+  "r": "There is enough compliance with Sec. 14 when a collegiate appellate court, after deliberation, denies a motion and says the questions are factual or already passed upon, or cites another legal basis. Failing to mention every fact a party thinks crucial does not void a decision.",
+  "f": "Urban poor residents of Tondo, believing the land they occupied was public, asked the LRA to verify the Manotoks’ titles. The LRA found the titles validly registered and incontrovertible; the CA affirmed and denied reconsideration. The residents went to the Supreme Court on certiorari, arguing among others that the CA ignored that a survey was completed only after the 1905 decree.",
+  "h": "Petition denied (Panganiban, J., June 30, 2004). Certiorari is not a substitute for a lost appeal, though it was treated as a Rule 45 petition. The titles were valid and could not be collaterally attacked, and the residents lacked standing. The CA decision was not void: it gave a detailed account of the facts before applying the law.",
+  "test": "",
+  "x": "Use when a party claims a decision or denial is void because it did not address a fact or argument. Pair with Martinez (“nothing new” is a basis).",
+  "g": "",
+  "w": "",
+  "s": "A court need not answer every point; deliberation plus a stated basis is enough.",
+  "sy": [
+   "Tichangco v. Enriquez"
+  ]
+ },
+ {
+  "id": "martinez",
+  "n": "Martinez v. Court of Appeals",
+  "y": "2001",
+  "t": "court",
+  "sub": "V.C.2(m) Petition for review and motion for reconsideration",
+  "a": 0,
+  "r": "A resolution denying reconsideration complies with Sec. 14 when it states that the motion raises nothing new and that its points were already considered and passed upon in the decision; that statement is the legal basis.",
+  "f": "Fr. Martinez bought a lot by oral sale in 1981, built his house on it and paid in full, but never got a deed. The sellers sold the lot to the Veneracions, who registered it first and sued to eject him. The CA held them owners as first registrants in good faith and denied his motion for reconsideration in one paragraph saying it posed nothing new.",
+  "h": "CA reversed; the lot goes to Fr. Martinez (4–0, Mendoza, J., Second Division, May 21, 2001). The one-paragraph denial satisfied Sec. 14. But the Veneracions were not in good faith: they knew someone else possessed the lot and never asked him. A sale of land must be in writing to be enforceable, not notarized.",
+  "test": "",
+  "x": "Use when a denial of reconsideration is attacked as stating no basis. Pair with Nuñal and Tichangco; contrast Yao (decisions on the merits).",
+  "g": "",
+  "w": "",
+  "s": "“Nothing new” is a legal basis for denying reconsideration.",
+  "sy": [
+   "Martinez v. Court of Appeals"
+  ]
+ },
+ {
+  "id": "delayssb",
+  "n": "Re: Problem of Delays in Cases Before the Sandiganbayan",
+  "y": "2001",
+  "t": "court",
+  "sub": "V.C.2(n) Periods for deciding cases",
+  "a": 1,
+  "r": "The Sandiganbayan, a special court with trial functions, must decide within three months from submission (PD 1606, Sec. 6), not the 12 months Art. VIII, Sec. 15(1) gives “lower collegiate courts,” which means only the Court of Appeals. Motions for reconsideration must be resolved in 30 days. A court must obey its own rules.",
+  "f": "The IBP asked the Court to look into delays at the Sandiganbayan. The Presiding Justice reported 415 undecided cases, 341 in his own First Division, some submitted in 1990. A judicial audit found unassigned cases, years-old unresolved motions and cases “unloaded” to other divisions. The Court treated the IBP resolution as an administrative complaint against Presiding Justice Garchitorena.",
+  "h": "Presiding Justice fined ₱20,000 and relieved as division chairman to clear the backlog (Pardo, J., November 28, 2001; 13–1 on the period). The three-month period applies to original and appellate cases alike. His excuses failed: even one long-delayed case is intolerable, and a Presiding Justice who does not assign a ponente is deemed the ponente.",
+  "test": "Sec. 15(1): SC 24 months; lower collegiate courts 12 months; other lower courts 3 months; SB 3 months (PD 1606); submission = filing of the last pleading or memorandum required (Sec. 15(2)).",
+  "x": "Use when a court’s delay is at issue and you must name the period: SC 24 months, lower collegiate courts (CA) 12 months, Sandiganbayan 3 months, lower courts 3 months.",
+  "g": "",
+  "w": "",
+  "s": "The Sandiganbayan has three months, not twelve; delay is gross inefficiency.",
+  "sy": [
+   "Re: Delays in the Sandiganbayan"
+  ]
+ },
+ {
+  "id": "fuentes",
+  "n": "Office of the Court Administrator v. Fuentes III",
+  "y": "2013",
+  "t": "court",
+  "sub": "V.C.2(n) Periods for deciding cases",
+  "a": 0,
+  "r": "Trial judges must decide cases, and resolve motions and incidents, within 90 days from submission. A judge cannot choose his own deadline: without an extension the Court granted, failing to decide even one case on time is gross inefficiency. Excuses like health or travel do not help; only a timely request for extension does.",
+  "f": "A judicial audit of an RTC branch in Tagbilaran found 70 cases submitted for decision beyond the period, some since 2003, including appeals and cases with detained accused, and 27 unresolved incidents. A litigant separately complained that his damages case waited over three years. The judge admitted he had no justification, citing his health and trips home to Ozamiz.",
+  "h": "Judge fined ₱40,000, with a stern warning; his withheld salaries released less the fine (5–0, Perez, J., Second Division, March 6, 2013). The fine was lower than the OCA’s ₱50,000 recommendation because it was his first infraction in over 15 years and he tried to comply; the litigant’s case was absorbed in the same penalty.",
+  "test": "",
+  "x": "Use when a trial judge sits on cases: 90 days, no excuses without a timely extension; penalty is suspension or a fine graded by the number of cases (Rule 140).",
+  "g": "",
+  "w": "",
+  "s": "Ninety days, no self-chosen deadlines; even one late case is gross inefficiency.",
+  "sy": [
+   "Office of the Court Administrator v. Fuentes"
+  ]
+ },
+ {
+  "id": "macalintalpet",
+  "n": "Macalintal v. Presidential Electoral Tribunal",
+  "y": "2011",
+  "t": "court",
+  "sub": "V.C.2(o) Presidential Electoral Tribunal",
+  "a": 1,
+  "r": "The PET is constitutional: the last paragraph of Art. VII, Sec. 4, making the Court en banc the sole judge of presidential and vice-presidential contests, implies the means to carry it out. It exercises judicial power, “independent, but not separate,” from the Court, so its Justices do not violate Art. VIII, Sec. 12.",
+  "f": "Atty. Macalintal, a taxpayer and counsel for former President Arroyo before the PET, challenged the PET as unconstitutional: no provision expressly creates it, and Justices sitting in it are assigned to a quasi-judicial body. The Court dismissed his petition in 2010; he moved for reconsideration, invoking a concurrence in Biraogo v. PTC.",
+  "h": "Motion denied; the 2010 Decision stands (15–0, Nachura, J., June 7, 2011). The Constitution “constitutionalized what was statutory” (the PET created by law in 1957), and the framers’ debates show they meant the Court to organize it. Biraogo does not apply: Sec. 17 and Sec. 4 of Art. VII deal with different powers.",
+  "test": "",
+  "x": "Use when the PET’s existence, budget or the Justices’ role in it is attacked, or to compare the PET with the SET and HRET (Art. VI, Sec. 17). Pair with Marcos, Jr. v. Robredo (how a protest proceeds).",
+  "g": "",
+  "w": "The syllabus gives G.R. No. 191818; the decision is G.R. No. 191618.",
+  "s": "The PET is valid, and Justices sitting in it do judicial work.",
+  "sy": [
+   "Macalintal v. Presidential Electoral Tribunal"
+  ]
+ }
+]

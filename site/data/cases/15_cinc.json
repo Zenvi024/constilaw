@@ -277,11 +277,14 @@
   "f": "Leni Robredo won the 2016 vice-presidential election by 263,473 votes and was proclaimed by Congress. Ferdinand Marcos, Jr. protested, alleging massive fraud in 39,221 clustered precincts, and sought (1) annulment of her proclamation, (2) a recount of 36,465 precincts and (3) annulment of the elections in Lanao del Sur, Maguindanao and Basilan. He chose Camarines Sur, Iloilo and Negros Oriental as pilot provinces; after revision of 5,415 precincts, Robredo’s lead grew to 278,566.",
   "h": "Protest and counter-protest dismissed (15–0 to dismiss, Leonen, J., as the PET, February 16, 2021). The protest lacked specificity but was heard for due process. There was no reasonable recovery in the pilots, which also bars the annulment cause of action; it would fail anyway (even annulling all three provinces leaves Robredo ahead by 15,130). No inordinate delay: RA 1793’s 20-month period no longer binds the PET.",
   "test": "Annulment of elections (Abayon): (1) illegality affecting more than 50% of the votes cast in the precinct; (2) the lawful and unlawful ballots cannot be distinguished; (3) the protestee was responsible for the unlawful acts.",
-  "x": "Use when a losing presidential or vice-presidential candidate protests: the Supreme Court en banc as the PET is the sole judge (Art. VII, Sec. 4, last par.); protests must be specific; the pilot provinces decide; annulment needs the Abayon requisites.",
+  "x": "Use when a losing presidential or vice-presidential candidate protests: the Supreme Court en banc as the PET is the sole judge (Art. VII, Sec. 4, last par.); protests must be specific; the pilot provinces decide; annulment needs the Abayon requisites. Under the Judiciary (the PET): pair with Macalintal v. PET (2011) on the Tribunal’s constitutionality.",
   "s": "Marcos’s VP protest dismissed: no reasonable recovery in the three pilot provinces; the PET may annul, but not call special elections.",
   "sy": [
    "Marcos, Jr. v. Robredo",
    "Marcos v. Robredo"
+  ],
+  "also": [
+   "court"
   ]
  }
 ]
