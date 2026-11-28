@@ -143,5 +143,175 @@
   "cases": [
    "andal"
   ]
+ },
+ {
+  "id": "l-sa-writs",
+  "t": "scadmin",
+  "title": "The three writs under Sec. 5(5)",
+  "ask": "Name the writs the Court created under its power over constitutional rights, with what each covers.",
+  "items": [
+   "Amparo (2007): extralegal killings and enforced disappearances, or threats of them",
+   "Habeas data (2008): unlawful gathering, keeping or use of data threatening privacy in life, liberty or security",
+   "Kalikasan (2010): environmental damage prejudicing life, health or property in two or more cities or provinces"
+  ],
+  "ordered": true,
+  "src": "A.M. Nos. 07-9-12-SC, 08-1-16-SC, 09-6-8-SC",
+  "rv": "scadmin-writs",
+  "hook": "Life, data, nature.",
+  "cases": [
+   "rodriguez",
+   "bautistasalucon",
+   "waterforall"
+  ]
+ },
+ {
+  "id": "l-sa-amparo",
+  "t": "scadmin",
+  "title": "Amparo: the working rules",
+  "ask": "State the working rules of the writ of amparo.",
+  "items": [
+   "Summary; substantial evidence",
+   "Finds responsibility and accountability, not liability",
+   "Two stages: writ on a prima facie case; privilege after return and hearing",
+   "Totality of evidence; hearsay if consistent (Razon v. Tagitis)",
+   "Public officials must prove extraordinary diligence; no presumption of regularity",
+   "Command responsibility only to find who must act (Rodriguez)",
+   "Red-tagging and surveillance are threats (Deduro; Bautista)",
+   "Not for custody disputes (Caram) or contempt detention (Agcaoili)"
+  ],
+  "ordered": false,
+  "src": "Rule on the Writ of Amparo; Rodriguez; Bautista; Deduro; Caram",
+  "rv": "scadmin-writs",
+  "hook": "Cover, face, evidence, who.",
+  "cases": [
+   "rodriguez",
+   "bautistasalucon",
+   "deduro",
+   "caram",
+   "agcaoili"
+  ]
+ },
+ {
+  "id": "l-sa-ed",
+  "t": "scadmin",
+  "title": "Enforced disappearance: the elements",
+  "ask": "Give the elements of enforced disappearance.",
+  "items": [
+   "Arrest, detention, abduction or any deprivation of liberty",
+   "By agents of the State, or with its authorization, support or acquiescence",
+   "Followed by a refusal to acknowledge it, or concealment of the fate or whereabouts",
+   "Placing the person outside the protection of the law"
+  ],
+  "ordered": true,
+  "src": "RA 10353, Sec. 3(b); Navia v. Pardico; Caram v. Segui",
+  "rv": "scadmin-writs",
+  "cases": [
+   "caram"
+  ]
+ },
+ {
+  "id": "l-sa-ra10353",
+  "t": "scadmin",
+  "title": "RA 10353 (2012): key provisions",
+  "ask": "List the key provisions of the Anti-Enforced or Involuntary Disappearance Act.",
+  "items": [
+   "The right is non-derogable, even in war or emergency (Sec. 4)",
+   "An order of battle is no defense; it may be disobeyed (Sec. 5)",
+   "Absolute right of detainees to communicate (Sec. 6)",
+   "Duty to certify presence or absence; detention register (Secs. 8, 10)",
+   "Priority for habeas corpus, amparo and habeas data (Sec. 12)",
+   "Commanding officer liable as principal (Sec. 14)",
+   "Reclusion perpetua (Sec. 15)",
+   "Continuing offense; no prescription unless the victim surfaces (Secs. 21–22)",
+   "No amnesty (Sec. 23)"
+  ],
+  "ordered": false,
+  "src": "RA 10353 (approved December 21, 2012)",
+  "rv": "scadmin-writs",
+  "cases": [
+   "caram"
+  ]
+ },
+ {
+  "id": "l-sa-kalikasan",
+  "t": "scadmin",
+  "title": "Writ of kalikasan: the elements",
+  "ask": "What must a petitioner prove for a writ of kalikasan?",
+  "items": [
+   "An actual or threatened violation of the right to a balanced and healthful ecology",
+   "Arising from an unlawful act or omission of a public official or a private party",
+   "Damage prejudicing life, health or property in two or more cities or provinces",
+   "The magnitude of the damage is indispensable",
+   "The precautionary principle applies only to an uncertain causal link, not to no evidence"
+  ],
+  "ordered": false,
+  "src": "RPEC, Rule 7; Water for All Refund Movement v. MWSS (2023)",
+  "rv": "scadmin-writs",
+  "cases": [
+   "waterforall"
+  ]
+ },
+ {
+  "id": "l-sa-leb",
+  "t": "scadmin",
+  "title": "Pimentel v. LEB: what fell and what stood",
+  "ask": "Which parts of RA 7662 and the LEB’s rules did Pimentel v. LEB strike down, and which survived?",
+  "items": [
+   "Stood: the LEB and RA 7662; legal education is an executive function",
+   "Stood: minimum standards for law school admission (Sec. 7(e))",
+   "Void: training members of the legal profession (Sec. 3(a)(2))",
+   "Void: internship as a requirement for the bar (Sec. 7(g))",
+   "Void: mandatory CLE for lawyers (Secs. 2 and 7(h))",
+   "Void: the PhiLSAT as a pass-or-fail gate (academic freedom)"
+  ],
+  "ordered": false,
+  "src": "Pimentel v. Legal Education Board (2019)",
+  "rv": "scadmin-rules",
+  "hook": "Students: the State. Lawyers: the Court.",
+  "cases": [
+   "pimentelleb"
+  ]
+ },
+ {
+  "id": "l-sa-admission",
+  "t": "scadmin",
+  "title": "Admission and discipline of lawyers: the cases",
+  "ask": "Give the admission and discipline cases with their rule.",
+  "items": [
+   "Zaldivar (1988): attacks on the Court’s integrity are misconduct; suspended indefinitely",
+   "Aguirre v. Rana (2003): practicing before signing the Roll; admission denied",
+   "Garrido (2010): pre-bar bigamy; both lawyers disbarred",
+   "In re Ong (2014): Sandiganbayan Justice dismissed for dealings with Napoles",
+   "Zoleta (2015): a judge of doubtful citizenship is at least a de facto officer"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 5(5)",
+  "rv": "scadmin-bar",
+  "cases": [
+   "zaldivar",
+   "aguirrerana",
+   "garrido",
+   "inreong",
+   "zoleta"
+  ]
+ },
+ {
+  "id": "l-sa-ibp",
+  "t": "scadmin",
+  "title": "The integrated bar: the cases",
+  "ask": "Give the three integrated bar cases and their holdings.",
+  "items": [
+   "In re Edillon (1978): compulsory membership and dues valid; stricken from the Roll for not paying",
+   "In re 1989 IBP Elections: the Court may suspend oaths, investigate and annul; IBP elections are non-political",
+   "Re: Divina (2024): no election offense without a link to an election, but lavish gifts are simple misconduct (₱100,000 fines)"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Sec. 5(5); IBP By-Laws, Sec. 14",
+  "rv": "scadmin-ibp",
+  "cases": [
+   "edillon",
+   "ibpelections",
+   "divina"
+  ]
  }
 ]

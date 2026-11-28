@@ -49,7 +49,7 @@ AMBIG = {
 CITE_ONLY = {'Marcos': {'05': 'marcos95', '07': 'marcos95'}, 'Aquino': {'05': 'aquino95', '07': 'aquino95'}, 'Garcia': {'12': 'garciaexecsec'}}
 # never link these words on their own
 STOP = {'People', 'Republic', 'Province', 'City', 'Philippine', 'Philippines', 'Senate', 'House', 'Commission', 'Council', 'Coalition', 'Association',
-        'Executive', 'Secretary', 'Social', 'Ang', 'An', 'The', 'Vera', 'Cruz', 'Co', 'Chavez', 'Planas', 'Lambino Group', 'Teves', 'Dimaporo', 'Muhlach', 'Gatmaytan', 'IBP', 'DENR', 'NEA', 'General'}
+        'Executive', 'Secretary', 'Social', 'Ang', 'An', 'The', 'Vera', 'Cruz', 'Co', 'Chavez', 'Planas', 'Lambino Group', 'Teves', 'Dimaporo', 'Muhlach', 'Gatmaytan', 'IBP', 'DENR', 'NEA', 'General', 'Rodriguez', 'Bautista', 'Aguirre', 'Water'}
 # extra spellings used in the rule maps
 EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco', 'GTZ': 'gtz', 'Chavez v. PEA': 'chavezpea', 'In re JDF': 'jdf', 'JDF': 'jdf',
          'Ericta': 'ericta', 'PPI v. COMELEC': 'ppi', 'PPI': 'ppi', 'TELEBAP': 'telebap', 'Manila Memorial': 'manilamemorial', 'Manila Memorial Park v. DSWD': 'manilamemorial', 'Oposa': 'oposa', 'Kida': 'kida',

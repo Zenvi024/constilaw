@@ -122,12 +122,16 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     const gzr = await txt('#fig-scremove .walkout .vres'); check(tag, 'In re Gonzalez walk: must be dismissed', /Must be dismissed/.test(gzr), gzr);
     await p.click('#fig-scremove .walkout [data-w="map"]');
     // finals V.C.2(p), part 1: SC administration diagrams carry orals lines; the Sola walk ends at "Move it"
-    const sad = await p.evaluate(() => ['scwho', 'screfer', 'scvenue'].map(id => !!document.querySelector('#fig-' + id + ' .vor')));
+    const sad = await p.evaluate(() => ['scwho', 'screfer', 'scvenue', 'scwrit', 'scamparo', 'scleb'].map(id => !!document.querySelector('#fig-' + id + ' .vor')));
     check(tag, 'V.C.2(p) diagrams carry orals lines', sad.every(Boolean), sad);
     await go('fig-scvenue'); await p.click('#fig-scvenue .walkbar .vchip:has-text("People v. Sola")');
     for (const a of ['y', 'n', 'y']) await p.click(`#fig-scvenue .gate.cur .yn [data-a="${a}"]`);
     const sov = await txt('#fig-scvenue .walkout .vres'); check(tag, 'Sola walk: move it', /Move it/.test(sov), sov);
     await p.click('#fig-scvenue .walkout [data-w="map"]');
+    await go('fig-scwrit'); await p.click('#fig-scwrit .walkbar .vchip:has-text("Caram")');
+    for (const a of ['n', 'n', 'n', 'y']) await p.click(`#fig-scwrit .gate.cur .yn [data-a="${a}"]`);
+    const cwr = await txt('#fig-scwrit .walkout .vres'); check(tag, 'Caram walk: habeas corpus or custody', /Habeas corpus or a custody case/.test(cwr), cwr);
+    await p.click('#fig-scwrit .walkout [data-w="map"]');
     // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
     const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
     check(tag, 'no style leaks outside the diagrams', leak === 0, leak);
