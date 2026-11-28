@@ -1328,7 +1328,7 @@ $("scopeBtn").onclick = () => { HIDE = !HIDE; applyScope(); };
 const pslug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 function printDocs(){
   return [
-    {id: "maps-all", title: "All rule maps", sub: "every part, in syllabus order"},
+    {id: "maps-all", file: "DG-Constitutional-Law-1-Finals-Reviewer", title: "DG Constitutional Law 1 Finals Reviewer", sub: "every rule map from Part I to the Constitutional Commissions, with a title page and contents"},
     ...rvGroups().map(([l, p, is]) => ({id: "maps-" + pslug(l), title: "Rule maps: " + l, sub: (p ? p + " · " : "") + is.map(i => SECS[i].dataset.title).join(" · "), secs: is})),
     {id: "cases", title: "Case compendium", sub: "every syllabus case by topic: doctrine, facts, ruling"},
     {id: "lists", title: "Recall lists", sub: "every list, by topic"},
@@ -1357,6 +1357,14 @@ const PD_BUILD = {
     return h;
   },
 };
+// title page and contents of the full reviewer (make_pdfs.js fills the page numbers; a browser print shows the contents without them)
+const REVIEWER_SKIP = ["method"];
+function reviewerFront(){
+  const groups = rvGroups().map(([l, p, is]) => [l, p, is.filter(i => !REVIEWER_SKIP.includes(SECS[i].id))]).filter(g => g[2].length);
+  const row = (cls, id, t) => `<li class="${cls}"><span class="pdtt">${esc(t)}</span><span class="pdtd"></span><span class="pgn" data-toc="${id}"></span></li>`;
+  return `<div class="pdtitle"><div class="pdt1">University of the Philippines College of Law · First Semester 2026</div><h1>DG Constitutional Law 1<br>Finals Reviewer</h1><div class="pdt2">Prof. Dante B. Gatmaytan</div><div class="pdt3">The rule maps, in syllabus order: the constitutional text, the doctrines and cases, the professor’s views, the traps, the 2026 news, and every diagram with its hook and “Say it in orals” line.</div><div class="pdt4">Citizenship and Territory (IV.A and IV.B.1) are outside the finals coverage and are omitted. Current through ${esc(fmtDay(manilaToday(), {month: "long", day: "numeric", year: "numeric"}))}. Verify anything that looks off against the decisions.</div></div>`
+    + `<div class="pdtoc"><h2>Contents</h2><ol class="pdtl">${groups.map(([l, p, is]) => `<li class="pdtg"><span class="pdtt">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</span></li>` + is.map(i => row("pdts", SECS[i].id, SECS[i].dataset.title) + [...SECS[i].querySelectorAll("h3[id]")].map(h => row("pdth", h.id, h.textContent)).join("")).join("")).join("")}</ol><p class="pdtend">The rule maps begin on the next page.</p></div>`;
+}
 let PRINTING = null;
 // Print-only state: marks what to print (data-print on <body>, data-pin on the rule maps); the screen is untouched,
 // so nothing breaks if a browser or the viewer blocks the print dialog.
@@ -1365,7 +1373,7 @@ function preparePrint(id){
   const n = id.startsWith("sec:") ? +id.slice(4) : -1;
   const d = n >= 0 ? {id, title: SECS[n].dataset.title, secs: [n]} : printDocs().find(x => x.id === id);
   if (!d) return null;
-  if (id === "maps-all" || d.secs){ const keep = new Set(id === "maps-all" ? visIdx() : d.secs); SECS.forEach((s, j) => { if (keep.has(j)) s.dataset.pin = ""; }); document.body.dataset.print = "maps"; }
+  if (id === "maps-all" || d.secs){ const keep = new Set(id === "maps-all" ? visIdx().filter(j => !REVIEWER_SKIP.includes(SECS[j].id)) : d.secs); SECS.forEach((s, j) => { if (keep.has(j)) s.dataset.pin = ""; }); document.body.dataset.print = "maps"; if (id === "maps-all") $("printDoc").innerHTML = reviewerFront(); }
   else { $("printDoc").innerHTML = PD_BUILD[id](); document.body.dataset.print = "doc"; }
   PRINTING = id; return d;
 }

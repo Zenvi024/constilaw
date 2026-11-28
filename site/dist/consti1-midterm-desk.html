@@ -993,6 +993,29 @@ body.focus .nvb{display:none}
   body[data-print="maps"] #rcontent section.rv[data-pin],body[data-print="maps"] #rcontent section.rv[data-pin][hidden]{display:block!important}
   body[data-print="maps"] #rcontent section.rv[data-pin]~section.rv[data-pin]{break-before:page}
   body[data-print="doc"] #printDoc{display:block!important}
+  body[data-print="maps"] #printDoc:not(:empty){display:block!important}
+  /* the full reviewer: title page, then contents */
+  .pdtitle{break-after:page;min-height:240mm;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:0 6mm;border-left:6px solid var(--accent)}
+  .pdtitle h1{font:700 30pt/1.1 var(--display);color:var(--ink);margin:6px 0}
+  .pdtitle .pdt1{font:600 8pt var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .pdtitle .pdt2{font:600 13pt var(--display);color:var(--accent)}
+  .pdtitle .pdt3{font:400 10.5pt/1.5 var(--display);max-width:120mm;margin-top:14px}
+  .pdtitle .pdt4{font-size:8.5pt;color:var(--muted);max-width:120mm}
+  .pdtoc{break-after:page}
+  .pdtoc h2{font:700 18pt var(--display);margin:0 0 8px}
+  .pdtl{list-style:none;margin:0;padding:0;columns:2;column-gap:14mm;font-size:8.6pt;line-height:1.35}
+  .pdtl li{display:flex;align-items:baseline;gap:4px;break-inside:avoid}
+  .pdtl .pdtt{flex:0 1 auto;min-width:0}
+  .pdtl .pdtd{flex:1 1 auto;border-bottom:1px dotted var(--muted);transform:translateY(-3px);min-width:8px}
+  .pdtl .pgn{flex:none;font:600 8pt var(--mono);font-variant-numeric:tabular-nums}
+  .pdtl .pgn:empty,.pdtl .pgn:empty~*{display:none}
+  .pdtl li:has(.pgn:empty) .pdtd{display:none}
+  .pdtl .pdtg{margin:9px 0 3px;break-after:avoid;font:700 9.5pt var(--display);color:var(--accent);border-bottom:1px solid var(--accent)}
+  .pdtl .pdtg:first-child{margin-top:0}
+  .pdtl .pdtg small{font:500 6.5pt var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .pdtl .pdts{font-weight:700;margin-top:4px}
+  .pdtl .pdth{padding-left:10px;color:var(--ink)}
+  .pdtend{font-size:8pt;color:var(--muted);margin-top:8px}
   /* rule maps: one compact column */
   .rwrap{display:block!important}
   .rside,.rbar,.rstick,.rpager,#rresults,.legend{display:none!important}
@@ -1061,7 +1084,7 @@ body.focus .nvb{display:none}
     <div class="hdr-top">
       <div class="brand">
         <div class="eyebrow">Law 121 · Constitutional Law 1 · Prof. Dante B. Gatmaytan · 1-B · Finals: oral exam</div>
-        <h1>Consti 1 <em>Desk</em></h1>
+        <h1>Consti 1 <em>Reviewer</em></h1>
       </div>
       <div class="gsearch" role="search"><input type="search" id="gq" placeholder="Search everything: a case, rule, list, number…" aria-label="Search the whole site" autocomplete="off"><kbd>/</kbd></div>
       <div class="hdr-right"><button class="scope" id="scopeBtn" aria-pressed="true" title="Citizenship and national territory are not in this year’s midterm or finals coverage">Citizenship &amp; territory: <b id="scopeState">hidden</b></button><button class="scope themebtn" id="themeBtn" type="button">Theme: <b>auto</b></button><div class="clock" aria-live="polite"><div class="cl1"><span class="n" id="cdN">–</span><span class="l" id="cdL">Wed, Dec 16 · orals</span></div><span class="adv" id="cdA"></span></div></div>
@@ -1079,6 +1102,7 @@ body.focus .nvb{display:none}
     </nav>
   </div>
 </header>
+<section class="pdoc" id="printDoc" aria-hidden="true"></section>
 
 <div class="focusbar" id="focusBar" hidden><span class="fbt"><b>Consti 1</b> · <span id="fbWhat">Case drill</span></span><span class="fbc" id="fbClock"></span><span class="row" style="gap:6px"><button class="btn small" id="fbExit" type="button" title="Show the header and tabs again (Esc)">Exit focus</button></span></div>
 
@@ -3188,8 +3212,6 @@ body.focus .nvb{display:none}
   </div>
 </main>
 
-<section class="pdoc" id="printDoc" aria-hidden="true"></section>
-
 <div class="scrim" id="scrim" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modal"></div></div>
 
 <button type="button" id="navBackBtn" class="nvb" hidden>← Back</button>
@@ -4528,7 +4550,7 @@ $("scopeBtn").onclick = () => { HIDE = !HIDE; applyScope(); };
 const pslug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 function printDocs(){
   return [
-    {id: "maps-all", title: "All rule maps", sub: "every part, in syllabus order"},
+    {id: "maps-all", file: "DG-Constitutional-Law-1-Finals-Reviewer", title: "DG Constitutional Law 1 Finals Reviewer", sub: "every rule map from Part I to the Constitutional Commissions, with a title page and contents"},
     ...rvGroups().map(([l, p, is]) => ({id: "maps-" + pslug(l), title: "Rule maps: " + l, sub: (p ? p + " · " : "") + is.map(i => SECS[i].dataset.title).join(" · "), secs: is})),
     {id: "cases", title: "Case compendium", sub: "every syllabus case by topic: doctrine, facts, ruling"},
     {id: "lists", title: "Recall lists", sub: "every list, by topic"},
@@ -4557,6 +4579,14 @@ const PD_BUILD = {
     return h;
   },
 };
+// title page and contents of the full reviewer (make_pdfs.js fills the page numbers; a browser print shows the contents without them)
+const REVIEWER_SKIP = ["method"];
+function reviewerFront(){
+  const groups = rvGroups().map(([l, p, is]) => [l, p, is.filter(i => !REVIEWER_SKIP.includes(SECS[i].id))]).filter(g => g[2].length);
+  const row = (cls, id, t) => `<li class="${cls}"><span class="pdtt">${esc(t)}</span><span class="pdtd"></span><span class="pgn" data-toc="${id}"></span></li>`;
+  return `<div class="pdtitle"><div class="pdt1">University of the Philippines College of Law · First Semester 2026</div><h1>DG Constitutional Law 1<br>Finals Reviewer</h1><div class="pdt2">Prof. Dante B. Gatmaytan</div><div class="pdt3">The rule maps, in syllabus order: the constitutional text, the doctrines and cases, the professor’s views, the traps, the 2026 news, and every diagram with its hook and “Say it in orals” line.</div><div class="pdt4">Citizenship and Territory (IV.A and IV.B.1) are outside the finals coverage and are omitted. Current through ${esc(fmtDay(manilaToday(), {month: "long", day: "numeric", year: "numeric"}))}. Verify anything that looks off against the decisions.</div></div>`
+    + `<div class="pdtoc"><h2>Contents</h2><ol class="pdtl">${groups.map(([l, p, is]) => `<li class="pdtg"><span class="pdtt">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</span></li>` + is.map(i => row("pdts", SECS[i].id, SECS[i].dataset.title) + [...SECS[i].querySelectorAll("h3[id]")].map(h => row("pdth", h.id, h.textContent)).join("")).join("")).join("")}</ol><p class="pdtend">The rule maps begin on the next page.</p></div>`;
+}
 let PRINTING = null;
 // Print-only state: marks what to print (data-print on <body>, data-pin on the rule maps); the screen is untouched,
 // so nothing breaks if a browser or the viewer blocks the print dialog.
@@ -4565,7 +4595,7 @@ function preparePrint(id){
   const n = id.startsWith("sec:") ? +id.slice(4) : -1;
   const d = n >= 0 ? {id, title: SECS[n].dataset.title, secs: [n]} : printDocs().find(x => x.id === id);
   if (!d) return null;
-  if (id === "maps-all" || d.secs){ const keep = new Set(id === "maps-all" ? visIdx() : d.secs); SECS.forEach((s, j) => { if (keep.has(j)) s.dataset.pin = ""; }); document.body.dataset.print = "maps"; }
+  if (id === "maps-all" || d.secs){ const keep = new Set(id === "maps-all" ? visIdx().filter(j => !REVIEWER_SKIP.includes(SECS[j].id)) : d.secs); SECS.forEach((s, j) => { if (keep.has(j)) s.dataset.pin = ""; }); document.body.dataset.print = "maps"; if (id === "maps-all") $("printDoc").innerHTML = reviewerFront(); }
   else { $("printDoc").innerHTML = PD_BUILD[id](); document.body.dataset.print = "doc"; }
   PRINTING = id; return d;
 }
