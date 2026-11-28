@@ -57,6 +57,7 @@ __CSS__
     <section class="panel dayplan" aria-labelledby="dayH">
       <div class="dayhead"><span class="d" id="dayH"></span><span class="f" id="dayF"></span></div>
       <ul class="todo" id="dayTodo"></ul>
+      <div class="row"><a class="btn small ghost" href="#planP" id="plJump">Edit my plan ↓</a></div>
     </section>
     <div class="stack">
       <section class="panel fixp" aria-labelledby="fixH">
@@ -72,12 +73,22 @@ __CSS__
         <div class="row"><button class="btn primary" id="goDue">Review due cards</button><button class="btn" id="goMcq">Quick 10 MCQs</button></div>
         <p class="tiny" style="margin:0">Progress is saved in this browser only. It stays when the page is updated, but not across devices.</p>
       </section>
-      <section class="panel" aria-labelledby="weekH">
-        <h2 id="weekH">The week</h2>
-        <div class="week" id="week"></div>
-      </section>
     </div>
   </div>
+  <section class="panel plp" id="planP" aria-labelledby="plH">
+    <div class="spread">
+      <h2 id="plH">Plan your days to the orals</h2>
+      <div class="row">
+        <label class="plfield" for="plDate"><span class="lbl">My orals date</span><input type="date" id="plDate"></label>
+        <button class="btn" id="plAuto">Fill the empty days for me</button>
+        <button class="btn ghost" id="plClear">Clear plan</button>
+      </div>
+    </div>
+    <p class="tiny" style="margin:0" id="plHelp">Drag a topic into a day (on a phone: tap a topic, then tap a day). Drag or tap a planned card to move it; × removes it. A topic can go on more than one day. Your plan and orals date are saved in this browser only, so everyone in the block can plan around their own schedule.</p>
+    <div class="pltray" id="plTray"></div>
+    <div class="plboard" id="plBoard"></div>
+    <div class="plbar" id="plBar" hidden><span id="plBarT"></span><button class="btn small" id="plBarX">Cancel</button></div>
+  </section>
 </main>
 
 <!-- RULE MAPS -->
@@ -188,7 +199,7 @@ __REVIEWER__
   <div class="stack">
     <div class="spread">
       <div class="seg" role="group" aria-label="Exam type"><button data-em="mcq" aria-pressed="true">Multiple choice</button><button data-em="essay" aria-pressed="false">Essay questions</button></div>
-      <label class="chip" for="inCov"><input type="checkbox" id="inCov" checked> Within midterm coverage only</label>
+      <label class="chip" for="inCov" hidden><input type="checkbox" id="inCov"> Within coverage only</label>
     </div>
     <section id="e-mcq" class="stack">
       <div class="panel" id="qSetup">
@@ -201,7 +212,7 @@ __REVIEWER__
       <div class="panel" id="qBox" hidden aria-live="polite"></div>
     </section>
     <section id="e-essay" class="stack" hidden>
-      <p class="tiny" style="margin:0">Essay questions from the 2023 and 2024 midterms, the 2015, 2020, 2023 and 2024 finals (midterm topics only), and seven new prompts from 2026 news. Each has a back-page answer in CLEAR form (the length that fits under the new rules), a fuller model answer for study, and a 10-point rubric.</p>
+      <p class="tiny" style="margin:0">Essay questions from the 2023 and 2024 midterms, every question of the 2020 and 2024 finals, the 2015 and 2023 finals items on hand, and seven prompts from 2026 news. Each has a model answer and a 10-point rubric; the midterm-era items also have a short back-page answer in CLEAR form. For the orals, answer them out loud.</p>
       <div class="row"><select id="esrc" aria-label="Source"><option value="all">All sources</option><option value="past">Past exams</option><option value="news">2026 news</option></select></div>
       <div class="elist" id="elist"></div>
     </section>

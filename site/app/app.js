@@ -46,10 +46,12 @@ function manilaToday(){ // yyyy-mm-dd in Asia/Manila
   catch(e){ return new Date().toISOString().slice(0, 10); }
 }
 function daysTo(iso){ const a = new Date(manilaToday() + "T00:00:00Z"), b = new Date(iso + "T00:00:00Z"); return Math.round((b - a) / 864e5); }
+const ORALS = () => { const v = store.get("orals", ""); return /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : D.examDate; };
+const fmtDay = (iso, o) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", {timeZone: "UTC", ...(o || {weekday: "short", month: "short", day: "numeric"})});
 function renderClock(){
-  const n = daysTo(D.examDate);
-  const when = "Wed, Dec 16 · orals";
-  const [a, b, c] = n > 1 ? [`${n} days`, when, "to the oral finals"] : n === 1 ? ["1 day", when, "Light review, early night."] : n === 0 ? ["Today", "Oral finals", "Three news cards out loud, then go."] : ["Done", "Dec 16", "The finals are over."];
+  const od = ORALS(), n = daysTo(od);
+  const when = fmtDay(od) + " · orals";
+  const [a, b, c] = n > 1 ? [`${n} days`, when, "to your oral finals"] : n === 1 ? ["1 day", when, "Light review, early night."] : n === 0 ? ["Today", "Oral finals", "Three news cards out loud, then go."] : ["Done", fmtDay(od), "Your orals are over."];
   $("cdN").textContent = a; $("cdL").textContent = b; $("cdA").textContent = c;
   const fb = $("fbClock"); if (fb) fb.textContent = `${a} · ${b}`;
 }
@@ -197,17 +199,82 @@ function validKey(k){ const [p, id] = k.split(":"); if (p === "m"){ const q = D.
 function dueBadge(){ const n = dueKeys().length, b = $("dueBadge"); b.textContent = n; b.hidden = n === 0; }
 setInterval(dueBadge, 30000);
 
-/* ================= TODAY ================= */
-let planDay = null;
+/* ================= TODAY: the viewer's own plan to the orals ================= */
+// Plan = {date: [card ids]} in localStorage (per viewer: block mates have different orals dates).
+// Cards: "t:<topic key>" for a rule-map topic, "a:<activity>" for the rest.
+const PL_ACTS = {
+  review: {n: "Mixed review", s: "due cards and the fix list", go: "session", goL: "Start session"},
+  exams: {n: "Past exam questions", s: "finals and midterm problems, out loud", tab: "exams", goL: "Open past exams"},
+  news: {n: "News watch", s: "the 2026 news map", rv: "news", goL: "Open the news map"},
+  hooks: {n: "Hook wall", s: "every diagram hook on one screen", rv: "fig-wall", goL: "Open the hook wall"},
+  mock: {n: "Mock fishbowl", s: "a friend reads a news card; answer in 5 minutes", tab: "exams", goL: "Pick a problem"},
+  rest: {n: "Rest", s: "sleep counts as studying"},
+};
+let PLAN = store.get("plan", {});
+const plSave = () => store.set("plan", PLAN);
+const plTopics = () => TOPS().filter(t => t.sec && document.getElementById(t.sec));
+const plCaseN = k => CASES().filter(c => !c.ref && inT(c, k)).length;
+function plCard(id){
+  if (id.startsWith("t:")){ const t = TOP[id.slice(2)]; if (!t || !shownT(t.key)) return null; return {id, n: t.name, s: `${t.part} · ${plCaseN(t.key)} cases`, t}; }
+  const a = PL_ACTS[id.slice(2)]; return a ? {id, n: a.n, s: a.s, a} : null;
+}
+function plDays(){ // today through the orals date (at least a week, at most 8 weeks)
+  const t0 = manilaToday(), od = ORALS(), out = [];
+  let end = od < t0 ? null : od; const d = new Date(t0 + "T12:00:00Z");
+  for (let i = 0; i < 56; i++){ const iso = d.toISOString().slice(0, 10); out.push(iso); if ((end && iso >= end) || (!end && i >= 6)) break; d.setUTCDate(d.getUTCDate() + 1); }
+  return out;
+}
+function plCount(id){ return Object.values(PLAN).reduce((n, a) => n + a.filter(x => x === id).length, 0); }
+let PL_SEL = null; // {id, from} while a card is picked up by tap
+function plCardHTML(c, from){
+  const sel = PL_SEL && PL_SEL.id === c.id && PL_SEL.from === (from || "");
+  return `<div class="plcard${c.t ? "" : " plact"}${sel ? " plsel" : ""}" draggable="true" data-pl="${c.id}" data-from="${from || ""}" tabindex="0" role="button" aria-pressed="${sel}"><span class="pln">${esc(c.n)}</span><span class="pls">${esc(c.s)}</span>${from ? `<button class="plx" data-plx="${from}|${c.id}" aria-label="Remove ${esc(c.n)} from this day" title="Remove">×</button>` : (plCount(c.id) ? `<span class="plk">${plCount(c.id)}×</span>` : "")}</div>`;
+}
+function renderPlanner(){
+  const box = $("plTray"); if (!box) return;
+  $("plDate").value = ORALS(); $("plDate").min = manilaToday(); $("plDate").max = "2027-01-31";
+  const groups = (typeof rvGroups === "function" ? rvGroups() : []).map(([l, p, is]) => [l, p, plTopics().filter(t => is.some(i => SECS[i].id === t.sec))]).filter(g => g[2].length);
+  box.innerHTML = groups.map(([l, p, ts]) => `<div class="plgrp"><div class="plgh">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</div><div class="plcards">${ts.map(t => plCardHTML(plCard("t:" + t.key))).join("")}</div></div>`).join("")
+    + `<div class="plgrp"><div class="plgh">Practice and rest</div><div class="plcards">${Object.keys(PL_ACTS).map(k => plCardHTML(plCard("a:" + k))).join("")}</div></div>`;
+  const today = manilaToday(), od = ORALS(), days = plDays();
+  const lead = (new Date(days[0] + "T12:00:00Z").getUTCDay() + 6) % 7; // Monday-first grid
+  $("plBoard").innerHTML = `<div class="plwk">${["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(w => `<span>${w}</span>`).join("")}</div><div class="plgrid">`
+    + Array(lead).fill('<div class="plday plpad" aria-hidden="true"></div>').join("")
+    + days.map(d => { const cs = (PLAN[d] || []).map(plCard).filter(Boolean);
+      return `<div class="plday${d === today ? " pltoday" : ""}${d === od ? " plorals" : ""}${PL_SEL ? " plarmed" : ""}" data-plday="${d}"><div class="pldh"><b>${esc(fmtDay(d))}</b>${d === today ? '<span class="pltag">today</span>' : ""}${d === od ? '<span class="pltag plo">orals</span>' : ""}</div><div class="plslot">${cs.map(c => plCardHTML(c, d)).join("") || `<span class="plempty">${PL_SEL ? "Tap to place here" : "Drop topics here"}</span>`}</div></div>`; }).join("")
+    + `</div>`;
+  $("plHelp").classList.toggle("nudge", !!PL_SEL);
+  const sc = PL_SEL && plCard(PL_SEL.id); $("plBar").hidden = !sc;
+  if (sc) $("plBarT").textContent = `${PL_SEL.from ? "Moving" : "Placing"} “${sc.n}”: tap a day`;
+}
+$("plBarX").onclick = () => { PL_SEL = null; renderPlanner(); };
+function plPlace(id, to, from){
+  if (from && PLAN[from]){ const i = PLAN[from].indexOf(id); if (i >= 0) PLAN[from].splice(i, 1); if (!PLAN[from].length) delete PLAN[from]; }
+  const a = PLAN[to] = PLAN[to] || []; if (!a.includes(id)) a.push(id);
+  plSave(); PL_SEL = null; renderToday();
+}
+function plAuto(){ // fill empty days before the orals with unplanned topics, balanced by number of cases, in syllabus order
+  const od = ORALS(), days = plDays().filter(d => d < od && !(PLAN[d] || []).length);
+  if (!days.length) return;
+  const review = days.length >= 4 ? days.pop() : null;
+  const todo = plTopics().filter(t => !plCount("t:" + t.key)).map(t => ({id: "t:" + t.key, w: Math.max(2, plCaseN(t.key))}));
+  if (todo.length && days.length){ // each topic goes to the day where the midpoint of its share of the total falls
+    const total = todo.reduce((s, x) => s + x.w, 0); let cum = 0;
+    todo.forEach(x => { const di = Math.min(days.length - 1, Math.floor((cum + x.w / 2) / total * days.length)); (PLAN[days[di]] = PLAN[days[di]] || []).push(x.id); cum += x.w; });
+  }
+  if (review) PLAN[review] = ["a:review", "a:hooks", "a:exams"];
+  if (plDays().includes(od) && !(PLAN[od] || []).length) PLAN[od] = ["a:hooks"];
+  plSave(); renderToday();
+}
 function renderToday(){
-  const today = manilaToday();
-  const days = D.plan;
-  if (!planDay) planDay = (days.find(d => d.date === today) || (today < days[0].date ? days[0] : days[days.length - 1])).date;
-  const d = days.find(x => x.date === planDay);
-  $("dayH").textContent = d.label;
-  $("dayF").textContent = (d.date === today ? "Today · " : "") + d.focus;
-  $("dayTodo").innerHTML = d.items.map(it => `<li><span class="k">${esc(it.k)}</span><div>${esc(it.t)}${(it.rv || it.e || it.go || it.sp) ? `<div class="links">${(it.rv || []).map(id => `<button class="btn small" data-rv="${id}">${esc(rvTitle(id))}</button>`).join("")}${(it.e || []).map(id => ESS[id] ? `<button class="btn small" data-essay="${id}">Write: ${esc(ESS[id].short)}</button>` : "").join("")}${(it.sp || []).map(id => ESS[id] ? `<button class="btn small" data-spot="${id}">Spot: ${esc(ESS[id].short)}</button>` : "").join("")}${it.go ? `<button class="btn small" data-go="${it.go}">${esc(it.goL)}</button>` : ""}</div>` : ""}</div></li>`).join("");
-  $("week").innerHTML = days.map(x => `<button data-day="${x.date}" aria-current="${x.date === planDay}" class="${x.date < today ? "past" : ""}"><span class="w">${esc(x.short)}</span><span>${esc(x.focus)}</span></button>`).join("");
+  const today = manilaToday(), n = daysTo(ORALS());
+  $("dayH").textContent = fmtDay(today, {weekday: "long", month: "long", day: "numeric"});
+  $("dayF").textContent = n > 0 ? `${n} day${n === 1 ? "" : "s"} to your orals (${fmtDay(ORALS())})` : n === 0 ? "Your orals are today" : "Your orals are done";
+  const cs = (PLAN[today] || []).map(plCard).filter(Boolean);
+  $("dayTodo").innerHTML = cs.length ? cs.map(c => `<li><span class="k">${c.t ? "Topic" : "Do"}</span><div><b>${esc(c.n)}</b> <span class="tiny">${esc(c.s)}</span><div class="links">${c.t
+      ? `<button class="btn small" data-rv="${c.t.sec}">Read the rule map</button><button class="btn small" data-go="drill:cr:${c.t.key}">Case → rule drill</button>${LISTS().some(l => l.t === c.t.key) ? `<button class="btn small" data-go="lists:${c.t.key}">Recall lists</button>` : ""}`
+      : `${c.a.go ? `<button class="btn small" data-go="${c.a.go}">${esc(c.a.goL)}</button>` : ""}${c.a.rv ? `<button class="btn small" data-rv="${c.a.rv}">${esc(c.a.goL)}</button>` : ""}${c.a.tab ? `<button class="btn small" data-tabgo="${c.a.tab}">${esc(c.a.goL)}</button>` : ""}`}</div></div></li>`).join("")
+    : `<li><span class="k">Plan</span><div>Nothing planned for today yet. Set your orals date and drag topics into your days below, or let the desk fill the empty days for you.<div class="links"><button class="btn small primary" data-plauto>Fill the empty days for me</button></div></div></li>`;
   // stats
   const SYL = CASES().filter(c => !c.ref);
   const seen = SYL.filter(c => SRS["cr:" + c.id] || SRS["fc:" + c.id] || SRS["rc:" + c.id]).length;
@@ -220,10 +287,26 @@ function renderToday(){
     [qa.length ? Math.round(100 * qr / qa.length) + "%" : "–", `MCQ accuracy (${qa.length} answered)`],
     [al.length ? avg.toFixed(1) : "–", `average essay score /10 (${al.length} written)`]
   ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+  renderPlanner(); renderClock();
   renderSessPlan(); renderFix(); if (typeof renderRvProg === "function") renderRvProg();
 }
-  // (session plan and fix list are refreshed by renderToday)
-$("week").addEventListener("click", e => { const b = e.target.closest("[data-day]"); if (b){ planDay = b.dataset.day; renderToday(); const t = document.querySelector(".dayplan").getBoundingClientRect().top; if (t < 0) window.scrollTo({top: window.scrollY + t - 12, behavior: "smooth"}); } });
+$("plDate").addEventListener("change", () => { const v = $("plDate").value; if (/^\d{4}-\d{2}-\d{2}$/.test(v)){ store.set("orals", v); renderToday(); } });
+$("plAuto").onclick = plAuto;
+$("plClear").onclick = () => { if (!Object.keys(PLAN).length || confirm("Clear every planned day?")){ PLAN = {}; plSave(); PL_SEL = null; renderToday(); } };
+$("plJump").onclick = e => { e.preventDefault(); $("planP").scrollIntoView({block: "start", behavior: "smooth"}); };
+$("v-today").addEventListener("click", e => {
+  if (e.target.closest("[data-plauto]")){ plAuto(); return; }
+  const tg = e.target.closest("[data-tabgo]"); if (tg){ setTab(tg.dataset.tabgo); return; }
+  const x = e.target.closest("[data-plx]"); if (x){ const [d, id] = x.dataset.plx.split("|"); const a = PLAN[d] || []; const i = a.indexOf(id); if (i >= 0) a.splice(i, 1); if (!a.length) delete PLAN[d]; plSave(); PL_SEL = null; renderToday(); return; }
+  const c = e.target.closest("[data-pl]"); if (c){ const k = {id: c.dataset.pl, from: c.dataset.from}; PL_SEL = PL_SEL && PL_SEL.id === k.id && PL_SEL.from === k.from ? null : k; renderPlanner(); return; }
+  const d = e.target.closest("[data-plday]"); if (d && PL_SEL){ plPlace(PL_SEL.id, d.dataset.plday, PL_SEL.from); return; }
+});
+$("planP").addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.matches("[data-pl],[data-plday]")){ e.preventDefault(); e.target.click(); } if (e.key === "Escape" && PL_SEL){ PL_SEL = null; renderPlanner(); } });
+// drag and drop (mouse and trackpad); phones use tap, then tap a day
+$("planP").addEventListener("dragstart", e => { const c = e.target.closest("[data-pl]"); if (!c) return; e.dataTransfer.setData("text/plain", c.dataset.pl + "|" + c.dataset.from); e.dataTransfer.effectAllowed = "move"; c.classList.add("pldrag"); });
+$("planP").addEventListener("dragend", e => { const c = e.target.closest("[data-pl]"); if (c) c.classList.remove("pldrag"); document.querySelectorAll(".plday.plover").forEach(x => x.classList.remove("plover")); });
+$("planP").addEventListener("dragover", e => { const d = e.target.closest("[data-plday]"); if (!d) return; e.preventDefault(); document.querySelectorAll(".plday.plover").forEach(x => x !== d && x.classList.remove("plover")); d.classList.add("plover"); });
+$("planP").addEventListener("drop", e => { const d = e.target.closest("[data-plday]"); if (!d) return; e.preventDefault(); const [id, from] = (e.dataTransfer.getData("text/plain") || "").split("|"); if (id && plCard(id)) plPlace(id, d.dataset.plday, from || ""); });
 $("dayTodo").addEventListener("click", e => { const b = e.target.closest("[data-go]"); if (b) goAction(b.dataset.go); });
 function goAction(g){
   if (g === "due"){ setTab("cases"); setCaseMode("drill"); startDrill(true); }
@@ -254,13 +337,30 @@ let curSec = 0;
 function rvTitle(id){ const el = document.getElementById(id); if (!el) return id; const s = el.closest("section.rv"); return el.tagName === "SECTION" ? el.dataset.title : el.textContent; }
 const secShown = i => !HIDE || !OUT_SECS.includes(SECS[i].id);
 const visIdx = () => SECS.map((s, i) => i).filter(secShown);
+// the syllabus megaparts the rule maps sit under (section id -> group)
+const RV_GROUPS = [
+  ["Start here", "", ["method"]],
+  ["The Constitution", "Parts I–II", ["interp"]],
+  ["Judicial review", "Part III", ["jr"]],
+  ["Territory, people and government", "Part IV", ["terr", "cit", "suff", "gov"]],
+  ["The Legislative Department", "V.A · Congress", ["comp", "internal", "priv", "et", "powers", "money", "legproc", "ocong"]],
+  ["The Executive Department", "V.B · the President", ["pres", "appt", "cinc"]],
+  ["The Judicial Department", "V.C · the courts", ["court", "scadmin", "jbc"]],
+  ["Constitutional Commissions", "Art. IX", ["concom"]],
+  ["Current events", "", ["news"]],
+];
+function rvGroups(){ // [[label, part, [section indexes]]], every section placed once, in group order
+  const placed = new Set(), out = RV_GROUPS.map(([l, p, ids]) => [l, p, ids.map(id => SECS.findIndex(s => s.id === id)).filter(i => i >= 0 && (placed.add(i), true))]);
+  const rest = SECS.map((s, i) => i).filter(i => !placed.has(i)); if (rest.length) out.push(["Other", "", rest]);
+  return out.map(([l, p, is]) => [l, p, is.filter(secShown)]).filter(g => g[2].length);
+}
 function buildSide(){
-  $("rsecs").innerHTML = SECS.map((s, i) => !secShown(i) ? "" : `<li data-i="${i}"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)} · <span data-rp="${s.id}"></span></small></button></li>`).join("");
-  $("rsel").innerHTML = SECS.map((s, i) => !secShown(i) ? "" : `<option value="${i}">${esc(s.dataset.title)}</option>`).join("");
+  $("rsecs").innerHTML = rvGroups().map(([l, p, is]) => `<li class="rgh"><span>${esc(l)}</span>${p ? `<small>${esc(p)}</small>` : ""}</li>` + is.map(i => { const s = SECS[i]; return `<li data-i="${i}" class="rgi"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)} · <span data-rp="${s.id}"></span></small></button></li>`; }).join("")).join("");
+  $("rsel").innerHTML = rvGroups().map(([l, p, is]) => `<optgroup label="${esc(l + (p ? " (" + p + ")" : ""))}">` + is.map(i => `<option value="${i}">${esc(SECS[i].dataset.title)}</option>`).join("") + `</optgroup>`).join("");
 }
 function openSec(i, scroll){
   curSec = i; SECS.forEach((s, j) => s.hidden = j !== i);
-  document.querySelectorAll("#rsecs>li").forEach(li => {
+  document.querySelectorAll("#rsecs>li[data-i]").forEach(li => {
     const on = +li.dataset.i === i; li.classList.toggle("on", on);
     const old = li.querySelector("ul"); if (old) old.remove();
     if (on){ const hs = [...SECS[i].querySelectorAll("h3[id]")]; li.insertAdjacentHTML("beforeend", `<ul>${hs.map(h => `<li><a href="#" data-h="${h.id}">${esc(h.textContent)}</a></li>`).join("")}</ul>`); }
@@ -833,12 +933,10 @@ function renderFix(){
 $("fixGo").onclick = () => { const ks = fixKeys().slice(0, 20); if (!ks.length) return; startRun(ks.map(k => { const [p, ...r] = k.split(":"); return {p, id: r.join(":")}; }), "Fix"); };
 
 /* ================= session: one button, 15 to 20 minutes ================= */
-function planTopics(){
-  const today = manilaToday(); if (today > D.examDate) return TOPS().map(t => t.key);
-  const secs = new Set();
-  D.plan.filter(d => d.date <= today).forEach(d => d.items.forEach(it => (it.rv || []).forEach(id => { const el = document.getElementById(id); const sec = el && (el.tagName === "SECTION" ? el : el.closest("section.rv")); if (sec) secs.add(sec.id); })));
-  const ts = new Set(); secs.forEach(sid => { D.topics.filter(t => t.sec === sid).forEach(t => ts.add(t.key)); if (sid === "priv") ts.add("org"); });
-  const out = [...ts].filter(shownT);
+function planTopics(){ // topics planned for today and earlier days; otherwise every topic
+  const today = manilaToday(), ts = new Set();
+  Object.entries(PLAN).forEach(([d, ids]) => { if (d <= today) ids.forEach(id => { if (id.startsWith("t:")) ts.add(id.slice(2)); }); });
+  const out = [...ts].filter(k => TOP[k] && shownT(k));
   return out.length ? out : TOPS().map(t => t.key);
 }
 function buildSession(){
@@ -848,7 +946,7 @@ function buildSession(){
   shuffle(dueKeys()).slice(0, 10).forEach(k => { const [p, id] = k.split(":"); add(rest, p, id); });
   const nDue = rest.length, tp = new Set(planTopics()), room = Math.max(0, 20 - fix.length - rest.length);
   const newL = shuffle(LISTS().filter(l => tp.has(l.t) && !SRS["l:" + l.id])).slice(0, Math.min(4, Math.ceil(room / 3)));
-  const newM = shuffle(MCQS().filter(q => tp.has(q.t) && q.cov === "in" && !qhist[q.id] && !SRS["m:" + q.id])).slice(0, Math.min(3, Math.floor(room / 5)));
+  const newM = shuffle(MCQS().filter(q => tp.has(q.t) && q.cov !== "out" && !qhist[q.id] && !SRS["m:" + q.id])).slice(0, Math.min(3, Math.floor(room / 5)));
   const cs = CASES().filter(c => !c.ref && tp.has(c.t) && !SRS["cr:" + c.id]);
   const newC = [...shuffle(cs.filter(c => c.a)), ...shuffle(cs.filter(c => !c.a))].slice(0, Math.max(0, room - newL.length - newM.length));
   newL.forEach(l => add(rest, "l", l.id)); newM.forEach(q => add(rest, "m", q.id)); newC.forEach(c => add(rest, "cr", c.id));
@@ -868,7 +966,7 @@ function renderSessPlan(){
   $("sessGo").disabled = !s.cards.length;
 }
 function startRun(cards, label){
-  $("sessStart").hidden = true; $("todayGrid").hidden = true;
+  $("sessStart").hidden = true; $("todayGrid").hidden = true; $("planP").hidden = true;
   if ($("v-today").hidden) setTab("today");
   runCards($("sessRun"), cards, {label, quit: "End session", onEnd: sessEnd});
   window.scrollTo({top: 0});
@@ -876,7 +974,7 @@ function startRun(cards, label){
 $("sessGo").onclick = () => startRun(buildSession().cards, "Session");
 function sessEnd(box, r){
   const tp = new Set(planTopics()), spotted = store.get("sphist", {});
-  const pool = D.essays.filter(e => !spotted[e.id] && e.cov === "in" && e.t.some(t => tp.has(t)));
+  const pool = D.essays.filter(e => !spotted[e.id] && e.cov !== "out" && e.t.some(t => tp.has(t)));
   const pick = (pool.length ? pool : D.essays.filter(e => !spotted[e.id]))[0];
   box.innerHTML = `<div class="score"><span class="big">${r.right}/${r.done}</span><span class="tiny">right this ${esc((r.opts.label || "session").toLowerCase())} · ${fixKeys().length} on your fix list · ${dueKeys().length} due</span></div>
   <div class="row">${pick ? `<button class="btn primary" data-spot="${pick.id}">Finish with one spot problem (5 min): ${esc(pick.short)}</button>` : ""}<button class="btn" data-a="more">Another session</button><button class="btn ghost" data-a="back">Back to Today</button></div>`;
@@ -884,7 +982,7 @@ function sessEnd(box, r){
   box.querySelector('[data-a="back"]').onclick = closeRun;
   const sp = box.querySelector("[data-spot]"); if (sp) sp.addEventListener("click", closeRun);
 }
-function closeRun(){ $("sessRun").hidden = true; $("sessRun").innerHTML = ""; $("sessStart").hidden = false; $("todayGrid").hidden = false; renderToday(); }
+function closeRun(){ $("sessRun").hidden = true; $("sessRun").innerHTML = ""; $("sessStart").hidden = false; $("todayGrid").hidden = false; $("planP").hidden = false; renderToday(); }
 
 /* ================= LISTS ================= */
 const LIST = Object.fromEntries(D.lists.map(l => [l.id, l]));
@@ -958,7 +1056,7 @@ function startQuiz(){
 $("qStart").onclick = startQuiz;
 function mcqBody(q, a){
   const story = q.story && D.stories[q.story];
-  return `<div class="tags"><span class="tag${q.exam.includes("news") ? " news" : ""}">${esc(q.exam)} · item ${q.n}</span><span class="tag">${esc(tname(q.t))}</span>${q.cov === "beyond" ? '<span class="tag beyond">beyond midterm coverage</span>' : ""}</div>
+  return `<div class="tags"><span class="tag${q.exam.includes("news") ? " news" : ""}">${esc(q.exam)} · item ${q.n}</span><span class="tag">${esc(tname(q.t))}</span></div>
   ${story ? `<div class="story">${esc(story)}</div>` : ""}
   <p class="stem">${esc(q.q)}</p>
   <div class="choices">${q.c.map((c, i) => `<button class="choice" data-i="${i}"><span class="L">${LET[i]}.</span><span>${esc(c)}</span></button>`).join("")}</div><div class="qfb"></div>`;

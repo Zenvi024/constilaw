@@ -62,7 +62,16 @@ require('fs').mkdirSync(out, {recursive: true});
     const wn = await p.textContent('#wcN'); await p.screenshot({path: `${out}/${tag}-write.png`, fullPage: false}); await check('write');
     // printables + today again
     await p.click('[data-tab="print"]'); await p.screenshot({path: `${out}/${tag}-print.png`, fullPage: true}); await check('print');
-    await p.click('[data-tab="today"]'); await p.click('#week [data-day="2026-10-11"]'); await p.screenshot({path: `${out}/${tag}-today2.png`}); await check('today2');
+    await p.click('[data-tab="today"]');
+    // the planner: tap a topic, tap a day, it lands there and is saved; × removes it; no midterm dates left on Today
+    await p.click('#plTray [data-pl="t:jbc"]'); await p.click('#plBoard [data-plday] >> nth=0');
+    const placed = await p.evaluate(() => ({on: !!document.querySelector('#plBoard [data-plday] [data-pl="t:jbc"]'), saved: (localStorage.getItem('c1_plan') || '').includes('t:jbc'), today: document.querySelector('#dayTodo').textContent.includes('Lower courts')}));
+    await p.screenshot({path: `${out}/${tag}-today2.png`}); await check('today2');
+    await p.click('#plBoard [data-plday] [data-pl="t:jbc"] .plx');
+    const gone = await p.evaluate(() => !document.querySelector('#plBoard [data-pl="t:jbc"]'));
+    await p.click('#plAuto'); const auto = await p.evaluate(() => document.querySelectorAll('#plBoard .plslot [data-pl^="t:"]').length);
+    const todayTxt = await p.textContent('#v-today'); const stale = /October|Oct 1[0-9]|week of Oct/.test(todayTxt);
+    if (!placed.on || !placed.saved || !placed.today || !gone || auto < 10 || stale){ fail++; console.log('  PLANNER', JSON.stringify({placed, gone, auto, stale})); }
     console.log(`${tag}: scope=${scopeOK} search=${hits} modal=${modal} dg=${dg} cases=${cn} drillfb=${fb} mcq=${expl} spot=${spr} timer=${tt} words=${wn} errors=${JSON.stringify(errs)}`);
     if (errs.length || !modal || !hits || !expl || !spr || !fb) fail++;
     await p.close();
