@@ -35,8 +35,8 @@ TOPICS = [  # key, name, syllabus part, rule-map section
     ('cinc', 'Commander-in-Chief, other powers, the Vice-President', 'V.B.2(f)–(k), V.B.3', 'cinc'),
     ('court', 'The Supreme Court', 'V.C.1–2(o)', 'court'),
     ('scadmin', 'The SC’s administrative and rule-making powers', 'V.C.2(p)', 'scadmin'),
-    ('jbc', 'Lower courts and the JBC', 'V.C.3–6', ''),
-    ('concom', 'Constitutional Commissions', 'Constitutional Commissions', ''),
+    ('jbc', 'Lower courts, the JBC, automatic release', 'V.C.3–6', 'jbc'),
+    ('concom', 'Constitutional Commissions', 'Constitutional Commissions', 'concom'),
 ]
 topics = [dict(key=k, name=n, part=p, sec=s) for k, n, p, s in TOPICS]
 tkeys = {t['key'] for t in topics}

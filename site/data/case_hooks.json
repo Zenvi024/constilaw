@@ -1286,5 +1286,81 @@
  "divina": {
   "k": "Junkets are misconduct",
   "c": "no"
+ },
+ "adazajbc": {
+  "k": "Ninety days imperative",
+  "c": "ok"
+ },
+ "aguinaldo": {
+  "k": "No clustering",
+  "c": "no"
+ },
+ "buklod": {
+  "k": "Good-faith abolition",
+  "c": "ok"
+ },
+ "chavezjbc": {
+  "k": "One congressional seat",
+  "c": "no"
+ },
+ "cuevasbacal": {
+  "k": "Rank, not position",
+  "c": "ok"
+ },
+ "dbpcoa": {
+  "k": "Disallowance is COA’s",
+  "c": "acc"
+ },
+ "delallana": {
+  "k": "No non-existent office",
+  "c": "ok"
+ },
+ "dulay": {
+  "k": "JBC without CJ",
+  "c": "ok"
+ },
+ "funameco": {
+  "k": "Government fees audited",
+  "c": "sun"
+ },
+ "gohbayron": {
+  "k": "Augment, hold recall",
+  "c": "ok"
+ },
+ "jardeleza": {
+  "k": "Strategy isn’t integrity",
+  "c": "no"
+ },
+ "legaspi": {
+  "k": "Four votes needed",
+  "c": "sun"
+ },
+ "mallare": {
+  "k": "Pleasure isn’t cause",
+  "c": "no"
+ },
+ "ocampo55": {
+  "k": "Seven not enough",
+  "c": "sun"
+ },
+ "satcoa": {
+  "k": "Exhaust inside COA",
+  "c": "sun"
+ },
+ "sula": {
+  "k": "COMELEC sets dates",
+  "c": "ok"
+ },
+ "tidcorp": {
+  "k": "Charter beats circular",
+  "c": "no"
+ },
+ "umali": {
+  "k": "Rotation is fine",
+  "c": "ok"
+ },
+ "villanuevajbc": {
+  "k": "Five years, published",
+  "c": "ok"
  }
 }

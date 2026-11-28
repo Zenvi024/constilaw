@@ -196,13 +196,16 @@
   "n": "Funa v. Villar",
   "y": "2012",
   "t": "appt",
+  "also": [
+   "concom"
+  ],
   "sub": "V.B.2(d) Appointment: promoting a Commissioner to Chairman (COA)",
   "a": 1,
   "r": "A promotion from Commissioner to Chairman is not a barred “reappointment” (a second appointment to the same office), but no one may serve in a commission for more than seven years in all, and the President cannot split terms: a vacancy from expiration of a term needs a full seven-year appointment; other vacancies, only the unexpired portion. Villar’s promotion to the chairmanship vacated by expiration was void. Matibag’s fourth situation is abandoned.",
   "f": "Reynaldo Villar became COA Commissioner in 2004 for a term ending February 2, 2011. When Chairman Carague’s term expired on February 2, 2008, President Arroyo appointed Villar Chairman, his papers saying only until February 2, 2011; Villar claimed a fresh seven-year term to 2015. Funa sued as taxpayer and citizen. Villar stepped down in 2011 when President Aquino appointed a new Chairman.",
   "h": "Petition partly granted; Villar’s appointment as Chairman declared unconstitutional (12–3, Velasco, J., April 24, 2012). Moot, but decided under the exceptions; standing granted as a matter of transcendental importance; certiorari proper. A full term would exceed seven years in all; a shorter term violates the fixed term; so no valid appointment was possible.",
   "test": "Rules on Art. IX-D, Sec. 1(2) (restated): (1) after the first set, appointments are for a fixed seven years; a shorter term is void; (2) a vacancy from death, resignation, disability or impeachment is filled only for the unexpired portion; (3) those who served a full term cannot be reappointed to any position; (4) a Commissioner who resigns may be appointed Chairman for the unexpired portion of a chairmanship vacated by death, resignation, disability or impeachment, if the total stays within seven years; (5) no temporary or acting appointment.",
-  "x": "Use when a commissioner is promoted to chair a constitutional commission, or a President gives someone a term shorter or longer than the Constitution fixes. Check the cause of the vacancy and the seven-year total. Also see Batch 10 (Constitutional Commissions).",
+  "x": "Use when a commissioner is promoted to chair a constitutional commission, or a President gives someone a term shorter or longer than the Constitution fixes. Check the cause of the vacancy and the seven-year total.",
   "w": "Carpio, J. (with Abad and Sereno, JJ.) agreed the appointment was void but would bar promotions altogether as “reappointment of any kind”; Mendoza, J. (with Brion and Reyes, JJ.) would have upheld it up to the end of Villar’s Commissioner term.",
   "s": "COA Commissioner Villar’s promotion to Chairman was void: no split terms, seven years in all.",
   "sy": [
@@ -235,7 +238,8 @@
   "y": "2014",
   "t": "appt",
   "also": [
-   "pres"
+   "pres",
+   "concom"
   ],
   "sub": "V.B.2(d) Appointment: ex officio board seats for a constitutional commissioner",
   "a": 0,
@@ -254,13 +258,16 @@
   "n": "Gaminde v. COA",
   "y": "2000",
   "t": "appt",
+  "also": [
+   "concom"
+  ],
   "sub": "V.B.2(d) Appointment: fixed terms of commissioners and the rotational plan",
   "a": 0,
   "r": "The terms of the first appointees to the constitutional commissions start on a common date, February 2, 1987 (the ratification), whatever their dates of appointment; a belated appointment is counted against the appointee, and a vacancy is filled only for the unexpired balance. A term (the period one may hold office by right) differs from tenure (the time actually served). Gaminde’s term ended February 2, 1999, as her appointment said, but she may keep her pay as a de facto officer in good faith.",
   "f": "President Ramos appointed Thelma Gaminde CSC Commissioner in 1993 “for a term expiring February 2, 1999,” succeeding the first holder of the five-year seat. In 1998 the Chief Presidential Legal Counsel advised her that her term would end on February 2, 2000, and she stayed on. The COA disallowed her salary and her staff’s from February 2, 1999.",
   "h": "Term held to have expired on February 2, 1999; but she served in good faith as a de facto officer until February 2, 2000, so the disallowance of her and her staff’s pay was reversed (Pardo, J., December 13, 2000; 11–2 on the term, unanimous on the pay).",
   "test": "The rotational plan (Republic v. Imperial): (1) the first terms (7, 5 and 3 years) start on a common date; (2) any vacancy is filled only for the unexpired balance. Under the 1987 Constitution, the common date is February 2, 1987, so terms expire every two years in a regular cycle.",
-  "x": "Use when someone claims a commissioner’s term runs from the date of appointment or of assuming office: terms run from the fixed cycle, and late appointments eat into the term. Pair with Funa v. Villar (no split terms) and Matibag (the 2001 COMELEC vacancies Gaminde caused). Also in Batch 10.",
+  "x": "Use when someone claims a commissioner’s term runs from the date of appointment or of assuming office: terms run from the fixed cycle, and late appointments eat into the term. Pair with Funa v. Villar (no split terms) and Matibag (the 2001 COMELEC vacancies Gaminde caused).",
   "w": "De Leon, J. (joined by Mendoza, J.) would count the first terms from February 2, 1988, so Gaminde’s term would end February 2, 2000. The Presidential Legal Counsel’s letter was “in error.”",
   "s": "Commissioners’ terms run from February 2, 1987 in a fixed cycle; Gaminde’s ended in 1999, but her pay stands.",
   "sy": [

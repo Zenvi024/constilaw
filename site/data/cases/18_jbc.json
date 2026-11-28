@@ -1,0 +1,173 @@
+[
+ {
+  "id": "delallana",
+  "n": "De La Llana v. Alba",
+  "y": "1982",
+  "t": "jbc",
+  "sub": "V.C.3 Lower courts: qualifications, appointment and tenure",
+  "a": 1,
+  "r": "Congress may abolish lower courts as part of a reorganization if it acts in good faith; abolition is not removal, since “there can be no tenure to a non-existent office.” A mere change of name is not abolition (Brillo v. Enage). Because abolition separates incumbents as removal would, the Court should be consulted on the incumbents.",
+  "f": "BP 129 (the Judiciary Reorganization Act of 1980) abolished every lower court except the Sandiganbayan and the CTA and created the IAC, RTCs, MeTCs, MTCs and MCTCs; incumbents would cease to hold office. A city judge and seven lawyers sued, invoking judges’ security of tenure and alleging bad faith.",
+  "h": "Petition dismissed (Fernando, C.J., March 12, 1982): unconstitutionality not shown. The abolition was in good faith (a committee study, hearings, 590 pages of debate, clogged dockets). Teehankee, J., dissented; Plana and Abad Santos, JJ., concurred and dissented on the consultation point.",
+  "test": "Reorganization of lower courts: (1) real abolition, not a renaming; (2) good faith, not a cloak for an evil purpose; (3) the Court consulted on incumbents (a saving construction, not in the fallo).",
+  "x": "Use when a law abolishes or restructures lower courts, or a court is renamed and its judges are dropped.",
+  "g": "",
+  "w": "The consultation requirement is a saving construction in the body of the decision; the fallo only dismisses the petition. The vote count is not in the files.",
+  "s": "Congress may abolish lower courts in good faith; no tenure to a non-existent office.",
+  "sy": [
+   "De La Llana v. Alba"
+  ]
+ },
+ {
+  "id": "ocampo55",
+  "n": "Ocampo v. Secretary of Justice",
+  "y": "1955",
+  "t": "jbc",
+  "sub": "V.C.3 Lower courts: qualifications, appointment and tenure",
+  "a": 0,
+  "r": "The power to abolish lower courts includes the lesser power to reduce the number or change the category of judges; a judge holds office during good behavior only as long as the position lasts, and abolition is not removal. Seven of eleven Justices found the law void as an indirect removal, but without the votes needed to strike down a statute, the law stood.",
+  "f": "RA 1186 (1954) abolished all positions of judges-at-large and cadastral judges and increased the district judges from 107 to 114, without abolishing any court. Ten judges-at-large and cadastral judges not appointed district judges sued to keep their posts, invoking security of tenure.",
+  "h": "Petition denied “due to insufficient votes to invalidate” Sec. 3 of RA 1186 (Minutes, January 18, 1955): 7 Justices found it unconstitutional, 4 upheld it, short of the two-thirds then needed. The four-Justice opinion of Paras, C.J., prevails; the seven are in fact dissents.",
+  "test": "Abolition of judicial posts: valid unless judges are singled out or the reorganization cloaks an “evil purpose” (then “the hammer [may] fall … heavily”).",
+  "x": "Use with De La Llana when Congress abolishes judgeships; use for the vote needed to declare a law unconstitutional.",
+  "g": "",
+  "w": "Only the prevailing four-Justice view is the ruling; the seven Justices’ view (Bengzon, J.: no court was abolished, so it was a change of name and an indirect removal) is a dissent, and Teehankee, J., relied on it in De La Llana.",
+  "s": "Seven Justices said void, but four carried the day: abolition of judgeships stands.",
+  "sy": [
+   "Ocampo v. Secretary of Justice"
+  ]
+ },
+ {
+  "id": "dulay",
+  "n": "Dulay v. Judicial and Bar Council",
+  "y": "2012",
+  "t": "jbc",
+  "sub": "V.C.5 The Judicial and Bar Council",
+  "a": 0,
+  "r": "The JBC may act without its ex officio Chairman: a complete membership is only preferable, while the 90-day period to fill a Supreme Court vacancy is mandatory. But under the Court’s supervision, the most senior Justice who is not an applicant for Chief Justice sits and presides. “Members of the Supreme Court” (Art. VIII, Sec. 9) include the Chief Justice, so the President appoints the Chief Justice from the JBC’s list.",
+  "f": "After Chief Justice Corona’s removal, the JBC, headed by a retired Associate Justice instead of an incumbent Chief Justice, accepted applications for Chief Justice. A petitioner, who did not explain her capacity to sue, asked the Court to stop the JBC and the President.",
+  "h": "Petition dismissed (unsigned Resolution, July 3, 2012; 8 present, 6 no part): no standing; and even on the merits, the President may appoint the Chief Justice and the JBC may act without the Chief Justice, with the senior non-applicant Justice presiding.",
+  "test": "JBC without its Chair → still acts (majority; the 90 days are mandatory); the senior Justice who is not an applicant presides (Sec. 12, RA 296).",
+  "x": "Use when the JBC must act during a Chief Justice vacancy, or someone argues the Chief Justice must come from within the Court.",
+  "g": "",
+  "w": "",
+  "s": "The JBC may shortlist for Chief Justice without a Chief Justice; the senior non-applicant Justice presides.",
+  "sy": [
+   "Dulay v. Judicial and Bar Council"
+  ]
+ },
+ {
+  "id": "adazajbc",
+  "n": "Citizens Adaza v. President Aquino and JBC",
+  "y": "2012",
+  "t": "jbc",
+  "sub": "V.C.5 The Judicial and Bar Council",
+  "a": 0,
+  "r": "Following Dulay, the JBC may nominate and the President may appoint a Chief Justice. Art. VIII, Sec. 4(1) imposes on the President an imperative duty to fill a Supreme Court vacancy within 90 days; failure is “a clear disobedience to the Constitution,” and pending cases (here, challenges to the Senate’s impeachment jurisdiction) cannot defeat that mandate.",
+  "f": "After the Senate convicted Chief Justice Corona, who did not challenge the verdict, four citizens asked the Court to stop the JBC from shortlisting for Chief Justice, arguing that the President appoints only “members” and that the JBC should wait for pending petitions against the Senate’s jurisdiction.",
+  "h": "Petition dismissed (unsigned minute Resolution, July 17, 2012; 8 present, 6 no part).",
+  "test": "The 90-day period is a special provision setting a definite mandate for the appointing power (De Castro v. JBC).",
+  "x": "Use with Dulay on Chief Justice vacancies; use when someone argues an appointment must wait for pending litigation.",
+  "g": "",
+  "w": "",
+  "s": "The 90-day duty to fill a Court vacancy cannot wait for pending cases.",
+  "sy": [
+   "Citizens Adaza v. President Aquino and JBC"
+  ]
+ },
+ {
+  "id": "chavezjbc",
+  "n": "Chavez v. Judicial and Bar Council",
+  "y": "2013",
+  "t": "jbc",
+  "sub": "V.C.5 The Judicial and Bar Council",
+  "a": 1,
+  "r": "“A representative of the Congress” (Art. VIII, Sec. 8(1)) means one seat with one full vote: the JBC has seven members, not eight, and splitting one vote between a Senator and a Representative is a circumvention. A case omitted is intentionally omitted (casus omissus); the Court cannot supply the omission even if it was inadvertent. By the operative fact doctrine, the JBC’s prior acts stand.",
+  "f": "Since 1994 both a Senator and a Representative sat in the JBC, first with half a vote each, then from 2001 with a full vote each. Former Solicitor General Francisco Chavez, a nominee for Chief Justice, challenged the eight-member set-up; the Court granted his petition on July 17, 2012, and Congress’s representatives moved for reconsideration.",
+  "h": "Motion for reconsideration denied (9–3, Mendoza, J., April 16, 2013); the July 2012 Decision is immediately executory. Abad, J. (with Del Castillo, J.) and Leonen, J., dissented.",
+  "test": "Text first: the singular “a representative”; other provisions were adjusted to bicameralism (Art. VII, Secs. 4, 9 and 18), so the omission here was deliberate.",
+  "x": "Use when Congress’s seat in the JBC, the JBC’s composition, or reading the Constitution by its plain text (casus omissus) is in issue. The syllabus asks you to read Justice Leonen’s dissent: it is set out in the detailed summary.",
+  "g": "",
+  "w": "The operative fact ruling (the JBC’s prior acts are valid) is in the body of the Resolution, not the fallo.",
+  "s": "One seat, one vote for Congress in the JBC: seven members, not eight.",
+  "sy": [
+   "Chavez v. Judicial and Bar Council"
+  ]
+ },
+ {
+  "id": "umali",
+  "n": "Umali v. Judicial and Bar Council",
+  "y": "2017",
+  "t": "jbc",
+  "sub": "V.C.5 The Judicial and Bar Council",
+  "a": 0,
+  "r": "Chavez v. JBC stands as stare decisis: Congress has one representative in the JBC, and any Senator or Representative may represent the whole Congress, so the six-month rotation between the Houses is valid. A precedent is abandoned only for strong and compelling reasons, not a rehash. The remedy for more seats is constitutional amendment, not judicial. A legislator may sue without an enabling resolution when Congress’s prerogatives are invaded.",
+  "f": "After Chavez, the two Houses agreed to sit in the JBC by turns (the House from January to June, the Senate from July to December). In December 2016, during the Senate’s turn, the JBC did not count the votes of Rep. Reynaldo Umali, chair of the House Justice Committee, on the shortlists for two Supreme Court vacancies.",
+  "h": "Petition for certiorari and mandamus dismissed (9–5, Velasco, Jr., J., July 25, 2017); moot as to the 2016 votes, but decided to settle the question. Leonen, J., with four others, dissented and would have abandoned Chavez.",
+  "test": "Stare decisis: same question, substantially the same facts → follow the precedent unless there are strong and compelling reasons.",
+  "x": "Use with Chavez on Congress’s JBC seat; use for stare decisis and for a legislator’s standing.",
+  "g": "",
+  "w": "",
+  "s": "The rotation of Congress’s single JBC seat is valid; Chavez stands.",
+  "sy": [
+   "Umali v. Judicial and Bar Council"
+  ]
+ },
+ {
+  "id": "jardeleza",
+  "n": "Jardeleza v. Sereno",
+  "y": "2014",
+  "t": "jbc",
+  "sub": "V.C.5 The Judicial and Bar Council",
+  "a": 1,
+  "r": "The Court’s supervision of the JBC is oversight of its compliance with its own rules, and certiorari lies against the JBC for grave abuse of discretion under the expanded judicial power; mandamus does not, since nominating is discretionary. “Integrity” under the JBC’s unanimity rule concerns moral character, not professional judgment such as legal strategy. Due process applies when an applicant is objected to: notice and a reasonable chance to answer, though no trial-type hearing.",
+  "f": "The Chief Justice invoked the JBC rule requiring a unanimous vote when an applicant’s integrity is challenged, against Solicitor General Jardeleza, for his legal strategy in the South China Sea arbitration; at the meeting she added an alleged affair and insider trading, raised for the first time. He asked for sworn charges and cross-examination; the JBC sent a list of four without him, though he had four votes.",
+  "h": "Petition granted (Mendoza, J., August 19, 2014): Jardeleza is deemed included in the shortlist, and the JBC must revise its due process rules (JBC-009 and JBC-010). Six expressly concurred; Leonen, J. (with Velasco, Jr. and Perlas-Bernabe, JJ.) and Del Castillo, J., dissented. The unanimity rule itself was not struck down.",
+  "test": "Integrity question? Is the charge linked to moral character (affair, fraud) rather than professional judgment? If so, give notice, the substance of the charge and reasonable time to respond (JBC-010).",
+  "x": "Use when the JBC excludes an applicant, a JBC rule is challenged, or due process in a non-judicial body’s selection process is in issue.",
+  "g": "",
+  "w": "Six Justices expressly concurred and four dissented; Peralta, J.’s vote is not stated in the files.",
+  "s": "The JBC must give an objected applicant notice and a chance to answer; legal strategy is not integrity.",
+  "sy": [
+   "Jardeleza v. Judicial and Bar Council"
+  ]
+ },
+ {
+  "id": "villanuevajbc",
+  "n": "Villanueva v. Judicial and Bar Council",
+  "y": "2015",
+  "t": "jbc",
+  "sub": "V.C.5 The Judicial and Bar Council",
+  "a": 0,
+  "r": "The JBC may set its own criteria for nominees beyond the constitutional minimum, subject only to the qualifications the Constitution and law require: it has “sufficient but not unbridled license.” Its rule that first-level judges serve five years before applying to the RTC is a reasonable classification that gauges “proven competence” (Art. VIII, Sec. 7(3)). But a qualification standard affects applicants, so it must be published (Tañada), though not filed with the ONAR.",
+  "f": "An MCTC judge with a little over one year on the bench applied for three RTC posts. The JBC left him off the list of candidates under its long-standing policy that first-level judges must serve at least five years in their current post before promotion to a second-level court.",
+  "h": "Petition dismissed (11–0, Reyes, J., April 7, 2015); the JBC is directed to publish the five-year policy and its other special guidelines. Certiorari and prohibition lie against the JBC; mandamus and declaratory relief do not.",
+  "test": "JBC criteria: (1) within its mandate to recommend, (2) not below the constitutional and statutory minimum, (3) rational basis for any classification, (4) published if it affects applicants.",
+  "x": "Use when the JBC adds a requirement for applicants, or an applicant claims a right to be shortlisted.",
+  "g": "",
+  "w": "",
+  "s": "The JBC may add reasonable criteria (five years as a first-level judge), but must publish them.",
+  "sy": [
+   "Villanueva v. Judicial and Bar Council"
+  ]
+ },
+ {
+  "id": "aguinaldo",
+  "n": "Aguinaldo v. Aquino III",
+  "y": "2016",
+  "t": "jbc",
+  "sub": "V.C.5 The Judicial and Bar Council",
+  "a": 1,
+  "r": "JBC nomination is a qualification for appointment: it only means the President cannot appoint someone the JBC did not nominate. The JBC’s power to recommend cannot restrict the power to appoint, so it cannot cluster nominees for simultaneous vacancies in a collegiate court into separate numbered lists; the President may treat them as one list, with at least three nominees per vacancy. Seniority follows the order of the commissions, which is the President’s call.",
+  "f": "RA 10660 created six new Sandiganbayan seats. The JBC sent six separate shortlists, one per numbered seat. President Aquino appointed six nominees across the lists, two of them (Musngi and Econg) from the list for the 21st seat to the 16th and 18th seats. Judges on the 16th seat’s list and the IBP sued.",
+  "h": "Petition dismissed (Leonardo-de Castro, J., November 29, 2016): clustering is unconstitutional and all six appointments are valid; no one dissented (Leonen, J., with four others, concurred in the result). The JBC’s motions for reconsideration were denied with finality on August 8, 2017.",
+  "test": "Simultaneous (or closely successive, same-occasion) vacancies in a collegiate court → one pool, at least three nominees per vacancy; the President picks from anyone in the pool.",
+  "x": "Use when the JBC’s shortlisting limits the President’s choice, or the order of seniority of appointees is disputed.",
+  "g": "",
+  "w": "",
+  "s": "The JBC cannot cluster nominees for simultaneous vacancies; the President picks from the whole pool.",
+  "sy": [
+   "Aguinaldo, v. Aquino"
+  ]
+ }
+]

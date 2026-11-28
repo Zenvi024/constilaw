@@ -132,6 +132,17 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     for (const a of ['n', 'n', 'n', 'y']) await p.click(`#fig-scwrit .gate.cur .yn [data-a="${a}"]`);
     const cwr = await txt('#fig-scwrit .walkout .vres'); check(tag, 'Caram walk: habeas corpus or custody', /Habeas corpus or a custody case/.test(cwr), cwr);
     await p.click('#fig-scwrit .walkout [data-w="map"]');
+    // finals V.C.3–6 and the Constitutional Commissions: diagrams carry orals lines; the Jardeleza and Mallare walks end where the Court did
+    const jcd = await p.evaluate(() => ['jbcabolish', 'jbcseats', 'jbcvalid', 'jbcappoint', 'jbcautonomy', 'ccglance', 'ccvotes', 'ccremove', 'ccsecond', 'cccomelec', 'cccoa'].map(id => !!document.querySelector('#fig-' + id + ' .vor')));
+    check(tag, 'V.C.3–6 and Art. IX diagrams carry orals lines', jcd.every(Boolean), jcd);
+    await go('fig-jbcvalid'); await p.click('#fig-jbcvalid .walkbar .vchip:has-text("Jardeleza")');
+    for (const a of ['y', 'y', 'y', 'n']) await p.click(`#fig-jbcvalid .gate.cur .yn [data-a="${a}"]`);
+    const jdz = await txt('#fig-jbcvalid .walkout .vres'); check(tag, 'Jardeleza walk: invocation void', /Invocation void/.test(jdz), jdz);
+    await p.click('#fig-jbcvalid .walkout [data-w="map"]');
+    await go('fig-ccremove'); await p.click('#fig-ccremove .walkbar .vchip:has-text("Mallare")');
+    for (const a of ['n', 'n', 'n', 'n']) await p.click(`#fig-ccremove .gate.cur .yn [data-a="${a}"]`);
+    const mlr = await txt('#fig-ccremove .walkout .vres'); check(tag, 'Mallare walk: void removal', /Void removal/.test(mlr), mlr);
+    await p.click('#fig-ccremove .walkout [data-w="map"]');
     // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
     const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
     check(tag, 'no style leaks outside the diagrams', leak === 0, leak);

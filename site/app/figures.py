@@ -14,10 +14,10 @@ import re
 FIGS = {}    # file prefix -> [(mode, anchor, html)]
 WALL = []    # (prefix, figure id, title, hook html) for the hook wall
 SEC = {'00': 'method', '01': 'interp', '02': 'jr', '03': 'terr', '04': 'cit', '05': 'suff', '06': 'gov', '07': 'comp',
-       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '18': 'cinc', '19': 'court', '20': 'scadmin', '90': 'news'}
+       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '18': 'cinc', '19': 'court', '20': 'scadmin', '21': 'jbc', '22': 'concom', '90': 'news'}
 SHORT = {'00': 'Exam method', '01': 'Interpretation', '02': 'Judicial review', '03': 'Territory', '04': 'Citizenship', '05': 'Suffrage',
          '06': 'Government', '07': 'Composition', '08': 'Internal', '09': 'Privileges', '10': 'Tribunals and CA', '11': 'Powers',
-         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '18': 'Commander-in-Chief', '19': 'The Supreme Court', '20': 'SC administration', '90': 'News'}
+         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '18': 'Commander-in-Chief', '19': 'The Supreme Court', '20': 'SC administration', '21': 'Lower courts, JBC', '22': 'Commissions', '90': 'News'}
 
 
 # ---------- small builders ----------
@@ -1817,6 +1817,175 @@ fig('20', 'after', '<h3 id="scadmin-rules">Rules on pleading, practice and proce
     hook='<em>Students: the State. Lawyers and courts: the Court</em>.',
     oral='The issue is whether [the LEB] may require [continuing legal education of practicing lawyers]. Under Article VIII, Section 5(5), the Supreme Court has exclusive power to promulgate rules on admission to the practice of law and the integrated bar; in Pimentel v. Legal Education Board the Court held that legal education is an executive function, but that LEB powers reaching lawyers and the bar are void. Here, [the requirement binds practicing lawyers], so it is void.',
     cap='Rules must not diminish, increase or modify substantive rights (Sec. 5(5)).')
+
+# =====================================================================
+# 21 · lower courts, the JBC, automatic release (V.C.3–6)
+# =====================================================================
+fig('21', 'after', '<h3 id="jbc-lower">Lower courts: qualifications, appointment and tenure</h3>\n', 'jbcabolish', 'Can Congress abolish or restructure these courts or judgeships?',
+    gates([G('Is it a court below the Supreme Court?', 'Congress creates, defines and apportions lower courts (Art. VIII, Sec. 2); the Supreme Court and its Sec. 5 jurisdiction are beyond it', 'Not by statute', 'the Supreme Court’s existence and core jurisdiction are constitutional', 'no', 'no'),
+           G('Is the abolition real, not a renaming of the same courts with the same work?', 'a mere change of name is not abolition (Brillo v. Enage); the seven Justices in ' + C('ocampo55', 'Ocampo') + ' saw RA 1186 as one', 'Removal in disguise', 'void: the judges keep their posts', 'no', 'no'),
+           G('Is it in good faith, with no judges singled out and no “evil purpose”?', 'a study, hearings, a docket crisis (' + C('delallana', 'De La Llana v. Alba') + '); all posts of a class abolished alike (' + C('ocampo55', 'Ocampo') + ')', 'Void', 'a purge dressed as reorganization; since 1987, also barred by Sec. 2’s tenure clause', 'no', 'no'),
+           G('Will sitting judges be separated by it?', 'abolition has the same effect on incumbents as removal, a power of the Court (Sec. 11)', 'Valid, but consult the Court on the incumbents', 'its views get the fullest consideration (' + C('delallana', 'De La Llana v. Alba') + '); the 1987 text bars undermining their tenure', 'yes', 'sun')],
+          ('Valid', 'new courts or posts with no one displaced, like the judges-at-large of RA 11459', 'ok'),
+          facts=[fact('De La Llana v. Alba (1982)', 'BP 129 abolishes every lower court except the Sandiganbayan and the CTA, creates the RTCs and MTCs, and leaves about 1,180 incumbents to be reappointed or not.', 'y,y,y,y', 'Valid in good faith; the Court is to be consulted on incumbents.'),
+                 fact('Ocampo (1955): the prevailing four', 'RA 1186 abolishes all judge-at-large and cadastral judge posts, adds district judges, and abolishes no court.', 'y,y?,y,y', 'The four upheld it (seven disagreed at gate 2, short of two-thirds).'),
+                 fact('Brillo v. Enage', 'A law renames a Tacloban court and its incumbent judge is dropped.', 'y,n', 'A change of name is not abolition.'),
+                 fact('A targeted purge', 'Congress abolishes five RTC branches whose judges acquitted an opposition senator and recreates them the next month.', 'y,y,n', 'Bad faith: void.'),
+                 fact('RA 11459 (2019)', 'Congress creates 150 judge-at-large posts, assigned by the Supreme Court; no court is abolished.', 'y,y,y,n', 'Valid: no one is displaced.')]),
+    kind='gates', when='a law abolishes, merges, renames or restructures lower courts or judgeships, and judges claim security of tenure.',
+    hook='<em>Real, in good faith, and ask the Court</em>.',
+    oral='The issue is whether [the law abolishing the courts] violates the judges’ security of tenure. Under Article VIII, Section 2, Congress may define and reorganize the lower courts, but no reorganization may undermine the security of tenure of judges; in De La Llana v. Alba the Court held that abolition in good faith is not removal, since there is no tenure to a non-existent office, while a mere renaming is not abolition. Here, [the courts were renamed and only the judges were changed], so it is a removal in disguise and void.',
+    cap='Ocampo’s prevailing view and De La Llana are pre-1987; the 1987 Constitution added the express ban on reorganizations that undermine tenure.')
+
+fig('21', 'after', '<h3 id="jbc-council">The Judicial and Bar Council: composition and supervision</h3>\n', 'jbcseats', 'The JBC’s seven seats',
+    zones([('Chief Justice', 'ex officio Chairman; if the Chief Justice’s post is vacant or she applies, the senior non-applicant Justice presides (' + C('dulay', 'Dulay v. JBC') + ')', 'acc'),
+           ('Secretary of Justice', 'ex officio member: the Executive’s seat', 'acc'),
+           ('A representative of Congress', 'ex officio: ONE seat, ONE full vote; the Houses may take turns (' + C('chavezjbc', 'Chavez v. JBC') + '; ' + C('umali', 'Umali v. JBC') + ')', 'sun'),
+           ('IBP representative', 'regular member: 4-year term, appointed by the President with CA consent', 'ok'),
+           ('Professor of law', 'regular member: 4 years, President with CA consent', 'ok'),
+           ('Retired Member of the Supreme Court', 'regular member: 4 years, President with CA consent', 'ok'),
+           ('Private sector representative', 'regular member: 4 years, President with CA consent', 'ok')], cols=2)
+    + sp(sub('Under the Court’s supervision (Sec. 8(1))') + '<p>Oversight of compliance with the JBC’s own rules: the Court may order a step redone, but not write the criteria or pick the nominees. Certiorari lies for grave abuse; mandamus does not compel a nomination (' + C('jardeleza', 'Jardeleza v. Sereno') + '; ' + C('villanuevajbc', 'Villanueva v. JBC') + ').</p>'),
+    kind='diagram', when='a news card questions who sits in the JBC, how many votes Congress has, or whether the Court can correct the JBC.',
+    hook='<em>Three ex officio, four regular; Congress gets one</em>.',
+    oral='The issue is whether [both a Senator and a Representative] may sit and vote in the JBC. Under Article VIII, Section 8(1), the JBC has the Chief Justice, the Secretary of Justice and “a representative of the Congress” as ex officio members, plus four regular members; in Chavez v. JBC the Court held that the singular means one seat with one full vote, and in Umali v. JBC that any member of either House may represent the whole Congress, so the Houses may rotate. Here, [both sat and voted], so the composition is unconstitutional, though the JBC’s past acts stand under the operative fact doctrine.',
+    cap='The Clerk of the Supreme Court is the JBC’s ex officio Secretary; the Court budgets for the JBC and fixes the regular members’ emoluments (Sec. 8(3)–(4)).')
+
+fig('21', 'after', '<h3 id="jbc-nominate">Nominating: criteria, due process and the list</h3>\n', 'jbcvalid', 'Is this JBC rule or action valid?',
+    gates([G('Does it keep the JBC as the Constitution composes it?', 'seven members; one congressional seat with one vote (' + C('chavezjbc', 'Chavez v. JBC') + ')', 'Void composition', 'past acts survive by operative fact', 'no', 'no'),
+           G('Is any added criterion reasonable and tied to competence, integrity, probity or independence?', 'five years as a judge before promotion passes rational basis (' + C('villanuevajbc', 'Villanueva v. JBC') + ')', 'Void criterion', 'arbitrary, or below the constitutional minimum', 'no', 'no'),
+           G('If it is a qualification standard, was it published?', 'it affects applicants, so it is not an internal rule (Tañada)', 'Valid, but publish it', 'no relief for the applicant: no right to be listed', 'no', 'sun'),
+           G('If an applicant was objected to, did the charge go to moral character, and was she given notice and time to answer?', 'legal strategy is not integrity; notice and reasonable time, no trial-type hearing (' + C('jardeleza', 'Jardeleza v. Sereno') + ')', 'Invocation void', 'count the applicant’s votes as if it never happened', 'no', 'no'),
+           G('Does it leave the President free to choose among all nominees for simultaneous vacancies?', 'no clustering into numbered lists (' + C('aguinaldo', 'Aguinaldo v. Aquino III') + ')', 'Clustering void', 'the President may treat the lists as one', 'no', 'no')],
+          ('Valid: the Court will not interfere', 'supervision, not control; the JBC’s discretion is respected absent grave abuse', 'ok'),
+          facts=[fact('Chavez v. JBC (2013)', 'A Senator and a Representative both sit in the JBC, each with a full vote.', 'n', 'One seat, one vote.'),
+                 fact('Villanueva v. JBC (2015)', 'The JBC skips a first-level judge with one year on the bench under an unpublished five-year policy.', 'y,y,n', 'The policy is valid, but must be published.'),
+                 fact('Jardeleza v. Sereno (2014)', 'The Chief Justice invokes the unanimity rule over the Solicitor General’s arbitration strategy and raises new charges on the day itself.', 'y,y,y,n', 'No due process, and strategy is not integrity.'),
+                 fact('Aguinaldo v. Aquino III (2016)', 'The JBC sends six numbered lists for six new Sandiganbayan seats and insists each seat be filled from its own list.', 'y,y,y,y,n', 'Clustering is unconstitutional.'),
+                 fact('Umali v. JBC (2017)', 'The Houses take Congress’s single seat by turns, six months each.', 'y,y,y,y,y', 'Valid under Chavez.')]),
+    kind='gates', when='the JBC adopts a rule, excludes an applicant, splits its lists, or seats its members, and someone goes to the Court.',
+    hook='<em>Seven seats, sane criteria, published, fair hearing, one pool</em>.',
+    oral='The issue is whether [the JBC] gravely abused its discretion in [excluding the applicant]. Under Article VIII, Section 8, the JBC recommends appointees under the Court’s supervision, which includes seeing that it follows its own rules; in Jardeleza v. Sereno the Court held that an applicant whose integrity is challenged must be told of the charge and given reasonable time to answer, and that integrity concerns moral character, not professional judgment. Here, [the objection concerned her litigation strategy and was raised without notice], so the invocation is void and her votes must be counted.',
+    cap='Certiorari, not mandamus: the Court corrects grave abuse but does not nominate.')
+
+fig('21', 'after', '<h3 id="jbc-nominate">Nominating: criteria, due process and the list</h3>\n', 'jbcappoint', 'Can the President appoint this person to the court?',
+    gates([G('Is the appointee on a JBC list for the vacancy (for simultaneous vacancies in a collegiate court, on any of the lists)?', 'nomination is a qualification for appointment (' + C('aguinaldo', 'Aguinaldo v. Aquino III') + ')', 'Void', 'the President cannot appoint a non-nominee (Sec. 9)', 'no', 'no'),
+           G('Did the JBC give at least three nominees per vacancy?', 'at most seven; further rounds until three (JBC Rule 8, Sec. 4)', 'The list is incomplete', 'the JBC must complete it', 'no', 'sun'),
+           G('Does the appointee meet the constitutional qualifications, proven integrity included?', 'natural-born for the Court and collegiate courts; age and 15 years for the Court (Sec. 7); integrity (' + C('sereno', 'Republic v. Sereno') + ')', 'Open to quo warranto', 'the JBC’s nomination does not cure the defect', 'no', 'no')],
+          ('Valid appointment', 'no CA confirmation; the election ban does not apply to the Judiciary (' + C('decastrojbc', 'De Castro v. JBC') + '); the Supreme Court’s 90 days run from the vacancy, lower courts’ from the list', 'ok'),
+          facts=[fact('Aguinaldo v. Aquino III (2016)', 'The President appoints a nominee from the list for the 21st Sandiganbayan seat to the 16th seat.', 'y,y,y', 'Valid: one pool for simultaneous vacancies.'),
+                 fact('Dulay v. JBC (2012)', 'After Chief Justice Corona’s removal, the President appoints a Chief Justice from the JBC’s list.', 'y,y,y', 'The Chief Justice is a “Member of the Supreme Court” the President appoints.'),
+                 fact('Republic v. Sereno (2018)', 'A Chief Justice was nominated and appointed though she had not filed her SALNs.', 'y,y,n', 'Ousted by quo warranto: no proven integrity.'),
+                 fact('A friend off the list', 'The President appoints a law school classmate to the Court of Appeals; the JBC never listed him.', 'n', 'Void.'),
+                 fact('Two names', 'The JBC sends only two names for an RTC branch.', 'y,n', 'The JBC must complete the list.')]),
+    kind='gates', when='a news card reports an appointment to the Supreme Court or a lower court and asks whether it is valid.',
+    hook='<em>On the list, three per seat, qualified</em>.',
+    oral='The issue is whether [the appointment] is valid. Under Article VIII, Section 9, the President appoints Members of the Supreme Court and judges of lower courts from a JBC list of at least three nominees for every vacancy, with no confirmation; in Aguinaldo v. Aquino III the Court held that nomination is only a qualification, so the President may appoint any nominee for simultaneous vacancies, and in De Castro v. JBC that the election ban does not reach the Judiciary. Here, [the appointee was on one of the lists], so the appointment is valid.',
+    cap='The Chief Justice is appointed the same way as the Associate Justices (Dulay; Adaza).')
+
+fig('21', 'after', '<h3 id="jbc-release">Automatic release of the Judiciary’s appropriations</h3>\n', 'jbcautonomy', 'Fiscal autonomy: the Judiciary, the commissions, the Ombudsman',
+    cmp(['The Judiciary', 'Constitutional Commissions', 'The Ombudsman'], [
+        ('Text', 'Art. VIII, Sec. 3', 'Art. IX-A, Sec. 5', 'Art. XI, Sec. 14'),
+        ('Fiscal autonomy', 'yes', 'yes', 'yes'),
+        ('Automatic and regular release', 'yes, after approval', 'yes', 'yes'),
+        ('Floor: not below last year', 'yes', 'no', 'no'),
+        ('Augment from savings', 'the Chief Justice, by law (Art. VI, Sec. 25(5); RA 12233)', 'the heads, by law (Art. VI, Sec. 25(5); ' + C('gohbayron', 'Goh v. Bayron') + ')', 'not among those Art. VI, Sec. 25(5) lists'),
+        ('Audit', 'COA post-audit only', 'COA post-audit', 'COA post-audit'),
+        ('Leading case', C('bengzondrilon', 'Bengzon v. Drilon') + ': a veto cannot dictate how the Judiciary uses its funds', C('gohbayron', 'Goh v. Bayron') + ': an existing item plus savings, so the recall goes on', '—'),
+    ]),
+    kind='comparison', when='the Executive withholds or conditions the release of a constitutional body’s funds, or Congress cuts the Judiciary’s budget.',
+    hook='<em>All three released automatically; only the Judiciary has a floor</em>.',
+    oral='The issue is whether [the DBM may withhold the Judiciary’s approved appropriation]. Under Article VIII, Section 3, the Judiciary enjoys fiscal autonomy, its appropriation may not be reduced below the previous year’s, and once approved it must be automatically and regularly released; in Bengzon v. Drilon the Court held that a veto that interferes with how the Judiciary uses its funds impairs that autonomy, which means full flexibility to allocate and use its resources. Here, [the DBM conditioned the release on its approval of a work plan], so the condition is void.',
+    cap='RA 12233 (2025): one-twelfth released monthly “without need for any request” (see the ' + X('court-fiscal', 'Supreme Court map') + ').')
+
+# =====================================================================
+# 22 · the Constitutional Commissions (Art. IX)
+# =====================================================================
+fig('22', 'after', '<h3 id="concom-common">Common provisions: independence, terms, disqualifications, fiscal autonomy</h3>\n', 'ccglance', 'The three commissions at a glance',
+    cmp(['CSC', 'COMELEC', 'COA'], [
+        ('Members', '3: the Chairman and 2 others', '7: the Chairman and 6 others', '3: the Chairman and 2 others'),
+        ('Qualifications', 'natural-born; at least 35; proven capacity for public admin&shy;istration; not a candidate in the election just before', 'natural-born; at least 35; college degree; not a candidate in the election just before; a majority, the Chairman included, lawyers with 10 years’ practice', 'natural-born; at least 35; CPAs with 10 years’ auditing or lawyers with 10 years’ practice; not a candidate in the election just before; never all of one profession'),
+        ('Core power', 'central personnel agency: merit, tenure, rules (Art. IX-B, Sec. 3)', 'enforce and administer election, plebiscite, initiative, referendum and recall laws (Art. IX-C, Sec. 2(1))', 'examine, audit and settle government accounts (Art. IX-D, Sec. 2(1))'),
+        ('Exclusive', 'its rule-making cannot be withdrawn, but must follow the law (' + C('tidcorp', 'TIDCORP') + ')', 'original jurisdiction over regional, provincial and city election contests', 'scope, methods, rules, disallowance (Sec. 2(2); ' + C('dbpcoa', 'DBP v. COA') + ')'),
+        ('Decides by', 'a majority of all: 2 votes', 'a majority of all: 4 votes (' + C('legaspi', 'Legaspi') + ')', 'a majority of all: 2 votes'),
+    ]),
+    kind='comparison', when='you must place a dispute in the right commission, or recall who sits and how many votes it takes.',
+    hook='<em>Three, seven, three; seven-year terms; a majority of all</em>.',
+    oral='The issue is whether [the COMELEC en banc] validly acted. Under Article IX-A, Section 7, each commission decides by a majority vote of all its Members, and under Article IX-C, Section 1, the COMELEC has a Chairman and six Commissioners; so four votes are needed. In Legaspi v. COMELEC the Court held that without four votes on a motion for reconsideration the division’s ruling stands. Here, [only three voted to reverse], so the division’s ruling stands.',
+    cap='All members: appointed by the President with CA consent, seven years without reappointment, staggered from February 2, 1987; no temporary or acting appointments (Arts. IX-B, IX-C, IX-D, Sec. 1(2)).')
+
+fig('22', 'after', '<h3 id="concom-decide">How the commissions decide, and review by the Supreme Court</h3>\n', 'ccvotes', 'What happens to this COMELEC ruling?',
+    gates([G('Was the election case heard and decided first by a division?', 'all election cases, pre-proclamation controversies included, go to a division first (Art. IX-C, Sec. 3)', 'Void', 'the en banc cannot decide it at the first instance', 'no', 'no'),
+           G('Did the losing party move for reconsideration before the en banc?', 'the en banc decides motions for reconsideration of division decisions', 'The division’s ruling becomes final', 'a Rule 64 petition straight from a division ruling is premature', 'no', 'sun'),
+           G('Did four Commissioners (a majority of all seven) vote to grant the motion, at first or after rehearing?', 'the movant carries the burden; abstentions and inhibitions do not count for him (' + C('legaspi', 'Legaspi v. COMELEC') + ')', 'Division reversed', 'the en banc’s ruling may go to the Court on certiorari within 30 days', 'yes', 'ok')],
+          ('Motion denied; the division’s ruling stands', 'an “incidental matter” under Rule 18, Sec. 6, not an original action to dismiss (' + C('legaspi', 'Legaspi v. COMELEC') + ')', 'sun'),
+          facts=[fact('Legaspi v. COMELEC (2016)', 'A division disqualifies a mayor; on reconsideration the en banc votes 3 to deny, 2 to grant, one not taking part and one seat vacant; on rehearing, 3–2–2.', 'y,y,n', 'No four votes: denied; the disqualification stands.'),
+                 fact('Straight to the en banc', 'A disqualification petition is filed with, and decided by, the COMELEC en banc at the outset.', 'n', 'Void: divisions first.'),
+                 fact('Four to reverse', 'Four of seven Commissioners vote to reverse the division.', 'y,y,y', 'Reversed.')]),
+    kind='gates', when='a COMELEC ruling on a disqualification or election contest is challenged, especially when the en banc splits or members inhibit.',
+    hook='<em>Division first, en banc on reconsideration, four to reverse</em>.',
+    oral='The issue is whether [the division’s disqualification ruling] stands. Under Article IX-C, Section 3, election cases are decided in division and motions for reconsideration by the en banc, which under Article IX-A, Section 7 acts by a majority of all its Members; in Legaspi v. COMELEC the Court held that if the movant cannot get four votes even after rehearing, the motion is denied and the division’s ruling stands. Here, [only two voted to grant], so the disqualification stands.',
+    cap='Legaspi abandoned Mendoza v. COMELEC (2010), under which the whole case was dismissed.')
+
+fig('22', 'after', '<h3 id="concom-csc">The Civil Service Commission: coverage, merit, tenure, rule-making</h3>\n', 'ccremove', 'Can this civil servant be removed or moved?',
+    gates([G('Is the position primarily confidential, policy-determining or highly technical?', 'close intimacy; makes rather than executes policy; skill in a superior degree (' + C('mallare', 'De los Santos v. Mallare') + ')', 'Terminable at pleasure', 'the term ends on loss of confidence; it is not a removal', 'yes', 'sun'),
+           G('Was the office abolished in a good-faith reorganization?', 'for economy or efficiency, with none of RA 6656’s signs of bad faith (' + C('buklod', 'Buklod ng Kawaning EIIB v. Zamora') + ')', 'Valid separation', 'abolition is neither removal nor separation', 'yes', 'ok'),
+           G('Is it a career executive moved to a post that matches her CES rank, with no loss of rank or salary?', 'tenure in the CES is to rank, not position (' + C('cuevasbacal', 'Cuevas v. Bacal') + ')', 'Valid transfer', 'one holding a post above her rank holds it temporarily', 'yes', 'ok'),
+           G('Is there a legal cause, proved with due process?', '“for cause provided by law”: substantial, related to the office, never mere pleasure (Art. IX-B, Sec. 2(3))', 'Void removal', 'reinstatement and back pay', 'no', 'no')],
+          ('Valid removal for cause', 'the CSC’s rules and the Administrative Code govern the procedure', 'ok'),
+          facts=[fact('De los Santos v. Mallare (1950)', 'The President names a new Baguio City Engineer and tells the incumbent to report elsewhere, citing a law allowing removal at pleasure.', 'n,n,n,n', 'Not a confidential, policy or highly technical post; no cause: he stays.'),
+                 fact('Buklod ng Kawaning EIIB (2001)', 'The EIIB is deactivated and its employees separated; a small task force with detailed staff takes over.', 'n,y', 'A good-faith reorganization.'),
+                 fact('Cuevas v. Bacal (2000)', 'A CESO III serving as Chief Public Attorney (a Rank I post) is made a regional director (a Rank III post).', 'n,n,y', 'Valid transfer within her rank.'),
+                 fact('The mayor’s private secretary', 'A new mayor replaces the outgoing mayor’s private secretary.', 'y', 'Primarily confidential.'),
+                 fact('Dishonesty, proved', 'A clerk is dismissed for falsifying time records after notice and hearing.', 'n,n,n,y', 'Valid removal for cause.')]),
+    kind='gates', when='a government employee is replaced, transferred or separated in a reorganization and invokes security of tenure.',
+    hook='<em>Confidential? Abolished? Same rank? Cause?</em>',
+    oral='The issue is whether [the official’s replacement] violates security of tenure. Under Article IX-B, Section 2(3), no civil servant may be removed except for cause provided by law; in De los Santos v. Mallare the Court held that this covers the whole civil service, except positions that are primarily confidential, policy-determining or highly technical, and that the appointing power’s pleasure is not a cause. Here, [the post is administrative and no cause was shown], so the removal is void.',
+    cap='A good-faith reorganization (Buklod) and a CES transfer within rank (Bacal) are not removals at all.')
+
+fig('22', 'after', '<h3 id="concom-csc">The Civil Service Commission: coverage, merit, tenure, rule-making</h3>\n', 'ccsecond', 'May this official hold that second post?',
+    gates([G('Is the official elective, and the post not one the Constitution itself assigns?', 'the only exceptions are constitutional: the President and the economic planning agency, the VP in the Cabinet, a member of Congress in the JBC (' + C('floresdrilon', 'Flores v. Drilon') + ')', 'Ineligible during the tenure', 'resign first; a later resignation does not cure it', 'yes', 'no'),
+           G('Is the official a Cabinet member, deputy or assistant?', 'Art. VII, Sec. 13; temporary designations count (Funa v. Agra)', 'The stricter Cabinet rule', 'only ex officio posts required by the primary function, unpaid (Civil Liberties Union)', 'yes', 'sun'),
+           G('Is the official a constitutional commissioner?', 'Art. IX-A, Sec. 2 with Art. IX-B, Sec. 7(2) (' + C('funacsc', 'Funa v. Civil Service Commission') + ')', 'Only if it flows from primary functions, unpaid, and leaves independence intact', 'board seats under bodies the President controls fail', 'yes', 'sun'),
+           G('Is the second post allowed by law or by the primary functions of the first?', 'Art. IX-B, Sec. 7(2): the general rule for appointive officials', 'Barred', 'no second office without a law or a primary-function link', 'no', 'no')],
+          ('Allowed', 'subject still to the double compensation ban (Art. IX-B, Sec. 8)', 'ok'),
+          facts=[fact('Flores v. Drilon (1993)', 'A law says the Olongapo mayor “shall be appointed” SBMA chairman for its first year.', 'y', 'Void; Congress also cannot name the appointee.'),
+                 fact('Funa v. Agra (2013)', 'The Acting Solicitor General is designated Acting Secretary of Justice.', 'n,y', 'Barred by Sec. 13.'),
+                 fact('Funa v. CSC (2014)', 'The CSC Chairman is made a board member of the GSIS, PhilHealth, ECC and Pag-IBIG, with per diems.', 'n,n,y', 'Void: beyond primary functions and impairs independence.'),
+                 fact('A law-required seat', 'A bureau director sits on a GOCC’s board because its charter names the director as an ex officio member.', 'n,n,n,y', 'Allowed by law.'),
+                 fact('No basis', 'A city legal officer is appointed to a provincial board with no law or functional link.', 'n,n,n,n', 'Barred.')]),
+    kind='gates', when='an official is appointed, designated or seated ex officio in a second government post.',
+    hook='<em>Elective: never. Cabinet: Sec. 13. Commissioner: primary functions. Others: law or function</em>.',
+    oral='The issue is whether [the mayor] may be appointed [to the authority’s board]. Under Article IX-B, Section 7, no elective official shall be eligible for appointment to any public office during his tenure, and the exception “allowed by law or by the primary functions” applies only to appointive officials; in Flores v. Drilon the Court voided a law that required the Olongapo mayor’s appointment as SBMA chairman. Here, [the mayor was appointed while in office], so the appointment is void, though his acts stand as a de facto officer.',
+    cap='See also the ' + X('pres-prohib', 'President map') + ' (Sec. 13) and the ' + X('appt-concurrent', 'appointment map') + ' (Funa v. Agra; Funa v. CSC).')
+
+fig('22', 'after', '<h3 id="concom-comelec">The Commission on Elections: elections, plebiscites and its own processes</h3>\n', 'cccomelec', 'Did the COMELEC gravely abuse its discretion?',
+    gates([G('Is the act within its power to enforce and administer election, plebiscite, initiative, referendum and recall laws, or another granted power?', 'Art. IX-C, Sec. 2(1); dates, ballot questions, canvassing', 'Void', 'outside its powers', 'no', 'no'),
+           G('Does it defeat what the law requires, though the exercise could be held?', 'refusing a recall the law requires, for want of a specific item, when an item and savings exist (' + C('gohbayron', 'Goh v. Bayron') + ')', 'Grave abuse', 'the Court orders it to act', 'yes', 'no'),
+           G('Is the challenge really about facts (fraud, turnout, flying voters)?', 'not for Rule 65; specific, convincing proof needed (' + C('sula', 'Sula v. COMELEC') + ')', 'Raise it before the COMELEC', 'with specific evidence, as in a protest', 'yes', 'sun')],
+          ('No grave abuse: upheld', 'the COMELEC is not “paralyzed by the literal interpretations of a guiding law”; it may reset a date (Cagas; ' + C('sula', 'Sula') + ')', 'ok'),
+          facts=[fact('Sula v. COMELEC (2023): the date and question', 'Cotabato City’s plebiscite is held 165 days after Official Gazette publication; the ballot asks only whether the city should join the BARMM.', 'y,n,n', 'Within 150 days of effectivity, and the COMELEC may reset dates and frame the question.'),
+                 fact('Sula v. COMELEC (2023): the fraud claim', 'Voters point to low turnout and a gap in the certificate of canvass.', 'y,n,y', 'Factual; the gap was an encoding error.'),
+                 fact('Goh v. Bayron (2014)', 'The COMELEC finds a recall petition sufficient but refuses to hold the recall until Congress appropriates funds.', 'y,y', 'Grave abuse: the item and savings exist.')]),
+    kind='gates', when='the COMELEC moves, suspends or words an election, plebiscite or recall, and someone runs to the Court.',
+    hook='<em>Within power, faithful to the law, and facts go to the COMELEC</em>.',
+    oral='The issue is whether [the COMELEC] gravely abused its discretion in [holding the plebiscite after the statutory period]. Under Article IX-C, Section 2(1), the COMELEC enforces and administers all laws on elections and plebiscites; in Sula v. COMELEC the Court held that it has residual power to set plebiscite dates even beyond the period a law prescribes, and will be overturned only for grave abuse. Here, [the delay was needed to prepare an honest vote], so there was no grave abuse.',
+    cap='Election contests and the right to vote are a different question: see ' + X('concom-decide', 'how the commissions decide') + '.')
+
+fig('22', 'after', '<h3 id="concom-coa">The Commission on Audit: audit jurisdiction and its limits</h3>\n', 'cccoa', 'Can the COA audit this, and how far?',
+    gates([G('Are government funds or property involved: owned, held in trust, or coming from or through the government?', 'Art. IX-D, Sec. 2(1); no law may exempt any government entity or public fund (Sec. 3)', 'Outside the COA', 'purely private money', 'no', 'no'),
+           G('Is the body a government agency or a GOCC (corporation, public function, government ownership or control)?', 'MECO has the first two but not the third (' + C('funameco', 'Funa v. MECO') + ')', 'Audit only the government money', 'the fees it collects for or by authority of the government', 'no', 'sun'),
+           G('Does another body (a private auditor, the BSP) want to audit too?', 'Sec. 2(1) is not exclusive (' + C('dbpcoa', 'DBP v. COA') + ')', 'Both may audit', 'but the COA’s findings prevail, and only the COA disallows', 'yes', 'ok'),
+           G('Is the audited body running to court before using the COA’s own remedies?', 'auditor, director, Commission Proper; then certiorari to the Supreme Court (' + C('satcoa', 'Special Audit Team v. CA') + ')', 'Dismiss: exhaust inside the COA', 'the COA may also organize special audit teams', 'yes', 'sun')],
+          ('The COA audits and may disallow', 'and its disallowances bind unless the Supreme Court reverses them on certiorari', 'ok'),
+          facts=[fact('Funa v. MECO (2014)', 'A private non-stock corporation runs the Philippines’ office in Taiwan and collects visa, passport and DOLE verification fees.', 'y,n', 'Private, but those fees are auditable.'),
+                 fact('DBP v. COA (2002)', 'A government bank hires a private external auditor under a World Bank loan condition; the COA disallows the fees.', 'y,y,y', 'Concurrent audit is allowed; the COA still prevails.'),
+                 fact('Special Audit Team v. CA (2013)', 'The GSIS gets a CA injunction against a COA special audit team while its own complaint is pending in the COA.', 'y,y,n,y', 'Premature: exhaust COA remedies.'),
+                 fact('A purely private club', 'A golf club with no government funds or shares is asked to submit to a COA audit.', 'n', 'Outside the COA.')]),
+    kind='gates', when='the COA’s power to audit, disallow, or organize an audit is questioned, or a body claims to be private.',
+    hook='<em>Follow the public money; others may look, only the COA disallows</em>.',
+    oral='The issue is whether [the COA] may audit [the foundation]. Under Article IX-D, Section 2(1), the COA audits funds and property owned, held in trust by or pertaining to the government, and non-governmental entities as to funds coming from or through the government; in Funa v. MECO the Court held that a private entity’s government-sourced fees are subject to COA audit even though the entity itself is not a GOCC. Here, [the foundation receives a government subsidy], so the COA may audit those funds.',
+    cap='The COA post-audits bodies with fiscal autonomy but cannot control how they use their resources (Re: COA Opinion, on the ' + X('court-fiscal', 'Supreme Court map') + ').')
 
 # =====================================================================
 # 00 · the hook wall (built last, from every hook above)

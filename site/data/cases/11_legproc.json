@@ -55,6 +55,10 @@
   "n": "Bengzon v. Drilon",
   "y": "1992",
   "t": "legproc",
+  "also": [
+   "court",
+   "jbc"
+  ],
   "sub": "V.A.8(b) Procedure for the passage of bills: the item veto (also V.C.6 automatic release)",
   "a": 1,
   "r": "The President may veto only a whole item, an indivisible sum for a stated purpose, in an appropriation, revenue or tariff bill, never part of an item or a provision that is not one. A veto that dictates how the Judiciary uses its funds violates fiscal autonomy, and a veto cannot repeal a law.",
@@ -65,9 +69,6 @@
   "s": "Veto of special provisions on retired justices' pensions void: not items; violates fiscal autonomy.",
   "sy": [
    "Bengzon v. Drilon"
-  ],
-  "also": [
-   "court"
   ]
  },
  {
@@ -287,6 +288,9 @@
   "n": "Agcaoili, Jr. v. Fariñas",
   "y": "2018",
   "t": "legproc",
+  "also": [
+   "scadmin"
+  ],
   "sub": "V.A.8(e) Legislative investigation (fourth issue); also V.C.2(p)(5) amparo and habeas corpus",
   "a": 1,
   "r": "The Court may enjoin a legislative inquiry, but only on a showing of grave abuse or unconstitutionality. Habeas corpus already with the CA stays there. Amparo covers only extralegal killings and enforced disappearances. Congress cannot compel or cite in contempt CA Justices over their adjudication: judicial privilege, and discipline belongs to the SC.",
@@ -297,9 +301,6 @@
   "s": "Ilocos 6: prohibition against an inquiry needs grave abuse; amparo unavailable; Congress cannot cite CA Justices.",
   "sy": [
    "Agcaoili, Jr. v. Farinas"
-  ],
-  "also": [
-   "scadmin"
   ]
  }
 ]

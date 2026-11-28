@@ -33,7 +33,7 @@ AMBIG = {
     'Sereno': {'15': 'sereno'},  # elsewhere it is the Chief Justice (e.g., 'Sereno, C.J., dissented')
     'Estrada': {'*': None},   # usually the person; link Estrada v. Arroyo and Pormento v. Estrada by full name
     'De Leon': {'*': None},   # De Leon v. Duterte, but also De Leon v. Carpio and Justice De Leon
-    'De Castro': {'17': 'decastrojbc', '*': None},   # De Castro v. JBC; also Justice Leonardo-de Castro
+    'De Castro': {'17': 'decastrojbc', '21': 'decastrojbc', '*': None},   # De Castro v. JBC; also Justice Leonardo-de Castro
     'Soriano': {'17': 'soriano', '*': None},
     'Lagman': {'*': None},     # Lagman v. Medialdea (2017, 2019) and Lagman v. Pimentel III: by full name and year; also Rep. Lagman
     'Ampatuan': {'*': None},   # the clan and the governor; Ampatuan v. Puno by full name
@@ -44,6 +44,13 @@ AMBIG = {
     'Gloria': {'*': None},     # Gloria v. CA; usually Gloria Macapagal-Arroyo
     'De Lima': {'*': None},    # De Lima v. Duterte by full name; usually the senator
     'Republic v. Sandiganbayan': {'16': 'swissdeposits', '*': 'repsandiganbayan'},  # two 2003 cases: Swiss deposits and Ramas-Dimaano
+    'Ocampo': {'21': 'ocampo55', '*': None},   # Ocampo v. Secretary of Justice (1955); elsewhere Ocampo v. Enriquez (the Marcos burial)
+    'Jardeleza': {'21': 'jardeleza', '*': None},   # also Justice Jardeleza
+    'Villanueva': {'21': 'villanuevajbc', '*': None},
+    'Umali': {'21': 'umali', '*': None},
+    'Aguinaldo': {'21': 'aguinaldo', '*': None},
+    'Funa': {'*': None},   # four Funa cases: by full name
+    'Adaza': {'21': 'adazajbc', '*': 'adaza'},   # Citizens Adaza v. President Aquino (JBC map); elsewhere Adaza v. Pacana
 }
 # names that are also people: link only as a citation, i.e. right after '(' or '; ' and before ')' ';' or ','
 CITE_ONLY = {'Marcos': {'05': 'marcos95', '07': 'marcos95'}, 'Aquino': {'05': 'aquino95', '07': 'aquino95'}, 'Garcia': {'12': 'garciaexecsec'}}
@@ -71,7 +78,12 @@ EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco'
          'General v. Urro': 'urro', 'Urro': 'urro', 'De Castro v. JBC': 'decastrojbc', 'De Rama': 'derama', 'Gonzales III': 'gonzalesiii', 'Funa v. COA': 'funavillar',
          'Funa v. CSC': 'funacsc', 'Funa v. Civil Service Commission': 'funacsc', 'Gaminde': 'gaminde', 'Ifurung': 'ifurung', 'Larin': 'larin',
          'David v. Arroyo': 'davidgma', 'In re De Villa': 'devilla', 'Beltran v. Macasiar': 'soliven', 'Soliven v. Makasiar': 'soliven', 'Gloria v. CA': 'gloriaca',
-         'Gloria v. Court of Appeals': 'gloriaca', 'Marcos v. Robredo': 'robredo', 'Marcos, Jr. v. Robredo': 'robredo', 'Go Tek': 'gotek', 'Olaguer': 'olaguer'}
+         'Gloria v. Court of Appeals': 'gloriaca', 'Marcos v. Robredo': 'robredo', 'Marcos, Jr. v. Robredo': 'robredo', 'Go Tek': 'gotek', 'Olaguer': 'olaguer',
+         'Chavez v. JBC': 'chavezjbc', 'Chavez v. Judicial and Bar Council': 'chavezjbc', 'De la Llana': 'delallana', 'De La Llana': 'delallana', 'Dulay v. JBC': 'dulay',
+         'Adaza v. Aquino': 'adazajbc', 'Umali v. JBC': 'umali', 'Jardeleza v. JBC': 'jardeleza', 'Villanueva v. JBC': 'villanuevajbc', 'Aguinaldo v. Aquino': 'aguinaldo',
+         'TIDCORP': 'tidcorp', 'TIDCORP v. CSC': 'tidcorp', 'Mallare': 'mallare', 'Cuevas v. Bacal': 'cuevasbacal', 'Demaisip v. Bacal': 'cuevasbacal', 'Bacal': 'cuevasbacal',
+         'Buklod ng Kawaning EIIB': 'buklod', 'Buklod': 'buklod', 'DBP v. COA': 'dbpcoa', 'Special Audit Team': 'satcoa', 'Special Audit Team v. CA': 'satcoa',
+         'Funa v. MECO': 'funameco', 'Funa v. Villar': 'funavillar', 'Funa v. Agra': 'funaagra'}
 
 def build_aliases(cases, link_texts):
     al = {}

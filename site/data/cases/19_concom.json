@@ -1,0 +1,214 @@
+[
+ {
+  "id": "legaspi",
+  "n": "Legaspi v. Commission on Elections",
+  "y": "2016",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the COMELEC (Art. IX-A, Sec. 7; Art. IX-C, Sec. 3)",
+  "a": 1,
+  "r": "The COMELEC en banc decides by a majority of all its members (Art. IX-A, Sec. 7): four votes. A movant must convince four commissioners that the division erred; if the en banc cannot muster four votes even after rehearing, the motion for reconsideration is denied and the division’s ruling stands. A pending motion is an “incidental matter” (Rule 18, Sec. 6), not an original action to be dismissed. This modifies Mendoza v. COMELEC (2010).",
+  "f": "A COMELEC division disqualified a mayor and a councilor of Norzagaray, Bulacan, for vote-buying (₱500 envelopes with sample ballots). On reconsideration the en banc voted 3–2 to deny, with one commissioner not taking part and one seat vacant; on rehearing it split 3–2–2. Applying Mendoza, it dismissed the disqualification case, and the Court upheld that on September 1, 2015.",
+  "h": "Motion for reconsideration granted (8–7, Velasco, Jr., J., April 19, 2016): the 2015 Decision and the en banc order are set aside, and the division’s disqualification ruling is reinstated. Perez, J., with six others, dissented.",
+  "test": "En banc short of four votes after rehearing: (1) original action → dismissed; (2) appealed case → affirmed; (3) incidental matter, including a motion for reconsideration of a division ruling → denied (the division’s ruling stands).",
+  "x": "Use when a Constitutional Commission fails to reach a majority of all its members, or a winner at the division loses because of abstentions.",
+  "g": "",
+  "w": "The holding that Mendoza’s reading circumvents the four-vote rule is in the body; the fallo only reinstates the division’s ruling.",
+  "s": "Four COMELEC votes are needed to overturn a division; short of that, the division’s ruling stands.",
+  "sy": [
+   "Legaspi v. Commission on Elections"
+  ]
+ },
+ {
+  "id": "sula",
+  "n": "Sula v. Commission on Elections",
+  "y": "2023",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the COMELEC (Art. IX-C, Sec. 2(1))",
+  "a": 0,
+  "r": "As the body that enforces and administers all laws on plebiscites (Art. IX-C, Sec. 2(1)), the COMELEC has residual power to set plebiscite dates, even beyond the statutory period (Cagas v. COMELEC); it is not “paralyzed by the literal interpretations of a guiding law,” and the Court intervenes only for grave abuse. It also frames the plebiscite questions under the Bangsamoro Organic Law. Fraud claims are factual and must be specific and proven.",
+  "f": "Cotabato City voted on January 21, 2019 on the question “Payag ba kayo na isama ang Lungsod Cotabato sa Rehiyong Awtonomo ng Bangsamoro?” and joined the BARMM. City voters, and later the mayor, said the plebiscite was held beyond the 150 days allowed by RA 11054, that the question was misleading, and that the turnout and canvass showed fraud.",
+  "h": "Petition and petition-in-intervention dismissed; TRO denied (12–0, Leonen, J., January 10, 2023). The plebiscite was on time (the law took effect only after its last publication, in a local paper), and the COMELEC could reset dates anyway.",
+  "test": "Plebiscite challenges: count from complete publication; COMELEC may adjust dates; contiguous areas are asked about inclusion only; fraud needs specific, convincing proof (Marcos v. Robredo).",
+  "x": "Use when the COMELEC moves an election or plebiscite date, or words a ballot question, and someone cries grave abuse.",
+  "g": "",
+  "w": "",
+  "s": "The COMELEC may reset a plebiscite date and frame its question; Cotabato City stays in the BARMM.",
+  "sy": [
+   "Sula v. Commission on Elections"
+  ]
+ },
+ {
+  "id": "tidcorp",
+  "n": "Trade and Investment Development Corporation of the Philippines v. Civil Service Commission",
+  "y": "2013",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the CSC (Art. IX-B, Secs. 2(1) and 3)",
+  "a": 0,
+  "r": "The CSC’s rule-making power comes from its role as the “central personnel agency” (Art. IX-B, Sec. 3); as a constitutional grant it is part of its independence, and Congress cannot withdraw it. But it is limited to implementing and interpreting the laws the CSC enforces, and its rules must be in harmony with them. Congress may exempt a GOCC with an original charter from the rules on compensation, position classification and qualification standards; the CSC then enforces the GOCC’s own system.",
+  "f": "TIDCORP’s amended charter (RA 8494) exempts it from existing laws on compensation, position classification and qualification standards, while it “shall endeavor” to conform “as closely as possible” with RA 6758. The CSC disallowed an appointment because the position title was not in the DBM’s index of occupational services, as a CSC circular required.",
+  "h": "Petition granted (14–0, Brion, J., March 5, 2013): the CA and CSC rulings are reversed, and the appointment was valid. “Endeavor” to conform “as closely as possible” allows deviation.",
+  "test": "CSC rule vs. statute: the rule must implement the law, not override it; a charter exemption controls.",
+  "x": "Use when a CSC rule conflicts with a GOCC’s charter, or Congress exempts an agency from civil service rules.",
+  "g": "",
+  "w": "",
+  "s": "The CSC’s rules cannot override a GOCC charter that exempts it from position classification.",
+  "sy": [
+   "Trade and Investment Development Corporation"
+  ]
+ },
+ {
+  "id": "mallare",
+  "n": "De los Santos v. Mallare",
+  "y": "1950",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the civil service (Art. IX-B, Sec. 2)",
+  "a": 1,
+  "r": "Security of tenure (“no officer or employee in the civil service shall be removed or suspended except for cause as provided by law”) covers the unclassified as well as the classified service. Only policy-determining, primarily confidential and highly technical positions are terminable at the appointing power’s pleasure. “For cause” means a legal cause, substantial and related to the office, never mere pleasure. A pre-Constitution law allowing removal at pleasure was repealed by the Constitution.",
+  "f": "Eduardo de los Santos, Baguio City Engineer since 1946, was told to report to the Bureau of Public Works when the President gave Gil Mallare an ad interim appointment to his post in 1950. The respondents cited a Revised Administrative Code provision letting the President remove the city engineer at pleasure.",
+  "h": "De los Santos is entitled to remain City Engineer until he resigns or is removed for cause; Mallare’s appointment is ineffective insofar as it affects his rights (Tuason, J., August 31, 1950; five Justices concurred). The post is not primarily confidential, policy-determining or highly technical.",
+  "test": "Is the position (1) primarily confidential (close intimacy, trust against betrayal), (2) policy-determining (makes, not executes, policy), or (3) highly technical (skill in a superior degree)? If none, removal only for legal cause.",
+  "x": "Use when an official is replaced “at the pleasure” of the appointing power, or a position is claimed to be primarily confidential or policy-determining.",
+  "g": "",
+  "w": "The syllabus cites G.R. No. L-3381; the decision bears G.R. No. L-3881.",
+  "s": "Removal at pleasure is gone: only confidential, policy-determining or highly technical posts are terminable at will.",
+  "sy": [
+   "De los Santos v. Mallare"
+  ]
+ },
+ {
+  "id": "cuevasbacal",
+  "n": "Cuevas v. Bacal",
+  "y": "2000",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the civil service (Art. IX-B, Sec. 2)",
+  "a": 0,
+  "r": "Security of tenure in the career executive service attaches to rank, not to position: it is acquired when the President appoints the officer to a CES rank. A CES officer appointed to a position requiring a higher rank than hers holds it only temporarily and may be moved at will (Achacoso v. Macaraig). CES officers may be reassigned or transferred in the public interest without reduction in rank or salary.",
+  "f": "Josefina Bacal, a CESO III, was appointed Chief Public Attorney, a Rank I post, without being promoted to that rank. President Estrada appointed Carina Demaisip “vice Atty. Bacal” and made Bacal a PAO regional director, a Rank III post. The CA ruled for Bacal in quo warranto.",
+  "h": "CA reversed and the quo warranto petition dismissed (Mendoza, J., December 6, 2000; nine concurred). Gonzaga-Reyes, J. (with Panganiban and Quisumbing, JJ.) dissented: CES eligibility plus a permanent appointment gave her tenure in the position.",
+  "test": "CES officer moved: Does she hold the CES rank the position requires? If not, no tenure in the position. Is the new post within her rank, with no cut in rank or salary, and in the public interest? Then valid.",
+  "x": "Use when a career executive is transferred or replaced, or claims tenure in a post above her rank. The syllabus lists it as “Demaisip v. Bacal.”",
+  "g": "",
+  "w": "",
+  "s": "CES tenure is to rank, not position: a CESO III in a Rank I post may be moved back.",
+  "sy": [
+   "Demaisip v. Bacal"
+  ]
+ },
+ {
+  "id": "buklod",
+  "n": "Buklod ng Kawaning EIIB v. Zamora",
+  "y": "2001",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the civil service (Art. IX-B, Sec. 2)",
+  "a": 1,
+  "r": "A valid abolition of offices is neither removal nor separation of the incumbents, so it does not violate security of tenure (Art. IX-B, Sec. 2(3)); it is valid if done in good faith, for economy or efficiency, and void if political or meant to defeat tenure (Dario v. Mison). Congress generally abolishes the offices it creates, but the President may reorganize executive offices under the power of control or a statute (the GAA; Sec. 31, Book III, EO 292). Deactivation and abolition are both reorganization measures.",
+  "f": "President Estrada deactivated the Economic Intelligence and Investigation Bureau (EO 191), transferring its work to the BOC and NBI, and later deemed its personnel separated (EO 223). Five days after EO 191, he created Task Force Aduana, staffed by detailed military personnel. EIIB employees called the reorganization a hoax.",
+  "h": "Petition denied (14–0, Sandoval-Gutierrez, J., July 10, 2001). The President had statutory reorganization authority, and the reorganization was in good faith: Aduana hired no one new, cost ₱50 million against EIIB’s ₱238.7 million, and had new powers.",
+  "test": "Bad faith signs (RA 6656, Sec. 2): more positions, the same office recreated, less qualified hires, same-function reclassification. None → valid reorganization, no tenure violation.",
+  "x": "Use when a reorganization separates employees and they invoke security of tenure, or the President abolishes or deactivates an executive office.",
+  "g": "",
+  "w": "",
+  "s": "A good-faith reorganization is not removal: the EIIB’s deactivation stands.",
+  "sy": [
+   "Buklod ng Kawaning EIIB"
+  ]
+ },
+ {
+  "id": "floresdrilon",
+  "n": "Flores v. Drilon",
+  "y": "1993",
+  "t": "concom",
+  "also": [
+   "org"
+  ],
+  "sub": "Constitutional Commissions: the civil service (Art. IX-B, Sec. 7)",
+  "a": 1,
+  "r": "The RA 7227 proviso making the Olongapo City mayor the SBMA chairman violated Art. IX-B, Sec. 7: no elective official is eligible for appointment to another public office during his tenure, and resigning after the appointment does not cure it.",
+  "f": "RA 7227 created the Subic Bay Metropolitan Authority and provided that, for its first year, “the Mayor of the City of Olongapo shall be appointed” its chairman and chief executive officer. Mayor Richard Gordon was appointed; taxpayers and Subic employees sued.",
+  "h": "The proviso is unconstitutional and Gordon’s appointment void (12–0, Bellosillo, J., June 22, 1993); he remains Mayor, and as a de facto officer his acts and emoluments as SBMA chairman stand.",
+  "test": "Elective official (Art. IX-B, Sec. 7, first paragraph): no appointment to any other office during the tenure, with no exception except those the Constitution makes (the President and NEDA, the VP in the Cabinet, a member of Congress in the JBC). Appointive official (second paragraph): allowed by law or by the primary functions of the position.",
+  "x": "Use when a law or the President puts a mayor, governor or other elective official on a board or in an appointive office. Contrast Art. VI, Sec. 13 (legislators forfeit their seat) and Funa v. CSC (appointive officials, primary functions).",
+  "g": "",
+  "w": "",
+  "s": "Elective official appointed to another office: void; Congress cannot name the appointee.",
+  "sy": [
+   "Flores v. Drilon"
+  ]
+ },
+ {
+  "id": "dbpcoa",
+  "n": "Development Bank of the Philippines v. Commission on Audit",
+  "y": "2002",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the COA (Art. IX-D, Sec. 2)",
+  "a": 1,
+  "r": "The COA’s power to examine and audit (Art. IX-D, Sec. 2(1)) is not exclusive, so a government bank may also hire a private external auditor. Its power under Sec. 2(2) to define the scope of its audit, make accounting and auditing rules, and disallow irregular, unnecessary, excessive, extravagant or unconscionable expenditures is exclusive. The COA’s audit is preponderant: its findings bind government agencies and officials unless the courts reverse them, and its jurisdiction cannot be taken away (Sec. 3).",
+  "f": "A World Bank loan required the rehabilitation of DBP, and a Central Bank circular required every bank to have an annual independent audit. DBP hired a private auditing firm. The new COA Chairman reversed his predecessor’s “no objection,” disallowed the fees and held DBP’s officers personally liable.",
+  "h": "Petition granted; the COA decisions set aside and the TRO made permanent (15–0, Carpio, J., January 16, 2002). The Constitutional Commission rejected a proposal to make the COA’s audit exclusive. The fees were reasonable, a cost of the government’s borrowing.",
+  "test": "Sec. 2(1) examine and audit: shared (private auditors, the BSP). Sec. 2(2) scope, rules, disallowance: the COA alone. In a conflict, the COA prevails.",
+  "x": "Use when an agency or GOCC hires a private auditor, or someone argues the COA alone may audit government funds.",
+  "g": "",
+  "w": "",
+  "s": "The COA’s audit is not exclusive, but its power to disallow is, and its findings prevail.",
+  "sy": [
+   "Development Bank of the Philippines v. Commission on Audit"
+  ]
+ },
+ {
+  "id": "satcoa",
+  "n": "The Special Audit Team, Commission on Audit v. Court of Appeals",
+  "y": "2013",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the COA (Art. IX-D, Sec. 2)",
+  "a": 0,
+  "r": "The COA’s exclusive authority to define the scope of its audit and its techniques and methods (Art. IX-D, Sec. 2(2)) lets it organize its own personnel and create special audit teams. A party’s complaint should be about the conduct of the audit, not the validity of the auditing body, and it must go up the COA’s own appeal ladder first; courts are cautious with independent constitutional commissions. Prohibition does not lie against the COA’s creation of a team, which is not a judicial, quasi-judicial or ministerial act.",
+  "f": "The COA’s General Counsel created a Special Audit Team to audit GSIS transactions from 2000 to 2004. The GSIS withheld documents, the team’s findings leaked to the press, and while its own petition to nullify the report was pending before the COA, the GSIS obtained a TRO and an injunction from the CA against the team.",
+  "h": "Petition granted (13–0, Sereno, C.J., April 11, 2013): the CA’s resolutions are set aside and the CA must dismiss the GSIS petition. No clear legal right or urgency supported the injunction, and the GSIS skipped the COA’s remedies.",
+  "test": "Challenge to a COA audit: exhaust the ladder (auditor, director, Commission Proper), then go to the Supreme Court on certiorari; an exception must be proved by the party invoking it.",
+  "x": "Use when an audited agency runs to court to stop a COA audit, or questions a special audit team.",
+  "g": "",
+  "w": "",
+  "s": "The COA may create special audit teams; complain inside the COA, not to the courts.",
+  "sy": [
+   "The Special Audit Team"
+  ]
+ },
+ {
+  "id": "funameco",
+  "n": "Funa v. Manila Economic and Cultural Office",
+  "y": "2014",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the COA (Art. IX-D, Sec. 2(1))",
+  "a": 0,
+  "r": "A GOCC needs all three attributes: a stock or non-stock corporation, a public function, and government ownership or control (in a non-stock corporation, a majority of members who are government officials, or a substantial government role in choosing the board). MECO lacks the last, so it is a sui generis non-governmental entity. The COA audits a non-governmental entity only as to funds coming from or through the government (PD 1445, Sec. 29(1)): here, the verification fees it collects for DOLE and its consular fees.",
+  "f": "MECO, a non-stock corporation, handles the Philippines’ unofficial relations with Taiwan under the One China policy, issuing visas and passports and collecting fees under EO 15 (2001). Dennis Funa asked the Court to compel the COA to audit it; the COA later sent an audit team.",
+  "h": "Petition partially granted (15–0, Perez, J., February 4, 2014): MECO is a non-governmental entity, but its verification and consular fees are subject to COA audit. The case was moot but decided under the exceptions.",
+  "test": "GOCC? (1) corporation, (2) public function, (3) government ownership or control. If not: COA audits only government-sourced funds it holds.",
+  "x": "Use when an entity doing public work claims to be private, or the COA’s audit reach over a private body handling public money is in issue.",
+  "g": "",
+  "w": "",
+  "s": "MECO is private, but the fees it collects for the government are open to COA audit.",
+  "sy": [
+   "Funa v. Manila Economic"
+  ]
+ },
+ {
+  "id": "gohbayron",
+  "n": "Goh v. Bayron",
+  "y": "2014",
+  "t": "concom",
+  "sub": "Constitutional Commissions: the COMELEC’s fiscal autonomy (Art. IX-A, Sec. 5)",
+  "a": 1,
+  "r": "The GAA item for the “conduct and supervision of elections, referenda, recall votes and plebiscites” is a valid line item for recall elections: a purpose may be specific even if broken into related sub-categories. Where the COMELEC admits the item is insufficient, there is an actual deficiency, and the COMELEC Chairman may augment it from savings (Art. VI, Sec. 25(5) and the GAA). The Constitution does not require that the appropriation sit in a “contingent fund.”",
+  "f": "A recall petition against Puerto Princesa Mayor Lucilo Bayron was found sufficient, but the COMELEC suspended all proceedings and then ruled that no recall would proceed until Congress appropriated funds for it, saying its budget item covered day-to-day programs, not recall “projects.”",
+  "h": "Petition granted (12–0, Carpio, J., November 25, 2014): the suspension and Resolution No. 9882 are set aside, and the COMELEC is directed to hold the recall election at once.",
+  "test": "Augmentation: (1) a law authorizing it, (2) an existing item, (3) an actual deficiency, (4) savings (Brillantes v. COMELEC; Demetria v. Alba).",
+  "x": "Use when the COMELEC or another commission says it cannot act for want of a specific appropriation, or the use of its savings is in issue.",
+  "g": "",
+  "w": "",
+  "s": "The COMELEC had a budget item for recall and could augment it from savings: hold the recall.",
+  "sy": [
+   "Goh v. Bayron"
+  ]
+ }
+]

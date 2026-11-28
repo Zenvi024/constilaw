@@ -1,0 +1,366 @@
+[
+ {
+  "id": "m-jb-lower",
+  "t": "jbc",
+  "title": "Lower courts and tenure: the cases",
+  "ask": "Give the two cases on abolishing lower courts or judgeships, and what each held.",
+  "items": [
+   "Ocampo v. Secretary of Justice (1955): 7 of 11 found RA 1186 void, short of two-thirds; the prevailing four: the power to abolish courts includes reducing or recategorizing judges; abolition is not removal",
+   "De La Llana v. Alba (1982): BP 129 valid; abolition in good faith is not removal (“no tenure to a non-existent office”); a renaming is not abolition; consult the Court on incumbents"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Secs. 2 and 11",
+  "rv": "jbc-lower",
+  "cases": [
+   "ocampo55",
+   "delallana"
+  ]
+ },
+ {
+  "id": "m-jb-reorg",
+  "t": "jbc",
+  "title": "When a court reorganization is valid",
+  "ask": "What must a law abolishing or restructuring lower courts satisfy?",
+  "items": [
+   "A court below the Supreme Court (Congress cannot touch the Court’s Sec. 5 jurisdiction)",
+   "A real abolition, not a renaming (Brillo v. Enage)",
+   "Good faith: no judges singled out, no “evil purpose”",
+   "The Court consulted on separated incumbents (De La Llana)",
+   "Since 1987: it must not undermine the security of tenure of judges (Sec. 2)"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Sec. 2; De La Llana v. Alba",
+  "rv": "jbc-lower",
+  "hook": "<em>Real, in good faith, and ask the Court</em>.",
+  "cases": [
+   "delallana",
+   "ocampo55"
+  ]
+ },
+ {
+  "id": "m-jb-11459",
+  "t": "jbc",
+  "title": "RA 11459 (2019), the Judges-at-Large Act",
+  "ask": "State the key features of RA 11459.",
+  "items": [
+   "100 Regional Trial Judges-at-Large and 50 Municipal Trial Judges-at-Large",
+   "No permanent salas; assigned by the Supreme Court as acting or assisting judges as public interest requires",
+   "The Court fixes the length of each assignment",
+   "The JBC recommends appointees, and later the permanent sala for each",
+   "RTC: natural-born, 35, 10 years of practice; first level: natural-born, 30, 5 years"
+  ],
+  "ordered": false,
+  "src": "RA 11459, Secs. 2–5",
+  "rv": "jbc-lower",
+  "cases": []
+ },
+ {
+  "id": "m-jb-seats",
+  "t": "jbc",
+  "title": "The JBC’s seven members",
+  "ask": "Name the seven members of the JBC, ex officio first.",
+  "items": [
+   "The Chief Justice (ex officio Chairman)",
+   "The Secretary of Justice (ex officio)",
+   "A representative of Congress (ex officio; one seat, one vote)",
+   "A representative of the Integrated Bar",
+   "A professor of law",
+   "A retired Member of the Supreme Court",
+   "A representative of the private sector"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Sec. 8(1)",
+  "rv": "jbc-council",
+  "hook": "<em>Three ex officio, four regular; Congress gets one</em>.",
+  "cases": [
+   "chavezjbc",
+   "umali"
+  ]
+ },
+ {
+  "id": "m-jb-congress",
+  "t": "jbc",
+  "title": "Congress’s seat in the JBC: the cases",
+  "ask": "Give the two cases on Congress’s representation in the JBC and their holdings.",
+  "items": [
+   "Chavez v. JBC (2012; 2013 Resolution, 9–3): “a representative” means one seat, one full vote; seven members, not eight; casus omissus; past acts valid (operative fact)",
+   "Umali v. JBC (2017, 9–5): Chavez stands as stare decisis; any Senator or Representative may represent all of Congress; six-month rotation valid; more seats need an amendment"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Sec. 8(1)",
+  "rv": "jbc-council",
+  "cases": [
+   "chavezjbc",
+   "umali"
+  ]
+ },
+ {
+  "id": "m-jb-cj",
+  "t": "jbc",
+  "title": "Filling a Chief Justice vacancy",
+  "ask": "What did Dulay and Adaza settle about a Chief Justice vacancy?",
+  "items": [
+   "The Chief Justice is one of the “Members of the Supreme Court” the President appoints from a JBC list (Dulay; Adaza)",
+   "The JBC may act without its ex officio Chairman; the senior Justice who is not an applicant presides (Dulay)",
+   "The 90 days from the vacancy are mandatory and “imperative” (Sec. 4(1); Adaza)",
+   "Pending cases cannot hold up the appointment (Adaza)",
+   "The election ban does not apply to the Judiciary; the JBC should list before the vacancy (De Castro v. JBC)"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Secs. 4(1), 8 and 9",
+  "rv": "jbc-council",
+  "cases": [
+   "dulay",
+   "adazajbc",
+   "decastrojbc"
+  ]
+ },
+ {
+  "id": "m-jb-review",
+  "t": "jbc",
+  "title": "The Court and the JBC: what remedy?",
+  "ask": "Which remedies lie against the JBC, and why?",
+  "items": [
+   "Supervision: oversight of the JBC’s compliance with its own rules, not control of its choices (Jardeleza)",
+   "Certiorari: yes, for grave abuse, under the expanded judicial power (Jardeleza; Villanueva; Umali)",
+   "Mandamus: no, nominating is discretionary (Jardeleza; Villanueva)",
+   "Declaratory relief: not with the Supreme Court; no right to be listed (Villanueva)"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Secs. 1 and 8",
+  "rv": "jbc-council",
+  "cases": [
+   "jardeleza",
+   "villanuevajbc",
+   "umali"
+  ]
+ },
+ {
+  "id": "m-jb-nominate",
+  "t": "jbc",
+  "title": "Nominating: the cases",
+  "ask": "Give the three cases on how the JBC nominates, with their holdings.",
+  "items": [
+   "Jardeleza v. Sereno (2014): integrity means moral character, not legal strategy; an objected applicant gets notice and time to answer; deemed included",
+   "Villanueva v. JBC (2015, 11–0): the five-year rule for first-level judges is a reasonable criterion, but must be published",
+   "Aguinaldo v. Aquino III (2016): nomination is a qualification; no clustering for simultaneous vacancies; seniority follows the commissions"
+  ],
+  "ordered": true,
+  "src": "Art. VIII, Secs. 8–9",
+  "rv": "jbc-nominate",
+  "cases": [
+   "jardeleza",
+   "villanuevajbc",
+   "aguinaldo"
+  ]
+ },
+ {
+  "id": "m-jb-rules",
+  "t": "jbc",
+  "title": "The 2020 Revised JBC Rules: numbers to remember",
+  "ask": "State the key numbers in the 2020 Revised Rules of the JBC (as amended in 2021).",
+  "items": [
+   "Judges seeking promotion: 5 years in their present rank (Rule 3, Sec. 3)",
+   "Appellate courts, Ombudsman, Deputies, Special Prosecutor, LEB: at least 4 votes to be nominated (Rule 8, Sec. 3)",
+   "At most 7 nominees per vacancy; more rounds until at least 3 (Rule 8, Sec. 4)",
+   "Supreme Court: 2.5 years left to serve for appellate justices, constitutional commission chairs, the SolGen and Cabinet secretaries; 5 years for others (Rule 8, Sec. 1)",
+   "The age rule does not apply to sitting Justices applying for Chief Justice"
+  ],
+  "ordered": false,
+  "src": "JBC No. 2020-01, as amended by Resolution No. 03-2021",
+  "rv": "jbc-nominate",
+  "cases": []
+ },
+ {
+  "id": "m-jb-autonomy",
+  "t": "jbc",
+  "title": "The Judiciary’s three budget guarantees",
+  "ask": "What three guarantees does Art. VIII, Sec. 3 give the Judiciary?",
+  "items": [
+   "Fiscal autonomy: full flexibility to allocate and use its resources (Bengzon v. Drilon)",
+   "No reduction below the previous year’s appropriation",
+   "Automatic and regular release once approved"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 3; RA 12233",
+  "rv": "jbc-release",
+  "hook": "<em>All three released automatically; only the Judiciary has a floor</em>.",
+  "cases": [
+   "bengzondrilon"
+  ]
+ },
+ {
+  "id": "m-cc-common",
+  "t": "concom",
+  "title": "What makes the commissions independent",
+  "ask": "List the constitutional safeguards of the commissions’ independence.",
+  "items": [
+   "Declared “independent” (Art. IX-A, Sec. 1)",
+   "Fixed, staggered seven-year terms without reappointment; no temporary or acting appointments",
+   "Appointment by the President with CA consent",
+   "No other office or profession, and no conflicting interests, during tenure (Sec. 2)",
+   "Salary not decreased during tenure (Sec. 3)",
+   "Appoint their own officials and employees (Sec. 4)",
+   "Fiscal autonomy and automatic release (Sec. 5)",
+   "Their own procedural rules (Sec. 6)"
+  ],
+  "ordered": false,
+  "src": "Art. IX-A",
+  "rv": "concom-common",
+  "cases": [
+   "gaminde",
+   "funavillar",
+   "funacsc"
+  ]
+ },
+ {
+  "id": "m-cc-members",
+  "t": "concom",
+  "title": "Who sits in each commission",
+  "ask": "How many members does each commission have, and what professions are required?",
+  "items": [
+   "CSC: a Chairman and 2 Commissioners; proven capacity for public administration",
+   "COMELEC: a Chairman and 6 Commissioners; college degree; a majority, the Chairman included, lawyers with 10 years’ practice",
+   "COA: a Chairman and 2 Commissioners; CPAs with 10 years’ auditing or lawyers with 10 years’ practice; never all of one profession",
+   "All: natural-born, at least 35, not candidates in the election just before"
+  ],
+  "ordered": false,
+  "src": "Arts. IX-B, IX-C, IX-D, Sec. 1(1)",
+  "rv": "concom-common",
+  "hook": "<em>Three, seven, three; seven-year terms; a majority of all</em>.",
+  "cases": []
+ },
+ {
+  "id": "m-cc-decide",
+  "t": "concom",
+  "title": "How a commission decides and is reviewed",
+  "ask": "State the rules on how the commissions decide and how their rulings reach the Court.",
+  "items": [
+   "A majority of all the Members: 4 for the COMELEC, 2 for the CSC and COA (Art. IX-A, Sec. 7)",
+   "Decide within 60 days from submission",
+   "COMELEC election cases: division first; reconsideration by the en banc (Art. IX-C, Sec. 3)",
+   "No 4 votes to grant reconsideration, even after rehearing: denied; the division stands (Legaspi)",
+   "COMELEC and COA: certiorari to the Supreme Court within 30 days (Rule 64); CSC: petition for review to the Court of Appeals (Rule 43)"
+  ],
+  "ordered": true,
+  "src": "Art. IX-A, Sec. 7; Art. IX-C, Sec. 3",
+  "rv": "concom-decide",
+  "cases": [
+   "legaspi"
+  ]
+ },
+ {
+  "id": "m-cc-csc",
+  "t": "concom",
+  "title": "The civil service: the cases",
+  "ask": "Give the five civil service cases and their holdings.",
+  "items": [
+   "De los Santos v. Mallare (1950): tenure covers the unclassified service; only confidential, policy-determining, highly technical posts are at pleasure",
+   "Cuevas v. Bacal (2000): CES tenure attaches to rank, not position",
+   "Buklod ng Kawaning EIIB v. Zamora (2001): good-faith reorganization is not removal",
+   "TIDCORP v. CSC (2013): CSC rules cannot override a charter exemption",
+   "Flores v. Drilon (1993): an elective official cannot be appointed to another office during tenure"
+  ],
+  "ordered": false,
+  "src": "Art. IX-B, Secs. 2, 3 and 7",
+  "rv": "concom-csc",
+  "cases": [
+   "mallare",
+   "cuevasbacal",
+   "buklod",
+   "tidcorp",
+   "floresdrilon"
+  ]
+ },
+ {
+  "id": "m-cc-atwill",
+  "t": "concom",
+  "title": "Positions terminable at pleasure",
+  "ask": "Which positions are excluded from security of tenure, and what marks each?",
+  "items": [
+   "Primarily confidential: close intimacy, trust against betrayal of personal confidence or State secrets",
+   "Policy-determining: makes policy rather than executes it",
+   "Highly technical: skill or training in a superior degree"
+  ],
+  "ordered": false,
+  "src": "Art. IX-B, Sec. 2(2); De los Santos v. Mallare",
+  "rv": "concom-csc",
+  "cases": [
+   "mallare"
+  ]
+ },
+ {
+  "id": "m-cc-badfaith",
+  "t": "concom",
+  "title": "Signs of a bad-faith reorganization (RA 6656, Sec. 2)",
+  "ask": "What signs show that a reorganization is in bad faith?",
+  "items": [
+   "A significant increase in positions in the new staffing pattern",
+   "An office abolished and another performing substantially the same functions created",
+   "Incumbents replaced by less qualified people",
+   "An office reclassified to perform substantially the same functions",
+   "The order of separation violated"
+  ],
+  "ordered": false,
+  "src": "RA 6656, Sec. 2; Buklod ng Kawaning EIIB",
+  "rv": "concom-csc",
+  "cases": [
+   "buklod"
+  ]
+ },
+ {
+  "id": "m-cc-comelec",
+  "t": "concom",
+  "title": "The COMELEC: the cases",
+  "ask": "Give the three COMELEC cases and their holdings.",
+  "items": [
+   "Legaspi v. COMELEC (2016, 8–7): four votes to reverse a division; otherwise the motion is denied and the division stands",
+   "Sula v. COMELEC (2023, 12–0): residual power to set plebiscite dates; it frames the question; fraud must be proved specifically",
+   "Goh v. Bayron (2014, 12–0): a line item for recall exists; augment from savings; hold the recall"
+  ],
+  "ordered": false,
+  "src": "Art. IX-C, Secs. 2(1) and 3; Art. IX-A, Secs. 5 and 7",
+  "rv": "concom-comelec",
+  "cases": [
+   "legaspi",
+   "sula",
+   "gohbayron"
+  ]
+ },
+ {
+  "id": "m-cc-coa",
+  "t": "concom",
+  "title": "The COA: the cases",
+  "ask": "Give the three COA cases and their holdings.",
+  "items": [
+   "DBP v. COA (2002, 15–0): the power to audit is not exclusive; scope, rules and disallowance are; COA findings prevail",
+   "Special Audit Team v. CA (2013, 13–0): the COA may create special audit teams; exhaust COA remedies first",
+   "Funa v. MECO (2014, 15–0): MECO is not a GOCC, but its government-sourced fees are auditable"
+  ],
+  "ordered": false,
+  "src": "Art. IX-D, Secs. 2 and 3",
+  "rv": "concom-coa",
+  "cases": [
+   "dbpcoa",
+   "satcoa",
+   "funameco"
+  ]
+ },
+ {
+  "id": "m-cc-gocc",
+  "t": "concom",
+  "title": "The three attributes of a GOCC",
+  "ask": "What three attributes make an entity a GOCC?",
+  "items": [
+   "Organized as a stock or non-stock corporation",
+   "Performing a public function",
+   "Owned or controlled by the government (for a non-stock corporation: a majority of members who are government officials, or a substantial government role in choosing the board)"
+  ],
+  "ordered": true,
+  "src": "Funa v. MECO; Administrative Code, Sec. 2(13)",
+  "rv": "concom-coa",
+  "cases": [
+   "funameco"
+  ]
+ }
+]

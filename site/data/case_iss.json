@@ -3579,5 +3579,519 @@
    }
   ],
   "vote": "12–3, Gaerlan, J., July 30, 2024. Divina and six recipients fined ₱100,000 each."
+ },
+ "delallana": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing to challenge BP 129?",
+    "a": "YES",
+    "why": "The judge faces direct injury (People v. Vera); the lawyers, as officers of the court and taxpayers, may sue under the liberal approach."
+   },
+   {
+    "q": "Was BP 129 enacted arbitrarily and in bad faith?",
+    "a": "NO",
+    "why": "The record shows a presidential committee’s study, hearings and long debate, prompted by clogged dockets; it was the first major reform since 1901. The charge of bad faith did “violence to the facts.”"
+   },
+   {
+    "q": "Does abolishing the lower courts violate the judges’ security of tenure and judicial independence?",
+    "a": "NO",
+    "why": "Abolition of an office in good faith suffers from no infirmity; there can be no tenure to a non-existent office, so valid abolition is not removal. The courts were really abolished and replaced, unlike the mere renaming in Brillo v. Enage."
+   },
+   {
+    "q": "Must the Court be consulted on the incumbents?",
+    "a": "YES (construction)",
+    "why": "Since abolition separates judges as removal (the Court’s power) would, the Court reads BP 129 to require that it be consulted and its views given the fullest consideration, to avoid power clashing with power."
+   },
+   {
+    "q": "Does BP 129 unduly delegate legislative power to the President?",
+    "a": "NO",
+    "why": "Fixing salaries follows a standard (LOI 93 and PD 985), and the timing of the changeover is tied to the take-care duty."
+   },
+   {
+    "q": "Should the Chief Justice and two Justices who sat on the reorganization committee inhibit?",
+    "a": "NO",
+    "why": "They had no hand in drafting BP 129, which was the Batasan’s work; the committee only made studies."
+   }
+  ],
+  "vote": "Fernando, C.J., March 12, 1982; petition dismissed. Concepcion, Jr., J., in the result; Fernandez, J., concurred provided the Court is consulted.",
+  "ops": "Teehankee, J., dissented: following the seven Justices in Ocampo, the express guarantee of tenure overrides the implied power to abolish; the new courts are the old ones renamed, so incumbents should be retained. Plana and Abad Santos, JJ., concurred and dissented: the President need not consult the Court, which gives no advisory opinions."
+ },
+ "ocampo55": {
+  "iss": [
+   {
+    "q": "Does Sec. 3 of RA 1186, abolishing all judge-at-large and cadastral judge positions, violate security of tenure?",
+    "a": "NOT DECLARED VOID",
+    "why": "The prevailing four held that the power to abolish courts includes the lesser power to reduce or recategorize judges; removal implies that the office survives the ouster; and no judge was singled out. Seven Justices thought it an indirect removal."
+   },
+   {
+    "q": "May Sec. 3 be declared unconstitutional when only 7 of 11 Justices vote that it is?",
+    "a": "NO",
+    "why": "Declaring a statute unconstitutional needed two-thirds of the Court, so the four-Justice view prevails and the petition is denied."
+   },
+   {
+    "q": "Were the judge-at-large and cadastral judge positions themselves unconstitutional (Art. VIII, Sec. 7 of the 1935 Constitution)?",
+    "a": "NOT RULED",
+    "why": "Padilla, J., said yes (no fixed residence; designations without the Court’s approval); Bengzon, J., and Bautista Angelo, J., said no. No majority."
+   }
+  ],
+  "vote": "Minutes of January 18, 1955: 7 to void, 4 to uphold; denied for want of two-thirds. Prevailing opinion by Paras, C.J., with Padilla, A. Reyes and Labrador, JJ.",
+  "ops": "Bengzon, J. (with Pablo, Jugo, Concepcion and J.B.L. Reyes, JJ.), dissenting: what cannot be done directly cannot be done indirectly; no court was abolished and judges increased, so it was a change of name. Montemayor, J., concurred with Bengzon. Bautista Angelo, J.: valid only if prospective."
+ },
+ "dulay": {
+  "iss": [
+   {
+    "q": "Does the petitioner have standing?",
+    "a": "NO",
+    "why": "She did not explain her capacity or assert a right as a citizen or taxpayer suing for the public (De Castro v. JBC); that alone warrants dismissal. The merits were reached only as alternative rulings."
+   },
+   {
+    "q": "May the President appoint the Chief Justice?",
+    "a": "YES",
+    "why": "Art. VIII uses “Members” without distinction for all fifteen Justices; Sec. 9 lets the President appoint “Members of the Supreme Court” from the JBC’s list, so the Chief Justice is included (Vargas v. Rilloraza)."
+   },
+   {
+    "q": "May the JBC act when headed by someone other than an incumbent Chief Justice?",
+    "a": "YES",
+    "why": "Otherwise a Chief Justice vacancy could never be filled; the 90-day period is mandatory and a complete JBC is only preferable (the De Castro–Concepcion exchange in the Constitutional Commission). The most senior Justice who is not an applicant must sit and preside (Sec. 12, RA 296)."
+   }
+  ],
+  "vote": "Unsigned Resolution, July 3, 2012; Peralta, J., presiding; 8 present. No part: Carpio, Velasco, Jr., Leonardo-De Castro, Brion, Abad and Sereno, JJ.",
+  "ops": ""
+ },
+ "adazajbc": {
+  "iss": [
+   {
+    "q": "May the JBC entertain nominees for Chief Justice and submit a list to the President?",
+    "a": "YES",
+    "why": "Dulay already held that “members of the Supreme Court” include the Chief Justice."
+   },
+   {
+    "q": "May the President appoint a Chief Justice?",
+    "a": "YES",
+    "why": "Also settled in Dulay."
+   },
+   {
+    "q": "Must the JBC and the President wait for the Court to resolve the petitions against the Senate’s impeachment jurisdiction?",
+    "a": "NO",
+    "why": "Corona himself respected the Senate’s judgment; the President has an imperative duty to fill the vacancy within 90 days, a special provision and definite mandate (De Castro v. JBC) that pending cases cannot defeat."
+   }
+  ],
+  "vote": "Unsigned minute Resolution, July 17, 2012; Peralta, J., presiding; 8 present, 6 no part.",
+  "ops": ""
+ },
+ "chavezjbc": {
+  "iss": [
+   {
+    "q": "Is Congress entitled to more than one seat in the JBC (was the singular a “plain oversight”)?",
+    "a": "NO",
+    "why": "The singular “a representative” is deliberate: other provisions were adjusted to bicameralism, but not this one, because the JBC is not legislating and Congress acts there as one body. Three ex officio members for three branches plus four regular members make seven. Casus omissus: the Court cannot supply an omission, even an inadvertent one."
+   },
+   {
+    "q": "Does the lone representative cast one full vote, and may the vote be split?",
+    "a": "YES; no split",
+    "why": "Splitting the vote would bring disorder and do indirectly what cannot be done directly."
+   },
+   {
+    "q": "Do the arguments that two representatives would not politicize the JBC, or that the President dominates it, justify reversal?",
+    "a": "NO",
+    "why": "They have some sense, but the text controls; the regular members still need CA confirmation, so checks remain."
+   },
+   {
+    "q": "Does the long, unquestioned practice validate the composition?",
+    "a": "NO",
+    "why": "Unconstitutional acts gain no acceptance by frequency, estoppel or laches; they are void from the start."
+   },
+   {
+    "q": "Are the JBC’s prior official acts void?",
+    "a": "NO (operative fact)",
+    "why": "Equity and fair play protect those who relied on them (Planters Products v. Fertiphil); stated in the body, not the fallo."
+   }
+  ],
+  "vote": "9–3, Mendoza, J., April 16, 2013. No part: Sereno, C.J., Velasco, Jr. and Brion, JJ.",
+  "ops": "Leonen, J., dissenting (the dissent the syllabus asks you to read): he would grant the motion and deny the petition. “A representative of the Congress” and “ex officio” together are ambiguous, so the whole Constitution must be read (Macalintal v. PET; Civil Liberties Union). Congress is two Houses with their own rules, journals and discipline, so a Senator cannot carry the House’s instructions, alternating seats negates representation, and a half vote is “abominable.” An odd number matters only for yes-or-no votes, while the JBC lists nominees by plurality; Congress has no alter ego, unlike the Secretary of Justice. The Framers’ talk of “seven members” (July 10 and 14, 1986) came while the legislature was still unicameral, before the 23–22 vote for a bicameral Congress on July 21. Abad, J. (with Del Castillo, J.), also dissented: each House gets one representative with a full vote; Fr. Bernas admitted the provision was never adjusted."
+ },
+ "umali": {
+  "iss": [
+   {
+    "q": "Does Umali have standing without a resolution of both Houses?",
+    "a": "YES",
+    "why": "A legislator may sue against acts that impair Congress’s powers (Philconsa v. Enriquez; Francisco v. House)."
+   },
+   {
+    "q": "Is direct resort to the Court by certiorari and mandamus proper?",
+    "a": "YES",
+    "why": "Asking Congress first was not plain, speedy and adequate; the questions were constitutional and urgent, with the 90-day period running."
+   },
+   {
+    "q": "Did the JBC gravely abuse its discretion by adopting the rotation?",
+    "a": "NO",
+    "why": "Certiorari reaches the JBC (Araullo), but the JBC only complied with the Constitution and Chavez, adopting a scheme the Houses themselves crafted."
+   },
+   {
+    "q": "May mandamus compel the JBC to count Umali’s December 2016 votes?",
+    "a": "NO",
+    "why": "Counting is ministerial only for votes of rightful members; it was the Senate’s turn (Villanueva v. JBC)."
+   },
+   {
+    "q": "Does Chavez apply as stare decisis, so that Congress has one representative and the rotation is valid?",
+    "a": "YES",
+    "why": "The arguments rehash Chavez; the text is clear (“no room for interpretation, only application”); any member may represent all of Congress; the JBC’s role is contributory, not legislative; more seats need an amendment."
+   }
+  ],
+  "vote": "9–5, Velasco, Jr., J., July 25, 2017. Sereno, C.J., no part.",
+  "ops": "Leonen, J. (with Leonardo-de Castro, Del Castillo, Martires and Reyes, Jr., JJ.), dissenting: abandon Chavez; no member can represent both Houses, each with its own officers, rules and journal; rotation periodically disempowers one chamber; Sec. 8(1) was approved before the bicameral vote; an eighth member is harmless since lists are by plurality."
+ },
+ "jardeleza": {
+  "iss": [
+   {
+    "q": "May the Court take the petition for certiorari and mandamus?",
+    "a": "YES (certiorari); no mandamus",
+    "why": "Supervision means seeing that the JBC follows its rules (Drilon v. Lim); certiorari lies for grave abuse of any instrumentality under the expanded judicial power (Araullo); nominating is discretionary, so no mandamus."
+   },
+   {
+    "q": "Were the objections “questions on integrity” under the unanimity rule?",
+    "a": "NO (strategy); YES (affair, insider trading)",
+    "why": "Integrity means moral fitness; a disagreement over legal strategy is professional judgment. An extramarital affair and insider trading go to moral character."
+   },
+   {
+    "q": "Is due process available in JBC proceedings when an applicant is objected to?",
+    "a": "YES, and violated",
+    "why": "Though sui generis, the proceedings must give notice and a reasonable chance to answer (JBC-010: written, sworn, with five days). Jardeleza was told by phone and confronted on the spot with new charges; due process is “not to ensnare by surprise.”"
+   },
+   {
+    "q": "May Jardeleza be included in the shortlist?",
+    "a": "YES",
+    "why": "The invocation of the rule, made without due process, is void, so his four of six votes were a majority. Not a vested right, nor an endorsement; the President remains the judge."
+   }
+  ],
+  "vote": "Mendoza, J., August 19, 2014; six expressly concurred. Sereno, C.J., and Carpio, J., no part.",
+  "ops": "Leonen, J. (with Velasco, Jr. and Perlas-Bernabe, JJ.), dissenting: supervision is administrative only; neither certiorari nor mandamus lies; the JBC reasonably read its own rules; he was heard and refused; the four nominees were not impleaded. Del Castillo, J., dissented on the JBC’s independence. Brion and Leonardo-de Castro, JJ., concurred separately."
+ },
+ "villanuevajbc": {
+  "iss": [
+   {
+    "q": "Do certiorari and prohibition lie against the JBC?",
+    "a": "YES",
+    "why": "The JBC is not a judicial or quasi-judicial body, but the expanded judicial power reaches grave abuse by any instrumentality (Araullo), and the Court supervises the JBC’s compliance with its rules (Jardeleza)."
+   },
+   {
+    "q": "Does mandamus lie?",
+    "a": "NO",
+    "why": "Selecting nominees is discretionary; having the qualifications gives no right to be listed or promoted."
+   },
+   {
+    "q": "Is declaratory relief proper?",
+    "a": "NO",
+    "why": "No right is affected, and the Court has no original jurisdiction over declaratory relief; the Court nonetheless took the case."
+   },
+   {
+    "q": "May the JBC add a five-year requirement to the constitutional qualifications?",
+    "a": "YES",
+    "why": "The Constitution gives the qualifications but not the process; the JBC may set standards, subject to the minimum, to recommend the best and not just fill vacancies."
+   },
+   {
+    "q": "Does the five-year policy violate equal protection?",
+    "a": "NO",
+    "why": "Rational basis applies; years of service measure “proven competence” and experience; five years is one factor among many, not an automatic ticket."
+   },
+   {
+    "q": "Did the policy need ONAR filing and publication?",
+    "a": "ONAR no; publication yes; no prejudice",
+    "why": "The Administrative Code’s ONAR rules cover executive agencies, not the Judiciary; but a qualification standard affects applicants and is not internal, so it must be published (Tañada). The petitioner was not prejudiced, having no right to be listed."
+   },
+   {
+    "q": "Did the JBC fail to implement the prejudicature program (RA 8557), violate equal employment opportunity, or deserve a TRO?",
+    "a": "NO",
+    "why": "The claims were unsubstantiated; the Constitution does not require appointing all who apply; there was no clear legal right for an injunction."
+   }
+  ],
+  "vote": "11–0, Reyes, J., April 7, 2015. Sereno, C.J., no part.",
+  "ops": "Brion, J. (with Leonardo-de Castro and Peralta, JJ.) and Leonen, J., concurred separately; their texts are not in the files."
+ },
+ "aguinaldo": {
+  "iss": [
+   {
+    "q": "May the petitioners sue for quo warranto?",
+    "a": "NO",
+    "why": "Nominees have only a possibility, not a clear right, to the post (Topacio v. Ong); the IBP claims no entitlement."
+   },
+   {
+    "q": "Are certiorari and prohibition proper?",
+    "a": "YES",
+    "why": "They attack the President’s act under the expanded judicial power, not the appointees’ qualifications."
+   },
+   {
+    "q": "Should President Aquino be dropped as respondent?",
+    "a": "YES",
+    "why": "He was the incumbent at filing and immune; the Executive Secretary suffices."
+   },
+   {
+    "q": "Do the petitioners have standing, and may they go directly to the Court?",
+    "a": "YES",
+    "why": "Clustering confined each nominee to one of six posts, a direct injury; the IBP has an interest in the administration of justice; the issue is transcendental and of first impression."
+   },
+   {
+    "q": "Was the petition filed within 60 days?",
+    "a": "NO, but relaxed",
+    "why": "The appointments were complete on acceptance (January 25, 2016; Velicaria-Garafil), but the petitioners got the lists only in March, and the issue is important."
+   },
+   {
+    "q": "Was the President limited to each cluster’s list for each numbered seat?",
+    "a": "NO",
+    "why": "Nomination is a qualification (the Rodrigo–Concepcion exchange); the JBC cannot restrict the appointing power. Seniority is fixed by the dates and order of commissions (PD 1606), so numbering the seats arrogated the President’s power. Clustering had no basis, cut the nominees’ chances, and broke from past practice. Thirty-seven nominees for six seats exceeded the minimum."
+   },
+   {
+    "q": "Should the JBC be allowed to intervene?",
+    "a": "NO (Decision)",
+    "why": "Six months late, with no pleading attached; its silence was acquiescence. (The February 21, 2017 Resolution later granted intervention but denied the JBC’s motions.)"
+   },
+   {
+    "q": "May the Court review the JBC’s new rules under its supervision?",
+    "a": "YES",
+    "why": "Supervision is not control but is an active power to inquire. The rule that only one nominee per list may be appointed does not bind the President; other changes went to a separate administrative matter."
+   },
+   {
+    "q": "Should the ponente have inhibited as a former JBC consultant? (2017 Resolution)",
+    "a": "NO",
+    "why": "She was excluded from the JBC’s executive sessions and the clustering was already done; the JBC’s own members disagreed on clustering."
+   }
+  ],
+  "vote": "Leonardo-de Castro, J., November 29, 2016; no dissent. Sereno, C.J., no part. Resolution of August 8, 2017: the JBC’s motion for reconsideration denied with finality.",
+  "ops": "Leonen, J. (with Carpio, Velasco, Jr., Perlas-Bernabe and Caguioa, JJ.), concurred in the result; the text is not in the files."
+ },
+ "legaspi": {
+  "iss": [
+   {
+    "q": "Is the Mendoza reading of Rule 18, Sec. 6 (dismissing the case when the en banc cannot decide a motion for reconsideration) consistent with the Constitution?",
+    "a": "NO",
+    "why": "Divisions decide election cases and the en banc decides motions for reconsideration (Art. IX-C, Sec. 3), by a majority of all members (Art. IX-A, Sec. 7). Mendoza let a motion win with two votes, as if abstentions voted for the movant: an en banc that cannot validly decide would reverse a valid division ruling. Fewer than four votes means no reversible error was found."
+   },
+   {
+    "q": "Is a motion for reconsideration pending with the en banc an “incidental matter”?",
+    "a": "YES",
+    "why": "What is pending is the motion, not the disqualification case (already decided by the division); it is neither an original action nor an appeal. Harmonized with Rule 56, Sec. 7 and A.M. No. 99-1-09-SC (a tie denies the motion), as in League of Cities and Santiago v. COMELEC, the motion is denied and the division ruling stands."
+   }
+  ],
+  "vote": "8–7, Velasco, Jr., J., April 19, 2016.",
+  "ops": "Perez, J. (with Brion, Bersamin, Perlas-Bernabe, Leonen and Jardeleza, JJ.; Mendoza, J., joined his position), dissenting: keep Mendoza by stare decisis; the COMELEC acts in one whole process, so the motion only elevates the same election case, and failure to decide means dismissal."
+ },
+ "sula": {
+  "iss": [
+   {
+    "q": "May the mayor intervene without leave of court?",
+    "a": "YES",
+    "why": "Intervention is discretionary; she had a legal interest as the city’s chief executive and as a taxpayer, it caused no delay, and the issues could be decided in the case."
+   },
+   {
+    "q": "Did the COMELEC gravely abuse its discretion in ratifying the BOL and including Cotabato City?",
+    "a": "NO",
+    "why": "The plebiscite was within 150 days of effectivity (fifteen days after the last required publication, August 25, 2018); even if late, the COMELEC may reset dates (Cagas). Contiguous areas are asked only about inclusion, as the BOL directs. The canvass gap was an encoding error fixed by retabulation; fraud claims are factual, unproven and not for Rule 65."
+   },
+   {
+    "q": "Should a TRO or injunction issue against applying the BOL in Cotabato City?",
+    "a": "NO",
+    "why": "With no grave abuse, there was no basis to enjoin."
+   }
+  ],
+  "vote": "12–0, Leonen, J., January 10, 2023. Inting and Kho, Jr., JJ., no part.",
+  "ops": ""
+ },
+ "tidcorp": {
+  "iss": [
+   {
+    "q": "May the CSC, under its constitutional powers, make rules contrary to laws of Congress?",
+    "a": "NO",
+    "why": "The rule-making power is subsumed in the CSC’s role as central personnel agency and cannot be withdrawn by Congress (Gallardo v. Tabamo), but it implements the laws Congress makes. Rules must not override the law (Grego v. COMELEC; Land Bank v. CA)."
+   },
+   {
+    "q": "Does the CSC circular’s requirement (titles must be in the DBM index) apply to TIDCORP’s appointments?",
+    "a": "NO",
+    "why": "It is a position classification rule under RA 6758, and RA 8494 expressly exempts TIDCORP from such laws. “Endeavor … as closely as possible” allows deviation. The CSC still enforces position classification at TIDCORP, on TIDCORP’s own terms."
+   },
+   {
+    "q": "Was the appointment valid?",
+    "a": "YES",
+    "why": "The disallowed requirement was the only one not met."
+   }
+  ],
+  "vote": "14–0, Brion, J., March 5, 2013. Peralta, J., no part.",
+  "ops": ""
+ },
+ "mallare": {
+  "iss": [
+   {
+    "q": "Is the Revised Administrative Code provision allowing the President to remove the Baguio city engineer at pleasure still in force?",
+    "a": "NO",
+    "why": "Pre-Constitution laws survive only if consistent with the Constitution; removal at pleasure and removal only for cause are irreconcilable. “Cause” means legal cause relating to the office, not the appointing power’s pleasure."
+   },
+   {
+    "q": "Does security of tenure protect the unclassified service (should Lacson v. Romero be reconsidered)?",
+    "a": "YES (Lacson stands)",
+    "why": "The Constitution defines the civil service as all branches and subdivisions, excluding only three classes of positions; the implementing law and the law in force in 1935 read it the same way. Unbridled removal would revive the spoils system."
+   },
+   {
+    "q": "Is the city engineer’s position policy-determining, primarily confidential or highly technical?",
+    "a": "NO",
+    "why": "It requires no close intimacy, executes rather than makes policy, and is technical but not highly so: its duties are administrative."
+   },
+   {
+    "q": "Does the ruling declare a law unconstitutional, needing eight votes?",
+    "a": "NO",
+    "why": "The removal clause was repealed when the Constitution took effect; unconstitutionality presupposes a later law defying it."
+   },
+   {
+    "q": "Did De los Santos accept removal at pleasure by accepting the appointment?",
+    "a": "NO",
+    "why": "The clause was already abrogated when he was appointed."
+   }
+  ],
+  "vote": "Tuason, J., August 31, 1950; Moran, C.J., Ozaeta, Paras, Pablo and Montemayor, JJ., concurred.",
+  "ops": ""
+ },
+ "cuevasbacal": {
+  "iss": [
+   {
+    "q": "Should the quo warranto petition have been dismissed for failure to appeal to the Office of the President first?",
+    "a": "NO",
+    "why": "No appeal to the President is needed from the President’s own act, and the question (whether a transfer without consent is removal without cause) is purely legal."
+   },
+   {
+    "q": "Was Bacal’s transfer to regional director without her consent a removal without cause violating security of tenure?",
+    "a": "NO",
+    "why": "Chief Public Attorney is a Rank I post; she was a CESO III, so her appointment was temporary (Achacoso). CES tenure attaches to rank, conferred by the President on the CESB’s recommendation; regional director matched her rank. CES officers are mobile, like military officers, if rank and salary are kept."
+   },
+   {
+    "q": "May Bacal attack Demaisip’s lack of CES eligibility?",
+    "a": "NO",
+    "why": "In quo warranto the petitioner must show her own clear right; without it, the occupant’s qualifications are immaterial. The President may in exceptional cases appoint a non-eligible."
+   }
+  ],
+  "vote": "Mendoza, J., December 6, 2000; nine concurred.",
+  "ops": "Gonzaga-Reyes, J. (with Panganiban and Quisumbing, JJ.), dissenting: one CES eligibility covers all ranks; a permanent appointment plus eligibility gives tenure in the position. Puno, J. (with Vitug, J.), wrote separately; the text is not in the files."
+ },
+ "buklod": {
+  "iss": [
+   {
+    "q": "Do skipping the hierarchy of courts and failing to exhaust remedies bar the petition?",
+    "a": "NO",
+    "why": "The status of a public office is a matter of State interest that must be settled quickly (Dario v. Mison)."
+   },
+   {
+    "q": "May the President reorganize the executive department by deactivating the EIIB?",
+    "a": "YES",
+    "why": "Congress generally abolishes what it creates, but the President may reorganize executive offices under statute: Sec. 77 of the 1999 GAA, Sec. 78 of the 2000 GAA, and the continuing power in Sec. 31, Book III, EO 292 (Larin). The EIIB, attached to the DOF, is within reach."
+   },
+   {
+    "q": "Was the reorganization in good faith?",
+    "a": "YES",
+    "why": "It served economy and efficiency: Aduana hired no new staff, borrowed personnel, cost far less, and had new powers; none of RA 6656’s signs of bad faith appear (Blaquera: “trim the fat”)."
+   },
+   {
+    "q": "Was security of tenure violated?",
+    "a": "NO",
+    "why": "A valid abolition is neither removal nor separation; security of tenure is “not a Chinese wall,” and no one has a vested right to a public office."
+   }
+  ],
+  "vote": "14–0, Sandoval-Gutierrez, J., July 10, 2001. Quisumbing and Panganiban, JJ., concurred in the result.",
+  "ops": ""
+ },
+ "dbpcoa": {
+  "iss": [
+   {
+    "q": "Does the COA have the sole power to audit government banks, barring a concurrent private audit?",
+    "a": "NO",
+    "why": "“Exclusive” appears in Sec. 2(2), not 2(1), and a qualifier attaches only to the phrase it modifies. The Constitutional Commission withdrew an “exclusive” amendment and rejected a ban on private auditors (Monsod: investors and foreign lenders need them). The COA’s audit stays preponderant, and its jurisdiction cannot be removed. The Central Bank’s supervision includes concurrent examination and audit."
+   },
+   {
+    "q": "Does a statute bar a private auditor, or authorize one?",
+    "a": "No bar; authorized",
+    "why": "PD 1445 gives the COA general, not exclusive, jurisdiction; the Central Bank circular has the force of law. The validity of PD 2029, Sec. 8 was not the lis mota and was not ruled on."
+   },
+   {
+    "q": "Was hiring the private auditor necessary, and were the fees reasonable?",
+    "a": "YES",
+    "why": "It was a World Bank loan condition; the fees (about ₱487,000 and ₱530,000) were modest beside the COA’s own billings."
+   }
+  ],
+  "vote": "15–0, Carpio, J., January 16, 2002.",
+  "ops": ""
+ },
+ "satcoa": {
+  "iss": [
+   {
+    "q": "Was prohibition before the CA the correct remedy?",
+    "a": "NO",
+    "why": "The COA’s appeal ladder was a plain, speedy and adequate remedy; the GSIS’s claimed exceptions (a threatened disallowance, inaction, bias) were speculative or factual. Exhaustion respects the expertise of independent constitutional commissions. And creating an audit team is not a judicial, quasi-judicial or ministerial act."
+   },
+   {
+    "q": "Was the CA’s injunction properly issued?",
+    "a": "NO",
+    "why": "There was no clear and unmistakable right and no urgency: no notice of disallowance had issued, and the COA’s rules would cover one."
+   },
+   {
+    "q": "Was the Special Audit Team validly constituted?",
+    "a": "YES",
+    "why": "Under Sec. 2(2), the COA defines the scope and methods of its audit; COA Memo No. 2002-053 and Resolution No. 2002-005 let the General Counsel deputize a team; organizing its manpower is inherent in the COA’s independence."
+   }
+  ],
+  "vote": "13–0, Sereno, C.J., April 11, 2013. Del Castillo and Perlas-Bernabe, JJ., no part.",
+  "ops": ""
+ },
+ "funameco": {
+  "iss": [
+   {
+    "q": "Should the petition be dismissed as moot after the COA sent an audit team?",
+    "a": "NO",
+    "why": "The main prayer was moot, but the case raised a grave constitutional issue of paramount public interest, capable of repetition yet evading review (David v. Arroyo)."
+   },
+   {
+    "q": "Does Funa have standing?",
+    "a": "YES",
+    "why": "As a concerned citizen, on a matter of transcendental importance: the COA’s constitutional duty."
+   },
+   {
+    "q": "Does the hierarchy of courts bar the petition?",
+    "a": "NO",
+    "why": "Waived for transcendental importance (Chavez v. PEA)."
+   },
+   {
+    "q": "Is MECO a GOCC or government instrumentality?",
+    "a": "NO",
+    "why": "It is a non-stock corporation with public functions, but its members elect its directors and no officer is a government appointee; the President’s “desire letters” are only recommendatory. It is not a creature of law, so not an instrumentality. It is sui generis."
+   },
+   {
+    "q": "Are MECO’s accounts subject to COA audit?",
+    "a": "PARTLY",
+    "why": "Only funds from or through the government: the verification fees it collects as DOLE’s agent and the consular fees it collects by government authority."
+   }
+  ],
+  "vote": "15–0, Perez, J., February 4, 2014.",
+  "ops": ""
+ },
+ "gohbayron": {
+  "iss": [
+   {
+    "q": "Does the 2014 GAA have a line item for recall elections?",
+    "a": "YES",
+    "why": "The COMELEC admitted the item for the conduct of “recall votes”; recall is a constitutional function (Art. IX-C, Sec. 2(1)); the 2002 Puerto Princesa recall was held on a broader item (Socrates v. COMELEC). The LGC’s contingency-fund provision does not bind Congress."
+   },
+   {
+    "q": "May the COMELEC augment the recall item from its savings?",
+    "a": "YES",
+    "why": "Augmentation is dormant until a law authorizes it; here Art. VI, Sec. 25(5) and Sec. 67 of the 2014 GAA did, the item existed, the COMELEC admitted the deficiency, and it had savings."
+   },
+   {
+    "q": "Does the program-versus-project distinction bar funding?",
+    "a": "NO",
+    "why": "The Constitution requires an appropriation for a specific purpose or program, not for each project."
+   },
+   {
+    "q": "Should a preliminary mandatory injunction issue?",
+    "a": "NOT RULED",
+    "why": "Unnecessary once the petition was granted."
+   }
+  ],
+  "vote": "12–0, Carpio, J., November 25, 2014. Jardeleza, J., no part.",
+  "ops": ""
  }
 }
