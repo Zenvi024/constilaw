@@ -1,0 +1,147 @@
+[
+ {
+  "id": "l-sa-who",
+  "t": "scadmin",
+  "title": "Who disciplines whom",
+  "ask": "Who disciplines a sitting Justice, a lower-court judge, a court employee and a lawyer?",
+  "items": [
+   "Sitting SC Justice: impeachment only (In re Gonzalez)",
+   "Retired Justice: the Court, administratively (Biraogo)",
+   "Lower-court judges and CA Justices: the Supreme Court en banc (Sec. 11)",
+   "Court employees: the Supreme Court through the OCA; the CSC only files (Andal)",
+   "Lawyers: the Supreme Court (Gadon)"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Secs. 6 and 11; Art. XI, Sec. 2",
+  "rv": "scadmin-super",
+  "hook": "The Court disciplines its own.",
+  "cases": [
+   "ingonzalez",
+   "inrebiraogo",
+   "andal",
+   "gadon"
+  ]
+ },
+ {
+  "id": "l-sa-maceda",
+  "t": "scadmin",
+  "title": "What Maceda v. Vasquez held",
+  "ask": "State the holdings of Maceda v. Vasquez (1993).",
+  "items": [
+   "The SC has exclusive administrative supervision over all courts and personnel (Sec. 6)",
+   "One act may bring administrative and criminal liability",
+   "The Ombudsman has jurisdiction over the crime",
+   "But a criminal complaint arising from court duties must be referred to the Court first",
+   "The Court decides whether the respondent acted within his administrative duties",
+   "The Ombudsman cannot compel the Court to produce records or its personnel to testify"
+  ],
+  "ordered": false,
+  "src": "Maceda v. Vasquez (1993)",
+  "rv": "scadmin-super",
+  "hook": "Refer first.",
+  "cases": [
+   "macedavasquez"
+  ]
+ },
+ {
+  "id": "l-sa-andal",
+  "t": "scadmin",
+  "title": "What CSC v. Andal held",
+  "ask": "State the holdings of CSC v. Andal (2009).",
+  "items": [
+   "Only the SC oversees court personnel’s compliance with all laws, rules and regulations",
+   "The CSC cannot try and decide administrative cases against court personnel",
+   "Not even for civil service exam anomalies",
+   "The CSC files its complaint with the OCA (Ampong)",
+   "No estoppel: he denied the charge, never appeared, and raised jurisdiction on appeal"
+  ],
+  "ordered": false,
+  "src": "CSC v. Andal (2009)",
+  "rv": "scadmin-super",
+  "cases": [
+   "andal"
+  ]
+ },
+ {
+  "id": "l-sa-judges",
+  "t": "scadmin",
+  "title": "Judges disciplined: the cases",
+  "ask": "Give the cases where the Court disciplined Justices of the CA or the Court itself, with the penalty.",
+  "items": [
+   "In re Demetria (2001): CA Justice who lobbied prosecutors, dismissed",
+   "Re: Vasquez (2008): Roxas dismissed; Sabio suspended two months; Reyes reprimanded; Dimaranan-Vidal admonished; Vasquez severely reprimanded",
+   "In re Biraogo (2009): retired Justice Reyes fined ₱500,000 and disqualified for a leaked ponencia"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 6; Code of Judicial Conduct",
+  "rv": "scadmin-super",
+  "cases": [
+   "inredemetria",
+   "revasquez",
+   "inrebiraogo"
+  ]
+ },
+ {
+  "id": "l-sa-gadon",
+  "t": "scadmin",
+  "title": "What In re Gadon held",
+  "ask": "State the holdings of In re Gadon (2023).",
+  "items": [
+   "No inhibition: bias needs clear and convincing proof; the Court acts as a collegial body",
+   "Baseless bias claims are direct contempt",
+   "Disbarment is sui generis: a fitness inquiry",
+   "Preventive suspension may come before the answer when the act speaks for itself",
+   "A lawyer cannot divide his personality: private conduct counts",
+   "Scandalous, misogynistic speech violates CPRA Canon II; disbarred"
+  ],
+  "ordered": false,
+  "src": "In re Gadon (2023)",
+  "rv": "scadmin-super",
+  "cases": [
+   "gadon"
+  ]
+ },
+ {
+  "id": "l-sa-venue",
+  "t": "scadmin",
+  "title": "Change of venue: the rule and the cases",
+  "ask": "When will the Court change the venue of a trial? Give the cases.",
+  "items": [
+   "Art. VIII, Sec. 5(4): to avoid a miscarriage of justice",
+   "Not for whimsical or flimsy reasons; crimes are best tried where committed",
+   "Serious and weighty reasons to doubt a fair and impartial trial (People v. Gutierrez)",
+   "Pilotin: hostile sentiment endangering the accused’s life",
+   "Mondiguing: a judge tied to the victim; danger to the accused",
+   "Sola: the effect of fear on the witnesses; doubts favor the change",
+   "It may be sought administratively, and moves the whole record"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Sec. 5(4); Pilotin; Mondiguing; Sola",
+  "rv": "scadmin-venue",
+  "hook": "Life, witnesses, judge.",
+  "cases": [
+   "pilotin",
+   "mondiguing",
+   "sola"
+  ]
+ },
+ {
+  "id": "l-sa-powers",
+  "t": "scadmin",
+  "title": "The SC’s administrative powers in Sec. 5 and 6",
+  "ask": "List the Supreme Court’s administrative powers under Article VIII.",
+  "items": [
+   "Administrative supervision over all courts and personnel (Sec. 6)",
+   "Temporary assignment of lower-court judges, at most six months without consent (Sec. 5(3))",
+   "Change of venue or place of trial (Sec. 5(4))",
+   "Appointment of all Judiciary officials and employees under the Civil Service Law (Sec. 5(6))",
+   "Discipline and dismissal of lower-court judges (Sec. 11)"
+  ],
+  "ordered": false,
+  "src": "Art. VIII, Secs. 5, 6 and 11",
+  "rv": "scadmin-venue",
+  "cases": [
+   "andal"
+  ]
+ }
+]

@@ -14,10 +14,10 @@ import re
 FIGS = {}    # file prefix -> [(mode, anchor, html)]
 WALL = []    # (prefix, figure id, title, hook html) for the hook wall
 SEC = {'00': 'method', '01': 'interp', '02': 'jr', '03': 'terr', '04': 'cit', '05': 'suff', '06': 'gov', '07': 'comp',
-       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '18': 'cinc', '19': 'court', '90': 'news'}
+       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '18': 'cinc', '19': 'court', '20': 'scadmin', '90': 'news'}
 SHORT = {'00': 'Exam method', '01': 'Interpretation', '02': 'Judicial review', '03': 'Territory', '04': 'Citizenship', '05': 'Suffrage',
          '06': 'Government', '07': 'Composition', '08': 'Internal', '09': 'Privileges', '10': 'Tribunals and CA', '11': 'Powers',
-         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '18': 'Commander-in-Chief', '19': 'The Supreme Court', '90': 'News'}
+         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '18': 'Commander-in-Chief', '19': 'The Supreme Court', '20': 'SC administration', '90': 'News'}
 
 
 # ---------- small builders ----------
@@ -1717,6 +1717,47 @@ fig('19', 'after', '<h3 id="court-pet">The Presidential Electoral Tribunal</h3>\
     hook='<em>Fifteen for the top two</em>; nine for the rest.',
     oral='The issue is whether [the PET] may validly hear [the protest]. Under the last paragraph of Article VII, Section 4, the Supreme Court en banc is the sole judge of contests over the election, returns and qualifications of the President and Vice-President; in Macalintal v. PET the Court held that the Tribunal is constitutional and exercises judicial power, independent but not separate from the Court, so its Justices are not designated to a quasi-judicial agency. Here, [the protest was filed after proclamation], so the PET has jurisdiction.',
     cap='Before proclamation, disputes go to the COMELEC and Congress as canvassers; the PET takes contests after proclamation. The electoral tribunals are on the ' + X('et', 'electoral tribunals map') + '.')
+
+# =====================================================================
+# 20 · the SC's administrative and rule-making powers (V.C.2(p))
+# =====================================================================
+fig('20', 'after', '<h3 id="scadmin-super">Supervision of lower courts and court personnel</h3>\n', 'scwho', 'Who disciplines whom in the Judiciary?',
+    cmp(['Sitting SC Justice', 'Lower-court judge or CA Justice', 'Court employee', 'Lawyer'], [
+        ('Administrative', 'impeachment only while in office; the Court may act once he retires (' + C('inrebiraogo', 'In re Biraogo') + ')', 'the Supreme Court en banc; dismissal by a majority of those who voted (Sec. 11; ' + C('inredemetria', 'In re Demetria') + '; ' + C('revasquez', 'Re: Vasquez') + ')', 'the Supreme Court through the OCA; the CSC only files (' + C('andal', 'CSC v. Andal') + ')', 'the Supreme Court; preventive suspension even before the answer (' + C('gadon', 'In re Gadon') + ')'),
+        ('Criminal', 'no removal-carrying charge during incumbency (' + C('ingonzalez', 'In re Gonzalez') + ')', 'the Ombudsman, but if it arises from court duties, refer to the Court first (' + C('macedavasquez', 'Maceda v. Vasquez') + ')', 'the same', 'ordinary prosecution'),
+        ('Disbarment', 'not while in office; after retirement, with due process', 'yes, through the Court', '—', 'yes: fitness, in public or private life'),
+    ]),
+    kind='comparison', when='a news card names a judge, Justice, court employee or lawyer under investigation, and you must say which body acts and in what order.',
+    hook='<em>The Court disciplines its own</em>; others may charge, the Court decides.',
+    oral='The issue is whether [the CSC] may discipline [a court employee]. Under Article VIII, Section 6, the Supreme Court has administrative supervision over all courts and their personnel; in CSC v. Andal the Court held that the CSC cannot try and decide an administrative case against court personnel but must file its complaint with the OCA, and in Maceda v. Vasquez that the Ombudsman must refer a complaint arising from court duties to the Court first. Here, [the CSC itself dismissed the employee], so its ruling is void and the case goes to the OCA.',
+    cap='A sitting Member of the Supreme Court answers to impeachment; the rest of the Judiciary answers to the Court.')
+
+fig('20', 'after', '<h3 id="scadmin-super">Supervision of lower courts and court personnel</h3>\n', 'screfer', 'Can this agency act against a judge or court employee?',
+    gates([G('Is the case administrative (discipline for how the respondent does the job)?', 'misconduct, dishonesty, inefficiency, civil service violations', 'Only the Court decides', 'the agency files with the OCA (' + C('andal', 'CSC v. Andal') + ')', 'yes', 'sun'),
+           G('Is it a criminal complaint that arises from the respondent’s court duties?', 'a falsified certificate of service, a court record, a ruling', 'Refer to the Court first', 'the Court decides whether the acts were within the duties; then the Ombudsman may proceed (' + C('macedavasquez', 'Maceda v. Vasquez') + ')', 'yes', 'sun'),
+           G('Does the agency need the Court’s records or personnel to testify?', 'the Court holds the records of its own administration', 'Ask the Court', 'another branch cannot compel the Court (' + C('macedavasquez', 'Maceda v. Vasquez') + ')', 'yes', 'sun')],
+          ('The agency may proceed', 'a crime unrelated to court duties is prosecuted like anyone else’s', 'ok'),
+          facts=[fact('CSC v. Andal (2009)', 'The CSC finds that someone else took a Sandiganbayan guard’s civil service exam, tries him for dishonesty and dismisses him.', 'y', 'The CSC should have filed with the OCA.'),
+                 fact('Maceda v. Vasquez (1993)', 'The Ombudsman investigates a judge for certifying that all his cases were decided in 90 days when 15 were pending.', 'n,y', 'The Ombudsman must defer and refer to the Court.'),
+                 fact('A road-rage shooting', 'A clerk of court shoots a motorist in a traffic dispute; the prosecutor files a homicide case.', 'n,n,n', 'Not about court duties: the case goes on (the Court may still discipline him separately).')]),
+    kind='gates', when='the CSC, the Ombudsman, a prosecutor or Congress moves against a judge or court employee.',
+    hook='<em>Administrative: the Court. Duty-related crime: the Court first</em>.',
+    oral='The issue is whether [the Ombudsman] may proceed against [the judge]. Under Article VIII, Section 6, the Supreme Court has exclusive administrative supervision over all courts and personnel; in Maceda v. Vasquez the Court held that where a criminal complaint against a judge arises from administrative duties, the Ombudsman must defer and refer it to the Court to determine first whether he acted within those duties. Here, [the charge is falsifying a certificate of service], so the Ombudsman must refer it to the Court first.',
+    cap='One act may carry both liabilities: administrative, to the Court; criminal, to the State (Maceda).')
+
+fig('20', 'after', '<h3 id="scadmin-venue">Temporary assignments, change of venue and court personnel</h3>\n', 'scvenue', 'Should the Court move this trial?',
+    gates([G('Is there a serious and weighty reason, not a whimsical one, to move it?', 'crimes are best tried where committed; convenience is not enough (' + C('mondiguing', 'Mondiguing v. Abad') + ')', 'Denied', 'the trial stays where the crime was committed', 'no', 'no'),
+           G('Is the accused’s life in danger at the place of trial, from hostile sentiment there?', 'political enemies, killings of supporters (' + C('pilotin', 'People v. Pilotin') + ')', 'Move it', '“absurd to compel him to undergo trial in a place where his life would be imperilled”', 'yes', 'ok'),
+           G('Do the witnesses fear to testify there, or is the judge tied to a party?', 'judge the effect of fear on the witnesses themselves (' + C('sola', 'People v. Sola') + '); a judge who is the victim’s political ally (' + C('mondiguing', 'Mondiguing v. Abad') + ')', 'Move it', 'doubts are resolved in favor of a change', 'yes', 'ok')],
+          ('Denied', 'no miscarriage of justice to avoid', 'no'),
+          facts=[fact('People v. Pilotin (1975)', 'Crisologo’s father was shot dead at mass in Vigan and his supporters killed; he asks not to be tried there.', 'y,y', 'Moved out of Vigan.'),
+                 fact('Mondiguing v. Abad (1975)', 'Accused in a governor’s ambush show the trial judge was disqualified elsewhere as the governor’s political leader; a co-accused was killed.', 'y,n,y', 'Moved to Baguio City.'),
+                 fact('People v. Sola (1981)', 'Witnesses to seven killings on a mayor’s hacienda fear being killed if the trial stays 10 km away, with the mayor free on bail.', 'y,n,y', 'Moved to Bacolod City.'),
+                 fact('Nearer home', 'An accused in a Cebu estafa case asks for trial in Quezon City, where he and his lawyer live.', 'n', 'Convenience is not a miscarriage of justice: denied.')]),
+    kind='gates', when='an accused or the prosecution asks to move a trial because of danger, fear, or a judge’s ties to a party.',
+    hook='<em>Life, witnesses, judge</em>; never mere convenience.',
+    oral='The issue is whether the Court should transfer [the trial]. Under Article VIII, Section 5(4), the Supreme Court may order a change of venue or place of trial to avoid a miscarriage of justice; in People v. Sola it held that what matters is the effect of fear on the witnesses who will testify, with doubts resolved in favor of a change, and in Pilotin that hostile sentiment endangering the accused justifies a transfer. Here, [the witnesses fear the powerful accused, who are out on bail], so the trial should be moved.',
+    cap='A change of venue transfers the whole record to the new court (Pilotin), and may be asked for administratively (Sola).')
 
 # =====================================================================
 # 00 · the hook wall (built last, from every hook above)

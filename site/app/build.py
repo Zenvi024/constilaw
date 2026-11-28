@@ -34,7 +34,7 @@ TOPICS = [  # key, name, syllabus part, rule-map section
     ('appt', 'Appointment and clemency', 'V.B.2(d)–(e)', 'appt'),
     ('cinc', 'Commander-in-Chief, other powers, the Vice-President', 'V.B.2(f)–(k), V.B.3', 'cinc'),
     ('court', 'The Supreme Court', 'V.C.1–2(o)', 'court'),
-    ('scadmin', 'The SC’s administrative and rule-making powers', 'V.C.2(p)', ''),
+    ('scadmin', 'The SC’s administrative and rule-making powers', 'V.C.2(p)', 'scadmin'),
     ('jbc', 'Lower courts and the JBC', 'V.C.3–6', ''),
     ('concom', 'Constitutional Commissions', 'Constitutional Commissions', ''),
 ]
