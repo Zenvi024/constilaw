@@ -713,10 +713,13 @@ function fmtFor(c){
   return shuffle(due.length ? due : fr.length ? fr : f)[0];
 }
 let dDir = store.get("ddir", "cr"), dTop = new Set(store.get("dtop", D.topics.map(t => t.key))), R = [], ri = 0, rDone = 0, rRight = 0;
+// the finals are cumulative: a topic choice saved during the midterms gets the finals topics added once
+if (store.get("dtop_v", 1) < 2){ D.topics.forEach((t, i) => { if (i >= D.topics.findIndex(x => x.key === "legproc")) dTop.add(t.key); }); store.set("dtop_v", 2); }
 function dPool(){ return CASES().filter(c => !c.ref && [...dTop].some(k => inT(c, k)) && (!$("dAnchor").checked || c.a) && (dDir === "cr" || dDir === "mix" || (dDir === "fc" ? c.f : c.r))); }
 function renderDSetup(){
   document.querySelectorAll("#dDir [data-d]").forEach(b => b.setAttribute("aria-pressed", b.dataset.d === dDir));
   $("dDirHelp").textContent = DIRS[dDir].help;
+  $("dParts").innerHTML = `<span class="tiny">One part:</span>` + RV_GROUPS.filter(g => TOPS().some(t => partOfTopic(t.key) === g[3])).map(g => `<button class="btn small ghost" data-dpart="${g[3]}">${esc(g[0])}</button>`).join("");
   $("dTopics").innerHTML = TOPS().map(t => `<label class="chip${dTop.has(t.key) ? " on" : ""}" for="dt_${t.key}"><input type="checkbox" id="dt_${t.key}" data-t="${t.key}"${dTop.has(t.key) ? " checked" : ""}>${esc(t.name)}</label>`).join("");
   const fm = c => dDir === "mix" ? FMTS(c) : [dDir], p = dPool(), due = p.filter(c => fm(c).some(x => isDue(x + ":" + c.id))).length, fresh = p.filter(c => fm(c).some(x => !SRS[x + ":" + c.id])).length;
   $("dCount").textContent = `${p.length} cases selected · ${due} due · ${fresh} not yet seen`;
@@ -725,6 +728,7 @@ function renderDSetup(){
 }
 $("dDir").addEventListener("click", e => { const b = e.target.closest("[data-d]"); if (b){ dDir = b.dataset.d; renderDSetup(); } });
 $("dTopics").addEventListener("change", e => { const t = e.target.dataset.t; if (!t) return; e.target.checked ? dTop.add(t) : dTop.delete(t); renderDSetup(); });
+$("dParts").addEventListener("click", e => { const b = e.target.closest("[data-dpart]"); if (b){ dTop = new Set(TOPS().filter(t => partOfTopic(t.key) === b.dataset.dpart).map(t => t.key)); renderDSetup(); } });
 $("dAll").onclick = () => { dTop = new Set(D.topics.map(t => t.key)); renderDSetup(); };
 $("dNone").onclick = () => { dTop = new Set(); renderDSetup(); };
 $("dAnchor").onchange = renderDSetup;
@@ -1226,11 +1230,11 @@ function firstSentence(r){ const m = r.match(/^.*?[a-z0-9)’'”][.;](?=\s+[A-Z
 let printed = false;
 function renderPrint(){
   if (printed) return; printed = true;
-  $("sheet1").innerHTML = `<h2>Issue checklist</h2><div class="sub">Consti 1 midterm · run it in the margin of every problem · 22 minutes each: read twice 4, outline 4, write 11, check 3</div>
+  $("sheet1").innerHTML = `<h2>Issue checklist</h2><div class="sub">Consti 1 finals · run it while you think: who acted, under what power, which rule, which case, your answer</div>
   <div class="cl">${ISSUES().map(g => `<div class="grp"><h4>${esc(g.g)}</h4><ul>${g.items.map(i => `<li><b>${esc(i.l)}.</b> ${esc(i.h)}</li>`).join("")}</ul></div>`).join("")}
   <div class="grp"><h4>Numbers</h4><ul>${D.numbers.map(([a, b]) => `<li><b>${esc(a)}:</b> ${esc(b)}</li>`).join("")}</ul></div>
   <div class="grp"><h4>Write it in CLEAR</h4><ul><li><b>C</b> Conclusion first (valid/void; Yes/No).</li><li><b>L</b> Rule + provision; a case only if you are sure (else ‘in one case, the Court held…’).</li><li><b>E</b> Exception only if one applies.</li><li><b>A</b> Apply to the exact words of the law or story.</li><li><b>R</b> Restate; it must agree with C.</li><li>80–120 words; all answers fit on the back of the questionnaire.</li><li>Did you answer the question asked (‘in his favor’, ‘no procedural issues’)?</li></ul></div>
-  <div class="grp"><h4>Exam room (5.0 if broken)</h4><ul><li>Student ID number only; no name or other marks.</li><li>Write at the back of the questionnaire; everything must fit.</li><li>Pen and correction tape only; no devices; nothing else on the table.</li><li>No talking or signals. Write legibly: unreadable = wrong.</li></ul></div></div>`;
+  <div class="grp"><h4>Say it in the fishbowl</h4><ul><li><b>Issue:</b> “The issue is whether …”</li><li><b>Rule:</b> the provision, by article and section.</li><li><b>Case:</b> one you are sure of; else “the Court has held”.</li><li><b>Apply:</b> “Here, …”: use the exact facts, numbers and dates.</li><li><b>Answer:</b> the same as your first thought, unless the facts change it.</li><li>Procedure (ripeness, mootness, standing) only if the facts raise it.</li><li>Second round: an exception, the other side, a changed fact, or his own view.</li></ul></div></div>`;
   const anc = CASES().filter(c => c.a);
   $("sheet2").innerHTML = `<h2>Anchor cases</h2><div class="sub">${anc.length} cases that carry a test · grouped by syllabus part${HIDE ? " · citizenship and territory left out" : ""}</div><div class="anc">${TOPS().map(t => { const g = anc.filter(c => c.t === t.key); return g.length ? `<div class="grp"><h4>${esc(t.name)}</h4>${g.map(c => `<p><b>${esc(c.n)}</b> (${esc(c.y)}): ${esc(c.s || firstSentence(c.r))}</p>`).join("")}</div>` : ""; }).join("")}</div>`;
 }
@@ -1357,6 +1361,8 @@ function printDocs(){
     {id: "lists", title: "Recall lists", sub: "every list, by topic"},
     {id: "hooks", title: "Hook wall", sub: "every diagram hook on a few pages"},
     {id: "exams", title: "Past exams with answers", sub: "essay questions with model answers; the multiple-choice midterms with keys"},
+    {id: "fishbowl", title: "Fishbowl cards", sub: "the 2026 news cards with outlines and follow-ups; the orals outline and follow-ups for every past-exam problem"},
+    {id: "orals", title: "Say it in orals", sub: "the spoken answer from every diagram, map by map"},
   ];
 }
 const PD_BUILD = {
@@ -1380,6 +1386,17 @@ const PD_BUILD = {
     return h;
   },
 };
+PD_BUILD.fishbowl = () => {
+  const card = c => `<div class="pdq"><div class="pdqh">${esc(c.title)} <span class="pdm">(${esc(c.tag)})</span></div><div class="pdpr">${esc(c.facts)}</div><p><b>${esc(c.ask)}</b></p><div class="pdlab">Say it in orals</div><p>${esc(c.say)}</p><div class="pdlab">The outline</div><ol>${c.pts.map(x => `<li>${esc(x)}</li>`).join("")}</ol>${c.cases && c.cases.length ? `<p class="pdm">Cases: ${c.cases.filter(id => CASE[id]).map(id => esc(CASE[id].n)).join("; ")}</p>` : ""}<div class="pdlab">Likely follow-ups</div><ul>${c.fu.map(f => `<li><b>${esc(f.q)}</b> ${esc(f.a)}</li>`).join("")}</ul></div>`;
+  const news = FW.filter(c => !c.essay && c.t.some(shownT)), past = FW.filter(c => c.essay && c.t.some(shownT));
+  return `<h1>Fishbowl cards</h1><p class="pdsub">Read the facts and the question, give yourself two minutes, answer out loud, then check the outline and take the follow-ups. News as of ${esc(D.fb.asof)}.</p>`
+    + `<h2 class="pdh">2026 news cards</h2>` + news.map(card).join("")
+    + `<h2 class="pdh pdbreak">Past exams and practice problems: the orals version</h2><p class="pdsub">The questions and model answers are in the past-exams PDF; here are the spoken outline and the follow-ups.</p>`
+    + past.map(c => `<div class="pdq"><div class="pdqh">${esc(c.tag)}: ${esc(c.title)}</div><p><b>${esc(c.ask)}</b></p><div class="pdlab">Say it in orals</div><p>${esc(c.say)}</p><div class="pdlab">Likely follow-ups</div><ul>${c.fu.map(f => `<li><b>${esc(f.q)}</b> ${esc(f.a)}</li>`).join("")}</ul></div>`).join("");
+};
+PD_BUILD.orals = () => `<h1>Say it in orals</h1><p class="pdsub">The spoken answer each diagram turns into: issue, rule, case, application, answer. Fill the bracketed parts with the facts you draw.</p>`
+  + rvGroups().map(([l, p, is]) => { const maps = is.filter(i => secShown(i)).map(i => [SECS[i], [...SECS[i].querySelectorAll("figure .vor p")]]).filter(([, v]) => v.length);
+      return maps.length ? `<h2 class="pdh">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</h2>` + maps.map(([sec, v]) => `<h3 class="pdh3">${esc(sec.dataset.title)}</h3>` + v.map(o => { const f = o.closest("figure"), t = f.querySelector(".vtt"); return `<div class="pdq"><div class="pdqh">${esc(t ? t.textContent : "")}</div><p>${o.innerHTML.replace(/<a [^>]*>|<\/a>/g, "")}</p></div>`; }).join("")).join("") : ""; }).join("");
 // title page and contents of the full reviewer (make_pdfs.js fills the page numbers; a browser print shows the contents without them)
 const REVIEWER_SKIP = ["method"];
 const pdToc = (cls, id, t) => `<li class="${cls}"><a href="#${id}"><span class="pdtt">${esc(t)}</span><span class="pdtd"></span><span class="pgn" data-toc="${id}"></span></a></li>`;

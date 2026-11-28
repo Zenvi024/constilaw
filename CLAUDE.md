@@ -82,7 +82,7 @@ Don't let quality slide in later batches: copy the patterns already in `site/` (
 
 ## Verification before every publish
 
-`python3 site/app/build.py`, then `node site/tests/smoke.js`, `features.js`, `viz.js`, `drill.js`, `nav.js`, `digests.js`, `fishbowl.js` (all must pass at 400 px and 1280 px, light and dark, no console errors, no horizontal scroll), plus the digest word check. Look at one or two screenshots. Then commit, push and publish to the desk URL.
+`python3 site/app/build.py`, then `node site/tests/smoke.js`, `features.js`, `viz.js`, `drill.js`, `nav.js`, `digests.js`, `fishbowl.js`, `course.js` (all must pass at 400 px and 1280 px, light and dark, no console errors, no horizontal scroll), plus the digest word check. Look at one or two screenshots. Then commit, push and publish to the desk URL.
 
 ## Size
 
