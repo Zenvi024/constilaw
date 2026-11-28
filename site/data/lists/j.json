@@ -1,0 +1,308 @@
+[
+ {
+  "id": "j-cc-powers",
+  "t": "cinc",
+  "title": "The graduated Commander-in-Chief powers",
+  "ask": "Name the three Commander-in-Chief powers, from least to most intrusive, with the ground for each.",
+  "items": [
+   "Calling out the armed forces: whenever necessary, to prevent or suppress lawless violence, invasion or rebellion",
+   "Suspending the privilege of the writ: actual invasion or rebellion, when public safety requires it",
+   "Martial law: actual invasion or rebellion, when public safety requires it"
+  ],
+  "ordered": true,
+  "src": "Art. VII, Sec. 18; Sanlakas; David; Lagman (2017)",
+  "rv": "cinc-callout",
+  "hook": "Call, suspend, declare.",
+  "cases": [
+   "sanlakas",
+   "davidgma",
+   "lagman17"
+  ]
+ },
+ {
+  "id": "j-cc-sec18",
+  "t": "cinc",
+  "title": "The Sec. 18 safeguards on martial law and the writ",
+  "ask": "List the safeguards the 1987 Constitution put on martial law and the suspension of the writ.",
+  "items": [
+   "Only for actual invasion or rebellion, when public safety requires it (“imminent danger” deleted)",
+   "At most 60 days",
+   "Report to Congress within 48 hours",
+   "Congress, voting jointly by a majority of all its Members, may revoke; the President cannot set it aside",
+   "Extension only on the President’s initiative, if the invasion or rebellion persists and public safety requires it",
+   "Congress convenes within 24 hours if not in session, without need of a call",
+   "Any citizen may ask the Supreme Court to review the factual basis; decision within 30 days",
+   "Martial law does not suspend the Constitution or supplant the civil courts or legislatures",
+   "No military jurisdiction over civilians where civil courts function; the writ is not automatically suspended",
+   "The suspension applies only to persons judicially charged with rebellion or offenses connected with invasion, who must be charged within 3 days or released"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 18",
+  "rv": "cinc-ml",
+  "hook": "Actual, 60, 48, revoke, extend, 24, citizen-30, Constitution stays, no soldier-judges, 3 days.",
+  "cases": [
+   "lagman17",
+   "olaguer",
+   "padilla"
+  ]
+ },
+ {
+  "id": "j-cc-ibp",
+  "t": "cinc",
+  "title": "Why the Court defers on calling out (IBP v. Zamora)",
+  "ask": "Give the reasons IBP v. Zamora gives for deferring to the President’s decision to call out the armed forces.",
+  "items": [
+   "The only criterion is that calling out “becomes necessary,” a matter the Constitution leaves to the President",
+   "There are no textual standards for the Court to apply",
+   "The evidence may not be technical proof, and much of it may be classified",
+   "The President has a vast intelligence network and must act swiftly",
+   "So review is only for grave abuse, and the petitioner must show the judgment was totally without factual basis"
+  ],
+  "ordered": false,
+  "src": "IBP v. Zamora (2000); Ampatuan v. Puno (2011)",
+  "rv": "cinc-callout",
+  "hook": "Necessary, no standards, no proof, intelligence, grave abuse.",
+  "cases": [
+   "ibpzamora",
+   "ampatuan"
+  ]
+ },
+ {
+  "id": "j-cc-history",
+  "t": "cinc",
+  "title": "Judicial review of martial law and the writ: the line of cases",
+  "ask": "Trace the Court’s position on reviewing the suspension of the writ and martial law, in order.",
+  "items": [
+   "Montenegro v. Castañeda (1952): the President’s decision is final, not reviewable",
+   "Lansang v. Garcia (1971): reviewable for arbitrariness",
+   "Garcia-Padilla v. Enrile (1983): back to Montenegro",
+   "1987 Constitution, Art. VII, Sec. 18: any citizen may sue; sufficiency of the factual basis; 30 days",
+   "Fortun (2012): the Court waits for Congress (joint and sequential)",
+   "Lagman v. Medialdea (2017): sui generis review, independent of Congress; Fortun set aside"
+  ],
+  "ordered": true,
+  "src": "Gatmaytan, Martial Law Cases lecture; Lagman (2017)",
+  "rv": "cinc-ml",
+  "hook": "Final, arbitrary, final again, citizen-30, wait, independent.",
+  "cases": [
+   "fortun",
+   "lagman17"
+  ]
+ },
+ {
+  "id": "j-cc-lagman17",
+  "t": "cinc",
+  "title": "The rules of review in Lagman v. Medialdea (2017)",
+  "ask": "State the rules Lagman v. Medialdea (2017) laid down for reviewing martial law.",
+  "items": [
+   "The “appropriate proceeding” is sui generis, not certiorari; any citizen may file",
+   "The Court’s review is independent of Congress’s",
+   "The question is sufficiency of the factual basis, not accuracy",
+   "Actual rebellion (Art. 134, RPC) or invasion, and public safety, must concur",
+   "The President needs only probable cause",
+   "Only facts known to the President at the time count (the Proclamation and the Report), in their totality",
+   "Some false facts do not void it if the rest suffice",
+   "The Court does not calibrate the choice of power or the area covered"
+  ],
+  "ordered": false,
+  "src": "Lagman v. Medialdea (2017)",
+  "rv": "cinc-review",
+  "hook": "Sui generis, independent, sufficient, actual-and-safe, probable cause, then-known, falsity tolerated, no calibration.",
+  "cases": [
+   "lagman17"
+  ]
+ },
+ {
+  "id": "j-cc-ext",
+  "t": "cinc",
+  "title": "Limits on extending martial law (Lagman v. Pimentel III)",
+  "ask": "Give the only limits on Congress’s power to extend martial law or the suspension of the writ.",
+  "items": [
+   "Upon the initiative of the President",
+   "The invasion or rebellion persists and public safety requires it",
+   "Congress votes jointly, by a majority of all its Members (“in the same manner”)",
+   "Subject to the Supreme Court’s review of the factual basis",
+   "No limit on the number of extensions or their length: “a period to be determined by the Congress”"
+  ],
+  "ordered": false,
+  "src": "Lagman v. Pimentel III (2018); Lagman v. Medialdea (2019)",
+  "rv": "cinc-review",
+  "hook": "Asked, persisting, joint majority, reviewable, unlimited.",
+  "cases": [
+   "lagmanpimentel",
+   "lagman19"
+  ]
+ },
+ {
+  "id": "j-cc-olaguer",
+  "t": "cinc",
+  "title": "What Olaguer held",
+  "ask": "State the holdings of Olaguer v. Military Commission No. 34.",
+  "items": [
+   "Military commissions cannot try civilians, even during martial law, while civil courts are open and functioning",
+   "Due process means trial by judicial process; military commissions are not courts",
+   "Their judgments against civilians are void for lack of jurisdiction",
+   "Aquino, Jr. v. Military Commission No. 2 is abandoned",
+   "Even with jurisdiction, a tribunal that denies constitutional rights is ousted of it",
+   "Lifting martial law ended their authority over civilians; double jeopardy does not bar a civil trial"
+  ],
+  "ordered": false,
+  "src": "Olaguer v. Military Commission No. 34 (1987)",
+  "rv": "cinc-ml",
+  "hook": "No soldier-judges for civilians.",
+  "cases": [
+   "olaguer"
+  ]
+ },
+ {
+  "id": "j-cc-habeas",
+  "t": "cinc",
+  "title": "Habeas corpus after a final conviction (In re De Villa)",
+  "ask": "When does habeas corpus lie against a final judgment of conviction?",
+  "items": [
+   "A constitutional right was denied, resulting in the restraint",
+   "The court had no jurisdiction to impose the sentence",
+   "The penalty was excessive, as to the excess"
+  ],
+  "ordered": false,
+  "src": "In re De Villa (2004)",
+  "rv": "cinc-ml",
+  "hook": "Right denied, no jurisdiction, too much.",
+  "cases": [
+   "devilla"
+  ]
+ },
+ {
+  "id": "j-cc-david",
+  "t": "cinc",
+  "title": "What David v. Macapagal-Arroyo held on PP 1017",
+  "ask": "Give the Court’s rulings on PP 1017 and General Order No. 5.",
+  "items": [
+   "Valid as a call on the AFP to prevent or suppress lawless violence; not martial law",
+   "Void insofar as it ordered the AFP to enforce decrees and laws unrelated to lawless violence",
+   "The President may declare a state of national emergency alone",
+   "But taking over private businesses (Art. XII, Sec. 17) needs a law from Congress",
+   "G.O. No. 5 valid, except its undefined “acts of terrorism”",
+   "The warrantless arrests, the dispersals and the Daily Tribune raid were unconstitutional",
+   "Decided though moot, under the four exceptions"
+  ],
+  "ordered": false,
+  "src": "David v. Macapagal-Arroyo (2006)",
+  "rv": "cinc-emerg",
+  "hook": "Call yes, decrees no, declare yes, take over only by law.",
+  "cases": [
+   "davidgma"
+  ]
+ },
+ {
+  "id": "j-cc-rand",
+  "t": "cinc",
+  "title": "RA 12287: the State of Imminent Disaster",
+  "ask": "Give the main features of the Declaration of State of Imminent Disaster Act (RA 12287, 2025).",
+  "items": [
+   "Declared by the President on the NDRRMC’s recommendation (local chief executives in their areas)",
+   "Based on a pre-disaster risk assessment of a forecasted hazard with severe projected impacts",
+   "A lead time of three days, extendible to five, for anticipatory action",
+   "Allows pre-emptive evacuation, prepositioning of teams and goods, social amelioration and release of funds",
+   "Lifted when the projected impacts are no longer expected, and automatically when the hazard occurs"
+  ],
+  "ordered": false,
+  "src": "RA 12287 (2025)",
+  "rv": "cinc-emerg",
+  "hook": "Recommend, assess, three days, act early, lift.",
+  "cases": []
+ },
+ {
+  "id": "j-cc-loans",
+  "t": "cinc",
+  "title": "The foreign-loan power",
+  "ask": "State the rules on contracting and guaranteeing foreign loans.",
+  "items": [
+   "The President contracts or guarantees foreign loans on behalf of the Republic (Art. VII, Sec. 20)",
+   "With the prior concurrence of the Monetary Board",
+   "Prior concurrence works in stages: Approval-in-Principle, then signing, then Final Approval before drawdown (Colmenares)",
+   "Subject to limitations provided by law (RA 4860; RA 245)",
+   "Bond conversions and buybacks are within the power (Constantino)",
+   "The Finance Secretary may act as alter ego (Constantino)",
+   "The Monetary Board reports its decisions to Congress every quarter",
+   "Information on foreign loans must be made available to the public (Art. XII, Sec. 21)"
+  ],
+  "ordered": false,
+  "src": "Art. VII, Sec. 20; Constantino (2005); Colmenares (2022)",
+  "rv": "cinc-loans",
+  "hook": "Loan, Board, law, public.",
+  "cases": [
+   "constantino",
+   "colmenares"
+  ]
+ },
+ {
+  "id": "j-cc-vfa",
+  "t": "cinc",
+  "title": "What Nicolas v. Romulo held",
+  "ask": "State the holdings of Nicolas v. Romulo.",
+  "items": [
+   "The VFA complies with Art. XVIII, Sec. 25: the Senate concurred and the US recognized it as a treaty",
+   "Whether the US Senate ratified it is a matter of US domestic law",
+   "US troops are also here under the Mutual Defense Treaty, ratified by both Senates",
+   "Medellin v. Texas does not affect the VFA",
+   "US custody of an accused during trial violates neither equal protection nor the Court’s rule-making power",
+   "After conviction, detention must be by Philippine authorities: the Romulo-Kenney Agreements were not in accord with the VFA"
+  ],
+  "ordered": false,
+  "src": "Nicolas v. Romulo (2009)",
+  "rv": "cinc-foreign",
+  "hook": "Concurred, recognized, MDT, Medellin no, custody yes, detention ours.",
+  "cases": [
+   "nicolas"
+  ]
+ },
+ {
+  "id": "j-cc-immunity",
+  "t": "cinc",
+  "title": "Presidential immunity from suit",
+  "ask": "State the rules on the President’s immunity from suit.",
+  "items": [
+   "The incumbent President cannot be sued during tenure, though the Constitution is silent (De Lima)",
+   "It covers any suit and any act, official or personal, even habeas data (De Lima)",
+   "The Court applies it even if the President does not invoke it (De Lima)",
+   "It belongs to the President alone: an accused cannot invoke it (Soliven)",
+   "The President may waive it and file suit (Soliven)",
+   "It does not cover the President’s subordinates (Gloria)",
+   "It ends with the tenure: a former President may be prosecuted (Estrada v. Arroyo)",
+   "The remedy against a sitting President is impeachment"
+  ],
+  "ordered": false,
+  "src": "De Lima (2019); Soliven (1988); Gloria (2000); Estrada (2001)",
+  "rv": "cinc-immunity",
+  "hook": "Sitting, total, automatic, personal, waivable, not for officials, ends, impeach.",
+  "cases": [
+   "delima",
+   "soliven",
+   "gloriaca",
+   "estradaarroyo"
+  ]
+ },
+ {
+  "id": "j-cc-pet",
+  "t": "cinc",
+  "title": "What Marcos, Jr. v. Robredo held",
+  "ask": "State the holdings of Marcos, Jr. v. Robredo (PET, 2021).",
+  "items": [
+   "A protest must specify each irregularity and its precinct; bare allegations are not enough",
+   "Under PET Rule 65, the protestant picks at most three pilot provinces",
+   "No reasonable recovery in the pilots: the protest is dismissed without more",
+   "That dismissal also bars the cause of action to annul elections",
+   "Annulment would need the Abayon requisites anyway",
+   "The PET may annul election results, but only the COMELEC may call special elections",
+   "RA 1793’s 20-month period no longer binds the PET"
+  ],
+  "ordered": false,
+  "src": "Marcos, Jr. v. Robredo (2021)",
+  "rv": "cinc-vp",
+  "hook": "Specific, three pilots, recovery or out, Abayon, annul yes, special election no.",
+  "cases": [
+   "robredo"
+  ]
+ }
+]

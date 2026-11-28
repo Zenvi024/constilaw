@@ -14,10 +14,10 @@ import re
 FIGS = {}    # file prefix -> [(mode, anchor, html)]
 WALL = []    # (prefix, figure id, title, hook html) for the hook wall
 SEC = {'00': 'method', '01': 'interp', '02': 'jr', '03': 'terr', '04': 'cit', '05': 'suff', '06': 'gov', '07': 'comp',
-       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '90': 'news'}
+       '08': 'internal', '09': 'priv', '10': 'et', '11': 'powers', '12': 'money', '14': 'legproc', '15': 'ocong', '16': 'pres', '17': 'appt', '18': 'cinc', '90': 'news'}
 SHORT = {'00': 'Exam method', '01': 'Interpretation', '02': 'Judicial review', '03': 'Territory', '04': 'Citizenship', '05': 'Suffrage',
          '06': 'Government', '07': 'Composition', '08': 'Internal', '09': 'Privileges', '10': 'Tribunals and CA', '11': 'Powers',
-         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '90': 'News'}
+         '12': 'Money', '14': 'Legislative process', '15': 'Other powers, impeachment', '16': 'The President', '17': 'Appointment, clemency', '18': 'Commander-in-Chief', '90': 'News'}
 
 
 # ---------- small builders ----------
@@ -1057,7 +1057,7 @@ fig('15', 'before', '<aside class="note gat"><strong>Gatmaytan (<em>Government S
     kind='comparison', when='the President declares a state of emergency or calamity and wants to take over businesses, spend, or legislate.',
     hook='<em>Congress lends, the President borrows</em>: emergency powers and takeovers need a law; only the Commander-in-Chief powers are the President’s own, and Congress can revoke them.',
     oral='The issue is whether the President may take over [the power plants] in an emergency. The President alone may declare a national emergency, but the takeover of a private business under Article XII, Section 17 needs a law, as do emergency powers under Article VI, Section 23(2): in David v. Macapagal-Arroyo, the Court held that “the State” means Congress. Here, [there is no law], so the takeover is void.',
-    cap='The Commander-in-Chief clause gets its own map in Batch 7 (V.B.2(f)).')
+    cap='The Commander-in-Chief powers are compared side by side on their own map: ' + X('fig-cincpowers', 'calling out, the writ, martial law') + '.')
 
 fig('15', 'after', '<h3 id="ocong-impeach">Impeachment: who, for what, and how</h3>\n', 'impflow', 'From complaint to judgment: tap a stage', stepper([
     ('File (first mode)', 'z-a', N('A verified complaint', 'by a Member of the House, or by a citizen with a Member’s resolution or endorsement', 'acc')),
@@ -1410,6 +1410,171 @@ fig('17', 'after', '<h3 id="appt-amnesty">Amnesty: claiming it and revoking it</
     oral='The issue is whether the President may revoke [the amnesty]. Article VII, Section 19 lets the President grant amnesty only with the concurrence of a majority of all the Members of Congress, and in Trillanes IV v. Medialdea the Court held that revocation likewise needs that concurrence, and struck down a proclamation that voided one grantee’s amnesty for violating due process, equal protection, the ban on ex post facto laws and double jeopardy. Here, [the President acted alone, years after the grant became final], so the revocation is void.',
     cap='Vera answers who may claim; Trillanes answers how much admission is enough and who may take it back.')
 
+
+# =====================================================================
+# 18 · Commander-in-Chief, other powers, the Vice-President (finals, Batch 7)
+# =====================================================================
+fig('18', 'after', '<h3 id="cinc-callout">The Commander-in-Chief and the calling-out power</h3>\n', 'cincpowers', 'Three Commander-in-Chief powers, side by side',
+    cmp(['Calling out', 'Suspending the writ', 'Martial law'], [
+        ('Ground', 'lawless violence, invasion or rebellion, “whenever it becomes necessary”', 'actual invasion or rebellion, when public safety requires it', 'the same'),
+        ('Time limit', 'none', '60 days; Congress may extend on the President’s initiative', 'the same'),
+        ('Report to Congress', 'none', 'within 48 hours', 'the same'),
+        ('Congress', 'no role', 'may revoke (voting jointly, majority of all) at any time, on any ground', 'the same'),
+        ('The Court', 'grave abuse only; the petitioner proves no factual basis (' + C('ibpzamora', 'IBP v. Zamora') + ')', 'sufficiency of the factual basis, on any citizen’s petition, within 30 days (' + C('lagman17', 'Lagman') + ')', 'the same'),
+        ('Effect', 'troops assist the police; no new power (' + C('sanlakas', 'Sanlakas') + ')', 'no habeas corpus for persons judicially charged with rebellion or invasion offenses; charge within 3 days or release', 'the Constitution, civil courts and legislatures keep working; no military trial of civilians where courts function (' + C('olaguer', 'Olaguer') + '); the writ is not automatically suspended'),
+    ]),
+    kind='comparison', when='a President deploys troops, declares a “state” of something, suspends the writ or declares martial law, and you must say which power it is and what checks apply.',
+    hook='<em>Call, suspend, declare</em>: the higher the power, the more checks; none of them suspends the Constitution.',
+    oral='The issue is which Commander-in-Chief power [the President] used and what it allows. Article VII, Section 18 grants graduated powers: calling out the armed forces whenever necessary, and, only in case of actual invasion or rebellion when public safety requires it, suspending the writ or declaring martial law for up to 60 days. In Sanlakas v. Executive Secretary and David v. Macapagal-Arroyo the Court held that a declaration adds no power and that a calling-out cannot be used to exercise greater powers. Here, [the President only deployed troops against lawless violence], so it is a valid calling-out that needs no report to Congress.',
+    cap='The graduation is in scope, not sequence: the President may go straight to martial law if its grounds exist (Lagman, 2017).')
+
+fig('18', 'after', '<h3 id="cinc-callout">The Commander-in-Chief and the calling-out power</h3>\n', 'callout', 'Is this calling-out valid?',
+    gates([G('Does the act go beyond calling out: decrees, a takeover of businesses, arrests or searches outside the Rules of Court?', 'PP 1017’s “decrees … promulgated by me”; Art. XII, Sec. 17 takeovers; warrantless arrests without a Rule 113 ground', 'That part is void', 'the President cannot legislate, and a takeover needs a law (' + C('davidgma', 'David') + ')', 'yes', 'no'),
+           G('Is the military put above the civilian authorities?', 'civilian supremacy (Art. II, Sec. 3): who commands the operation?', 'Void', 'the police must stay in command; soldiers exercise no compulsory power over civilians (' + C('ibpzamora', 'IBP v. Zamora') + ')', 'yes', 'no'),
+           G('Has the petitioner shown the President’s judgment was totally without factual basis?', 'grave abuse is the only ground; intelligence reports usually suffice; necessity is the President’s call', 'Void for grave abuse', 'the Court has not yet so found', 'yes', 'no')],
+          ('Valid calling-out', 'no report, no time limit, no act of Congress; a “state of rebellion” label adds nothing (' + C('sanlakas', 'Sanlakas') + ')', 'ok'),
+          facts=[fact('IBP v. Zamora (2000)', 'President Estrada orders Marines to join police patrols in Metro Manila to curb crime; the police command the task force.', 'n,n,n', 'Within his judgment, and civilian supremacy was kept.'),
+                 fact('Sanlakas (2004)', 'After the Oakwood mutiny, the President declares a state of rebellion and calls out the AFP, then lifts it.', 'n,n,n', 'Valid, though the declaration is a superfluity.'),
+                 fact('Ampatuan v. Puno (2011)', 'After the Maguindanao massacre, troops are called out in three areas under a state of emergency.', 'n,n,n', 'The feuding clans’ armed followers gave a factual basis.'),
+                 fact('David (2006)', 'A proclamation calls out the AFP and orders it to enforce “all decrees … promulgated by me”; a professor is arrested at a rally without a warrant.', 'y', 'Valid as a calling-out only; the decrees clause and the arrest were void.'),
+                 fact('Soldiers in charge', 'Soldiers are sent to run city checkpoints on their own and to arrest violators, with no police officer in command.', 'n,y?', 'Arguable, but civilian supremacy points to the police staying in charge.')]),
+    kind='gates', when='troops are deployed against crime, unrest or violence, or a President declares a “state of emergency” or “state of rebellion.”',
+    hook='<em>Necessary, civilian-led, nothing more</em>: calling out needs only necessity, but it adds no power.',
+    oral='The issue is whether [the deployment] is a valid exercise of the calling-out power. Under Article VII, Section 18, the President may call out the armed forces whenever it becomes necessary to prevent or suppress lawless violence, invasion or rebellion; in IBP v. Zamora the Court held that this judgment is reviewable only for grave abuse, which the petitioner must prove, and that civilian supremacy holds while the police stay in command. Here, [the Marines only assist police patrols under police command], so the deployment is valid.',
+    cap='Ampatuan adds that a calling-out is not an exercise of emergency powers, so it needs no law.')
+
+fig('18', 'after', '<h3 id="cinc-ml">Martial law and the writ: grounds, limits and the civil courts</h3>\n', 'mldetain', 'A detainee under martial law: what protects him?',
+    gates([G('Is a civilian being tried by a military tribunal while the civil courts are open?', 'Sec. 18, par. 4', 'Void trial', 'military courts have no jurisdiction over civilians where civil courts function (' + C('olaguer', 'Olaguer') + ')', 'yes', 'no'),
+           G('Is he held under the final judgment of a competent court?', 'habeas corpus is not a writ of error', 'Habeas corpus only on three grounds', 'a denied constitutional right, no jurisdiction, or an excessive penalty (' + C('devilla', 'De Villa') + ')', 'yes', 'sun'),
+           G('Has the privilege of the writ been suspended?', 'martial law alone does not suspend it', 'Habeas corpus lies', 'the jailer must justify the detention', 'no', 'acc'),
+           G('Is he judicially charged with rebellion or an offense inherent in or directly connected with invasion?', 'the suspension covers no one else', 'Habeas corpus lies', 'the suspension does not reach him', 'no', 'acc'),
+           G('Was he charged within three days of his arrest?', 'Sec. 18, last paragraph', 'He must be released', 'the detention has become illegal', 'no', 'no')],
+          ('Detention continues; no habeas corpus for now', 'but the Bill of Rights, counsel and the courts still work, and the arrest needed a warrant or a Rule 113 ground', 'sun'),
+          facts=[fact('Olaguer (1987)', 'Civilians accused of plotting to kill the President are tried by a military commission while the civil courts are open, and sentenced to death.', 'y', 'Void: no military jurisdiction over civilians while the civil courts function.'),
+                 fact('In re De Villa (2004)', 'A convict whose rape conviction is final petitions for habeas corpus, citing DNA tests showing he did not father the victim’s child.', 'n,y', 'None of the three grounds: the writ does not re-weigh the evidence.'),
+                 fact('Martial law, writ intact', 'Martial law is declared, but nothing is said of the writ; a journalist is detained without charges.', 'n,n,n', 'Martial law does not automatically suspend the writ: habeas corpus lies.'),
+                 fact('An organizer held', 'The writ is suspended because of a rebellion; police hold a rally organizer who is charged with nothing.', 'n,n,y,n', 'The suspension covers only persons judicially charged with rebellion or invasion offenses.'),
+                 fact('Charged on day five', 'During the suspension, a suspected rebel arrested on a Monday is charged with rebellion on Saturday.', 'n,n,y,y,n', 'Not charged within three days: he must be released.'),
+                 fact('Charged in time', 'A rebel captured in the battle zone is charged with rebellion the next day.', 'n,n,y,y,y', 'The suspension applies to him: no habeas corpus for now, but he keeps his other rights.')]),
+    kind='gates', when='someone is arrested, detained or tried during martial law or a suspension of the writ, or a convict seeks habeas corpus.',
+    hook='<em>No soldier-judges, no writ of error; charged, connected, and within three days</em>.',
+    oral='The issue is whether [the detainee] may be held without the remedy of habeas corpus. Under Article VII, Section 18, martial law does not suspend the Constitution or the functioning of the civil courts, nor give military courts jurisdiction over civilians where civil courts function, as Olaguer v. Military Commission No. 34 held; and a suspension of the writ applies only to persons judicially charged with rebellion or offenses connected with invasion, who must be charged within three days or released. Here, [he was arrested at a rally and never charged], so the suspension does not cover him and habeas corpus lies.',
+    cap='Suspending the writ suspends the remedy, not the right: an illegal arrest stays illegal (Carpio, J., in Fortun).')
+
+fig('18', 'after', '<h3 id="cinc-review">Reviewing martial law: the Court, Congress and extensions</h3>\n', 'mlrev', 'Will this martial law, or its extension, survive review?',
+    gates([G('Is there an actual rebellion or invasion, not merely an imminent danger?', 'rebellion is Art. 134, RPC: a public uprising and taking up arms to remove territory from allegiance or deprive the President or Congress of powers; probable cause suffices', 'Insufficient basis: void', '“imminent danger” was deleted in 1987', 'no', 'no'),
+           G('Does public safety require it?', 'the Court defers on the area covered: rebellion has no predetermined bounds (' + C('lagman17', 'Lagman, 2017') + ')', 'Insufficient basis: void', 'Congress may also revoke, at any time and on any ground', 'no', 'no'),
+           G('Is it within its first 60 days, or extended by Congress on the President’s initiative?', 'a joint vote by a majority of all the Members; as often and as long as Congress fixes, while the rebellion persists (' + C('lagmanpimentel', 'Lagman v. Pimentel III') + ')', 'Lapsed', 'the 60-day “time fuse” has run', 'no', 'sun')],
+          ('Sufficient factual basis: valid', 'judged on the facts known when it was issued, in their totality; some false facts do not void it; abuses go to separate cases (' + C('lagman19', 'Lagman, 2019') + ')', 'ok'),
+          facts=[fact('Lagman v. Medialdea (2017)', 'Rebels besiege Marawi, burn buildings, take hostages and raise ISIS flags; martial law is declared over all of Mindanao.', 'y,y,y', 'Actual rebellion with public safety; all of Mindanao could be covered.'),
+                 fact('Lagman v. Pimentel III (2018)', 'Marawi is liberated, but 185 rebels are at large, about 400 recruits join, and bomb plots continue; Congress extends martial law for a year at the President’s request.', 'y,y,y', 'The rebellion persists, and Congress may fix the period.'),
+                 fact('Lagman v. Medialdea (2019)', 'Bombings, kidnappings and NPA attacks continue; Congress extends martial law a third time.', 'y,y,y', 'Reasonableness, not accuracy: the reports in their totality suffice.'),
+                 fact('A planned uprising', 'Intelligence says a rebellion is being planned; the President declares martial law nationwide before any armed uprising.', 'n', 'A planned rebellion is at most an imminent danger, which the 1987 text deleted.'),
+                 fact('Day 61', 'Martial law is declared on March 1; Congress never extends it; troops still enforce it on May 5.', 'y,y,n', 'Past 60 days without an extension: it has lapsed.')]),
+    kind='gates', when='a petition challenges martial law, the suspension of the writ, or an extension, or Congress debates whether to extend.',
+    hook='<em>Actual, safe, on time</em>: real rebellion, public safety, and 60 days or Congress.',
+    oral='The issue is whether [the proclamation] has sufficient factual basis. Under Article VII, Section 18, the Court reviews only the sufficiency of the factual basis, on any citizen’s petition, within 30 days; in Lagman v. Medialdea (2017) the Court required an actual rebellion, as defined in Article 134 of the Revised Penal Code, and that public safety require martial law, judged on the facts known to the President at the time and needing only probable cause. Here, [there is no armed uprising yet, only intelligence of a plot], so there is no sufficient factual basis and the proclamation is void.',
+    cap='Congress may revoke at any time, on any ground, and the President cannot set the revocation aside.')
+
+fig('18', 'after', '<h3 id="cinc-review">Reviewing martial law: the Court, Congress and extensions</h3>\n', 'mlclock', 'Mindanao martial law, 2017 to 2019',
+    tl([('May 23, 2017', 'Proclamation No. 216: martial law and the writ suspended in all of Mindanao, after the Marawi siege begins', 'key'),
+        ('May 25, 2017', 'Report to Congress within 48 hours; each House adopts a resolution of support; no joint session', ''),
+        ('July 4, 2017', C('lagman17', 'Lagman v. Medialdea') + ': sufficient factual basis, 11–4; Fortun’s sequential view set aside', 'key'),
+        ('July 22, 2017', 'First extension by Congress in joint session, to December 31, 2017', ''),
+        ('July 25, 2017', C('padilla', 'Padilla v. Congress') + ': no joint session needed except to revoke or extend', ''),
+        ('Oct. 17, 2017', 'Marawi declared liberated', ''),
+        ('Dec. 13, 2017', 'Second extension (RBH No. 4, 240–27), to December 31, 2018', ''),
+        ('Feb. 6, 2018', C('lagmanpimentel', 'Lagman v. Pimentel III') + ': Congress may extend as often and as long as it fixes, 10–5', 'key'),
+        ('Dec. 12, 2018', 'Third extension (RBH No. 6)', ''),
+        ('Feb. 19, 2019', C('lagman19', 'Lagman v. Medialdea') + ': third extension upheld, 9–4', 'key')]),
+    kind='timeline', when='a news card asks how long martial law can last, or recalls the Mindanao martial law.',
+    hook='<em>60 days became three extensions</em>, each upheld.',
+    oral='The issue is whether martial law may be extended again. Under Article VII, Section 18, Congress, voting jointly by a majority of all its Members, may extend a proclamation on the President’s initiative if the rebellion persists and public safety requires it; in Lagman v. Pimentel III the Court held that Congress may do so more than once and for any period it fixes. Here, [the rebellion persists and the President asked], so a further extension is valid, subject to the Court’s review of its factual basis.',
+    cap='The professor’s point: three extensions, all upheld, show how little the 60-day limit now restrains.')
+
+fig('18', 'after', '<h3 id="cinc-emerg">Emergency powers</h3>\n', 'emergpres', 'Can the President do this in an emergency?',
+    gates([G('Is it a calling-out of the armed forces, or a mere declaration of a state of emergency or rebellion?', 'the President’s own powers', 'Valid without a new law', 'a declaration adds no power (' + C('sanlakas', 'Sanlakas') + '; ' + C('ampatuan', 'Ampatuan') + ')', 'yes', 'ok'),
+           G('Does a law authorize it?', 'a Sec. 23(2) delegation (war or national emergency, a limited period, restrictions, a declared policy), a takeover law, or a statute such as RA 12287', 'Valid within the law', 'until the period ends, Congress withdraws it by resolution, or the next adjournment', 'yes', 'ok'),
+           G('Does it legislate, or take over or direct a private business?', 'decrees; seizing utilities, factories or media; new crimes', 'Void', 'legislative power is Congress’s; “the State” in Art. XII, Sec. 17 means Congress (' + C('davidgma', 'David') + ')', 'yes', 'no')],
+          ('Valid only within existing executive powers', 'for example, directing executive agencies, or spending funds already appropriated for the purpose', 'sun'),
+          facts=[fact('David (2006)', 'The President declares a national emergency, orders the AFP to enforce her decrees, and invokes the power to take over businesses; police raid a newspaper.', 'n,n,y', 'Declaring is hers; decrees and takeovers without a law are void.'),
+                 fact('Ampatuan v. Puno (2011)', 'After a massacre, the President declares a state of emergency in three areas and calls out the AFP and PNP.', 'y', 'A calling-out, not emergency powers: no law needed.'),
+                 fact('The Bayanihan Act (2020)', 'During the pandemic, Congress passes a law letting the President, for a limited period, direct the operation of private hospitals and transport.', 'n,y', 'A Sec. 23(2) delegation and a takeover law: valid within its terms.'),
+                 fact('RA 12287 (2025)', 'On the NDRRMC’s recommendation, the President declares a State of Imminent Disaster three days before a super typhoon, ordering pre-emptive evacuation and prepositioned relief.', 'n,y', 'Authorized by statute; lifted automatically when the typhoon hits.'),
+                 fact('A power plant', 'Facing a power crisis, the President orders the military to run a private power plant; no law authorizes it.', 'n,n,y', 'Void without a law (David).')]),
+    kind='gates', when='a President invokes an emergency (unrest, pandemic, typhoon, power crisis) to act without Congress.',
+    hook='<em>Declare alone; legislate or take over only with a law</em>.',
+    oral='The issue is whether the President may [take over the power plants] during an emergency. The President alone may declare a national emergency, but under Article VI, Section 23(2) emergency powers must be delegated by law, for a limited period and subject to restrictions; in David v. Macapagal-Arroyo the Court held that the takeover of a private business under Article XII, Section 17 likewise needs a law, because “the State” means Congress. Here, [no law authorizes the takeover], so it is void.',
+    cap='RA 12287 (2025) gives the President a statutory State of Imminent Disaster; it is not a grant of legislative power.')
+
+fig('18', 'after', '<h3 id="cinc-loans">Contracting and guaranteeing foreign loans</h3>\n', 'foreignloan', 'Is this foreign loan valid?',
+    gates([G('Is it a loan or guarantee, or a necessary incident of one?', 'bond issues and conversions, buybacks, restructuring (' + C('constantino', 'Constantino') + ')', 'Outside Sec. 20', 'it needs some other authority', 'no', 'sun'),
+           G('Did the Monetary Board concur before the loan took effect?', 'an Approval-in-Principle before negotiations; Final Approval after signing but before any drawdown (' + C('colmenares', 'Colmenares') + ')', 'Void', 'no prior concurrence', 'no', 'no'),
+           G('Is it within the limits set by law?', 'RA 4860, RA 245, the monetary authority’s regulations (Art. XII, Sec. 21)', 'Void', '“subject to such limitations as may be provided by law”', 'no', 'no')],
+          ('Valid', 'the Finance Secretary may sign as alter ego (' + C('constantino', 'Constantino') + '); its terms must be made public (Art. XII, Sec. 21)', 'ok'),
+          facts=[fact('Constantino v. Cuisia (2005)', 'The Finance Secretary’s team agrees to buy back foreign debt at a discount and convert the rest into bonds.', 'y,y,y', 'Within Sec. 20, and the Secretary may act as alter ego.'),
+                 fact('Colmenares v. Duterte (2022)', 'The Monetary Board gives an Approval-in-Principle; the Chico River loan is signed; Final Approval follows before any drawdown.', 'y,y,y', 'The staged procedure satisfies prior concurrence.'),
+                 fact('Drawn too soon', 'An agency draws on a foreign loan before the Monetary Board has given Final Approval.', 'y,n', 'Prior concurrence was never completed: void.'),
+                 fact('A secret loan', 'A loan with all the Board’s approvals bars disclosure of its terms without the lender’s consent.', 'y,y,y', 'The loan stands, but the confidentiality clause cannot stand against Art. XII, Sec. 21.')]),
+    kind='gates', when='a foreign loan (China, Japan, the World Bank) is questioned: who signed, whether the Monetary Board concurred, and whether its terms can be kept secret.',
+    hook='<em>Loan, Board, law, public</em>.',
+    oral='The issue is whether [the loan agreement] is valid. Under Article VII, Section 20, the President may contract foreign loans with the prior concurrence of the Monetary Board and within the limits set by law; in Colmenares v. Duterte the Court held that prior concurrence is met by an Approval-in-Principle before negotiations and a Final Approval after signing but before drawdown, and in Constantino v. Cuisia that the Finance Secretary may act as the President’s alter ego. Here, [the Board gave both approvals before any drawdown], so the loan is valid, though its terms must be made public.',
+    cap='The Board reports its decisions on loans to Congress every quarter; Congress does not concur.')
+
+fig('18', 'after', '<h3 id="cinc-foreign">Foreign affairs</h3>\n', 'vfacheck', 'Can foreign troops be here, and who holds the accused?',
+    gates([G('Is their presence allowed under a treaty concurred in by the Senate, or an agreement implementing one?', 'two-thirds of all the Senators (Art. VII, Sec. 21); EDCA implements the VFA and the MDT (' + C('saguisag', 'Saguisag') + ')', 'Not allowed', 'Art. XVIII, Sec. 25', 'no', 'no'),
+           G('Does the other State recognize it as a treaty?', 'recognition, not ratification by its own Senate (' + C('nicolas', 'Nicolas') + ')', 'Not allowed', 'the asymmetry Sec. 25 was written to end', 'no', 'no'),
+           G('Has a visiting soldier been convicted by a Philippine court?', 'before conviction, custody may stay with the sending State (VFA, Art. V, par. 6)', 'Valid; custody may stay with the sending State', 'no breach of equal protection or of the Court’s rule-making power', 'no', 'ok'),
+           G('Is he detained by Philippine authorities in agreed facilities?', 'VFA, Art. V, par. 10', 'Not in accord with the agreement', 'an embassy room guarded by the sending State is not enough; renegotiate (' + C('nicolas', 'Nicolas') + ')', 'no', 'no')],
+          ('Valid', 'the troops may stay, and the convict serves his sentence in Philippine custody', 'ok'),
+          facts=[fact('Nicolas v. Romulo (2009)', 'A US Marine convicted of rape is moved from the Makati City Jail to the US Embassy, guarded by US personnel.', 'y,y,y,n', 'The VFA is valid, but the embassy detention is not in accord with it.'),
+                 fact('Before the verdict', 'Before trial, the US holds an accused Marine at its request and produces him at every hearing.', 'y,y,n', 'Custody pending trial may stay with the US.'),
+                 fact('The France SOVFA (2026)', 'The Senate concurs in a visiting forces agreement with France, which France treats as binding.', 'y,y?,n', 'Sec. 25 is satisfied if France recognizes it as a treaty.'),
+                 fact('No treaty at all', 'A President signs an executive agreement letting a new ally station troops, with no treaty behind it.', 'n', 'Sec. 25 requires a treaty for their entry.')]),
+    kind='gates', when='foreign troops are stationed or exercise here, or a foreign soldier is accused or convicted of a crime in the Philippines.',
+    hook='<em>Treaty, recognized, then our jail</em>.',
+    oral='The issue is whether [the foreign troops’ presence and the convict’s detention] comply with the Constitution. Article XVIII, Section 25 allows foreign troops only under a treaty concurred in by the Senate and recognized as a treaty by the other State; in Nicolas v. Romulo the Court held that the VFA meets this, since the Senate concurred and the US recognized it, but that a convicted American soldier must be detained by Philippine authorities. Here, [he is held in the embassy under foreign guard], so the arrangement is not in accord with the VFA.',
+    cap='Deportation of undesirable aliens is part of the same field: the President decides, after investigation (Go Tek).')
+
+fig('18', 'after', '<h3 id="cinc-legis">The President’s part in legislation</h3>\n', 'preslegis', 'The President in legislation: four roles',
+    cmp(['When or how', 'The check'], [
+        ('Address Congress', 'at the opening of each regular session; may appear at any other time', 'none needed: it informs, it does not bind'),
+        ('The budget', 'within 30 days from the opening of the regular session, the basis of the general appropriations bill', 'Congress appropriates, but may not increase the President’s figures for the operation of the Government (Art. VI, Sec. 25(1))'),
+        ('The veto', 'whole bills; items in appropriation, revenue or tariff bills; within 30 days of receipt, or the bill becomes law', 'override by two-thirds of all the Members of each House'),
+        ('Emergency powers', 'by law, in war or other national emergency', 'a limited period and restrictions; they end at the next adjournment or by resolution'),
+    ]),
+    kind='comparison', when='a news card has the President shaping legislation: the SONA, the budget, a veto, or a request for emergency powers.',
+    hook='<em>Speak, propose, veto, borrow</em>: the President addresses Congress, proposes the budget, blocks bills, and uses only the emergency powers Congress lends.',
+    oral='The issue is whether [the President] may [spend on the basis of his own budget proposal]. Under Article VII, Section 22 the President only proposes the budget, within 30 days from the opening of the regular session; Congress appropriates, and the President’s check is the veto under Article VI, Section 27, including the item veto, which Congress may override by two-thirds of all its Members. Here, [no appropriation was passed for the item], so the spending is void.',
+    cap='Details live elsewhere: the budget on the appropriations map, the veto on the legislative-process map.')
+
+fig('18', 'after', '<h3 id="cinc-immunity">Immunity from suit</h3>\n', 'presimm', 'Can this suit go on?',
+    gates([G('Is the incumbent President the defendant or respondent?', 'not the President’s officials, not a former President; whether it covers the Vice-President is open', 'Immunity is no bar', 'sue the officials for their own acts (' + C('gloriaca', 'Gloria') + '); a former President may be prosecuted (' + C('estradaarroyo', 'Estrada') + '); an accused cannot invoke the President’s immunity (' + C('soliven', 'Soliven') + ')', 'no', 'ok'),
+           G('Has the President chosen to waive the immunity and submit to the court?', 'the privilege is the President’s alone to invoke or waive (' + C('soliven', 'Soliven') + ')', 'The case proceeds', 'the President accepts the court’s jurisdiction and its risks', 'yes', 'ok')],
+          ('Dismissed, or the President dropped', 'during tenure, for any act, official or personal, in any proceeding, even habeas data, whether or not invoked; the remedy is impeachment or a suit after tenure (' + C('delima', 'De Lima') + ')', 'no'),
+          facts=[fact('De Lima v. Duterte (2019)', 'A senator petitions for habeas data against the sitting President over his public statements about her.', 'y,n', 'Dismissed: the President is immune during tenure.'),
+                 fact('Soliven v. Makasiar (1988)', 'President Aquino files a libel complaint; the accused columnist argues the case cannot go on because she is immune from suit.', 'n', 'She is the complainant, not the defendant; only she may invoke the privilege.'),
+                 fact('Gloria v. CA (2000)', 'A superintendent sues the Education Secretary to stop a reassignment the President approved.', 'n', 'The suit is against the Secretary’s own acts.'),
+                 fact('Estrada v. Arroyo (2001)', 'A President who has left office is charged with plunder for acts done in office.', 'n', 'Immunity ended with his tenure.'),
+                 fact('Lagman v. Pimentel III (2018)', 'Petitioners challenging an extension of martial law name the President as a respondent.', 'y,n', 'The President is dropped; Congress and the officials remain.'),
+                 fact('The Vice-President (2026)', 'The sitting Vice-President is charged with grave threats and claims immunity as an impeachable officer.', 'n?', 'Arguable: the cases speak of the President’s immunity, personal to that office.')]),
+    kind='gates', when='someone sues or charges the President, the President’s officials, a former President, or the Vice-President.',
+    hook='<em>Sitting President only; personal; ends with the term</em>.',
+    oral='The issue is whether [the petition against the President] may proceed. The 1987 Constitution is silent, but in De Lima v. Duterte the Court held that the incumbent President is immune from suit during tenure, for any act and in any proceeding, even if the President does not invoke it; under Soliven v. Makasiar the privilege belongs to the President alone, and under Gloria v. Court of Appeals it does not cover the acts of subordinates. Here, [the President is the sole respondent], so the petition must be dismissed, though the officials who carry out the act may be sued.',
+    cap='Not the same as the State’s immunity from suit (on the government map).')
+
+fig('18', 'after', '<h3 id="cinc-vp">The Vice-President</h3>\n', 'vpprotest', 'Will this election protest before the PET prosper?',
+    gates([G('Does the protest specify each irregularity and the precincts where it happened?', 'bare allegations of massive fraud are not enough', 'May be dismissed outright', 'the PET heard Marcos’s protest anyway, for due process (' + C('robredo', 'Marcos, Jr. v. Robredo') + ')', 'no', 'sun'),
+           G('Did revision of the pilot provinces (at most three) show a reasonable recovery of votes?', 'the protestant picks them at the preliminary conference (PET Rule 65)', 'Dismissed', 'without revising the rest; this also bars a claim to annul elections', 'no', 'no'),
+           G('For annulment: are the Abayon requisites met?', 'illegality affecting more than half the votes; lawful and unlawful ballots cannot be told apart; the protestee was responsible', 'No annulment', 'the results stand', 'no', 'no')],
+          ('The protest may prosper', 'the PET may annul results, but only the COMELEC may call special elections', 'ok'),
+          facts=[fact('Marcos, Jr. v. Robredo (2021)', 'A losing VP candidate alleges fraud in 39,221 precincts with few specifics; after revision of his three pilot provinces, the winner’s lead grows from 263,473 to 278,566.', 'y?,n', 'Heard despite weak allegations; no recovery in the pilots: dismissed.'),
+                 fact('A strong protest', 'A protestant names 200 precincts, his pilot revision cuts the winner’s lead by 80%, and in one province armed men controlled the polls, so the ballots cannot be told apart, at the protestee’s direction.', 'y,y,y', 'The protest may prosper, and the PET may annul the results there.'),
+                 fact('Annulment without proof', 'A protestant recovers some votes in the pilots but cannot show who was behind the irregularities in the provinces he wants annulled.', 'y,y,n', 'No annulment without the Abayon requisites.')]),
+    kind='gates', when='a losing presidential or vice-presidential candidate files an election protest.',
+    hook='<em>Specific, three pilots, then Abayon</em>.',
+    oral='The issue is whether [the protest] may prosper. Under the last paragraph of Article VII, Section 4, the Supreme Court en banc is the sole judge of contests over the election of the President and Vice-President; in Marcos, Jr. v. Robredo the Tribunal held that a protest must specify the irregularities and that if revision of the pilot provinces, at most three, shows no reasonable recovery, the protest is dismissed. Here, [the winner’s lead grew after revision], so the protest must be dismissed.',
+    cap='The PET itself is covered with the judiciary (Batch 8).')
 
 # =====================================================================
 # 00 · the hook wall (built last, from every hook above)

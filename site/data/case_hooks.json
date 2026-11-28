@@ -196,7 +196,7 @@
   "c": "no"
  },
  "davidgma": {
-  "k": "Moot but decided",
+  "k": "Takeover needs law",
   "c": "sun"
  },
  "davidset": {
@@ -1046,5 +1046,65 @@
  "gonzalesiii": {
   "k": "Ombudsman’s deputies protected",
   "c": "no"
+ },
+ "ampatuan": {
+  "k": "Maguindanao massacre",
+  "c": "ok"
+ },
+ "fortun": {
+  "k": "Saber-rattling",
+  "c": "sun"
+ },
+ "lagman17": {
+  "k": "Marawi siege",
+  "c": "ok"
+ },
+ "lagmanpimentel": {
+  "k": "One more year",
+  "c": "ok"
+ },
+ "lagman19": {
+  "k": "Third extension",
+  "c": "ok"
+ },
+ "olaguer": {
+  "k": "No military trials",
+  "c": "no"
+ },
+ "devilla": {
+  "k": "DNA too late",
+  "c": "sun"
+ },
+ "constantino": {
+  "k": "Debt buyback",
+  "c": "ok"
+ },
+ "colmenares": {
+  "k": "Kaliwa Dam",
+  "c": "ok"
+ },
+ "nicolas": {
+  "k": "Smith in embassy",
+  "c": "sun"
+ },
+ "gotek": {
+  "k": "Undesirable alien",
+  "c": "ok"
+ },
+ "soliven": {
+  "k": "Shield, not defense",
+  "c": "acc"
+ },
+ "gloriaca": {
+  "k": "Subordinates not immune",
+  "c": "acc"
+ },
+ "delima": {
+  "k": "Immune during tenure",
+  "c": "acc"
+ },
+ "robredo": {
+  "k": "Pilot provinces",
+  "c": "ok"
  }
 }

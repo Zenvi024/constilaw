@@ -14,7 +14,7 @@ AMBIG = {
     'Tolentino': {'01': 'tolentino71', '02': 'tolentino04', '07': 'tolentino04', '11': 'tolentinofinance', '12': 'tolentinofinance', '14': 'tolentinofinance', '90': 'tolentinofinance'},
     'Santiago': {'01': 'santiago97', '08': 'santiagoguingona'},
     'Guingona': {'10': 'guingonagonzales', '12': 'guingonacarague'},
-    'David': {'02': 'davidgma', '04': 'davidset'},
+    'David': {'02': 'davidgma', '04': 'davidset', '15': 'davidgma', '18': 'davidgma'},
     'Pangilinan': {'09': 'pangilinan2018', '*': 'pangilinan2021'},
     'Trillanes': {'17': 'trillanesmedialdea', '*': 'trillanespimentel'},
     'Torres': {'17': 'torresgonzales', '*': None},   # Torres v. Gonzales, but also Joson v. Torres and people named Torres
@@ -35,6 +35,14 @@ AMBIG = {
     'De Leon': {'*': None},   # De Leon v. Duterte, but also De Leon v. Carpio and Justice De Leon
     'De Castro': {'17': 'decastrojbc', '*': None},   # De Castro v. JBC; also Justice Leonardo-de Castro
     'Soriano': {'17': 'soriano', '*': None},
+    'Lagman': {'*': None},     # Lagman v. Medialdea (2017, 2019) and Lagman v. Pimentel III: by full name and year; also Rep. Lagman
+    'Ampatuan': {'*': None},   # the clan and the governor; Ampatuan v. Puno by full name
+    'Fortun': {'15': 'fortun', '18': 'fortun', '*': None},
+    'Constantino': {'18': 'constantino', '*': None},
+    'Colmenares': {'18': 'colmenares', '*': None},   # also Neri Colmenares, a petitioner in other cases
+    'Nicolas': {'*': None},    # also Suzette Nicolas
+    'Gloria': {'*': None},     # Gloria v. CA; usually Gloria Macapagal-Arroyo
+    'De Lima': {'*': None},    # De Lima v. Duterte by full name; usually the senator
     'Republic v. Sandiganbayan': {'16': 'swissdeposits', '*': 'repsandiganbayan'},  # two 2003 cases: Swiss deposits and Ramas-Dimaano
 }
 # names that are also people: link only as a citation, i.e. right after '(' or '; ' and before ')' ';' or ','
@@ -61,7 +69,9 @@ EXTRA = {'PASI': 'pasi', 'Iloilo I': 'ileco', 'Iloilo I Electric Coop.': 'ileco'
          'Trillanes v. Medialdea': 'trillanesmedialdea', 'Trillanes IV v. Medialdea': 'trillanesmedialdea',
          'Sarmiento v. Mison': 'mison', 'Sarmiento III v. Mison': 'mison', 'Garafil': 'garafil', 'Velicaria-Garafil': 'garafil',
          'General v. Urro': 'urro', 'Urro': 'urro', 'De Castro v. JBC': 'decastrojbc', 'De Rama': 'derama', 'Gonzales III': 'gonzalesiii', 'Funa v. COA': 'funavillar',
-         'Funa v. CSC': 'funacsc', 'Funa v. Civil Service Commission': 'funacsc', 'Gaminde': 'gaminde', 'Ifurung': 'ifurung', 'Larin': 'larin'}
+         'Funa v. CSC': 'funacsc', 'Funa v. Civil Service Commission': 'funacsc', 'Gaminde': 'gaminde', 'Ifurung': 'ifurung', 'Larin': 'larin',
+         'David v. Arroyo': 'davidgma', 'In re De Villa': 'devilla', 'Beltran v. Macasiar': 'soliven', 'Soliven v. Makasiar': 'soliven', 'Gloria v. CA': 'gloriaca',
+         'Gloria v. Court of Appeals': 'gloriaca', 'Marcos v. Robredo': 'robredo', 'Marcos, Jr. v. Robredo': 'robredo', 'Go Tek': 'gotek', 'Olaguer': 'olaguer'}
 
 def build_aliases(cases, link_texts):
     al = {}

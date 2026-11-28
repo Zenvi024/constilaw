@@ -32,7 +32,7 @@ TOPICS = [  # key, name, syllabus part, rule-map section
     ('ocong', 'Congress: other powers and impeachment', 'V.A.9', 'ocong'),
     ('pres', 'The President: office, succession, executive power', 'V.B.1–2(c)', 'pres'),
     ('appt', 'Appointment and clemency', 'V.B.2(d)–(e)', 'appt'),
-    ('cinc', 'Commander-in-Chief, other powers, the Vice President', 'V.B.2(f)–(k), V.B.3', ''),
+    ('cinc', 'Commander-in-Chief, other powers, the Vice-President', 'V.B.2(f)–(k), V.B.3', 'cinc'),
     ('court', 'The Supreme Court', 'V.C.1–2(o)', ''),
     ('scadmin', 'The SC’s administrative and rule-making powers', 'V.C.2(p)', ''),
     ('jbc', 'Lower courts and the JBC', 'V.C.3–6', ''),

@@ -772,7 +772,7 @@
     "why": "PP 1017 is valid as a call on the armed forces to prevent or suppress lawless violence, and it is not martial law. But the President cannot issue decrees, or take over private businesses affected with public interest without a law (Art. XII, Sec. 17 needs Congress). GO No. 5 is valid except for its reference to undefined 'acts of terrorism'. The warrantless arrests of David and Llamas, the dispersal of rallies and the raid on the Daily Tribune were illegal."
    }
   ],
-  "vote": "Sandoval-Gutierrez, J. (ponente), May 3, 2006; 11–3. Petitions partly granted."
+  "vote": "11–3. Sandoval-Gutierrez, J., May 3, 2006. Panganiban, C.J. (joined by Carpio, Carpio Morales and Callejo, Sr., JJ.) and Ynares-Santiago, J. concurred; Tinga, J. (joined by Corona and Velasco, Jr., JJ.) dissented; Puno, J., on leave. Petitions partly granted."
  },
  "floresdrilon": {
   "iss": [
@@ -2112,5 +2112,492 @@
   ],
   "vote": "2012: Perlas-Bernabe, J.; Carpio, J., concurring; Brion, J. (with Velasco, Leonardo-de Castro and Perez, JJ.) and Abad, J. (joined by Bersamin, J.) dissenting. 2014: Brion, J., 8–7 on the Deputies; Perlas-Bernabe, J. (with Sereno, C.J., Carpio, Peralta, Del Castillo, Villarama and Reyes, JJ.) and Leonen, J., concurring and dissenting.",
   "ops": "2012: Carpio, J.: independence does not mean exclusive disciplinary authority; Sec. 8(2) is valid. Brion, J., and Abad, J.: Sec. 8(2) is unconstitutional; the OP proceedings should be voided. 2014: Perlas-Bernabe, J.: would uphold Sec. 8(2) entirely. Leonen, J.: Sec. 8(2) fails as to the Deputies but stands as to the Special Prosecutor, and there was substantial evidence against Gonzales, whom the Ombudsman may still discipline."
+ },
+ "ampatuan": {
+  "iss": [
+   {
+    "q": "Did Proclamation No. 1946 and AOs 273 and 273-A violate local autonomy (Art. X, Sec. 16; RA 9054)?",
+    "a": "NO",
+    "why": "The DILG Secretary never took over the ARMM. When the Governor was taken into custody, succession under RA 9054 ran its course: the Vice-Governor became Governor and the Speaker acting Vice-Governor. The region stayed in the hands of its own officials, so the Court did not need to rule on “transfer” versus “delegation” of supervision."
+   },
+   {
+    "q": "Did the President invalidly exercise emergency powers when she called out the AFP and PNP in Maguindanao, Sultan Kudarat and Cotabato City?",
+    "a": "NO",
+    "why": "Emergency powers under Art. VI, Sec. 23(2) need war or other national emergency and a law by which Congress authorizes the President, for a limited period and with restrictions. She declared only a state of emergency in three places, not a national emergency, and acted under no such law. Calling out the armed forces is a power the Constitution vests directly in the President, needing no congressional authority."
+   },
+   {
+    "q": "Did the President have factual bases for declaring the state of emergency and calling out the armed forces?",
+    "a": "YES",
+    "why": "The Commander-in-Chief may call out the armed forces “whenever it becomes necessary” (Sanlakas). The Court may inquire into the factual basis (Lacson v. Perez) but defers unless grave abuse is shown, and the petitioner must prove the absence of basis (IBP v. Zamora). The petitioners showed only that some areas had no violent incidents. The OSG showed the clans’ armed followers (about 2,400 men on one side, 1,800 on the other), reports of planned retaliation and armed men moving: preventive action was justified."
+   }
+  ],
+  "vote": "15–0. Abad, J.",
+  "ops": "None; the Justices concurred in the ponencia."
+ },
+ "fortun": {
+  "iss": [
+   {
+    "q": "Did the lifting of martial law and the restoration of the writ by Proclamation No. 1963 render the petitions moot?",
+    "a": "YES",
+    "why": "The Court decides a constitutional question only if it is unavoidable (Biraogo). The President withdrew the proclamation before Congress could act, a supervening event that ended the controversy, and it was never meaningfully implemented: no military takeover of local governments, no decrees, no mass arrests; those arrested were released or charged. Unlike Lansang and Aquino v. Enrile, the Court never examined the President’s evidence; and the trial court’s ruling in the rebellion case could not substitute for the Court’s review."
+   },
+   {
+    "q": "Is the power to proclaim martial law or suspend the writ exercised jointly and sequentially by the President and Congress, so that with no congressional action and the proclamation lifted, the Court has nothing to review?",
+    "a": "YES (per the ponencia)",
+    "why": "The President and Congress “act in tandem”: the President initiates, but only Congress can maintain the proclamation. Since congressional review is automatic, the Court must let Congress act first; the matter is “first a political question in the hands of Congress before it becomes a justiciable one in the hands of the Court,” which steps in as the “final rampart” only if Congress defaults. (Lagman v. Medialdea, 2017, later set this aside.)"
+   },
+   {
+    "q": "Does the case fall under the exceptions to the moot-and-academic rule?",
+    "a": "NO",
+    "why": "The proclamation looked “more like saber-rattling” than an actual deployment and arbitrary use of political power, unlike the martial law of the late 1960s and 1970s. The Court will not decide purely academic questions for scholarly interest, and avoids constitutional questions unless “avoidance becomes evasion.”"
+   },
+   {
+    "q": "Did Proclamation No. 1959 have sufficient factual basis (actual rebellion, with public safety requiring it), and the related questions: standing, the meaning of “rebellion,” warrantless arrests, conflicting reviews by the Court and Congress?",
+    "a": "NOT RULED",
+    "why": "Having found the case moot, the Court did not reach them. Carpio, J., dissenting, would have held that any citizen has standing, that “rebellion” means Art. 134 of the RPC, that martial law authorizes no warrantless arrests beyond Rule 113, that the Court’s ruling on factual basis is not needed to judge related acts, and that there was no actual rebellion in Maguindanao."
+   }
+  ],
+  "vote": "8–6. Abad, J., with Leonardo-de Castro, Brion, Peralta, Bersamin, Villarama, Jr. and Mendoza, JJ.; Perez, J., concurred in the dismissal in a separate opinion. Dissenting: Carpio, J. (joined by Sereno, Reyes and Perlas-Bernabe, JJ.) and Velasco, Jr., J. (joined by Corona, C.J.). Del Castillo, J., on leave.",
+  "ops": "Carpio, J., dissenting: Sec. 18 gives “any citizen” standing; all four exceptions to mootness apply, and voluntary cessation does not oust jurisdiction, or a President could declare martial law without basis and lift it before review; rebellion means Art. 134 of the RPC, shown by probable cause; martial law does not suspend the Bill of Rights, and suspending the writ does not validate illegal arrests; Congress’s power is to revoke, “not to confirm or ratify,” so the Court may review even if Congress has not acted; and since the 1987 text deleted “imminent danger,” there was no actual rebellion. Velasco, Jr., J., also dissented."
+ },
+ "lagman17": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing, including the representatives who sued as such?",
+    "a": "YES",
+    "why": "Sec. 18 allows “any citizen” to file; the representatives were treated as citizens."
+   },
+   {
+    "q": "Are the petitions the “appropriate proceeding” under Sec. 18, par. 3?",
+    "a": "YES (sui generis)",
+    "why": "The proceeding is not certiorari, which tests grave abuse and would emasculate the review of sufficiency the framers wanted. Sec. 18 constitutionalizes Lansang (rejecting Garcia-Padilla) as a safeguard on top of Art. VIII, Sec. 1. It is unique: any citizen may file, the only question is the sufficiency of the factual basis, and the Court must decide within 30 days."
+   },
+   {
+    "q": "Is the Court’s review independent of what Congress does?",
+    "a": "YES",
+    "why": "The Court’s review is passive (on a citizen’s petition) and looks at the facts at the time of the proclamation; Congress’s review is automatic and may consider later facts. The two do not depend on each other; Fortun’s contrary view is set aside."
+   },
+   {
+    "q": "May the Court calibrate the President’s choice among calling out, suspending the writ and martial law; and is the Defense Secretary’s recommendation required?",
+    "a": "NO; NO",
+    "why": "The graduation of powers refers to their scope and effect, not to a sequence the President must follow; the choice is the President’s. The framers dropped any requirement of prior concurrence, and no recommendation from the Defense Secretary is needed."
+   },
+   {
+    "q": "Is Proclamation No. 216 void for vagueness, for including “other rebel groups” and lacking operational guidelines?",
+    "a": "NO",
+    "why": "The void-for-vagueness doctrine is a free-speech tool and the proclamation regulates conduct (David). “Other rebel groups” is explained by Proclamation No. 55, and guidelines are not part of the factual basis."
+   },
+   {
+    "q": "Would voiding Proclamation No. 216 recall Proclamation No. 55 or the calling out of the armed forces?",
+    "a": "NO",
+    "why": "Calling out is a separate power (Kulayan v. Tan), and the operative fact doctrine would protect acts done in reliance on it."
+   },
+   {
+    "q": "What must the Court look at: accuracy or sufficiency, which facts, what standard and whose burden?",
+    "a": "Sufficiency; facts at the time; probable cause",
+    "why": "The Court checks sufficiency, not accuracy; the Lansang arbitrariness test is done away with. It looks at the facts known to the President at the time (the Proclamation and the Report), in their totality; later events only guide, and falsus in uno does not apply. Actual rebellion and public safety must concur, and the President needs only probable cause (Carpio, J., in Fortun). Rebellion is defined by Art. 134 of the RPC: a public uprising and taking up arms, for the purpose of removing territory from allegiance or depriving the President or Congress of powers."
+   },
+   {
+    "q": "Was there sufficient factual basis for martial law and the suspension of the writ: (a) actual rebellion; (b) public safety?",
+    "a": "YES",
+    "why": "The uprising was conceded; its purpose (a wilayat, ISIS flags) was to remove Marawi and Mindanao from allegiance and deprive the President of his powers. The petitioners’ counter-evidence was news reports, hearsay twice removed, and it attacked only five facts; the rest stood unrebutted. Public safety required it: civilians attacked, hostages taken, services cut, reinforcements blocked."
+   },
+   {
+    "q": "Did the hostilities justify martial law over the whole of Mindanao?",
+    "a": "YES",
+    "why": "The Constitution lets the President cover “the Philippines or any part thereof,” and the Court lacks the military machinery to second-guess the area. Rebellion is not confined within predetermined bounds; Marawi was a staging point, and the Abu Sayyaf, Maute and BIFF were linked, with violence elsewhere (Basilan, Sulu, Bohol)."
+   },
+   {
+    "q": "Do terrorist acts negate rebellion, or equal it?",
+    "a": "NO",
+    "why": "Terrorism neither negates nor absorbs rebellion; what matters is the purpose. RA 9372 cannot curtail the President’s powers under the Constitution."
+   },
+   {
+    "q": "(Resolution, December 5, 2017) Did the expiry of Proclamation No. 216 moot the challenge to its factual basis?",
+    "a": "YES",
+    "why": "A presidential proclamation lasts at most 60 days and terminates automatically (a “time fuse”). The extension, initiated by the President but approved by Congress, is a separate act, a joint act of the President and Congress; the petitions assailed only the proclamation. The Court nonetheless saw “no reason to disturb” its findings."
+   },
+   {
+    "q": "(Resolution) Must the Court determine the accuracy, not just the sufficiency, of the factual basis?",
+    "a": "NO",
+    "why": "Accuracy is a higher standard. The Court reviews the totality of the facts known to the President before and at the declaration; later events are irrelevant, and some inaccurate facts do not invalidate it if the others show rebellion and public safety. Probable cause means rebellion is “more likely than not.”"
+   },
+   {
+    "q": "(Resolution) Did the Court abdicate its power of review by deferring to the Executive?",
+    "a": "NO",
+    "why": "Its findings came after weighing the Proclamation, the Report and a closed-door briefing by the Defense Secretary and the AFP Chief. Martial law needs actual rebellion, so time is of the essence, and it has no exact metes and bounds: it may spill over beyond the place of the uprising."
+   }
+  ],
+  "vote": "11–4. Del Castillo, J., with Velasco, Jr., Leonardo-de Castro, Peralta, Bersamin, Mendoza, Reyes, Perlas-Bernabe (in the result), Jardeleza, Martires and Tijam, JJ. Dissenting: Sereno, C.J. and Caguioa, J. (valid only in Lanao del Sur, Maguindanao and Sulu), Carpio, J. (valid only in Marawi City) and Leonen, J. (void entirely). The motions for reconsideration were denied on December 5, 2017, 10–4.",
+  "ops": "Carpio, J.: valid only in Marawi City; the Proclamation itself spoke of “this part of Mindanao,” and fear of spread is the “imminent danger” the framers deleted; the burden is on the Government. Sereno, C.J.: valid only in Lanao del Sur, Maguindanao and Sulu, the “nesting grounds” of the groups; necessity requires proportionality and defined bounds, or martial law reaches “places as terrorism and rebellion-free as Dinagat Islands or Camiguin.” Caguioa, J.: a “neutral and straightforward fact-checking mechanism”; public safety did not require martial law over all of Mindanao; on reconsideration, accuracy is inseparable from sufficiency. Leonen, J.: terrorism, not rebellion; an undefined declaration is void for vagueness; “The terrorist wins when we suspend all that we believe in.” Among the concurrences, Jardeleza, Mendoza and Perlas-Bernabe, JJ. preferred a reasonableness standard, and Leonardo-de Castro and Martires, JJ. would allow certiorari as a vehicle."
+ },
+ "lagmanpimentel": {
+  "iss": [
+   {
+    "q": "Is the failure to attach a copy of RBH No. 4 fatal?",
+    "a": "NO",
+    "why": "The Court takes judicial notice of it, and the OSG annexed it."
+   },
+   {
+    "q": "May the President be impleaded?",
+    "a": "NO",
+    "why": "The President is immune from suit during tenure (Rubrico; David) and was dropped as respondent."
+   },
+   {
+    "q": "Is Congress an indispensable party?",
+    "a": "YES, but substantially complied with",
+    "why": "The extension is the act of the whole Congress, not just its leaders, so Congress must be joined (Rule 3, Sec. 7). One petition impleaded Congress, and the OSG answered for all."
+   },
+   {
+    "q": "Are the petitioners barred by conclusiveness of judgment (Lagman v. Medialdea; Padilla) from questioning the persistence of the rebellion?",
+    "a": "NO",
+    "why": "The parties were the same but not the issue: the earlier case decided the existence of rebellion; this one, its persistence. A ruling on factual basis is “transitory” because facts change."
+   },
+   {
+    "q": "May the Court review the extension under its expanded certiorari jurisdiction, and how far?",
+    "a": "NO; only the sufficiency of the factual basis",
+    "why": "Sec. 18, par. 3 is a special proceeding (Lagman v. Medialdea); review is limited to the sufficiency of the factual basis."
+   },
+   {
+    "q": "Is the manner in which Congress deliberated (the joint session rules) subject to review?",
+    "a": "NO",
+    "why": "Each House determines its own rules (Art. VI, Sec. 16(3)); courts intervene only for a constitutional violation (Arroyo v. De Venecia), limited to quorum, voting and publication. The rules were adopted without objection."
+   },
+   {
+    "q": "May Congress extend martial law more than once and for longer than 60 days?",
+    "a": "YES",
+    "why": "Sec. 18 is silent on the number; its only limits are the President’s initiative, the persistence of rebellion with public safety, and the Court’s review. It says “for a period to be determined by the Congress,” and “in the same manner” refers to voting jointly by a majority of all Members, not to the period. A proposal to cap extensions at 60 days was not adopted."
+   },
+   {
+    "q": "Was there sufficient factual basis for the extension: does the rebellion persist (including other groups and the NPA), does public safety require it, and should proportionality tests apply?",
+    "a": "YES; YES; NO",
+    "why": "About 400 new recruits (roughly the Marawi force), 185 at large, 48 foreign fighters and a financial build-up showed the rebellion persisted; it is a continuing crime, not only a clash of arms, and the BIFF and NPA could be counted, Congress having made the collective judgment. Public safety: 2,781 rebels, 3,211 firearms, 537 affected barangays and bomb plots. The Court rejected a “cannot govern” test and proportionality or suitability tests as intrusions on the President’s prerogative; safeguards remain (early lifting, new petitions, separate cases for abuses)."
+   },
+   {
+    "q": "Are the petitioners entitled to a TRO or injunction?",
+    "a": "NO",
+    "why": "They showed no right in esse, and the alleged abuses were neither proved nor linked to the extension."
+   }
+  ],
+  "vote": "10–5. Tijam, J. Dissenting: Sereno, C.J., Carpio, Leonen, Jardeleza and Caguioa, JJ.",
+  "ops": "Sereno, C.J.: martial law is the law of necessity; the Court must calibrate gravity, area and period, and recruitment and bomb plots show at most imminent danger; adding the NPA to show persistence is “self-contradictory.” Carpio, J.: “persist” means the same Maute rebellion, which ended with Marawi’s liberation; capability is not rebellion; an NPA rebellion needs its own 60-day proclamation first. Leonen, J.: Sec. 18 requires heightened scrutiny; an undefined request is a “carte blanche,” and three-minute interpellations stifled deliberation. Jardeleza, J.: public safety requires scale: sustained armed hostilities and groups holding territory. Caguioa, J.: the triggering rebellion must persist; new groups need a new declaration, or there will be an endless chain of extensions. Bersamin, J. (concurring): the Sec. 18 proceeding involves no rights of parties, so no one is indispensable."
+ },
+ "lagman19": {
+  "iss": [
+   {
+    "q": "Was there sufficient factual basis for the third extension: does the rebellion persist, does public safety require it, and was the extension necessary?",
+    "a": "YES",
+    "why": "The standard is sufficiency, not grave abuse, and the Court need not make its own findings (Montenegro). Probable cause suffices, and the test is reasonableness, not accuracy; reports not palpably false are read in their totality, with Congress’s concurrence making them “weightier.” The Abu Sayyaf, BIFF, Dawlah Islamiyah and NPA continue the rebellion: a missing motive does not negate it, it is a continuing crime with no fixed time or place, and it includes propaganda and recruitment (Aquino v. Enrile). The peace and order councils’ resolutions showed public safety required it; necessity was absorbed in these findings."
+   },
+   {
+    "q": "Does the Constitution limit the number or the length of extensions?",
+    "a": "NO",
+    "why": "Sec. 18 leaves the period “to be determined by the Congress”; the limits are only the President’s initiative, persistence with public safety, and review. The 60-day cap proposed in the Constitutional Commission was rejected."
+   },
+   {
+    "q": "Did Proclamation No. 216 become functus officio when the Marawi siege ended?",
+    "a": "NO",
+    "why": "The end of the siege was not the end of the rebellion: remnants of the Hapilon-Maute group were recruiting and rebuilding, and kidnappings, arson, bombings and murders are absorbed in rebellion, a continuing crime (Lagman v. Pimentel)."
+   },
+   {
+    "q": "Is the manner in which Congress approved the extension reviewable?",
+    "a": "NO (political question)",
+    "why": "Each House determines its own rules, including time limits on interpellation; courts intervene only where the rules violate the Constitution or are arbitrary (quorum, voting, publication)."
+   },
+   {
+    "q": "May the extension be struck down for grave abuse of discretion by Congress?",
+    "a": "NO",
+    "why": "The Sec. 18 standard is the sufficiency of the factual basis, not grave abuse, so the question was not reached."
+   },
+   {
+    "q": "Do alleged human rights violations in implementing martial law void its extension?",
+    "a": "NO",
+    "why": "They must be resolved in separate proceedings. Martial law does not suspend the Constitution; the Bill of Rights and the courts remain, with remedies under RA 7438, RA 9372, RA 9745, amparo and habeas data."
+   }
+  ],
+  "vote": "9–4. Carandang, J., with Bersamin, C.J. and Del Castillo, J.; Peralta, Perlas-Bernabe (in the result), A. Reyes, Jr., Gesmundo, J. Reyes, Jr. and Hernando, JJ., concurring separately. Dissenting: Carpio, Leonen, Jardeleza and Caguioa, JJ.",
+  "ops": "Carpio, J.: an extension needs the same rebellion as the original proclamation, which ended with Hapilon’s death and Marawi’s liberation; the Government bears the burden. Leonen, J.: martial law is a last resort for a State that “drifts between life and death”; the reports were defective and the NPA an afterthought; an “enfeebled Supreme Court.” Jardeleza, J.: rebellion exists but lacks the scale public safety requires, and the Government’s own figures fell from 2017 to 2018. Caguioa, J.: of 150 incidents, 54 had no identified perpetrator and about 90% no motive; no one was charged with rebellion in 2018; at most a threat, and “imminent danger” was deleted. Peralta, J. (concurring): rebellion is “like cancer”; the 30-day period may not always be met."
+ },
+ "olaguer": {
+  "iss": [
+   {
+    "q": "Should the petitions for habeas corpus be dismissed as moot?",
+    "a": "YES",
+    "why": "The only question in habeas corpus is the legality of the detention, and all the petitioners had been released."
+   },
+   {
+    "q": "Do military commissions have jurisdiction to try civilians for offenses committed during martial law while the civil courts are open and functioning, and should Aquino, Jr. v. Military Commission No. 2 be abandoned?",
+    "a": "NO; YES",
+    "why": "Due process requires trial by judicial process, not executive or military process. Military commissions are not courts in the judicial system, where judicial power is vested exclusively; they are instruments of the Commander-in-Chief to discipline the armed forces. As long as civil courts function, as they did during martial law, military trial of civilians denies due process, and the judgment is void. Precedent cannot prevail over constitutionalism: Aquino, Jr. and its progeny are abandoned. Art. VII, Sec. 18 of the 1987 Constitution confirms the rule."
+   },
+   {
+    "q": "Even assuming it had jurisdiction, was MC 34 ousted of it for disregarding the petitioners’ rights?",
+    "a": "YES",
+    "why": "Deprivation of a constitutional right ousts a tribunal of jurisdiction (Gumabon). The record was incomplete, witnesses were not subpoenaed, the evidence was deemed waived, and death was imposed after a 25-minute recess."
+   },
+   {
+    "q": "Did Proclamation No. 2045 divest MC 34 of authority over civilians, and does double jeopardy bar a trial in the civil courts?",
+    "a": "YES; NO",
+    "why": "Aquino, Jr. rested on the emergency; with martial law lifted, the commissions became functus officio as to civilians, whose cases go to the civil courts. Double jeopardy needs a first tribunal of competent jurisdiction, which MC 34 was not."
+   }
+  ],
+  "vote": "13–0. Gancayco, J.; Teehankee, C.J., concurring. Padilla, J., took no part.",
+  "ops": "Teehankee, C.J., concurring: the petitioners were also denied an impartial tribunal, since the alleged targets of the plot, the President and the Defense Minister, approved the charges, reviewed the judgment and controlled the commissioners’ careers; he recounts the five-year ordeal, hails the reinstated ouster-of-jurisdiction rule and lists the 1987 checks on martial law. “The greatest threat to freedom is the shortness of human memory.”"
+ },
+ "devilla": {
+  "iss": [
+   {
+    "q": "May the writ of habeas corpus issue to release a person serving a final judgment of conviction, on the basis of post-conviction DNA evidence?",
+    "a": "NO",
+    "why": "Habeas corpus reaches illegal restraint, but not restraint under the lawful process of a competent court. After a final conviction it lies only for (a) a denied constitutional right resulting in the restraint, (b) lack of jurisdiction to impose the sentence, or (c) an excessive penalty (Feria v. CA). It is not a writ of error and does not re-weigh evidence. The petition alleged none of the grounds; counsel’s withdrawal mid-appeal was not a denial of the right to counsel; and what it really sought was a new appreciation of the evidence."
+   },
+   {
+    "q": "May a new trial be granted on the DNA results as newly discovered evidence?",
+    "a": "NO",
+    "why": "A motion for new trial must be filed before the judgment becomes final (Rule 121), and the evidence could have been obtained with reasonable diligence. Paternity is not an element of rape (pregnancy is not), though it bears on the award of support; the conviction rested on the victim’s testimony."
+   }
+  ],
+  "vote": "14–0. Ynares-Santiago, J.; Carpio, J. and Callejo, Sr., J. concurring (Davide, C.J. and Panganiban, J. joining both). Corona, J., on leave.",
+  "ops": "Carpio, J.: the door stays open for exonerating DNA evidence: under its power to protect constitutional rights (Art. VIII, Sec. 5(5)), the Court may order a new trial, without vacating the conviction, if DNA testing that was not available at trial would show the convict could not have committed the crime (for example, semen that does not match). Callejo, Sr., J.: such a remedy is sui generis until Rule 121 is revised."
+ },
+ "constantino": {
+  "iss": [
+   {
+    "q": "Do the petitioners have standing?",
+    "a": "YES (procedural barrier set aside)",
+    "why": "Taxpayers may question government contracts entered into against the law (Tatad v. Garcia); the case concerns the deflection of public funds, sets a precedent for future debt contracts, and involves a debt of ₱3.80 trillion, almost half of it foreign: transcendental importance."
+   },
+   {
+    "q": "Is the claim that the agreements waived the right to repudiate void or fraudulent (“behest”) loans ripe?",
+    "a": "NO",
+    "why": "No behest loans were shown to be covered; fraudulent loans are voidable and void ones must be declared so, so the right is contingent; unilateral repudiation would invite sanctions; and the agreements had a no-waiver clause anyway. The choice is the Executive’s."
+   },
+   {
+    "q": "Are the buyback and bond-conversion schemes within the President’s power to “contract or guarantee foreign loans” (Art. VII, Sec. 20)?",
+    "a": "YES",
+    "why": "Both extinguish old debt. A bond buyer lends money to the issuer, so a bond is a loan; the provision makes no distinction among kinds of loans, and reading one in would be “the worst kind of judicial legislation.” RA 245 allows bonds for purchase, redemption and refunding. A buyback is an implied incident of borrowing (one who may borrow may pay, restructure or refuse), and automatic appropriations for debt service (PD 1177; Guingona v. Carague) and RA 240 let the Finance Secretary redeem debt before maturity."
+   },
+   {
+    "q": "May the Secretary of Finance and the debt negotiators exercise the borrowing power as the President’s alter egos?",
+    "a": "YES",
+    "why": "Under qualified political agency, department heads are alter egos (Villena). Only powers that suspend freedoms or override other branches (martial law, the writ, pardon) must be exercised personally; borrowing is established governance. The President’s prior approval or later ratification is needed, but none was shown lacking, so it is presumed."
+   },
+   {
+    "q": "Does the Financing Program violate state policies (Art. II, Secs. 9, 10, 19), amounting to grave abuse?",
+    "a": "NO",
+    "why": "Even on the petitioners’ figures the program brought debt relief. State policies are not a panacea, and whether there was a better way is a question of wisdom; judicial review checks, it does not supplant."
+   }
+  ],
+  "vote": "Tinga, J., with eleven Justices concurring; Davide, C.J. and Puno, J. concurred in the result; Panganiban, J., filed a separate opinion. No dissent."
+ },
+ "colmenares": {
+  "iss": [
+   {
+    "q": "Is President Duterte a proper respondent?",
+    "a": "NO",
+    "why": "He is immune from suit during his tenure (De Lima v. Duterte) and was dropped."
+   },
+   {
+    "q": "Are the requisites of judicial review present: standing, an actual case, and the moot prayer for documents?",
+    "a": "YES, except as to the waiver-of-immunity clause",
+    "why": "The petitioners have standing given the transcendental importance of public contracts and foreign debt; the signing itself is a government act, and specific clauses are assailed. The prayer for documents is moot (they were released) but was addressed as capable of repetition yet evading review."
+   },
+   {
+    "q": "Should the petitions be dismissed for violating the hierarchy of courts?",
+    "a": "NO",
+    "why": "Direct resort is allowed because the questions are purely legal (GIOS-Samar)."
+   },
+   {
+    "q": "Is prohibition unavailable because the loans were a fait accompli?",
+    "a": "NO",
+    "why": "A contract passes through negotiation, perfection and consummation; disbursements were conditional and nothing had been repaid. Negotiation is an executive prerogative, so it would be absurd to require suit any earlier."
+   },
+   {
+    "q": "Are the loan agreements void for lacking the Monetary Board’s prior concurrence (Art. VII, Sec. 20)?",
+    "a": "NO",
+    "why": "The requirement, born of the Marcos-era debt, gives the central bank, as custodian of reserves, a say on paying capacity. It works through the procedure laid down by law and regulation: an Approval-in-Principle before negotiations, review of the documents, and Final Approval after signing but before drawdown. Only the first is strictly “prior,” but the Board’s role continues; Leonen, J.’s view that Final Approval must precede signing is too strict, and a looser rule would repeat history. Both loans followed the procedure."
+   },
+   {
+    "q": "Does the confidentiality clause unduly restrict public access to information on foreign loans (Art. XII, Sec. 21)?",
+    "a": "YES, as worded (moot; guidance)",
+    "why": "Information on foreign loans “shall be made available to the public”: it cannot be kept secret wholesale, made subject to the lender’s consent, or limited to government use."
+   },
+   {
+    "q": "Do the conditions for releasing funds (an advance to the Chinese contractor) violate the Filipino First policy and the procurement law?",
+    "a": "NO, as to the loan agreements",
+    "why": "The loans are not the award, which came through notes verbale and limited bidding; Filipino First is not a Filipino monopoly; the notes and loans are executive agreements that allow a different procurement procedure (RA 9184, Sec. 4). But limiting the bidding to three Chinese contractors apparently contravened Filipino First; the Court did not void it because it was not prayed for."
+   },
+   {
+    "q": "Do the arbitration clauses (Chinese law; CIETAC or HKIAC) violate an independent foreign policy (Art. II, Sec. 7)?",
+    "a": "NO",
+    "why": "Parties may choose the governing law and forum (party autonomy); the harm is speculative, and foreign law must be proved."
+   },
+   {
+    "q": "Does the waiver-of-immunity clause offend the provisions on national economy and patrimony?",
+    "a": "NOT RULED",
+    "why": "Not ripe: there has been no default, arbitration or seizure."
+   }
+  ],
+  "vote": "13–1. J.Y. Lopez, J.; Caguioa, Lazaro-Javier and Gaerlan, JJ., concurring; Leonen, J., dissenting.",
+  "ops": "Leonen, J., dissenting: an Approval-in-Principle with bare data is not concurrence; without a contract the Board cannot concur, so Final Approval must come before signing; and confining the bidding to Chinese contractors violated the Filipino First policy, which is a positive command. Caguioa, J.: the conditions in the Approval-in-Principle were incorporated, so execution complied; the Filipino First policy does not reach localized projects. Gaerlan, J.: traces the borrowing power and its legislative, popular and administrative controls, and leaves open whether the approval-negotiation-approval framework itself complies. Lazaro-Javier, J.: voiding government acts for violating state policies needs adjudicative facts."
+ },
+ "nicolas": {
+  "iss": [
+   {
+    "q": "Are the petitioners barred by res judicata or stare decisis (Bayan, 2000) from again assailing the VFA?",
+    "a": "NOT EXPRESSLY RULED",
+    "why": "The Court re-examined Art. XVIII, Sec. 25 on the merits and reaffirmed Bayan."
+   },
+   {
+    "q": "Does the VFA violate Art. XVIII, Sec. 25: is the presence of US troops allowed “under a treaty duly concurred in by the Senate … and recognized as a treaty by the other contracting State”?",
+    "a": "NO",
+    "why": "The provision was meant to end the asymmetry of the old Bases Agreement. The Philippine Senate concurred in the VFA, and the US, through its authorized representative, recognized it as a treaty; that the US Senate did not give consent is a matter of US internal law (agreements are notified to Congress under the Case-Zablocki Act). Besides, the VFA implements the 1951 Mutual Defense Treaty, ratified by both Senates, under which the troops’ presence is allowed."
+   },
+   {
+    "q": "Does the VFA’s custody clause (Art. V, par. 6) violate the Court’s rule-making power and equal protection?",
+    "a": "NO",
+    "why": "A foreign soldier admitted by agreement is substantially different from other accused. Under international law visiting forces are immune except as agreed, and the Constitution itself allows such arrangements (heads of State, diplomats, troops; Art. II, Sec. 2)."
+   },
+   {
+    "q": "Are the Romulo-Kenney Agreements, detaining the convicted Smith at the US Embassy, in accord with the VFA?",
+    "a": "NO",
+    "why": "The VFA separates custody during trial (Art. V, par. 6) from detention after conviction (par. 10), which must be in facilities agreed on and “by Philippine authorities.” An embassy room guarded by US personnel is not; the DFA must negotiate."
+   },
+   {
+    "q": "(Resolution of February 3, 2009) Does Medellin v. Texas affect the VFA’s compliance with Sec. 25?",
+    "a": "NO",
+    "why": "The VFA is self-executing under Medellin’s own test and was actually carried out (the US produced Smith); it is implemented through the Case-Zablocki Act; the Mutual Defense Treaty received US Senate consent on March 20, 1952; and the framers required only recognition as a treaty, not a change in the other State’s domestic system."
+   }
+  ],
+  "vote": "9–4. Azcuna, J. Dissenting: Puno, C.J. and Carpio, J., each joined by Austria-Martinez and Carpio-Morales, JJ. Nachura, J. (who had signed pleadings as Solicitor General) and Peralta, J. took no part.",
+  "ops": "Puno, C.J., dissenting: under Medellin, the VFA is a sole executive agreement that is not US domestic law; the “anomalous asymmetry” (the Philippines enforces it, the US cannot) means it is not “recognized as a treaty”; Smith should go to the New Bilibid Prison. Carpio, J., dissenting: Sec. 25 requires a treaty equally binding as domestic law in both States; notification under the Case-Zablocki Act is proof the US treats the VFA as a mere executive agreement; declare it unenforceable and transfer Smith."
+ },
+ "gotek": {
+  "iss": [
+   {
+    "q": "Is the President’s power to deport, and the Board’s power to investigate, limited to the grounds in Sec. 37 of the Immigration Law?",
+    "a": "NO",
+    "why": "There are two modes of deportation: by the President, after investigation, under Sec. 69 of the Revised Administrative Code, and by the Commissioner of Immigration under Sec. 37. Sec. 69 and EO 398 specify no grounds; deportation is an inherent power of the State, and the President, the sole judge of the facts, decides whether an alien is undesirable. Qua Chee Gan’s contrary remark was obiter. Possessing fake dollar checks and posing as a guerrilla unit are proper subjects of investigation."
+   },
+   {
+    "q": "Is a prior criminal conviction needed, making the complaint premature?",
+    "a": "NO",
+    "why": "A deportation order does not depend on a judicial conviction (Ang Beng); even an acquittal of the same charge would not bar it. The Board only recommends; the President decides, and any abuse should be brought to the President first."
+   }
+  ],
+  "vote": "Unanimous (Second Division). Aquino, J.; Antonio, J., concurring.",
+  "ops": "Antonio, J., concurring: the law gives the Chief Executive full discretion to decide whether an alien’s residence is so undesirable as to injure the State, and a deportation order does not depend on a prior conviction."
+ },
+ "soliven": {
+  "iss": [
+   {
+    "q": "Were the petitioners denied due process when informations were filed while the prima facie finding was still under review?",
+    "a": "MOOT (and NO as to Beltran)",
+    "why": "The Secretary of Justice and then the President affirmed the finding, so the claim lost its basis. Beltran filed a motion to declare the proceedings closed instead of counter-affidavits, waiving his chance; due process requires only the opportunity."
+   },
+   {
+    "q": "Was Beltran’s right violated when the judge issued a warrant without personally examining the complainant and witnesses?",
+    "a": "NO",
+    "why": "Art. III, Sec. 2 stresses the judge’s personal responsibility to be satisfied of probable cause, not a duty to examine witnesses personally. The judge evaluates the fiscal’s report and supporting documents and issues the warrant, or, if not satisfied, requires affidavits of witnesses. Otherwise judges would drown in preliminary investigations."
+   },
+   {
+    "q": "May the President initiate a criminal case by filing a complaint-affidavit?",
+    "a": "YES",
+    "why": "Immunity exists so the President can work free of hindrance or distraction. It belongs to the President by virtue of the office and may be invoked only by the holder, not by anyone else on the President’s behalf, so an accused cannot raise it. The President may waive it and submit to the court’s jurisdiction; the risk of perjury or contempt is the President’s own choice."
+   },
+   {
+    "q": "Is Beltran not liable because the publication was privileged?",
+    "a": "NOT RULED",
+    "why": "The Supreme Court is not a trier of facts; it is a defense for the trial court."
+   },
+   {
+    "q": "Would the prosecution have a chilling effect on press freedom?",
+    "a": "NOT RULED",
+    "why": "There was no basis to rule at that stage."
+   }
+  ],
+  "vote": "15–0. Per curiam; Gutierrez, Jr., J., concurring, reserving his vote on the chilling-effect issue.",
+  "ops": "Gutierrez, Jr., J.: the Court should decide the chilling effect now, as in Salonga v. Cruz Paño: when a powerful President who heads the prosecution service sues a columnist, the publisher and editors in “a not too indubitable a case” for libel, the Court, not a lower tribunal, should draw the line (US v. Bustos; People v. Perfecto). Still, an incumbent President should not be left “bereft of legal remedies” against vilification."
+ },
+ "gloriaca": {
+  "iss": [
+   {
+    "q": "Was the petition for prohibition barred by presidential immunity, since it questioned an act the President approved?",
+    "a": "NO",
+    "why": "The petition was directed against the Secretary and the Regional Director, not the President, and the acts questioned were theirs; the CA’s injunction ran against them. Presidential decisions may in any case be questioned in court for grave abuse of discretion."
+   },
+   {
+    "q": "Was prohibition improper because the petitioners were not acting as a court or beyond their jurisdiction?",
+    "a": "NO",
+    "why": "Grave abuse amounting to lack or excess of jurisdiction was alleged, the petitioners themselves called the act ministerial, and courts may set aside administrative action that is capricious or arbitrary."
+   },
+   {
+    "q": "Did the reassignment violate security of tenure?",
+    "a": "YES",
+    "why": "It was indefinite: the memorandum described him as fit for the post and set no period or purpose from which temporariness could be inferred. Security of tenure covers transfers without consent that amount to removal (Bentain); temporary transfers are allowed only if they are not a scheme to remove or force out."
+   }
+  ],
+  "vote": "5–0 (Third Division). Purisima, J."
+ },
+ "delima": {
+  "iss": [
+   {
+    "q": "May the incumbent President be haled to court, even only for a petition for habeas data?",
+    "a": "NO",
+    "why": "Immunity traces to “the king can do no wrong”; the 1973 Constitution (as amended in 1981) wrote it in, and the 1987 Constitution left it out only because it was “understood in present jurisprudence” (Bernas). The lack of distinctions bars any: the President cannot be sued while in office. The US rule limiting immunity to official acts (Nixon v. Fitzgerald; Clinton v. Jones) is persuasive only, and Philippine immunity attaches for the whole tenure, whatever the subject matter. No balancing test applies; habeas data is covered, since granting it would find the President in breach of law; immunity need not be invoked (under Soliven, others cannot raise it for the President, but the Court applies it); OSG representation does not remove the distraction; and the petitioner is not without remedy: impeachment, or a suit after tenure."
+   },
+   {
+    "q": "Were the President’s statements made in the discharge of official duties?",
+    "a": "MOOT",
+    "why": "Immunity applies whether the acts are personal or official."
+   },
+   {
+    "q": "Was the petition wrongly filed with the Supreme Court under the Rule on the Writ of Habeas Data?",
+    "a": "NOT RULED",
+    "why": "The Court dismissed on immunity alone."
+   }
+  ],
+  "vote": "Bersamin, C.J., with Carpio, Peralta, Perlas-Bernabe, Gesmundo, Hernando, Carandang, Lazaro-Javier, Inting and Zalameda, JJ.; A.B. Reyes, Jr., J., separate concurring opinion; Leonen, J. (joined by Caguioa, J.), separate opinion. J.C. Reyes, Jr., J., on leave."
+ },
+ "robredo": {
+  "iss": [
+   {
+    "q": "Did the protest meet the requirement of specificity in alleging fraud and irregularities?",
+    "a": "NO (heard anyway)",
+    "why": "The allegations were bare and generic, with no precincts named for Lanao del Sur and Maguindanao and only 11 of 422 for Basilan, and the annexes were defective; “mere doubts, fears” are not actionable (Peña v. HRET). The protest could have been dismissed outright but was heard for due process; the bar is higher for the two highest posts."
+   },
+   {
+    "q": "Did the protestant show a reasonable recovery of votes after revision of the three pilot provinces?",
+    "a": "NO",
+    "why": "Under PET Rule 65, “not more than three” pilot provinces is a ceiling, chosen at the preliminary conference; no new rules can be made now. After revision, Robredo’s lead rose from 263,473 to 278,566, so the protest is dismissed without considering the other provinces."
+   },
+   {
+    "q": "Does the failure of the recount bar the third cause of action, annulment of elections?",
+    "a": "YES; it fails on the merits anyway",
+    "why": "Rule 65 directs dismissal forthwith; Abayon is not precedent, and hearing the claim would need ad hoc rules. Even so, the Abayon requisites were not met: COMELEC rulings on the same failure-of-elections claims were final, the protestant did not allege that lawful and unlawful ballots could not be told apart or that Robredo was responsible, and annulling all three provinces still leaves her ahead by 15,130."
+   },
+   {
+    "q": "Do the PET Rules allow different pilot provinces for each cause of action?",
+    "a": "NO",
+    "why": "The pilots cover all causes of action; otherwise more than three would be a fishing expedition."
+   },
+   {
+    "q": "Does the ruling on the third cause of action affect the counter-protest?",
+    "a": "NOT SQUARELY RULED",
+    "why": "The counter-protest was dismissed in the dispositive portion."
+   },
+   {
+    "q": "May the PET annul election results, and would that mean special elections?",
+    "a": "YES; NO",
+    "why": "Annulment is an incident of the PET’s judicial function over a contested post; calling special elections belongs exclusively to the COMELEC."
+   },
+   {
+    "q": "Did the PET incur inordinate delay, beyond RA 1793’s 20 months?",
+    "a": "NO",
+    "why": "RA 1793 was impliedly repealed when the PET became a constitutional body; the Constitution’s periods (Art. VIII, Secs. 13–14) do not fix one for it, and the case involved more than two million ballots."
+   }
+  ],
+  "vote": "15–0 to dismiss. Leonen, J., with Perlas-Bernabe, Gesmundo, Hernando, Carandang and Lazaro-Javier, JJ.; Caguioa, J., concurring separately. In the result: Peralta, C.J.; M.V. Lopez, J. (joined by Inting, Delos Santos, Rosario and J.Y. Lopez, JJ.); Gaerlan, J. (joined by Zalameda, J.).",
+  "ops": "M.V. Lopez, J.: reasonable recovery should be measured by the share of protested precincts revised in the pilots; even so, Marcos failed. Gaerlan, J.: pushing the third cause of action would need new rules, best made through the PET’s rule-making power."
  }
 }

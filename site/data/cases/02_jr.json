@@ -175,9 +175,16 @@
   "r": "Though moot when the proclamation was lifted, the Court ruled because the issue is capable of repetition yet evading review. The President may declare a state of rebellion under her executive and commander-in-chief powers; the declaration adds no new powers. Only the legislator-petitioners had standing.",
   "f": "After the 2003 Oakwood mutiny, President Arroyo declared a state of rebellion and called out the AFP, then lifted it.",
   "h": "Petitions dismissed; the declaration was valid but legally superfluous.",
-  "x": "Lists the exceptions to mootness and shows legislative standing (an executive act that impairs congressional power, here emergency powers).",
+  "x": "Lists the exceptions to mootness and shows legislative standing (an executive act that impairs congressional power, here emergency powers). Under V.B.2(f): the President may declare a state of rebellion under the executive and Commander-in-Chief powers, but the declaration adds no power and cannot justify warrantless arrests outside the Rules of Court.",
   "test": "A moot case may still be decided if: (1) grave violation of the Constitution; (2) exceptional character and paramount public interest; (3) need to formulate controlling principles for the bench, the bar and the public; (4) capable of repetition yet evading review.",
-  "s": "Moot but decided: capable of repetition yet evading review; only legislators had standing."
+  "s": "Moot but decided: capable of repetition yet evading review; only legislators had standing.",
+  "also": [
+   "cinc"
+  ],
+  "sy": [
+   "Sanlakas v. Executive Secretary"
+  ],
+  "g": "Gatmaytan (Martial Law Cases, Part 2): the Court sided with the President but reassured the petitioners that a declaration of a state of rebellion “cannot diminish or violate” constitutionally protected rights; if martial law cannot, “then more so” a mere declaration."
  },
  {
   "id": "joya",
@@ -267,8 +274,15 @@
   "r": "The IBP lacked standing: its interest in the rule of law is too general. The Court nonetheless ruled, given transcendental importance. Calling out the armed forces is a matter of presidential discretion reviewable only for grave abuse.",
   "f": "President Estrada deployed Marines to patrol Metro Manila with the PNP to curb crime.",
   "h": "Deployment upheld; no grave abuse shown; civilian supremacy not violated.",
-  "x": "Associational standing must rest on members’ injury, not a general interest; transcendental importance can relax standing.",
-  "s": "A general interest in the rule of law is not standing; transcendental importance may relax it; calling-out power reviewable for grave abuse."
+  "x": "Associational standing must rest on members’ injury, not a general interest; transcendental importance can relax standing. Under V.B.2(f): calling out needs only that it “becomes necessary”; the Court defers unless the petitioner proves grave abuse (no textual standards, classified intelligence, the need to act fast); and military help to the police does not breach civilian supremacy while the police stay in command.",
+  "s": "A general interest in the rule of law is not standing; transcendental importance may relax it; calling-out power reviewable for grave abuse.",
+  "also": [
+   "cinc"
+  ],
+  "sy": [
+   "IBP v. Zamora"
+  ],
+  "g": "Gatmaytan (Martial Law Cases, Part 2): the reasons IBP v. Zamora gives for deference (no textual standards, evidence that is not “technical proof,” classified intelligence) show a Court that “doesn’t really want to be anywhere near this kind of a case,” even for the calling-out power."
  },
  {
   "id": "execseccA",

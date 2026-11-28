@@ -1,0 +1,287 @@
+[
+ {
+  "id": "ampatuan",
+  "n": "Ampatuan v. Puno",
+  "y": "2011",
+  "t": "cinc",
+  "sub": "V.B.2(f) Commander-in-Chief: the calling-out power",
+  "a": 1,
+  "r": "Calling out the armed forces to prevent or suppress lawless violence is a power the Constitution vests directly in the President (Art. VII, Sec. 18); it needs no act of Congress and is not an exercise of emergency powers under Art. VI, Sec. 23(2). The Court may review its factual basis but defers unless grave abuse is shown; the petitioner bears the burden.",
+  "f": "After the Maguindanao massacre of November 23, 2009 (57 killed, journalists among them), President Arroyo issued Proclamation No. 1946, placing Maguindanao, Sultan Kudarat and Cotabato City under a state of emergency and directing the AFP and PNP to prevent and suppress lawless violence there. AO 273 (amended by AO 273-A) “transferred,” then “delegated,” supervision of the ARMM to the DILG. The ARMM Governor’s successors, the Vice-Governor and the Speaker, sued to void them as an invalid exercise of emergency powers and a takeover of the ARMM.",
+  "h": "Petition dismissed (15–0, Abad, J., June 7, 2011). No violation of autonomy: the DILG never took over the ARMM; its own officials succeeded one another under RA 9054. No emergency powers were exercised: only a state of emergency in three places, not a national emergency, and no law granting extraordinary powers was invoked. The President had factual basis: the feuding clans’ armed followers and the threat of retaliation.",
+  "test": "Calling out: the only criterion is that it “becomes necessary” to prevent or suppress lawless violence, invasion or rebellion; review only for grave abuse, and the petitioner must prove the absence of factual basis.",
+  "x": "Use when a President deploys troops or declares a local state of emergency after violence, and critics call it emergency powers or a takeover of an LGU: calling out is the President’s own power; emergency powers need a law. Pair with IBP v. Zamora (deference) and David (the line at decrees and takeovers).",
+  "g": "Gatmaytan (Martial Law Cases lecture, Part 2, 2024): even for the calling-out power, the Court “would rather defer to the President.” He reads Ampatuan as one more case in which review exists on paper, but the Court “isn’t nearly as strong as the Constitution makes it.”",
+  "s": "Calling out after the Maguindanao massacre: the President’s own power, not emergency powers; no ARMM takeover.",
+  "sy": [
+   "Ampatuan v. Puno"
+  ]
+ },
+ {
+  "id": "fortun",
+  "n": "Fortun v. Macapagal-Arroyo",
+  "y": "2012",
+  "t": "cinc",
+  "sub": "V.B.2(f) Commander-in-Chief: martial law lifted before review",
+  "a": 1,
+  "r": "Lifting martial law (Proclamation No. 1959) after eight days, before Congress acted and before it was meaningfully implemented, mooted the petitions. The Court also said the President and Congress act “in tandem” and that it should let Congress review first, stepping in only if Congress defaults; Lagman v. Medialdea (2017) set that sequential view aside.",
+  "f": "On December 4, 2009, after the Maguindanao massacre, President Arroyo issued Proclamation No. 1959, declaring martial law and suspending the writ in Maguindanao on the ground of rebellion, and reported to Congress within 48 hours. Congress met in joint session on December 9 but never voted. On December 12, Proclamation No. 1963 lifted martial law and restored the writ. Seven petitions challenged the factual basis of Proclamation No. 1959.",
+  "h": "Petitions dismissed as moot (8–6, Abad, J., March 20, 2012). The constitutional question was not unavoidable: the proclamation was withdrawn before Congress could act and looked “more like saber-rattling than an actual deployment and arbitrary use of political power” (no takeover of local governments, no decrees, no mass arrests). The exceptions to mootness did not apply. The meaning of rebellion, the standard of proof and warrantless arrests were left unruled.",
+  "x": "Use when a President lifts martial law before review: argue mootness and its exceptions. Cite Carpio, J.’s dissent (rebellion means Art. 134, RPC; probable cause suffices; martial law allows no warrantless arrests outside Rule 113; the Court need not wait for Congress), much of which Lagman (2017) later adopted.",
+  "g": "Gatmaytan (Martial Law Cases, Part 2): “there is nothing in the Constitution” that makes the reviews sequential; out of hesitation to contradict the President, the Court gave itself a secondary role, and no one can tell when Congress has “defaulted.” He notes that the Court admitted the error in Lagman (2017).",
+  "s": "Maguindanao martial law lifted in eight days: moot; the Court would let Congress review first (later abandoned).",
+  "sy": [
+   "Fortun v. Macapagal-Arroyo"
+  ]
+ },
+ {
+  "id": "lagman17",
+  "n": "Lagman v. Medialdea",
+  "y": "2017",
+  "t": "cinc",
+  "sub": "V.B.2(f) Commander-in-Chief: reviewing martial law (Sec. 18, par. 3)",
+  "a": 1,
+  "r": "The Sec. 18 “appropriate proceeding” is sui generis: any citizen may ask the Court to review the sufficiency, not the accuracy, of the factual basis, independently of Congress. Martial law needs actual rebellion (Art. 134, RPC) and public safety, judged on the facts known to the President at the time; probable cause suffices. Proclamation No. 216 was upheld.",
+  "f": "On May 23, 2017, government forces trying to capture Isnilon Hapilon and the Maute brothers met armed resistance in Marawi: a jail was stormed, a police station, a school and a cathedral burned, hostages taken and ISIS flags raised. That night President Duterte issued Proclamation No. 216, declaring martial law and suspending the writ in the whole of Mindanao for 60 days, and reported to Congress on May 25. Representatives led by Lagman, Marawi residents and others petitioned under Sec. 18, par. 3.",
+  "h": "Petitions dismissed; Proclamation No. 216 constitutional (11–4, Del Castillo, J., July 4, 2017). The petitioners attacked only five facts, with news reports (hearsay); the rest stood unrebutted. The rebels aimed to remove Mindanao from allegiance and set up a wilayat; public safety required martial law; and the President could cover all of Mindanao, since rebellion is not confined within predetermined bounds. The motions for reconsideration were denied on December 5, 2017 (10–4).",
+  "test": "Sec. 18 review: (1) actual rebellion or invasion; (2) public safety requires it; (3) the President had probable cause to believe both, on the facts known at the time (the Proclamation and the Report), read in their totality. Some false facts do not void it if the rest suffice.",
+  "x": "Use for any question on reviewing martial law or the suspension of the writ: who may sue, what proceeding, what standard, what facts count, and how large an area. Contrast Fortun (abandoned) and the dissents that would confine it to Marawi (Carpio) or three provinces (Sereno, Caguioa).",
+  "g": "Gatmaytan (Martial Law Cases, Part 3): Lagman rightly corrected Fortun, but its line that “falsities and/or inaccuracies” in the report do not void the proclamation “really shook me to the core”: a report can be mostly wrong and still be a sufficient basis, which in his view scratches out judicial review. See also “The Philippines’ Authoritarian Constitution,” 95 Phil. L.J. 529 (2022).",
+  "w": "Caguioa, J.’s opinion is labeled “concurring,” but he voted that martial law over the whole of Mindanao lacked sufficient factual basis.",
+  "s": "Marawi: martial law over all of Mindanao upheld; sui generis review of sufficiency, not accuracy; probable cause.",
+  "sy": [
+   "Lagman v. Medialdea, G.R. No. 231658"
+  ]
+ },
+ {
+  "id": "lagmanpimentel",
+  "n": "Lagman v. Pimentel III",
+  "y": "2018",
+  "t": "cinc",
+  "sub": "V.B.2(f) Commander-in-Chief: extending martial law",
+  "a": 1,
+  "r": "Congress may extend martial law and the suspension of the writ more than once, for whatever period it fixes. The only limits: the President must ask; the rebellion must persist and public safety require it; and the Court may review the factual basis. A rebellion persists after the fighting ends: recruitment, financing and regrouping count.",
+  "f": "Martial law over Mindanao (Proclamation No. 216, May 23, 2017), upheld in Lagman v. Medialdea, was first extended by Congress to December 31, 2017. Marawi was declared liberated on October 17, 2017. On the President’s December 8 request, citing Maute remnants recruiting, bombing plots, the BIFF, the Abu Sayyaf and the NPA, Congress in joint session (RBH No. 4, 240–27, after three-minute interpellations) extended it for a year, to December 31, 2018. Four petitions followed.",
+  "h": "Petitions dismissed; RBH No. 4 constitutional (10–5, Tijam, J., February 6, 2018). The President cannot be impleaded; Congress is an indispensable party but was substantially impleaded; the earlier rulings decided existence, not persistence, so they did not bar review; how Congress deliberated is its own business; about 400 new recruits, 185 at large and new bomb plots showed persistence; the NPA could be added; proportionality and suitability tests were rejected.",
+  "test": "Extension (Art. VII, Sec. 18): (1) on the President’s initiative; (2) the invasion or rebellion persists and public safety requires it; (3) subject to the Court’s review of the factual basis. No limit on the number or the length of extensions.",
+  "x": "Use when Congress extends martial law again or for a long period, or the extension cites a rebel group not named in the original proclamation.",
+  "g": "Gatmaytan (Martial Law Cases, Part 3): if Congress may extend for any length, “we have effectively removed the time constraints”: 14 years or 28. The Court’s refusal to “emasculate, dilute or diminish” the powers of government is “exactly what we did” in 1987; “that’s what that entire Section 18 is all about.”",
+  "s": "The second extension (a full year) upheld: Congress may extend as often and as long as it fixes.",
+  "sy": [
+   "Lagman v. Pimentel III"
+  ]
+ },
+ {
+  "id": "lagman19",
+  "n": "Lagman v. Medialdea",
+  "y": "2019",
+  "t": "cinc",
+  "sub": "V.B.2(f) Commander-in-Chief: the third extension",
+  "a": 0,
+  "r": "The third extension of martial law in Mindanao (RBH No. 6) had sufficient factual basis. The test is reasonableness, not accuracy: the Court reads the reports in their totality and need not make its own findings. The Constitution limits neither the number nor the length of extensions; how Congress approves them is a political question; rights abuses must be pursued in separate cases.",
+  "f": "On December 6, 2018, the President asked Congress to extend martial law in Mindanao a third time, citing the Lamitan and Isulan bombings, Dawlah Islamiyah recruitment, 342 incidents by communist rebels and Abu Sayyaf kidnappings, despite gains (685 local terrorists and 1,073 communist rebels neutralized). On December 12, Congress in joint session adopted RBH No. 6 (235 votes). Lagman and other legislators, Bayan Muna, Monsod and Lumad petitioners challenged it.",
+  "h": "Petitions dismissed; RBH No. 6 constitutional (9–4, Carandang, J., February 19, 2019). Rebellion by the Abu Sayyaf, the BIFF, the Dawlah Islamiyah and the NPA persists: a missing motive does not negate it, rebellion is a continuing crime not confined to clashes of arms, and the peace and order councils’ resolutions support the public-safety finding. Proclamation No. 216 did not become functus officio when Marawi was freed.",
+  "test": "Sufficiency of factual basis: “not accuracy nor preciseness but reasonableness of the factual basis”; reports not “palpably false, contrived and untrue” are taken in their totality, not piecemeal.",
+  "x": "Use when critics argue that martial law has outlived its rebellion, or that an extension rests on new groups; and for the rule that abuses in implementation do not void the proclamation but go to separate cases (RA 7438, RA 9745, amparo, habeas data).",
+  "g": "Gatmaytan (Martial Law Cases, Part 3): the Court says the basis “should not also be so accurate,” ignoring that the 1987 Constitution made martial law a partnership, subject to review by Congress and the courts: “you don’t see any of that in any of these cases.”",
+  "s": "The third extension upheld: reasonableness, not accuracy; no limit on extensions; Congress’s manner is a political question.",
+  "sy": [
+   "Lagman v. Medialdea, G.R. No. 243522"
+  ]
+ },
+ {
+  "id": "olaguer",
+  "n": "Olaguer v. Military Commission No. 34",
+  "y": "1987",
+  "t": "cinc",
+  "sub": "V.B.2(f) Commander-in-Chief: military tribunals and civilians",
+  "a": 1,
+  "r": "A military commission cannot try civilians, even during martial law, while the civil courts are open and functioning; its judgment is void for lack of jurisdiction. Due process means trial by judicial process, and military commissions are not courts. Aquino, Jr. v. Military Commission No. 2 is abandoned; Art. VII, Sec. 18 now says the same.",
+  "f": "Eduardo Olaguer and other civilians were arrested by the military in December 1979 and charged with subversion before Military Commission No. 34, created by the AFP Chief of Staff, for an alleged plot to assassinate President and Mrs. Marcos, arson and rebellion. Martial law was lifted in January 1981, but the trial went on. On December 4, 1984, after deeming their remaining evidence waived and a 25-minute recess, the Commission sentenced them all to death by electrocution.",
+  "h": "Habeas corpus petitions dismissed as moot (all had been released); certiorari and prohibition granted: the creation of MC 34 to try civilians is unconstitutional and all its proceedings void (13–0, Gancayco, J., May 22, 1987; Padilla, J., no part). Even with jurisdiction, the Commission lost it by denying the right to present evidence. Proclamation No. 2045 ended its authority over civilians, and double jeopardy does not bar a new trial in the civil courts.",
+  "test": "Ouster of jurisdiction: a tribunal that disregards an accused’s constitutional rights loses jurisdiction, and habeas corpus lies (Gumabon).",
+  "x": "Use when the government proposes military trials of civilians, with or without martial law, and for the rule that a tribunal that denies constitutional rights loses jurisdiction.",
+  "g": "Gatmaytan (Martial Law Cases, Part 1): Sec. 18’s guarantee that martial law does not supplant the civil courts or give military courts jurisdiction over civilians “is meant to address” the martial-law rulings that let military tribunals try the political opposition.",
+  "s": "No military trial of civilians while civil courts function: MC 34’s death sentence void; Aquino, Jr. abandoned.",
+  "sy": [
+   "Olaguer v. Military Commission No. 34"
+  ]
+ },
+ {
+  "id": "devilla",
+  "n": "In re De Villa",
+  "y": "2004",
+  "t": "cinc",
+  "sub": "V.B.2(f) Commander-in-Chief: the writ of habeas corpus",
+  "a": 0,
+  "r": "Habeas corpus is not a writ of error and rarely lies after a final conviction: only where (a) a constitutional right was denied, resulting in the restraint, (b) the court had no jurisdiction to impose the sentence, or (c) the penalty was excessive, voiding the excess. A post-conviction DNA test disproving paternity is none of these.",
+  "f": "Reynaldo de Villa was convicted of raping his 12-year-old niece by affinity, who later gave birth; the Supreme Court affirmed in 2001 (reclusion perpetua, with support for the child), and the judgment became final in 2002. His son obtained the child’s saliva and had DNA tests run with other relatives; a 2003 report said Reynaldo was not the father. The son petitioned the Supreme Court for habeas corpus and a new trial.",
+  "h": "Petition for habeas corpus and new trial dismissed (14–0, Ynares-Santiago, J., November 17, 2004). The petition collaterally attacked a final judgment without any of the three grounds; counsel’s withdrawal was not a denial of the right to counsel. A new trial was too late (Rule 121 allows it only before finality), and paternity is not an element of rape: the conviction rested on the victim’s testimony.",
+  "test": "Habeas corpus after final conviction lies only where (a) a constitutional right was denied, resulting in the restraint; (b) the court had no jurisdiction to impose the sentence; or (c) the penalty was excessive, as to the excess.",
+  "x": "Use when a detainee seeks habeas corpus: the writ tests the legality of the restraint, not the correctness of a judgment. Pair with Olaguer (a tribunal that denies constitutional rights loses jurisdiction, so the writ lies).",
+  "w": "The syllabus places the case under the Commander-in-Chief clause for the writ of habeas corpus; it is not a martial law case.",
+  "s": "Habeas corpus after a final conviction: only three grounds; DNA evidence disproving paternity is not one.",
+  "sy": [
+   "In Re De Villa"
+  ]
+ },
+ {
+  "id": "davidgma",
+  "n": "David v. Macapagal-Arroyo",
+  "y": "2006",
+  "t": "cinc",
+  "also": [
+   "jr"
+  ],
+  "sub": "V.B.2(g) Emergency powers: PP 1017 and the takeover clause",
+  "a": 1,
+  "r": "The President alone may declare a state of national emergency and call out the armed forces; but exercising emergency powers, such as taking over private businesses under Art. XII, Sec. 17, needs a law from Congress, and the President cannot issue decrees. PP 1017 was valid only as a calling-out. A moot case may be decided under four exceptions.",
+  "f": "On February 24, 2006, citing a plot by military adventurists and leftists, President Arroyo issued PP 1017, declaring a state of national emergency, commanding the AFP to enforce “all decrees … promulgated by me” (words taken from Marcos’s PP 1081), and invoking the takeover clause; G.O. No. 5 ordered the AFP and PNP to suppress “acts of terrorism” and lawless violence. Rally permits were revoked, David and Llamas were arrested without warrant, and police raided the Daily Tribune. PP 1021 lifted PP 1017 a week later.",
+  "h": "Petitions partly granted (11–3, Sandoval-Gutierrez, J., May 3, 2006). PP 1017 is valid as a call on the AFP and as a declaration of national emergency, but void insofar as it commands enforcement of decrees and of laws unrelated to lawless violence; the declaration does not authorize takeovers without a law. G.O. No. 5 is valid except “acts of terrorism” (then undefined by law). The arrests, the dispersals and the Tribune raid were unconstitutional.",
+  "test": "Moot cases are decided when: (1) there is a grave violation of the Constitution; (2) the situation is exceptional and of paramount public interest; (3) controlling principles are needed to guide the bench, the bar and the public; (4) the case is capable of repetition yet evading review.",
+  "x": "Use when a President declares an emergency and moves to take over utilities or businesses, issue “decrees,” or crack down on rallies and the press: declaring is the President’s; a takeover needs a law. Also the leading case on the four exceptions to mootness, and on not impleading the President.",
+  "g": "Gatmaytan (Martial Law Cases, Part 2): “a rare win” against the State: the President tried to legislate and to take over businesses without a law, and the Court said no. Emergencies include epidemics; in his Bayanihan interview (2020) he noted that RA 11469 used exactly this route, a law, to let the President take over or direct hospitals and transport.",
+  "s": "PP 1017: declaring an emergency, yes; decrees and takeovers without a law, no; the four exceptions to mootness.",
+  "sy": [
+   "David v. Arroyo"
+  ]
+ },
+ {
+  "id": "constantino",
+  "n": "Constantino v. Cuisia",
+  "y": "2005",
+  "t": "cinc",
+  "sub": "V.B.2(h) Contracting and guaranteeing foreign loans",
+  "a": 1,
+  "r": "The power to contract or guarantee foreign loans (Art. VII, Sec. 20) is read broadly: it covers bond conversion (a bond is a loan) and debt buybacks (an implied incident of borrowing). The Secretary of Finance may exercise it as the President’s alter ego, with the President’s prior approval or later ratification, which is presumed unless shown otherwise.",
+  "f": "Under the Aquino government’s negotiated (not default) debt strategy, the debt team agreed in 1992 on a Financing Program with commercial bank creditors (about US$5.3 billion): a cash buyback of debt at a discount, and the conversion of old debt into new bonds. Citizens, taxpayers and the Freedom from Debt Coalition sued to annul the agreements, arguing that they were neither loans nor guarantees, that only the President personally could make them, and that they waived the right to repudiate behest loans.",
+  "h": "Petition dismissed (Tinga, J., October 13, 2005; no dissent). Standing was allowed (transcendental importance). The repudiation issue was not ripe. Both schemes fall within Sec. 20 and the enabling laws (RA 245, PD 1177, RA 240). The Finance Secretary validly acted as alter ego: only powers such as martial law, the suspension of the writ and pardon must be exercised personally. No grave abuse in the policy choice.",
+  "test": "Alter ego and Sec. 20: the President must personally exercise powers that suspend freedoms or override other branches (martial law, the writ, pardon); borrowing is established governance and may be done through the Finance Secretary, subject to the President’s approval or ratification.",
+  "x": "Use when a foreign loan or debt deal is attacked as beyond the President’s power, as not a “loan,” or as signed by a Cabinet member instead of the President. For the Monetary Board’s concurrence, pair with Colmenares.",
+  "s": "Debt buybacks and bond conversions are within the foreign-loan power; the Finance Secretary may act as alter ego.",
+  "sy": [
+   "Constantino v. Cuisia"
+  ]
+ },
+ {
+  "id": "colmenares",
+  "n": "Colmenares v. Duterte",
+  "y": "2022",
+  "t": "cinc",
+  "sub": "V.B.2(h) Foreign loans: the Monetary Board’s prior concurrence",
+  "a": 1,
+  "r": "The Monetary Board’s “prior concurrence” (Art. VII, Sec. 20) is satisfied through a staged procedure, not a literal approval before signing: an Approval-in-Principle before negotiations, signing subject to its conditions, and a Final Approval after signing but before any drawdown. The Chinese loans for the Chico River and Kaliwa Dam projects were valid.",
+  "f": "Under a 2016 memorandum between the DOF and the Export-Import Bank of China, the Philippines signed two preferential loans: US$62 million for the Chico River Pump Irrigation Project (signed April 10, 2018) and US$211 million for the Kaliwa Dam (November 20, 2018). Bidding was limited to three Chinese contractors named by China. For each, the Monetary Board gave an Approval-in-Principle before signing and Final Approval after. The loans carried confidentiality, waiver-of-immunity and Chinese-law arbitration clauses. Makabayan legislators and others sought prohibition.",
+  "h": "Petitions denied; both loan agreements valid and not unconstitutional (13–1, J.Y. Lopez, J., August 9, 2022). The President was dropped as respondent (immunity). The staged procedure satisfied prior concurrence. The confidentiality clause, as worded, unduly restricts access to information on foreign loans (moot; guidance given). Limiting bidding to Chinese contractors apparently contravened the Filipino First policy, but the loans themselves did not; Chinese-law arbitration is valid; the immunity waiver was not ripe.",
+  "test": "Prior concurrence in three stages: (1) Approval-in-Principle on indicative terms, before negotiations; (2) negotiation and review of the documents; (3) Final Approval after signing and before drawdown.",
+  "x": "Use when a foreign loan is signed before the Monetary Board’s final approval, or its terms are kept secret: the staged procedure satisfies Sec. 20, but information on foreign loans must be made available to the public (Art. XII, Sec. 21).",
+  "w": "The vote that M.V. Lopez, J. left while on leave is not stated in the decision.",
+  "s": "Chinese loans upheld: prior concurrence met by approval-in-principle, signing, then final approval before drawdown.",
+  "sy": [
+   "Colmenares v. Duterte"
+  ]
+ },
+ {
+  "id": "nicolas",
+  "n": "Nicolas v. Romulo",
+  "y": "2009",
+  "t": "cinc",
+  "sub": "V.B.2(i) Foreign affairs: visiting forces (Art. XVIII, Sec. 25)",
+  "a": 1,
+  "r": "The VFA satisfies Art. XVIII, Sec. 25: the Senate concurred and the United States recognized it as a treaty; whether the US Senate ratified it is a matter of US law. US troops are also here under the Mutual Defense Treaty. But a convicted US soldier must be detained by Philippine authorities, so the Romulo-Kenney Agreements were not in accord with the VFA.",
+  "f": "US Marine L/Cpl. Daniel Smith was convicted by the Makati RTC (December 4, 2006) of raping Suzette Nicolas in Subic and sentenced to reclusion perpetua. Under the VFA the US had custody during trial; after conviction he was held in the Makati City Jail until, on December 29, 2006, Philippine agents moved him to the US Embassy under the Romulo-Kenney Agreements, where US military personnel guarded him. Nicolas and others sought to void the VFA and to return him to Philippine custody.",
+  "h": "Petitions partly granted (9–4, Azcuna, J., February 11, 2009). The VFA is constitutional (the 2000 ruling in Bayan reaffirmed), and Medellin v. Texas does not change that. The custody clause during trial violates neither the Court’s rule-making power nor equal protection. The Romulo-Kenney Agreements are not in accord with the VFA; the DFA was ordered to negotiate detention in Philippine facilities, with Smith staying at the Embassy meanwhile.",
+  "test": "Art. XVIII, Sec. 25: foreign troops only (1) under a treaty, (2) concurred in by the Senate (and ratified by the people if Congress requires), and (3) recognized as a treaty by the other contracting State.",
+  "x": "Use when a visiting forces agreement (the VFA, the 2026 Philippines–France SOVFA) is attacked under Art. XVIII, Sec. 25, or when a foreign soldier convicted here is held outside Philippine custody.",
+  "s": "The VFA is valid (the Senate concurred; the US recognizes it); but a convicted US Marine must be held by Philippine authorities.",
+  "sy": [
+   "Nicolas v. Romulo"
+  ]
+ },
+ {
+  "id": "gotek",
+  "n": "Go Tek v. Deportation Board",
+  "y": "1977",
+  "t": "cinc",
+  "sub": "V.B.2(i) Foreign affairs: deporting aliens",
+  "a": 0,
+  "r": "The President may deport an undesirable alien after due investigation (Revised Administrative Code, Sec. 69) on grounds not listed in the Immigration Law: the power is an attribute of sovereignty, and the President decides who is undesirable. No prior criminal conviction is needed; the Deportation Board only investigates and recommends.",
+  "f": "Go Tek, a Chinese national, was arrested in a 1963 NBI raid on the supposed headquarters of a “guerrilla” unit claiming to be part of the US Army, and was found with fake dollar checks. The Deportation Board’s prosecutor charged him as an undesirable alien. Go Tek argued that the charge was premature (his criminal case was pending) and that it was not a ground under Sec. 37 of the Immigration Law; the CFI of Manila agreed and stopped the Board.",
+  "h": "CFI decision reversed, the injunction dissolved and the case remanded to the Board (unanimous, Second Division, Aquino, J., September 9, 1977). There are two modes of deportation: by the President under Sec. 69 after investigation, and by the Commissioner of Immigration under Sec. 37. Qua Chee Gan’s contrary remark was obiter. Even an acquittal would not bar deportation.",
+  "test": "Sec. 69 investigation: notice of the charges, at least three days to prepare, the right to counsel, to present witnesses and to cross-examine.",
+  "x": "Use when the government deports a foreign national for conduct (espionage, scams, threats to security) that is not a statutory ground, or before any conviction: the power over aliens is part of the President’s foreign-affairs and sovereign powers; due process means the Sec. 69 hearing.",
+  "s": "The President may deport undesirable aliens on grounds outside the statute, after investigation, without a prior conviction.",
+  "sy": [
+   "Go Tek v. Deportation Board"
+  ]
+ },
+ {
+  "id": "soliven",
+  "n": "Soliven v. Makasiar",
+  "y": "1988",
+  "t": "cinc",
+  "sub": "V.B.2(k) Immunity from suit: who may invoke it",
+  "a": 1,
+  "r": "Presidential immunity belongs to the office and may be invoked only by the President, not by anyone else on the President’s behalf; so an accused cannot use it to stop a case the President filed. The President may waive it and sue as complainant. A judge need not personally examine witnesses before issuing a warrant if the prosecutor’s report and evidence show probable cause.",
+  "f": "President Corazon Aquino filed a complaint-affidavit for libel against columnist Luis Beltran and the newspaper’s publisher, editors and business manager. The fiscal found a prima facie case, informations were filed while the finding was still under review, and the judge issued arrest warrants. Beltran argued that a President immune from suit cannot file a criminal case, since as complainant and witness she would come under the court’s jurisdiction and be exposed to perjury or contempt.",
+  "h": "Petitions dismissed (per curiam, November 14, 1988). The due process claim was moot once the review ended, and Beltran had waived his counter-affidavits. The judge must personally evaluate the fiscal’s report and supporting documents, not personally examine witnesses. Immunity is the President’s shield, not a defense for the accused. Privilege and the chilling effect were left to trial.",
+  "test": "Arrest warrant: the judge (a) personally evaluates the prosecutor’s report and supporting documents and issues the warrant if probable cause exists, or (b) if not satisfied, disregards the report and requires affidavits of witnesses.",
+  "x": "Use when the President, or someone for the President, files a case and the accused invokes immunity, or when the President is asked to testify: the privilege is personal and waivable. The syllabus lists it as “Beltran v. Macasiar.”",
+  "w": "The syllabus calls the case Beltran v. Macasiar (G.R. No. 82585); the decision is Soliven v. Makasiar, consolidated with Beltran’s petitions.",
+  "s": "Immunity is the President’s to invoke or waive: President Aquino could sue for libel, and the accused could not invoke it.",
+  "sy": [
+   "Beltran v. Macasiar"
+  ]
+ },
+ {
+  "id": "gloriaca",
+  "n": "Gloria v. Court of Appeals",
+  "y": "2000",
+  "t": "cinc",
+  "sub": "V.B.2(k) Immunity from suit: acts of subordinates",
+  "a": 0,
+  "r": "A suit to stop the DECS Secretary and Regional Director from carrying out a reassignment the President approved is not a suit against the President: the acts questioned are theirs. Presidential decisions may in any case be reviewed for grave abuse of discretion. An indefinite reassignment without consent violates security of tenure.",
+  "f": "DECS Secretary Gloria recommended, and President Ramos approved, the reassignment of Dr. Icasiano, the Schools Division Superintendent of Quezon City, to a vocational school (MIST), a post said to “best fit his qualifications and experience.” Icasiano sued the Secretary and the Regional Director for prohibition in the Court of Appeals, which stopped the reassignment. They argued that the suit circumvented presidential immunity, since the President had approved the move.",
+  "h": "Petition denied and the CA affirmed (5–0, Third Division, Purisima, J., August 15, 2000). The suit was against the petitioners, not the President; prohibition was proper because grave abuse was alleged; and the reassignment, with no fixed period and no sign of being temporary, was indefinite and violated security of tenure.",
+  "x": "Use when the government says a suit against a Cabinet member or agency is really a suit against the President: immunity does not cover the acts of subordinates, even acts the President approved.",
+  "s": "Suing a Secretary who carries out the President’s order is not suing the President; an indefinite reassignment is void.",
+  "sy": [
+   "Gloria v. Court of Appeals"
+  ]
+ },
+ {
+  "id": "delima",
+  "n": "De Lima v. Duterte",
+  "y": "2019",
+  "t": "cinc",
+  "sub": "V.B.2(k) Immunity from suit: the incumbent President",
+  "a": 1,
+  "r": "The incumbent President is immune from suit during tenure, though the 1987 Constitution is silent: the framers found it “understood in present jurisprudence.” The immunity covers any suit, on official or personal acts, even a petition for habeas data, and the Court applies it even if the President does not invoke it. The remedy is impeachment, or a suit after tenure.",
+  "f": "Sen. Leila de Lima, who as CHR chair had investigated the Davao Death Squad and as senator denounced extrajudicial killings in the drug war, was publicly attacked by President Duterte, who said he would “destroy her in public,” called her an “immoral” woman, linked her to her driver and to drug money, and said a foreign country was helping him listen to her. She petitioned the Supreme Court for a writ of habeas data, with the President as sole respondent.",
+  "h": "Petition dismissed because the incumbent President is immune from suit (Bersamin, C.J., October 15, 2019). The US rule limiting immunity to official acts (Nixon v. Fitzgerald; Clinton v. Jones) does not apply here; no balancing first; habeas data is not exempt, since it would still find him in breach of law; OSG representation does not remove the distraction. Whether his statements were official acts became moot.",
+  "x": "Use when anyone sues the sitting President (habeas data, amparo, damages, criminal complaints): dismiss, or drop the President; officials may still be sued for their own acts (Gloria). The syllabus also flags Leonen, J.’s dissent on reconsideration (November 3, 2020).",
+  "w": "The November 3, 2020 resolution on reconsideration and Leonen, J.’s dissent, which the syllabus cites, are not in the files; nor are the 2019 separate opinions.",
+  "s": "The sitting President cannot be sued at all, even for habeas data, even if he does not invoke immunity.",
+  "sy": [
+   "De Lima v. Duterte"
+  ]
+ },
+ {
+  "id": "robredo",
+  "n": "Marcos, Jr. v. Robredo",
+  "y": "2021",
+  "t": "cinc",
+  "sub": "V.B.3 The Vice-President: election contests before the PET",
+  "a": 1,
+  "r": "An election protest must allege, specify and prove each irregularity by precinct. Under PET Rule 65, if revision of the pilot provinces (at most three) shows no reasonable recovery of votes, the protest is dismissed without more. The PET may annul election results as an incident of its judicial power, but it cannot call special elections, which belong to the COMELEC.",
+  "f": "Leni Robredo won the 2016 vice-presidential election by 263,473 votes and was proclaimed by Congress. Ferdinand Marcos, Jr. protested, alleging massive fraud in 39,221 clustered precincts, and sought (1) annulment of her proclamation, (2) a recount of 36,465 precincts and (3) annulment of the elections in Lanao del Sur, Maguindanao and Basilan. He chose Camarines Sur, Iloilo and Negros Oriental as pilot provinces; after revision of 5,415 precincts, Robredo’s lead grew to 278,566.",
+  "h": "Protest and counter-protest dismissed (15–0 to dismiss, Leonen, J., as the PET, February 16, 2021). The protest lacked specificity but was heard for due process. There was no reasonable recovery in the pilots, which also bars the annulment cause of action; it would fail anyway (even annulling all three provinces leaves Robredo ahead by 15,130). No inordinate delay: RA 1793’s 20-month period no longer binds the PET.",
+  "test": "Annulment of elections (Abayon): (1) illegality affecting more than 50% of the votes cast in the precinct; (2) the lawful and unlawful ballots cannot be distinguished; (3) the protestee was responsible for the unlawful acts.",
+  "x": "Use when a losing presidential or vice-presidential candidate protests: the Supreme Court en banc as the PET is the sole judge (Art. VII, Sec. 4, last par.); protests must be specific; the pilot provinces decide; annulment needs the Abayon requisites.",
+  "s": "Marcos’s VP protest dismissed: no reasonable recovery in the three pilot provinces; the PET may annul, but not call special elections.",
+  "sy": [
+   "Marcos, Jr. v. Robredo",
+   "Marcos v. Robredo"
+  ]
+ }
+]

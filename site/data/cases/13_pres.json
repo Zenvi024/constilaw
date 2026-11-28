@@ -99,11 +99,14 @@
   "f": "After the jueteng exposé, the House impeached President Estrada in November 2000. On January 16, 2001, the Senate voted 11–10 not to open the “second envelope”; the prosecutors walked out and EDSA II began. The AFP and PNP withdrew support, and on January 20 Chief Justice Davide swore in Vice-President Arroyo. Estrada left Malacañang with a statement doubting her legality, and sent Congress a letter declaring himself unable to act (Sec. 11). He then sued to be declared a President on leave and to stop the Ombudsman’s cases against him.",
   "h": "Petitions dismissed; Arroyo is the de jure 14th President (11–0 in the result, Puno, J., March 2, 2001). The case raised legal, not political, questions: EDSA II was intra-constitutional, unlike EDSA I. Estrada resigned (the Angara Diary; his farewell statement); RA 3019, Sec. 12 did not bar it; his claim of inability had been rejected by Congress; he had no immunity, and no impeachment conviction was needed first.",
   "test": "Resignation: intent to resign plus acts of relinquishment; no formal requirement (oral or written, express or implied); with no letter, the totality of prior, contemporaneous and posterior facts.",
-  "x": "Use for vacancy and succession (Art. VII, Sec. 8): did the President resign, die, become permanently disabled or get removed? For a claim of temporary inability, Sec. 11 leaves it to Congress. And for prosecuting a former President for acts in office.",
+  "x": "Use for vacancy and succession (Art. VII, Sec. 8): did the President resign, die, become permanently disabled or get removed? For a claim of temporary inability, Sec. 11 leaves it to Congress. And for prosecuting a former President for acts in office. Under V.B.2(k): immunity lasts only during tenure; a former President may be sued and prosecuted for acts in office.",
   "w": "Davide, C.J. and Panganiban, J. took no part; the separate opinions reserved by Kapunan, Ynares-Santiago and Sandoval-Gutierrez, JJ. are not in the files. The Decision gives Arroyo’s oath as 12:00 noon in one place and about 12:30 p.m. in another.",
   "s": "EDSA II: Estrada resigned by his acts; Congress recognized Arroyo; no immunity after office.",
   "sy": [
    "Estrada v. Arroyo"
+  ],
+  "also": [
+   "cinc"
   ]
  },
  {

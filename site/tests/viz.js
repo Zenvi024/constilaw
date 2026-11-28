@@ -107,6 +107,13 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     for (const a of ['y', 'n', 'n', 'n']) await p.click(`#fig-midnight .gate.cur .yn [data-a="${a}"]`);
     const mid = await txt('#fig-midnight .walkout .vres'); check(tag, 'Garafil walk: void midnight appointment', /Void midnight appointment/.test(mid), mid);
     await p.click('#fig-midnight .walkout [data-w="map"]');
+    // finals V.B.2(f)–(k), V.B.3: Commander-in-Chief map diagrams carry orals lines; the Nicolas walk ends at "Not in accord"
+    const ccd = await p.evaluate(() => ['cincpowers', 'callout', 'mldetain', 'mlrev', 'mlclock', 'emergpres', 'foreignloan', 'vfacheck', 'preslegis', 'presimm', 'vpprotest'].map(id => !!document.querySelector('#fig-' + id + ' .vor')));
+    check(tag, 'V.B.2(f)–(k) diagrams carry orals lines', ccd.every(Boolean), ccd);
+    await go('fig-vfacheck'); await p.click('#fig-vfacheck .walkbar .vchip:has-text("Nicolas")');
+    for (const a of ['y', 'y', 'y', 'n']) await p.click(`#fig-vfacheck .gate.cur .yn [data-a="${a}"]`);
+    const vfa = await txt('#fig-vfacheck .walkout .vres'); check(tag, 'Nicolas walk: not in accord with the VFA', /Not in accord/.test(vfa), vfa);
+    await p.click('#fig-vfacheck .walkout [data-w="map"]');
     // diagram class names must not collide with the rest of the app (a hidden .facts once blanked the drills and the essay prompt)
     const leak = await p.evaluate(() => [...document.querySelectorAll('.facts, .hdr .clock, #dTopics .chip')].filter(e => !e.closest('figure.viz') && getComputedStyle(e).display === 'none').length);
     check(tag, 'no style leaks outside the diagrams', leak === 0, leak);
