@@ -1692,6 +1692,19 @@ fig('19', 'after', '<h3 id="court-mr">Petition for review and motion for reconsi
     oral='The issue is whether [the decision] complies with Article VIII, Section 14. A decision must state clearly and distinctly the facts and the law on which it is based, while a denial of a petition for review or reconsideration needs only a legal basis; in People v. Bugarin the Court held that a decision that merely calls a witness credible fails, and in Yao v. Court of Appeals that a memorandum decision is valid only if it annexes the findings it adopts and is used in simple cases. Here, [the RTC affirmed in one page with no findings], so the decision is void and must be remanded.',
     cap='This diagram covers both paragraphs of Sec. 14: requirements as to decisions (V.C.2(l)) and petitions for review and motions for reconsideration (V.C.2(m)).')
 
+fig('19', 'after', '<h3 id="court-periods">Periods for deciding cases</h3>\n', 'scperiods', 'How long each court has to decide',
+    cmp(['Period to decide', 'Source', 'Case'], [
+        ('Supreme Court', '<b>24 months</b>', 'Art. VIII, Sec. 15(1)', '—'),
+        ('Court of Appeals (lower collegiate court)', '<b>12 months</b>, unless the SC reduces it', 'Art. VIII, Sec. 15(1)', '“lower collegiate courts” means the CA (' + C('delayssb', 'Re: Delays') + ')'),
+        ('Sandiganbayan', '<b>3 months</b>; motions for reconsideration in 30 days', 'PD 1606, Sec. 6', 'a special court with trial functions, not the 12-month rule (' + C('delayssb', 'Re: Delays') + ')'),
+        ('Regional Trial Courts', '<b>3 months</b> (90 days), for cases, motions and incidents', 'Art. VIII, Sec. 15(1): “all other lower courts”', C('fuentes', 'OCA v. Fuentes III') + ': no self-chosen deadlines'),
+        ('MeTCs, MTCs, MCTCs', '<b>3 months</b> (90 days)', 'Art. VIII, Sec. 15(1)', '—'),
+    ]),
+    kind='comparison', when='a news card reports a long-pending case and you must say whether the court is already late.',
+    hook='<em>24, 12, 3</em>: the Sandiganbayan counts as a 3.',
+    oral='The issue is whether [the court] has exceeded its period to decide. Under Article VIII, Section 15(1), cases must be decided within twenty-four months from submission in the Supreme Court, twelve months in lower collegiate courts, and three months in all other lower courts; in Re: Problem of Delays in Cases Before the Sandiganbayan the Court held that the Sandiganbayan has three months under PD 1606, not twelve. Here, [the case has been submitted for eight months], so [the Sandiganbayan] is already late.',
+    cap='Every period runs from submission: the filing of the last pleading, brief or memorandum required (Sec. 15(2)). After it lapses, the court must still decide (Sec. 15(4)).')
+
 fig('19', 'after', '<h3 id="court-periods">Periods for deciding cases</h3>\n', 'scdelay', 'Is the judge liable for delay?',
     gates([G('Did the period lapse without a decision or resolution?', '24 months for the SC; 12 for the CA; 3 for the Sandiganbayan (PD 1606) and trial courts (90 days), counted from submission', 'No delay', 'the case was decided on time', 'no', 'ok'),
            G('Did the judge ask for an extension before the period lapsed, and did the Court grant it?', 'a judge cannot set his own deadline (' + C('fuentes', 'Fuentes') + ')', 'Not liable', 'decided within the extended period', 'yes', 'ok')],

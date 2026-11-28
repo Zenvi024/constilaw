@@ -115,7 +115,7 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     const vfa = await txt('#fig-vfacheck .walkout .vres'); check(tag, 'Nicolas walk: not in accord with the VFA', /Not in accord/.test(vfa), vfa);
     await p.click('#fig-vfacheck .walkout [data-w="map"]');
     // finals V.C.1–2(o): Supreme Court map diagrams carry orals lines; the In re Gonzalez walk ends at "Must be dismissed"
-    const scd = await p.evaluate(() => ['scdivision', 'scappt', 'scnonjud', 'scremove', 'scfiscal', 'scpriv', 'scvotes', 'scdecision', 'scdelay', 'sctribunals'].map(id => !!document.querySelector('#fig-' + id + ' .vor')));
+    const scd = await p.evaluate(() => ['scdivision', 'scappt', 'scnonjud', 'scremove', 'scfiscal', 'scpriv', 'scvotes', 'scdecision', 'scperiods', 'scdelay', 'sctribunals'].map(id => !!document.querySelector('#fig-' + id + ' .vor')));
     check(tag, 'V.C.1–2(o) diagrams carry orals lines', scd.every(Boolean), scd);
     await go('fig-scremove'); await p.click('#fig-scremove .walkbar .vchip:has-text("In re Gonzalez")');
     for (const a of ['n', 'n', 'y']) await p.click(`#fig-scremove .gate.cur .yn [data-a="${a}"]`);
