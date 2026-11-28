@@ -1,0 +1,173 @@
+[
+ {
+  "id": "andal",
+  "n": "Civil Service Commission v. Andal",
+  "y": "2009",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(1) Supervision of lower courts",
+  "a": 1,
+  "r": "Only the Supreme Court oversees the administrative compliance of judges and court personnel with all laws, rules and regulations (Art. VIII, Sec. 6); another branch that intrudes violates the separation of powers. The CSC may detect and charge a court employee’s civil service violation, but it files the complaint with the OCA; it cannot try and decide it.",
+  "f": "A Sandiganbayan security guard was charged by the CSC with dishonesty: someone else apparently took his civil service exam (the photos and signatures did not match). The CSC dismissed him; the CA set that aside for lack of jurisdiction.",
+  "h": "Petition denied (13–0, Carpio, J., December 16, 2009). The CSC had no jurisdiction to try and decide the case; it was ordered to refer the matter to the OCA. Andal was not estopped: he denied the charge, never appeared at the formal investigation, and raised jurisdiction on appeal (unlike in Ampong).",
+  "test": "Court personnel + administrative charge (even from a civil service exam anomaly) → the Supreme Court, through the OCA, decides; the CSC only files.",
+  "x": "Use when the CSC, the Ombudsman or another agency moves to discipline a court employee administratively.",
+  "g": "",
+  "w": "",
+  "s": "The CSC cannot discipline a court employee, even for exam cheating: it files with the OCA.",
+  "sy": [
+   "Civil Service Commission v. Andal"
+  ]
+ },
+ {
+  "id": "gadon",
+  "n": "In re: Atty. Lorenzo G. Gadon (Viral Video Against Raissa Robles)",
+  "y": "2023",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(1) Supervision of lower courts",
+  "a": 1,
+  "r": "Disbarment proceedings are sui generis: an inquiry into fitness to practice, so the Court may preventively suspend a lawyer at once, before any answer, when the act speaks for itself, its authorship is undisputed, and delay would make discipline ineffective. A lawyer cannot divide his personality: private conduct that shows unfitness, like misogynistic abuse, is punishable.",
+  "f": "Atty. Gadon recorded a video in his car hurling sexual expletives at journalist Raissa Robles, who had tweeted about Ferdinand Marcos, Jr.’s taxes; it went viral. The Court, motu proprio, ordered him to show cause and preventively suspended him at once. He asked Justices Leonen and Caguioa to inhibit.",
+  "h": "Disbarred, and fined ₱2,000 for direct contempt (15–0, per curiam, June 27, 2023). No inhibition (bias needs clear and convincing proof; the Court acts as a collegial body); the immediate preventive suspension was proper; the video violated the CPRA (scandalous conduct, gender-based harassment), aggravated by a prior suspension for emotional outbursts.",
+  "test": "Discipline of lawyers: fitness, not punishment; conduct in public or private life (CPRA, Canon II, Secs. 2–4); preventive suspension may precede the answer when res ipsa loquitur.",
+  "x": "Use when a lawyer’s speech or private conduct (online posts, videos) is the basis for discipline, or a lawyer claims a preventive suspension denied due process.",
+  "g": "",
+  "w": "",
+  "s": "Disbarred for a viral, misogynistic video: a lawyer cannot split his private self from his oath.",
+  "sy": [
+   "In Re Gadon"
+  ]
+ },
+ {
+  "id": "macedavasquez",
+  "n": "Maceda v. Vasquez",
+  "y": "1993",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(1) Supervision of lower courts",
+  "a": 1,
+  "r": "Art. VIII, Sec. 6 gives the Supreme Court exclusive administrative supervision over all courts and their personnel. Where a criminal complaint against a judge or court employee arises from administrative duties, the Ombudsman must defer and refer it to the Court, to determine first whether the respondent acted within the scope of those duties.",
+  "f": "A PAO lawyer charged RTC Judge Maceda before the Ombudsman with falsifying his certificates of service (certifying all cases decided within 90 days when 15 were not). The judge said the Court had given him an extension and asked the Ombudsman to refer the case to the Court; the Ombudsman refused.",
+  "h": "Petition granted (13–0, Nocon, J., April 22, 1993). The Ombudsman has jurisdiction over the crime, since the same act may bring administrative and criminal liability; but the Court must first resolve the administrative question (must a judge with an extension still report those cases?). The Ombudsman cannot compel the Court to produce records or its personnel to testify.",
+  "test": "Criminal complaint against a judge or court employee arising from administrative duties → the Ombudsman defers and refers to the Supreme Court first.",
+  "x": "Use when the Ombudsman, a prosecutor or Congress investigates a judge for acts done in the performance of court duties.",
+  "g": "",
+  "w": "",
+  "s": "The Ombudsman must refer a judge’s falsified certificate of service to the Court first.",
+  "sy": [
+   "Maceda v. Vasquez"
+  ]
+ },
+ {
+  "id": "inredemetria",
+  "n": "In re: Demetria",
+  "y": "2001",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(1) Supervision of lower courts",
+  "a": 1,
+  "r": "A judge must refrain from influencing in any manner the outcome of litigation pending before another court or agency (Code of Judicial Conduct, Rule 2.04); the slightest interference is not tolerated. Judges must avoid even the appearance of impropriety, on and off the bench, and need not know the parties to be guilty of interceding.",
+  "f": "CA Justice Demetria, a former DOJ Undersecretary, went to the DOJ with a sports official and the official’s lawyer (his close friend) and asked the state prosecutor to “help” a suspected drug queen by withdrawing a motion to inhibit her judge; he then called the chief state prosecutor to ask that the motion be withdrawn.",
+  "h": "Guilty; dismissed from the service, with forfeiture of benefits and disqualification from reappointment (14–0, per curiam, March 27, 2001). The prosecutors’ positive accounts prevailed over his denials; using his influence to derail a case eroded public confidence in the whole Judiciary.",
+  "test": "Rule 2.04: no influence in any manner on a case pending in another court or agency; appearance of impropriety covers private conduct.",
+  "x": "Use when a judge or Justice intercedes, calls, or lobbies in a case pending before another court, a prosecutor or an agency.",
+  "g": "",
+  "w": "",
+  "s": "A CA Justice who lobbied prosecutors for a drug suspect was dismissed.",
+  "sy": [
+   "n re Demetria"
+  ]
+ },
+ {
+  "id": "revasquez",
+  "n": "Re: Letter of Presiding Justice Conrado M. Vasquez, Jr. (the Meralco–GSIS case)",
+  "y": "2008",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(1) Supervision of lower courts",
+  "a": 1,
+  "r": "Judges must decide independently, free from extraneous influence, and avoid the appearance of impropriety: letting a relative in another branch discuss a pending case, or meeting a lobbyist, is indiscreet even if the offer is refused. Fabricating records and showing undue interest in a case are grave misconduct; a presiding justice who fails to act decisively is liable too.",
+  "f": "In the Meralco–GSIS case at the Court of Appeals, Justice Sabio took a call from his brother, the PCGG Chairman, urging him to help the GSIS, and later met a businessman who offered him ₱10 million to yield the division chairmanship, which he refused. Justice Roxas ignored a motion to inhibit, rushed the decision and wrote a “transcript” of deliberations from memory. The Presiding Justice referred the scandal to the Supreme Court.",
+  "h": "Per curiam (September 9, 2008), on a panel of retired Justices’ report: Roxas dismissed (grave misconduct, dishonesty, undue interest); Sabio suspended two months (simple misconduct, conduct unbecoming); Reyes reprimanded; Dimaranan-Vidal admonished; Presiding Justice Vasquez severely reprimanded for failing to act promptly and decisively.",
+  "test": "Independence (Canon 1) and propriety (Canon 4), New Code of Judicial Conduct; undue delay on motions is gross inefficiency.",
+  "x": "Use when a news card reports lobbying, bribe offers, relatives’ calls or infighting in a collegiate court, and to show the Court disciplining Justices of the CA.",
+  "g": "",
+  "w": "",
+  "s": "The CA Meralco scandal: the Court dismissed one Justice and disciplined four others, including the Presiding Justice.",
+  "sy": [
+   "Re: Conrado M. Vasquez, Jr."
+  ]
+ },
+ {
+  "id": "inrebiraogo",
+  "n": "In re: Undated Letter of Mr. Louis C. Biraogo",
+  "y": "2009",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(1) Supervision of lower courts",
+  "a": 1,
+  "r": "Releasing an unpromulgated ponencia breaches the confidentiality of the Court’s deliberations, which protects judicial independence; magistrates are held to a higher standard than court staff. Retirement does not moot an administrative case. A Justice may be disciplined on circumstantial evidence under res ipsa loquitur, even without a formal charge.",
+  "f": "The en banc approved and signed Justice Ruben Reyes’s draft in the Limkaichong cases, then voted to withhold promulgation. Months later, Louis Biraogo held a press conference and distributed a copy of the unpromulgated ponencia, claiming improper motives. Reyes retired days later.",
+  "h": "Reyes found liable for grave misconduct and gross negligence: fined ₱500,000 from his retirement benefits and disqualified from government office; ordered to show cause why he should not be disciplined as a lawyer; two staff members fined for simple neglect (12–0, per curiam, February 24, 2009). The leaked copy could only have come from his office.",
+  "test": "Confidential deliberations (Canon 4, Sec. 9, NCJC) + res ipsa loquitur on proven facts with no credible explanation; In re Gonzalez bars disbarment only during tenure.",
+  "x": "Use when a draft decision or internal Court document leaks, or a retired official argues an administrative case is moot.",
+  "g": "",
+  "w": "",
+  "s": "A Justice who leaked an unpromulgated ponencia was fined ₱500,000 and disqualified after retiring.",
+  "sy": [
+   "In Re: Undated Letter of Mr. Louis C. Biraogo"
+  ]
+ },
+ {
+  "id": "pilotin",
+  "n": "People v. Pilotin",
+  "y": "1975",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(3) Change of venue",
+  "a": 1,
+  "r": "The Supreme Court may order a change of venue or place of trial to avoid a miscarriage of justice (Art. X, Sec. 5(4), 1973; now Art. VIII, Sec. 5(4)). Present hostile sentiment against the accused at the place of trial justifies a transfer; it is absurd to make him stand trial where his life would be in danger. A change of venue also moves the record to another court.",
+  "f": "Vincent Crisologo, charged with illegal possession of firearms in Vigan, asked to be tried elsewhere: his family’s political enemies had killed his supporters and his father, Congressman Floro Crisologo, was shot dead at mass in the Vigan cathedral. The provincial fiscal agreed.",
+  "h": "Motion granted (Aquino, J., Second Division, July 31, 1975, resolution). The place of trial was moved out of Vigan; the fiscal had agreed to a transfer to the New Bilibid Prisons.",
+  "test": "Change of venue: to avoid a miscarriage of justice, including danger to the accused’s life from hostile sentiment at the place of trial.",
+  "x": "Use when an accused or witness faces danger, hostility or a powerful local opponent at the place of trial.",
+  "g": "",
+  "w": "",
+  "s": "Crisologo’s trial moved out of Vigan: his life was in danger there.",
+  "sy": [
+   "People v. Pilotin"
+  ]
+ },
+ {
+  "id": "mondiguing",
+  "n": "Mondiguing v. Abad",
+  "y": "1975",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(3) Change of venue",
+  "a": 1,
+  "r": "A change of venue is not granted for whimsical or flimsy reasons, since crimes are best tried where committed; but it is granted when the interest of justice so demands and there are serious and weighty reasons to believe the original court would not give a fair and impartial trial (People v. Gutierrez).",
+  "f": "Two of ten accused in the ambush of Ifugao Governor Lumauig (two of his companions died) asked that their double-murder trial be moved from the CFI of Ifugao. They claimed the judge favored the Governor, their witnesses feared reprisals, and one co-accused had been killed.",
+  "h": "Petition granted (Aquino, J., 1975). The same judge had earlier been disqualified from an electoral protest as the Governor’s alleged political leader; to secure a fair trial, and given the danger to the accused, the case was transferred to the Circuit Criminal Court in Baguio City.",
+  "test": "Serious and weighty reasons to doubt a fair and impartial trial (a judge’s ties to the victim, danger to the accused) → transfer; whimsical reasons → no.",
+  "x": "Use when the judge or the local power structure is tied to the victim or a party, and a fair trial is doubtful.",
+  "g": "",
+  "w": "",
+  "s": "Trial of the accused in the Ifugao governor’s ambush moved to Baguio: a fair trial was doubtful.",
+  "sy": [
+   "Mondiguing v. Abad"
+  ]
+ },
+ {
+  "id": "sola",
+  "n": "People v. Sola",
+  "y": "1981",
+  "t": "scadmin",
+  "sub": "V.C.2(p)(3) Change of venue",
+  "a": 1,
+  "r": "The Court may change the venue to avoid a miscarriage of justice; what matters is the effect of fear on the witnesses who will testify, even if the danger seems less than terrifying to others, and doubt is resolved in favor of a change. A change of venue may be sought administratively. Bail in a capital offense granted without letting the prosecution show strong evidence of guilt is void.",
+  "f": "Seven bodies were dug up on the hacienda of Kabankalan’s mayor. He and others were charged with murder and released on bail without a hearing for the prosecution. Witnesses feared for their lives if the trial were held in Himamaylan, 10 km away, with the powerful accused free.",
+  "h": "Petition granted (9–0, Fernando, C.J., March 17, 1981). The venue had already been transferred to the CFI in Bacolod City by an earlier resolution, with orders to protect the witnesses; the bail orders were declared void for lack of a hearing.",
+  "test": "Venue: the effect of fear on the witnesses; in doubt, transfer. Bail in capital offenses: the prosecution must be heard on whether evidence of guilt is strong.",
+  "x": "Use when witnesses are afraid to testify because the accused are powerful local officials or are free on bail.",
+  "g": "",
+  "w": "",
+  "s": "The Kabankalan killings trial moved to Bacolod to protect frightened witnesses; bail without hearing void.",
+  "sy": [
+   "People v. Sola"
+  ]
+ }
+]

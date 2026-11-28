@@ -1194,5 +1194,41 @@
  "macalintalpet": {
   "k": "PET stands",
   "c": "ok"
+ },
+ "andal": {
+  "k": "Refer to OCA",
+  "c": "sun"
+ },
+ "gadon": {
+  "k": "Expletives cost license",
+  "c": "no"
+ },
+ "macedavasquez": {
+  "k": "Refer first",
+  "c": "sun"
+ },
+ "inredemetria": {
+  "k": "No interceding",
+  "c": "no"
+ },
+ "revasquez": {
+  "k": "Meralco CA scandal",
+  "c": "no"
+ },
+ "inrebiraogo": {
+  "k": "Leak still punished",
+  "c": "no"
+ },
+ "pilotin": {
+  "k": "Life at risk",
+  "c": "ok"
+ },
+ "mondiguing": {
+  "k": "Fair trial elsewhere",
+  "c": "ok"
+ },
+ "sola": {
+  "k": "Witnesses’ fear counts",
+  "c": "ok"
  }
 }
