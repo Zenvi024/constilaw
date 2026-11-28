@@ -31,7 +31,7 @@
   "ordered": true,
   "src": "Art. VIII, Sec. 2; De La Llana v. Alba",
   "rv": "jbc-lower",
-  "hook": "<em>Real, in good faith, and ask the Court</em>.",
+  "hook": "Real, in good faith, and ask the Court.",
   "cases": [
    "delallana",
    "ocampo55"
@@ -71,7 +71,7 @@
   "ordered": true,
   "src": "Art. VIII, Sec. 8(1)",
   "rv": "jbc-council",
-  "hook": "<em>Three ex officio, four regular; Congress gets one</em>.",
+  "hook": "Three ex officio, four regular; Congress gets one.",
   "cases": [
    "chavezjbc",
    "umali"
@@ -184,7 +184,7 @@
   "ordered": false,
   "src": "Art. VIII, Sec. 3; RA 12233",
   "rv": "jbc-release",
-  "hook": "<em>All three released automatically; only the Judiciary has a floor</em>.",
+  "hook": "All three released automatically; only the Judiciary has a floor.",
   "cases": [
    "bengzondrilon"
   ]
@@ -227,7 +227,7 @@
   "ordered": false,
   "src": "Arts. IX-B, IX-C, IX-D, Sec. 1(1)",
   "rv": "concom-common",
-  "hook": "<em>Three, seven, three; seven-year terms; a majority of all</em>.",
+  "hook": "Three, seven, three; seven-year terms; a majority of all.",
   "cases": []
  },
  {

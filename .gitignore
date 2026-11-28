@@ -4,3 +4,5 @@ node_modules/
 .DS_Store
 # screenshots written by site/tests/digests.js on every run
 fd-*.png
+# downloadable PDFs: regenerate with node site/app/make_pdfs.js (only the manifest is kept)
+site/print/pdf/*.pdf

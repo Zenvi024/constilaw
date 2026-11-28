@@ -106,6 +106,7 @@ __CSS__
           <button class="btn small ghost" id="blurReset" hidden>Re-hide</button>
           <span class="blurct" id="blurCt" hidden></span>
           <nav class="mtoc" id="mtoc" aria-label="Headings in this rule map"></nav>
+          <button class="btn small ghost noprint" id="rPrint" title="Print this rule map (or press Ctrl+P)">Print</button>
         </div>
         <div class="rprog"><i id="rprog"></i></div>
       </div>
@@ -275,11 +276,21 @@ __REVIEWER__
 <!-- PRINTABLES -->
 <main class="page" id="v-print" hidden>
   <div class="stack">
-    <p class="tiny noprint" style="margin:0;max-width:72ch">Two one-page sheets for the morning of the exam. Printing is blocked inside this viewer, so folio-size PDFs of both sheets are in your repository (<span style="font-family:var(--mono)">site/print/</span>) and in our chat.</p>
+    <section class="panel noprint" id="pdPanel" aria-labelledby="pdH">
+      <div class="spread">
+        <h2 id="pdH">Print or download</h2>
+        <div class="row"><span class="lbl">Paper</span><div class="seg" role="group" aria-label="Paper size" id="pdSize"><button data-ps="folio" aria-pressed="true">Folio 8.5 × 13 in</button><button data-ps="a4" aria-pressed="false">A4</button></div></div>
+      </div>
+      <p class="tiny" style="margin:0">Compact, print-ready versions of the whole desk. <b>Download PDF</b> gives you a ready-made file in the paper size above (best on phones, and for printing at a shop). <b>Print</b> opens your browser’s print dialog for the same pages; you can also press Ctrl+P (⌘P on a Mac) on any rule map to print just that map. If the print dialog does not open inside Claude, use the PDF instead.</p>
+      <div class="pdlist" id="pdList"></div>
+    </section>
+    <p class="tiny noprint" style="margin:0;max-width:72ch">The two one-page sheets below are from the written midterm.</p>
     <section class="sheet" id="sheet1"></section>
     <section class="sheet" id="sheet2"></section>
   </div>
 </main>
+
+<section class="pdoc" id="printDoc" aria-hidden="true"></section>
 
 <div class="scrim" id="scrim" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modal"></div></div>
 

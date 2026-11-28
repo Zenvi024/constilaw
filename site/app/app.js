@@ -32,6 +32,7 @@ function setTab(t, push){
   store.set("tab", t);
   if (push !== false){ try { history.replaceState(null, "", "#" + t); } catch(e){} }
   if (t === "today") renderToday();
+  if (t === "print" && typeof renderPdList === "function") renderPdList();
   if (t === "print") renderPrint();
   if (t === "digests") requestAnimationFrame(() => renderDigests());   // defined at the end of the script
   if (t === "lists" && !$("lList").hidden) renderLists();
@@ -1321,6 +1322,96 @@ function applyScope(){
   applyScopeMarks();
 }
 $("scopeBtn").onclick = () => { HIDE = !HIDE; applyScope(); };
+
+/* ================= printing: Ctrl+P, print buttons, downloadable PDFs, paper size ================= */
+// One set of print documents serves three things: the Print buttons, Ctrl+P, and site/app/make_pdfs.js (which renders each to PDF).
+const pslug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+function printDocs(){
+  return [
+    {id: "maps-all", title: "All rule maps", sub: "every part, in syllabus order"},
+    ...rvGroups().map(([l, p, is]) => ({id: "maps-" + pslug(l), title: "Rule maps: " + l, sub: (p ? p + " · " : "") + is.map(i => SECS[i].dataset.title).join(" · "), secs: is})),
+    {id: "cases", title: "Case compendium", sub: "every syllabus case by topic: doctrine, facts, ruling"},
+    {id: "lists", title: "Recall lists", sub: "every list, by topic"},
+    {id: "hooks", title: "Hook wall", sub: "every diagram hook on a few pages"},
+    {id: "exams", title: "Past exams with answers", sub: "essay questions with model answers; the multiple-choice midterms with keys"},
+  ];
+}
+const PD_BUILD = {
+  cases: () => `<h1>Case compendium</h1><p class="pdsub">Every syllabus case, by topic: doctrine, quick facts, ruling. Cases that also sit under a topic are listed at its end.</p>` + TOPS().map(t => {
+    const cs = CASES().filter(c => !c.ref && c.t === t.key), al = CASES().filter(c => !c.ref && (c.also || []).includes(t.key));
+    if (!cs.length && !al.length) return "";
+    return `<h2 class="pdh">${esc(t.name)} <small>${esc(t.part)}</small></h2><div class="pdcols">${cs.map(c => `<div class="pdcase"><b>${esc(c.n)}</b> <span class="pdm">(${esc(c.y)})${c.hk ? " · " + esc(c.hk) : ""}</span><p><i>Doctrine.</i> ${esc(c.r)}</p>${c.f ? `<p><i>Facts.</i> ${esc(c.f)}</p>` : ""}${c.h ? `<p><i>Ruling.</i> ${esc(c.h)}</p>` : ""}</div>`).join("")}${al.length ? `<p class="pdalso"><i>Also here:</i> ${al.map(c => esc(c.n)).join("; ")}</p>` : ""}</div>`;
+  }).join(""),
+  lists: () => `<h1>Recall lists</h1><p class="pdsub">Cover the items and say them out loud.</p>` + TOPS().map(t => {
+    const ls = LISTS().filter(l => l.t === t.key); if (!ls.length) return "";
+    return `<h2 class="pdh">${esc(t.name)} <small>${esc(t.part)}</small></h2><div class="pdcols">${ls.map(l => { const tag = l.ordered ? "ol" : "ul"; return `<div class="pdlst"><b>${esc(l.title)}</b><div class="pdm">${esc(l.ask)}</div><${tag}>${l.items.map(x => `<li>${esc(x)}</li>`).join("")}</${tag}>${l.hook ? `<div class="pdm"><i>Hook:</i> ${esc(l.hook)}</div>` : ""}</div>`; }).join("")}</div>`;
+  }).join(""),
+  hooks: () => { const w = document.querySelector("#fig-wall .hwall"); return `<h1>Hook wall</h1><p class="pdsub">One hook per diagram: read it, say the rule, check the map.</p><div class="pdhooks">${w ? [...w.children].filter(t => !t.hidden && (!HIDE || !t.dataset.scope)).map(t => t.outerHTML).join("") : ""}</div>`; },
+  exams: () => {
+    const story = v => typeof v === "string" ? v : (v && (v.text || v.t || v.s)) || "";
+    const exs = [...new Set(D.essays.map(e => e.exam))];
+    let h = `<h1>Past exams with answers</h1><p class="pdsub">Essay questions with points to hit and a model answer, then the multiple-choice midterms with keys. For the orals, answer each out loud before reading the answer.</p>`;
+    h += exs.map(x => `<h2 class="pdh">${esc(x)}</h2>` + D.essays.filter(e => e.exam === x).map(e => `<div class="pdq"><div class="pdqh">${e.n ? "Q" + e.n + ". " : ""}${esc(e.short)}</div><div class="pdpr">${esc(e.prompt)}</div><p><b>${esc(e.ask)}</b></p><div class="pdlab">Points to hit</div><ul>${e.core.map(c => `<li>${esc(c)}</li>`).join("")}</ul><div class="pdlab">Model answer</div><p>${esc(e.model)}</p></div>`).join("")).join("");
+    const mx = [...new Set(MCQS().map(q => q.exam))];
+    h += `<h2 class="pdh pdbreak">Multiple-choice midterms, with keys</h2>` + mx.map(x => { const seen = new Set(); return `<h3 class="pdh3">${esc(x)}</h3><div class="pdcols">` + MCQS().filter(q => q.exam === x).map(q => { let st = ""; if (q.story && !seen.has(q.story)){ seen.add(q.story); st = `<div class="pdpr pdstory">${esc(story(D.stories[q.story]))}</div>`; } return `${st}<div class="pdmc"><b>${q.n}.</b> ${esc(q.q)}<ol type="a">${q.c.map((c, i) => `<li${i === q.a ? ' class="pdok"' : ""}>${esc(c)}</li>`).join("")}</ol><div class="pdm"><i>Answer: ${LET[q.a]}.</i> ${esc(q.e)}</div></div>`; }).join("") + `</div>`; }).join("");
+    return h;
+  },
+};
+let PRINTING = null;
+// Print-only state: marks what to print (data-print on <body>, data-pin on the rule maps); the screen is untouched,
+// so nothing breaks if a browser or the viewer blocks the print dialog.
+function preparePrint(id){
+  restorePrint();
+  const n = id.startsWith("sec:") ? +id.slice(4) : -1;
+  const d = n >= 0 ? {id, title: SECS[n].dataset.title, secs: [n]} : printDocs().find(x => x.id === id);
+  if (!d) return null;
+  if (id === "maps-all" || d.secs){ const keep = new Set(id === "maps-all" ? visIdx() : d.secs); SECS.forEach((s, j) => { if (keep.has(j)) s.dataset.pin = ""; }); document.body.dataset.print = "maps"; }
+  else { $("printDoc").innerHTML = PD_BUILD[id](); document.body.dataset.print = "doc"; }
+  PRINTING = id; return d;
+}
+function restorePrint(){
+  PRINTING = null; SECS.forEach(s => delete s.dataset.pin); delete document.body.dataset.print; $("printDoc").innerHTML = "";
+}
+let PR_AT = 0; // a Print button sets it; a plain Ctrl+P prints whatever is on screen (the open rule map, on the Rule maps tab)
+window.addEventListener("beforeprint", () => { if (window.__pdfMode) return; if (!PRINTING || Date.now() - PR_AT > 3000){ restorePrint(); if (!$("v-rules").hidden) preparePrint("sec:" + curSec); } });
+window.addEventListener("afterprint", () => { if (!window.__pdfMode && PRINTING) restorePrint(); });
+function doPrint(id){ preparePrint(id); PR_AT = Date.now(); try { window.print(); } catch(e){} }
+$("rPrint").onclick = () => doPrint("sec:" + curSec);
+// label each stepper stage so printed steppers read as a list
+document.querySelectorAll("#rcontent .stepper").forEach(st => { const bs = st.querySelectorAll(".sp-btns button"); st.querySelectorAll(".sp-p").forEach((p, i) => { if (bs[i]) p.dataset.lab = bs[i].textContent; }); });
+// paper size: drives @page for Ctrl+P and which PDF the Download buttons fetch
+let PSIZE = store.get("psize", "folio"); if (!["folio", "a4"].includes(PSIZE)) PSIZE = "folio";
+function applyPSize(){
+  let el = $("pageSizeCss"); if (!el){ el = document.createElement("style"); el.id = "pageSizeCss"; document.head.appendChild(el); }
+  el.textContent = `@page{size:${PSIZE === "a4" ? "A4" : "8.5in 13in"};margin:12mm 12mm 14mm}`;
+  document.querySelectorAll("#pdSize [data-ps]").forEach(b => b.setAttribute("aria-pressed", b.dataset.ps === PSIZE));
+}
+let DL = null; // the downloads capability, where the viewer grants it
+try { const c = window.claude; if (c && typeof c.use === "function") c.use("downloads").then(x => { DL = x; }).catch(() => {}); } catch(e){}
+function renderPdList(){
+  const box = $("pdList"); if (!box) return;
+  box.innerHTML = printDocs().map(d => { const m = (D.pdfs || {})[d.id], f = m && m[PSIZE];
+    return `<div class="pdrow"><div class="pdt"><b>${esc(d.title)}</b><span class="tiny">${esc(d.sub)}${f ? ` · ${f.pages} pages · ${(f.bytes / 1048576).toFixed(1)} MB` : ""}</span></div><div class="row"><button class="btn small" data-pprint="${d.id}">Print</button>${f ? `<button class="btn small primary" data-pdl="${esc(f.file)}">Download PDF</button>` : ""}</div></div>`; }).join("");
+}
+async function dlPdf(file, btn){
+  const old = btn.textContent; btn.disabled = true; btn.textContent = "Preparing…";
+  try {
+    const r = await fetch("pdf/" + file); if (!r.ok) throw {code: "missing"};
+    const blob = await r.blob();
+    if (DL){ await DL.save({filename: file, data: blob}); btn.textContent = "Saved"; }
+    else { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 60000); btn.textContent = "Downloaded"; }
+  } catch(e){
+    btn.textContent = e && e.code === "declined" ? old : e && e.code === "missing" ? "Not available" : "Could not save";
+    if (e && e.code === "host_unavailable") btn.title = "This app cannot save files; open the desk in a browser to download.";
+  }
+  setTimeout(() => { btn.disabled = false; btn.textContent = old; }, 2500);
+}
+$("pdPanel").addEventListener("click", e => {
+  const s = e.target.closest("[data-ps]"); if (s){ PSIZE = s.dataset.ps; store.set("psize", PSIZE); applyPSize(); renderPdList(); return; }
+  const pr = e.target.closest("[data-pprint]"); if (pr){ doPrint(pr.dataset.pprint); return; }
+  const dl = e.target.closest("[data-pdl]"); if (dl) dlPdf(dl.dataset.pdl, dl);
+});
+applyPSize();
 
 /* ================= boot ================= */
 renderClock(); setInterval(renderClock, 60000);

@@ -175,7 +175,10 @@ for e in FIN:
 assert all(e['d'] for e in FIN if e.get('f')), 'a finals case has no digest'
 print(f'finals: {sum(1 for e in FIN if e.get("f"))} syllabus cases, {len(_fd)} full digests ({len(FDZ)//1024} KB gzip)')
 
-D = dict(examDate='2026-12-16', fin=FIN, topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers)
+# downloadable PDFs (site/app/make_pdfs.js writes them and this manifest; they are published next to the page under pdf/)
+PDFM = os.path.join(HERE, '..', 'print', 'pdf', 'manifest.json')
+pdfs = json.load(open(PDFM)) if os.path.exists(PDFM) else {}
+D = dict(examDate='2026-12-16', pdfs=pdfs, fin=FIN, topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers)
 t = open(os.path.join(HERE, 'template.html')).read()
 t = t.replace('__CSS__', open(os.path.join(HERE, 'style.css')).read())
 t = t.replace('__REVIEWER__', rev)

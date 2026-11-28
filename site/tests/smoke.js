@@ -62,6 +62,15 @@ require('fs').mkdirSync(out, {recursive: true});
     const wn = await p.textContent('#wcN'); await p.screenshot({path: `${out}/${tag}-write.png`, fullPage: false}); await check('write');
     // printables + today again
     await p.click('[data-tab="print"]'); await p.screenshot({path: `${out}/${tag}-print.png`, fullPage: true}); await check('print');
+    // print documents: a list with Print and Download buttons; preparing one swaps the page for it in print media only
+    const prow = await p.$$eval('#pdList .pdrow', x => x.length); const pdl = await p.$$eval('#pdList [data-pdl]', x => x.length);
+    await p.click('#pdSize [data-ps="a4"]'); const a4 = await p.evaluate(() => [...document.querySelectorAll('#pdList [data-pdl]')].every(b => b.dataset.pdl.endsWith('-a4.pdf')));
+    await p.click('#pdSize [data-ps="folio"]');
+    await p.evaluate(() => preparePrint('cases')); await p.emulateMedia({media: 'print'});
+    const pv = await p.evaluate(() => ({doc: getComputedStyle(document.getElementById('printDoc')).display, page: getComputedStyle(document.getElementById('v-print')).display, cases: document.querySelectorAll('#printDoc .pdcase').length}));
+    await p.emulateMedia({media: 'screen'}); const screenOK = await p.evaluate(() => getComputedStyle(document.getElementById('printDoc')).display === 'none' && !document.getElementById('v-print').hidden);
+    await p.evaluate(() => restorePrint());
+    if (prow < 10 || pdl < 10 || !a4 || pv.doc !== 'block' || pv.page !== 'none' || pv.cases < 150 || !screenOK){ fail++; console.log('  PRINT', JSON.stringify({prow, pdl, a4, pv, screenOK})); }
     await p.click('[data-tab="today"]');
     // the planner: tap a topic, tap a day, it lands there and is saved; × removes it; no midterm dates left on Today
     await p.click('#plTray [data-pl="t:jbc"]'); await p.click('#plBoard [data-plday] >> nth=0');
