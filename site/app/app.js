@@ -1434,10 +1434,8 @@ let PR_AT = 0; // a Print button sets it; a plain Ctrl+P prints whatever is on s
 window.addEventListener("beforeprint", () => { if (window.__pdfMode) return; if (!PRINTING || Date.now() - PR_AT > 3000){ restorePrint(); if (!$("v-rules").hidden) preparePrint("sec:" + curSec); } });
 window.addEventListener("afterprint", () => { if (!window.__pdfMode && PRINTING) restorePrint(); });
 function doPrint(id){ preparePrint(id); PR_AT = Date.now(); try { window.print(); } catch(e){} }
-$("rPrint").onclick = () => doPrint("sec:" + curSec);
 // reading mode: no sidebar, wider type; long case paragraphs fold to three lines (tap to open)
 let RREAD = store.get("rread", false);
-document.querySelectorAll("#rcontent section.rv > ul > li").forEach(li => { if (li.textContent.length > 420 && !li.closest("figure")) li.classList.add("vlong"); });
 function applyRead(){ document.body.classList.toggle("rvread", RREAD); $("readBtn").setAttribute("aria-pressed", RREAD); }
 $("readBtn").onclick = () => { RREAD = !RREAD; store.set("rread", RREAD); applyRead(); };
 $("rcontent").addEventListener("click", e => { const li = e.target.closest("li.vlong"); if (li && RREAD && !e.target.closest("a,button,.bl:not(.shown)") && !li.classList.contains("vopen")) li.classList.add("vopen"); });

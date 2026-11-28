@@ -1,7 +1,7 @@
 <title>Consti 1 - DG Finals</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400..800;1,400..800&family=Atkinson+Hyperlegible+Mono:wght@400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Libre+Franklin:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 /* Layout: header band with countdown, tab bar, then one working surface per tab (reviewer = sidebar + reading column; trainer = prompt column + yellow pad). */
 :root{
@@ -12,8 +12,8 @@
   --codal:#eceef4; --hl:#ffe58a;
   --good:#1b6b46; --good-soft:#e0f1e8; --bad:#a72a2f; --bad-soft:#f8e1e1; --warn:#865a00; --warn-soft:#fbefd4;
   --display:"Spectral",Georgia,"Times New Roman",serif;
-  --body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Atkinson Hyperlegible Mono",ui-monospace,Menlo,Consolas,monospace;
+  --body:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --paper:#0e1120; --card:#161a2b; --ink:#e7e9f2; --muted:#9ba2ba; --line:#2a3048;
@@ -1146,11 +1146,6 @@ body.rvread .rside{display:none}
 body.rvread .rv,body.rvread .rstick,body.rvread .rpager,body.rvread #rresults{max-width:80ch;margin-inline:auto}
 body.rvread .rv{font-size:1.07rem;line-height:1.75}
 body.rvread .rbar{display:none}
-body.rvread #rcontent li.vlong{list-style:none;position:relative;margin-left:-1.3em;padding-left:1.3em}
-body.rvread #rcontent li.vlong::before{content:"•";position:absolute;left:.35em;top:0;color:var(--ink)}
-body.rvread #rcontent li.vlong:not(.vopen){max-height:5.4em;overflow:hidden;position:relative;cursor:pointer}
-body.rvread #rcontent li.vlong:not(.vopen)::after{content:"Tap to read more";position:absolute;inset:auto 0 0 0;height:2.2em;display:flex;align-items:flex-end;justify-content:flex-end;font:600 .74rem var(--body);color:var(--accent);background:linear-gradient(to bottom,transparent,var(--paper) 70%)}
-@media print{body.rvread #rcontent li.vlong{max-height:none!important}body.rvread #rcontent li.vlong::after{display:none!important}}
 /* ================= case cards: a full-screen sheet on phones ================= */
 @media (max-width:600px){
   .scrim{padding:0}
@@ -1270,8 +1265,7 @@ body.rvread #rcontent li.vlong:not(.vopen)::after{content:"Tap to read more";pos
           <button class="btn small ghost" id="blurReset" hidden>Re-hide</button>
           <span class="blurct" id="blurCt" hidden></span>
           <nav class="mtoc" id="mtoc" aria-label="Headings in this rule map"></nav>
-          <button class="blurbtn noprint" id="readBtn" aria-pressed="false" title="Hide the sidebar and widen the text; long case paragraphs fold (tap to open)">Reading mode</button>
-          <button class="btn small ghost noprint" id="rPrint" title="Print this rule map (or press Ctrl+P)">Print</button>
+          <button class="blurbtn noprint" id="readBtn" aria-pressed="false" title="Hide the sidebar and widen the text">Reading mode</button>
         </div>
         <div class="rprog"><i id="rprog"></i></div>
       </div>
@@ -4748,10 +4742,8 @@ let PR_AT = 0; // a Print button sets it; a plain Ctrl+P prints whatever is on s
 window.addEventListener("beforeprint", () => { if (window.__pdfMode) return; if (!PRINTING || Date.now() - PR_AT > 3000){ restorePrint(); if (!$("v-rules").hidden) preparePrint("sec:" + curSec); } });
 window.addEventListener("afterprint", () => { if (!window.__pdfMode && PRINTING) restorePrint(); });
 function doPrint(id){ preparePrint(id); PR_AT = Date.now(); try { window.print(); } catch(e){} }
-$("rPrint").onclick = () => doPrint("sec:" + curSec);
 // reading mode: no sidebar, wider type; long case paragraphs fold to three lines (tap to open)
 let RREAD = store.get("rread", false);
-document.querySelectorAll("#rcontent section.rv > ul > li").forEach(li => { if (li.textContent.length > 420 && !li.closest("figure")) li.classList.add("vlong"); });
 function applyRead(){ document.body.classList.toggle("rvread", RREAD); $("readBtn").setAttribute("aria-pressed", RREAD); }
 $("readBtn").onclick = () => { RREAD = !RREAD; store.set("rread", RREAD); applyRead(); };
 $("rcontent").addEventListener("click", e => { const li = e.target.closest("li.vlong"); if (li && RREAD && !e.target.closest("a,button,.bl:not(.shown)") && !li.classList.contains("vopen")) li.classList.add("vopen"); });

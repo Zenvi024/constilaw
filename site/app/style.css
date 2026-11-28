@@ -7,8 +7,8 @@
   --codal:#eceef4; --hl:#ffe58a;
   --good:#1b6b46; --good-soft:#e0f1e8; --bad:#a72a2f; --bad-soft:#f8e1e1; --warn:#865a00; --warn-soft:#fbefd4;
   --display:"Spectral",Georgia,"Times New Roman",serif;
-  --body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Atkinson Hyperlegible Mono",ui-monospace,Menlo,Consolas,monospace;
+  --body:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --paper:#0e1120; --card:#161a2b; --ink:#e7e9f2; --muted:#9ba2ba; --line:#2a3048;
@@ -1141,11 +1141,6 @@ body.rvread .rside{display:none}
 body.rvread .rv,body.rvread .rstick,body.rvread .rpager,body.rvread #rresults{max-width:80ch;margin-inline:auto}
 body.rvread .rv{font-size:1.07rem;line-height:1.75}
 body.rvread .rbar{display:none}
-body.rvread #rcontent li.vlong{list-style:none;position:relative;margin-left:-1.3em;padding-left:1.3em}
-body.rvread #rcontent li.vlong::before{content:"•";position:absolute;left:.35em;top:0;color:var(--ink)}
-body.rvread #rcontent li.vlong:not(.vopen){max-height:5.4em;overflow:hidden;position:relative;cursor:pointer}
-body.rvread #rcontent li.vlong:not(.vopen)::after{content:"Tap to read more";position:absolute;inset:auto 0 0 0;height:2.2em;display:flex;align-items:flex-end;justify-content:flex-end;font:600 .74rem var(--body);color:var(--accent);background:linear-gradient(to bottom,transparent,var(--paper) 70%)}
-@media print{body.rvread #rcontent li.vlong{max-height:none!important}body.rvread #rcontent li.vlong::after{display:none!important}}
 /* ================= case cards: a full-screen sheet on phones ================= */
 @media (max-width:600px){
   .scrim{padding:0}
