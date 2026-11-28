@@ -2,13 +2,13 @@
  "maps-all": {
   "folio": {
    "file": "DG-Constitutional-Law-1-Finals-Reviewer-folio.pdf",
-   "pages": 183,
-   "bytes": 6768476
+   "pages": 185,
+   "bytes": 6804015
   },
   "a4": {
    "file": "DG-Constitutional-Law-1-Finals-Reviewer-a4.pdf",
-   "pages": 213,
-   "bytes": 6828505
+   "pages": 215,
+   "bytes": 6885712
   }
  },
  "maps-start-here": {
@@ -63,12 +63,12 @@
   "folio": {
    "file": "consti1-maps-the-legislative-department-folio.pdf",
    "pages": 56,
-   "bytes": 2598008
+   "bytes": 2599611
   },
   "a4": {
    "file": "consti1-maps-the-legislative-department-a4.pdf",
    "pages": 65,
-   "bytes": 2649392
+   "bytes": 2651004
   }
  },
  "maps-the-executive-department": {
@@ -110,13 +110,13 @@
  "maps-current-events": {
   "folio": {
    "file": "consti1-maps-current-events-folio.pdf",
-   "pages": 2,
-   "bytes": 377860
+   "pages": 4,
+   "bytes": 371822
   },
   "a4": {
    "file": "consti1-maps-current-events-a4.pdf",
-   "pages": 3,
-   "bytes": 379054
+   "pages": 5,
+   "bytes": 373462
   }
  },
  "cases": {
