@@ -2,169 +2,169 @@
  "maps-all": {
   "folio": {
    "file": "DG-Constitutional-Law-1-Finals-Reviewer-folio.pdf",
-   "pages": 181,
-   "bytes": 5908949
+   "pages": 183,
+   "bytes": 6768476
   },
   "a4": {
    "file": "DG-Constitutional-Law-1-Finals-Reviewer-a4.pdf",
-   "pages": 206,
-   "bytes": 6005315
+   "pages": 213,
+   "bytes": 6828505
   }
  },
  "maps-start-here": {
   "folio": {
    "file": "consti1-maps-start-here-folio.pdf",
    "pages": 14,
-   "bytes": 758204
+   "bytes": 1186358
   },
   "a4": {
    "file": "consti1-maps-start-here-a4.pdf",
    "pages": 16,
-   "bytes": 777298
+   "bytes": 1205238
   }
  },
  "maps-the-constitution": {
   "folio": {
    "file": "consti1-maps-the-constitution-folio.pdf",
    "pages": 6,
-   "bytes": 434793
+   "bytes": 880050
   },
   "a4": {
    "file": "consti1-maps-the-constitution-a4.pdf",
    "pages": 7,
-   "bytes": 439154
+   "bytes": 884015
   }
  },
  "maps-judicial-review": {
   "folio": {
    "file": "consti1-maps-judicial-review-folio.pdf",
    "pages": 7,
-   "bytes": 485415
+   "bytes": 877858
   },
   "a4": {
    "file": "consti1-maps-judicial-review-a4.pdf",
    "pages": 9,
-   "bytes": 486119
+   "bytes": 881251
   }
  },
  "maps-territory-people-and-government": {
   "folio": {
    "file": "consti1-maps-territory-people-and-government-folio.pdf",
    "pages": 8,
-   "bytes": 460941
+   "bytes": 935011
   },
   "a4": {
    "file": "consti1-maps-territory-people-and-government-a4.pdf",
    "pages": 9,
-   "bytes": 461873
+   "bytes": 937248
   }
  },
  "maps-the-legislative-department": {
   "folio": {
    "file": "consti1-maps-the-legislative-department-folio.pdf",
    "pages": 56,
-   "bytes": 1933863
+   "bytes": 2598008
   },
   "a4": {
    "file": "consti1-maps-the-legislative-department-a4.pdf",
-   "pages": 62,
-   "bytes": 1998942
+   "pages": 65,
+   "bytes": 2649392
   }
  },
  "maps-the-executive-department": {
   "folio": {
    "file": "consti1-maps-the-executive-department-folio.pdf",
    "pages": 40,
-   "bytes": 1351437
+   "bytes": 1989601
   },
   "a4": {
    "file": "consti1-maps-the-executive-department-a4.pdf",
-   "pages": 45,
-   "bytes": 1359175
+   "pages": 46,
+   "bytes": 1974279
   }
  },
  "maps-the-judicial-department": {
   "folio": {
    "file": "consti1-maps-the-judicial-department-folio.pdf",
-   "pages": 31,
-   "bytes": 1114746
+   "pages": 32,
+   "bytes": 1642984
   },
   "a4": {
    "file": "consti1-maps-the-judicial-department-a4.pdf",
-   "pages": 36,
-   "bytes": 1131845
+   "pages": 37,
+   "bytes": 1656832
   }
  },
  "maps-constitutional-commissions": {
   "folio": {
    "file": "consti1-maps-constitutional-commissions-folio.pdf",
    "pages": 9,
-   "bytes": 503836
+   "bytes": 913228
   },
   "a4": {
    "file": "consti1-maps-constitutional-commissions-a4.pdf",
    "pages": 10,
-   "bytes": 504477
+   "bytes": 914505
   }
  },
  "maps-current-events": {
   "folio": {
    "file": "consti1-maps-current-events-folio.pdf",
    "pages": 2,
-   "bytes": 203300
+   "bytes": 377860
   },
   "a4": {
    "file": "consti1-maps-current-events-a4.pdf",
    "pages": 3,
-   "bytes": 204362
+   "bytes": 379054
   }
  },
  "cases": {
   "folio": {
    "file": "consti1-cases-folio.pdf",
-   "pages": 57,
-   "bytes": 709922
+   "pages": 59,
+   "bytes": 800370
   },
   "a4": {
    "file": "consti1-cases-a4.pdf",
-   "pages": 65,
-   "bytes": 721561
+   "pages": 69,
+   "bytes": 818186
   }
  },
  "lists": {
   "folio": {
    "file": "consti1-lists-folio.pdf",
-   "pages": 49,
-   "bytes": 1011438
+   "pages": 50,
+   "bytes": 1087051
   },
   "a4": {
    "file": "consti1-lists-a4.pdf",
-   "pages": 58,
-   "bytes": 1027380
+   "pages": 60,
+   "bytes": 1107340
   }
  },
  "hooks": {
   "folio": {
    "file": "consti1-hooks-folio.pdf",
    "pages": 6,
-   "bytes": 284396
+   "bytes": 345956
   },
   "a4": {
    "file": "consti1-hooks-a4.pdf",
    "pages": 7,
-   "bytes": 286527
+   "bytes": 348385
   }
  },
  "exams": {
   "folio": {
    "file": "consti1-exams-folio.pdf",
    "pages": 31,
-   "bytes": 650758
+   "bytes": 776513
   },
   "a4": {
    "file": "consti1-exams-a4.pdf",
-   "pages": 36,
-   "bytes": 657001
+   "pages": 37,
+   "bytes": 785476
   }
  }
 }
