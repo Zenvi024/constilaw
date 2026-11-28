@@ -57,7 +57,9 @@ require('fs').mkdirSync(out, {recursive: true});
     const cur = await p.$$eval('#mtoc a[aria-current="true"]', x => x.map(a => a.textContent));
     const stuck = await p.evaluate(() => document.getElementById('rstick').getBoundingClientRect().top);
     await p.screenshot({path: `${out}/f-${tag}-blur.png`}); await over('blur');
-    await p.click('#mtoc a >> nth=1'); await p.waitForTimeout(200);
+    // the heading chips are hidden on phones, where the "Jump to a heading" menu does the same job
+    if (await p.isVisible('#mtoc a >> nth=1')) await p.click('#mtoc a >> nth=1'); else await p.selectOption('#rtoc', await p.evaluate(() => document.querySelectorAll('#mtoc a')[1].dataset.h));
+    await p.waitForTimeout(400);
     const hTop = await p.evaluate(() => { const id = document.querySelectorAll('#mtoc a')[1].dataset.h; return Math.round(document.getElementById(id).getBoundingClientRect().top); });
     await p.click('#blurBtn');
     console.log(`${tag}: plan="${plan}" ended=${ended} kinds=${[...kinds].join('/')} fix=${fixN} fixCard=${fixCard} lists=${nl} listVerdict="${lverdict}" blur=${JSON.stringify(bl)} ct=${ct1}->${ct2} modalOnReveal=${modalOpen} chips=${chips} current=${cur} stickyTop=${stuck} headingTop=${hTop} errors=${JSON.stringify(errs)}`);

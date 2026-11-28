@@ -18,8 +18,8 @@ __CSS__
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button role="tab" data-tab="today" aria-selected="true">Today</button>
-      <button role="tab" data-tab="rules" aria-selected="false">Rule maps</button>
-      <button role="tab" data-tab="cases" aria-selected="false">Cases &amp; drills<span class="badge" id="dueBadge" hidden></span></button>
+      <button role="tab" data-tab="rules" aria-selected="false"><span class="tbl">Rule maps</span><span class="tbs">Maps</span></button>
+      <button role="tab" data-tab="cases" aria-selected="false"><span class="tbl">Cases &amp; drills</span><span class="tbs">Cases</span><span class="badge" id="dueBadge" hidden></span></button>
       <button role="tab" data-tab="lists" aria-selected="false">Lists</button>
       <button role="tab" data-tab="digests" aria-selected="false">Digests</button>
       <button role="tab" data-tab="practice" aria-selected="false">Practice</button>
@@ -95,7 +95,7 @@ __CSS__
 <main class="page" id="v-rules" hidden>
   <div class="rwrap">
     <aside class="rside">
-      <input type="search" id="rq" placeholder="Search rule maps (e.g. ABAKADA, 60 days, savings)" aria-label="Search rule maps">
+      <input type="search" id="rq" placeholder="Search the rule maps" title="For example: ABAKADA, 60 days, savings" aria-label="Search rule maps">
       <ol class="rsecs" id="rsecs"></ol>
     </aside>
     <div style="min-width:0">
@@ -316,6 +316,7 @@ __REVIEWER__
 <div class="scrim" id="scrim" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" id="modal"></div></div>
 
 <button type="button" id="navBackBtn" class="nvb" hidden>← Back</button>
+<button type="button" id="toTop" class="tttop" hidden aria-label="Back to the top">↑ Top</button>
 <footer class="ft">Built from the syllabus, class reviewers, case digests and Gatmaytan’s <em>Constitutional Law in the Philippines</em>. Verify anything that looks off against the decisions. Current through November 28, 2026; news as of November 13, 2026.</footer>
 
 <script type="application/octet-stream" id="fdz">__FDZ__</script>

@@ -1681,7 +1681,7 @@ function fwDraw(){
 }
 function fwOpen(id){ if (!FWI[id]) return; setTab("fish"); fwStart(id); }
 function fwStart(id){
-  fwStop(); fwCur = FWI[id]; fwRound = 0; fwLast = [id, ...fwLast.filter(x => x !== id)].slice(0, 4);
+  fwStop(); fwCur = FWI[id]; fwMin(true); fwRound = 0; fwLast = [id, ...fwLast.filter(x => x !== id)].slice(0, 4);
   fwPhase = "think"; fwLeft = +$("fwThink").value; fwRender(); fwTick(); $("fwStage").scrollIntoView({block: "start"});
 }
 function fwStop(){ clearInterval(fwRun); fwRun = null; fwRecStop(); }
@@ -1734,7 +1734,7 @@ $("fwStage").addEventListener("click", e => {
   if (e.target.closest("[data-fwskip]")){ fwPhase = "outline"; fwStop(); fwRender(); return; }
   if (e.target.closest("[data-fwread]")){ fwSpeak(); return; }
   if (e.target.closest("[data-fwrec]")){ fwRecToggle(); return; }
-  const g = e.target.closest("[data-fwg]"); if (g){ const c = fwCur; fwLog[c.id] = {n: ((fwLog[c.id] || {}).n || 0) + 1, g: +g.dataset.fwg, t: Date.now()}; store.set("fw_log", fwLog); fwSetup(); fwCur = null; $("fwStage").innerHTML = `<div class="spread"><p style="margin:0">Saved. ${["It will come back soon.", "It will come back for another round.", "Well done."][+g.dataset.fwg]}</p><button class="btn primary" data-fwnext>Draw the next card</button></div>`; return; }
+  const g = e.target.closest("[data-fwg]"); if (g){ const c = fwCur; fwLog[c.id] = {n: ((fwLog[c.id] || {}).n || 0) + 1, g: +g.dataset.fwg, t: Date.now()}; store.set("fw_log", fwLog); fwSetup(); fwCur = null; fwMin(false); $("fwStage").innerHTML = `<div class="spread"><p style="margin:0">Saved. ${["It will come back soon.", "It will come back for another round.", "Well done."][+g.dataset.fwg]}</p><button class="btn primary" data-fwnext>Draw the next card</button></div>`; return; }
   if (e.target.closest("[data-fwnext]")){ fwDraw(); return; }
 });
 document.addEventListener("keydown", e => {
@@ -1786,3 +1786,19 @@ function fwSpeak(){
   try { const u = new SpeechSynthesisUtterance(text); speechSynthesis.cancel(); speechSynthesis.speak(u); } catch(e){}
 }
 fwSetup();
+
+/* fishbowl: fold the setup while a card is out; "Change settings" unfolds it */
+function fwMin(on){ const st = $("fwSetup"); st.classList.toggle("fwmin", on); const b = $("fwOpts"); if (b) b.hidden = !on; $("fwDraw").textContent = on ? "Draw another" : "Draw a card"; }
+$("fwDraw").insertAdjacentHTML("beforebegin", `<button class="btn ghost" id="fwOpts" type="button" hidden>Change settings</button>`);
+$("fwOpts").onclick = () => fwMin(false);
+
+/* back to the top on long pages; the search box gets a shorter prompt on phones */
+(() => {
+  const b = $("toTop"); let raf = 0;
+  const paint = () => { raf = 0; b.hidden = window.scrollY < 1400 || !$("scrim").hidden; };
+  window.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(paint); }, {passive: true});
+  b.onclick = () => { window.scrollTo({top: 0}); b.hidden = true; };
+  const mq = window.matchMedia("(max-width: 640px)"), q = $("gq"), long = q.placeholder;
+  const ph = () => { q.placeholder = mq.matches ? "Search everything" : long; };
+  ph(); try { mq.addEventListener("change", ph); } catch(e){}
+})();

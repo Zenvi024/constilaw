@@ -9,7 +9,7 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
 (async () => {
   const b = await chromium.launch(); let fail = 0;
   const check = (tag, name, ok, got) => { if (!ok){ fail++; console.log(`  FAIL ${tag} ${name}: ${JSON.stringify(got)}`); } };
-  for (const vp of [{width: 1280, height: 900, dark: true}, {width: 400, height: 860, dark: false}]) {
+  for (const vp of [{width: 1280, height: 900, dark: true}, {width: 700, height: 900, dark: false}, {width: 400, height: 860, dark: false}]) {
     const ctx = await b.newContext({viewport: {width: vp.width, height: vp.height}, colorScheme: vp.dark ? 'dark' : 'light'});
     const p = await ctx.newPage(); const tag = vp.width + (vp.dark ? ' dark' : ' light');
     const errs = []; p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
@@ -39,6 +39,20 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     // print documents
     const pd = await p.evaluate(() => { const ids = printDocs().map(d => d.id); const f = PD_BUILD.fishbowl(), o = PD_BUILD.orals(); return {ids, f: (f.match(/class="pdq"/g) || []).length, o: (o.match(/class="pdq"/g) || []).length}; });
     check(tag, 'fishbowl and orals print documents', pd.ids.includes('fishbowl') && pd.ids.includes('orals') && pd.f >= 46 && pd.o >= 110, pd);
+    // phone polish: the rule-map search box keeps its normal height; the tabs fit; back to top; the fishbowl setup folds
+    await p.evaluate(() => setTab('rules')); await p.waitForTimeout(200);
+    const ui = await p.evaluate(() => { const t = document.querySelector('.tabs'); return {rq: Math.round(document.getElementById('rq').getBoundingClientRect().height), tabs: t.scrollWidth - t.clientWidth}; });
+    check(tag, 'rule-map search box is one line high; tabs fit', ui.rq < 60 && ui.tabs <= 1, ui);
+    await p.evaluate(() => window.scrollTo(0, 5000)); await p.waitForTimeout(300);
+    const tt = await p.evaluate(() => !document.getElementById('toTop').hidden);
+    await p.click('#toTop'); await p.waitForTimeout(200);
+    const top = await p.evaluate(() => Math.round(scrollY));
+    check(tag, 'back-to-top button appears and works', tt && top < 50, {tt, top});
+    await p.evaluate(() => fwOpen('fb-cj')); await p.waitForTimeout(200);
+    const fold = await p.evaluate(() => ({min: document.getElementById('fwSetup').classList.contains('fwmin'), draw: document.getElementById('fwDraw').textContent, opts: !document.getElementById('fwOpts').hidden}));
+    await p.click('#fwOpts');
+    const unfold = await p.evaluate(() => !document.getElementById('fwSetup').classList.contains('fwmin'));
+    check(tag, 'fishbowl setup folds while a card is out', fold.min && fold.draw === 'Draw another' && fold.opts && unfold, {fold, unfold});
     await p.evaluate(() => { setTab('rules'); goToId('method-compare'); }); await p.waitForTimeout(800);
     const hs = await p.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
     check(tag, 'no horizontal scroll', hs <= 1, hs);
