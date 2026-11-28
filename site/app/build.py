@@ -175,37 +175,10 @@ for e in FIN:
 assert all(e['d'] for e in FIN if e.get('f')), 'a finals case has no digest'
 print(f'finals: {sum(1 for e in FIN if e.get("f"))} syllabus cases, {len(_fd)} full digests ({len(FDZ)//1024} KB gzip)')
 
-# the syllabus as written (for the printed reviewer): page numbers, the opening quotes and the closing ornament dropped,
-# wrapped lines (URLs, dates) rejoined, whitespace runs collapsed. Each line: [kind, indent level, text].
-def syllabus_lines():
-    raw = open(os.path.join(HERE, '..', '..', 'sources', 'finals', 'syllabus.txt'), encoding='utf-8').read().split('\n')
-    out, blank, skip = [], True, False
-    MONTH = r'(January|February|March|April|May|June|July|August|September|October|November|December)\b'
-    for ln in raw:
-        if '\u201cWithout commitment' in ln: skip = True
-        if skip:
-            if 'Rocky II' in ln: skip = False
-            continue
-        if re.fullmatch(r'\s{15,}\d+\s*', ln) or ln.strip() in ('\u0398\u03ac\u03bd\u03b1\u03c4\u03bf\u03c2',):
-            continue
-        if not ln.strip():
-            blank = True; continue
-        ind = len(ln) - len(ln.lstrip()); t = re.sub(r'\s{2,}', ' ', ln.strip())
-        conn = bool(out) and re.search(r'(\b(AND|THE|OF|IN|ON|TO|FOR|THAN|AN|A|DUTERTE)|\b[A-Z]{2,}:)$', out[-1][2]) and t[:1].isupper() and t.split()[0].isupper()  # an ALL-CAPS title wrapped across a gap
-        if out and (conn or (not blank and (t[0].islower() or t.startswith(('http', 'www')) or out[-1][2].endswith(('-', ',', ';', 'G.R.')) or t.startswith('No. ') or re.search(r'\b(AND|THE|OF|IN|ON|TO|FOR|THAN|AN|A)$', out[-1][2]) or (re.match(MONTH, t) and re.search(r'\d$', out[-1][2]))))):
-            out[-1][2] += ('' if out[-1][2].endswith('-') else ' ') + t
-        else:
-            kind = 'h0' if re.match(r'(I|II|III|IV|V|VI|VII|VIII)\.\s', t) else 'h1' if re.match(r'[A-H]\.\s', t) else 'h2' if re.match(r'\d{1,2}\.\s', t) else 'h3' if re.match(r'[a-z]\.\s', t) else 'h4' if re.match(r'\(\d+\)\s', t) else 'p'
-            out.append([kind, 0 if ind < 5 else 1 if ind < 11 else 2 if ind < 17 else 3, t])
-        blank = False
-    return out
-syl_lines = syllabus_lines()
-assert len(syl_lines) > 300 and not any(re.fullmatch(r'\d+', l[2]) for l in syl_lines)
-
 # downloadable PDFs (site/app/make_pdfs.js writes them and this manifest; they are published next to the page under pdf/)
 PDFM = os.path.join(HERE, '..', 'print', 'pdf', 'manifest.json')
 pdfs = json.load(open(PDFM)) if os.path.exists(PDFM) else {}
-D = dict(examDate='2026-12-16', pdfs=pdfs, syl=syl_lines, fin=FIN, topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers)
+D = dict(examDate='2026-12-16', pdfs=pdfs, fin=FIN, topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers)
 t = open(os.path.join(HERE, 'template.html')).read()
 t = t.replace('__CSS__', open(os.path.join(HERE, 'style.css')).read())
 t = t.replace('__REVIEWER__', rev)

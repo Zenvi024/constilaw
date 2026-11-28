@@ -25,10 +25,15 @@ const ISSUES = () => D.issues.map(g => ({...g, items: g.items.filter(i => !HIDE 
 
 /* ================= tabs ================= */
 const TABS = ["today","rules","lists","cases","digests","exams","spot","write","print"];
+const PRAC = ["exams", "spot", "write"];
 function setTab(t, push){
+  if (t === "practice") t = store.get("ptab", "exams");
   if (!TABS.includes(t)) t = "today";
   TABS.forEach(x => { $("v-" + x).hidden = x !== t; }); $("v-search").hidden = true;
-  document.querySelectorAll(".tabs [data-tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === t));
+  const pr = PRAC.includes(t); if (pr) store.set("ptab", t);
+  document.querySelectorAll(".tabs [data-tab]").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === t || (b.dataset.tab === "practice" && pr)));
+  $("psub").hidden = !pr; document.querySelectorAll("#psub [data-tab]").forEach(b => b.setAttribute("aria-pressed", b.dataset.tab === t));
+  $("printBtn").setAttribute("aria-pressed", t === "print");
   store.set("tab", t);
   if (push !== false){ try { history.replaceState(null, "", "#" + t); } catch(e){} }
   if (t === "today") renderToday();
@@ -39,7 +44,10 @@ function setTab(t, push){
   if (t === "rules") requestAnimationFrame(spy);
   window.scrollTo({top: 0});
 }
-document.querySelector(".tabs").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b){ NAV.length = 0; setTab(b.dataset.tab); navUI(); } });
+document.querySelector(".hdr").addEventListener("click", e => { const b = e.target.closest("[data-tab]"); if (b){ NAV.length = 0; setTab(b.dataset.tab); navUI(); $("hset").classList.remove("open"); $("setBtn").setAttribute("aria-expanded", "false"); } });
+// phones: theme and scope live behind a settings button
+$("setBtn").onclick = e => { e.stopPropagation(); const o = $("hset").classList.toggle("open"); $("setBtn").setAttribute("aria-expanded", o); };
+document.addEventListener("click", e => { if ($("hset").classList.contains("open") && !e.target.closest("#hset,#setBtn")){ $("hset").classList.remove("open"); $("setBtn").setAttribute("aria-expanded", "false"); } });
 
 /* ================= countdown ================= */
 function manilaToday(){ // yyyy-mm-dd in Asia/Manila
@@ -119,9 +127,9 @@ function dgHTML(txt){
   }).join("")}</div>`;
 }
 let lastFocus = null;
-function openModal(html){ lastFocus = document.activeElement; $("modal").innerHTML = html; $("scrim").hidden = false; const b = $("modal").querySelector("[data-close]"); if (b) b.focus(); }
+function openModal(html){ lastFocus = document.activeElement; $("modal").className = "modal"; $("modal").innerHTML = html; $("scrim").hidden = false; const b = $("modal").querySelector("[data-close]"); if (b) b.focus(); }
 function closeModal(quiet){ $("scrim").hidden = true; $("modal").innerHTML = ""; CUR_CASE = null; if (!quiet){ while (NAV.length && NAV[NAV.length - 1].kind === "case") NAV.pop(); if (lastFocus && lastFocus.focus) lastFocus.focus(); } navUI(); }
-function openCase(id){ const c = CASE[id]; if (!c) return; if (!$("scrim").hidden && CUR_CASE && CUR_CASE !== id) navPush("case"); CUR_CASE = id; openModal(caseHTML(c)); ckClampInit($("modal")); }
+function openCase(id){ const c = CASE[id]; if (!c) return; if (!$("scrim").hidden && CUR_CASE && CUR_CASE !== id) navPush("case"); CUR_CASE = id; openModal(caseHTML(c)); $("modal").className = "modal pt-" + partOfTopic(c.t); ckClampInit($("modal")); }
 $("scrim").addEventListener("click", e => {
   if (e.target === $("scrim") || e.target.closest("[data-close]")) { closeModal(); return; }
   if (e.target.closest("[data-navback]")){ e.stopPropagation(); navBack(); return; }
@@ -227,9 +235,10 @@ function plDays(){ // today through the orals date (at least a week, at most 8 w
 }
 function plCount(id){ return Object.values(PLAN).reduce((n, a) => n + a.filter(x => x === id).length, 0); }
 let PL_SEL = null; // {id, from} while a card is picked up by tap
+let PL_TRAY_TOUCHED = false;
 function plCardHTML(c, from){
   const sel = PL_SEL && PL_SEL.id === c.id && PL_SEL.from === (from || "");
-  return `<div class="plcard${c.t ? "" : " plact"}${sel ? " plsel" : ""}" draggable="true" data-pl="${c.id}" data-from="${from || ""}" tabindex="0" role="button" aria-pressed="${sel}"><span class="pln">${esc(c.n)}</span><span class="pls">${esc(c.s)}</span>${from ? `<button class="plx" data-plx="${from}|${c.id}" aria-label="Remove ${esc(c.n)} from this day" title="Remove">×</button>` : (plCount(c.id) ? `<span class="plk">${plCount(c.id)}×</span>` : "")}</div>`;
+  return `<div class="plcard${c.t ? " pt-" + partOfTopic(c.t.key) : " plact"}${sel ? " plsel" : ""}" draggable="true" data-pl="${c.id}" data-from="${from || ""}" tabindex="0" role="button" aria-pressed="${sel}"><span class="pln">${esc(c.n)}</span><span class="pls">${esc(c.s)}</span>${from ? `<button class="plx" data-plx="${from}|${c.id}" aria-label="Remove ${esc(c.n)} from this day" title="Remove">×</button>` : (plCount(c.id) ? `<span class="plk">${plCount(c.id)}×</span>` : "")}</div>`;
 }
 function renderPlanner(){
   const box = $("plTray"); if (!box) return;
@@ -288,11 +297,15 @@ function renderToday(){
     [qa.length ? Math.round(100 * qr / qa.length) + "%" : "–", `MCQ accuracy (${qa.length} answered)`],
     [al.length ? avg.toFixed(1) : "–", `average essay score /10 (${al.length} written)`]
   ].map(([v, k]) => `<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");
+  const nxt = plDays().slice(1, 8).filter(d => (PLAN[d] || []).length);
+  $("dayNext").innerHTML = nxt.length ? `<div class="lbl">Next seven days</div><ul class="plnext">${nxt.map(d => `<li class="${d === ORALS() ? "plno" : ""}"><b>${esc(fmtDay(d))}</b><span>${(PLAN[d] || []).map(plCard).filter(Boolean).map(c => `<span class="plnc${c.t ? " pt-" + partOfTopic(c.t.key) : ""}">${esc(c.n)}</span>`).join("")}</span></li>`).join("")}</ul>` : "";
+  if (!PL_TRAY_TOUCHED) $("plTrayD").open = !Object.keys(PLAN).length;
   renderPlanner(); renderClock();
   renderSessPlan(); renderFix(); if (typeof renderRvProg === "function") renderRvProg();
 }
 $("plDate").addEventListener("change", () => { const v = $("plDate").value; if (/^\d{4}-\d{2}-\d{2}$/.test(v)){ store.set("orals", v); renderToday(); } });
 $("plAuto").onclick = plAuto;
+$("plTrayD").addEventListener("toggle", () => { if (document.activeElement && document.activeElement.closest("#plTrayD")) PL_TRAY_TOUCHED = true; });
 $("plClear").onclick = () => { if (!Object.keys(PLAN).length || confirm("Clear every planned day?")){ PLAN = {}; plSave(); PL_SEL = null; renderToday(); } };
 $("plJump").onclick = e => { e.preventDefault(); $("planP").scrollIntoView({block: "start", behavior: "smooth"}); };
 $("v-today").addEventListener("click", e => {
@@ -339,24 +352,29 @@ function rvTitle(id){ const el = document.getElementById(id); if (!el) return id
 const secShown = i => !HIDE || !OUT_SECS.includes(SECS[i].id);
 const visIdx = () => SECS.map((s, i) => i).filter(secShown);
 // the syllabus megaparts the rule maps sit under (section id -> group)
-const RV_GROUPS = [
-  ["Start here", "", ["method"]],
-  ["The Constitution", "Parts I–II", ["interp"]],
-  ["Judicial review", "Part III", ["jr"]],
-  ["Territory, people and government", "Part IV", ["terr", "cit", "suff", "gov"]],
-  ["The Legislative Department", "V.A · Congress", ["comp", "internal", "priv", "et", "powers", "money", "legproc", "ocong"]],
-  ["The Executive Department", "V.B · the President", ["pres", "appt", "cinc"]],
-  ["The Judicial Department", "V.C · the courts", ["court", "scadmin", "jbc"]],
-  ["Constitutional Commissions", "Art. IX", ["concom"]],
-  ["Current events", "", ["news"]],
+const RV_GROUPS = [   // label, syllabus part, sections, colour key (CSS --pt-<key>)
+  ["Start here", "", ["method"], "start"],
+  ["The Constitution", "Parts I–II", ["interp"], "const"],
+  ["Judicial review", "Part III", ["jr"], "jr"],
+  ["Territory, people and government", "Part IV", ["terr", "cit", "suff", "gov"], "state"],
+  ["The Legislative Department", "V.A · Congress", ["comp", "internal", "priv", "et", "powers", "money", "legproc", "ocong"], "leg"],
+  ["The Executive Department", "V.B · the President", ["pres", "appt", "cinc"], "exec"],
+  ["The Judicial Department", "V.C · the courts", ["court", "scadmin", "jbc"], "jud"],
+  ["Constitutional Commissions", "Art. IX", ["concom"], "cc"],
+  ["Current events", "", ["news"], "news"],
 ];
+const PART_HEX = {start: "#64748b", const: "#6d28d9", jr: "#0f766e", state: "#4d7c0f", leg: "#b45309", exec: "#be123c", jud: "#1d4ed8", cc: "#047857", news: "#a16207"};
+const partOfSec = id => { const g = RV_GROUPS.find(g => g[2].includes(id)); return g ? g[3] : "start"; };
+const partOfTopic = k => TOP[k] && TOP[k].sec ? partOfSec(TOP[k].sec) : (k === "tax" || k === "approp" ? "leg" : "start");
+const groupOfSec = id => RV_GROUPS.find(g => g[2].includes(id));
+SECS.forEach(s => s.classList.add("pt-" + partOfSec(s.id)));
 function rvGroups(){ // [[label, part, [section indexes]]], every section placed once, in group order
   const placed = new Set(), out = RV_GROUPS.map(([l, p, ids]) => [l, p, ids.map(id => SECS.findIndex(s => s.id === id)).filter(i => i >= 0 && (placed.add(i), true))]);
   const rest = SECS.map((s, i) => i).filter(i => !placed.has(i)); if (rest.length) out.push(["Other", "", rest]);
   return out.map(([l, p, is]) => [l, p, is.filter(secShown)]).filter(g => g[2].length);
 }
 function buildSide(){
-  $("rsecs").innerHTML = rvGroups().map(([l, p, is]) => `<li class="rgh"><span>${esc(l)}</span>${p ? `<small>${esc(p)}</small>` : ""}</li>` + is.map(i => { const s = SECS[i]; return `<li data-i="${i}" class="rgi"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)} · <span data-rp="${s.id}"></span></small></button></li>`; }).join("")).join("");
+  $("rsecs").innerHTML = rvGroups().map(([l, p, is]) => `<li class="rgh pt-${partOfSec(SECS[is[0]].id)}"><span>${esc(l)}</span>${p ? `<small>${esc(p)}</small>` : ""}</li>` + is.map(i => { const s = SECS[i]; return `<li data-i="${i}" class="rgi pt-${partOfSec(s.id)}"><button data-sec="${i}">${esc(s.dataset.title)}<small>${esc(s.dataset.short)} · <span data-rp="${s.id}"></span></small></button></li>`; }).join("")).join("");
   $("rsel").innerHTML = rvGroups().map(([l, p, is]) => `<optgroup label="${esc(l + (p ? " (" + p + ")" : ""))}">` + is.map(i => `<option value="${i}">${esc(SECS[i].dataset.title)}</option>`).join("") + `</optgroup>`).join("");
 }
 function openSec(i, scroll){
@@ -382,6 +400,7 @@ function goToId(id){
   const sec = el.tagName === "SECTION" ? el : el.closest("section.rv"); const i = SECS.indexOf(sec);
   if (i !== curSec) openSec(i, false);
   if (el.tagName === "SECTION"){ window.scrollTo({top: 0}); return; }
+  const fold = el.closest && el.closest("li.vlong"); if (fold) fold.classList.add("vopen");
   el.scrollIntoView({block: "start"}); el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1600);
 }
 $("rsecs").addEventListener("click", e => {
@@ -671,7 +690,7 @@ function renderCases(){
   TOPS().forEach(t => {
     const g = list.filter(c => inT(c, t.key)); if (!g.length) return;
     html += `<div class="grouph">${esc(t.name)} <small>${esc(t.part)} · ${g.length}</small></div>`;
-    html += g.map(c => `<button class="crow" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span> ${hookChip(c)}</span><span>${c.a ? '<span class="tag anchor">anchor</span>' : c.ref ? '<span class="tag">mentioned only</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
+    html += g.map(c => `<button class="crow pt-${partOfTopic(c.t)}" data-case="${c.id}"><span class="nm">${esc(c.n)}<span class="yr">${esc(c.y)}</span> ${hookChip(c)}</span><span>${c.a ? '<span class="tag anchor">anchor</span>' : c.ref ? '<span class="tag">mentioned only</span>' : ""}</span><span class="rl">${esc(c.r)}</span></button>`).join("");
   });
   $("clist").innerHTML = html || `<p class="empty">No case matches. Try fewer words.</p>`;
 }
@@ -962,7 +981,7 @@ function renderSessPlan(){
   const s = buildSession(), parts = [];
   if (s.nFix) parts.push(`${s.nFix} from your fix list`);
   if (s.nDue) parts.push(`${s.nDue} due for review`);
-  if (s.nNew) parts.push(`${s.nNew} new or review-ahead from ${joinNames(s.topics.map(tname))}`);
+  if (s.nNew) parts.push(`${s.nNew} new or review-ahead from ${s.topics.length > 4 ? (s.topics.length >= TOPS().length ? "every topic" : s.topics.length + " topics you have planned so far") : joinNames(s.topics.map(tname))}`);
   $("sessPlan").textContent = s.cards.length ? `About ${Math.max(5, s.mins)} minutes: ${joinNames(parts)}. Cases, lists and multiple choice, mixed. You can stop at any card.` : "Nothing to review right now.";
   $("sessGo").disabled = !s.cards.length;
 }
@@ -1359,22 +1378,42 @@ const PD_BUILD = {
 };
 // title page and contents of the full reviewer (make_pdfs.js fills the page numbers; a browser print shows the contents without them)
 const REVIEWER_SKIP = ["method"];
-const pdToc = (cls, id, t) => `<li class="${cls}"><span class="pdtt">${esc(t)}</span><span class="pdtd"></span><span class="pgn" data-toc="${id}"></span></li>`;
+const pdToc = (cls, id, t) => `<li class="${cls}"><a href="#${id}"><span class="pdtt">${esc(t)}</span><span class="pdtd"></span><span class="pgn" data-toc="${id}"></span></a></li>`;
 const docTopics = () => TOPS().filter(t => CASES().some(c => !c.ref && c.t === t.key));
 function reviewerFront(){
   const groups = rvGroups().map(([l, p, is]) => [l, p, is.filter(i => !REVIEWER_SKIP.includes(SECS[i].id))]).filter(g => g[2].length);
-  const syl = (D.syl || []).map(([k, lv, t]) => `<p class="pds-${k} pdsl${lv}">${esc(t)}</p>`).join("");
-  return `<div class="pdtitle"><div class="pdt1">University of the Philippines College of Law · First Semester 2026</div><h1>DG Constitutional Law 1<br>Finals Reviewer</h1><div class="pdt2">Prof. Dante B. Gatmaytan</div></div>`
-    + `<div class="pdtoc"><h2>Contents</h2><ol class="pdtl"><li class="pdtg"><span class="pdtt">Front matter</span></li>${pdToc("pdts", "pd-syl", "The syllabus")}`
-    + groups.map(([l, p, is]) => `<li class="pdtg"><span class="pdtt">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</span></li>` + is.map(i => pdToc("pdts", SECS[i].id, SECS[i].dataset.title) + [...SECS[i].querySelectorAll("h3[id]")].map(h => pdToc("pdth", h.id, h.textContent)).join("")).join("")).join("")
-    + `<li class="pdtg"><span class="pdtt">Doctrine map</span></li>${pdToc("pdts", "pd-doc", "Doctrine map: every case, by topic")}${docTopics().map(t => pdToc("pdth", "pd-doc-" + t.key, t.name)).join("")}</ol><p class="pdtend">The syllabus begins on the next page.</p></div>`
-    + `<div class="pdsyl"><h2 id="pd-syl" data-top>The syllabus</h2>${syl}</div>`;
+  return `<div class="pdtitle"><div class="pdt1">University of the Philippines College of Law · First Semester 2026</div><h1><span>DG Constitutional Law 1</span><span>Finals Reviewer</span></h1><div class="pdt2">Prof. Dante B. Gatmaytan</div></div>`
+    + `<div class="pdtoc"><h2 id="pd-toc">Contents</h2><ol class="pdtl">`
+    + groups.map(([l, p, is]) => `<li class="pdtg pt-${partOfSec(SECS[is[0]].id)}"><span class="pdtt">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</span></li>` + is.map(i => pdToc("pdts", SECS[i].id, SECS[i].dataset.title) + [...SECS[i].querySelectorAll("h3[id]")].map(h => pdToc("pdth", h.id, h.textContent)).join("")).join("")).join("")
+    + `<li class="pdtg"><span class="pdtt">Doctrine map</span></li>${pdToc("pdts", "pd-doc", "Doctrine map: every case, by topic")}${docTopics().map(t => pdToc("pdth", "pd-doc-" + t.key, t.name)).join("")}</ol><p class="pdtend">The rule maps begin on the next page.</p></div>`;
 }
 function reviewerEnd(){ // the doctrine map: every syllabus case under its topic and syllabus heading, with its doctrine
   return `<div class="pddoc"><h2 id="pd-doc" data-top>Doctrine map: every case, by topic</h2><p class="pdsub">One line of doctrine per case, in syllabus order. The full card, digest and diagrams are in the desk.</p>` + docTopics().map(t => {
     const cs = CASES().filter(c => !c.ref && c.t === t.key), subs = [...new Set(cs.map(c => c.sub || ""))];
     return `<h3 class="pdh" id="pd-doc-${t.key}">${esc(t.name)} <small>${esc(t.part)}</small></h3><div class="pdcols">${subs.map(sb => `${sb ? `<div class="pddsub">${esc(sb)}</div>` : ""}${cs.filter(c => (c.sub || "") === sb).map(c => `<p class="pdd"><b>${esc(c.n)}</b> <span class="pdm">(${esc(c.y)})</span> ${esc(c.r)}</p>`).join("")}`).join("")}</div>`;
   }).join("") + `</div>`;
+}
+// bookmarks and running headers for the PDFs: [{lvl, t, el, top, hd, c}] in document order
+// top: the heading starts its page; hd: running header from that page on; c: part colour
+function pdfOutline(){
+  const out = [], mode = document.body.dataset.print, full = !!document.querySelector("#printDoc .pdtoc");
+  if (mode === "maps"){
+    if (full) out.push({lvl: 1, t: "Contents", el: "pd-toc", top: true, hd: ""});
+    let lastG = null;
+    SECS.forEach(s => { if (!s.hasAttribute("data-pin")) return; const g = groupOfSec(s.id) || ["", "", [], "start"], k = g[3];
+      if (full && g[0] !== lastG){ out.push({lvl: 1, t: g[0], el: s.id, same: true}); lastG = g[0]; }
+      out.push({lvl: full ? 2 : 1, t: s.dataset.title, el: s.id, top: true, hd: (g[0] ? g[0] + "  ·  " : "") + s.dataset.title, c: PART_HEX[k]});
+      s.querySelectorAll("h3[id]").forEach(h => out.push({lvl: full ? 3 : 2, t: h.textContent, el: h.id}));
+    });
+    if (document.getElementById("pd-doc")){ out.push({lvl: 1, t: "Doctrine map", el: "pd-doc", top: true, hd: "Doctrine map"});
+      docTopics().forEach(t => out.push({lvl: 2, t: t.name, el: "pd-doc-" + t.key, hd: "Doctrine map  ·  " + t.name, c: PART_HEX[partOfTopic(t.key)]})); }
+  } else if (mode === "doc"){
+    const title = ($("printDoc").querySelector("h1") || {}).textContent || "";
+    $("printDoc").querySelectorAll(".pdh,.pdh3").forEach((h, i) => { if (!h.id) h.id = "pdo-" + i;
+      const lv = h.classList.contains("pdh3") ? 2 : 1, name = h.childNodes[0] ? h.childNodes[0].textContent.trim() : h.textContent;
+      out.push({lvl: lv, t: name, el: h.id, top: h.classList.contains("pdbreak"), hd: lv === 1 ? title + "  ·  " + name : ""}); });
+  }
+  return out.map(o => ({...o, text: (document.getElementById(o.el) || {}).textContent || o.t}));
 }
 let PRINTING = null;
 // Print-only state: marks what to print (data-print on <body>, data-pin on the rule maps); the screen is untouched,
@@ -1396,13 +1435,20 @@ window.addEventListener("beforeprint", () => { if (window.__pdfMode) return; if 
 window.addEventListener("afterprint", () => { if (!window.__pdfMode && PRINTING) restorePrint(); });
 function doPrint(id){ preparePrint(id); PR_AT = Date.now(); try { window.print(); } catch(e){} }
 $("rPrint").onclick = () => doPrint("sec:" + curSec);
+// reading mode: no sidebar, wider type; long case paragraphs fold to three lines (tap to open)
+let RREAD = store.get("rread", false);
+document.querySelectorAll("#rcontent section.rv > ul > li").forEach(li => { if (li.textContent.length > 420 && !li.closest("figure")) li.classList.add("vlong"); });
+function applyRead(){ document.body.classList.toggle("rvread", RREAD); $("readBtn").setAttribute("aria-pressed", RREAD); }
+$("readBtn").onclick = () => { RREAD = !RREAD; store.set("rread", RREAD); applyRead(); };
+$("rcontent").addEventListener("click", e => { const li = e.target.closest("li.vlong"); if (li && RREAD && !e.target.closest("a,button,.bl:not(.shown)") && !li.classList.contains("vopen")) li.classList.add("vopen"); });
+applyRead();
 // label each stepper stage so printed steppers read as a list
 document.querySelectorAll("#rcontent .stepper").forEach(st => { const bs = st.querySelectorAll(".sp-btns button"); st.querySelectorAll(".sp-p").forEach((p, i) => { if (bs[i]) p.dataset.lab = bs[i].textContent; }); });
 // paper size: drives @page for Ctrl+P and which PDF the Download buttons fetch
 let PSIZE = store.get("psize", "folio"); if (!["folio", "a4"].includes(PSIZE)) PSIZE = "folio";
 function applyPSize(){
   let el = $("pageSizeCss"); if (!el){ el = document.createElement("style"); el.id = "pageSizeCss"; document.head.appendChild(el); }
-  el.textContent = `@page{size:${PSIZE === "a4" ? "A4" : "8.5in 13in"};margin:12mm 12mm 14mm}`;
+  el.textContent = `@page{size:${PSIZE === "a4" ? "A4" : "8.5in 13in"};margin:16mm 18mm 15mm}`;
   document.querySelectorAll("#pdSize [data-ps]").forEach(b => b.setAttribute("aria-pressed", b.dataset.ps === PSIZE));
 }
 let DL = null; // the downloads capability, where the viewer grants it

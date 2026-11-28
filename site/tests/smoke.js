@@ -1,5 +1,7 @@
 // Smoke test: node site/tests/smoke.js [path-to-html] [screenshot-dir]
 const {chromium} = require('playwright');
+// on phones the theme and scope buttons sit behind the settings button
+const setClick = async (p, sel) => { if (!(await p.isVisible(sel))) await p.click('#setBtn'); await p.click(sel); };
 const path = require('path');
 const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.html');
 const out = process.argv[3] || 'site/build';
@@ -17,7 +19,7 @@ require('fs').mkdirSync(out, {recursive: true});
     await p.screenshot({path: `${out}/${tag}-today.png`}); await check('today');
     // scope toggle: hidden by default, everything back when switched off
     const scope = async () => p.evaluate(() => ({secs: document.querySelectorAll('#rsecs>li').length, cases: document.querySelectorAll('#clist .crow').length, tecson: !!document.querySelector('#clist [data-case="tecson"]'), dual: getComputedStyle(document.querySelector('[data-iid="ppl_dual"]')).display !== 'none', pool: document.getElementById('qPool').textContent}));
-    const s1 = await scope(); await p.click('#scopeBtn'); const s2 = await scope(); await p.click('#scopeBtn'); const s3 = await scope();
+    const s1 = await scope(); await setClick(p, '#scopeBtn'); const s2 = await scope(); await setClick(p, '#scopeBtn'); const s3 = await scope();
     const scopeOK = !s1.tecson && !s1.dual && s2.tecson && s2.dual && s2.secs === s1.secs + 2 && s2.cases > s1.cases && JSON.stringify(s1) === JSON.stringify(s3);
     if (!scopeOK){ fail++; console.log('  SCOPE', JSON.stringify([s1, s2, s3])); }
     // rule maps + search + case modal
@@ -48,7 +50,7 @@ require('fs').mkdirSync(out, {recursive: true});
     await p.click('#dCard [data-focus]'); await p.click('#dCard [data-quit]'); await p.click('#dCard [data-a="back"]');
     if (!focusOn || !focusOff){ fail++; console.log('  FOCUS', tag, focusOn, focusOff); }
     // past exams: mcq
-    await p.click('[data-tab="exams"]'); await p.click('#qStart'); await p.click('#qBox .choice'); const expl = await p.isVisible('#qBox .expl');
+    await p.click('[data-tab="practice"]'); await p.click('#psub [data-tab="exams"]'); await p.click('#qStart'); await p.click('#qBox .choice'); const expl = await p.isVisible('#qBox .expl');
     await p.screenshot({path: `${out}/${tag}-mcq.png`}); await check('mcq');
     await p.click('#qBox .qnext'); await p.click('#qEnd');
     await p.click('[data-em="essay"]'); await p.click('#elist [data-show]'); await check('essays');

@@ -1,5 +1,7 @@
 // node site/tests/drill.js [built-html]: flashcard drill — flip, hook chip, streak, previous card (undo), keyboard, shuffle
 const {chromium} = require('playwright');
+// on phones the theme and scope buttons sit behind the settings button
+const setClick = async (p, sel) => { if (!(await p.isVisible(sel))) await p.click('#setBtn'); await p.click(sel); };
 const path = require('path');
 const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.html');
 (async () => {
@@ -65,8 +67,8 @@ const file = path.resolve(process.argv[2] || 'site/dist/consti1-midterm-desk.htm
     await p.click('[data-tab="today"]'); const prog = await p.textContent('#rvProg');
     check(tag, 'reading progress', rd.h && /^1\//.test(rd.side) && /1 of \d+ parts/.test(prog), {rd, prog: prog.slice(0, 60)});
     // theme
-    await p.click('#themeBtn'); const t1 = await p.evaluate(() => document.documentElement.dataset.theme); await p.click('#themeBtn'); const t2 = await p.evaluate(() => document.documentElement.dataset.theme);
-    await p.click('#themeBtn'); const t3 = await p.evaluate(() => document.documentElement.dataset.theme || 'auto');
+    await setClick(p, '#themeBtn'); const t1 = await p.evaluate(() => document.documentElement.dataset.theme); await setClick(p, '#themeBtn'); const t2 = await p.evaluate(() => document.documentElement.dataset.theme);
+    await setClick(p, '#themeBtn'); const t3 = await p.evaluate(() => document.documentElement.dataset.theme || 'auto');
     check(tag, 'theme cycles', t1 === 'light' && t2 === 'dark' && t3 === 'auto', [t1, t2, t3]);
     check(tag, 'no page errors', !errs.length, errs);
     await ctx.close(); }

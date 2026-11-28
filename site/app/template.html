@@ -1,7 +1,7 @@
 <title>Consti 1 - DG Finals</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Libre+Franklin:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Atkinson+Hyperlegible+Next:ital,wght@0,400..800;1,400..800&family=Atkinson+Hyperlegible+Mono:wght@400..700&display=swap">
 <style>
 __CSS__
 </style>
@@ -14,19 +14,17 @@ __CSS__
         <h1>Consti 1 <em>Reviewer</em></h1>
       </div>
       <div class="gsearch" role="search"><input type="search" id="gq" placeholder="Search everything: a case, rule, list, number…" aria-label="Search the whole site" autocomplete="off"><kbd>/</kbd></div>
-      <div class="hdr-right"><button class="scope" id="scopeBtn" aria-pressed="true" title="Citizenship and national territory are not in this year’s midterm or finals coverage">Citizenship &amp; territory: <b id="scopeState">hidden</b></button><button class="scope themebtn" id="themeBtn" type="button">Theme: <b>auto</b></button><div class="clock" aria-live="polite"><div class="cl1"><span class="n" id="cdN">–</span><span class="l" id="cdL">Wed, Dec 16 · orals</span></div><span class="adv" id="cdA"></span></div></div>
+      <div class="hdr-right"><button class="setbtn" id="setBtn" type="button" aria-expanded="false" aria-controls="hset" title="Settings">⚙<span class="vhid"> Settings</span></button><div class="hset" id="hset"><button class="scope" id="scopeBtn" aria-pressed="true" title="Citizenship and national territory are not in this year’s midterm or finals coverage">Citizenship &amp; territory: <b id="scopeState">hidden</b></button><button class="scope themebtn" id="themeBtn" type="button">Theme: <b>auto</b></button></div><button class="scope printbtn" data-tab="print" id="printBtn" type="button" aria-pressed="false">Print</button><div class="clock" aria-live="polite"><div class="cl1"><span class="n" id="cdN">–</span><span class="l" id="cdL">Wed, Dec 16 · orals</span></div><span class="adv" id="cdA"></span></div></div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button role="tab" data-tab="today" aria-selected="true">Today</button>
       <button role="tab" data-tab="rules" aria-selected="false">Rule maps</button>
+      <button role="tab" data-tab="cases" aria-selected="false">Cases &amp; drills<span class="badge" id="dueBadge" hidden></span></button>
       <button role="tab" data-tab="lists" aria-selected="false">Lists</button>
-      <button role="tab" data-tab="cases" aria-selected="false">Cases<span class="badge" id="dueBadge" hidden></span></button>
       <button role="tab" data-tab="digests" aria-selected="false">Digests</button>
-      <button role="tab" data-tab="exams" aria-selected="false">Past exams</button>
-      <button role="tab" data-tab="spot" aria-selected="false">Issue spotter</button>
-      <button role="tab" data-tab="write" aria-selected="false">Essay trainer</button>
-      <button role="tab" data-tab="print" aria-selected="false">Printables</button>
+      <button role="tab" data-tab="practice" aria-selected="false">Practice</button>
     </nav>
+    <nav class="psub" id="psub" aria-label="Practice" hidden><button data-tab="exams" aria-pressed="false">Past exams</button><button data-tab="spot" aria-pressed="false">Issue spotter</button><button data-tab="write" aria-pressed="false">Essay trainer</button></nav>
   </div>
 </header>
 <section class="pdoc" id="printDoc" aria-hidden="true"></section>
@@ -58,6 +56,7 @@ __CSS__
     <section class="panel dayplan" aria-labelledby="dayH">
       <div class="dayhead"><span class="d" id="dayH"></span><span class="f" id="dayF"></span></div>
       <ul class="todo" id="dayTodo"></ul>
+      <div id="dayNext"></div>
       <div class="row"><a class="btn small ghost" href="#planP" id="plJump">Edit my plan ↓</a></div>
     </section>
     <div class="stack">
@@ -86,7 +85,7 @@ __CSS__
       </div>
     </div>
     <p class="tiny" style="margin:0" id="plHelp">Drag a topic into a day (on a phone: tap a topic, then tap a day). Drag or tap a planned card to move it; × removes it. A topic can go on more than one day. Your plan and orals date are saved in this browser only, so everyone in the block can plan around their own schedule.</p>
-    <div class="pltray" id="plTray"></div>
+    <details class="pltrayd" id="plTrayD" open><summary>Topics and practice cards <span class="tiny">(drag or tap from here)</span></summary><div class="pltray" id="plTray"></div></details>
     <div class="plboard" id="plBoard"></div>
     <div class="plbar" id="plBar" hidden><span id="plBarT"></span><button class="btn small" id="plBarX">Cancel</button></div>
   </section>
@@ -107,6 +106,7 @@ __CSS__
           <button class="btn small ghost" id="blurReset" hidden>Re-hide</button>
           <span class="blurct" id="blurCt" hidden></span>
           <nav class="mtoc" id="mtoc" aria-label="Headings in this rule map"></nav>
+          <button class="blurbtn noprint" id="readBtn" aria-pressed="false" title="Hide the sidebar and widen the text; long case paragraphs fold (tap to open)">Reading mode</button>
           <button class="btn small ghost noprint" id="rPrint" title="Print this rule map (or press Ctrl+P)">Print</button>
         </div>
         <div class="rprog"><i id="rprog"></i></div>
