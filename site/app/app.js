@@ -24,10 +24,10 @@ const MCQS = () => D.mcq.filter(q => shownT(q.t));
 const ISSUES = () => D.issues.map(g => ({...g, items: g.items.filter(i => !HIDE || !OUT_ISSUES.includes(i.id))})).filter(g => g.items.length);
 
 /* ================= tabs ================= */
-const TABS = ["today","rules","lists","cases","digests","exams","spot","write","print"];
-const PRAC = ["exams", "spot", "write"];
+const TABS = ["today","rules","lists","cases","digests","fish","exams","spot","write","print"];
+const PRAC = ["fish", "exams", "spot", "write"];
 function setTab(t, push){
-  if (t === "practice") t = store.get("ptab", "exams");
+  if (t === "practice") t = store.get("ptab", "fish");
   if (!TABS.includes(t)) t = "today";
   TABS.forEach(x => { $("v-" + x).hidden = x !== t; }); $("v-search").hidden = true;
   const pr = PRAC.includes(t); if (pr) store.set("ptab", t);
@@ -39,7 +39,8 @@ function setTab(t, push){
   if (t === "today") renderToday();
   if (t === "print" && typeof renderPdList === "function") renderPdList();
   if (t === "print") renderPrint();
-  if (t === "digests") requestAnimationFrame(() => renderDigests());   // defined at the end of the script
+  if (t === "digests") requestAnimationFrame(() => renderDigests());
+  if (t === "fish") requestAnimationFrame(() => fwShow());   // defined at the end of the script   // defined at the end of the script
   if (t === "lists" && !$("lList").hidden) renderLists();
   if (t === "rules") requestAnimationFrame(spy);
   window.scrollTo({top: 0});
@@ -140,6 +141,7 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("scrim"
 document.addEventListener("click", e => {
   const a = e.target.closest("a.cref,[data-case]"); if (a){ e.preventDefault(); openCase(a.dataset.c || a.dataset.case); return; }
   const r = e.target.closest("a.eref,[data-essay]"); if (r){ e.preventDefault(); openEssay(r.dataset.e || r.dataset.essay); return; }
+  const w = e.target.closest("a.fwref,[data-fwopen]"); if (w){ e.preventDefault(); navPush(); fwOpen(w.dataset.fw || w.dataset.fwopen); return; }
   const s = e.target.closest("[data-spot]"); if (s){ e.preventDefault(); openSpot(s.dataset.spot); return; }
   const v = e.target.closest("[data-rv]"); if (v){ e.preventDefault(); navPush(); setTab("rules"); goToId(v.dataset.rv); return; }
 });
@@ -216,7 +218,7 @@ const PL_ACTS = {
   exams: {n: "Past exam questions", s: "finals and midterm problems, out loud", tab: "exams", goL: "Open past exams"},
   news: {n: "News watch", s: "the 2026 news map", rv: "news", goL: "Open the news map"},
   hooks: {n: "Hook wall", s: "every diagram hook on one screen", rv: "fig-wall", goL: "Open the hook wall"},
-  mock: {n: "Mock fishbowl", s: "a friend reads a news card; answer in 5 minutes", tab: "exams", goL: "Pick a problem"},
+  mock: {n: "Mock fishbowl", s: "draw a news card, think, answer out loud", tab: "fish", goL: "Open the fishbowl"},
   rest: {n: "Rest", s: "sleep counts as studying"},
 };
 let PLAN = store.get("plan", {});
@@ -1256,11 +1258,12 @@ function gIndex(){
   D.issues.forEach(gr => gr.items.forEach(i => items.push({g: "issue", id: i.id, title: i.l, text: i.h, ctx: gr.g, rv: i.rv})));
   D.numbers.forEach(([a, b]) => items.push({g: "num", title: a, text: b, ctx: "Numbers he can alter"}));
   D.mcq.forEach(q => items.push({g: "mcq", id: q.id, t: q.t, title: `${q.exam} #${q.n}`, text: [q.q, ...q.c, q.e, q.k].filter(Boolean).join(" · "), ctx: tname(q.t)}));
+  D.fb.news.forEach(n => items.push({g: "fish", id: n.id, title: n.title, text: [n.facts, n.ask, n.say, ...n.pts].join(" · "), ctx: "News card · " + fmtDay(n.date, {month: "short", day: "numeric", year: "numeric"})}));
   D.essays.forEach(e => items.push({g: "essay", id: e.id, title: `${e.exam}${e.n ? " Q" + e.n : ""}: ${e.short}`, text: [e.ask, e.prompt, ...(e.core || []), e.model].join(" · "), ctx: e.news ? "2026 news problem" : "Past essay question"}));
   items.forEach(it => { it.ft = fold(it.title); it.fx = fold(it.text); });
   return items;
 }
-const G_LBL = {rule: "Rule maps", case: "Cases", list: "Lists and requisites", issue: "Issue checklist", num: "Numbers", mcq: "Past exams: multiple choice", essay: "Essay and news problems"};
+const G_LBL = {rule: "Rule maps", case: "Cases", list: "Lists and requisites", issue: "Issue checklist", num: "Numbers", mcq: "Past exams: multiple choice", essay: "Essay and news problems", fish: "Fishbowl news cards"};
 function gVisible(it){
   if (it.g === "rule") return secShown(SECS.indexOf(it.sec));
   if (it.g === "issue") return !(HIDE && OUT_ISSUES.includes(it.id));
@@ -1313,6 +1316,7 @@ function gClose(){ $("v-search").hidden = true; setTab(gPrevTab || "today"); }
 function gGo(it){
   if (it.g === "rule"){ setTab("rules"); const i = SECS.indexOf(it.sec); if (i !== curSec) openSec(i, false); requestAnimationFrame(() => { it.el.scrollIntoView({block: "center"}); it.el.classList.add("flash"); setTimeout(() => it.el.classList.remove("flash"), 1800); }); return; }
   if (it.g === "case") return openCase(it.id);
+  if (it.g === "fish") return fwOpen(it.id);
   if (it.g === "list"){ setTab("lists"); $("lRun").hidden = true; $("lSetup").hidden = false; $("lList").hidden = false; $("lq").value = ""; $("lTopic").value = ""; renderLists(); const d = $("lList").querySelector(`[data-lid="${it.id}"]`); if (d){ d.open = true; d.scrollIntoView({block: "center"}); d.classList.add("flash"); setTimeout(() => d.classList.remove("flash"), 1800); } return; }
   if (it.g === "issue"){ setTab("rules"); goToId(it.rv); return; }
   if (it.g === "num"){ setTab("rules"); goToId("method-numbers"); return; }
@@ -1616,3 +1620,152 @@ document.addEventListener("click", e => {
 let fdQT = 0;
 $("fdq").addEventListener("input", () => { clearTimeout(fdQT); fdQT = setTimeout(renderDigests, 150); });
 window.__fdRender = async id => { await fdLoad(); return `<h2>${esc(FDZ[id].data.title || "")}</h2>` + fdDocHTML(id, "fdt"); };   // test hook: title (shown in the reader header) + body
+
+/* ================= FISHBOWL: the oral-exam simulator ================= */
+// A card: news (D.fb.news) or a past-exam / practice problem (D.essays + D.fb.past). Phases: think → answer → follow-up → outline → graded.
+// Per viewer: fw_log {id: {n, g, t}} (g: 2 nailed, 1 second round, 0 missed); fw_tx {id: last transcript}.
+const FW = [
+  ...D.fb.news.map(n => ({...n, src: "news", tag: "News · " + fmtDay(n.date, {month: "long", day: "numeric", year: "numeric"})})),
+  ...D.essays.filter(e => D.fb.past[e.id]).map(e => ({id: e.id, src: e.news ? "news" : "past", tag: e.exam + (e.n ? " · Q" + e.n : ""), title: e.short, facts: e.prompt, ask: e.ask,
+    say: D.fb.past[e.id].say, pts: e.core, cases: e.cases, fu: D.fb.past[e.id].fu, t: e.t, model: e.model, essay: e.id}))
+];
+const FWI = Object.fromEntries(FW.map(c => [c.id, c]));
+let fwLog = store.get("fw_log", {}), fwTx = store.get("fw_tx", {});
+let fwSrc = store.get("fw_src", "all"), fwCur = null, fwPhase = "", fwLeft = 0, fwRun = null, fwRound = 0, fwLast = [];
+const fwPoolAll = () => FW.filter(c => (fwSrc === "all" || c.src === fwSrc) && (!$("fwTopic").value || c.t.includes($("fwTopic").value)) && c.t.some(shownT));
+const fwPool = () => { const p = fwPoolAll(); return $("fwFresh").checked ? p.filter(c => !(fwLog[c.id] && fwLog[c.id].g === 2)) : p; };
+function fwSetup(){
+  $("fwAsof").textContent = D.fb.asof;
+  const used = new Set(FW.flatMap(c => c.t));
+  const cur = $("fwTopic").value || store.get("fw_topic", "");
+  $("fwTopic").innerHTML = `<option value="">All topics</option>` + D.topics.filter(t => used.has(t.key) && shownT(t.key)).map(t => `<option value="${t.key}">${esc(t.name)}</option>`).join("");
+  $("fwTopic").value = [...$("fwTopic").options].some(o => o.value === cur) ? cur : "";
+  document.querySelectorAll("[data-fwsrc]").forEach(b => b.setAttribute("aria-pressed", b.dataset.fwsrc === fwSrc));
+  const all = fwPoolAll(), p = fwPool(), seen = all.filter(c => fwLog[c.id]).length, ok = all.filter(c => fwLog[c.id] && fwLog[c.id].g === 2).length;
+  $("fwPool").textContent = `${p.length} card${p.length === 1 ? "" : "s"} in the pool`;
+  $("fwStat").textContent = `${seen} of ${all.length} answered · ${ok} nailed`;
+  $("fwDraw").disabled = !p.length;
+}
+function fwShow(){ fwSetup(); if (fwCur) fwRender(); }
+document.addEventListener("click", e => {
+  const s = e.target.closest("[data-fwsrc]"); if (s){ fwSrc = s.dataset.fwsrc; store.set("fw_src", fwSrc); fwSetup(); }
+});
+$("fwTopic").onchange = () => { store.set("fw_topic", $("fwTopic").value); fwSetup(); };
+$("fwFresh").onchange = fwSetup;
+$("fwDraw").onclick = () => fwDraw();
+function fwDraw(){
+  const p = fwPool(); if (!p.length) return;
+  // unseen cards first, then the ones graded lowest; never the last few drawn
+  const fresh = p.filter(c => !fwLast.includes(c.id)), pool = fresh.length ? fresh : p;
+  const w = c => !fwLog[c.id] ? 3 : fwLog[c.id].g === 0 ? 2.5 : fwLog[c.id].g === 1 ? 1.6 : 0.6;
+  let r = Math.random() * pool.reduce((a, c) => a + w(c), 0), pick = pool[0];
+  for (const c of pool){ r -= w(c); if (r <= 0){ pick = c; break; } }
+  fwStart(pick.id);
+}
+function fwOpen(id){ if (!FWI[id]) return; setTab("fish"); fwStart(id); }
+function fwStart(id){
+  fwStop(); fwCur = FWI[id]; fwRound = 0; fwLast = [id, ...fwLast.filter(x => x !== id)].slice(0, 4);
+  fwPhase = "think"; fwLeft = +$("fwThink").value; fwRender(); fwTick(); $("fwStage").scrollIntoView({block: "start"});
+}
+function fwStop(){ clearInterval(fwRun); fwRun = null; fwRecStop(); }
+function fwTick(){
+  clearInterval(fwRun);
+  fwRun = setInterval(() => {
+    fwLeft--; fwPaint();
+    if (fwPhase === "think" && fwLeft <= 0) fwNext();   // thinking time is up: answer now, as in the room
+  }, 1000);
+}
+const fwFmt = s => (s < 0 ? "+" : "") + String(Math.floor(Math.abs(s) / 60)).padStart(2, "0") + ":" + String(Math.abs(s) % 60).padStart(2, "0");
+function fwPaint(){ const t = $("fwT"); if (!t) return; t.textContent = fwFmt(fwLeft); t.classList.toggle("fwlow", fwLeft <= 30 && fwLeft > 0); t.classList.toggle("fwover", fwLeft <= 0); }
+const FW_PH = {think: ["Think", "Outline it in your head: issue, rule, case, application, answer."], answer: ["Answer", "Out loud, as if he were across the table."], follow: ["Second round", "His likely follow-up. Answer it out loud."], outline: ["Check yourself", "Compare with the model, then grade yourself honestly."]};
+function fwNext(){
+  if (fwPhase === "think"){ fwPhase = "answer"; fwLeft = +$("fwAns").value; }
+  else if (fwPhase === "answer"){ fwPhase = "follow"; fwLeft = 120; fwRound = 0; }
+  else if (fwPhase === "follow" && fwRound < fwCur.fu.length - 1){ fwRound++; fwLeft = 120; }
+  else { fwPhase = "outline"; fwStop(); }
+  fwRender(); if (fwPhase !== "outline") fwTick();
+}
+function fwOutline(c){
+  return `<div class="fwsay"><div class="fwk">Say it in orals</div><p>${esc(c.say)}</p></div>
+    <div class="fwk">The outline: doctrines and cases</div><ol class="fwpts">${c.pts.map(p => `<li>${esc(p)}</li>`).join("")}</ol>
+    ${c.cases && c.cases.length ? `<div class="fwrow"><span class="fwk">Cases to cite</span> <span>${caseLinks(c.cases)}</span></div>` : ""}
+    <div class="fwk">The follow-ups</div><ul class="fwfus">${c.fu.map(f => `<li><b>${esc(f.q)}</b><p>${esc(f.a)}</p></li>`).join("")}</ul>
+    ${c.model ? `<details class="dgrev"><summary>The full model answer</summary><div style="padding:0 12px 12px"><p>${esc(c.model)}</p></div></details>` : ""}
+    <div class="row">${c.rv ? `<button class="btn small" data-rv="${c.rv}">Open the rule map</button>` : ""}${c.essay ? `<button class="btn small" data-essay="${c.essay}">Write it in the essay trainer</button>` : ""}</div>`;
+}
+function fwRender(){
+  const c = fwCur, st = $("fwStage"); if (!c){ st.hidden = true; return; }
+  st.hidden = false;
+  const [ph, hint] = FW_PH[fwPhase], last = fwLog[c.id], fu = c.fu[Math.min(fwRound, c.fu.length - 1)];
+  const steps = ["think", "answer", "follow", "outline"].map((p, i) => `<span class="fwstep${p === fwPhase ? " fwon" : ""}">${i + 1}. ${FW_PH[p][0]}</span>`).join("");
+  const btn = {think: "Start answering", answer: "Done: take the follow-up", follow: fwRound < c.fu.length - 1 ? "Next follow-up" : "Done: show the outline", outline: ""}[fwPhase];
+  st.innerHTML = `<div class="spread"><div class="tags"><span class="tag news">${esc(c.tag)}</span>${c.t.filter(shownT).map(t => `<span class="tag">${esc(tname(t))}</span>`).join("")}</div>${last ? `<span class="tiny">last time: ${["missed", "second round", "nailed"][last.g]}</span>` : ""}</div>
+    <h3 class="fwtitle">${esc(c.title)}</h3>
+    <div class="fwsteps">${steps}</div>
+    <div class="facts fwfacts">${esc(c.facts)}</div>
+    <div class="askbox">${esc(c.ask)}</div>
+    ${fwPhase === "follow" ? `<div class="fwfu"><div class="fwk">Follow-up${c.fu.length > 1 ? ` ${fwRound + 1} of ${c.fu.length}` : ""}</div><p>${esc(fu.q)}</p></div>` : ""}
+    ${fwPhase !== "outline" ? `<div class="fwbar"><div><div class="fwph">${ph}</div><div class="tiny">${hint}</div></div><span class="fwt" id="fwT">${fwFmt(fwLeft)}</span></div>
+      <div class="row"><button class="btn primary" id="fwGo">${btn}</button>${fwPhase !== "think" ? "" : `<button class="btn" data-fwread>Read it to me</button>`}<button class="btn ghost" data-fwskip>Skip to the outline</button></div>` : ""}
+    <div class="fwrec" id="fwRec"></div>
+    ${fwPhase === "outline" ? `<div class="fwout">${fwOutline(c)}</div>
+      <div class="fwgrade"><span class="fwk">How did it go?</span><div class="row"><button class="btn" data-fwg="0">Missed it</button><button class="btn" data-fwg="1">Needed the second round</button><button class="btn primary" data-fwg="2">Nailed it</button></div></div>` : ""}`;
+  fwRecUI(); fwPaint();
+  const g = $("fwGo"); if (g) g.onclick = fwNext;
+}
+$("fwStage").addEventListener("click", e => {
+  if (e.target.closest("[data-fwskip]")){ fwPhase = "outline"; fwStop(); fwRender(); return; }
+  if (e.target.closest("[data-fwread]")){ fwSpeak(); return; }
+  if (e.target.closest("[data-fwrec]")){ fwRecToggle(); return; }
+  const g = e.target.closest("[data-fwg]"); if (g){ const c = fwCur; fwLog[c.id] = {n: ((fwLog[c.id] || {}).n || 0) + 1, g: +g.dataset.fwg, t: Date.now()}; store.set("fw_log", fwLog); fwSetup(); fwCur = null; $("fwStage").innerHTML = `<div class="spread"><p style="margin:0">Saved. ${["It will come back soon.", "It will come back for another round.", "Well done."][+g.dataset.fwg]}</p><button class="btn primary" data-fwnext>Draw the next card</button></div>`; return; }
+  if (e.target.closest("[data-fwnext]")){ fwDraw(); return; }
+});
+document.addEventListener("keydown", e => {
+  if ($("v-fish").hidden || !fwCur || !$("scrim").hidden || /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) return;
+  if (e.key === " " && fwPhase !== "outline" && !e.target.closest("button")){ e.preventDefault(); fwNext(); }
+});
+
+/* recording for self-review: the platform's dictation (a transcript) where offered, else the browser's microphone (audio, kept in memory only) */
+let fwDict = null, fwTts = null, fwRec = null, fwAudio = "", fwOn = false, fwPartial = "", fwSub = false;
+try { if (window.claude && claude.use){ claude.use("dictation").then(d => { fwDict = d; if (fwCur) fwRecUI(); }).catch(() => {}); claude.use("tts").then(t => { fwTts = t; }).catch(() => {}); } } catch(e){}
+const fwCanAudio = () => !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+function fwRecUI(){
+  const box = $("fwRec"); if (!box || !fwCur) return;
+  const can = fwDict || fwCanAudio(), tx = fwTx[fwCur.id] || "";
+  const live = fwOn && fwDict ? (tx ? tx + " " : "") + fwPartial : tx;
+  box.innerHTML = (can ? `<button class="btn small${fwOn ? " primary" : ""}" data-fwrec aria-pressed="${fwOn}">${fwOn ? "■ Stop recording" : fwDict ? "● Record my answer (transcript)" : "● Record my answer (audio)"}</button>` : `<span class="tiny">Recording is not available in this browser; answer out loud anyway.</span>`)
+    + (live ? `<div class="fwtx"><div class="fwk">What you said${fwOn ? " (listening…)" : ""}</div><p></p>${!fwOn ? `<button class="btn small ghost" data-fwtxclear>Clear</button>` : ""}</div>` : "")
+    + (fwAudio && !fwOn ? `<audio class="fwaudio" controls src="${fwAudio}"></audio>` : "");
+  const p = box.querySelector(".fwtx p"); if (p) p.textContent = live;
+  const cl = box.querySelector("[data-fwtxclear]"); if (cl) cl.onclick = () => { delete fwTx[fwCur.id]; store.set("fw_tx", fwTx); fwRecUI(); };
+}
+function fwRecToggle(){
+  if (fwOn){ fwRecStop(); return; }
+  if (fwDict){
+    fwPartial = ""; fwTx[fwCur.id] = ""; const id = fwCur.id;
+    fwDict.start().catch(() => { fwOn = false; fwRecUI(); });   // must be the first call in the click
+    fwOn = true;
+    if (!fwSub){ fwSub = true; fwDict.onPartial(({text}) => { fwPartial = text; fwRecUI(); }), fwDict.onFinal(({text}) => { const k = fwCur ? fwCur.id : id; fwTx[k] = ((fwTx[k] || "") + " " + text).trim(); fwPartial = ""; store.set("fw_tx", fwTx); fwRecUI(); }), fwDict.onState(({state}) => { if (state === "idle"){ fwOn = false; fwPartial = ""; fwRecUI(); } }); }
+    fwRecUI(); return;
+  }
+  if (!fwCanAudio()) return;
+  navigator.mediaDevices.getUserMedia({audio: true}).then(stream => {
+    const chunks = []; fwRec = new MediaRecorder(stream);
+    fwRec.ondataavailable = e => chunks.push(e.data);
+    fwRec.onstop = () => { stream.getTracks().forEach(t => t.stop()); if (fwAudio) URL.revokeObjectURL(fwAudio); fwAudio = URL.createObjectURL(new Blob(chunks, {type: fwRec.mimeType || "audio/webm"})); fwOn = false; fwRecUI(); };
+    fwRec.start(); fwOn = true; fwRecUI();
+  }).catch(() => { $("fwRec").insertAdjacentHTML("beforeend", `<span class="tiny"> The microphone was blocked; answer out loud anyway.</span>`); });
+}
+function fwRecStop(){
+  if (!fwOn) return;
+  if (fwDict) fwDict.stop().catch(() => {});
+  if (fwRec && fwRec.state !== "inactive") fwRec.stop();
+  fwOn = false; fwRecUI();
+}
+function fwSpeak(){
+  if (!fwCur) return;
+  const text = (fwCur.facts + "\n\n" + fwCur.ask).slice(0, 2000);
+  if (fwTts){ fwTts.speak(text).catch(() => {}); return; }
+  try { const u = new SpeechSynthesisUtterance(text); speechSynthesis.cancel(); speechSynthesis.speak(u); } catch(e){}
+}
+fwSetup();

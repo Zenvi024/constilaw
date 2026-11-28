@@ -24,7 +24,7 @@ __CSS__
       <button role="tab" data-tab="digests" aria-selected="false">Digests</button>
       <button role="tab" data-tab="practice" aria-selected="false">Practice</button>
     </nav>
-    <nav class="psub" id="psub" aria-label="Practice" hidden><button data-tab="exams" aria-pressed="false">Past exams</button><button data-tab="spot" aria-pressed="false">Issue spotter</button><button data-tab="write" aria-pressed="false">Essay trainer</button></nav>
+    <nav class="psub" id="psub" aria-label="Practice" hidden><button data-tab="fish" aria-pressed="false">Fishbowl</button><button data-tab="exams" aria-pressed="false">Past exams</button><button data-tab="spot" aria-pressed="false">Issue spotter</button><button data-tab="write" aria-pressed="false">Essay trainer</button></nav>
   </div>
 </header>
 <section class="pdoc" id="printDoc" aria-hidden="true"></section>
@@ -193,6 +193,27 @@ __REVIEWER__
       <div class="fdlist" id="fdList"></div>
     </aside>
     <section class="fdread" id="fdRead" aria-live="polite"></section>
+  </div>
+</main>
+
+<!-- FISHBOWL (oral exam simulator) -->
+<main class="page narrow" id="v-fish" hidden>
+  <div class="stack">
+    <section class="panel fwsetup" id="fwSetup">
+      <div class="spread"><h2>Fishbowl</h2><span class="tiny" id="fwStat"></span></div>
+      <p class="tiny" style="margin:0">Draw a card, think, then answer out loud as if the professor were across the table: the rule, the case, the application, the answer. Then take the follow-up, and check yourself against the model outline. News as of <span id="fwAsof"></span>.</p>
+      <div class="row">
+        <div class="seg" role="group" aria-label="Draw from"><button data-fwsrc="all" aria-pressed="true">Everything</button><button data-fwsrc="news" aria-pressed="false">2026 news</button><button data-fwsrc="past" aria-pressed="false">Past exams</button></div>
+        <select id="fwTopic" aria-label="Topic"></select>
+      </div>
+      <div class="row">
+        <label class="fwlab">Think <select id="fwThink" aria-label="Thinking time"><option value="60">1 min</option><option value="120" selected>2 min</option><option value="180">3 min</option><option value="300">5 min</option></select></label>
+        <label class="fwlab">Answer <select id="fwAns" aria-label="Answer time"><option value="180">3 min</option><option value="300" selected>5 min</option><option value="480">8 min</option><option value="600">10 min</option></select></label>
+        <label class="chip" for="fwFresh"><input type="checkbox" id="fwFresh"> Skip cards I nailed</label>
+      </div>
+      <div class="spread"><span class="tiny" id="fwPool"></span><button class="btn primary" id="fwDraw">Draw a card</button></div>
+    </section>
+    <section class="panel fwstage" id="fwStage" hidden aria-live="polite"></section>
   </div>
 </main>
 

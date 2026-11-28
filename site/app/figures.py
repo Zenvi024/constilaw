@@ -858,7 +858,7 @@ fig('90', 'before', '<h3 id="news-dynasty">', 'news', 'Five stories, the rules t
          _story('The budget: unprogrammed funds, fund sweeps', [X('fig-money5', 'the five money rules'), X('fig-augment', 'augmentation'), X('fig-budget', 'Belgica 2019 lump sums'), X('fig-veto', 'riders')], [('n26-5', 'unprogrammed appropriations'), ('n26-6', 'a 2027 fund sweep')]), m=230),
     kind='map', when='the problem reads like a headline: find the story here, then walk the diagrams it points to.',
     hook='Every story is an <em>old rule in new clothes</em>: name the rule, then the case, then apply it to the new facts.',
-    cap='Impeachment itself (Art. XI) is not in the midterm syllabus: use that story for interpretation, quorum and judicial review only.', notest=True)
+    cap='These five stories came first (to October 2026). The later ones (the Senate trial, the Senate leadership fight, the new Chief Justice, Lagman v. Sotto and the rest) are in the sections below, each with a fishbowl card.', notest=True)
 
 
 # =====================================================================

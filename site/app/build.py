@@ -146,6 +146,22 @@ for e in essays:
         n = sum(len(v.split()) for v in c.values()); assert n <= 125, (e['id'], n)
         e['clear'] = c
 eid = {e['id'] for e in essays}
+# fishbowl (orals simulator): news cards from the saved 2026 articles, plus a spoken outline and follow-ups for every essay problem
+fb = load('exams/fishbowl.json')
+fbid = [n['id'] for n in fb['news']]
+assert len(fbid) == len(set(fbid)) and not set(fbid) & eid, 'duplicate fishbowl id'
+for n in fb['news']:
+    assert re.match(r'^\d{4}-\d{2}-\d{2}$', n['date']) and n['title'] and n['facts'] and n['ask'] and n['say'] and n['pts'] and n['fu'], n['id']
+    for c in n['cases']: assert c in cid, (n['id'], c)
+    for t in n['t']: assert t in tkeys, (n['id'], t)
+    assert all(f['q'] and f['a'] for f in n['fu']), n['id']
+for k, v in fb['past'].items():
+    assert k in eid and v['say'] and v['fu'] and all(f['q'] and f['a'] for f in v['fu']), k
+assert set(fb['past']) == eid, ('essays without fishbowl follow-ups', eid - set(fb['past']))
+for n in fb['news']:
+    assert ('id="%s"' % n['rv']) in rev, (n['id'], 'rule-map anchor', n['rv'])
+for m in re.findall(r'data-fw="([^"]+)"', rev):
+    assert m in set(fbid) | eid, 'reviewer cites unknown fishbowl card ' + m
 for m in re.findall(r'data-e="([^"]+)"', rev):
     assert m in eid, 'reviewer cites unknown essay ' + m
 
@@ -178,7 +194,7 @@ print(f'finals: {sum(1 for e in FIN if e.get("f"))} syllabus cases, {len(_fd)} f
 # downloadable PDFs (site/app/make_pdfs.js writes them and this manifest; they are published next to the page under pdf/)
 PDFM = os.path.join(HERE, '..', 'print', 'pdf', 'manifest.json')
 pdfs = json.load(open(PDFM)) if os.path.exists(PDFM) else {}
-D = dict(examDate='2026-12-16', pdfs=pdfs, fin=FIN, topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers)
+D = dict(examDate='2026-12-16', pdfs=pdfs, fb=fb, fin=FIN, topics=topics, cases=cases, lists=lists, mcq=mcq, stories=stories, essays=essays, issues=issues, numbers=numbers)
 t = open(os.path.join(HERE, 'template.html')).read()
 t = t.replace('__CSS__', open(os.path.join(HERE, 'style.css')).read())
 t = t.replace('__REVIEWER__', rev)

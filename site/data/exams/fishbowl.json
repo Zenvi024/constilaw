@@ -1,0 +1,876 @@
+{
+ "asof": "November 13, 2026",
+ "news": [
+  {
+   "id": "fb-init",
+   "date": "2026-05-11",
+   "ev": [
+    1,
+    3,
+    5,
+    6,
+    9,
+    11
+   ],
+   "t": [
+    "ocong",
+    "jr"
+   ],
+   "rv": "ocong-initiate",
+   "title": "The second impeachment of VP Sara Duterte",
+   "facts": "New impeachment complaints were filed against Vice President Sara Duterte once the one-year bar lapsed in February 2026. The House Committee on Justice found two of them sufficient in form (March 2), in substance and in grounds (March 18), then held probable-cause hearings from March 25 without her; she called them a ‘mini-trial’. The committee subpoenaed her SALNs from 2007 to 2025 and the Ombudsman, who said he would comply. On April 29 the committee unanimously found probable cause, and on May 11 the House approved the Articles by well over one-third of all its Members. The Articles reached the Senate on May 14. On July 25, 2025, the Supreme Court had voided the first (February 2025) Articles as barred by the one-year rule, holding that no new proceeding could start against her before February 6, 2026.",
+   "ask": "Was the second impeachment validly initiated? Address the one-year bar and her objections to the committee hearings.",
+   "say": "The one-year bar runs from the initiation of the last valid proceeding; Duterte v. House voided the February 2025 impeachment, and this one came more than a year later, so the bar does not apply. The House may make and run its own rules, and a committee hearing is accusatory, not a trial, so her due process claim is weak; she gets her trial in the Senate.",
+   "pts": [
+    "Art. XI, Sec. 3(5): no impeachment proceedings against the same official more than once within one year; ‘initiated’ means filing plus referral to the Justice Committee (Francisco; Gutierrez).",
+    "Duterte v. House (2025): the February 2025 Articles were barred because earlier complaints were deemed initiated within the year; the Court said no new proceeding could start before February 6, 2026. The 2026 complaints came after that date.",
+    "Sec. 3(8): the House promulgates its own rules; the Court reviews only for grave abuse (Francisco). Duterte v. House held that impeachment is not purely political, so due process applies in the House; the 2026 committee gave notice and hearings, which she did not attend.",
+    "A committee hearing determines probable cause; it is accusatory. Subpoenas to the Ombudsman for SALNs are within the House’s power to gather evidence; SALNs are public records (Art. XI, Sec. 17).",
+    "Answer: validly initiated; her objections go to the Senate, where she can contest the evidence."
+   ],
+   "cases": [
+    "duterte2025",
+    "francisco",
+    "gutierrez",
+    "torreon"
+   ],
+   "fu": [
+    {
+     "q": "Suppose the House had voted on the Articles the very day the committee report came out, without debate. Grave abuse?",
+     "a": "The Constitution requires only the vote of one-third of all the Members (Sec. 3(3)) and leaves procedure to House rules; non-observance of internal rules is generally not reviewable unless it violates the Constitution or private rights (Arroyo v. De Venecia). Duterte v. House’s due process requirement is about the respondent’s chance to be heard, not the length of debate."
+    },
+    {
+     "q": "Does the one-year bar start again on May 11, 2026?",
+     "a": "Yes for any new proceeding against her: the 2026 proceeding was initiated when the complaints were filed and referred, so no new complaint may be initiated within one year of that date."
+    }
+   ]
+  },
+  {
+   "id": "fb-torreon",
+   "date": "2026-08-05",
+   "ev": [
+    4,
+    23
+   ],
+   "t": [
+    "ocong",
+    "jr"
+   ],
+   "rv": "ocong-review",
+   "title": "Moot: the petitions against the House proceedings",
+   "facts": "On March 27, 2026, a group of lawyers led by Atty. Israelito Torreon asked the Supreme Court to nullify the House Justice Committee’s proceedings on the 2026 impeachment complaints against Vice President Sara Duterte (G.R. No. E-05546); she later filed her own petition, and the cases were consolidated. On August 5, 2026, the Court en banc dismissed both petitions as moot, because the House had already approved the Articles and transmitted them to the Senate.",
+   "ask": "Was the dismissal correct? Could the Court have ruled anyway?",
+   "say": "A case is moot when a ruling can no longer have practical effect; once the House impeached and the Articles went to the Senate, there was nothing left to stop. The Court may still decide a moot case under the four exceptions (David), but it need not, and the questions can be raised before the impeachment court and, later, the Court.",
+   "pts": [
+    "Actual case: a moot case has ceased to present a justiciable controversy because of supervening events (David v. Macapagal-Arroyo).",
+    "Exceptions: grave violation of the Constitution; exceptional character and paramount public interest; need for guiding principles; capable of repetition yet evading review. They are permissive, not mandatory.",
+    "Applying them: the issues (committee procedure) were tied to a stage that had ended; the Senate trial gives a forum for her defenses; and Duterte v. House (2025) already laid down guiding principles, so no new guidance was needed.",
+    "Judicial review of impeachment is possible (Francisco), but the Court is reluctant to interfere mid-process.",
+    "Answer: the dismissal was correct and consistent with Torreon’s rule on the accusatory stage."
+   ],
+   "cases": [
+    "torreon",
+    "davidgma",
+    "francisco",
+    "duterte2025"
+   ],
+   "fu": [
+    {
+     "q": "Professor: isn’t ‘capable of repetition yet evading review’ satisfied, since every House impeachment ends quickly?",
+     "a": "Argue both sides: the House stage can be brief, but it does not evade review, because a petition can be filed and a TRO sought while it runs (as Duterte v. House shows: the Court decided that case on the merits)."
+    }
+   ]
+  },
+  {
+   "id": "fb-generillo",
+   "date": "2026-04-29",
+   "ev": [
+    8,
+    14
+   ],
+   "t": [
+    "ocong",
+    "jr"
+   ],
+   "rv": "ocong-trial",
+   "title": "‘Forthwith’: how fast must the Senate try?",
+   "facts": "In Generillo v. Senate (decision dated April 22, 2026, announced April 29; ponente Justice Zalameda), the Supreme Court dismissed a petition for mandamus to compel the Senate to convene at once as an impeachment court in 2025, when it waited 126 days (February 5 to June 10, 2025) after receiving the Articles. The petition was moot because those Articles had been voided, but ‘even on the merits’ the Court said ‘forthwith’ in Art. XI, Sec. 3(4) means within a reasonable time under the circumstances, and the Senate committed no grave abuse. Senior Associate Justice Leonen would have read ‘forthwith’ as an immediate duty to convene. In 2026, the Senate received the new Articles on May 14 and convened as an impeachment court on May 18.",
+   "ask": "Can the Supreme Court compel the Senate to begin an impeachment trial? What does ‘forthwith’ require?",
+   "say": "Mandamus lies only to compel a ministerial duty. The duty to try is ministerial, but when to start is not: ‘forthwith’ means within a reasonable time under the circumstances, and trial includes preparation. So the Court can strike down only an unreasonable delay that amounts to grave abuse, which it did not find.",
+   "pts": [
+    "Art. XI, Sec. 3(4): when one-third of the House files the Articles, ‘trial by the Senate shall forthwith proceed’. Sec. 3(6): the Senate has the sole power to try.",
+    "Generillo: ‘forthwith’ = within a reasonable time; trial includes rules, budget and logistics. Unlike Sec. 3(2) for the House, Sec. 3(4) fixes no period.",
+    "Mandamus against a co-equal branch: only for a clear ministerial duty; the timing within a reasonable period is discretionary. Grave abuse (Art. VIII, Sec. 1) could still reach an arbitrary refusal.",
+    "Mootness: the 2025 Articles were void; the Court still ruled ‘even on the merits’ (Justice Singh called that part obiter), and Leonen’s concurrence read ‘forthwith’ as immediate.",
+    "Professor’s view: ‘not good news’, because any delay can now be called reasonable."
+   ],
+   "cases": [
+    "generillo",
+    "francisco",
+    "kapatiran2026"
+   ],
+   "fu": [
+    {
+     "q": "Compare Kapatiran: the Court granted mandamus against Congress there. Why not here?",
+     "a": "In Kapatiran, 39 years of inaction on a specific constitutional command was grave abuse; the Court compelled the act and left the content to Congress. In Generillo, the Senate was acting, and the delay was within a reasonable time, so there was no clear neglect of duty."
+    },
+    {
+     "q": "Is the Court’s explanation of ‘forthwith’ binding if the case was moot?",
+     "a": "Strictly, it is obiter; but the Court decided to give guidance under the mootness exceptions, and lower bodies and the Senate will treat it as the Court’s reading."
+    }
+   ]
+  },
+  {
+   "id": "fb-presiding",
+   "date": "2026-06-09",
+   "ev": [
+    17,
+    14
+   ],
+   "t": [
+    "ocong",
+    "basics"
+   ],
+   "rv": "ocong-trial",
+   "title": "Who presides over the impeachment court?",
+   "facts": "On June 9, 2026, the Senate published an amendment to Rule II of its Rules of Procedure on Impeachment Trials: the Senate President presides over an impeachment trial unless a majority of the members present elects another senator as presiding officer. The amendment came during a fight over the Senate leadership, weeks before the trial of Vice President Sara Duterte began on July 6.",
+   "ask": "Is the amendment valid?",
+   "say": "The Constitution says only that the Chief Justice presides when the President is tried, and does not vote (Art. XI, Sec. 3(6)); for anyone else it is silent, and Sec. 3(8) lets Congress promulgate rules on impeachment. So the Senate may choose its presiding officer by rule, as long as the rule is published and does not change the two-thirds vote to convict.",
+   "pts": [
+    "Art. XI, Sec. 3(6): the Senate has the sole power to try; when the President is on trial, the Chief Justice presides but does not vote.",
+    "Art. XI, Sec. 3(8): Congress shall promulgate its rules on impeachment to effectively carry out the purpose of the section; the Senate may amend its own trial rules.",
+    "Publication: rules affecting the rights of the respondent must be published before they apply (Tañada; Garcillano on the Senate’s rules of procedure).",
+    "Judicial review is limited to grave abuse (Francisco); choosing a presiding officer by a majority of members present is a matter of internal rules, like electing officers (Santiago v. Guingona).",
+    "Answer: valid; the respondent may object only if the rule is applied to deny due process."
+   ],
+   "cases": [
+    "francisco",
+    "garcillano",
+    "santiagoguingona",
+    "tanada85"
+   ],
+   "fu": [
+    {
+     "q": "Could the Senate rule that the presiding officer’s rulings are final and cannot be overruled?",
+     "a": "The Senate, not the presiding officer, holds the sole power to try; its rules have treated the presiding officer’s rulings as subject to the court’s vote, as on September 23, 2026 when the court reversed his July 6 ruling 13–1. A rule making one senator’s ruling final would arguably take the ‘sole power to try’ from the Senate."
+    }
+   ]
+  },
+  {
+   "id": "fb-withdraw",
+   "date": "2026-11-13",
+   "ev": [
+    33,
+    39,
+    40
+   ],
+   "t": [
+    "ocong",
+    "court"
+   ],
+   "rv": "ocong-effects",
+   "title": "One article left: unexplained wealth",
+   "facts": "On October 13, 2026, the Senate impeachment court allowed the House prosecutors to withdraw three of the four Articles against Vice President Sara Duterte, leaving Article 2 (alleged unexplained wealth, non-disclosure in her SALNs and business interests). The defense opened its case on Article 2 on November 9; prosecutors said their case rested mainly on documents such as SALNs and corporate records. On November 13, the court’s spokesperson said the verdict was expected 20 to 25 days after the defense rests.",
+   "ask": "Discuss the constitutional issues: the withdrawal, the ground, and the effects of a conviction or an acquittal.",
+   "say": "The Constitution lets the House prosecute and the Senate try; it does not forbid dropping charges, so the court may allow the withdrawal. Unexplained wealth fits betrayal of public trust or culpable violation (SALN, Sec. 17). A conviction removes and disqualifies her, and she may still be prosecuted; an acquittal is not double jeopardy for a later criminal case, because impeachment is neither criminal nor administrative.",
+   "pts": [
+    "Grounds (Art. XI, Sec. 2): culpable violation of the Constitution, treason, bribery, graft and corruption, other high crimes, betrayal of public trust. Non-disclosure in SALNs violates Sec. 17 and RA 6713; unexplained wealth suggests graft or betrayal of public trust.",
+    "Withdrawal: the House, as prosecutor, may narrow its case; the Senate decides only the Articles before it. Withdrawn Articles are not voted on, and the one-year bar keeps them from being refiled within a year.",
+    "Vote: two-thirds of all the Members of the Senate (Sec. 3(6)); since September 23, 2026 the court counts only senators legally and actually able to take part.",
+    "Judgment (Sec. 3(7)): removal and disqualification only; the official remains liable to prosecution. Re: Letter of Mrs. Corona: removal does not forfeit benefits without a separate judgment.",
+    "Quo warranto is different: it tests title at appointment (Republic v. Sereno); unexplained wealth while in office is a fitness question for impeachment."
+   ],
+   "cases": [
+    "recorona",
+    "sereno",
+    "gutierrez",
+    "francisco"
+   ],
+   "fu": [
+    {
+     "q": "Can the defense invoke the right against self-incrimination to refuse to testify on her wealth?",
+     "a": "Impeachment is not a criminal case, but the privilege applies in any proceeding where the answer could incriminate; she may refuse to answer incriminating questions, but the SALNs themselves are public records she was required to file, so they can be used."
+    },
+    {
+     "q": "If acquitted, can she be charged in the Sandiganbayan for the same wealth?",
+     "a": "Yes. Impeachment is political; Sec. 3(7) preserves liability ‘according to law’, and there is no double jeopardy between impeachment and a criminal or forfeiture case."
+    }
+   ]
+  },
+  {
+   "id": "fb-carandang",
+   "date": "2026-05-02",
+   "ev": [
+    10
+   ],
+   "t": [
+    "appt",
+    "pres"
+   ],
+   "rv": "appt-removal",
+   "title": "The President cannot dismiss a deputy ombudsman",
+   "facts": "In a decision promulgated January 29, 2026 and released May 2, the Supreme Court (Third Division; ponente Justice Singh) affirmed the Court of Appeals’ 2021 and 2022 rulings that set aside the Office of the President’s 2018 dismissal of Overall Deputy Ombudsman Melchor Arthur Carandang. Citing the second Gonzales III decision and stare decisis, it held that ‘by constitutional design, the president possesses no administrative or disciplinary authority over a deputy ombudsman’, and awarded back salaries and retirement benefits.",
+   "ask": "Explain the ruling. Could Congress, by a new law, give the President that power?",
+   "say": "The Ombudsman is independent under Art. XI, Sec. 5; Gonzales III (2014) struck down the part of RA 6770, Sec. 8(2) letting the President remove a deputy, because the power to remove is the power to control. Under stare decisis the Court followed it. A new law would hit the same wall: independence is constitutional, so only an amendment could change it.",
+   "pts": [
+    "Art. XI, Sec. 5: the Office of the Ombudsman is independent; Sec. 9: the President appoints the Ombudsman and deputies from JBC lists.",
+    "Gonzales III (2012 Decision; 2014 Resolution): presidential disciplinary power over a deputy ombudsman is unconstitutional; it subjects the watchdog to the one it watches.",
+    "The President’s removal power is implied from appointment only where the Constitution or law does not provide otherwise; here the Constitution’s grant of independence provides otherwise.",
+    "Stare decisis: a settled ruling is followed absent strong reasons; the Court noted the need to shield the Ombudsman ‘from the shifting winds of political influence’, all the more when the President’s own conduct was in issue.",
+    "Remedy: dismissal void for lack of jurisdiction; back salaries and benefits."
+   ],
+   "cases": [
+    "gonzalesiii",
+    "funacsc",
+    "ifurung"
+   ],
+   "fu": [
+    {
+     "q": "Gonzales III upheld the President’s power over the Special Prosecutor. Why the difference?",
+     "a": "The 2014 Resolution held, by a separate 8–7 vote, that Sec. 8(2) stays valid as to the Special Prosecutor, whose office has no constitutional independence of the same kind."
+    },
+    {
+     "q": "Who can discipline a deputy ombudsman, then?",
+     "a": "The Ombudsman (under RA 6770 and its constitutional independence), and the Ombudsman and deputies (except impeachable officers) can be charged criminally; only the Ombudsman herself or himself is impeachable."
+    }
+   ]
+  },
+  {
+   "id": "fb-senate",
+   "date": "2026-06-17",
+   "ev": [
+    12,
+    15,
+    18,
+    19
+   ],
+   "t": [
+    "org",
+    "jr"
+   ],
+   "rv": "internal-officers",
+   "title": "The Senate leadership fight and Avelino",
+   "facts": "On May 11, 2026, the Senate elected Sen. Alan Peter Cayetano Senate President, 13–9 with two abstentions. After Sen. Jinggoy Estrada was arrested on plunder charges on June 1 and Sen. Ronald dela Rosa went back into hiding, Cayetano’s bloc boycotted sessions. On June 3, twelve senators, citing Avelino v. Cuenco, declared a quorum as a majority of the 22 senators deemed available, declared all Senate posts vacant and elected Sen. Sherwin Gatchalian President Pro Tempore and presiding officer; they said they lacked the 13 votes needed to elect a Senate President. Cayetano called it an ‘illegal coup d’état’, saying 13 of 24 is the majority. His bloc asked the Supreme Court on June 16 to void the reorganization and restore the old leadership. On June 17, in a special session called by the President, 13 senators elected Gatchalian Senate President; Cayetano conceded but did not withdraw the petition.",
+   "ask": "Was the June 3 session valid? Should the Court rule on the petition?",
+   "say": "Quorum is a majority of each House (Sec. 16(2)); under Avelino, it is counted from the members within the Senate’s coercive jurisdiction, so 12 of 23 sufficed there, and 12 of 22 arguably here. But electing the Senate President needs a majority of all the Members (Sec. 16(1)), which the twelve themselves admitted they lacked. The June 17 election by 13 cured the dispute, so the petition is moot, and who leads the Senate is largely an internal matter (Santiago v. Guingona).",
+   "pts": [
+    "Art. VI, Sec. 16(1): the Senate elects its President by a majority vote of all its respective Members (13 of 24). Sec. 16(2): a majority of each House constitutes a quorum to do business.",
+    "Avelino v. Cuenco: with one senator abroad, 12 of 23 was a quorum; quorum is based on members within the coercive jurisdiction of the chamber. A detained senator (Jalosjos) or one in hiding is arguably outside it.",
+    "The twelve could do business (open session) but could not elect a Senate President with 12; declaring posts vacant is itself an election-related act that needs a majority of all the Members.",
+    "Judicial review: the Court will not interfere in internal rules and the choice of officers unless the Constitution is violated (Santiago v. Guingona; Arroyo v. De Venecia); here a numerical rule of the Constitution is involved, so the question is justiciable, but the June 17 election by 13 makes it moot.",
+    "Sec. 15: the President may call a special session at any time."
+   ],
+   "cases": [
+    "avelino",
+    "santiagoguingona",
+    "jalosjos",
+    "arroyodevenecia",
+    "pimentelcongress"
+   ],
+   "fu": [
+    {
+     "q": "Cayetano says Avelino doesn’t apply because the Senate had adjourned. Respond.",
+     "a": "Avelino concerned a session the Senate President walked out of; whether adjournment ends the chamber’s power to convene depends on its rules and the session calendar. The stronger point for Cayetano is Sec. 16(1): even with a quorum, posts cannot be filled without 13."
+    },
+    {
+     "q": "Are the acts of the Senate between June 3 and June 17 void?",
+     "a": "If the session lacked authority, the presiding officer is at least a de facto officer; acts done in good faith that the public relied on are generally upheld (operative fact / de facto doctrine), and the June 17 Senate could ratify them."
+    }
+   ]
+  },
+  {
+   "id": "fb-blueribbon",
+   "date": "2026-06-08",
+   "ev": [
+    16
+   ],
+   "t": [
+    "legproc",
+    "org"
+   ],
+   "rv": "legproc-inq",
+   "title": "The flood-control inquiry and two Blue Ribbon chairs",
+   "facts": "After the June 3, 2026 reorganization, the Gatchalian bloc resumed the Senate Blue Ribbon Committee’s inquiry into anomalous flood-control projects under a new chair, Sen. Erwin Tulfo. A hearing called days earlier by the ousted chair, Sen. Pia Cayetano, was described by the other bloc as an unofficial, unauthorized ‘non-hearing’. Some resource persons, including a contractor with a Sandiganbayan arrest warrant, had been cited for contempt for allegedly lying in earlier hearings.",
+   "ask": "Discuss the limits on the inquiry and the committee’s contempt power.",
+   "say": "Section 21 lets either House or its committees conduct inquiries in aid of legislation, according to duly published rules, respecting the rights of persons appearing. Only a committee validly constituted under the Senate’s rules can compel attendance or cite for contempt; a gathering of senators cannot. Contempt is coercive, not punitive, and detention ends with the inquiry (Balag), but the Senate as a continuing body may keep its rules (Ong 2025).",
+   "pts": [
+    "Art. VI, Sec. 21: inquiry in aid of legislation, by either House or its committees, according to published rules, with the rights of witnesses respected.",
+    "Who may act: the committee as constituted by the Senate; a session or hearing not authorized by the chamber’s rules has no compulsory power (Garcillano on published rules).",
+    "Subject: flood-control funds bear on appropriations and anti-graft legislation; a pending criminal case does not bar an inquiry (Sabio; Bengzon v. SBRC is the exception where the inquiry is only to determine a crime).",
+    "Contempt: inherent, to compel testimony; lying under oath may be contempt; detention cannot outlast the inquiry (Balag), but the Senate’s continuing nature was clarified in Ong v. Senate (2025).",
+    "Witness rights: against self-incrimination, counsel, executive privilege where properly invoked (Senate v. Ermita; Neri)."
+   ],
+   "cases": [
+    "balag",
+    "ong2025",
+    "sabio",
+    "bengzonbr",
+    "senateermita",
+    "garcillano"
+   ],
+   "fu": [
+    {
+     "q": "A witness says: ‘I already have a case in the Sandiganbayan, so the Senate cannot ask me about it.’ Answer.",
+     "a": "The pendency of a case does not by itself bar an inquiry in aid of legislation (Sabio); he may refuse only specific answers that would incriminate him. Bengzon v. SBRC applies only when the inquiry is really to find someone guilty, with no legislative purpose."
+    }
+   ]
+  },
+  {
+   "id": "fb-icc",
+   "date": "2026-05-11",
+   "ev": [
+    7,
+    13
+   ],
+   "t": [
+    "ocong",
+    "org",
+    "basics"
+   ],
+   "rv": "ocong-withdraw",
+   "title": "The ICC, former President Duterte and Sen. dela Rosa",
+   "facts": "On April 22, 2026, the ICC Appeals Chamber dismissed former President Rodrigo Duterte’s challenge to its jurisdiction based on the Philippines’ withdrawal from the Rome Statute (effective March 2019); on April 23, Pre-Trial Chamber I confirmed three counts of crimes against humanity and committed him to trial. On May 11, the ICC confirmed it had unsealed a warrant against Sen. Ronald dela Rosa for the crime against humanity of murder. After a standoff with NBI agents in the Senate, the Senate leadership placed him under ‘protective custody’, and his lawyers asked the Supreme Court to bar any arrest or transfer to a foreign tribunal.",
+   "ask": "May the government arrest and surrender Sen. dela Rosa to the ICC? Discuss the withdrawal, the surrender and his privileges as a senator.",
+   "say": "Withdrawal does not end the ICC’s jurisdiction over crimes committed while we were a party (Rome Statute, Art. 127); Pangilinan dismissed the challenge to the withdrawal as moot and said so. RA 9851, Sec. 17 lets the State surrender a suspect to an international court; that is a discretionary act of the executive (Bayan Muna). As a senator he has no privilege from arrest for an offense punishable by more than six years (Sec. 11; Jalosjos), and the Senate has no power to shield him.",
+   "pts": [
+    "Pangilinan v. Cayetano (2021): petitions moot; the withdrawal took effect March 17, 2019 and the ICC keeps jurisdiction over acts committed while the Philippines was a party (Rome Statute, Art. 127). The President may not withdraw unilaterally from a treaty backed by a law or where the Senate conditioned its concurrence.",
+    "RA 9851, Sec. 17: Philippine authorities may surrender or extradite suspects to the appropriate international court; Bayan Muna: entering into non-surrender agreements and deciding on surrender is executive, within foreign relations.",
+    "Incorporation clause (Art. II, Sec. 2): generally accepted principles of international law are part of the law of the land, including the duty to cooperate in prosecuting crimes against humanity.",
+    "Art. VI, Sec. 11: privilege from arrest only for offenses punishable by not more than six years’ imprisonment, while Congress is in session; crimes against humanity are far graver. Jalosjos; Trillanes v. Pimentel: membership gives no immunity from lawful process.",
+    "The Senate’s powers (Sec. 16: officers, quorum, attendance, discipline) do not include custody against law enforcement."
+   ],
+   "cases": [
+    "pangilinan2021",
+    "bayanmuna",
+    "jalosjos",
+    "trillanespimentel",
+    "pimentelexec"
+   ],
+   "fu": [
+    {
+     "q": "Isn’t an ICC warrant a foreign order that needs a Philippine court’s approval?",
+     "a": "RA 9851, Sec. 17 provides the domestic basis; the surrender must still follow due process under our law (e.g., a chance to contest identity and the legal basis, and the right to seek habeas corpus). The Supreme Court can check grave abuse in how the surrender is done."
+    },
+    {
+     "q": "Can the Senate expel or suspend him for hiding?",
+     "a": "Yes, for disorderly behavior, by two-thirds of all Members; suspension at most 60 days (Sec. 16(3)); no conviction is needed (Osmeña)."
+    }
+   ]
+  },
+  {
+   "id": "fb-barmm",
+   "date": "2026-09-14",
+   "ev": [
+    2,
+    22,
+    28
+   ],
+   "t": [
+    "concom",
+    "pres",
+    "powers"
+   ],
+   "rv": "concom-comelec",
+   "title": "The first BARMM elections, after four postponements",
+   "facts": "The Supreme Court voided the Bangsamoro redistricting law (BAA No. 77) in a September 30, 2025 decision, as a measure that redrew parliamentary districts during the election period, amounted to gerrymandering and conflicted with the Bangsamoro Organic Law and the Constitution; it denied reconsideration in a resolution promulgated April 8, 2026 (released July 31), rejecting the claim that it encroached on Congress and the COMELEC when it directed when the elections should be held. Meanwhile, RA 12317 (signed March 25, 2026) amended the organic law to move the first regular parliamentary elections to September 14, 2026 and to synchronize later polls with national elections from 2031. The elections were held on September 14, with an 84.34% turnout reported by the COMELEC.",
+   "ask": "Discuss the powers of Congress, the regional parliament, the COMELEC and the Court over these elections.",
+   "say": "Congress makes and amends the organic act, including election dates, subject to the Constitution (Art. X, Secs. 18–19); a regional law cannot contradict the organic act. Postponing elections needs compelling reasons and must not be unduly long (Kida; Macalintal 2023). The COMELEC administers the polls and may adjust when the law cannot be followed (Sula), and the Court may void a regional law and shape the remedy under its judicial power.",
+   "pts": [
+    "Art. X, Sec. 18: the organic act provides for an elective legislative assembly; Congress may amend it, though amendments that change the basic structure may need a plebiscite.",
+    "Kida v. Senate: Congress may synchronize ARMM elections with national ones and the President may appoint officers-in-charge in the interim (here the Bangsamoro Transition Authority held over).",
+    "Macalintal v. COMELEC (2023): postponements need important, substantial or compelling reasons and must be narrowly tailored.",
+    "Regional legislation: BAA No. 77 was void because it conflicted with the organic law and election rules; a local or regional legislature cannot redistrict during the election period.",
+    "COMELEC (Art. IX-C, Sec. 2(1)): enforce and administer election laws; its acts reviewed only for grave abuse (Sula)."
+   ],
+   "cases": [
+    "kida",
+    "macalintal2023",
+    "sula",
+    "pimentelaguirre"
+   ],
+   "fu": [
+    {
+     "q": "Did the Court usurp Congress’s power by directing when the BARMM elections should be held?",
+     "a": "The Court said its directive was within its power to resolve the controversy and give complete relief after voiding the districting law; it did not legislate a permanent date, and Congress then set one by RA 12317."
+    }
+   ]
+  },
+  {
+   "id": "fb-cj",
+   "date": "2026-11-09",
+   "ev": [
+    24,
+    35,
+    37,
+    38
+   ],
+   "t": [
+    "jbc",
+    "court",
+    "appt"
+   ],
+   "rv": "jbc-nominate",
+   "title": "A new Chief Justice, appointed a day early",
+   "facts": "The JBC opened applications for Chief Justice on August 29, 2026, ahead of Chief Justice Alexander Gesmundo’s compulsory retirement at 70 on November 6. On October 29 it sent the President five nominees for Chief Justice and eleven for the seat of Justice Lazaro-Javier, who would retire on November 16. On November 5, the Palace announced the appointment of Justice Rodil Zalameda as the 28th Chief Justice, a day before the vacancy, so no acting Chief Justice was needed. Zalameda took his oath on November 6 and had a ceremonial oath-taking before the President on November 9; he serves until 2033.",
+   "ask": "Was the appointment valid? Discuss the JBC’s role and the timing.",
+   "say": "The President appoints members of the Court from a JBC list of at least three for every vacancy, within 90 days of the vacancy (Art. VIII, Secs. 4(1) and 9). Nothing bars the JBC from sending the list early (De Castro), and an appointment made a day before the vacancy took effect when the vacancy arose and he accepted by taking his oath. No election ban applies: the next presidential election is in 2028.",
+   "pts": [
+    "Art. VIII, Sec. 4(1): any vacancy shall be filled within 90 days from its occurrence. Sec. 9: appointment from a list of at least three nominees prepared by the JBC for every vacancy; no confirmation by the Commission on Appointments.",
+    "Sec. 11: members hold office until 70; compulsory retirement creates the vacancy on the birthday.",
+    "De Castro v. JBC: the JBC may and should prepare the list before the vacancy so the President can fill it within 90 days; the Art. VII, Sec. 15 election ban does not apply to the judiciary (in any case, not relevant in 2026).",
+    "Completeness of appointment (Velicaria-Garafil): authority, transmittal, a vacant position and acceptance; here the oath on November 6, when the post became vacant, completed it.",
+    "JBC integrity: the JBC may require SALNs and waivers; Jardeleza (due process in the JBC) and Chavez v. JBC (one representative of Congress)."
+   ],
+   "cases": [
+    "decastrojbc",
+    "garafil",
+    "chavezjbc",
+    "jardeleza",
+    "aguinaldo"
+   ],
+   "fu": [
+    {
+     "q": "The President picks the most junior of the five as Chief Justice. Any issue with seniority?",
+     "a": "No. The Constitution requires only that the appointee be on the JBC list and qualified (Sec. 7); seniority is a tradition, not a rule."
+    },
+    {
+     "q": "Could the President reject the whole list and ask for a new one?",
+     "a": "He cannot appoint anyone the JBC did not nominate: nomination is a qualification for appointment (Aguinaldo). The JBC’s power to recommend cannot restrict the power to appoint, so for simultaneous vacancies the President may treat the lists as one (Aguinaldo on clustering); but the 90 days still run, and rejecting a list outright has no basis in the text."
+    }
+   ]
+  },
+  {
+   "id": "fb-vpimmunity",
+   "date": "2026-09-11",
+   "ev": [
+    25,
+    26
+   ],
+   "t": [
+    "cinc",
+    "court",
+    "ocong"
+   ],
+   "rv": "cinc-immunity",
+   "title": "Can the Vice President be prosecuted while in office?",
+   "facts": "A Quezon City court issued a warrant against Vice President Sara Duterte on three counts of grave threats (she posted bail on September 5, 2026). On September 10 she asked the Supreme Court to act on her pending petition for certiorari and for a TRO, claiming that as an impeachable officer she has ‘limited procedural immunity’ from criminal prosecution while in office. On September 11 the trial court deferred her arraignment, and it deferred it again on October 9 in view of the petition pending in the Supreme Court.",
+   "ask": "Does the Vice President have immunity from criminal prosecution while in office?",
+   "say": "Only the President is immune from suit during the term; the immunity is personal to the holder of the office and rests on the President’s unique duties (Soliven; De Lima v. Duterte; Estrada). The Vice President has no such immunity. The rule that impeachable officers cannot be charged first in a criminal case (In re Gonzalez) covers officers who must be lawyers and charges that would remove them, so it does not fit a grave-threats case against a Vice President.",
+   "pts": [
+    "Presidential immunity is not in the 1987 text but is recognized: during the tenure, the President may not be sued (Soliven v. Makasiar; David v. Macapagal-Arroyo), personal to the incumbent and waivable (Soliven).",
+    "Estrada v. Arroyo: immunity ends with the term; not for acts done before or after.",
+    "De Lima v. Duterte: grounded in the President’s unique duties and the separation of powers; the Constitution’s silence elsewhere means no other official shares it.",
+    "In re Gonzalez: members of the Court (and impeachable officers who must be lawyers) cannot be charged with offenses carrying removal before being impeached, because that would circumvent impeachment. A Vice President need not be a lawyer, and conviction for grave threats does not itself remove from office.",
+    "Art. XI, Sec. 3(7): the impeached officer remains liable to prosecution; nothing makes impeachment a precondition for prosecuting the Vice President."
+   ],
+   "cases": [
+    "soliven",
+    "estradaarroyo",
+    "delima",
+    "ingonzalez",
+    "davidgma"
+   ],
+   "fu": [
+    {
+     "q": "What if the conviction carries perpetual disqualification from public office as an accessory penalty?",
+     "a": "That is the strongest argument for her: the criminal case would then remove her, which In re Gonzalez says must go through impeachment. But In re Gonzalez was about the Ombudsman’s case against a Justice for acts tied to the office; the Court would have to extend it."
+    },
+    {
+     "q": "Was the trial court right to defer the arraignment?",
+     "a": "A petition for certiorari does not interrupt the main case unless the higher court issues a TRO or injunction (Rule 65, Sec. 7); deferring arraignment is within the trial court’s discretion, but without a TRO it cannot wait indefinitely."
+    }
+   ]
+  },
+  {
+   "id": "fb-treaty",
+   "date": "2026-10-08",
+   "ev": [
+    27,
+    32
+   ],
+   "t": [
+    "ocong",
+    "cinc"
+   ],
+   "rv": "ocong-treaty",
+   "title": "Two concurrences: ASEAN extradition and the France SOVFA",
+   "facts": "On September 14, 2026, the Senate adopted Resolution No. 69 concurring in the ASEAN Extradition Treaty, with all 20 senators present voting yes; that month it also approved concurrence in other agreements, including the Philippines–India Mutual Legal Assistance Treaty. On October 8, 2026, the Senate concurred in the Philippines–France Status of Visiting Forces Agreement, 17–0, making France the first European country with a visiting forces agreement with the Philippines.",
+   "ask": "Were the concurrences valid? Did the France agreement need Senate concurrence at all?",
+   "say": "No treaty is valid without the concurrence of at least two-thirds of all the Members of the Senate (Art. VII, Sec. 21): that is 16 of 24, counted from all the Members, not those present. Twenty and seventeen votes both clear it. Foreign military bases, troops or facilities need a treaty concurred in by the Senate and recognized as a treaty by the other state (Art. XVIII, Sec. 25); a visiting forces agreement that first lets French troops in is that kind of treaty (Saguisag, contrasting EDCA).",
+   "pts": [
+    "Art. VII, Sec. 21: two-thirds of ALL the Members (16 of 24); the President ratifies after concurrence (Pimentel v. Executive Secretary: the Senate cannot compel ratification).",
+    "Art. XVIII, Sec. 25: after 1991, foreign troops only under a treaty concurred in by the Senate, ratified by a majority in a referendum if Congress requires, and recognized as a treaty by the other state.",
+    "Saguisag v. Ochoa: EDCA was an executive agreement because it only implemented the VFA and the MDT; the France SOVFA is the first agreement for French troops, so it needs concurrence (as the US VFA did; Bayan v. Zamora).",
+    "Nicolas v. Romulo: custody of a visiting soldier convicted here must follow the treaty and be consistent with our law.",
+    "Extradition treaties: implement through PD 1069; extraditees have due process rights (notice and hearing)."
+   ],
+   "cases": [
+    "saguisag",
+    "bayanmuna",
+    "pimentelexec",
+    "nicolas"
+   ],
+   "fu": [
+    {
+     "q": "After September 23, 2026, the impeachment court counts only senators able to take part. Does that apply to treaties?",
+     "a": "No: that ruling interpreted Art. XI, Sec. 3(6) for impeachment and is the impeachment court’s own. For treaties the safer reading is all 24; the votes here clear 16 either way."
+    }
+   ]
+  },
+  {
+   "id": "fb-lagman",
+   "date": "2026-10-20",
+   "ev": [
+    34
+   ],
+   "t": [
+    "approp"
+   ],
+   "rv": "money-pork",
+   "title": "Lagman v. Sotto: Congress raised the budget",
+   "facts": "In Lagman v. Sotto (G.R. No. 271059; decision dated October 7, 2026, released October 20; ponente Senior Associate Justice Leonen), the Supreme Court declared unconstitutional Congress’s ₱449.5-billion increase in unprogrammed appropriations in the 2024 budget, the ₱17.99-billion increase in the DPWH Special Road Fund in the 2025 budget, and a ₱12.75-billion increase in certain special accounts. It found that the 2024 bicameral conference committee moved programs from programmed to unprogrammed appropriations, creating fiscal space above what the President proposed, and that the SAGIP allocations in 2024 and 2025 let the Executive identify projects after enactment. It held that unprogrammed appropriations are not invalid per se but need clear limits, struck down 2026 GAA provisions releasing unprogrammed funds on revenue conditions with insufficient safeguards, and applied the operative fact doctrine to completed 2024 and 2025 programs. Several justices wrote separate opinions.",
+   "ask": "Explain the ruling and its limits.",
+   "say": "Congress may not increase the appropriations the President recommends for the operation of the Government (Art. VI, Sec. 25(1)); the ceiling covers unprogrammed appropriations too, so moving items into standby funds to add spending is an increase. Lump sums whose projects the Executive picks after enactment are post-enactment identification, the Belgica problem in reverse. The bicameral committee may only reconcile, not add. Operative fact protects completed programs and good-faith beneficiaries.",
+   "pts": [
+    "Sec. 25(1): Congress may not increase the appropriations recommended by the President for the operation of the Government; it may reduce or delete.",
+    "Unprogrammed appropriations: valid standby authority if conditioned on excess revenue and with standards (Belgica 2019; Araullo on certification of excess revenue).",
+    "Belgica 2013: post-enactment identification of projects by legislators violates separation of powers; SAGIP shows the same defect where the identification is left open.",
+    "Bicameral conference committee: the Court stressed that its authority is limited to reconciling the two versions (compare Tolentino v. Secretary of Finance, which allowed germane additions); it faulted the 2024 committee for poor records.",
+    "Operative fact (Araullo): acts done in good faith under the law before it was declared void are given effect; it does not shield authors of the violation."
+   ],
+   "cases": [
+    "belgica2019",
+    "belgica2013",
+    "araullo",
+    "tolentinofinance"
+   ],
+   "fu": [
+    {
+     "q": "Why not just let the President veto the increases?",
+     "a": "The President may veto items of an appropriation bill (Sec. 27(2)), but the item veto cannot cure a structural increase spread across items, and the President chose to sign. The Court enforces Sec. 25(1) when Congress exceeds it, whatever the President does."
+    },
+    {
+     "q": "The Executive spent some of the voided funds. Must the money be returned?",
+     "a": "Not necessarily: operative fact applies to completed programs and good-faith recipients; officials who acted in bad faith may still be held liable after due process (Araullo)."
+    }
+   ]
+  },
+  {
+   "id": "fb-socmed",
+   "date": "2026-10-31",
+   "ev": [
+    36
+   ],
+   "t": [
+    "jr",
+    "gov",
+    "legproc"
+   ],
+   "rv": "jr-req",
+   "title": "Banning minors from social media",
+   "facts": "In October 2026, both chambers of Congress approved separate bills restricting minors’ access to social media. The Senate version would prohibit people under 18 from using social media and other high-risk digital services, require age verification and compel platforms to remove minors’ accounts. The House version would prohibit accounts for children under 13 but allow those aged 13 to 17 with parental consent and other safeguards. The chambers still have to reconcile them before a bill goes to the President. Critics say a blanket ban restricts young people’s expression and access to information.",
+   "ask": "A group of students goes to the Supreme Court now to stop the Senate version. What happens? Assuming it becomes law, is it valid?",
+   "say": "Now: no actual case. A bill is not a law, so there is nothing ripe to review (Montesclaros; Lozano), and the students suffer no injury yet. If enacted: protecting children is a lawful subject of police power (Art. II, Sec. 13; Sec. 12 on parents), but the means must be reasonable and not unduly oppressive; a total ban for everyone under 18, with age verification for all users, is the weak point compared with the House’s consent model.",
+   "pts": [
+    "Judicial review requires an actual case, ripe for adjudication: a bill under bicameral reconciliation creates no rights or duties (Montesclaros v. COMELEC; Lozano v. Nograles).",
+    "Bicameral conference: may reconcile the versions and even add provisions germane to the subject (Tolentino v. Secretary of Finance), subject to the three-readings and title rules (Sec. 26).",
+    "Art. II, Sec. 13 (youth) and Sec. 12 (the parents’ natural right and duty) are not self-executing but guide police power; a law must still satisfy lawful subject and lawful means (Ermita-Malate; White Light).",
+    "White Light: a measure that sweeps in legitimate activity to reach a few is overbroad and unreasonable.",
+    "Freedom of expression and privacy questions belong to Consti 2; mention them in one line."
+   ],
+   "cases": [
+    "montesclaros",
+    "lozano",
+    "whitelight",
+    "tolentinofinance"
+   ],
+   "fu": [
+    {
+     "q": "The parents of a 12-year-old want to challenge the House version once it is law. Standing?",
+     "a": "Yes: parents suffer a direct injury to their right to rear their children (Art. II, Sec. 12), and the child (through them) is directly regulated; platforms also have standing as regulated parties."
+    }
+   ]
+  }
+ ],
+ "past": {
+  "e23m-1": {
+   "say": "Each House may expel a Member for disorderly behavior by two-thirds of all its Members (Sec. 16(3)); no conviction is needed (Osmeña). But expelling him for an absence already punished by two 60-day suspensions evades the cap, and the other grounds are not his conduct as a Member, so his best argument is due process, not the lack of conviction.",
+   "fu": [
+    {
+     "q": "Is ‘disorderly behavior’ a political question the Court cannot touch?",
+     "a": "Largely yes: the House decides what is disorderly (Osmeña), but the Court reviews whether the constitutional vote and due process were observed (Alejandrino on the limits; Santiago v. Sandiganbayan on suspension)."
+    }
+   ]
+  },
+  "e23m-2": {
+   "say": "Police power needs a lawful subject and lawful means. Public information is a lawful subject, but taking cinemas’ screen time for free appropriates property for public use, a taking without compensation (PPI; Ericta). Cinemas hold no franchise over a public resource, so TELEBAP does not save it. Void.",
+   "fu": [
+    {
+     "q": "What if the city paid a nominal fee for the screen time?",
+     "a": "Then it becomes eminent domain, which needs just compensation determined by a court, not a nominal fee fixed by ordinance; the LGU must also follow the Local Government Code’s requirements for expropriation."
+    }
+   ]
+  },
+  "e23m-3": {
+   "say": "After enactment, Congress may only scrutinize and investigate in aid of legislation (ABAKADA). Reviewing performance, requiring reports and recommending laws are valid oversight; deputizing the BIR, BOC, PNP and NBI is execution of the law, which belongs to the President. Strike that clause; the rest stands under the separability clause.",
+   "fu": [
+    {
+     "q": "Couldn’t Congress call it an inquiry in aid of legislation?",
+     "a": "The label does not change the function: directing law enforcers is executive. An inquiry gathers information; it does not command agencies (Senate v. Ermita on the limits of oversight)."
+    }
+   ]
+  },
+  "e23m-4": {
+   "say": "The Constitution fixes the qualifications of the President, VP, Senators and Representatives, and Congress cannot add to them (SJS v. DDB). Disqualifying a candidate for skipping debates adds one, so it is void as to those offices; for local offices the qualifications are statutory, but the condition must still be reasonable and not burden speech or suffrage.",
+   "fu": [
+    {
+     "q": "Is a COMELEC resolution requiring debate attendance any different?",
+     "a": "Worse: the COMELEC cannot impose a qualification that even Congress cannot; and for local offices it has no authority beyond the law."
+    }
+   ]
+  },
+  "e24m-1": {
+   "say": "Congress may amend the party-list law because Sec. 5 leaves the system ‘as provided by law’, but it cannot exclude what the Constitution includes: Atong Paglaum read ‘national, regional, and sectoral parties’ to mean the system is not exclusively sectoral. Nominee rules may be reasonable (Albano). And mere proposals are not ripe for review.",
+   "fu": [
+    {
+     "q": "Could Congress amend the Constitution’s reading by law?",
+     "a": "No. Congress may change the statute, but the Court’s interpretation of Sec. 5 binds until the Constitution is amended or the Court revisits it (Endencia)."
+    }
+   ]
+  },
+  "e24m-2": {
+   "say": "Access to education is a lawful subject (Art. XIV, Secs. 1–2), and the State may reasonably regulate all schools (Sec. 4(1)). The waiver covers only qualified students and a modest fee, so it is regulation, not a taking; the classification of private HEIs is reasonable. Valid.",
+   "fu": [
+    {
+     "q": "Argue the other side: isn’t this forced free service?",
+     "a": "PPI and Ericta: compelling private parties to give property or services free for a public purpose is a taking. Answer: the burden here is small, incidental to a regulated business, and limited to a narrow class, so it falls on the regulation side."
+    }
+   ]
+  },
+  "e24m-3": {
+   "say": "The law is complete and sets standards, so delegating the IRR to the DTI is valid. No legislative veto, because Congress keeps no role after enactment. Consulting a private representative is not subdelegation so long as the DTI decides. Publication in one newspaper of general circulation is enough under Tañada and EO 200, and the 90-day period is directory. Valid.",
+   "fu": [
+    {
+     "q": "What if the IRR is issued after 180 days?",
+     "a": "Still valid: the period is directory. Mandamus could compel issuance, but a late IRR is not void."
+    }
+   ]
+  },
+  "e24m-4": {
+   "say": "Liban asked whether the PNRC is a GOCC (so a senator chairing it forfeits his seat) and whether Congress can create a private corporation by special charter. RA 10530 makes the PNRC an independent, autonomous, non-governmental auxiliary of the government in the humanitarian field: neither a GOCC nor a private corporation for profit, so Sec. 13 and Art. XII, Sec. 16 no longer bite.",
+   "fu": [
+    {
+     "q": "Can a statute settle a constitutional question?",
+     "a": "It cannot change the Constitution, but it can change the facts the Constitution applies to: by defining the PNRC’s nature, Congress removed it from both provisions."
+    }
+   ]
+  },
+  "e15f-1": {
+   "say": "Only the House may compel the attendance of absent Members, in the manner and under the penalties it provides (Sec. 16(2)), and discipline is for each House (Sec. 16(3)). The Ombudsman has no disciplinary authority over Members of Congress (RA 6770, Sec. 21). Absence is not a crime. So the Ombudsman cannot intercede.",
+   "fu": [
+    {
+     "q": "Could the Supreme Court compel attendance instead?",
+     "a": "No: compelling attendance is an internal legislative power; the Court will not interfere absent a constitutional violation (Avelino; Santiago v. Guingona)."
+    }
+   ]
+  },
+  "e15f-2": {
+   "say": "Procedure first: certiorari under expanded judicial power, a ripe controversy, a party-list group with standing. On the merits: biometrics is a registration procedure, not a substantive qualification barred by Art. V, Sec. 1 (Kabataan 2015); it passes strict scrutiny because of the compelling interest in a clean list and the ample period to comply. Valid.",
+   "fu": [
+    {
+     "q": "Three million voters may be disenfranchised. Doesn’t that fail narrow tailoring?",
+     "a": "Kabataan answered: deactivation is not permanent, voters had years of notice and may reactivate; the burden is the voter’s inaction, not the policy."
+    }
+   ]
+  },
+  "e15f-3": {
+   "say": "Certiorari lies for grave abuse, and voters have standing. RA 8189, Sec. 8 allows registration until 120 days before the election; the COMELEC cannot cut the period short unless it shows the pre-election acts cannot be done in time (Palatino). AKBAYAN is distinguished. Resolve depending on the COMELEC’s justification; the default is that the early deadline is void.",
+   "fu": [
+    {
+     "q": "The COMELEC says it needs the extra months for biometrics validation. Enough?",
+     "a": "Only if it shows that the statutory period makes the pre-election acts impossible; Palatino upheld a deadline because the COMELEC showed it needed the time."
+    }
+   ]
+  },
+  "e20f-1": {
+   "say": "The House has the exclusive power to initiate impeachment and the Senate the sole power to try, but impeachment is not the only way to remove: Republic v. Sereno allows quo warranto for ineligibility at appointment. So sort the charges: acts in office go to impeachment; a lack of qualification at appointment may go to quo warranto.",
+   "fu": [
+    {
+     "q": "Can the Ombudsman file a criminal case against Justice Leonen now?",
+     "a": "Not for an offense carrying removal: In re Gonzalez requires impeachment first for a Justice, who must be a lawyer."
+    }
+   ]
+  },
+  "e20f-2": {
+   "say": "Rule-making to execute laws is executive and exists even without an IRR clause. Congress cannot take part in crafting or approving IRRs (ABAKADA). An IRR that expands or contradicts the law is void, and a complete law does not wait for its IRR. Congress’s remedies are oversight by inquiry, amendment and the power of the purse.",
+   "fu": [
+    {
+     "q": "Can senators sue to void an IRR?",
+     "a": "Yes, if it impairs their prerogatives as legislators (legislative standing), or as citizens on a matter of transcendental importance."
+    }
+   ]
+  },
+  "e20f-3": {
+   "say": "Amparo covers extralegal killings and enforced disappearances, or threats of them (Rule, Sec. 1). Red-tagging can be such a threat when it endangers life, liberty or security (Deduro v. Vinoya), proved by substantial evidence on the totality (Bautista v. Dannug-Salucon). So yes, in a proper case, but not every label suffices.",
+   "fu": [
+    {
+     "q": "Who may be the respondent: a private troll account?",
+     "a": "Amparo lies against public officials or private individuals or entities, so a private person who threatens can be named; but identifying the respondent is the petitioner’s burden."
+    }
+   ]
+  },
+  "e20f-4": {
+   "say": "Drafting and voting on budget provisions are legislative acts protected by the speech and debate clause (Jimenez). The Ombudsman has no disciplinary authority over Members of Congress; discipline belongs to each House. And it is not a rider: the condition relates to PAO’s own appropriation. The Ombudsman should dismiss.",
+   "fu": [
+    {
+     "q": "What is the President’s remedy?",
+     "a": "The item veto; but a condition cannot be vetoed without the item it attaches to (Philconsa v. Enriquez), unless it is an inappropriate provision."
+    }
+   ]
+  },
+  "e20f-5": {
+   "say": "Art. VII, Sec. 8 lets Congress, by law, provide who serves as President when the Acting President dies, is permanently disabled or resigns, until a President or VP is elected and qualified. So the bill is within Congress’s power, but each successor must have the President’s qualifications and serve under the Acting President’s restrictions, and the bill cannot displace the Constitution’s own line.",
+   "fu": [
+    {
+     "q": "Can an appointed Cabinet secretary be in the line?",
+     "a": "Yes, if the law provides, so long as he or she has the qualifications of the President; Sec. 8 does not require an elected official."
+    }
+   ]
+  },
+  "e20f-6": {
+   "say": "(a) A condition on how PAO may spend its own MOOE relates to that appropriation, so it is not a rider; Congress may refuse to fund. (b) Letting the DBM change organizational structures is substantive legislation that relates to no particular appropriation: an inappropriate provision under Sec. 25(2).",
+   "fu": [
+    {
+     "q": "Does security of tenure protect the lab staff?",
+     "a": "Tenure protects the position, not its funding; a unit created by DBM has no statutory life, and abolition in good faith is valid."
+    }
+   ]
+  },
+  "e20f-7": {
+   "say": "House discipline covers disorderly behavior as a Member, not his acts as governor. The Ombudsman’s administrative authority excludes Members of Congress, but criminal prosecution is unaffected; preventive suspension under RA 3019, Sec. 13 is not discipline. The arrest privilege covers only offenses punishable by not more than six years.",
+   "fu": [
+    {
+     "q": "If the Sandiganbayan suspends him for 90 days, does that violate the separation of powers?",
+     "a": "No: Santiago v. Sandiganbayan and Paredes: preventive suspension under RA 3019 is not a penalty and does not intrude on the House’s power to discipline."
+    }
+   ]
+  },
+  "e20f-8": {
+   "say": "The case is moot because the baby’s death makes reunion impossible. But the Court may decide it under the exceptions: a grave constitutional issue, paramount public interest, guiding principles, and above all ‘capable of repetition yet evading review’, since separation of infants from detained mothers recurs and ends before review. Accept it, or use rule-making.",
+   "fu": [
+    {
+     "q": "Why not just issue guidelines without a case?",
+     "a": "The Court decides cases; it can issue rules on procedure under Sec. 5(5), but not an advisory opinion. Guidelines can come through rule-making or in a decided case."
+    }
+   ]
+  },
+  "e20f-9": {
+   "say": "The Court supervises lower courts and disciplines their judges (Art. VIII, Secs. 6 and 11), so an administrative complaint is a remedy; its rule-making power lets it tighten the rules on search warrants, the best systemic fix. But it acts on cases and administrative matters, not on ‘judicial notice’ of news; the warrants must be challenged in the proper case.",
+   "fu": [
+    {
+     "q": "Can Congress investigate the judge who issued the warrants?",
+     "a": "Congress may inquire in aid of legislation on the rules for warrants, but cannot inquire into a judge’s decision-making or discipline judges; that belongs to the Court (In re Production of Court Records; Maceda v. Vasquez)."
+    }
+   ]
+  },
+  "e24f-1": {
+   "say": "Protecting students in calamities is a lawful subject; the means are reasonable because the moratorium is temporary and defers, not forgives. The non-impairment clause yields to police power. The no-interest rule is the strongest objection, a loss to lenders, but it is a reasonable, temporary burden. Valid.",
+   "fu": [
+    {
+     "q": "Would it be valid if it forgave the loans entirely?",
+     "a": "Much harder: permanent forgiveness of private debts takes property; it would need compensation or a much stronger justification."
+    }
+   ]
+  },
+  "e24f-2": {
+   "say": "Congress may reduce but not increase the President’s recommendations (Sec. 25(1)). The President cannot create funding by veto; he may augment only from savings to an existing item (Sec. 25(5)); unprogrammed funds need certified excess revenue (Araullo). His real options: a supplemental budget, which Congress must pass, or persuasion.",
+   "fu": [
+    {
+     "q": "Could the President just certify a special appropriation as urgent?",
+     "a": "He may certify a bill as urgent (Sec. 26(2)), but it still must pass Congress and originate in the House; certification only dispenses with the three-day printing and separate-days readings."
+    }
+   ]
+  },
+  "e24f-3": {
+   "say": "The COA’s exclusive power is to define the scope and methods of its audit and to disallow; producing reports to a House committee takes none of that away (DBP v. COA). Confidential funds are appropriations, so an inquiry in aid of legislation reaches them. Executive privilege belongs to the President and must be invoked properly (Senate v. Ermita; Neri). The subpoena is valid.",
+   "fu": [
+    {
+     "q": "Can the Vice President invoke executive privilege?",
+     "a": "Executive privilege is the President’s; the VP may claim confidentiality only on a specific legal basis, and audit reports of public funds are not secrets."
+    }
+   ]
+  },
+  "e23f-1": {
+   "say": "Dismiss. The lawyer and OFW show no personal injury, and membership in the bar is a generalized interest (IBP v. Zamora). Nothing shows ICC personnel are here, so the case is speculative. Admitting and deporting aliens is executive, and an RTC injunction reaches only its region.",
+   "fu": [
+    {
+     "q": "After Pangilinan, must the government cooperate with the ICC?",
+     "a": "The ICC keeps jurisdiction over crimes committed while we were a party, but domestic cooperation depends on our law (RA 9851, Sec. 17) and is an executive choice."
+    }
+   ]
+  },
+  "n26-1": {
+   "say": "The senator is partly right: most Art. II provisions are policies (Tañada v. Angara). But Sec. 26 says the State ‘shall … prohibit political dynasties as may be defined by law’, a specific command; ‘as may be defined by law’ leaves the content to Congress. The Court compelled the act, not its content, and 39 years of inaction is grave abuse.",
+   "fu": [
+    {
+     "q": "How will the Court enforce mandamus if Congress still does nothing?",
+     "a": "It cannot hold Congress in contempt as a body or write the law; enforcement is political. That is the senator’s best point."
+    }
+   ]
+  },
+  "n26-2": {
+   "say": "(a) The petitions were premature: no verdict yet, no injury, generalized citizen interest. (b) Verba legis: the Constitution says ‘Members present’ when it means present and ‘all the Members’ here; Avelino was about a quorum, not a vote to convict. The Senate’s reading is doubtful, but it may stand unless reviewed after a verdict (Francisco).",
+   "fu": [
+    {
+     "q": "Update: on September 30, 2026 the Court dismissed three petitions, unanimously, on standing and prematurity. Can the issue return?",
+     "a": "Yes. A dismissal on procedural grounds does not settle the merits; after a verdict reached by fewer than 16 votes, the convicted official would have standing and the question would be ripe."
+    }
+   ]
+  },
+  "n26-3": {
+   "say": "No arrest privilege: it covers only offenses punishable by not more than six years (Sec. 11), and a crime against humanity is far graver (Jalosjos; Trillanes). The Senate’s powers under Sec. 16 do not include custody against law enforcement, so ‘protective custody’ has no constitutional basis.",
+   "fu": [
+    {
+     "q": "Could the Senate discipline him for leaving and hiding?",
+     "a": "Yes: disorderly behavior, two-thirds of all Members for expulsion, suspension up to 60 days; no conviction needed (Osmeña)."
+    }
+   ]
+  },
+  "n26-4": {
+   "say": "Not a political question: Congress’s power over election dates is subject to the right of suffrage (Macalintal 2023). Postponement needs compelling reasons, not election fatigue, and must not leave unduly long intervals. Fixing a five-year term for future officials is within Congress’s power (Art. X, Sec. 8); extending incumbents’ terms is the weak point (legislative appointment).",
+   "fu": [
+    {
+     "q": "Update (reported November 6, 2026): the Court upheld RA 12326, in a decision dated October 14, 2026 penned by Justice (now Chief Justice) Zalameda, saying the right to vote does not guarantee a particular election frequency or term length, so long as elections stay regular, fixed and predictable. How does that square with Macalintal 2023?",
+     "a": "Macalintal 2023 struck down a postponement without compelling reasons; this law instead fixes a new, regular term and schedule going forward. The distinction: a one-off delay of an imminent election versus a general, prospective change of term and date. (The decision itself is not in the files; check its text before relying on the details.)"
+    }
+   ]
+  },
+  "n26-5": {
+   "say": "Legislators and taxpayers have standing. Unprogrammed funds are valid standby authority if they have standards and release needs certified excess revenue (Belgica 2019; Araullo). But Sec. 25(1) bars Congress from adding to the President’s total, and the Court has since held in Lagman v. Sotto that the ceiling covers unprogrammed appropriations.",
+   "fu": [
+    {
+     "q": "Update: Lagman v. Sotto (October 2026) struck down 2026 GAA provisions releasing unprogrammed funds on revenue conditions. What made them invalid?",
+     "a": "Insufficient safeguards: the conditions did not clearly limit the Executive’s release and use; the Court required clearer priorities and limits on lump sums."
+    }
+   ]
+  },
+  "n26-6": {
+   "say": "A GAA cannot amend substantive law: PhilHealth’s reserves are fixed by the UHC Act, and earmarked sin-tax revenues form a special fund (Sec. 29(3)). A provision sweeping GOCC funds relates to no particular appropriation, so it is an inappropriate provision (Pimentel v. House, 2025). And leaving ‘excess’ to the Finance Secretary has no standard. Invalid.",
+   "fu": [
+    {
+     "q": "What if Congress passes a separate law ordering the remittance?",
+     "a": "Then it is no longer a rider; but it still cannot divert special-purpose taxes (Sec. 29(3)) or impair the UHC Act without amending it expressly."
+    }
+   ]
+  },
+  "n26-7": {
+   "say": "Congress cannot add qualifications the Constitution fixes (SJS v. DDB), but Art. II, Sec. 26 itself authorizes it to prohibit dynasties ‘as may be defined by law’, so the disqualification has a constitutional source (Kapatiran 2026). Classification by relationship is germane to equal access, and the details are policy for Congress. Valid.",
+   "fu": [
+    {
+     "q": "A senator’s spouse wants to run for a House seat in another province. Covered?",
+     "a": "Depends on the definition: Sec. 3 covers the same province or city, or a national office; a House seat in another province is outside it unless the law says otherwise."
+    }
+   ]
+  }
+ }
+}
