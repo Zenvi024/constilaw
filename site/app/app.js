@@ -1359,11 +1359,22 @@ const PD_BUILD = {
 };
 // title page and contents of the full reviewer (make_pdfs.js fills the page numbers; a browser print shows the contents without them)
 const REVIEWER_SKIP = ["method"];
+const pdToc = (cls, id, t) => `<li class="${cls}"><span class="pdtt">${esc(t)}</span><span class="pdtd"></span><span class="pgn" data-toc="${id}"></span></li>`;
+const docTopics = () => TOPS().filter(t => CASES().some(c => !c.ref && c.t === t.key));
 function reviewerFront(){
   const groups = rvGroups().map(([l, p, is]) => [l, p, is.filter(i => !REVIEWER_SKIP.includes(SECS[i].id))]).filter(g => g[2].length);
-  const row = (cls, id, t) => `<li class="${cls}"><span class="pdtt">${esc(t)}</span><span class="pdtd"></span><span class="pgn" data-toc="${id}"></span></li>`;
-  return `<div class="pdtitle"><div class="pdt1">University of the Philippines College of Law · First Semester 2026</div><h1>DG Constitutional Law 1<br>Finals Reviewer</h1><div class="pdt2">Prof. Dante B. Gatmaytan</div><div class="pdt3">The rule maps, in syllabus order: the constitutional text, the doctrines and cases, the professor’s views, the traps, the 2026 news, and every diagram with its hook and “Say it in orals” line.</div><div class="pdt4">Citizenship and Territory (IV.A and IV.B.1) are outside the finals coverage and are omitted. Current through ${esc(fmtDay(manilaToday(), {month: "long", day: "numeric", year: "numeric"}))}. Verify anything that looks off against the decisions.</div></div>`
-    + `<div class="pdtoc"><h2>Contents</h2><ol class="pdtl">${groups.map(([l, p, is]) => `<li class="pdtg"><span class="pdtt">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</span></li>` + is.map(i => row("pdts", SECS[i].id, SECS[i].dataset.title) + [...SECS[i].querySelectorAll("h3[id]")].map(h => row("pdth", h.id, h.textContent)).join("")).join("")).join("")}</ol><p class="pdtend">The rule maps begin on the next page.</p></div>`;
+  const syl = (D.syl || []).map(([k, lv, t]) => `<p class="pds-${k} pdsl${lv}">${esc(t)}</p>`).join("");
+  return `<div class="pdtitle"><div class="pdt1">University of the Philippines College of Law · First Semester 2026</div><h1>DG Constitutional Law 1<br>Finals Reviewer</h1><div class="pdt2">Prof. Dante B. Gatmaytan</div></div>`
+    + `<div class="pdtoc"><h2>Contents</h2><ol class="pdtl"><li class="pdtg"><span class="pdtt">Front matter</span></li>${pdToc("pdts", "pd-syl", "The syllabus")}`
+    + groups.map(([l, p, is]) => `<li class="pdtg"><span class="pdtt">${esc(l)}${p ? ` <small>${esc(p)}</small>` : ""}</span></li>` + is.map(i => pdToc("pdts", SECS[i].id, SECS[i].dataset.title) + [...SECS[i].querySelectorAll("h3[id]")].map(h => pdToc("pdth", h.id, h.textContent)).join("")).join("")).join("")
+    + `<li class="pdtg"><span class="pdtt">Doctrine map</span></li>${pdToc("pdts", "pd-doc", "Doctrine map: every case, by topic")}${docTopics().map(t => pdToc("pdth", "pd-doc-" + t.key, t.name)).join("")}</ol><p class="pdtend">The syllabus begins on the next page.</p></div>`
+    + `<div class="pdsyl"><h2 id="pd-syl" data-top>The syllabus</h2>${syl}</div>`;
+}
+function reviewerEnd(){ // the doctrine map: every syllabus case under its topic and syllabus heading, with its doctrine
+  return `<div class="pddoc"><h2 id="pd-doc" data-top>Doctrine map: every case, by topic</h2><p class="pdsub">One line of doctrine per case, in syllabus order. The full card, digest and diagrams are in the desk.</p>` + docTopics().map(t => {
+    const cs = CASES().filter(c => !c.ref && c.t === t.key), subs = [...new Set(cs.map(c => c.sub || ""))];
+    return `<h3 class="pdh" id="pd-doc-${t.key}">${esc(t.name)} <small>${esc(t.part)}</small></h3><div class="pdcols">${subs.map(sb => `${sb ? `<div class="pddsub">${esc(sb)}</div>` : ""}${cs.filter(c => (c.sub || "") === sb).map(c => `<p class="pdd"><b>${esc(c.n)}</b> <span class="pdm">(${esc(c.y)})</span> ${esc(c.r)}</p>`).join("")}`).join("")}</div>`;
+  }).join("") + `</div>`;
 }
 let PRINTING = null;
 // Print-only state: marks what to print (data-print on <body>, data-pin on the rule maps); the screen is untouched,
@@ -1373,12 +1384,12 @@ function preparePrint(id){
   const n = id.startsWith("sec:") ? +id.slice(4) : -1;
   const d = n >= 0 ? {id, title: SECS[n].dataset.title, secs: [n]} : printDocs().find(x => x.id === id);
   if (!d) return null;
-  if (id === "maps-all" || d.secs){ const keep = new Set(id === "maps-all" ? visIdx().filter(j => !REVIEWER_SKIP.includes(SECS[j].id)) : d.secs); SECS.forEach((s, j) => { if (keep.has(j)) s.dataset.pin = ""; }); document.body.dataset.print = "maps"; if (id === "maps-all") $("printDoc").innerHTML = reviewerFront(); }
+  if (id === "maps-all" || d.secs){ const keep = new Set(id === "maps-all" ? visIdx().filter(j => !REVIEWER_SKIP.includes(SECS[j].id)) : d.secs); SECS.forEach((s, j) => { if (keep.has(j)) s.dataset.pin = ""; }); document.body.dataset.print = "maps"; if (id === "maps-all"){ $("printDoc").innerHTML = reviewerFront(); $("printEnd").innerHTML = reviewerEnd(); } }
   else { $("printDoc").innerHTML = PD_BUILD[id](); document.body.dataset.print = "doc"; }
   PRINTING = id; return d;
 }
 function restorePrint(){
-  PRINTING = null; SECS.forEach(s => delete s.dataset.pin); delete document.body.dataset.print; $("printDoc").innerHTML = "";
+  PRINTING = null; SECS.forEach(s => delete s.dataset.pin); delete document.body.dataset.print; $("printDoc").innerHTML = ""; $("printEnd").innerHTML = "";
 }
 let PR_AT = 0; // a Print button sets it; a plain Ctrl+P prints whatever is on screen (the open rule map, on the Rule maps tab)
 window.addEventListener("beforeprint", () => { if (window.__pdfMode) return; if (!PRINTING || Date.now() - PR_AT > 3000){ restorePrint(); if (!$("v-rules").hidden) preparePrint("sec:" + curSec); } });

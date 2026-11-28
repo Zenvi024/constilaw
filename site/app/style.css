@@ -316,7 +316,7 @@ footer.ft{max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:0 40p
   .page{padding:0}
   .sheet{border:0;padding:0;max-width:none}
 }
-#printDoc{display:none}
+#printDoc,#printEnd{display:none}
 #spSel,#wSel{flex:1 1 260px;width:100%;max-width:100%;min-width:0;text-overflow:ellipsis}
 .spread>.row{min-width:0;max-width:100%}
 
@@ -989,11 +989,25 @@ body.focus .nvb{display:none}
   body[data-print="maps"] #rcontent section.rv[data-pin]~section.rv[data-pin]{break-before:page}
   body[data-print="doc"] #printDoc{display:block!important}
   body[data-print="maps"] #printDoc:not(:empty){display:block!important}
+  body[data-print="maps"] #printEnd:not(:empty){display:block!important;break-before:page}
+  /* the syllabus, as written */
+  .pdsyl{break-after:page}
+  .pdsyl h2,.pddoc h2{font:700 18pt var(--display);margin:0 0 8px}
+  .pdsyl p{margin:0 0 2px;font:400 8.8pt/1.38 var(--display);overflow-wrap:anywhere}
+  .pdsyl .pdsl1{padding-left:5mm}.pdsyl .pdsl2{padding-left:10mm}.pdsyl .pdsl3{padding-left:15mm}
+  .pdsyl .pds-h0{font:700 11.5pt var(--display);color:var(--accent);margin:10px 0 4px;padding-left:0;break-after:avoid}
+  .pdsyl .pds-h1{font:700 10pt var(--display);margin:7px 0 3px;break-after:avoid}
+  .pdsyl .pds-h2{font:700 9.4pt var(--display);margin:5px 0 2px;break-after:avoid}
+  .pdsyl .pds-h3,.pdsyl .pds-h4{font:600 9pt var(--display);font-style:italic;margin:4px 0 2px;break-after:avoid}
+  /* the doctrine map */
+  .pddoc .pddsub{font:600 7.5pt var(--mono);letter-spacing:.03em;color:var(--muted);margin:5px 0 2px;break-after:avoid}
+  .pddoc .pdd{margin:0 0 4px;font-size:8.3pt;line-height:1.34;break-inside:avoid}
+  .pddoc .pdd b{font:700 8.6pt var(--display);font-style:italic}
   /* the full reviewer: title page, then contents */
   .pdtitle{break-after:page;min-height:240mm;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:0 6mm;border-left:6px solid var(--accent)}
-  .pdtitle h1{font:700 30pt/1.1 var(--display);color:var(--ink);margin:6px 0}
-  .pdtitle .pdt1{font:600 8pt var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-  .pdtitle .pdt2{font:600 13pt var(--display);color:var(--accent)}
+  .pdoc .pdtitle h1{font:700 48pt/1.05 var(--display);color:var(--ink);margin:10px 0 14px}
+  .pdtitle .pdt1{font:600 9pt var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .pdtitle .pdt2{font:600 16pt var(--display);color:var(--accent)}
   .pdtitle .pdt3{font:400 10.5pt/1.5 var(--display);max-width:120mm;margin-top:14px}
   .pdtitle .pdt4{font-size:8.5pt;color:var(--muted);max-width:120mm}
   .pdtoc{break-after:page}
